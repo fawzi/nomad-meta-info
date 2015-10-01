@@ -1,0 +1,13 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "common entry point loading all meta infos",
+  "dependencies": [
+      {
+        "relativePath": "meta_types.nomadmetainfo.json"
+      }, {
+        "relativePath": "common.nomadmetainfo.json"
+      }, {
+        "relativePath": "fhi_calculation.nomadmetainfo.json"
+      }
+    ]
+}
