@@ -3,58 +3,81 @@
   "description": "common meta info, not specific to any code",
   "metaInfos": [
     {
-      "name": "Run",
-      "kindStr": "SectionType",
-      "description": "Every run represents a single call of a program. What exactly is contained in a run depends on the run type and the program.",
+      "name": "section_run",
+      "kindStr": "section_type",
+      "description": "Every section_run represents a single call of a program. What exactly is contained in a run depends on the run type and the program.",
       "superNames": []
     }, {
-      "name": "Method",
-      "kindStr": "SectionType",
-      "description": "Every Method section contains the various parameters that define the theory used and he approximationsdone (convergence thresholds,...)",
-      "superNames": ["Run"]
+      "name": "section_method",
+      "kindStr": "section_type",
+      "description": "Every section_method section contains the various parameters that define the theory used and he approximationsdone (convergence thresholds,...)",
+      "superNames": ["section_run"]
     }, {
-      "description": "Every SystemDescription section contains the properties required to describe the Physical system simulated: the given atomic configuration, if relevant the periodic cell, extenal potentials,...",
-      "kindStr": "SectionType",
-      "name": "SystemDescription",
-      "superNames": ["Run"]
+      "name": "section_system_description",
+      "description": "Every section_system_description section contains the properties required to describe the Physical system simulated: the given atomic configuration, if relevant the periodic cell, extenal potentials,...",
+      "kindStr": "section_type",
+      "superNames": ["section_run"]
     }, {
-      "description": "Every SinglePointEvaluation section contains the values computated or evaluated during a single point evaluation.",
-      "kindStr": "SectionType",
-      "name": "SinglePointEvaluation",
-      "superNames": ["Method", "SystemDescription"]
+      "name": "section_single_point_evaluation",
+      "description": "Every section_single_point_evaluation section contains the values computated or evaluated during a single point evaluation.",
+      "kindStr": "section_type",
+      "superNames": ["section_method", "section_system_description"]
     }, {
+      "name": "energy",
       "description": "Some energy value",
-      "kindStr": "AbstractDocumentContentType",
-      "name": "Energy",
+      "kindStr": "abstract_document_content_type",
       "shape": [],
       "superNames": []
     }, {
+      "name": "energy_partial_component",
       "description": "An energy component of the non final, non converged energy",
-      "kindStr": "AbstractDocumentContentType",
-      "name": "PartialEnergyComponent",
+      "kindStr": "abstract_document_content_type",
       "shape": [],
       "superNames": [
-        "Energy",
-        "SinglePointEvaluation"
+        "energy",
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "Information on the scf procedure",
-      "kindStr": "AbstractDocumentContentType",
-      "name": "ScfInfo",
+      "kindStr": "abstract_document_content_type",
+      "name": "scf_info",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
-      "description": "Every ScfIteration section represents an scf iteration",
-      "kindStr": "SectionType",
-      "name": "ScfIteration",
+      "description": "Every section_scf_iteration section represents an scf iteration",
+      "kindStr": "section_type",
+      "name": "section_scf_iteration",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "ScfInfo", "SinglePointEvaluation"
+        "scf_info", "section_single_point_evaluation"
       ]
+    }, {
+        "name":"message_debug",
+        "kindStr": "abstract_document_content_type",
+        "description": "A debugging message",
+        "dtypeStr": "C",
+    }, {
+        "name":"message_debug_run",
+        "kindStr": "document_content_type",
+        "description": "A debugging message",
+        "dtypeStr": "C",
+        "superNames": ["section_run", "message_debug"]
+    }, {
+        "name":"message_debug_evaluation",
+        "kindStr": "document_content_type",
+        "description": "A debugging message",
+        "dtypeStr": "C",
+        "superNames": ["message_debug", "section_single_point_evaluation"]
+    }, {
+        "name":"message_debug_scf",
+        "kindStr": "document_content_type",
+        "description": "A debugging message",
+        "dtypeStr": "C",
+        "superNames": ["message_debug", "section_scf_iteration"]
     }, {
       "description": "xc potential energy during the SCF cycle (not converged)",
       "dtypeStr": "f",
@@ -62,8 +85,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -73,8 +96,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -84,8 +107,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -95,20 +118,20 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
       "description": "parameters that control the simulation",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "SimulationParameters",
       "repeats": false,
       "shape": [],
       "superNames": []
     }, {
       "description": "exchange correlation functional realted information",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "Xc-functional",
       "repeats": false,
       "shape": [],
@@ -125,52 +148,52 @@
       ]
     }, {
       "description": "An energy component of the final, converged energy",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "EnergyComponent",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "PartialEnergyComponent"
+        "energy_partial_component"
       ]
     }, {
       "description": "exchange part of the lda xc functional using the self consistent density of the target functional[correct???]",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "xEnergyLda",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "EnergyComponent"
       ],
       "units": "J"
     }, {
       "description": "Converged exchange part of the dft xc functional",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "xEnergyDft",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "EnergyComponent"
       ],
       "units": "J"
     }, {
       "description": "Converged van der Waals energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "vanDerWaalsEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
-        "PartialEnergyComponent"
+        "section_single_point_evaluation",
+        "energy_partial_component"
       ]
     }, {
       "description": "Converged van der Waals energy using the Tkatchenko Scheffler method",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "vanDerWaalsEnergyTS",
       "repeats": false,
       "shape": [],
@@ -184,8 +207,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -195,13 +218,13 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
       "description": "Some estimate of the error of the non coverged value",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "PartialErrorEstimate",
       "repeats": false,
       "shape": [],
@@ -213,23 +236,23 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
+        "section_scf_iteration",
         "PartialErrorEstimate"
       ],
       "units": "J"
     }, {
       "description": "A total energy that is not yet converged",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "PartialTotalEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "PartialEnergyComponent"
+        "energy_partial_component"
       ]
     }, {
       "description": "A partial (non final, non converged) energy at DFT (or HartreeFock) level",
-      "kindStr": "AbstractDocumentContentType",
-      "name": "PartialDftEnergy",
+      "kindStr": "abstract_document_content_type",
+      "name": "Partial_energy_DFT",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -238,28 +261,28 @@
     }, {
       "description": "Total dft energy extrapolated for T=0 during the scf iterations",
       "dtypeStr": "f",
-      "name": "totalDftEnergyT0ScfIter",
+      "name": "energy_DFT_T0_scf_i",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialDftEnergy"
+        "section_scf_iteration",
+        "Partial_energy_DFT"
       ],
       "units": "J"
     }, {
       "description": "Total dft energy estrapolated for T=0 at the first scf iteration",
       "dtypeStr": "f",
-      "name": "totalDftEnergyT0Scf0",
+      "name": "DFT_energy_T0_scf_0",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialDftEnergy"
+        "scf_info",
+        "Partial_energy_DFT"
       ],
       "units": "J"
     }, {
       "description": "Some form of final, converged total energy",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "TotalEnergy",
       "repeats": false,
       "shape": [],
@@ -268,23 +291,23 @@
       ]
     }, {
       "description": "A total (final, converged) energy at DFT (or HartreeFock) level",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "DftEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "PartialDftEnergy",
+        "Partial_energy_DFT",
         "TotalEnergy"
       ]
     }, {
       "description": "Converged dft energy with T0 correction",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "totalDftEnergyT0",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "DftEnergy"
       ],
       "units": "J"
@@ -295,8 +318,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialDftEnergy"
+        "section_scf_iteration",
+        "Partial_energy_DFT"
       ],
       "units": "J"
     }, {
@@ -306,32 +329,32 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialDftEnergy"
+        "scf_info",
+        "Partial_energy_DFT"
       ],
       "units": "J"
     }, {
       "description": "Converged total dft energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "totalDftEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "DftEnergy"
       ],
       "units": "J"
     }, {
       "description": "Information on the run which *in theory* should have no influence on the results",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "AccessoryRunInfo",
       "repeats": false,
       "shape": [],
       "superNames": []
     }, {
       "description": "Information on date, and timings",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "TimeInfo",
       "repeats": false,
       "shape": [],
@@ -363,8 +386,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -374,8 +397,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -385,7 +408,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
+        "section_scf_iteration",
         "PartialErrorEstimate"
       ],
       "units": "J"
@@ -396,7 +419,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration"
+        "section_scf_iteration"
       ]
     }, {
       "description": "Starting time of the scf procedure",
@@ -405,7 +428,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo"
+        "scf_info"
       ]
     }, {
       "description": "Starting date of the scf procedure",
@@ -414,7 +437,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration"
+        "section_scf_iteration"
       ]
     }, {
       "description": "Starting date of the scf procedure",
@@ -423,11 +446,11 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo"
+        "scf_info"
       ]
     }, {
       "description": "values of the control.in file",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ControlInValues",
       "repeats": false,
       "shape": [],
@@ -436,7 +459,7 @@
       ]
     }, {
       "description": "control.in keys that were unknown to the normalization script",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "UnknownControlInKeys",
       "repeats": false,
       "shape": [],
@@ -445,7 +468,7 @@
       ]
     }, {
       "description": "parameters of one particle kind",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ParticleKindParameters",
       "repeats": true,
       "shape": [],
@@ -504,11 +527,11 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration"
+        "section_scf_iteration"
       ]
     }, {
       "description": "Information on the program that generated the data",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ProgramInfo",
       "repeats": false,
       "shape": [],
@@ -579,12 +602,11 @@
       ]
     }, {
       "description": "Properties actually defining the current configuration",
-      "kindStr": "AbstractDocumentContentType",
-      "name": "CoreConfiguration",
+      "kindStr": "abstract_document_content_type",
+      "name": "core_configuration",
       "repeats": false,
-      "shape": [],
       "superNames": [
-        "SystemDescription"
+        "section_system_description"
       ]
     }, {
       "description": "Which of the basis vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
@@ -593,7 +615,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "CoreConfiguration"
+        "core_configuration"
       ]
     }, {
       "description": "Positions of the particles (this defines a configuration and is required).",
@@ -602,9 +624,9 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "CoreConfiguration"
+        "core_configuration"
       ],
-      "units": "Bohr"
+      "units": "m"
     }, {
       "description": "Names of the kinds (species) in a configuration.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
       "dtypeStr": "C",
@@ -612,7 +634,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "CoreConfiguration"
+        "core_configuration"
       ]
     }, {
       "description": "Name (identifier) of one particle kind",
@@ -624,7 +646,7 @@
       ]
     }, {
       "description": "Information on the parallelzation of the program",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ParallelizationInfo",
       "repeats": false,
       "shape": [],
@@ -641,7 +663,7 @@
       ]
     }, {
       "description": "values of the geometry.in file",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "GeometryInValues",
       "repeats": false,
       "shape": [],
@@ -785,7 +807,7 @@
       ]
     }, {
       "description": "A basis function",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "BasisFunction",
       "repeats": true,
       "shape": [],
@@ -823,7 +845,7 @@
     }, {
       "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
       "dtypeStr": "D",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ControlIn_angular_grids",
       "repeats": false,
       "shape": [],
@@ -1090,7 +1112,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo"
+        "scf_info"
       ]
     }, {
       "description": "time needed for an mp2 calculation",
@@ -1105,36 +1127,36 @@
     }, {
       "description": "Converged Mp2 energy correction",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "mp2EnergyCorrection",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "EnergyComponent"
       ],
       "units": "J"
     }, {
       "description": "Converged total MP2 energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "mp2Energy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "TotalEnergy"
       ],
       "units": "J"
     }, {
       "description": "Converged Hartree-Fock energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "hfEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "DftEnergy"
       ],
       "units": "J"
@@ -1145,8 +1167,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1156,8 +1178,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1167,8 +1189,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1178,8 +1200,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1279,7 +1301,7 @@
     }, {
       "description": "Last converged total dft energy corrected for T->0",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "finalTotalDftEnergyT0",
       "repeats": false,
       "shape": [],
@@ -1290,7 +1312,7 @@
     }, {
       "description": "Last converged total dft energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "finalTotalDftEnergy",
       "repeats": false,
       "shape": [],
@@ -1301,7 +1323,7 @@
     }, {
       "description": "Last converged total energy with post scf corrections (which ones depend on controlIn_total_energy_method)",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "finalCorrectedEnergy",
       "repeats": false,
       "shape": [],
@@ -1312,12 +1334,12 @@
     }, {
       "description": "Converged exact exchange energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "exactExchangeEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "EnergyComponent"
       ],
       "units": "J"
@@ -1328,8 +1350,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1339,8 +1361,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1350,8 +1372,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1361,8 +1383,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1372,8 +1394,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1383,8 +1405,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1394,8 +1416,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1405,8 +1427,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1416,8 +1438,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1427,8 +1449,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1438,8 +1460,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1449,8 +1471,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1468,8 +1490,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
-        "PartialEnergyComponent"
+        "section_scf_iteration",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
@@ -1479,19 +1501,19 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfInfo",
-        "PartialEnergyComponent"
+        "scf_info",
+        "energy_partial_component"
       ],
       "units": "J"
     }, {
       "description": "Dft electronic free energy",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "dftElectronicFreeEnergy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "DftEnergy"
       ],
       "units": "J"
@@ -1918,7 +1940,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "ScfIteration",
+        "section_scf_iteration",
         "PartialErrorEstimate"
       ],
       "units": "e"
@@ -1935,24 +1957,24 @@
     }, {
       "description": "correlation part of the lda xc functional using the self consistent density of the target functional[correct???]",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "cEnergyLda",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "EnergyComponent"
       ],
       "units": "J"
     }, {
       "description": "Converged correlation part of the dft xc functional",
       "dtypeStr": "f",
-      "kindStr": "DocumentContentType",
+      "kindStr": "document_content_type",
       "name": "cEnergyDft",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation",
+        "section_single_point_evaluation",
         "EnergyComponent"
       ],
       "units": "J"
@@ -1962,7 +1984,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "labels for each segment of the band",
@@ -1971,7 +1993,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "occupations of the band",
@@ -1979,7 +2001,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "k-Points of the band",
@@ -1987,7 +2009,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "energies of the band",
@@ -1995,11 +2017,11 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "geometry.in keys that were unknown to the normalization script",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "UnknownGeometryInKeys",
       "repeats": false,
       "shape": [],
@@ -2008,7 +2030,7 @@
       ]
     }, {
       "description": "parameters of one atom kind",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "SpeciesParameters",
       "repeats": true,
       "shape": [],
@@ -2017,20 +2039,20 @@
       ]
     }, {
       "description": "A property that can be represented by an indexed multidimensional array",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "SimpleProperty",
       "superNames": []
     }, {
       "description": "A property connected with the scf cycle",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ScfProperty",
       "shape": [],
       "superNames": [
-        "SinglePointEvaluation"
+        "section_single_point_evaluation"
       ]
     }, {
       "description": "a particle information",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ParticleInfo",
       "repeats": true,
       "shape": [],
@@ -2040,7 +2062,7 @@
     }, {
       "description": "Property for key For_aux of FHI-aims with a json dictionary as value.",
       "dtypeStr": "D",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "OutControlIn_for_aux",
       "repeats": true,
       "shape": [],
@@ -2049,7 +2071,7 @@
       ]
     }, {
       "description": "An auxiliary basis function",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "AuxBasisFunction",
       "repeats": true,
       "shape": [],
@@ -2059,7 +2081,7 @@
     }, {
       "description": "Property for key Aux_gaussian of FHI-aims with a json dictionary as value.",
       "dtypeStr": "D",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "OutControlIn_aux_gaussian",
       "repeats": true,
       "shape": [],
@@ -2070,7 +2092,7 @@
     }, {
       "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
       "dtypeStr": "D",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "OutControlIn_angular_grids",
       "repeats": false,
       "shape": [],
@@ -2103,7 +2125,7 @@
       ]
     }, {
       "description": "Some estimate of the error on the converged (final) value",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ErrorEstimate",
       "repeats": false,
       "shape": [],
@@ -2113,7 +2135,7 @@
     }, {
       "description": "Property for key For_aux of FHI-aims with a json dictionary as value.",
       "dtypeStr": "D",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ControlIn_for_aux",
       "repeats": true,
       "shape": [],
@@ -2123,7 +2145,7 @@
     }, {
       "description": "Property for key Aux_gaussian of FHI-aims with a json dictionary as value.",
       "dtypeStr": "D",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ControlIn_aux_gaussian",
       "repeats": true,
       "shape": [],
@@ -2133,7 +2155,7 @@
       ]
     }, {
       "description": "A quantity that is preserved by the evolution (for example kinetic+potential energy during NVE",
-      "kindStr": "AbstractDocumentContentType",
+      "kindStr": "abstract_document_content_type",
       "name": "ConservedQuantity",
       "repeats": false,
       "shape": [],
