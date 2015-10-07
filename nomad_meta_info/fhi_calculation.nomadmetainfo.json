@@ -6,5 +6,21 @@
         "relativePath": "common.nomadmetainfo.json"
       }
     ],
-  "metaInfos": []
+  "metaInfos": [
+    {
+      "description": "values of the control.in file",
+      "kindStr": "type_abstract_document_content",
+      "name": "fhi_aims_control_in_values",
+      "superNames": [
+        "simulation_parameters"
+      ]
+    }, {
+      "description": "control.in keys that were unknown to the normalization script",
+      "kindStr": "type_abstract_document_content",
+      "name": "fhi_aims_unknown_control_in_keys",
+      "superNames": [
+        "fhi_aims_control_in_values"
+      ]
+    }
+]
 }
