@@ -18,6 +18,26 @@
       "kindStr": "type_section",
       "superNames": ["section_run"]
     }, {
+      "name": "section_particle_kind",
+      "description": "Every section_particle_kind contains information about a different kind of particle, and is identified by a unique string.",
+      "kindStr": "type_section",
+      "superNames": ["section_system_description"]
+    }, {
+      "name": "section_particle",
+      "description": "Every section_particle represents a particle (atom, ghost,...).",
+      "kindStr": "type_section",
+      "superNames": ["section_particle_kind"]
+    }, {
+      "name": "section_particle_kind_ref",
+      "description": "Every section_particle_kind_ref refers to a section_particle_kind by using the same unique string.",
+      "kindStr": "type_section",
+      "superNames": ["section_method"]
+    }, {
+      "name": "section_particle_ref",
+      "description": "Every section_particle_ref refers to a section_particle by its index within the particle kind.",
+      "kindStr": "type_section",
+      "superNames": ["section_method"]
+    }, {
       "name": "section_single_point_evaluation",
       "description": "Every section_single_point_evaluation section contains the values computated or evaluated during a single point evaluation.",
       "kindStr": "type_section",
@@ -70,8 +90,7 @@
       "kindStr": "type_abstract_document_content",
       "shape": [],
       "superNames": [
-        "energy",
-        "section_single_point_evaluation"
+        "energy_component"
       ]
     }, {
       "name": "energy_total_potential_per_atom_scf",
@@ -79,26 +98,23 @@
       "kindStr": "type_abstract_document_content",
       "shape": [],
       "superNames": [
-        "energy",
-        "section_scf_iteration"
+        "energy_component_per_atom_scf"
       ]
     }, {
       "name": "energy_total_potential",
-      "description": "A final value of a total potential energy",
+      "description": "A final value of a total potential energy. Different total energies might have different 0, and so might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
       "shape": [],
       "superNames": [
-        "energy",
-        "section_single_point_evaluation"
+        "energy_component"
       ]
     }, {
       "name": "energy_total_potential_scf",
-      "description": "A final value of a total potential energy during the scf",
+      "description": "A final value of a total potential energy during the scf. Different total energies might have different 0, and so might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
       "shape": [],
       "superNames": [
-        "energy",
-        "section_scf_iteration"
+        "energy_component_scf"
       ]
     }, {
       "description": "Information on the scf procedure",
@@ -327,7 +343,15 @@
         "simulation_parameters_method_single_point"
       ]
     }, {
-      "description": "Exchange correlation (XC) treatement in standarized short form, this string ignores convergence settings, and might collapse several similar methods",
+      "description": "Exchange correlation (XC) functional related information",
+      "kindStr": "type_abstract_document_content",
+      "name": "XC_functional",
+      "repeats": false,
+      "superNames": [
+        "XC_treatement"
+      ]
+    }, {
+      "description": "Exchange correlation (XC) treatement in standarized short form, this string ignores convergence settings, and might collapse several similar methods. It consists of postHF method @ DFT method, or if DFT only just the DFT method. DFT method is the string used in XC_functional_code_simple plus self interaction correction as defined in self_interaction_correction_code_simple if given and not none. postHF is as defined in post_HF_method_code_simple",
       "name": "XC_treatement_code_simple",
       "repeats": false,
       "shape": [],
@@ -336,13 +360,31 @@
         "XC_treatement"
       ]
     }, {
-      "description": "Exchange correlation (XC) treatement in a unique short form, this string keeps in account all settings in XC_treatement, but might be ugly/not so informative",
+      "description": "Exchange correlation (XC) treatement in a unique short form, this string keeps in account all settings in XC_treatement, but might be ugly/not so informative. It is built from the simple code (XC_treatement_code_simple) plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all the contents of the XC_treatement section",
       "name": "XC_treatement_code_unique",
       "repeats": false,
       "shape": [],
       "dtypeStr": "C",
       "superNames": [
         "XC_treatement"
+      ]
+    }, {
+      "description": "Exchange correlation (XC) functional, in standarized short form, this string ignores convergence settings, and might collapse several similar methods if the functional is supported by libxc use its shortname, see http://www.tddft.org/programs/octopus/wiki/index.php/Libxc_functionals with non standard mixing sort the names alphabeticaly, and join mixing and xc functional name with '_', HF_X is the exact exchange. For forms with non standard parameters '_' and the first 10 characters of the base64 url encoding of the SHA 512 checksum of a normalized json dictionary with the parameters should be appended to the functional name. Unknown functionals should use 'Unknown' and the first 10 characters of the checksum of all values in XC_functional (excluding this one and XC_functional_code_unique)",
+      "name": "XC_functional_code_simple",
+      "repeats": false,
+      "shape": [],
+      "dtypeStr": "C",
+      "superNames": [
+        "XC_functional"
+      ]
+    }, {
+      "description": "Exchange correlation (XC) functional in a unique short form, this string keeps in account all settings in XC_treatement, but might be uglier, less useful for comparisons. It consists of XC_functional_code_simple and (if not already appended, as for Unknown functionals) '_' and the first 10 characters of the base64 url encoding of the SHA 512 checksum of a normalized json dictionary with all values in XC_treatement (excluding this one and XC_functional_code_simple).",
+      "name": "XC_functional_code_unique",
+      "repeats": false,
+      "shape": [],
+      "dtypeStr": "C",
+      "superNames": [
+        "XC_functional"
       ]
     }, {
       "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
@@ -538,7 +580,7 @@
         "energy_total_potential"
       ]
     }, {
-      "description": "Converged dft energy with T0 correction",
+      "description": "Converged dft energy with T->0 extrapolation (for metals)",
       "dtypeStr": "f",
       "kindStr": "type_document_content",
       "name": "energy_DFT_T0",
@@ -715,7 +757,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Start date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
+      "description": "Start date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "name": "time_evaluation_date_0",
       "repeats": false,
       "dtypeStr": "f",
@@ -735,7 +777,7 @@
       ],
       "units": "s"
     }, {
-      "description": "End date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
+      "description": "End date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "name": "time_evaluation_date_end",
       "repeats": false,
       "dtypeStr": "f",
@@ -771,7 +813,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_per_atom_scf"
+        "energy_component_per_atom"
       ],
       "units": "J"
     }, {
@@ -785,143 +827,132 @@
       ],
       "units": "J"
     }, {
-      "description": "parameters of one particle kind",
-      "kindStr": "type_abstract_document_content",
-      "name": "ParticleKindParameters",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "simulation_parameters"
-      ]
-    }, {
-      "description": "Auto generated property for unhandled species key radial_multiplier",
-      "name": "species_radial_multiplier",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unhandled species key radial_base",
-      "name": "species_radial_base",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unhandled species key l_hartree",
-      "name": "species_l_hartree",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unhandled species key cut_pot",
-      "name": "species_cut_pot",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unhandled species key basis_dep_cutoff",
-      "name": "species_basis_dep_cutoff",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "The number of this iteration",
-      "dtypeStr": "i",
-      "name": "scfIterationNr",
+      "description": "Sum of the eigenvalues",
+      "dtypeStr": "f",
+      "name": "energy_sum_eigenvalues",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration"
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Sum of the eigenvalues during the scf iterations.",
+      "dtypeStr": "f",
+      "name": "energy_sum_eigenvalues_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "parameters of one particle kind",
+      "kindStr": "type_abstract_document_content",
+      "name": "particle_kind_parameters",
+      "superNames": [
+        "simulation_parameters_method_single_point"
       ]
     }, {
       "description": "Information on the program that generated the data",
       "kindStr": "type_abstract_document_content",
-      "name": "ProgramInfo",
+      "name": "program_info",
       "repeats": false,
       "shape": [],
-      "superNames": []
+      "superNames": ["accessory_info_run"]
     }, {
       "description": "Version of the program that was used",
-      "name": "programVersion",
+      "name": "program_version",
       "repeats": false,
       "shape": [],
+      "dtypeStr": "C",
       "superNames": [
-        "ProgramInfo"
+        "program_info"
       ]
     }, {
       "description": "Name of the program that generated the data",
-      "name": "programName",
+      "name": "program_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "Program compilation date and time as seconds from unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "name": "program_compilation_datetime",
       "repeats": false,
       "shape": [],
+      "dtypeStr": "f",
       "superNames": [
-        "ProgramInfo"
-      ]
-    }, {
-      "description": "Time of execution of the program",
-      "name": "programExecutionTime",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "time_info"
-      ]
-    }, {
-      "description": "Date of execution of the program",
-      "name": "programExecutionDate",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "time_info"
-      ]
-    }, {
-      "description": "Time the program was compiled",
-      "name": "programCompilationTime",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ProgramInfo"
+        "program_info"
       ]
     }, {
       "description": "Host on which the program was compiled",
-      "name": "programCompilationHost",
+      "name": "program_compilation_host",
       "repeats": false,
       "shape": [],
+      "dtypeStr": "C",
       "superNames": [
-        "ProgramInfo"
+        "program_info"
       ]
     }, {
-      "description": "Date the program was compiled",
-      "name": "programCompilationDate",
-      "repeats": false,
-      "shape": [],
+      "description": "Post hartree fock method parameters",
+      "name": "simulation_parameters_method_post_HF",
       "superNames": [
-        "ProgramInfo"
+        "XC_treatement"
       ]
     }, {
-      "description": "post hartree fock method used",
-      "name": "postHfMethod",
+      "description": "Møller–Plesset method parameters",
+      "name": "simulation_parameters_method_MP",
+      "superNames": [
+        "simulation_parameters_method_post_HF"
+      ]
+    }, {
+      "description": "Coupled Clusters method parameters",
+      "name": "simulation_parameters_method_CC",
+      "superNames": [
+        "simulation_parameters_method_post_HF"
+      ]
+    }, {
+      "description": "GW method parameters",
+      "name": "simulation_parameters_method_GW",
+      "superNames": [
+        "simulation_parameters_method_post_HF"
+      ]
+    }, {
+      "description": "Multi-configurational self-consistent field method parameters",
+      "name": "simulation_parameters_method_MCSCF",
+      "superNames": [
+        "simulation_parameters_method_post_HF"
+      ]
+    }, {
+      "description": "Multireference single and double configuration interaction method parameters",
+      "name": "simulation_parameters_method_MR",
+      "superNames": [
+        "simulation_parameters_method_post_HF"
+      ]
+    }, {
+      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post HF method has been used.",
+      "name": "post_HF_method_code_simple",
       "repeats": false,
       "shape": [],
+      "dtypeStr": "C",
       "superNames": [
-        "simulation_parameters"
+        "simulation_parameters_method_post_HF"
+      ]
+    }, {
+      "description": "Post Hartree-Fock method in a unique short form, this string keeps in account all settings in XC_treatement, but might be ugly/not so informative. The value is built from the simple code (post_HF_method_code_simple) plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all the contents of the XC_treatement section (excluding this one and post_HF_method_code_simple)",
+      "name": "post_HF_method_code_unique",
+      "repeats": false,
+      "shape": [],
+      "dtypeStr": "C",
+      "superNames": [
+        "simulation_parameters_method_post_HF"
       ]
     }, {
       "description": "Properties actually defining the current configuration",
       "kindStr": "type_abstract_document_content",
-      "name": "core_configuration",
+      "name": "configuration_core",
       "repeats": false,
       "superNames": [
         "section_system_description"
@@ -929,513 +960,72 @@
     }, {
       "description": "Which of the basis vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
       "dtypeStr": "b",
-      "name": "periodicDimensions",
+      "name": "configuration_periodic_dimensions",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "core_configuration"
+        "configuration_core"
       ]
     }, {
       "description": "Positions of the particles (this defines a configuration and is required).",
       "dtypeStr": "f",
-      "name": "particlePositions",
+      "name": "particle_position",
       "repeats": true,
-      "shape": [],
+      "shape": [3],
       "superNames": [
-        "core_configuration"
+        "configuration_core",
+        "section_particle"
       ],
       "units": "m"
     }, {
-      "description": "Names of the kinds (species) in a configuration.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
-      "dtypeStr": "C",
-      "name": "particleKindNames",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "core_configuration"
-      ]
-    }, {
-      "description": "Name (identifier) of one particle kind",
-      "name": "particleKindName",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Information on the parallelzation of the program",
+      "description": "Information on the parallelization of the program",
       "kindStr": "type_abstract_document_content",
-      "name": "ParallelizationInfo",
+      "name": "parallelization_info",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "AccessoryRunInfo"
+        "accessory_info_run"
       ]
     }, {
-      "description": "Hosts that did run this simulation",
-      "name": "parallelTasksAssignement",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParallelizationInfo"
-      ]
-    }, {
-      "description": "values of the geometry.in file",
+      "description": "Information on the parallelization of the program",
       "kindStr": "type_abstract_document_content",
-      "name": "GeometryInValues",
+      "name": "parallelization_info_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "simulation_parameters"
+        "accessory_info_scf"
       ]
     }, {
-      "description": "Property for key rrs_pbc_lattice_vector of FHI-aims with a json dictionary as value.",
+      "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
+      "name": "parallel_tasks_assignement",
+      "repeats": false,
+      "shape": [],
       "dtypeStr": "D",
-      "name": "outGeometryIn_rrs_pbc_lattice_vector",
-      "repeats": false,
-      "shape": [],
       "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key multipole of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outGeometryIn_multipole",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key lattice_vector of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outGeometryIn_lattice_vector",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key image_potential of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outGeometryIn_image_potential",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key homogeneous_field of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outGeometryIn_homogeneous_field",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key multipole of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "geometryIn_multipole",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key data of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outGeometryIn_data",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "geometryIn_multipole"
-      ]
-    }, {
-      "description": "Property for key atom of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outGeometryIn_atom",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key xc of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_xc",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "Xc-functional"
-      ]
-    }, {
-      "description": "Property for key verbatim_writeout of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_verbatim_writeout",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key valence of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_valence",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key use_aufbau_principle of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_use_aufbau_principle",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key stress_for_relaxation of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_stress_for_relaxation",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key spin of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_spin",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key relax_geometry of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_relax_geometry",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "A basis function",
-      "kindStr": "type_abstract_document_content",
-      "name": "BasisFunction",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key pure_gaussian of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outControlIn_pure_gaussian",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key pseudo of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_pseudo",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key output_analytical_stress_symmetrized of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_output_analytical_stress_symmetrized",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "kindStr": "type_abstract_document_content",
-      "name": "ControlIn_angular_grids",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key outer_grid of FHI-aims with an integer value.",
-      "dtypeStr": "i",
-      "name": "outControlIn_outer_grid",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlIn_angular_grids"
-      ]
-    }, {
-      "description": "Property for key numerical_stress_save_scf of FHI-aims with value of kind bool.",
-      "dtypeStr": "b",
-      "name": "outControlIn_numerical_stress_save_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key nucleus of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outControlIn_nucleus",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ],
-      "units": "e"
-    }, {
-      "description": "Property for key nonlinear_core of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_nonlinear_core",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key mass of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outControlIn_mass",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ],
-      "units": "amu"
-    }, {
-      "description": "Property for key ionic of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_ionic",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key ion_occ of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_ion_occ",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key hydro of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outControlIn_hydro",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "omega value for the hse06 functional",
-      "name": "outControlIn_hse_omega",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "Xc-functional"
-      ]
-    }, {
-      "description": "hirschfeld r0 parameter",
-      "name": "outControlIn_hirschfeld_r0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "hirschfeld c6 parameter",
-      "name": "outControlIn_hirschfeld_c6",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "hirschfeld alpha parameter",
-      "name": "outControlIn_hirschfeld_alpha",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key gaussian of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outControlIn_gaussian",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key external_pressure of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outControlIn_external_pressure",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ],
-      "units": "eV/A**3"
-    }, {
-      "description": "Property for key el_ph_coupling of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_el_ph_coupling",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key dry_run of FHI-aims with value of kind None.",
-      "name": "outControlIn_dry_run",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key division of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outControlIn_division",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ControlIn_angular_grids"
-      ]
-    }, {
-      "description": "Property for key delta_numerical_stress of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outControlIn_delta_numerical_stress",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key default_initial_moment of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_default_initial_moment",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key core of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "outControlIn_core",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key confined of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "outControlIn_confined",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key compute_numerical_stress of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_compute_numerical_stress",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key compute_forces of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_compute_forces",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key compute_analytical_stress of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_compute_analytical_stress",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key charge of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "outControlIn_charge",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key calc_analytical_stress_symmetrized of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_calc_analytical_stress_symmetrized",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key analytic_potential_average of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "outControlIn_analytic_potential_average",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
+        "parallelization_info"
       ]
     }, {
       "description": "Number of parallel tasks used",
-      "name": "numberOfTasks",
+      "name": "parallel_tasks_number",
       "repeats": false,
       "shape": [],
+      "dtypeStr": "i",
       "superNames": [
-        "ParallelizationInfo"
+        "parallelization_info"
       ]
     }, {
       "description": "number of scf iterations at Dft level",
       "dtypeStr": "i",
-      "name": "nScfDft",
+      "name": "scf_dft_niter",
       "repeats": false,
       "shape": [],
       "superNames": [
         "scf_info"
       ]
     }, {
-      "description": "time needed for an mp2 calculation",
+      "description": "time needed for an MP2 calculation",
       "dtypeStr": "f",
-      "name": "mp2Time",
+      "name": "time_MP2",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -1446,1036 +1036,282 @@
       "description": "Converged Mp2 energy correction",
       "dtypeStr": "f",
       "kindStr": "type_document_content",
-      "name": "mp2EnergyCorrection",
+      "name": "energy_correction_MP2",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation",
-        "EnergyComponent"
+        "energy_component"
       ],
       "units": "J"
     }, {
-      "description": "Converged total MP2 energy",
+      "description": "Converged total MP2 energy (base + MP2 correction)",
       "dtypeStr": "f",
       "kindStr": "type_document_content",
-      "name": "mp2Energy",
+      "name": "energy_MP2",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation",
-        "TotalEnergy"
+        "energy_total_potential"
       ],
       "units": "J"
     }, {
-      "description": "Converged Hartree-Fock energy",
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy",
       "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "hfEnergy",
+      "name": "energy_correction_hartree",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation",
-        "DftEnergy"
+        "energy_component"
       ],
       "units": "J"
     }, {
-      "description": "Hartree (coulomb) energy during the scf iterations",
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy",
       "dtypeStr": "f",
-      "name": "hartreeEnergyScfIter",
+      "name": "energy_correction_hartree_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration",
         "energy_component_scf"
       ],
       "units": "J"
     }, {
-      "description": "Hartree (coulomb) energy at the first scf iteration",
+      "description": "Error in the hartree (electrostatic) potential energy",
       "dtypeStr": "f",
-      "name": "hartreeEnergyScf0",
+      "name": "energy_hartree_error",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "scf_info",
-        "energy_component_scf"
+        "error_estimate_partial",
+        "energy"
       ],
       "units": "J"
     }, {
-      "description": "Error in the hartree (coulomb) energy",
-      "dtypeStr": "f",
-      "name": "hartreeEnergyErrorScfIter",
-      "repeats": false,
-      "shape": [],
+      "name": "stress_tensor_kind",
+      "description": "A final value of a stress tensor",
+      "kindStr": "type_abstract_document_content",
+      "shape": [3, 3],
       "superNames": [
-        "section_scf_iteration",
-        "energy_component_scf"
+        "section_run"
+      ]
+    }, {
+      "name": "stress_tensor",
+      "description": "A final value of the default stress tensor",
+      "shape": [3, 3],
+      "dtypeStr": "f",
+      "superNames": [
+        "stress_tensor_kind"
       ],
-      "units": "J"
+      "units": "Pa"
     }, {
-      "description": "Hartree (coulomb) energy error at the first scf iteration",
-      "dtypeStr": "f",
-      "name": "hartreeEnergyErrorScf0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "scf_info",
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Property for key image_potential of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "geometryIn_image_potential",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "position along z of the first chage really mirrored (plane_position + cutoff)",
-      "name": "geometryIn_start_plane_position",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "geometryIn_image_potential"
-      ]
-    }, {
-      "description": "Property for key rrs_pbc_lattice_vector of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "geometryIn_rrs_pbc_lattice_vector",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "position along z of the plane defining the image potential",
-      "name": "geometryIn_plane_position",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "geometryIn_image_potential"
-      ]
-    }, {
-      "description": "z coordinate of the position of the multipole",
-      "name": "geometryIn_multipole_coord_z",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "geometryIn_multipole"
-      ]
-    }, {
-      "description": "y coordinate of the position of the multipole",
-      "name": "geometryIn_multipole_coord_y",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "geometryIn_multipole"
-      ]
-    }, {
-      "description": "x coordinate of the position of the multipole",
-      "name": "geometryIn_multipole_coord_x",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "geometryIn_multipole"
-      ]
-    }, {
-      "description": "Property for key lattice_vector of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "geometryIn_lattice_vector",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key homogeneous_field of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "geometryIn_homogeneous_field",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Property for key data of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "geometryIn_data",
-      "repeats": false,
-      "shape": [-1],
-      "superNames": [
-        "geometryIn_multipole"
-      ]
-    }, {
-      "description": "Property for key atom of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "geometryIn_atom",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "GeometryInValues"
-      ]
-    }, {
-      "description": "Last converged total dft energy corrected for T->0",
+      "description": "Potential energy used during the dynamics (Geometry optimization, MD,...)",
       "dtypeStr": "f",
       "kindStr": "type_document_content",
-      "name": "finalTotalDftEnergyT0",
+      "name": "energy_potential_dynamics",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "TotalEnergy"
-      ],
-      "units": "J"
-    }, {
-      "description": "Last converged total dft energy",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "finalTotalDftEnergy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "TotalEnergy"
-      ],
-      "units": "J"
-    }, {
-      "description": "Last converged total energy with post scf corrections (which ones depend on controlIn_total_energy_method)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "finalCorrectedEnergy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "TotalEnergy"
+        "energy_total_potential"
       ],
       "units": "J"
     }, {
       "description": "Converged exact exchange energy",
       "dtypeStr": "f",
       "kindStr": "type_document_content",
-      "name": "exactExchangeEnergy",
+      "name": "energy_HF_X",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation",
-        "EnergyComponent"
+        "energy_component"
       ],
       "units": "J"
     }, {
-      "description": "Sum of the eigenvalues at the start of the scf",
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Value during the SCF cycle.",
       "dtypeStr": "f",
-      "name": "evSumScfIter",
+      "name": "energy_correction_entropy_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration",
         "energy_component_scf"
       ],
       "units": "J"
     }, {
-      "description": "Sum of the eigenvalues at the start of the scf",
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account.",
       "dtypeStr": "f",
-      "name": "evSumScf0",
+      "name": "energy_correction_entropy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "scf_info",
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electronic free energy during the scf iterations, this is the potential corresponding to the forces with finite T. Value during the Scf.",
+      "dtypeStr": "f",
+      "name": "electronic_free_energy_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electronic free energy during the scf iterations, this is the potential corresponding to the forces with finite T.",
+      "dtypeStr": "f",
+      "name": "electronic_free_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total electostatic energy (atom + electrons) during the scf itrations",
+      "dtypeStr": "f",
+      "name": "energy_electrostatic_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
         "energy_component_scf"
       ],
       "units": "J"
     }, {
-      "description": "Entropy correction during the scf iterations",
+      "description": "Total electostatic energy (atom + electrons)",
       "dtypeStr": "f",
-      "name": "entropyCorrectionScfIter",
+      "name": "energy_electrostatic",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration",
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Entropy correction at the first scf iteration",
-      "dtypeStr": "f",
-      "name": "entropyCorrectionScf0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "scf_info",
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Electronic free energy during the scf iterations",
-      "dtypeStr": "f",
-      "name": "eletronicFreeEnergyScfIter",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration",
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Electronic free energy at the first scf iteration",
-      "dtypeStr": "f",
-      "name": "eletronicFreeEnergyScf0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "scf_info",
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "electostatic energy during the scf itrations",
-      "dtypeStr": "f",
-      "name": "electrostaticEnergyScfIter",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration",
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "electrostatic energy at the first scf iteration",
-      "dtypeStr": "f",
-      "name": "electrostaticEnergyScf0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "scf_info",
-        "energy_component_scf"
+        "energy_component"
       ],
       "units": "J"
     }, {
       "description": "Electronic kinetic energy during the scf iterations",
       "dtypeStr": "f",
-      "name": "electronicKineticEnergyScfIter",
+      "name": "electronic_kinetic_energy_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration",
         "energy_component_scf"
       ],
       "units": "J"
     }, {
-      "description": "Electronic kinetic energy at the first scf iteration",
+      "description": "Electronic kinetic energy",
       "dtypeStr": "f",
-      "name": "electronicKineticEnergyScf0",
+      "name": "electronic_kinetic_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "scf_info",
-        "energy_component_scf"
+        "energy_component"
       ],
       "units": "J"
     }, {
       "description": "Electronic free energy per atom during the scf iterations",
       "dtypeStr": "f",
-      "name": "electronicFreeEnergyPerAtomScfIter",
+      "name": "electronic_free_energy_per_atom_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration",
-        "energy_component_scf"
+        "energy_component_per_atom_scf"
       ],
       "units": "J"
     }, {
-      "description": "Electronic free energy per atom at the first scf iteration",
+      "description": "Electronic free energy per atom",
       "dtypeStr": "f",
-      "name": "electronicFreeEnergyPerAtomScf0",
+      "name": "electronic_free_energy_per_atom",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "scf_info",
-        "energy_component"
+        "energy_component_per_atom"
       ],
       "units": "J"
     }, {
-      "description": "Hartree in eV",
-      "name": "eVHaValue",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "AccessoryRunInfo"
-      ]
-    }, {
-      "description": "Electrostatic energy during the scf iterations",
-      "dtypeStr": "f",
-      "name": "eStaticEnergyScfIter",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Electrostatic energy at the first scf iteration",
-      "dtypeStr": "f",
-      "name": "eStaticEnergyScf0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Dft electronic free energy",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "dftElectronicFreeEnergy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation",
-        "DftEnergy"
-      ],
-      "units": "J"
-    }, {
-      "description": "Property for key xc of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_xc",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "Xc-functional"
-      ]
-    }, {
-      "description": "Property for key verbatim_writeout of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_verbatim_writeout",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key valence of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_valence",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key use_aufbau_principle of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_use_aufbau_principle",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key stress_for_relaxation of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_stress_for_relaxation",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key spin of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_spin",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key relax_geometry of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_relax_geometry",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "accuracy of the forces",
-      "name": "controlIn_relax_accuracy_forces",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key pure_gaussian of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "controlIn_pure_gaussian",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key pseudo of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_pseudo",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key output_analytical_stress_symmetrized of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_output_analytical_stress_symmetrized",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key outer_grid of FHI-aims with value of kind i.",
-      "dtypeStr": "i",
-      "name": "controlIn_outer_grid",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlIn_angular_grids"
-      ]
-    }, {
-      "description": "Property for key numerical_stress_save_scf of FHI-aims with value of kind bool.",
-      "dtypeStr": "b",
-      "name": "controlIn_numerical_stress_save_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key nucleus of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "controlIn_nucleus",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ],
-      "units": "e"
-    }, {
-      "description": "Property for key nonlinear_core of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_nonlinear_core",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key mass of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "controlIn_mass",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ],
-      "units": "amu"
-    }, {
-      "description": "Property for key ionic of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_ionic",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key ion_occ of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_ion_occ",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key hydro of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "controlIn_hydro",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "hirschfeld r0 parameter",
-      "name": "controlIn_hirschfeld_r0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "hirschfeld c6 parameter",
-      "name": "controlIn_hirschfeld_c6",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "hirschfeld alpha parameter",
-      "name": "controlIn_hirschfeld_alpha",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key gaussian of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "controlIn_gaussian",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key external_pressure of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "controlIn_external_pressure",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ],
-      "units": "eV/A**3"
-    }, {
-      "description": "Property for key el_ph_coupling of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_el_ph_coupling",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key dry_run of FHI-aims with value of kind None.",
-      "name": "controlIn_dry_run",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key division of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "controlIn_division",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ControlIn_angular_grids"
-      ]
-    }, {
-      "description": "Property for key delta_numerical_stress of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "controlIn_delta_numerical_stress",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key default_initial_moment of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_default_initial_moment",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key core of FHI-aims with a string value.",
-      "dtypeStr": "C",
-      "name": "controlIn_core",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key confined of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "name": "controlIn_confined",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "BasisFunction"
-      ]
-    }, {
-      "description": "Property for key compute_numerical_stress of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_compute_numerical_stress",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key compute_forces of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_compute_forces",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key compute_analytical_stress of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_compute_analytical_stress",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key charge of FHI-aims with a float value.",
-      "dtypeStr": "f",
-      "name": "controlIn_charge",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Property for key calc_analytical_stress_symmetrized of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_calc_analytical_stress_symmetrized",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "angular_grids specified parameter",
-      "name": "controlIn_angular_grids_specified",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlIn_angular_grids"
-      ]
-    }, {
-      "description": "Property for key analytic_potential_average of FHI-aims with a boolean value.",
-      "dtypeStr": "b",
-      "name": "controlIn_analytic_potential_average",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ControlInValues"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key sc_accuracy_rho",
-      "name": "controlInUnknown_sc_accuracy_rho",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key sc_accuracy_etot",
-      "name": "controlInUnknown_sc_accuracy_etot",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key sc_accuracy_eev",
-      "name": "controlInUnknown_sc_accuracy_eev",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key output",
-      "name": "controlInUnknown_output",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key n_max_pulay",
-      "name": "controlInUnknown_n_max_pulay",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key k_offset",
-      "name": "controlInUnknown_k_offset",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key k_grid",
-      "name": "controlInUnknown_k_grid",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key dos_kgrid_factors",
-      "name": "controlInUnknown_dos_kgrid_factors",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Auto generated property for unknown key charge_mix_param",
-      "name": "controlInUnknown_charge_mix_param",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "UnknownControlInKeys"
-      ]
-    }, {
-      "description": "Change ot the charge density during an scf iteration",
-      "dtypeStr": "f",
-      "name": "chargeDensityChangeScfIter",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration",
-        "PartialErrorEstimate"
-      ],
-      "units": "e"
-    }, {
-      "description": "Periodic cell given as the three basis vectors.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
-      "dtypeStr": "f",
-      "name": "cell",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "CoreConfiguration"
-      ],
-      "units": "Bohr"
-    }, {
-      "description": "correlation part of the lda xc functional using the self consistent density of the target functional[correct???]",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "cEnergyLda",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation",
-        "EnergyComponent"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged correlation part of the dft xc functional",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "cEnergyDft",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation",
-        "EnergyComponent"
-      ],
-      "units": "J"
-    }, {
-      "description": "start and end points of the band segments",
-      "name": "band_segm_start_end",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "labels for each segment of the band",
-      "dtypeStr": "C",
-      "name": "band_segm_labels",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "occupations of the band",
-      "name": "band_occupations",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "k-Points of the band",
-      "name": "band_k_points",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "energies of the band",
-      "name": "band_energies",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "geometry.in keys that were unknown to the normalization script",
+      "description": "A basis function related to a given atom kind",
       "kindStr": "type_abstract_document_content",
-      "name": "UnknownGeometryInKeys",
-      "repeats": false,
-      "shape": [],
+      "name": "basis_function_atomic",
       "superNames": [
-        "GeometryInValues"
+        "section_particle_kind_ref"
       ]
     }, {
-      "description": "parameters of one atom kind",
+      "description": "An auxiliary basis function related to a given atom kind",
       "kindStr": "type_abstract_document_content",
-      "name": "SpeciesParameters",
+      "name": "basis_function_atomic_auxiliary",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "simulation_parameters"
+        "section_particle_kind_ref"
       ]
     }, {
-      "description": "A property that can be represented by an indexed multidimensional array",
+      "description": "An auxiliary basis function related to a given atom kind",
       "kindStr": "type_abstract_document_content",
-      "name": "SimpleProperty",
-      "superNames": []
-    }, {
-      "description": "A property connected with the scf cycle",
-      "kindStr": "type_abstract_document_content",
-      "name": "ScfProperty",
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "a particle information",
-      "kindStr": "type_abstract_document_content",
-      "name": "ParticleInfo",
+      "name": "basis_function_atomic_auxiliary",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key For_aux of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "kindStr": "type_abstract_document_content",
-      "name": "OutControlIn_for_aux",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "An auxiliary basis function",
-      "kindStr": "type_abstract_document_content",
-      "name": "AuxBasisFunction",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key Aux_gaussian of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "kindStr": "type_abstract_document_content",
-      "name": "OutControlIn_aux_gaussian",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "AuxBasisFunction"
-      ]
-    }, {
-      "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "kindStr": "type_abstract_document_content",
-      "name": "OutControlIn_angular_grids",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
+        "section_particle_kind_ref"
       ]
     }, {
       "description": "Total energy minus the same number of atomic energies of the most stable form of the element calculated with the same method (functional,...), basisset and accuracy.",
-      "name": "MethodConsistentFormationEnergy",
+      "name": "energy_formation_method_consistent",
       "superNames": [
-        "TotalEnergy"
+        "energy_total_potential"
       ]
     }, {
       "description": "Total energy minus the energy of the same number of isolated atoms calculated with the same method (functional,...), basisset and accuracy.",
-      "name": "MethodConsistentAtomizationEnergy",
+      "name": "energy_atomization_method_consistent",
       "superNames": [
-        "TotalEnergy"
+        "energy_total_potential"
       ]
     }, {
       "description": "Total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
-      "name": "FittedComparableEnergy",
+      "name": "energy_comparable_fitted",
+      "kindStr": "type_abstract_document_content",
       "superNames": [
-        "TotalEnergy"
+        "energy_total_potential"
       ]
     }, {
       "description": "First version of the fit of the total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
-      "name": "FittedComparableEnergyV1",
+      "name": "energy_comparable_fitted_v1",
       "superNames": [
-        "FittedComparableEnergy"
+        "energy_comparable_fitted"
       ]
     }, {
       "description": "Some estimate of the error on the converged (final) value",
       "kindStr": "type_abstract_document_content",
-      "name": "ErrorEstimate",
+      "name": "error_estimate",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "PartialErrorEstimate"
-      ]
-    }, {
-      "description": "Property for key For_aux of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "kindStr": "type_abstract_document_content",
-      "name": "ControlIn_for_aux",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters"
-      ]
-    }, {
-      "description": "Property for key Aux_gaussian of FHI-aims with a json dictionary as value.",
-      "dtypeStr": "D",
-      "kindStr": "type_abstract_document_content",
-      "name": "ControlIn_aux_gaussian",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "ParticleKindParameters",
-        "AuxBasisFunction"
+        "error_estimate_partial"
       ]
     }, {
       "description": "A quantity that is preserved by the evolution (for example kinetic+potential energy during NVE",
       "kindStr": "type_abstract_document_content",
-      "name": "ConservedQuantity",
+      "name": "conserved_quantity",
       "repeats": false,
       "shape": [],
       "superNames": []
+    }, {
+      "name": "basis_function_atomic_auxiliary_name",
+      "description": "Code dependent but explicative name of the basis function. For example fhi-aims looks at the closest standard basis set, and uses that name. If not equal appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json",
+      "superNames": [
+          "basis_function_atomic_auxiliary"
+      ],
+        "shape": [],
+        "dtypeStr": "C"
+    }, {
+      "name": "basis_function_atomic_name",
+      "description": "Code dependent but explicative name of the basis function. For example fhi-aims looks at the closest standard basis set, and uses that name. If not equal appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json",
+      "superNames": [
+          "basis_function_atomic"
+      ],
+        "shape": [],
+        "dtypeStr": "C"
+    }, {
+       "name": "basis_functions_name",
+        "description": "Code dependent but explicative name of the basis functions. For example fhi-aims tries to collect the same basis_function_atomic_name and create a small descriptive name, plane waves use PW_<cutoff><Unit>",
+        "super_name": [ "section_method" ],
+        "shape": [],
+        "dtypeStr": "C"
     }
   ]
 }

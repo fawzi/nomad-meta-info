@@ -4,38 +4,38 @@
   "dependencies": [],
   "metaInfos": [ {
       "description": "kind of InfoKinds describing a type of information that has not been defined, and is unknown",
-      "kindStr": "meta_type",
-      "name": "unknown_type",
+      "kindStr": "type_meta",
+      "name": "type_unknown",
       "superNames": []
     }, {
       "description": "kind of InfoKinds describing a meta type that has not been defined, and is unknown",
-      "kindStr": "meta_type",
-      "name": "unknown_meta_type",
+      "kindStr": "type_meta",
+      "name": "type_unknown_meta",
       "superNames": []
     }, {
       "description": "kind of InfoKinds describing the type of documents (Infos)",
-      "kindStr": "meta_type",
-      "name": "document_type",
+      "kindStr": "type_meta",
+      "name": "type_document",
       "superNames": []
     }, {
       "description": "Kind of something contained in a document",
-      "kindStr": "meta_type",
-      "name": "document_content_type",
+      "kindStr": "type_meta",
+      "name": "type_document_content",
       "superNames": []
     }, {
       "description": "kind of InfoKinds describing the type of information contained in documents (Infos)",
-      "kindStr": "meta_type",
-      "name": "connection_type",
+      "kindStr": "type_meta",
+      "name": "type_connection",
       "superNames": []
     }, {
       "description": "A property used only to classify other concrete properties, and thus without an associated value",
-      "kindStr": "meta_type",
-      "name": "abstract_document_content_type",
+      "kindStr": "type_meta",
+      "name": "type_abstract_document_content",
       "superNames": []
     }, {
       "description": "A property used to group other properties. A meta info X of kind SectionType implicitly defines a meta info X_identifier of type string and a meta info X_index of type integer inheriting from it.",
-      "kindStr": "meta_type",
-      "name": "section_type",
+      "kindStr": "type_meta",
+      "name": "type_section",
       "superNames": []
     }]
 }

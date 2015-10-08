@@ -21,6 +21,1599 @@
       "superNames": [
         "fhi_aims_control_in_values"
       ]
+    }, , {
+      "description": "Auto generated property for unhandled species key radial_multiplier",
+      "name": "species_radial_multiplier",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unhandled species key radial_base",
+      "name": "species_radial_base",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unhandled species key l_hartree",
+      "name": "species_l_hartree",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unhandled species key cut_pot",
+      "name": "species_cut_pot",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unhandled species key basis_dep_cutoff",
+      "name": "species_basis_dep_cutoff",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "The number of this iteration",
+      "dtypeStr": "i",
+      "name": "scfIterationNr",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Hosts that did run this simulation",
+      "name": "parallel_tasks_assignement",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "parallelization_info"
+      ]
+    }, {
+      "description": "values of the geometry.in file",
+      "kindStr": "type_abstract_document_content",
+      "name": "GeometryInValues",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "simulation_parameters"
+      ]
+    }, {
+      "description": "Property for key rrs_pbc_lattice_vector of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_rrs_pbc_lattice_vector",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key multipole of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_multipole",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key lattice_vector of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_lattice_vector",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key image_potential of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_image_potential",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key homogeneous_field of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_homogeneous_field",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key multipole of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_multipole",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key data of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outGeometryIn_data",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_multipole"
+      ]
+    }, {
+      "description": "Property for key atom of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_atom",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key xc of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_xc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "Xc-functional"
+      ]
+    }, {
+      "description": "Property for key verbatim_writeout of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_verbatim_writeout",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key valence of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_valence",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key use_aufbau_principle of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_use_aufbau_principle",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key stress_for_relaxation of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_stress_for_relaxation",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key spin of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_spin",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key relax_geometry of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_relax_geometry",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "A basis function",
+      "kindStr": "type_abstract_document_content",
+      "name": "BasisFunction",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key pure_gaussian of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_pure_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key pseudo of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_pseudo",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key output_analytical_stress_symmetrized of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_output_analytical_stress_symmetrized",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "kindStr": "type_abstract_document_content",
+      "name": "ControlIn_angular_grids",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key outer_grid of FHI-aims with an integer value.",
+      "dtypeStr": "i",
+      "name": "outControlIn_outer_grid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key numerical_stress_save_scf of FHI-aims with value of kind bool.",
+      "dtypeStr": "b",
+      "name": "outControlIn_numerical_stress_save_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key nucleus of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_nucleus",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ],
+      "units": "e"
+    }, {
+      "description": "Property for key nonlinear_core of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_nonlinear_core",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key mass of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_mass",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ],
+      "units": "amu"
+    }, {
+      "description": "Property for key ionic of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_ionic",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key ion_occ of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_ion_occ",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key hydro of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_hydro",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "omega value for the hse06 functional",
+      "name": "outControlIn_hse_omega",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "Xc-functional"
+      ]
+    }, {
+      "description": "hirschfeld r0 parameter",
+      "name": "outControlIn_hirschfeld_r0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "hirschfeld c6 parameter",
+      "name": "outControlIn_hirschfeld_c6",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "hirschfeld alpha parameter",
+      "name": "outControlIn_hirschfeld_alpha",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key gaussian of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key external_pressure of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_external_pressure",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ],
+      "units": "eV/A**3"
+    }, {
+      "description": "Property for key el_ph_coupling of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_el_ph_coupling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key dry_run of FHI-aims with value of kind None.",
+      "name": "outControlIn_dry_run",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key division of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_division",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key delta_numerical_stress of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_delta_numerical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key default_initial_moment of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_default_initial_moment",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key core of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_core",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key confined of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_confined",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key compute_numerical_stress of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_compute_numerical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key compute_forces of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_compute_forces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key compute_analytical_stress of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_compute_analytical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key charge of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_charge",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key calc_analytical_stress_symmetrized of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_calc_analytical_stress_symmetrized",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key analytic_potential_average of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_analytic_potential_average",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key image_potential of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_image_potential",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "position along z of the first chage really mirrored (plane_position + cutoff)",
+      "name": "geometryIn_start_plane_position",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_image_potential"
+      ]
+    }, {
+      "description": "Property for key rrs_pbc_lattice_vector of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_rrs_pbc_lattice_vector",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "position along z of the plane defining the image potential",
+      "name": "geometryIn_plane_position",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_image_potential"
+      ]
+    }, {
+      "description": "z coordinate of the position of the multipole",
+      "name": "geometryIn_multipole_coord_z",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_multipole"
+      ]
+    }, {
+      "description": "y coordinate of the position of the multipole",
+      "name": "geometryIn_multipole_coord_y",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_multipole"
+      ]
+    }, {
+      "description": "x coordinate of the position of the multipole",
+      "name": "geometryIn_multipole_coord_x",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_multipole"
+      ]
+    }, {
+      "description": "Property for key lattice_vector of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_lattice_vector",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key homogeneous_field of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_homogeneous_field",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key data of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "geometryIn_data",
+      "repeats": false,
+      "shape": [-1],
+      "superNames": [
+        "geometryIn_multipole"
+      ]
+    }, {
+      "description": "Property for key atom of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_atom",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key rrs_pbc_lattice_vector of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_rrs_pbc_lattice_vector",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key multipole of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_multipole",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key lattice_vector of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_lattice_vector",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key image_potential of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_image_potential",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key homogeneous_field of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_homogeneous_field",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key multipole of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "geometryIn_multipole",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key data of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outGeometryIn_data",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "geometryIn_multipole"
+      ]
+    }, {
+      "description": "Property for key atom of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outGeometryIn_atom",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "Property for key xc of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_xc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "Xc-functional"
+      ]
+    }, {
+      "description": "Property for key verbatim_writeout of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_verbatim_writeout",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key valence of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_valence",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key use_aufbau_principle of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_use_aufbau_principle",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key stress_for_relaxation of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_stress_for_relaxation",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key spin of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_spin",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key relax_geometry of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_relax_geometry",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "A basis function",
+      "kindStr": "type_abstract_document_content",
+      "name": "BasisFunction",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key pure_gaussian of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_pure_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key pseudo of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_pseudo",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key output_analytical_stress_symmetrized of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_output_analytical_stress_symmetrized",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "kindStr": "type_abstract_document_content",
+      "name": "ControlIn_angular_grids",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key outer_grid of FHI-aims with an integer value.",
+      "dtypeStr": "i",
+      "name": "outControlIn_outer_grid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key numerical_stress_save_scf of FHI-aims with value of kind bool.",
+      "dtypeStr": "b",
+      "name": "outControlIn_numerical_stress_save_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key nucleus of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_nucleus",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ],
+      "units": "e"
+    }, {
+      "description": "Property for key nonlinear_core of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_nonlinear_core",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key mass of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_mass",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ],
+      "units": "amu"
+    }, {
+      "description": "Property for key ionic of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_ionic",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key ion_occ of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_ion_occ",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key hydro of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_hydro",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "omega value for the hse06 functional",
+      "name": "outControlIn_hse_omega",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "Xc-functional"
+      ]
+    }, {
+      "description": "hirschfeld r0 parameter",
+      "name": "outControlIn_hirschfeld_r0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "hirschfeld c6 parameter",
+      "name": "outControlIn_hirschfeld_c6",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "hirschfeld alpha parameter",
+      "name": "outControlIn_hirschfeld_alpha",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key gaussian of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key external_pressure of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_external_pressure",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ],
+      "units": "eV/A**3"
+    }, {
+      "description": "Property for key el_ph_coupling of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_el_ph_coupling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key dry_run of FHI-aims with value of kind None.",
+      "name": "outControlIn_dry_run",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key division of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_division",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key delta_numerical_stress of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_delta_numerical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key default_initial_moment of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_default_initial_moment",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key core of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "outControlIn_core",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key confined of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "outControlIn_confined",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key compute_numerical_stress of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_compute_numerical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key compute_forces of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_compute_forces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key compute_analytical_stress of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "outControlIn_compute_analytical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key charge of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "outControlIn_charge",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key xc of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_xc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "Xc-functional"
+      ]
+    }, {
+      "description": "Property for key verbatim_writeout of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_verbatim_writeout",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key valence of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_valence",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key use_aufbau_principle of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_use_aufbau_principle",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key stress_for_relaxation of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_stress_for_relaxation",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key spin of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_spin",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key relax_geometry of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_relax_geometry",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "accuracy of the forces",
+      "name": "controlIn_relax_accuracy_forces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key pure_gaussian of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "controlIn_pure_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key pseudo of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_pseudo",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key output_analytical_stress_symmetrized of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_output_analytical_stress_symmetrized",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key outer_grid of FHI-aims with value of kind i.",
+      "dtypeStr": "i",
+      "name": "controlIn_outer_grid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key numerical_stress_save_scf of FHI-aims with value of kind bool.",
+      "dtypeStr": "b",
+      "name": "controlIn_numerical_stress_save_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key nucleus of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "controlIn_nucleus",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ],
+      "units": "e"
+    }, {
+      "description": "Property for key nonlinear_core of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_nonlinear_core",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key mass of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "controlIn_mass",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ],
+      "units": "amu"
+    }, {
+      "description": "Property for key ionic of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_ionic",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key ion_occ of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_ion_occ",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key hydro of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "controlIn_hydro",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "hirschfeld r0 parameter",
+      "name": "controlIn_hirschfeld_r0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "hirschfeld c6 parameter",
+      "name": "controlIn_hirschfeld_c6",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "hirschfeld alpha parameter",
+      "name": "controlIn_hirschfeld_alpha",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key gaussian of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "controlIn_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key external_pressure of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "controlIn_external_pressure",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ],
+      "units": "eV/A**3"
+    }, {
+      "description": "Property for key el_ph_coupling of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_el_ph_coupling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key dry_run of FHI-aims with value of kind None.",
+      "name": "controlIn_dry_run",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key division of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "controlIn_division",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key delta_numerical_stress of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "controlIn_delta_numerical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key default_initial_moment of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_default_initial_moment",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key core of FHI-aims with a string value.",
+      "dtypeStr": "C",
+      "name": "controlIn_core",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key confined of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "name": "controlIn_confined",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "BasisFunction"
+      ]
+    }, {
+      "description": "Property for key compute_numerical_stress of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_compute_numerical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key compute_forces of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_compute_forces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key compute_analytical_stress of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_compute_analytical_stress",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key charge of FHI-aims with a float value.",
+      "dtypeStr": "f",
+      "name": "controlIn_charge",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Property for key calc_analytical_stress_symmetrized of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_calc_analytical_stress_symmetrized",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "angular_grids specified parameter",
+      "name": "controlIn_angular_grids_specified",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlIn_angular_grids"
+      ]
+    }, {
+      "description": "Property for key analytic_potential_average of FHI-aims with a boolean value.",
+      "dtypeStr": "b",
+      "name": "controlIn_analytic_potential_average",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ControlInValues"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key sc_accuracy_rho",
+      "name": "controlInUnknown_sc_accuracy_rho",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key sc_accuracy_etot",
+      "name": "controlInUnknown_sc_accuracy_etot",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key sc_accuracy_eev",
+      "name": "controlInUnknown_sc_accuracy_eev",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key output",
+      "name": "controlInUnknown_output",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key n_max_pulay",
+      "name": "controlInUnknown_n_max_pulay",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key k_offset",
+      "name": "controlInUnknown_k_offset",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key k_grid",
+      "name": "controlInUnknown_k_grid",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key dos_kgrid_factors",
+      "name": "controlInUnknown_dos_kgrid_factors",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Auto generated property for unknown key charge_mix_param",
+      "name": "controlInUnknown_charge_mix_param",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "UnknownControlInKeys"
+      ]
+    }, {
+      "description": "Change ot the charge density during an scf iteration",
+      "dtypeStr": "f",
+      "name": "chargeDensityChangeScfIter",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration",
+        "PartialErrorEstimate"
+      ],
+      "units": "e"
+    }, {
+      "description": "Periodic cell given as the three basis vectors.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
+      "dtypeStr": "f",
+      "name": "cell",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "CoreConfiguration"
+      ],
+      "units": "Bohr"
+    }, {
+      "description": "correlation part of the lda xc functional using the self consistent density of the target functional[correct???]",
+      "dtypeStr": "f",
+      "kindStr": "type_document_content",
+      "name": "cEnergyLda",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation",
+        "EnergyComponent"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged correlation part of the dft xc functional",
+      "dtypeStr": "f",
+      "kindStr": "type_document_content",
+      "name": "cEnergyDft",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation",
+        "EnergyComponent"
+      ],
+      "units": "J"
+    }, {
+      "description": "start and end points of the band segments",
+      "name": "band_segm_start_end",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "labels for each segment of the band",
+      "dtypeStr": "C",
+      "name": "band_segm_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "occupations of the band",
+      "name": "band_occupations",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "k-Points of the band",
+      "name": "band_k_points",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "energies of the band",
+      "name": "band_energies",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "geometry.in keys that were unknown to the normalization script",
+      "kindStr": "type_abstract_document_content",
+      "name": "UnknownGeometryInKeys",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "GeometryInValues"
+      ]
+    }, {
+      "description": "parameters of one atom kind",
+      "kindStr": "type_abstract_document_content",
+      "name": "SpeciesParameters",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "simulation_parameters"
+      ]
+    }, {
+      "description": "A property that can be represented by an indexed multidimensional array",
+      "kindStr": "type_abstract_document_content",
+      "name": "SimpleProperty",
+      "superNames": []
+    }, {
+      "description": "A property connected with the scf cycle",
+      "kindStr": "type_abstract_document_content",
+      "name": "ScfProperty",
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "a particle information",
+      "kindStr": "type_abstract_document_content",
+      "name": "ParticleInfo",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key For_aux of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "kindStr": "type_abstract_document_content",
+      "name": "OutControlIn_for_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "An auxiliary basis function",
+      "kindStr": "type_abstract_document_content",
+      "name": "AuxBasisFunction",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key For_aux of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "kindStr": "type_abstract_document_content",
+      "name": "ControlIn_for_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
+    }, {
+      "description": "Property for key Aux_gaussian of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "kindStr": "type_abstract_document_content",
+      "name": "OutControlIn_aux_gaussian",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters",
+        "AuxBasisFunction"
+      ]
+    }, {
+      "description": "Property for key Angular_grids of FHI-aims with a json dictionary as value.",
+      "dtypeStr": "D",
+      "kindStr": "type_abstract_document_content",
+      "name": "OutControlIn_angular_grids",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "ParticleKindParameters"
+      ]
     }
-]
+  ]
 }
