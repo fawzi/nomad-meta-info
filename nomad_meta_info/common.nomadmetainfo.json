@@ -445,7 +445,7 @@
       "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin)",
       "dtypeStr": "f",
       "kindStr": "type_document_content",
-      "name": "energy_XC_MGGA",
+      "name": "energy_C_MGGA",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -472,7 +472,7 @@
       "shape": [],
       "superNames": [
         "section_single_point_evaluation",
-        "EnergyComponent"
+        "energy_component"
       ],
       "units": "J"
     }, {
@@ -622,7 +622,7 @@
     }, {
       "description": "Information on scf iteration date, and timings",
       "kindStr": "type_abstract_document_content",
-      "name": "time_info_evaluation",
+      "name": "time_info_scf",
       "superNames": [
         "accessory_info_scf"
       ]
@@ -1029,7 +1029,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "time_info"
+        "time_info_evaluation"
       ],
       "units": "s"
     }, {
@@ -1228,15 +1228,6 @@
       "description": "A basis function related to a given atom kind",
       "kindStr": "type_abstract_document_content",
       "name": "basis_function_atomic",
-      "superNames": [
-        "section_particle_kind_ref"
-      ]
-    }, {
-      "description": "An auxiliary basis function related to a given atom kind",
-      "kindStr": "type_abstract_document_content",
-      "name": "basis_function_atomic_auxiliary",
-      "repeats": true,
-      "shape": [],
       "superNames": [
         "section_particle_kind_ref"
       ]
