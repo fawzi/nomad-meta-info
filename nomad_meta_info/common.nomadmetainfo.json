@@ -108,14 +108,14 @@
       ]
     }, {
       "name": "section_eigenvalues",
-      "description": "eigenvalues of some energy"
+      "description": "eigenvalues of some energy",
       "kindStr": "type_section",
       "superNames": [
         "section_single_point_evaluation"
       ]
     }, {
       "name": "eigenvalues_kpoints_number",
-      "description": "number of kpoints"
+      "description": "number of kpoints",
       "kindStr": "type_dimension",
       "dtypeStr": "i",
       "shape": [],
@@ -124,7 +124,7 @@
       ]
     }, {
       "name": "eigenvalues_eigenvalues_number",
-      "description": "number of eigenvalues"
+      "description": "number of eigenvalues",
       "kindStr": "type_dimension",
       "dtypeStr": "i",
       "shape": [],
@@ -133,7 +133,7 @@
       ]
     }, {
       "name": "eigenvalues_kpoints",
-      "description": "kpoints on which the eigenvalues were evaluated"
+      "description": "kpoints on which the eigenvalues were evaluated",
       "dtypeStr": "f",
       "shape": ["eigenvalues_kpoints_number", 3],
       "superNames": [
@@ -141,7 +141,7 @@
       ]
     }, {
       "name": "eigenvalues_eigenvalues",
-      "description": "Eigenvalues"
+      "description": "Eigenvalues",
       "dtypeStr": "f",
       "shape": ["eigenvalues_kpoints_number", "eigenvalues_eigenvalues_number"],
       "superNames": [
@@ -149,7 +149,7 @@
       ]
     }, {
       "name": "eigenvalues_occupation",
-      "description": "Occupation of that eigenfunction"
+      "description": "Occupation of that eigenfunction",
       "dtypeStr": "f",
       "shape": ["eigenvalues_kpoints_number", "eigenvalues_eigenvalues_number"],
       "superNames": [
@@ -157,7 +157,7 @@
       ]
     }, {
       "name": "eigenvalues_kind",
-      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/eigenvalues_kind)."
+      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/eigenvalues_kind).",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
@@ -807,7 +807,7 @@
       "repeats": false,
       "shape": [],
       "dtypeStr": "f",
-      "units": "J"
+      "units": "J",
       "superNames": [
         "energy_total_potential_scf"
       ]
@@ -1592,11 +1592,11 @@
         "section_basis_set_global"
       ]
     }, {
-      "description": "Spherical cutoff for a plane wave basis in reciprocal space, as energy of the highest plane wave ($\frac{\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
+      "description": "Spherical cutoff for a plane wave basis in reciprocal space, as energy of the highest plane wave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
       "name": "basis_set_plan_wave_cutoff",
       "dtypeStr": "f",
       "shape": [],
-      "units": "J"
+      "units": "J",
       "superNames": [
         "section_basis_set_global"
       ]
@@ -1611,7 +1611,7 @@
         "description": "atom number of kind of atom this basis set is thought for (0 meand unspcified, or a pseudo atom)",
       "name": "basis_set_atom_kind_nr",
       "dtypeStr": "i",
-      "shape": []
+      "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
@@ -1619,7 +1619,7 @@
         "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_base_name and if not equal to the default basis implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis_set_atom_centered_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "name": "basis_set_atom_centered_name",
       "dtypeStr": "C",
-      "shape": []
+      "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
@@ -1627,7 +1627,7 @@
         "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis_set_atom_centered_base_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_base_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "name": "basis_set_atom_centered_base_name",
       "dtypeStr": "C",
-      "shape": []
+      "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
@@ -1636,7 +1636,7 @@
       "name": "basis_set_atom_centered_nkinds",
       "kindStr": "type_dimension",
       "dtypeStr": "i",
-      "shape": []
+      "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
@@ -1645,7 +1645,7 @@
       "name": "basis_set_atom_centered_nbasis_functions",
       "kindStr": "type_dimension",
       "dtypeStr": "i",
-      "shape": []
+      "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
@@ -1673,31 +1673,31 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-        "name": "section_basis"
-        "description": "Represents a concrete basis set instatiated with parameters given in the section_method for the system section_system_description."
+        "name": "section_basis",
+        "description": "Represents a concrete basis set instatiated with parameters given in the section_method for the system section_system_description.",
         "kindStr": "type_section",
         "superNames": [
             "section_single_point_evaluation"
         ]
     }, {
-        "name": "basis_kind"
-        "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_kind)."
+        "name": "basis_kind",
+        "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_kind).",
         "dtypeStr": "C",
         "shape":[],
         "superNames": [
             "section_basis"
         ]
     }, {
-        "name": "basis_name"
-        "description": "String identifying the basis set in an unique way. The values are described in the [basis_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_name)."
+        "name": "basis_name",
+        "description": "String identifying the basis set in an unique way. The values are described in the [basis_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_name).",
         "dtypeStr": "C",
         "shape":[],
         "superNames": [
             "section_basis"
         ]
     }, {
-        "name": "basis"
-        "description": "String identifying the basis used for the wavefunctions in an unique way. The values are described in the [basis wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis)."
+        "name": "basis",
+        "description": "String identifying the basis used for the wavefunctions in an unique way. The values are described in the [basis wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis).",
         "dtypeStr": "C",
         "shape":[],
         "superNames": [

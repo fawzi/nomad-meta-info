@@ -21,7 +21,7 @@
       "superNames": [
         "fhi_aims_control_in_values"
       ]
-    }, , {
+    }, {
       "description": "Auto generated property for unhandled species key radial_multiplier",
       "name": "species_radial_multiplier",
       "repeats": true,
@@ -74,14 +74,6 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
-      ]
-    }, {
-      "description": "Hosts that did run this simulation",
-      "name": "parallel_tasks_assignement",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "parallelization_info"
       ]
     }, {
       "description": "values of the geometry.in file",
