@@ -1,352 +1,800 @@
 {
   "type": "nomad_meta_info_1_0",
   "description": "common meta info, not specific to any code",
-  "metaInfos": [
-    {
-      "name": "section_run",
-      "kindStr": "type_section",
-      "description": "Every section_run represents a single call of a program. What exactly is contained in a run depends on the run type and the program.",
-      "superNames": []
-    }, {
-      "name": "section_method",
-      "kindStr": "type_section",
-      "description": "Every section_method section contains the various parameters that define the theory used and he approximations done (convergence thresholds,...)",
-      "superNames": ["section_run"]
-    }, {
-      "name": "section_system_description",
-      "description": "Every section_system_description section contains the properties required to describe the Physical system simulated: the given atomic configuration, if relevant the periodic cell, extenal potentials,...",
-      "kindStr": "type_section",
-      "superNames": ["section_run"]
-    }, {
-      "name": "section_particle_kind",
-      "description": "Every section_particle_kind contains information about a different kind of particle, and is identified by a unique string.",
-      "kindStr": "type_section",
-      "superNames": ["section_system_description"]
-    }, {
-      "name": "section_particle",
-      "description": "Every section_particle represents a particle (atom, ghost,...).",
-      "kindStr": "type_section",
-      "superNames": ["section_particle_kind"]
-    }, {
-      "name": "particle_kind_nparticles",
-      "description": "Number of particles of this kind",
-      "kindStr": "type_dimension",
-      "shape": [],
-      "dtypeStr": "i",
-      "superNames": ["section_particle_kind"]
-    }, {
-      "name": "particle_number",
-      "description": "Total number of particles",
-      "kindStr": "type_dimension",
-      "shape": [],
-      "dtypeStr": "i",
-      "superNames": ["section_system_description"]
-    }, {
-      "name": "section_particle_kind_ref",
-      "description": "Every section_particle_kind_ref refers to a section_particle_kind by using the same unique string.",
-      "kindStr": "type_section",
-      "superNames": ["section_method"]
-    }, {
-      "name": "section_particle_ref",
-      "description": "Every section_particle_ref refers to a section_particle by its index within the particle kind.",
-      "kindStr": "type_section",
-      "superNames": ["section_method"]
-    }, {
-      "name": "section_single_point_evaluation",
-      "description": "Every section_single_point_evaluation section contains the values computated or evaluated during a single point evaluation.",
-      "kindStr": "type_section",
-      "superNames": ["section_method", "section_system_description"]
-    }, {
-      "name": "energy",
-      "description": "Some energy value",
+  "metaInfos": [ {
+      "description": "Information on a single point evaluation which *in theory* should have no influence on the results",
       "kindStr": "type_abstract_document_content",
-      "shape": [],
-      "superNames": []
-    }, {
-      "name": "energy_component_per_atom_scf",
-      "description": "An energy component per atom during scf",
-      "kindStr": "type_abstract_document_content",
-      "shape": [],
+      "name": "accessory_info_evaluation",
       "superNames": [
-        "energy",
-        "section_scf_iteration"
-      ]
-    }, {
-      "name": "energy_component_per_atom",
-      "description": "A final value of an energy component per atom",
-      "kindStr": "type_abstract_document_content",
-      "shape": [],
-      "superNames": [
-        "energy",
         "section_single_point_evaluation"
       ]
     }, {
-      "name": "energy_component_scf",
-      "description": "An energy component of the non final, non converged energy, expected to be an extensive property",
+      "description": "Information on the run which *in theory* should have no influence on the results",
       "kindStr": "type_abstract_document_content",
-      "shape": [],
+      "name": "accessory_info_run",
       "superNames": [
-        "energy",
+        "section_run"
+      ]
+    }, {
+      "description": "Information on an scf iteration which *in theory* should have no influence on the results",
+      "kindStr": "type_abstract_document_content",
+      "name": "accessory_info_scf",
+      "superNames": [
         "section_scf_iteration"
       ]
     }, {
-      "name": "energy_component",
-      "description": "A final value of an energy component, expected to be an extensive property. ",
-      "kindStr": "type_abstract_document_content",
+      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_kind).",
+      "dtypeStr": "C",
+      "name": "basis_kind",
       "shape": [],
       "superNames": [
-        "energy",
+        "section_basis"
+      ]
+    }, {
+      "description": "String identifying the basis set in an unique way. The values are described in the [basis_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_name).",
+      "dtypeStr": "C",
+      "name": "basis_name",
+      "shape": [],
+      "superNames": [
+        "section_basis"
+      ]
+    }, {
+      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis_set_atom_centered_base_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_base_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "dtypeStr": "C",
+      "name": "basis_set_atom_centered_base_name",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "l value (of the angular part given by the spherical harmonic $Y_{lm}$) of the basis function",
+      "dtypeStr": "i",
+      "name": "basis_set_atom_centered_ls",
+      "shape": [
+        "basis_set_atom_centered_nkinds"
+      ],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_base_name and if not equal to the default basis implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis_set_atom_centered_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "dtypeStr": "C",
+      "name": "basis_set_atom_centered_name",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "number of different basis functions in this set",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "basis_set_atom_centered_nbasis_functions",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "number of different kind of basis functions in this set",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "basis_set_atom_centered_nkinds",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "Radial function of the different basis function kinds, the 5 values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\frac{d}{dr}(f(r)*r)$ and are given by default on an equispaced grid from 0 to 40 $fm$",
+      "dtypeStr": "f",
+      "name": "basis_set_atom_centered_radial_functions",
+      "shape": [
+        "basis_set_atom_centered_nkinds",
+        401,
+        5
+      ],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "atom number of kind of atom this basis set is thought for (0 meand unspcified, or a pseudo atom)",
+      "dtypeStr": "i",
+      "name": "basis_set_atom_kind_nr",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "A basis set description",
+      "kindStr": "type_abstract_document_content",
+      "name": "basis_set_description",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "A global basis set type, string should be as defined in the [basis_set_global_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_global_kind).",
+      "dtypeStr": "C",
+      "name": "basis_set_global_kind",
+      "repeat": false,
+      "shape": [],
+      "superNames": [
+        "section_basis_set_global"
+      ]
+    }, {
+      "description": "A descriptive name identifying the basis set be as defined in the [basis_set_global_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_global_name).",
+      "dtypeStr": "C",
+      "name": "basis_set_global_name",
+      "repeat": false,
+      "shape": [],
+      "superNames": [
+        "section_basis_set_global"
+      ]
+    }, {
+      "description": "Spherical cutoff for a plane wave basis in reciprocal space, as energy of the highest plane wave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
+      "dtypeStr": "f",
+      "name": "basis_set_plan_wave_cutoff",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_global"
+      ],
+      "units": "J"
+    }, {
+      "description": "String identifying the basis used for the wavefunctions in an unique way. The values are described in the [basis wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis).",
+      "dtypeStr": "C",
+      "name": "basis",
+      "shape": [],
+      "superNames": [
         "section_single_point_evaluation"
       ]
     }, {
-      "name": "energy_total_potential_per_atom",
-      "description": "A final value of a total potential energy per atom",
+      "description": "Properties actually defining the current configuration",
       "kindStr": "type_abstract_document_content",
+      "name": "configuration_core",
+      "repeats": false,
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Which of the basis vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
+      "dtypeStr": "b",
+      "name": "configuration_periodic_dimensions",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "configuration_core"
+      ]
+    }, {
+      "description": "A quantity that is preserved by the evolution (for example kinetic+potential energy during NVE",
+      "kindStr": "type_abstract_document_content",
+      "name": "conserved_quantity",
+      "repeats": false,
+      "shape": [],
+      "superNames": []
+    }, {
+      "description": "number of eigenvalues",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "eigenvalues_eigenvalues_number",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Eigenvalues",
+      "dtypeStr": "f",
+      "name": "eigenvalues_eigenvalues",
+      "shape": [
+        "eigenvalues_kpoints_number",
+        "eigenvalues_eigenvalues_number"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/eigenvalues_kind).",
+      "dtypeStr": "C",
+      "name": "eigenvalues_kind",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "number of kpoints",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "eigenvalues_kpoints_number",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "kpoints on which the eigenvalues were evaluated",
+      "dtypeStr": "f",
+      "name": "eigenvalues_kpoints",
+      "shape": [
+        "eigenvalues_kpoints_number",
+        3
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Occupation of that eigenfunction",
+      "dtypeStr": "f",
+      "name": "eigenvalues_occupation",
+      "shape": [
+        "eigenvalues_kpoints_number",
+        "eigenvalues_eigenvalues_number"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Electronic kinetic energy during the scf iterations",
+      "dtypeStr": "f",
+      "name": "electronic_kinetic_energy_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electronic kinetic energy",
+      "dtypeStr": "f",
+      "name": "electronic_kinetic_energy",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total energy minus the energy of the same number of isolated atoms calculated with the same method (functional,...), basisset and accuracy.",
+      "name": "energy_atomization_method_consistent",
+      "superNames": [
+        "energy_total_potential"
       ]
     }, {
-      "name": "section_eigenvalues",
-      "description": "eigenvalues of some energy",
-      "kindStr": "type_section",
+      "description": "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target functional.",
+      "dtypeStr": "f",
+      "name": "energy_C_LDA",
+      "repeats": false,
+      "shape": [],
       "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
+      "dtypeStr": "f",
+      "name": "energy_C_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_C"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged correlation (C) energy using XC_functional_sc",
+      "dtypeStr": "f",
+      "name": "energy_C_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_C"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged correlation (C) energy using XC_functional",
+      "dtypeStr": "f",
+      "name": "energy_C",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_C"
+      ],
+      "units": "J"
+    }, {
+      "description": "Change of total energy during an scf iteration",
+      "dtypeStr": "f",
+      "name": "energy_change_sc_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "error_estimate_partial_sc_scf",
+        "energy"
+      ],
+      "units": "J"
+    }, {
+      "description": "First version of the fit of the total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
+      "name": "energy_comparable_fitted_v1",
+      "superNames": [
+        "energy_comparable_fitted"
+      ]
+    }, {
+      "description": "Total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_comparable_fitted",
+      "superNames": [
+        "energy_total_potential"
+      ]
+    }, {
+      "description": "An energy component per atom during scf",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_component_per_atom_scf",
+      "shape": [],
+      "superNames": [
+        "energy",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "A final value of an energy component per atom",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_component_per_atom",
+      "shape": [],
+      "superNames": [
+        "energy",
         "section_single_point_evaluation"
       ]
     }, {
-      "name": "eigenvalues_kpoints_number",
-      "description": "number of kpoints",
-      "kindStr": "type_dimension",
-      "dtypeStr": "i",
+      "description": "An energy component of the non final, non converged energy, expected to be an extensive property",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_component_scf",
       "shape": [],
       "superNames": [
-        "section_eigenvalues"
+        "energy",
+        "section_scf_iteration"
       ]
     }, {
-      "name": "eigenvalues_eigenvalues_number",
-      "description": "number of eigenvalues",
-      "kindStr": "type_dimension",
-      "dtypeStr": "i",
+      "description": "A final value of an energy component, expected to be an extensive property. ",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_component",
       "shape": [],
       "superNames": [
-        "section_eigenvalues"
+        "energy",
+        "section_single_point_evaluation"
       ]
     }, {
-      "name": "eigenvalues_kpoints",
-      "description": "kpoints on which the eigenvalues were evaluated",
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Value during the SCF cycle.",
       "dtypeStr": "f",
-      "shape": ["eigenvalues_kpoints_number", 3],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "name": "eigenvalues_eigenvalues",
-      "description": "Eigenvalues",
-      "dtypeStr": "f",
-      "shape": ["eigenvalues_kpoints_number", "eigenvalues_eigenvalues_number"],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "name": "eigenvalues_occupation",
-      "description": "Occupation of that eigenfunction",
-      "dtypeStr": "f",
-      "shape": ["eigenvalues_kpoints_number", "eigenvalues_eigenvalues_number"],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "name": "eigenvalues_kind",
-      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/eigenvalues_kind).",
-      "dtypeStr": "C",
+      "name": "energy_correction_entropy_scf",
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "section_eigenvalues"
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account.",
+      "dtypeStr": "f",
+      "name": "energy_correction_entropy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_correction_hartree_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy",
+      "dtypeStr": "f",
+      "name": "energy_correction_hartree",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged Mp2 energy correction",
+      "dtypeStr": "f",
+      "name": "energy_correction_MP2",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total electostatic energy (atom + electrons) during the scf itrations",
+      "dtypeStr": "f",
+      "name": "energy_electrostatic_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total electostatic energy (atom + electrons)",
+      "dtypeStr": "f",
+      "name": "energy_electrostatic",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total energy minus the same number of atomic energies of the most stable form of the element calculated with the same method (functional,...), basisset and accuracy.",
+      "name": "energy_formation_method_consistent",
+      "superNames": [
+        "energy_total_potential"
       ]
     }, {
-      "name": "energy_total_potential_per_atom_scf",
+      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_sc per atom during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_free_sc_per_atom_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_per_atom_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_sc per atom ",
+      "dtypeStr": "f",
+      "name": "energy_free_sc_per_atom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_per_atom"
+      ],
+      "units": "J"
+    }, {
+      "description": "Free energy (whose minimum gives the smeared occupation for the density) calculated with XC_method_sc during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_free_sc_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Free energy (whose minimum gives the smeared occupation for the density) calculated with XC_method_sc",
+      "dtypeStr": "f",
+      "name": "energy_free_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
+    }, {
+      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method",
+      "dtypeStr": "f",
+      "name": "energy_free",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
+    }, {
+      "description": "Error in the hartree (electrostatic) potential energy",
+      "dtypeStr": "f",
+      "name": "energy_hartree_error",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "error_estimate_partial",
+        "energy"
+      ],
+      "units": "J"
+    }, {
+      "description": "Scaled (depending on the mix paramenter of the functional) exact exchange energy",
+      "dtypeStr": "f",
+      "name": "energy_HF_X_scaled",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged exact exchange energy (not scaled)",
+      "dtypeStr": "f",
+      "name": "energy_HF_X",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
+    }, {
+      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc per atom during the scf iterations.",
+      "dtypeStr": "f",
+      "name": "energy_sum_eigenvalues_per_atom_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_per_atom_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc per atom",
+      "dtypeStr": "f",
+      "name": "energy_sum_eigenvalues_per_atom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_per_atom"
+      ],
+      "units": "J"
+    }, {
+      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc during the scf iterations.",
+      "dtypeStr": "f",
+      "name": "energy_sum_eigenvalues_sc_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc",
+      "dtypeStr": "f",
+      "name": "energy_sum_eigenvalues_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total energy using XC_method per atom extapolated for T=0",
+      "dtypeStr": "f",
+      "name": "energy_T0_per_atom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_per_atom"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged total MP2 energy (XC_method_sc + MP2 correction)",
+      "dtypeStr": "f",
+      "name": "energy_total_MP2",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
+    }, {
       "description": "A final value of a total potential energy per atom during the scf",
       "kindStr": "type_abstract_document_content",
+      "name": "energy_total_potential_per_atom_scf",
       "shape": [],
       "superNames": [
         "energy_component_per_atom_scf"
       ]
     }, {
-      "name": "energy_total_potential",
-      "description": "A final value of a total potential energy. Different total energies might have different 0, and so might not be directly comparable.",
+      "description": "A final value of a total potential energy per atom",
       "kindStr": "type_abstract_document_content",
+      "name": "energy_total_potential_per_atom",
       "shape": [],
       "superNames": [
         "energy_component"
       ]
     }, {
-      "name": "energy_total_potential_scf",
       "description": "A final value of a total potential energy during the scf. Different total energies might have different 0, and so might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
+      "name": "energy_total_potential_scf",
       "shape": [],
       "superNames": [
         "energy_component_scf"
       ]
     }, {
-      "description": "Information on the scf procedure",
+      "description": "A final value of a total potential energy. Different total energies might have different 0, and so might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
-      "name": "scf_info",
-      "repeats": true,
+      "name": "energy_total_potential",
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation"
+        "energy_component"
       ]
     }, {
-      "description": "Every section_scf_iteration section represents an scf iteration",
-      "kindStr": "type_section",
-      "name": "section_scf_iteration",
-      "repeats": true,
+      "description": "Total electronic energy calculated with XC_method_sc during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_total_sc_scf",
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "scf_info", "section_single_point_evaluation"
+        "energy_total_potential_scf"
       ]
     }, {
-        "name":"message_debug",
-        "kindStr": "type_abstract_document_content",
-        "description": "A debugging message of the computational program",
-        "dtypeStr": "C"
+      "description": "A total (final, converged) energy calculated with XC_method_sc",
+      "name": "energy_total_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ]
     }, {
-        "name":"message_debug_run",
-        "kindStr": "type_document_content",
-        "description": "A debugging message of the computational program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "message_debug"]
+      "description": "Total energy using XC_method_sc per atom extapolated for T=0",
+      "dtypeStr": "f",
+      "name": "energy_total_T0_sc_per_atom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_per_atom"
+      ],
+      "units": "J"
     }, {
-        "name":"message_debug_evaluation",
-        "kindStr": "type_document_content",
-        "description": "A debugging message of the computational program, associated with a single point evaluation",
-        "dtypeStr": "C",
-        "superNames": ["message_debug", "section_single_point_evaluation"]
+      "description": "Total energy (or equivalently free energy) calculated with XC_method_sc extrapolated for T=0 during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_total_T0_sc_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_scf"
+      ],
+      "units": "J"
     }, {
-        "name":"message_info",
-        "kindStr": "type_abstract_document_content",
-        "description": "An information message of the computational program",
-        "dtypeStr": "C",
-        "superNames": ["message_debug"]
+      "description": "Total energy (or equivalently free energy) calculated with XC_method_sc extrapolated for T=0 (for metals)",
+      "dtypeStr": "f",
+      "name": "energy_total_T0_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
     }, {
-        "name":"message_info_run",
-        "kindStr": "type_document_content",
-        "description": "An information message of the computational program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "message_info"]
+      "description": "Total energy (or equivalently free energy), electronic + ions, calculated with the method described in XC_method and extrapolated for T=0 (for metals)",
+      "dtypeStr": "f",
+      "name": "energy_total_T0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
     }, {
-        "name":"message_info_evaluation",
-        "kindStr": "type_document_content",
-        "description": "An information message of the computational program, associated with a a single point evaluation",
-        "dtypeStr": "C",
-        "superNames": ["message_info", "section_single_point_evaluation"]
+      "description": "Total energy (electronic + ions) calculated with the method described in XC_method",
+      "dtypeStr": "f",
+      "name": "energy_total",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential"
+      ],
+      "units": "J"
     }, {
-        "name":"message_warning",
-        "kindStr": "type_abstract_document_content",
-        "description": "A warning message of the computational program",
-        "dtypeStr": "C",
-        "superNames": ["message_info"]
+      "description": "Some correlation (C) energy.",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_type_C",
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
     }, {
-        "name":"message_warning_run",
-        "kindStr": "type_document_content",
-        "description": "A warning message of the computational program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "message_warning"]
+      "description": "Some kind of converged van der Waals energy",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_type_van_der_Waals",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ]
     }, {
-        "name":"message_warning_evaluation",
-        "kindStr": "type_document_content",
-        "description": "A warning message of the computational program",
-        "dtypeStr": "C",
-        "superNames": ["message_warning", "section_single_point_evaluation"]
+      "description": "Some exchange-correlation (XC) energy.",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_type_XC",
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
     }, {
-        "name":"message_error",
-        "kindStr": "type_abstract_document_content",
-        "description": "An error message of the computational program",
-        "dtypeStr": "C",
-        "superNames": ["message_warning"]
+      "description": "Some exchange (X) energy.",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_type_X",
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
     }, {
-        "name":"message_error_run",
-        "kindStr": "type_document_content",
-        "description": "An error message of the computational program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "message_error"]
+      "description": "Converged van der Waals energy using the Tkatchenko Scheffler method",
+      "dtypeStr": "f",
+      "name": "energy_van_der_Waals_Tkatchenko_Scheffler",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_van_der_Waals"
+      ]
     }, {
-        "name":"message_error_evaluation",
-        "kindStr": "type_document_content",
-        "description": "An error message of the computational program, associated with a single point evaluation",
-        "dtypeStr": "C",
-        "superNames": ["message_error", "section_single_point_evaluation"]
+      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals",
+      "dtypeStr": "f",
+      "name": "energy_van_der_Waals",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_van_der_Waals"
+      ]
     }, {
-        "name":"parsing_message_debug",
-        "kindStr": "type_abstract_document_content",
-        "description": "A debugging message of the parsing program",
-        "dtypeStr": "C"
+      "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
+      "dtypeStr": "f",
+      "name": "energy_X_LDA",
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
     }, {
-        "name":"parsing_message_debug_run",
-        "kindStr": "type_document_content",
-        "description": "A debugging message of the parsing program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "parsing_message_debug"]
+      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional, scaled accordingly to the mixing parameter",
+      "dtypeStr": "f",
+      "name": "energy_X_mGGA_scaled",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
     }, {
-        "name":"parsing_message_debug_evaluation",
-        "kindStr": "type_document_content",
-        "description": "A debugging message of the parsing program, associated with a single point evaluation",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_debug", "section_single_point_evaluation"]
+      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
+      "dtypeStr": "f",
+      "name": "energy_X_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
     }, {
-        "name":"parsing_message_info",
-        "kindStr": "type_abstract_document_content",
-        "description": "An information message of the parsing program",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_debug"]
+      "description": "Converged exchange (X) energy using XC_functional_sc",
+      "dtypeStr": "f",
+      "name": "energy_X_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
     }, {
-        "name":"parsing_message_info_run",
-        "kindStr": "type_document_content",
-        "description": "An information message of the parsing program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "parsing_message_info"]
+      "description": "Component of the exchange correlation (XC) energy at the LDA level calculated with the self consistent density of the target functional.",
+      "dtypeStr": "f",
+      "name": "energy_XC_LDA",
+      "shape": [],
+      "superNames": [
+        "energy_type_XC"
+      ],
+      "units": "J"
     }, {
-        "name":"parsing_message_info_evaluation",
-        "kindStr": "type_document_content",
-        "description": "An information message of the parsing program, associated with a a single point evaluation",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_info", "section_single_point_evaluation"]
+      "description": "Component of the exchange and correlation (XC) energy at the (Meta)GGA level using the self consistent density of the target functional scaled accordingly to the mixing parameter",
+      "dtypeStr": "f",
+      "name": "energy_XC_mGGA_scaled",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_XC"
+      ],
+      "units": "J"
     }, {
-        "name":"parsing_message_warning",
-        "kindStr": "type_abstract_document_content",
-        "description": "A warning message of the parsing program",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_info"]
-    }, {
-        "name":"parsing_message_warning_run",
-        "kindStr": "type_document_content",
-        "description": "A warning message of the parsing program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "parsing_message_warning"]
-    }, {
-        "name":"parsing_message_warning_evaluation",
-        "kindStr": "type_document_content",
-        "description": "A warning message of the parsing program",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_warning", "section_single_point_evaluation"]
-    }, {
-        "name":"parsing_message_error",
-        "kindStr": "type_abstract_document_content",
-        "description": "An error message of the parsing program",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_warning"]
-    }, {
-        "name":"parsing_message_error_run",
-        "kindStr": "type_document_content",
-        "description": "An error message of the parsing program, associated with a run",
-        "dtypeStr": "C",
-        "superNames": ["section_run", "parsing_message_error"]
-    }, {
-        "name":"parsing_message_error_evaluation",
-        "kindStr": "type_document_content",
-        "description": "An error message of the parsing program, associated with a single point evaluation",
-        "dtypeStr": "C",
-        "superNames": ["parsing_message_error", "section_single_point_evaluation"]
+      "description": "Component of the exchange and correlation (XC) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
+      "dtypeStr": "f",
+      "name": "energy_XC_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_XC"
+      ],
+      "units": "J"
     }, {
       "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of the XC_functional_sc, integral v_xc*electron_density, i.e. the component of xc that is in the sum of the eigenvalues. Typically DFT only. Value during the SCF cycle (not converged)",
       "dtypeStr": "f",
@@ -398,268 +846,8 @@
       ],
       "units": "J"
     }, {
-      "description": "Parameters that control the simulation",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_simulation",
-      "superNames": []
-    }, {
-      "description": "Parameters that control the simulation and are in the method section",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_method",
-      "superNames": ["settings_simulation", "section_method"]
-    }, {
-      "description": "Method parameters that control single point evaluation. This covers things like the theory level, but not the temperature of an molecular dynamics.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_single_point_method",
-      "superNames": ["settings_simulation", "section_method"]
-    }, {
-      "description": "Parameters connected with defining the exchange correlation (XC) treatment for the final energy and related quantities",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_XC",
-      "superNames": [
-        "settings_single_point_method"
-      ]
-    }, {
-      "description": "Parameters connected with defining the exchange correlation (XC) treatment during the self consisten cycle and thus valid for the self consistent density.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_XC_sc",
-      "superNames": [
-        "settings_single_point_method"
-      ]
-    }, {
-      "description": "Parameters connected with defining the exchange correlation (XC) functional",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_XC_functional",
-      "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Parameters and information connected Exchange correlation (XC) functional used in the self consistency cycle (and thus the one for the self consistent density)",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_XC_functional_sc",
-      "repeats": false,
-      "superNames": [
-        "settings_XC_sc"
-      ]
-    }, {
-      "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_sc '_' SIC_sc '_' van_der_Waals_sc '_' relativity_treatment_sc. For empty strings the connecting character is skipped.",
-      "name": "XC_method_sc",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
-      "superNames": [
-        "settings_XC_sc"
-      ]
-    }, {
-      "description": "Exchange correlation (XC) method used for the final energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: postHF_method '_' XC_functional '_' SIC '_' van_der_Waals '_' relativity_treatment '@' XC_method_sc. With empty strings the connecting character is skipped.",
-      "name": "XC_method",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
-      "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Parameters and information connected with self interaction correction (SIC) method used",
-      "name": "settings_SIC",
-      "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Short string for the self interaction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [SIC wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/SIC).",
-      "name": "SIC",
-      "superNames": [
-        "settings_SIC"
-      ]
-    }, {
-      "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [SIC_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/SIC_sc).",
-      "name": "SIC_sc",
-      "superNames": [
-        "settings_SIC"
-      ]
-    }, {
-      "description": "Parameters and information connected with the relativity treatment used in the calculation",
-      "name": "settings_relativity_treatment",
-      "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Parameters and information connected with the van der Waals treatment used in the calculation",
-      "name": "settings_van_der_Waals_treatment",
-      "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment).",
-      "name": "relativity_treatment",
-      "superNames": [
-        "settings_relativity_treatment"
-      ]
-    }, {
-      "description": "Short string describing the relativity treatment used during the self consitency cycle (and thus valid for the self consistent density. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment_sc).",
-      "name": "relativity_treatment_sc",
-      "superNames": [
-        "settings_relativity_treatment"
-      ]
-    }, {
-      "description": "Short string describing the van der Waals treatment in the final energy. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment).",
-      "name": "van_der_Waals_treatment",
-      "superNames": [
-        "settings_van_der_Waals_treatment"
-      ]
-    }, {
-      "description": "Short string describing the van der Waals treatment during the self consitency cycle (and thus valid for the self consistent density). No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment_sc).",
-      "name": "van_der_Waals_treatment_sc",
-      "superNames": [
-        "settings_van_der_Waals_treatment"
-      ]
-    }, {
-      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC_functional wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional).",
-      "name": "XC_functional",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
-      "superNames": [
-        "settings_XC_functional"
-      ]
-    }, {
-      "description": "String that represent the exchange correlation (XC) treatment in a unique short form. This string keeps in account all settings in settings_XC. It is built from XC_method plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all settings_XC exluding this one",
-      "name": "XC_method_unique",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
-      "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Exchange correlation (XC) functional used during the scf cycle (and thus for the density) in a unique short form as described in the [XC_functional_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional_sc).",
-      "name": "XC_functional_sc",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
-      "superNames": [
-        "settings_XC_functional_sc"
-      ]
-    }, {
-      "description": "Some exchange (X) energy.",
-      "dtypeStr": "f",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_type_X",
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Some correlation (C) energy.",
-      "dtypeStr": "f",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_type_C",
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Some exchange-correlation (XC) energy.",
-      "dtypeStr": "f",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_type_XC",
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_X_LDA",
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange correlation (XC) energy at the LDA level calculated with the self consistent density of the target functional.",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_XC_LDA",
-      "shape": [],
-      "superNames": [
-        "energy_type_XC"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target functional.",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_C_LDA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_X_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional, scaled accordingly to the mixing parameter",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_X_mGGA_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange and correlation (XC) energy at the (Meta)GGA level using the self consistent density of the target functional scaled accordingly to the mixing parameter",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_XC_mGGA_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_XC"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange and correlation (XC) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_XC_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_XC"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_C_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_C"
-      ],
-      "units": "J"
-    }, {
       "description": "Converged exchange (X) energy using XC_functional",
       "dtypeStr": "f",
-      "kindStr": "type_document_content",
       "name": "energy_X",
       "repeats": false,
       "shape": [],
@@ -668,440 +856,420 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged correlation (C) energy using XC_functional",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_C",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_C"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged exchange (X) energy using XC_functional_sc",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_X_sc",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged correlation (C) energy using XC_functional_sc",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_C_sc",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_C"
-      ],
-      "units": "J"
-    }, {
-      "description": "Some kind of converged van der Waals energy",
-      "dtypeStr": "f",
+      "description": "Some energy value",
       "kindStr": "type_abstract_document_content",
-      "name": "energy_type_van_der_Waals",
-      "repeats": false,
+      "name": "energy",
       "shape": [],
-      "superNames": [
-        "energy_component"
-      ]
-    }, {
-      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_van_der_Waals",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_van_der_Waals"
-      ]
-    }, {
-      "description": "Converged van der Waals energy using the Tkatchenko Scheffler method",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_van_der_Waals_Tkatchenko_Scheffler",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_van_der_Waals"
-      ]
-    }, {
-      "description": "Total energy using XC_method_sc per atom extapolated for T=0",
-      "dtypeStr": "f",
-      "name": "energy_total_T0_sc_per_atom",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential_per_atom"
-      ],
-      "units": "J"
-    }, {
-      "description": "Total energy using XC_method per atom extapolated for T=0",
-      "dtypeStr": "f",
-      "name": "energy_T0_per_atom",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential_per_atom"
-      ],
-      "units": "J"
-    }, {
-      "description": "Some estimate of a quantity contributing to the error of the final values at self consistency level",
-      "kindStr": "type_abstract_document_content",
-      "name": "error_estimate_partial_sc",
-      "repeats": false,
-      "shape": [],
-      "superNames": ["section_single_point_evaluation"]
-    }, {
-      "description": "Some estimate of a quantity contributing to the error of the final values",
-      "kindStr": "type_abstract_document_content",
-      "name": "error_estimate_partial",
-      "repeats": false,
-      "shape": [],
-      "superNames": ["section_single_point_evaluation"]
+      "superNames": []
     }, {
       "description": "Some estimate of the a quantity contibuting to the error on the energy during the scf",
       "kindStr": "type_abstract_document_content",
       "name": "error_estimate_partial_sc_scf",
       "repeats": false,
       "shape": [],
-      "superNames": ["section_scf_iteration"]
-    }, {
-      "description": "Change of total energy during an scf iteration",
-      "dtypeStr": "f",
-      "name": "energy_change_sc_scf",
-      "repeats": false,
-      "shape": [],
       "superNames": [
-        "error_estimate_partial_sc_scf",
-        "energy"
-      ],
-      "units": "J"
-    }, {
-      "description": "Total electronic energy calculated with XC_method_sc during the scf iterations",
-      "name": "energy_total_sc_scf",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "f",
-      "superNames": [
-        "energy_total_potential_scf"
+        "section_scf_iteration"
       ]
     }, {
-      "description": "Total energy (or equivalently free energy) calculated with XC_method_sc extrapolated for T=0 during the scf iterations",
-      "dtypeStr": "f",
-      "name": "energy_total_T0_sc_scf",
+      "description": "Some estimate of a quantity contributing to the error of the final values at self consistency level",
+      "kindStr": "type_abstract_document_content",
+      "name": "error_estimate_partial_sc",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Free energy (whose minimum gives the smeared occupation for the density) calculated with XC_method_sc during the scf iterations",
-      "name": "energy_free_sc_scf",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "f",
-      "units": "J",
-      "superNames": [
-        "energy_total_potential_scf"
+        "section_single_point_evaluation"
       ]
     }, {
-      "description": "Free energy (whose minimum gives the smeared occupation for the density) calculated with XC_method_sc",
-      "dtypeStr": "f",
-      "name": "energy_free_sc",
+      "description": "Some estimate of a quantity contributing to the error of the final values",
+      "kindStr": "type_abstract_document_content",
+      "name": "error_estimate_partial",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
-      ],
-      "units": "J"
+        "section_single_point_evaluation"
+      ]
     }, {
-      "description": "A total (final, converged) energy calculated with XC_method_sc",
-      "name": "energy_total_sc",
+      "description": "Some estimate of the error on the converged (final) value",
+      "kindStr": "type_abstract_document_content",
+      "name": "error_estimate",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "error_estimate_partial"
       ]
     }, {
-      "description": "Total energy (or equivalently free energy) calculated with XC_method_sc extrapolated for T=0 (for metals)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_total_T0_sc",
+      "description": "A debugging message of the computational program, associated with a single point evaluation",
+      "dtypeStr": "C",
+      "name": "message_debug_evaluation",
+      "superNames": [
+        "message_debug",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "A debugging message of the computational program, associated with a run",
+      "dtypeStr": "C",
+      "name": "message_debug_run",
+      "superNames": [
+        "section_run",
+        "message_debug"
+      ]
+    }, {
+      "description": "A debugging message of the computational program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "message_debug",
+      "superNames": []
+    }, {
+      "description": "An error message of the computational program, associated with a single point evaluation",
+      "dtypeStr": "C",
+      "name": "message_error_evaluation",
+      "superNames": [
+        "message_error",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "An error message of the computational program, associated with a run",
+      "dtypeStr": "C",
+      "name": "message_error_run",
+      "superNames": [
+        "section_run",
+        "message_error"
+      ]
+    }, {
+      "description": "An error message of the computational program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "message_error",
+      "superNames": [
+        "message_warning"
+      ]
+    }, {
+      "description": "An information message of the computational program, associated with a a single point evaluation",
+      "dtypeStr": "C",
+      "name": "message_info_evaluation",
+      "superNames": [
+        "message_info",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "An information message of the computational program, associated with a run",
+      "dtypeStr": "C",
+      "name": "message_info_run",
+      "superNames": [
+        "section_run",
+        "message_info"
+      ]
+    }, {
+      "description": "An information message of the computational program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "message_info",
+      "superNames": [
+        "message_debug"
+      ]
+    }, {
+      "description": "A warning message of the computational program",
+      "dtypeStr": "C",
+      "name": "message_warning_evaluation",
+      "superNames": [
+        "message_warning",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "A warning message of the computational program, associated with a run",
+      "dtypeStr": "C",
+      "name": "message_warning_run",
+      "superNames": [
+        "section_run",
+        "message_warning"
+      ]
+    }, {
+      "description": "A warning message of the computational program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "message_warning",
+      "superNames": [
+        "message_info"
+      ]
+    }, {
+      "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
+      "dtypeStr": "D",
+      "name": "parallel_tasks_assignement",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
-      ],
-      "units": "J"
-    }, {
-      "description": "Information on the run which *in theory* should have no influence on the results",
-      "kindStr": "type_abstract_document_content",
-      "name": "accessory_info_run",
-      "superNames": ["section_run"]
-    }, {
-      "description": "Information on an scf iteration which *in theory* should have no influence on the results",
-      "kindStr": "type_abstract_document_content",
-      "name": "accessory_info_scf",
-      "superNames": ["section_scf_iteration"]
-    }, {
-      "description": "Information on a single point evaluation which *in theory* should have no influence on the results",
-      "kindStr": "type_abstract_document_content",
-      "name": "accessory_info_evaluation",
-      "superNames": ["section_single_point_evaluation"]
-     }, {
-      "description": "Information on run date, and run timings",
-      "kindStr": "type_abstract_document_content",
-      "name": "time_info_run",
-      "superNames": [
-        "accessory_info_run"
+        "parallelization_info"
       ]
     }, {
-      "description": "Information on single point evaluation date, and timings",
-      "kindStr": "type_abstract_document_content",
-      "name": "time_info_evaluation",
+      "description": "Number of parallel tasks used",
+      "dtypeStr": "i",
+      "name": "parallel_tasks_number",
+      "repeats": false,
+      "shape": [],
       "superNames": [
-        "accessory_info_evaluation"
+        "parallelization_info"
       ]
     }, {
-      "description": "Information on scf iteration date, and timings",
+      "description": "Information on the parallelization of the program",
       "kindStr": "type_abstract_document_content",
-      "name": "time_info_scf",
+      "name": "parallelization_info_scf",
+      "repeats": false,
+      "shape": [],
       "superNames": [
         "accessory_info_scf"
       ]
     }, {
-      "description": "Internal wall clock time at the start of the run",
-      "name": "time_run_wall_0",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_run"
-      ],
-      "units": "s"
-    }, {
-      "description": "Start date of the run stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
-      "name": "time_run_date_0",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_run"
-      ],
-      "units": "s"
-    }, {
-      "description": "Internal wall clock time at the end of the run",
-      "name": "time_run_wall_end",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_run"
-      ],
-      "units": "s"
-    }, {
-      "description": "End date of run stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
-      "name": "time_run_date_end",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_run"
-      ],
-      "units": "s"
-    }, {
-      "description": "Start time of the run on CPU 1",
-      "name": "time_run_cpu1_0",
-      "dtypeStr": "f",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "time_info_run"
-      ],
-      "units": "s"
-    }, {
-      "description": "End time of the run on CPU 1",
-      "name": "time_run_cpu1_end",
-      "dtypeStr": "f",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "time_info_run"
-      ],
-      "units": "s"
-    }, {
-      "description": "Internal wall clock time at the start of an scf iteration",
-      "name": "time_scf_wall_0",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_scf"
-      ],
-      "units": "s"
-    }, {
-      "description": "Start date of an scf iteration stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
-      "name": "time_scf_date_0",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_scf"
-      ],
-      "units": "s"
-    }, {
-      "description": "Internal wall clock time at the end of an scf iteration",
-      "name": "time_scf_wall_end",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_scf"
-      ],
-      "units": "s"
-    }, {
-      "description": "End date of scf stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
-      "name": "time_scf_date_end",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_scf"
-      ],
-      "units": "s"
-    }, {
-      "description": "Start time of an scf iteration on CPU 1",
-      "name": "time_scf_cpu1_0",
-      "dtypeStr": "f",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "time_info_scf"
-      ],
-      "units": "s"
-    }, {
-      "description": "End time of an scf iteration on CPU 1",
-      "name": "time_scf_cpu1_end",
-      "dtypeStr": "f",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "time_info_scf"
-      ],
-      "units": "s"
-    }, {
-      "description": "Internal wall clock time at the start of the single point evaluation",
-      "name": "time_evaluation_wall_0",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_evaluation"
-      ],
-      "units": "s"
-    }, {
-      "description": "Start date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
-      "name": "time_evaluation_date_0",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_evaluation"
-      ],
-      "units": "s"
-    }, {
-      "description": "Internal wall clock time at the end of the single point evaluation",
-      "name": "time_evaluation_wall_end",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_evaluation"
-      ],
-      "units": "s"
-    }, {
-      "description": "End date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
-      "name": "time_evaluation_date_end",
-      "repeats": false,
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "time_info_evaluation"
-      ],
-      "units": "s"
-    }, {
-      "description": "Start time of the single point evaluation on CPU 1",
-      "name": "time_evaluation_cpu1_0",
-      "dtypeStr": "f",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "time_info_evaluation"
-      ],
-      "units": "s"
-    }, {
-      "description": "End time of the single point evaluation on CPU 1",
-      "name": "time_evaluation_cpu1_end",
-      "dtypeStr": "f",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "time_info_evaluation"
-      ],
-      "units": "s"
-    }, {
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc per atom",
-      "dtypeStr": "f",
-      "name": "energy_sum_eigenvalues_per_atom",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_per_atom"
-      ],
-      "units": "J"
-    }, {
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc per atom during the scf iterations.",
-      "dtypeStr": "f",
-      "name": "energy_sum_eigenvalues_per_atom_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_per_atom_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc",
-      "dtypeStr": "f",
-      "name": "energy_sum_eigenvalues_sc",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_sc during the scf iterations.",
-      "dtypeStr": "f",
-      "name": "energy_sum_eigenvalues_sc_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "parameters of one particle kind",
+      "description": "Information on the parallelization of the program",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_particle_kind",
+      "name": "parallelization_info",
+      "repeats": false,
+      "shape": [],
       "superNames": [
-        "settings_single_point_method"
+        "accessory_info_run"
+      ]
+    }, {
+      "description": "A debugging message of the parsing program, associated with a single point evaluation",
+      "dtypeStr": "C",
+      "name": "parsing_message_debug_evaluation",
+      "superNames": [
+        "parsing_message_debug",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "A debugging message of the parsing program, associated with a run",
+      "dtypeStr": "C",
+      "name": "parsing_message_debug_run",
+      "superNames": [
+        "section_run",
+        "parsing_message_debug"
+      ]
+    }, {
+      "description": "A debugging message of the parsing program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "parsing_message_debug",
+      "superNames": []
+    }, {
+      "description": "An error message of the parsing program, associated with a single point evaluation",
+      "dtypeStr": "C",
+      "name": "parsing_message_error_evaluation",
+      "superNames": [
+        "parsing_message_error",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "An error message of the parsing program, associated with a run",
+      "dtypeStr": "C",
+      "name": "parsing_message_error_run",
+      "superNames": [
+        "section_run",
+        "parsing_message_error"
+      ]
+    }, {
+      "description": "An error message of the parsing program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "parsing_message_error",
+      "superNames": [
+        "parsing_message_warning"
+      ]
+    }, {
+      "description": "An information message of the parsing program, associated with a a single point evaluation",
+      "dtypeStr": "C",
+      "name": "parsing_message_info_evaluation",
+      "superNames": [
+        "parsing_message_info",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "An information message of the parsing program, associated with a run",
+      "dtypeStr": "C",
+      "name": "parsing_message_info_run",
+      "superNames": [
+        "section_run",
+        "parsing_message_info"
+      ]
+    }, {
+      "description": "An information message of the parsing program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "parsing_message_info",
+      "superNames": [
+        "parsing_message_debug"
+      ]
+    }, {
+      "description": "A warning message of the parsing program",
+      "dtypeStr": "C",
+      "name": "parsing_message_warning_evaluation",
+      "superNames": [
+        "parsing_message_warning",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "A warning message of the parsing program, associated with a run",
+      "dtypeStr": "C",
+      "name": "parsing_message_warning_run",
+      "superNames": [
+        "section_run",
+        "parsing_message_warning"
+      ]
+    }, {
+      "description": "A warning message of the parsing program",
+      "dtypeStr": "C",
+      "kindStr": "type_abstract_document_content",
+      "name": "parsing_message_warning",
+      "superNames": [
+        "parsing_message_info"
+      ]
+    }, {
+      "description": "Forces on the particles as minus gradient of energy_free_sc.",
+      "dtypeStr": "f",
+      "name": "particle_forces_free_sc",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "particle_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the particles as minus gradient of energy_free.",
+      "dtypeStr": "f",
+      "name": "particle_forces_free",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "particle_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the particles as minus gradient of energy_total_sc.",
+      "dtypeStr": "f",
+      "name": "particle_forces_sc",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "particle_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the particles as minus gradient of energy_total_T0_sc.",
+      "dtypeStr": "f",
+      "name": "particle_forces_T0_sc",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "particle_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the particles as minus gradient of energy_total_T0.",
+      "dtypeStr": "f",
+      "name": "particle_forces_T0",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "particle_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Some forces on the particles (i.e. minus derivatives of some energy with respect to the particle position).",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "particle_forces_type",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "section_single_point_evaluation"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the particles as minus gradient of energy_total.",
+      "dtypeStr": "f",
+      "name": "particle_forces",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "particle_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Number of particles of this kind",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "particle_kind_nparticles",
+      "shape": [],
+      "superNames": [
+        "section_particle_kind"
+      ]
+    }, {
+      "description": "Total number of particles",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "particle_number",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Positions of the particles (this defines a configuration and is required).",
+      "dtypeStr": "f",
+      "name": "particle_position",
+      "repeats": true,
+      "shape": [
+        "particle_number",
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
+    }, {
+      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post HF method has been used.",
+      "dtypeStr": "C",
+      "name": "post_HF_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_post_HF"
+      ]
+    }, {
+      "description": "Program compilation date and time as seconds from unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "dtypeStr": "f",
+      "name": "program_compilation_datetime",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "Host on which the program was compiled",
+      "dtypeStr": "C",
+      "name": "program_compilation_host",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "program_info"
       ]
     }, {
       "description": "Information on the program that generated the data",
@@ -1109,53 +1277,181 @@
       "name": "program_info",
       "repeats": false,
       "shape": [],
-      "superNames": ["accessory_info_run"]
-    }, {
-      "description": "Version of the program that was used",
-      "name": "program_version",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
       "superNames": [
-        "program_info"
+        "accessory_info_run"
       ]
     }, {
       "description": "Name of the program that generated the data",
+      "dtypeStr": "C",
       "name": "program_name",
-      "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "program_info"
       ]
     }, {
-      "description": "Program compilation date and time as seconds from unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
-      "name": "program_compilation_datetime",
+      "description": "Version of the program that was used",
+      "dtypeStr": "C",
+      "name": "program_version",
       "repeats": false,
       "shape": [],
-      "dtypeStr": "f",
       "superNames": [
         "program_info"
       ]
     }, {
-      "description": "Host on which the program was compiled",
-      "name": "program_compilation_host",
+      "description": "Short string describing the relativity treatment used during the self consitency cycle (and thus valid for the self consistent density. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment_sc).",
+      "name": "relativity_treatment_sc",
+      "superNames": [
+        "settings_relativity_treatment"
+      ]
+    }, {
+      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment).",
+      "name": "relativity_treatment",
+      "superNames": [
+        "settings_relativity_treatment"
+      ]
+    }, {
+      "description": "number of scf iterations at Dft level",
+      "dtypeStr": "i",
+      "name": "scf_dft_niter",
       "repeats": false,
       "shape": [],
-      "dtypeStr": "C",
       "superNames": [
-        "program_info"
+        "scf_info"
       ]
     }, {
-      "description": "Post hartree fock method parameters",
-      "name": "settings_post_HF",
+      "description": "Information on the scf procedure",
+      "kindStr": "type_abstract_document_content",
+      "name": "scf_info",
+      "repeats": true,
+      "shape": [],
       "superNames": [
-        "settings_XC_functional"
+        "section_single_point_evaluation"
       ]
     }, {
-      "description": "Møller–Plesset method parameters",
-      "name": "settings_MP",
+      "description": "Atom centered part of the basis (assignement atom -> basis)",
+      "kindStr": "type_section",
+      "name": "section_basis_atom_centered",
       "superNames": [
-        "settings_post_HF"
+        "section_basis",
+        "section_basis_set_atom_centered",
+        "section_particle"
+      ]
+    }, {
+      "description": "Description of one or a sub group of basis function in this basis set",
+      "kindStr": "type_section",
+      "name": "section_basis_functions_atom_centered",
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "Global part of the basis",
+      "kindStr": "type_section",
+      "name": "section_basis_global",
+      "superNames": [
+        "section_basis",
+        "section_basis_set_global"
+      ]
+    }, {
+      "description": "Total number of wave functions (some might need complex coefficients).",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "section_basis_nbasis_functions",
+      "shape": [],
+      "superNames": [
+        "section_basis"
+      ]
+    }, {
+      "description": "An atom centered basis set",
+      "kindStr": "type_section",
+      "name": "section_basis_set_atom_centered",
+      "superNames": [
+        "basis_set_description"
+      ]
+    }, {
+      "description": "A global (atom independent) basis set",
+      "kindStr": "type_section",
+      "name": "section_basis_set_global",
+      "superNames": [
+        "basis_set_description"
+      ]
+    }, {
+      "description": "Represents a concrete basis set instatiated with parameters given in the section_method for the system section_system_description.",
+      "kindStr": "type_section",
+      "name": "section_basis",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "eigenvalues of some energy",
+      "kindStr": "type_section",
+      "name": "section_eigenvalues",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "Every section_method section contains the various parameters that define the theory used and he approximations done (convergence thresholds,...)",
+      "kindStr": "type_section",
+      "name": "section_method",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Every section_particle_kind_ref refers to a section_particle_kind by using the same unique string.",
+      "kindStr": "type_section",
+      "name": "section_particle_kind_ref",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Every section_particle_kind contains information about a different kind of particle, and is identified by a unique string.",
+      "kindStr": "type_section",
+      "name": "section_particle_kind",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Every section_particle_ref refers to a section_particle by its index within the particle kind.",
+      "kindStr": "type_section",
+      "name": "section_particle_ref",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Every section_particle represents a particle (atom, ghost,...).",
+      "kindStr": "type_section",
+      "name": "section_particle",
+      "superNames": [
+        "section_particle_kind"
+      ]
+    }, {
+      "description": "Every section_run represents a single call of a program. What exactly is contained in a run depends on the run type and the program.",
+      "kindStr": "type_section",
+      "name": "section_run",
+      "superNames": []
+    }, {
+      "description": "Every section_scf_iteration section represents an scf iteration",
+      "kindStr": "type_section",
+      "name": "section_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "scf_info",
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "Every section_single_point_evaluation section contains the values computated or evaluated during a single point evaluation.",
+      "kindStr": "type_section",
+      "name": "section_single_point_evaluation",
+      "superNames": [
+        "section_method",
+        "section_system_description"
+      ]
+    }, {
+      "description": "Every section_system_description section contains the properties required to describe the Physical system simulated: the given atomic configuration, if relevant the periodic cell, extenal potentials,...",
+      "kindStr": "type_section",
+      "name": "section_system_description",
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "Coupled Clusters method parameters",
@@ -1176,162 +1472,227 @@
         "settings_post_HF"
       ]
     }, {
+      "description": "Parameters that control the simulation and are in the method section",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_method",
+      "superNames": [
+        "settings_simulation",
+        "section_method"
+      ]
+    }, {
+      "description": "Møller–Plesset method parameters",
+      "name": "settings_MP",
+      "superNames": [
+        "settings_post_HF"
+      ]
+    }, {
       "description": "Multireference single and double configuration interaction method parameters",
       "name": "settings_MR",
       "superNames": [
         "settings_post_HF"
       ]
     }, {
-      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post HF method has been used.",
-      "name": "post_HF_method",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "C",
+      "description": "parameters of one particle kind",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_particle_kind",
       "superNames": [
-        "settings_post_HF"
+        "settings_single_point_method"
       ]
     }, {
-      "description": "Properties actually defining the current configuration",
-      "kindStr": "type_abstract_document_content",
-      "name": "configuration_core",
-      "repeats": false,
+      "description": "Post hartree fock method parameters",
+      "name": "settings_post_HF",
       "superNames": [
-        "section_system_description"
+        "settings_XC_functional"
       ]
     }, {
-      "description": "Which of the basis vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
-      "dtypeStr": "b",
-      "name": "configuration_periodic_dimensions",
-      "repeats": true,
-      "shape": [],
+      "description": "Parameters and information connected with the relativity treatment used in the calculation",
+      "name": "settings_relativity_treatment",
       "superNames": [
-        "configuration_core"
+        "settings_XC"
       ]
     }, {
-      "description": "Positions of the particles (this defines a configuration and is required).",
-      "dtypeStr": "f",
-      "name": "particle_position",
-      "repeats": true,
-      "shape": ["particle_number",3],
+      "description": "Parameters and information connected with self interaction correction (SIC) method used",
+      "name": "settings_SIC",
       "superNames": [
-        "configuration_core"
-      ],
-      "units": "m"
+        "settings_XC"
+      ]
     }, {
-      "description": "Forces on the particles as minus gradient of energy_total.",
-      "dtypeStr": "f",
-      "name": "particle_forces",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "particle_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the particles as minus gradient of energy_total_T0.",
-      "dtypeStr": "f",
-      "name": "particle_forces_T0",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "particle_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the particles as minus gradient of energy_total_sc.",
-      "dtypeStr": "f",
-      "name": "particle_forces_sc",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "particle_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the particles as minus gradient of energy_total_T0_sc.",
-      "dtypeStr": "f",
-      "name": "particle_forces_T0_sc",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "particle_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the particles as minus gradient of energy_free_sc.",
-      "dtypeStr": "f",
-      "name": "particle_forces_free_sc",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "particle_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the particles as minus gradient of energy_free.",
-      "dtypeStr": "f",
-      "name": "particle_forces_free",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "particle_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Some forces on the particles (i.e. minus derivatives of some energy with respect to the particle position).",
+      "description": "Parameters that control the simulation",
       "kindStr": "type_abstract_document_content",
-      "dtypeStr": "f",
-      "name": "particle_forces_type",
-      "repeats": true,
-      "shape": ["particle_number",3],
-      "superNames": [
-        "section_single_point_evaluation"
-      ],
-      "units": "N"
+      "name": "settings_simulation",
+      "superNames": []
     }, {
-      "description": "Information on the parallelization of the program",
+      "description": "Method parameters that control single point evaluation. This covers things like the theory level, but not the temperature of an molecular dynamics.",
       "kindStr": "type_abstract_document_content",
-      "name": "parallelization_info",
+      "name": "settings_single_point_method",
+      "superNames": [
+        "settings_simulation",
+        "section_method"
+      ]
+    }, {
+      "description": "Parameters and information connected with the van der Waals treatment used in the calculation",
+      "name": "settings_van_der_Waals_treatment",
+      "superNames": [
+        "settings_XC"
+      ]
+    }, {
+      "description": "Parameters and information connected Exchange correlation (XC) functional used in the self consistency cycle (and thus the one for the self consistent density)",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_XC_functional_sc",
+      "repeats": false,
+      "superNames": [
+        "settings_XC_sc"
+      ]
+    }, {
+      "description": "Parameters connected with defining the exchange correlation (XC) functional",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_XC_functional",
+      "superNames": [
+        "settings_XC"
+      ]
+    }, {
+      "description": "Parameters connected with defining the exchange correlation (XC) treatment during the self consisten cycle and thus valid for the self consistent density.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_XC_sc",
+      "superNames": [
+        "settings_single_point_method"
+      ]
+    }, {
+      "description": "Parameters connected with defining the exchange correlation (XC) treatment for the final energy and related quantities",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_XC",
+      "superNames": [
+        "settings_single_point_method"
+      ]
+    }, {
+      "description": "Short string for the self interaction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [SIC wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/SIC).",
+      "name": "SIC",
+      "superNames": [
+        "settings_SIC"
+      ]
+    }, {
+      "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [SIC_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/SIC_sc).",
+      "name": "SIC_sc",
+      "superNames": [
+        "settings_SIC"
+      ]
+    }, {
+      "description": "A final value of the default stress tensor calculated with XC_method_sc",
+      "dtypeStr": "f",
+      "name": "stress_tensor_sc",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_single_point_evaluation",
+        "stress_tensor_type"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "A final value of a stress tensor",
+      "kindStr": "type_abstract_document_content",
+      "name": "stress_tensor_type",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "A final value of the default stress tensor calculated with XC_method",
+      "dtypeStr": "f",
+      "name": "stress_tensor",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_single_point_evaluation",
+        "stress_tensor_type"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "Start time of the single point evaluation on CPU 1",
+      "dtypeStr": "f",
+      "name": "time_evaluation_cpu1_0",
       "repeats": false,
       "shape": [],
+      "superNames": [
+        "time_info_evaluation"
+      ],
+      "units": "s"
+    }, {
+      "description": "End time of the single point evaluation on CPU 1",
+      "dtypeStr": "f",
+      "name": "time_evaluation_cpu1_end",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_evaluation"
+      ],
+      "units": "s"
+    }, {
+      "description": "Start date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "dtypeStr": "f",
+      "name": "time_evaluation_date_0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_evaluation"
+      ],
+      "units": "s"
+    }, {
+      "description": "End date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "dtypeStr": "f",
+      "name": "time_evaluation_date_end",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_evaluation"
+      ],
+      "units": "s"
+    }, {
+      "description": "Internal wall clock time at the start of the single point evaluation",
+      "dtypeStr": "f",
+      "name": "time_evaluation_wall_0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_evaluation"
+      ],
+      "units": "s"
+    }, {
+      "description": "Internal wall clock time at the end of the single point evaluation",
+      "dtypeStr": "f",
+      "name": "time_evaluation_wall_end",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_evaluation"
+      ],
+      "units": "s"
+    }, {
+      "description": "Information on single point evaluation date, and timings",
+      "kindStr": "type_abstract_document_content",
+      "name": "time_info_evaluation",
+      "superNames": [
+        "accessory_info_evaluation"
+      ]
+    }, {
+      "description": "Information on run date, and run timings",
+      "kindStr": "type_abstract_document_content",
+      "name": "time_info_run",
       "superNames": [
         "accessory_info_run"
       ]
     }, {
-      "description": "Information on the parallelization of the program",
+      "description": "Information on scf iteration date, and timings",
       "kindStr": "type_abstract_document_content",
-      "name": "parallelization_info_scf",
-      "repeats": false,
-      "shape": [],
+      "name": "time_info_scf",
       "superNames": [
         "accessory_info_scf"
-      ]
-    }, {
-      "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
-      "name": "parallel_tasks_assignement",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "D",
-      "superNames": [
-        "parallelization_info"
-      ]
-    }, {
-      "description": "Number of parallel tasks used",
-      "name": "parallel_tasks_number",
-      "repeats": false,
-      "shape": [],
-      "dtypeStr": "i",
-      "superNames": [
-        "parallelization_info"
-      ]
-    }, {
-      "description": "number of scf iterations at Dft level",
-      "dtypeStr": "i",
-      "name": "scf_dft_niter",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "scf_info"
       ]
     }, {
       "description": "Wall time needed for an MP2 calculation",
@@ -1344,432 +1705,181 @@
       ],
       "units": "s"
     }, {
-      "description": "Converged Mp2 energy correction",
+      "description": "Start time of the run on CPU 1",
       "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_correction_MP2",
+      "name": "time_run_cpu1_0",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "time_info_run"
       ],
-      "units": "J"
+      "units": "s"
     }, {
-      "description": "Converged total MP2 energy (XC_method_sc + MP2 correction)",
+      "description": "End time of the run on CPU 1",
       "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_total_MP2",
+      "name": "time_run_cpu1_end",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "time_info_run"
       ],
-      "units": "J"
+      "units": "s"
     }, {
-      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy",
+      "description": "Start date of the run stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
       "dtypeStr": "f",
-      "name": "energy_correction_hartree",
+      "name": "time_run_date_0",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "time_info_run"
       ],
-      "units": "J"
+      "units": "s"
     }, {
-      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy during the scf iterations",
+      "description": "End date of run stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
       "dtypeStr": "f",
-      "name": "energy_correction_hartree_scf",
+      "name": "time_run_date_end",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf"
+        "time_info_run"
       ],
-      "units": "J"
+      "units": "s"
     }, {
-      "description": "Error in the hartree (electrostatic) potential energy",
+      "description": "Internal wall clock time at the start of the run",
       "dtypeStr": "f",
-      "name": "energy_hartree_error",
+      "name": "time_run_wall_0",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial",
-        "energy"
+        "time_info_run"
       ],
-      "units": "J"
+      "units": "s"
     }, {
-      "name": "stress_tensor_type",
-      "description": "A final value of a stress tensor",
-      "kindStr": "type_abstract_document_content",
-      "shape": [3, 3],
+      "description": "Internal wall clock time at the end of the run",
+      "dtypeStr": "f",
+      "name": "time_run_wall_end",
+      "repeats": false,
+      "shape": [],
       "superNames": [
-        "section_run"
+        "time_info_run"
+      ],
+      "units": "s"
+    }, {
+      "description": "Start time of an scf iteration on CPU 1",
+      "dtypeStr": "f",
+      "name": "time_scf_cpu1_0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ],
+      "units": "s"
+    }, {
+      "description": "End time of an scf iteration on CPU 1",
+      "dtypeStr": "f",
+      "name": "time_scf_cpu1_end",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ],
+      "units": "s"
+    }, {
+      "description": "Start date of an scf iteration stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
+      "dtypeStr": "f",
+      "name": "time_scf_date_0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ],
+      "units": "s"
+    }, {
+      "description": "End date of scf stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
+      "dtypeStr": "f",
+      "name": "time_scf_date_end",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ],
+      "units": "s"
+    }, {
+      "description": "Internal wall clock time at the start of an scf iteration",
+      "dtypeStr": "f",
+      "name": "time_scf_wall_0",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ],
+      "units": "s"
+    }, {
+      "description": "Internal wall clock time at the end of an scf iteration",
+      "dtypeStr": "f",
+      "name": "time_scf_wall_end",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ],
+      "units": "s"
+    }, {
+      "description": "Short string describing the van der Waals treatment during the self consitency cycle (and thus valid for the self consistent density). No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment_sc).",
+      "name": "van_der_Waals_treatment_sc",
+      "superNames": [
+        "settings_van_der_Waals_treatment"
       ]
     }, {
-      "name": "stress_tensor",
-      "description": "A final value of the default stress tensor calculated with XC_method",
-      "shape": [3, 3],
-      "dtypeStr": "f",
+      "description": "Short string describing the van der Waals treatment in the final energy. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment).",
+      "name": "van_der_Waals_treatment",
       "superNames": [
-        "section_single_point_evaluation",
-        "stress_tensor_type"
-      ],
-      "units": "Pa"
-    }, {
-      "name": "stress_tensor_sc",
-      "description": "A final value of the default stress tensor calculated with XC_method_sc",
-      "shape": [3, 3],
-      "dtypeStr": "f",
-      "superNames": [
-        "section_single_point_evaluation",
-        "stress_tensor_type"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "Total energy (electronic + ions) calculated with the method described in XC_method",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_total",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential"
-      ],
-      "units": "J"
-    }, {
-      "description": "Total energy (or equivalently free energy), electronic + ions, calculated with the method described in XC_method and extrapolated for T=0 (for metals)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_total_T0",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential"
-      ],
-      "units": "J"
-    }, {
-      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_free",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged exact exchange energy (not scaled)",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_HF_X",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
-    }, {
-      "description": "Scaled (depending on the mix paramenter of the functional) exact exchange energy",
-      "dtypeStr": "f",
-      "kindStr": "type_document_content",
-      "name": "energy_HF_X_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Value during the SCF cycle.",
-      "dtypeStr": "f",
-      "name": "energy_correction_entropy_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account.",
-      "dtypeStr": "f",
-      "name": "energy_correction_entropy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Total electostatic energy (atom + electrons) during the scf itrations",
-      "dtypeStr": "f",
-      "name": "energy_electrostatic_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Total electostatic energy (atom + electrons)",
-      "dtypeStr": "f",
-      "name": "energy_electrostatic",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Electronic kinetic energy during the scf iterations",
-      "dtypeStr": "f",
-      "name": "electronic_kinetic_energy_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Electronic kinetic energy",
-      "dtypeStr": "f",
-      "name": "electronic_kinetic_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_sc per atom during the scf iterations",
-      "dtypeStr": "f",
-      "name": "energy_free_sc_per_atom_scf",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_per_atom_scf"
-      ],
-      "units": "J"
-    }, {
-      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_sc per atom ",
-      "dtypeStr": "f",
-      "name": "energy_free_sc_per_atom",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component_per_atom"
-      ],
-      "units": "J"
-    }, {
-      "description": "A basis set description",
-      "kindStr": "type_abstract_document_content",
-      "name": "basis_set_description",
-      "superNames": [
-        "section_method"
+        "settings_van_der_Waals_treatment"
       ]
     }, {
-      "description": "A global (atom independent) basis set",
-      "kindStr": "type_section",
-      "name": "section_basis_set_global",
-      "superNames": [
-        "basis_set_description"
-      ]
-    }, {
-      "description": "A global basis set type, string should be as defined in the [basis_set_global_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_global_kind).",
-      "name": "basis_set_global_kind",
+      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC_functional wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional).",
       "dtypeStr": "C",
-      "repeat": false,
-      "shape": [],
-      "superNames": [
-        "section_basis_set_global"
-      ]
-    }, {
-      "description": "A descriptive name identifying the basis set be as defined in the [basis_set_global_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_global_name).",
-      "name": "basis_set_global_name",
-      "dtypeStr": "C",
-      "repeat": false,
-      "shape": [],
-      "superNames": [
-        "section_basis_set_global"
-      ]
-    }, {
-      "description": "Spherical cutoff for a plane wave basis in reciprocal space, as energy of the highest plane wave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
-      "name": "basis_set_plan_wave_cutoff",
-      "dtypeStr": "f",
-      "shape": [],
-      "units": "J",
-      "superNames": [
-        "section_basis_set_global"
-      ]
-    }, {
-      "description": "An atom centered basis set",
-      "kindStr": "type_section",
-      "name": "section_basis_set_atom_centered",
-      "superNames": [
-        "basis_set_description"
-      ]
-    }, {
-        "description": "atom number of kind of atom this basis set is thought for (0 meand unspcified, or a pseudo atom)",
-      "name": "basis_set_atom_kind_nr",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-        "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_base_name and if not equal to the default basis implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis_set_atom_centered_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
-      "name": "basis_set_atom_centered_name",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-        "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis_set_atom_centered_base_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_base_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
-      "name": "basis_set_atom_centered_base_name",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-        "description": "number of different kind of basis functions in this set",
-      "name": "basis_set_atom_centered_nkinds",
-      "kindStr": "type_dimension",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-        "description": "number of different basis functions in this set",
-      "name": "basis_set_atom_centered_nbasis_functions",
-      "kindStr": "type_dimension",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-      "description": "Description of one or a sub group of basis function in this basis set",
-      "kindStr": "type_section",
-      "name": "section_basis_functions_atom_centered",
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-      "description": "l value (of the angular part given by the spherical harmonic $Y_{lm}$) of the basis function",
-      "name": "basis_set_atom_centered_ls",
-      "dtypeStr": "i",
-      "shape": ["basis_set_atom_centered_nkinds"],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-      "description": "Radial function of the different basis function kinds, the 5 values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\frac{d}{dr}(f(r)*r)$ and are given by default on an equispaced grid from 0 to 40 $fm$",
-      "name": "basis_set_atom_centered_radial_functions",
-      "dtypeStr": "f",
-      "shape": ["basis_set_atom_centered_nkinds", 401, 5],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-        "name": "section_basis",
-        "description": "Represents a concrete basis set instatiated with parameters given in the section_method for the system section_system_description.",
-        "kindStr": "type_section",
-        "superNames": [
-            "section_single_point_evaluation"
-        ]
-    }, {
-        "name": "basis_kind",
-        "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_kind).",
-        "dtypeStr": "C",
-        "shape":[],
-        "superNames": [
-            "section_basis"
-        ]
-    }, {
-        "name": "basis_name",
-        "description": "String identifying the basis set in an unique way. The values are described in the [basis_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_name).",
-        "dtypeStr": "C",
-        "shape":[],
-        "superNames": [
-            "section_basis"
-        ]
-    }, {
-        "name": "basis",
-        "description": "String identifying the basis used for the wavefunctions in an unique way. The values are described in the [basis wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis).",
-        "dtypeStr": "C",
-        "shape":[],
-        "superNames": [
-            "section_single_point_evaluation"
-        ]
-    }, {
-      "name": "section_basis_atom_centered",
-      "description": "Atom centered part of the basis (assignement atom -> basis)",
-      "kindStr": "type_section",
-      "superNames": [
-          "section_basis",
-          "section_basis_set_atom_centered",
-          "section_particle"
-      ]
-    }, {
-      "name": "section_basis_global",
-      "description": "Global part of the basis",
-      "kindStr": "type_section",
-      "superNames": [
-          "section_basis",
-          "section_basis_set_global"
-      ]
-    }, {
-      "name": "section_basis_nbasis_functions",
-      "description": "Total number of wave functions (some might need complex coefficients).",
-      "kindStr": "type_dimension",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-          "section_basis"
-      ]
-    }, {
-      "description": "Total energy minus the same number of atomic energies of the most stable form of the element calculated with the same method (functional,...), basisset and accuracy.",
-      "name": "energy_formation_method_consistent",
-      "superNames": [
-        "energy_total_potential"
-      ]
-    }, {
-      "description": "Total energy minus the energy of the same number of isolated atoms calculated with the same method (functional,...), basisset and accuracy.",
-      "name": "energy_atomization_method_consistent",
-      "superNames": [
-        "energy_total_potential"
-      ]
-    }, {
-      "description": "Total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
-      "name": "energy_comparable_fitted",
-      "kindStr": "type_abstract_document_content",
-      "superNames": [
-        "energy_total_potential"
-      ]
-    }, {
-      "description": "First version of the fit of the total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
-      "name": "energy_comparable_fitted_v1",
-      "superNames": [
-        "energy_comparable_fitted"
-      ]
-    }, {
-      "description": "Some estimate of the error on the converged (final) value",
-      "kindStr": "type_abstract_document_content",
-      "name": "error_estimate",
+      "name": "XC_functional",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial"
+        "settings_XC_functional"
       ]
     }, {
-      "description": "A quantity that is preserved by the evolution (for example kinetic+potential energy during NVE",
-      "kindStr": "type_abstract_document_content",
-      "name": "conserved_quantity",
+      "description": "Exchange correlation (XC) functional used during the scf cycle (and thus for the density) in a unique short form as described in the [XC_functional_sc wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional_sc).",
+      "dtypeStr": "C",
+      "name": "XC_functional_sc",
       "repeats": false,
       "shape": [],
-      "superNames": []
-    }
-  ]
+      "superNames": [
+        "settings_XC_functional_sc"
+      ]
+    }, {
+      "description": "Exchange correlation (XC) method used for the final energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: postHF_method '_' XC_functional '_' SIC '_' van_der_Waals '_' relativity_treatment '@' XC_method_sc. With empty strings the connecting character is skipped.",
+      "dtypeStr": "C",
+      "name": "XC_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_XC"
+      ]
+    }, {
+      "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_sc '_' SIC_sc '_' van_der_Waals_sc '_' relativity_treatment_sc. For empty strings the connecting character is skipped.",
+      "dtypeStr": "C",
+      "name": "XC_method_sc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_XC_sc"
+      ]
+    }, {
+      "description": "String that represent the exchange correlation (XC) treatment in a unique short form. This string keeps in account all settings in settings_XC. It is built from XC_method plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all settings_XC exluding this one",
+      "dtypeStr": "C",
+      "name": "XC_method_unique",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_XC"
+      ]
+    }]
 }
