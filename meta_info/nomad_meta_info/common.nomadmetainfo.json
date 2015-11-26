@@ -16,6 +16,86 @@
         "section_run"
       ]
     }, {
+      "description": "number of k point segments",
+      "kindStr": "type_dimension",
+      "name": "n_k_point_segments",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "number of k points in each segment",
+      "kindStr": "type_dimension",
+      "name": "n_k_points_per_segment",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Coordinates of the start and end point of the segments one samples in the k space",
+      "kindStr": "type_document_content",
+      "name": "band_segm_start_end",
+      "dtypeStr": "f",
+      "shape": ["n_k_point_segments", 2, 3],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Coordinates of the k points actually building the band",
+      "kindStr": "type_document_content",
+      "name": "band_k_points",
+      "dtypeStr": "f",
+      "shape": ["n_k_point_segments", "n_k_points_per_segment", 3],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "k band energies",
+      "kindStr": "type_document_content",
+      "name": "band_energies",
+      "dtypeStr": "f",
+      "shape": ["n_k_point_segments", "max_spin_channel", "n_k_points", "n_eigen_values"],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "occupation of the band",
+      "kindStr": "type_document_content",
+      "name": "band_occupation",
+      "dtypeStr": "f",
+      "shape": ["n_k_point_segments", "max_spin_channel", "n_k_points", "n_eigen_values"],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Start and end labels of the points sampled in the k-space",
+      "kindStr": "type_document_content",
+      "name": "band_segm_labels",
+      "dtypeStr": "C",
+      "shape": ["n_k_point_segments", 2],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "section collecting the information on a k band evaluation",
+      "kindStr": "type_section",
+      "name": "section_k_band",
+      "repeats": true,
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "References to the source of the data (uri,...)",
+      "kindStr": "type_document_content",
+      "name": "source_references",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "Information on an scf iteration which *in theory* should have no influence on the results",
       "kindStr": "type_abstract_document_content",
       "name": "accessory_info_scf",
@@ -1238,6 +1318,19 @@
       "repeats": true,
       "shape": [
         "particle_number",
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
+    }, {
+      "description": "Cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
+      "dtypeStr": "f",
+      "name": "cell",
+      "repeats": true,
+      "shape": [
+        3,
         3
       ],
       "superNames": [
