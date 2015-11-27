@@ -1974,5 +1974,12 @@
       "superNames": [
         "settings_XC"
       ]
-    }]
+    }, {
+       "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
+       "name": "run_clean_end",
+       "dtypeStr": "b",
+       "shape": [],
+        "superNames": [ "section_run" ]
+    }
+  ]
 }
