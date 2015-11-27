@@ -1,0 +1,52 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the fhi parser",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [
+      {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_program_compilation_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_program_compilation_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_program_execution_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_program_execution_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_number_of_tasks",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }
+  ]
+}
