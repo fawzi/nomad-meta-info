@@ -47,6 +47,36 @@
       "superNames": [
         "section_run"
       ]
+    }, {
+      "description": "-",
+      "name": "fhi_aims_section_parallel_tasks",
+      "kindStr": "type_section",
+      "superNames": [
+          "section_run"
+      ]
+    }, {
+      "description": "-",
+      "name": "fhi_aims_section_parallel_task_assignement",
+      "kindStr": "type_section",
+      "superNames": [
+          "fhi_aims_section_parallel_tasks"
+      ]
+    }, {
+      "description": "-",
+      "name": "fhi_aims_parallel_task_nr",
+      "superNames": [
+          "fhi_aims_section_parallel_task_assignement"
+      ],
+        "dtypeStr": "i",
+        "shape": []
+    }, {
+      "description": "-",
+      "name": "fhi_aims_parallel_task_host",
+      "superNames": [
+          "fhi_aims_section_parallel_task_assignement"
+      ],
+        "dtypeStr": "C",
+        "shape": []
     }
   ]
 }
