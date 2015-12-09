@@ -14,47 +14,6 @@
         "ParticleKindParameters"
       ]
     }, {
-      "description": "energies of the band",
-      "name": "band_energies",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "k-Points of the band",
-      "name": "band_k_points",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "occupations of the band",
-      "name": "band_occupations",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "labels for each segment of the band",
-      "dtypeStr": "C",
-      "name": "band_segm_labels",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
-      "description": "start and end points of the band segments",
-      "name": "band_segm_start_end",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_single_point_evaluation"
-      ]
-    }, {
       "description": "A basis function",
       "kindStr": "type_abstract_document_content",
       "name": "BasisFunction",
@@ -63,16 +22,6 @@
       "superNames": [
         "ParticleKindParameters"
       ]
-    }, {
-      "description": "Periodic cell given as the three basis vectors.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
-      "dtypeStr": "f",
-      "name": "cell",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "CoreConfiguration"
-      ],
-      "units": "Bohr"
     }, {
       "description": "Converged correlation part of the dft xc functional",
       "dtypeStr": "f",
