@@ -790,12 +790,22 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged van der Waals energy using the Tkatchenko Scheffler method",
-      "dtypeStr": "f",
-      "name": "energy_van_der_Waals_Tkatchenko_Scheffler",
+      "description": "Method used to compute the van der Waals energy stored in energy_van_der_Waals_value",
+      "dtypeStr": "C",
+      "name": "energy_van_der_Waals_kind",
       "repeats": false,
       "shape": [],
       "superNames": [
+        "section_energy_van_der_Waals"
+      ]
+    }, {
+      "description": "Some value of van der Waals energy calculated with the method described in energy_van_der_Waals_kind",
+      "dtypeStr": "f",
+      "name": "energy_van_der_Waals_value",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_energy_van_der_Waals",
         "energy_type_van_der_Waals"
       ]
     }, {
@@ -1478,6 +1488,14 @@
       "description": "eigenvalues of some energy",
       "kindStr": "type_section",
       "name": "section_eigenvalues",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "Section containing some van der Waals energy value",
+      "kindStr": "type_section",
+      "name": "section_energy_van_der_Waals",
+      "repeats": true,
       "superNames": [
         "section_single_point_evaluation"
       ]
