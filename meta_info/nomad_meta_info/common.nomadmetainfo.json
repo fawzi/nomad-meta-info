@@ -16,91 +16,72 @@
         "section_run"
       ]
     }, {
-      "description": "number of k point segments",
-      "kindStr": "type_dimension",
-      "name": "n_k_point_segments",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "number of k points in each segment",
-      "kindStr": "type_dimension",
-      "name": "n_k_points_per_segment",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "Coordinates of the start and end point of the segments one samples in the k space",
-      "kindStr": "type_document_content",
-      "name": "band_segm_start_end",
-      "dtypeStr": "f",
-      "shape": ["n_k_point_segments", 2, 3],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "Coordinates of the k points actually building the band",
-      "kindStr": "type_document_content",
-      "name": "band_k_points",
-      "dtypeStr": "f",
-      "shape": ["n_k_point_segments", "n_k_points_per_segment", 3],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "k band energies",
-      "kindStr": "type_document_content",
-      "name": "band_energies",
-      "dtypeStr": "f",
-      "shape": ["n_k_point_segments", "max_spin_channel", "n_k_points", "n_eigen_values"],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "occupation of the band",
-      "kindStr": "type_document_content",
-      "name": "band_occupation",
-      "dtypeStr": "f",
-      "shape": ["n_k_point_segments", "max_spin_channel", "n_k_points", "n_eigen_values"],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "Start and end labels of the points sampled in the k-space",
-      "kindStr": "type_document_content",
-      "name": "band_segm_labels",
-      "dtypeStr": "C",
-      "shape": ["n_k_point_segments", 2],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "section collecting the information on a k band evaluation",
-      "kindStr": "type_section",
-      "name": "section_k_band",
-      "repeats": true,
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "References to the source of the data (uri,...)",
-      "kindStr": "type_document_content",
-      "name": "source_references",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "Information on an scf iteration which *in theory* should have no influence on the results",
       "kindStr": "type_abstract_document_content",
       "name": "accessory_info_scf",
       "superNames": [
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "k band energies",
+      "dtypeStr": "f",
+      "name": "band_energies",
+      "shape": [
+        "n_k_point_segments",
+        "max_spin_channel",
+        "n_k_points",
+        "n_eigen_values"
+      ],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Coordinates of the k points actually building the band",
+      "dtypeStr": "f",
+      "name": "band_k_points",
+      "shape": [
+        "n_k_point_segments",
+        "n_k_points_per_segment",
+        3
+      ],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "occupation of the band",
+      "dtypeStr": "f",
+      "name": "band_occupation",
+      "shape": [
+        "n_k_point_segments",
+        "max_spin_channel",
+        "n_k_points",
+        "n_eigen_values"
+      ],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Start and end labels of the points sampled in the k-space",
+      "dtypeStr": "C",
+      "name": "band_segm_labels",
+      "shape": [
+        "n_k_point_segments",
+        2
+      ],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Coordinates of the start and end point of the segments one samples in the k space",
+      "dtypeStr": "f",
+      "name": "band_segm_start_end",
+      "shape": [
+        "n_k_point_segments",
+        2,
+        3
+      ],
+      "superNames": [
+        "section_k_band"
       ]
     }, {
       "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_kind).",
@@ -224,6 +205,19 @@
       "superNames": [
         "section_single_point_evaluation"
       ]
+    }, {
+      "description": "Cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
+      "dtypeStr": "f",
+      "name": "cell",
+      "repeats": true,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
     }, {
       "description": "Properties actually defining the current configuration",
       "kindStr": "type_abstract_document_content",
@@ -1082,6 +1076,24 @@
         "message_info"
       ]
     }, {
+      "description": "number of k point segments",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "n_k_point_segments",
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "number of k points in each segment",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "n_k_points_per_segment",
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
       "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
       "dtypeStr": "D",
       "name": "parallel_tasks_assignement",
@@ -1335,19 +1347,6 @@
       ],
       "units": "m"
     }, {
-      "description": "Cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
-      "dtypeStr": "f",
-      "name": "cell",
-      "repeats": true,
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "configuration_core"
-      ],
-      "units": "m"
-    }, {
       "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post HF method has been used.",
       "dtypeStr": "C",
       "name": "post_HF_method",
@@ -1411,6 +1410,14 @@
       "name": "relativity_treatment",
       "superNames": [
         "settings_relativity_treatment"
+      ]
+    }, {
+      "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
+      "dtypeStr": "b",
+      "name": "run_clean_end",
+      "shape": [],
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "number of scf iterations at Dft level",
@@ -1498,6 +1505,14 @@
       "repeats": true,
       "superNames": [
         "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "section collecting the information on a k band evaluation",
+      "kindStr": "type_section",
+      "name": "section_k_band",
+      "repeats": true,
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "Every section_method section contains the various parameters that define the theory used and he approximations done (convergence thresholds,...)",
@@ -1694,6 +1709,14 @@
       "name": "SIC_sc",
       "superNames": [
         "settings_SIC"
+      ]
+    }, {
+      "description": "References to the source of the data (uri,...)",
+      "dtypeStr": "C",
+      "name": "source_references",
+      "shape": [],
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "A final value of the default stress tensor calculated with XC_method_sc",
@@ -2000,12 +2023,5 @@
       "superNames": [
         "settings_XC"
       ]
-    }, {
-       "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
-       "name": "run_clean_end",
-       "dtypeStr": "b",
-       "shape": [],
-        "superNames": [ "section_run" ]
-    }
-  ]
+    }]
 }
