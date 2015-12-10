@@ -1541,11 +1541,18 @@
         "section_single_point_evaluation"
       ]
     }, {
-      "description": "eigenvalues of some energy",
+      "description": "groups eigenvalues of different spins",
+      "kindStr": "type_section",
+      "name": "section_eigenvalues_group",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "eigenvalues of some energy for one spin channel",
       "kindStr": "type_section",
       "name": "section_eigenvalues",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_eigenvalues_group"
       ]
     }, {
       "description": "Section containing some van der Waals energy value",
