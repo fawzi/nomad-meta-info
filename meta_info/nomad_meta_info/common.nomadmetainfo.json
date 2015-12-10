@@ -565,6 +565,17 @@
       ],
       "units": "J"
     }, {
+      "description": "Error in the hartree (electrostatic) potential energy during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_hartree_error_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "error_estimate_partial",
+        "energy"
+      ],
+      "units": "J"
+    }, {
       "description": "Scaled (depending on the mix paramenter of the functional) exact exchange energy",
       "dtypeStr": "f",
       "name": "energy_HF_X_scaled",
@@ -697,6 +708,16 @@
       "description": "Total energy using XC_method_sc per atom extapolated for T=0",
       "dtypeStr": "f",
       "name": "energy_total_T0_sc_per_atom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_per_atom"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total energy using XC_method_sc per atom extapolated for T=0 during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_total_T0_sc_per_atom_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1758,7 +1779,7 @@
     }, {
       "description": "Start time of the single point evaluation on CPU 1",
       "dtypeStr": "f",
-      "name": "time_evaluation_cpu1_0",
+      "name": "time_evaluation_cpu1_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1778,7 +1799,7 @@
     }, {
       "description": "Start date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "dtypeStr": "f",
-      "name": "time_evaluation_date_0",
+      "name": "time_evaluation_date_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1798,7 +1819,7 @@
     }, {
       "description": "Internal wall clock time at the start of the single point evaluation",
       "dtypeStr": "f",
-      "name": "time_evaluation_wall_0",
+      "name": "time_evaluation_wall_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1849,7 +1870,7 @@
     }, {
       "description": "Start time of the run on CPU 1",
       "dtypeStr": "f",
-      "name": "time_run_cpu1_0",
+      "name": "time_run_cpu1_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1869,7 +1890,7 @@
     }, {
       "description": "Start date of the run stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
       "dtypeStr": "f",
-      "name": "time_run_date_0",
+      "name": "time_run_date_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1889,7 +1910,7 @@
     }, {
       "description": "Internal wall clock time at the start of the run",
       "dtypeStr": "f",
-      "name": "time_run_wall_0",
+      "name": "time_run_wall_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1909,7 +1930,7 @@
     }, {
       "description": "Start time of an scf iteration on CPU 1",
       "dtypeStr": "f",
-      "name": "time_scf_cpu1_0",
+      "name": "time_scf_cpu1_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1929,7 +1950,7 @@
     }, {
       "description": "Start date of an scf iteration stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds",
       "dtypeStr": "f",
-      "name": "time_scf_date_0",
+      "name": "time_scf_date_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1949,7 +1970,7 @@
     }, {
       "description": "Internal wall clock time at the start of an scf iteration",
       "dtypeStr": "f",
-      "name": "time_scf_wall_0",
+      "name": "time_scf_wall_start",
       "repeats": false,
       "shape": [],
       "superNames": [

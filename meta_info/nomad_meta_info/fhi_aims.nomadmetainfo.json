@@ -6,8 +6,41 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [
-      {
+  "metaInfos": [ {
+      "description": "Electrostatic energy contributions from superposition of free atom densities during the scf iterations",
+      "dtypeStr": "f",
+      "name": "fhi_aims_energy_electrostatic_free_atom_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_number_of_tasks",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_parallel_task_host",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_parallel_task_assignement"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_parallel_task_nr",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_parallel_task_assignement"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_program_compilation_date",
@@ -42,41 +75,32 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "fhi_aims_number_of_tasks",
+      "name": "fhi_aims_scf_date_start",
       "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_scf_time_start",
+      "shape": [],
+      "superNames": [
+        "time_info_scf"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_parallel_task_assignement",
+      "superNames": [
+        "fhi_aims_section_parallel_tasks"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_parallel_tasks",
       "superNames": [
         "section_run"
       ]
-    }, {
-      "description": "-",
-      "name": "fhi_aims_section_parallel_tasks",
-      "kindStr": "type_section",
-      "superNames": [
-          "section_run"
-      ]
-    }, {
-      "description": "-",
-      "name": "fhi_aims_section_parallel_task_assignement",
-      "kindStr": "type_section",
-      "superNames": [
-          "fhi_aims_section_parallel_tasks"
-      ]
-    }, {
-      "description": "-",
-      "name": "fhi_aims_parallel_task_nr",
-      "superNames": [
-          "fhi_aims_section_parallel_task_assignement"
-      ],
-        "dtypeStr": "i",
-        "shape": []
-    }, {
-      "description": "-",
-      "name": "fhi_aims_parallel_task_host",
-      "superNames": [
-          "fhi_aims_section_parallel_task_assignement"
-      ],
-        "dtypeStr": "C",
-        "shape": []
-    }
-  ]
+    }]
 }
