@@ -1003,6 +1003,34 @@
         "error_estimate_partial"
       ]
     }, {
+      "description": "Method used to calculate the extra_stress_tensor (numeric or analytic)",
+      "dtypeStr": "C",
+      "name": "extra_stress_tensor_method",
+      "shape": [],
+      "superNames": [
+        "extra_stress_tensor_setting"
+      ]
+    }, {
+      "description": "Setting used to calculate the extra_stress_tensor",
+      "kindStr": "type_abstract_document_content",
+      "name": "extra_stress_tensor_setting",
+      "superNames": [
+        "section_extra_stress_tensor"
+      ]
+    }, {
+      "description": "Extra stress tensor",
+      "dtypeStr": "f",
+      "name": "extra_stress_tensor",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_extra_stress_tensor",
+        "stress_tensor_type"
+      ],
+      "units": "Pa"
+    }, {
       "description": "A debugging message of the computational program, associated with a single point evaluation",
       "dtypeStr": "C",
       "name": "message_debug_evaluation",
@@ -1528,6 +1556,13 @@
         "section_single_point_evaluation"
       ]
     }, {
+      "description": "Section to keep extra stress tensors that have been calculated",
+      "kindStr": "type_section",
+      "name": "section_extra_stress_tensor",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
       "description": "section collecting the information on a k band evaluation",
       "kindStr": "type_section",
       "name": "section_k_band",
@@ -1740,7 +1775,25 @@
         "section_run"
       ]
     }, {
-      "description": "A final value of the default stress tensor calculated with XC_method_sc",
+      "description": "Method used to calculate the stress_tensor_sc (numeric or analytic)",
+      "dtypeStr": "C",
+      "name": "stress_tensor_method_sc",
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation",
+        "stress_tensor_setting_sc"
+      ]
+    }, {
+      "description": "Method used to calculate the stress_tensor (numeric or analytic)",
+      "dtypeStr": "C",
+      "name": "stress_tensor_method",
+      "shape": [],
+      "superNames": [
+        "section_single_point_evaluation",
+        "stress_tensor_setting"
+      ]
+    }, {
+      "description": "A final value of the default stress tensor of energy_total_sc calculated with stress_tensor_setting_sc",
       "dtypeStr": "f",
       "name": "stress_tensor_sc",
       "shape": [
@@ -1753,6 +1806,20 @@
       ],
       "units": "Pa"
     }, {
+      "description": "Setting to calculate stress_tensor_sc",
+      "kindStr": "type_abstract_document_content",
+      "name": "stress_tensor_setting_sc",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "Setting to calculate stress_tensor",
+      "kindStr": "type_abstract_document_content",
+      "name": "stress_tensor_setting",
+      "superNames": [
+        "section_single_point_evaluation"
+      ]
+    }, {
       "description": "A final value of a stress tensor",
       "kindStr": "type_abstract_document_content",
       "name": "stress_tensor_type",
@@ -1764,7 +1831,7 @@
         "section_run"
       ]
     }, {
-      "description": "A final value of the default stress tensor calculated with XC_method",
+      "description": "A final value of the default stress tensor of energy_total calculated with stress_tensor_setting",
       "dtypeStr": "f",
       "name": "stress_tensor",
       "shape": [
