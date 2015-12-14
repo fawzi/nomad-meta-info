@@ -23,6 +23,129 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "Forces on the atoms as minus gradient of energy_free_scf.",
+      "dtypeStr": "f",
+      "name": "atom_forces_free_scf",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_free.",
+      "dtypeStr": "f",
+      "name": "atom_forces_free",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total_scf.",
+      "dtypeStr": "f",
+      "name": "atom_forces_scf",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total_T0_scf.",
+      "dtypeStr": "f",
+      "name": "atom_forces_T0_scf",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total_T0.",
+      "dtypeStr": "f",
+      "name": "atom_forces_T0",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Some forces on the atoms (i.e. minus derivatives of some energy with respect to the atom position).",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "atom_forces_type",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "section_single_point_evaluation"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total.",
+      "dtypeStr": "f",
+      "name": "atom_forces",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Number of atoms of this kind",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "atom_kind_natoms",
+      "shape": [],
+      "superNames": [
+        "section_atom_kind"
+      ]
+    }, {
+      "description": "Total number of atoms",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "atom_number",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Positions of the atoms (this defines a configuration and is required).",
+      "dtypeStr": "f",
+      "name": "atom_position",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
+    }, {
       "description": "k band energies",
       "dtypeStr": "f",
       "name": "band_energies",
@@ -1273,129 +1396,6 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free_scf.",
-      "dtypeStr": "f",
-      "name": "atom_forces_free_scf",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "atom_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the atoms as minus gradient of energy_free.",
-      "dtypeStr": "f",
-      "name": "atom_forces_free",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "atom_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_scf.",
-      "dtypeStr": "f",
-      "name": "atom_forces_scf",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "atom_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0_scf.",
-      "dtypeStr": "f",
-      "name": "atom_forces_T0_scf",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "atom_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0.",
-      "dtypeStr": "f",
-      "name": "atom_forces_T0",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "atom_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Some forces on the atoms (i.e. minus derivatives of some energy with respect to the atom position).",
-      "dtypeStr": "f",
-      "kindStr": "type_abstract_document_content",
-      "name": "atom_forces_type",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "section_single_point_evaluation"
-      ],
-      "units": "N"
-    }, {
-      "description": "Forces on the atoms as minus gradient of energy_total.",
-      "dtypeStr": "f",
-      "name": "atom_forces",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "atom_forces_type"
-      ],
-      "units": "N"
-    }, {
-      "description": "Number of atoms of this kind",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "atom_kind_natoms",
-      "shape": [],
-      "superNames": [
-        "section_atom_kind"
-      ]
-    }, {
-      "description": "Total number of atoms",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "atom_number",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "Positions of the atoms (this defines a configuration and is required).",
-      "dtypeStr": "f",
-      "name": "atom_position",
-      "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "configuration_core"
-      ],
-      "units": "m"
-    }, {
       "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post HF method has been used.",
       "dtypeStr": "C",
       "name": "post_HF_method",
@@ -1485,6 +1485,34 @@
       "shape": [],
       "superNames": [
         "section_single_point_evaluation"
+      ]
+    }, {
+      "description": "Every section_atom_kind_ref refers to a section_atom_kind by using the same unique string.",
+      "kindStr": "type_section",
+      "name": "section_atom_kind_ref",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Every section_atom_kind contains information about a different kind of atom, and is identified by a unique string.",
+      "kindStr": "type_section",
+      "name": "section_atom_kind",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Every section_atom_ref refers to a section_atom by its index within the atom kind.",
+      "kindStr": "type_section",
+      "name": "section_atom_ref",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Every section_atom represents a atom (atom, ghost,...).",
+      "kindStr": "type_section",
+      "name": "section_atom",
+      "superNames": [
+        "section_atom_kind"
       ]
     }, {
       "description": "Atom centered part of the basis (assignement atom -> basis)",
@@ -1585,34 +1613,6 @@
         "section_run"
       ]
     }, {
-      "description": "Every section_atom_kind_ref refers to a section_atom_kind by using the same unique string.",
-      "kindStr": "type_section",
-      "name": "section_atom_kind_ref",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Every section_atom_kind contains information about a different kind of atom, and is identified by a unique string.",
-      "kindStr": "type_section",
-      "name": "section_atom_kind",
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "Every section_atom_ref refers to a section_atom by its index within the atom kind.",
-      "kindStr": "type_section",
-      "name": "section_atom_ref",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Every section_atom represents a atom (atom, ghost,...).",
-      "kindStr": "type_section",
-      "name": "section_atom",
-      "superNames": [
-        "section_atom_kind"
-      ]
-    }, {
       "description": "Every section_run represents a single call of a program. What exactly is contained in a run depends on the run type and the program.",
       "kindStr": "type_section",
       "name": "section_run",
@@ -1641,6 +1641,13 @@
       "name": "section_system_description",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "parameters of one atom kind",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_atom_kind",
+      "superNames": [
+        "settings_single_point_method"
       ]
     }, {
       "description": "Coupled Clusters method parameters",
@@ -1684,13 +1691,6 @@
       "name": "settings_MR",
       "superNames": [
         "settings_post_HF"
-      ]
-    }, {
-      "description": "parameters of one atom kind",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_atom_kind",
-      "superNames": [
-        "settings_single_point_method"
       ]
     }, {
       "description": "Post hartree fock method parameters",
