@@ -1643,6 +1643,18 @@
         "section_run"
       ]
     }, {
+      "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction_scf).",
+      "name": "self_interaction_correction_scf",
+      "superNames": [
+        "settings_self_interaction_correction"
+      ]
+    }, {
+      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction).",
+      "name": "self_interaction_correction",
+      "superNames": [
+        "settings_self_interaction_correction"
+      ]
+    }, {
       "description": "parameters of one atom kind",
       "kindStr": "type_abstract_document_content",
       "name": "settings_atom_kind",
@@ -1760,18 +1772,6 @@
       "name": "settings_XC",
       "superNames": [
         "settings_single_point_method"
-      ]
-    }, {
-      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction).",
-      "name": "self_interaction_correction",
-      "superNames": [
-        "settings_self_interaction_correction"
-      ]
-    }, {
-      "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction_scf).",
-      "name": "self_interaction_correction_scf",
-      "superNames": [
-        "settings_self_interaction_correction"
       ]
     }, {
       "description": "References to the source of the data (uri,...)",
