@@ -701,7 +701,7 @@
     }, {
       "description": "Scaled (depending on the mix paramenter of the functional) exact exchange energy",
       "dtypeStr": "f",
-      "name": "energy_HF_X_scaled",
+      "name": "energy_hartree_fock_X_scaled",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -711,7 +711,7 @@
     }, {
       "description": "Converged exact exchange energy (not scaled)",
       "dtypeStr": "f",
-      "name": "energy_HF_X",
+      "name": "energy_hartree_fock_X",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1396,13 +1396,13 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post HF method has been used.",
+      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post hartree_fock method has been used.",
       "dtypeStr": "C",
-      "name": "post_HF_method",
+      "name": "post_hartree_fock_method",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_post_HF"
+        "settings_post_hartree_fock"
       ]
     }, {
       "description": "Program compilation date and time as seconds from unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
@@ -1652,23 +1652,23 @@
     }, {
       "description": "Coupled Clusters method parameters",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_CC",
+      "name": "settings_coupled_cluster",
       "superNames": [
-        "settings_post_HF"
+        "settings_post_hartree_fock"
       ]
     }, {
       "description": "GW method parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_GW",
       "superNames": [
-        "settings_post_HF"
+        "settings_post_hartree_fock"
       ]
     }, {
       "description": "Multi-configurational self-consistent field method parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_MCSCF",
       "superNames": [
-        "settings_post_HF"
+        "settings_post_hartree_fock"
       ]
     }, {
       "description": "Parameters that control the simulation and are in the method section",
@@ -1679,23 +1679,23 @@
         "section_method"
       ]
     }, {
-      "description": "Møller–Plesset method parameters",
+      "description": "Møller–Plesset perturbation theory parameters",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_MP",
+      "name": "settings_moller_plesset_perturbation_theory",
       "superNames": [
-        "settings_post_HF"
+        "settings_post_hartree_fock"
       ]
     }, {
       "description": "Multireference single and double configuration interaction method parameters",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_MR",
+      "name": "settings_multi_reference",
       "superNames": [
-        "settings_post_HF"
+        "settings_post_hartree_fock"
       ]
     }, {
       "description": "Post hartree fock method parameters",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_post_HF",
+      "name": "settings_post_hartree_fock",
       "superNames": [
         "settings_XC_functional"
       ]
@@ -1709,7 +1709,7 @@
     }, {
       "description": "Parameters and information connected with self interaction correction (SIC) method used",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_SIC",
+      "name": "settings_self_interaction_correction",
       "superNames": [
         "settings_XC"
       ]
@@ -1762,16 +1762,16 @@
         "settings_single_point_method"
       ]
     }, {
-      "description": "Short string for the self interaction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [SIC wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/SIC).",
-      "name": "SIC",
+      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction).",
+      "name": "self_interaction_correction",
       "superNames": [
-        "settings_SIC"
+        "settings_self_interaction_correction"
       ]
     }, {
-      "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [SIC_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/SIC_scf).",
-      "name": "SIC_scf",
+      "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction_scf).",
+      "name": "self_interaction_correction_scf",
       "superNames": [
-        "settings_SIC"
+        "settings_self_interaction_correction"
       ]
     }, {
       "description": "References to the source of the data (uri,...)",
@@ -2092,7 +2092,7 @@
         "settings_XC_functional_scf"
       ]
     }, {
-      "description": "Exchange correlation (XC) method used for the final energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: postHF_method '_' XC_functional '_' SIC '_' van_der_Waals '_' relativity_treatment '@' XC_method_scf. With empty strings the connecting character is skipped.",
+      "description": "Exchange correlation (XC) method used for the final energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction '_' van_der_Waals '_' relativity_treatment '@' XC_method_scf. With empty strings the connecting character is skipped.",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
@@ -2101,7 +2101,7 @@
         "settings_XC"
       ]
     }, {
-      "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_scf '_' SIC_scf '_' van_der_Waals_scf '_' relativity_treatment_scf. For empty strings the connecting character is skipped.",
+      "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_scf '_' self_iteraction_correction_scf '_' van_der_Waals_scf '_' relativity_treatment_scf. For empty strings the connecting character is skipped.",
       "dtypeStr": "C",
       "name": "XC_method_scf",
       "repeats": false,
