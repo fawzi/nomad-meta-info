@@ -7,6 +7,23 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "Single eigenvalue",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_eigenvalue",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list"
+      ],
+      "units": "J"
+    }, {
+      "description": "Occupation of single eigenfunction",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_occupation",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list"
+      ]
+    }, {
       "description": "Electrostatic energy contributions from superposition of free atom densities during the scf iterations",
       "dtypeStr": "f",
       "name": "fhi_aims_energy_electrostatic_free_atom_scf_iteration",
@@ -87,6 +104,13 @@
       "shape": [],
       "superNames": [
         "time_info_scf_iteration"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_eigenvalues_list",
+      "superNames": [
+        "section_eigenvalues"
       ]
     }, {
       "description": "-",
