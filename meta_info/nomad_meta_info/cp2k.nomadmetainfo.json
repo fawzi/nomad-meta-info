@@ -1,0 +1,34 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "Metainfo used by the CP2K parser, all names are expected to start with cp2k",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "cp2k_run_start_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "cp2k_run_start_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "cp2k_svn_revision",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }]
+}
