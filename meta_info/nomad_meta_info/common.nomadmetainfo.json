@@ -6,7 +6,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "accessory_info_evaluation",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Information on the run which *in theory* should have no influence on the results",
@@ -98,7 +98,7 @@
         3
       ],
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ],
       "units": "N"
     }, {
@@ -326,7 +326,7 @@
       "name": "basis",
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
@@ -530,7 +530,7 @@
       "shape": [],
       "superNames": [
         "energy",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "An energy component of the non final, non converged energy, expected to be an extensive property",
@@ -548,7 +548,7 @@
       "shape": [],
       "superNames": [
         "energy",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Value during the SCF cycle.",
@@ -1105,7 +1105,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Some estimate of a quantity contributing to the error of the final values",
@@ -1114,7 +1114,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Some estimate of the error on the converged (final) value",
@@ -1159,7 +1159,7 @@
       "name": "message_debug_evaluation",
       "superNames": [
         "message_debug",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "A debugging message of the computational program, associated with a run",
@@ -1181,7 +1181,7 @@
       "name": "message_error_evaluation",
       "superNames": [
         "message_error",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "An error message of the computational program, associated with a run",
@@ -1205,7 +1205,7 @@
       "name": "message_info_evaluation",
       "superNames": [
         "message_info",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "An information message of the computational program, associated with a run",
@@ -1229,7 +1229,7 @@
       "name": "message_warning_evaluation",
       "superNames": [
         "message_warning",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "A warning message of the computational program, associated with a run",
@@ -1307,7 +1307,7 @@
       "name": "parsing_message_debug_evaluation",
       "superNames": [
         "parsing_message_debug",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "A debugging message of the parsing program, associated with a run",
@@ -1329,7 +1329,7 @@
       "name": "parsing_message_error_evaluation",
       "superNames": [
         "parsing_message_error",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "An error message of the parsing program, associated with a run",
@@ -1353,7 +1353,7 @@
       "name": "parsing_message_info_evaluation",
       "superNames": [
         "parsing_message_info",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "An information message of the parsing program, associated with a run",
@@ -1377,7 +1377,7 @@
       "name": "parsing_message_warning_evaluation",
       "superNames": [
         "parsing_message_warning",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "A warning message of the parsing program, associated with a run",
@@ -1484,7 +1484,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Every section_atom_kind_ref refers to a section_atom_kind by using the same unique string.",
@@ -1520,8 +1520,8 @@
       "name": "section_basis_atom_centered",
       "superNames": [
         "section_basis",
-        "section_basis_set_atom_centered",
-        "section_atom"
+        "section_atom",
+        "section_basis_set_atom_centered"
       ]
     }, {
       "description": "Description of one or a sub group of basis function in this basis set",
@@ -1566,14 +1566,14 @@
       "kindStr": "type_section",
       "name": "section_basis",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "groups eigenvalues of different spins",
       "kindStr": "type_section",
       "name": "section_eigenvalues_group",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "eigenvalues of some energy for one spin channel",
@@ -1588,14 +1588,14 @@
       "name": "section_energy_van_der_Waals",
       "repeats": true,
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section to keep extra stress tensors that have been calculated",
       "kindStr": "type_section",
       "name": "section_extra_stress_tensor",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "section collecting the information on a k band evaluation",
@@ -1625,12 +1625,12 @@
       "shape": [],
       "superNames": [
         "scf_info",
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_single_point_evaluation section contains the values computated or evaluated during a single point evaluation.",
+      "description": "Every section_single_configuration_calculation section contains the values computated or evaluated during a single point evaluation.",
       "kindStr": "type_section",
-      "name": "section_single_point_evaluation",
+      "name": "section_single_configuration_calculation",
       "superNames": [
         "section_method",
         "section_system_description"
@@ -1659,7 +1659,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_atom_kind",
       "superNames": [
-        "settings_single_point_method"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Coupled Clusters method parameters",
@@ -1733,7 +1733,7 @@
     }, {
       "description": "Method parameters that control single point evaluation. This covers things like the theory level, but not the temperature of an molecular dynamics.",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_single_point_method",
+      "name": "settings_single_configuration_method",
       "superNames": [
         "settings_simulation",
         "section_method"
@@ -1764,14 +1764,14 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC_scf",
       "superNames": [
-        "settings_single_point_method"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Parameters connected with defining the exchange correlation (XC) treatment for the final energy and related quantities",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
       "superNames": [
-        "settings_single_point_method"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "References to the source of the data (uri,...)",
@@ -1787,7 +1787,7 @@
       "name": "stress_tensor_method_scf",
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation",
+        "section_single_configuration_calculation",
         "stress_tensor_setting_scf"
       ]
     }, {
@@ -1796,7 +1796,7 @@
       "name": "stress_tensor_method",
       "shape": [],
       "superNames": [
-        "section_single_point_evaluation",
+        "section_single_configuration_calculation",
         "stress_tensor_setting"
       ]
     }, {
@@ -1808,7 +1808,7 @@
         3
       ],
       "superNames": [
-        "section_single_point_evaluation",
+        "section_single_configuration_calculation",
         "stress_tensor_type"
       ],
       "units": "Pa"
@@ -1817,14 +1817,14 @@
       "kindStr": "type_abstract_document_content",
       "name": "stress_tensor_setting_scf",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Setting to calculate stress_tensor",
       "kindStr": "type_abstract_document_content",
       "name": "stress_tensor_setting",
       "superNames": [
-        "section_single_point_evaluation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "A final value of a stress tensor",
@@ -1846,7 +1846,7 @@
         3
       ],
       "superNames": [
-        "section_single_point_evaluation",
+        "section_single_configuration_calculation",
         "stress_tensor_type"
       ],
       "units": "Pa"
