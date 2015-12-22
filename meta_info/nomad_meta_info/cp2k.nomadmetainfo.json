@@ -30,5 +30,82 @@
       "superNames": [
         "section_run"
       ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "cp2k_section_cell",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "cp2k_section_atom_position",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "cp2k_cell_vector_a",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "cp2k_cell_vector_b",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "cp2k_cell_vector_c",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "cp2k_section_numbers",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "cp2k_shell_sets",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_numbers"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "cp2k_atom_number",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_numbers"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "cp2k_section_functionals",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "repeats": true,
+      "name": "cp2k_functional_name",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_functionals"
+      ]
     }]
 }
