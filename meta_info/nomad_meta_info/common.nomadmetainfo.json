@@ -2,7 +2,7 @@
   "type": "nomad_meta_info_1_0",
   "description": "common meta info, not specific to any code",
   "metaInfos": [ {
-      "description": "Information on a single point evaluation which *in theory* should have no influence on the results",
+      "description": "Information on a single configuration calculation which *in theory* should have no influence on the results",
       "kindStr": "type_abstract_document_content",
       "name": "accessory_info_evaluation",
       "superNames": [
@@ -23,9 +23,9 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free_scf.",
+      "description": "Forces on the atoms as minus gradient of energy_free_scf_converged.",
       "dtypeStr": "f",
-      "name": "atom_forces_free_scf",
+      "name": "atom_forces_free_scf_converged",
       "repeats": true,
       "shape": [
         "atom_number",
@@ -36,9 +36,9 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free.",
+      "description": "Forces on the atoms as minus gradient of energy_free_perturbative.",
       "dtypeStr": "f",
-      "name": "atom_forces_free",
+      "name": "atom_forces_free_perturbative",
       "repeats": true,
       "shape": [
         "atom_number",
@@ -49,9 +49,9 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_scf.",
+      "description": "Forces on the atoms as minus gradient of energy_total_scf_converged.",
       "dtypeStr": "f",
-      "name": "atom_forces_scf",
+      "name": "atom_forces_scf_converged",
       "repeats": true,
       "shape": [
         "atom_number",
@@ -62,9 +62,9 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0_scf.",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0_scf_converged.",
       "dtypeStr": "f",
-      "name": "atom_forces_T0_scf",
+      "name": "atom_forces_T0_scf_converged",
       "repeats": true,
       "shape": [
         "atom_number",
@@ -75,9 +75,9 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0.",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0_perturbative.",
       "dtypeStr": "f",
-      "name": "atom_forces_T0",
+      "name": "atom_forces_T0_perturbative",
       "repeats": true,
       "shape": [
         "atom_number",
@@ -93,18 +93,14 @@
       "kindStr": "type_abstract_document_content",
       "name": "atom_forces_type",
       "repeats": true,
-      "shape": [
-        "atom_number",
-        3
-      ],
       "superNames": [
         "section_single_configuration_calculation"
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total.",
+      "description": "Forces on the atoms as minus gradient of energy_total_perturbative.",
       "dtypeStr": "f",
-      "name": "atom_forces",
+      "name": "atom_forces_perturbative",
       "repeats": true,
       "shape": [
         "atom_number",
@@ -171,7 +167,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "occupation of the band",
+      "description": "Occupation of the k-point along the band",
       "dtypeStr": "f",
       "name": "band_occupation",
       "shape": [
@@ -195,7 +191,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Coordinates of the start and end point of the segments one samples in the k space",
+      "description": "Coordinates of the start and end point of the segments sampled in the k-space",
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [
@@ -207,25 +203,25 @@
         "section_k_band"
       ]
     }, {
-      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_kind).",
+      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_set_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_kind).",
       "dtypeStr": "C",
-      "name": "basis_kind",
+      "name": "basis_set_kind",
       "shape": [],
       "superNames": [
-        "section_basis"
+        "section_basis_set"
       ]
     }, {
-      "description": "String identifying the basis set in an unique way. The values are described in the [basis_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_name).",
+      "description": "String identifying the basis set in an unique way. The values are described in the [basis_set_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_name).",
       "dtypeStr": "C",
-      "name": "basis_name",
+      "name": "basis_set_name",
       "shape": [],
       "superNames": [
-        "section_basis"
+        "section_basis_set"
       ]
     }, {
-      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis_set_atom_centered_base_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_base_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis_set_atom_centered_base_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_short_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
-      "name": "basis_set_atom_centered_base_name",
+      "name": "basis_set_atom_centered_short_name",
       "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
@@ -241,9 +237,9 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_base_name and if not equal to the default basis implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis_set_atom_centered_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_short_name and if not equal to the default basis set implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis_set_atom_centered_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_atom_centered_unique_name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
-      "name": "basis_set_atom_centered_name",
+      "name": "basis_set_atom_centered_unique_name",
       "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
@@ -267,7 +263,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Radial function of the different basis function kinds, the 5 values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\\frac{d}{dr}(f(r)*r)$ and are given by default on an equispaced grid from 0 to 40 $fm$",
+      "description": "Radial function of the different basis function kinds, the 5 values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\\frac{d}{dr}(f(r)*r)$ and are given by default on an equispaced grid from 0 to 4 $nm$",
       "dtypeStr": "f",
       "name": "basis_set_atom_centered_radial_functions",
       "shape": [
@@ -279,7 +275,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "atom number of kind of atom this basis set is thought for (0 meand unspcified, or a pseudo atom)",
+      "description": "atom number of kind of atom this basis set is thought for (0 means unspecified, or a pseudo atom)",
       "dtypeStr": "i",
       "name": "basis_set_atom_kind_number",
       "shape": [],
@@ -294,36 +290,36 @@
         "section_method"
       ]
     }, {
-      "description": "A global basis set type, string should be as defined in the [basis_set_global_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_global_kind).",
+      "description": "A cell_associated basis set type, string should be as defined in the [basis_set_cell_associated_kind wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_cell_associated_kind).",
       "dtypeStr": "C",
-      "name": "basis_set_global_kind",
+      "name": "basis_set_cell_associated_kind",
       "repeat": false,
       "shape": [],
       "superNames": [
-        "section_basis_set_global"
+        "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A descriptive name identifying the basis set be as defined in the [basis_set_global_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_global_name).",
+      "description": "A descriptive name identifying the basis set be as defined in the [basis_set_cell_associated_name wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set_cell_associated_name).",
       "dtypeStr": "C",
-      "name": "basis_set_global_name",
+      "name": "basis_set_cell_associated_name",
       "repeat": false,
       "shape": [],
       "superNames": [
-        "section_basis_set_global"
+        "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "Spherical cutoff for a plane wave basis in reciprocal space, as energy of the highest plane wave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
+      "description": "Spherical cutoff for a plane wave basis set in reciprocal space, as energy of the highest plane wave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
       "dtypeStr": "f",
       "name": "basis_set_plan_wave_cutoff",
       "shape": [],
       "superNames": [
-        "section_basis_set_global"
+        "section_basis_set_cell_associated"
       ],
       "units": "J"
     }, {
-      "description": "String identifying the basis used for the wavefunctions in an unique way. The values are described in the [basis wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis).",
+      "description": "String identifying the basis set used for the wavefunctions in an unique way. The values are described in the [basis_set wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/basis_set).",
       "dtypeStr": "C",
-      "name": "basis",
+      "name": "basis_set",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -350,7 +346,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Which of the basis vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
+      "description": "Which of the lattice vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
       "dtypeStr": "b",
       "name": "configuration_periodic_dimensions",
       "repeats": true,
@@ -359,14 +355,14 @@
         "configuration_core"
       ]
     }, {
-      "description": "A quantity that is preserved by the evolution (for example kinetic+potential energy during NVE",
+      "description": "A quantity that is preserved during the time propagation (for example, kinetic+potential energy during NVE)",
       "kindStr": "type_abstract_document_content",
       "name": "conserved_quantity",
       "repeats": false,
       "shape": [],
       "superNames": []
     }, {
-      "description": "number of eigenvalues",
+      "description": "Number of eigenvalues",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "eigenvalues_eigenvalues_number",
@@ -375,7 +371,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Eigenvalues",
+      "description": "Values of the eigenvalues",
       "dtypeStr": "f",
       "name": "eigenvalues_eigenvalues",
       "shape": [
@@ -425,7 +421,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Electronic kinetic energy during the scf iterations",
+      "description": "Electronic kinetic energy at a single scf iteration",
       "dtypeStr": "f",
       "name": "electronic_kinetic_energy_scf_iteration",
       "repeats": false,
@@ -445,13 +441,13 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy minus the energy of the same number of isolated atoms calculated with the same method (functional,...), basisset and accuracy.",
+      "description": "Total energy minus the energy of the same number of isolated atoms calculated with the same method (functional,...), basis set and accuracy.",
       "name": "energy_atomization_method_consistent",
       "superNames": [
         "energy_total_potential"
       ]
     }, {
-      "description": "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target functional.",
+      "description": "Component of the correlation (C) energy at the LDA level calculated with the self-consistent density of the target functional.",
       "dtypeStr": "f",
       "name": "energy_C_LDA",
       "repeats": false,
@@ -461,7 +457,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
+      "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self-consistent density of the target functional (no exact exchange mixin, full unscaled value)",
       "dtypeStr": "f",
       "name": "energy_C_mGGA",
       "repeats": false,
@@ -473,7 +469,7 @@
     }, {
       "description": "Converged correlation (C) energy using XC_functional_scf",
       "dtypeStr": "f",
-      "name": "energy_C_scf",
+      "name": "energy_C_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -481,9 +477,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged correlation (C) energy using XC_functional",
+      "description": "Correlation (C) energy using XC_functional_perturbative",
       "dtypeStr": "f",
-      "name": "energy_C",
+      "name": "energy_C_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -491,7 +487,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Change of total energy with respect to the previous scf iteration",
+      "description": "At each scf iteration, change of total energy with respect to the previous scf iteration",
       "dtypeStr": "f",
       "name": "energy_change_scf_iteration",
       "repeats": false,
@@ -502,13 +498,13 @@
       ],
       "units": "J"
     }, {
-      "description": "First version of the fit of the total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
+      "description": "First version of the fit of the total energy minus the an atom dependent contibution that depends on method, periodicity, basis set and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
       "name": "energy_comparable_fitted_v1",
       "superNames": [
         "energy_comparable_fitted"
       ]
     }, {
-      "description": "Total energy minus the an atom dependent contibution that depends on method, periodicity, basisset and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
+      "description": "Total energy minus an atom dependent contibution that depends on method, periodicity, basis set and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_comparable_fitted",
       "superNames": [
@@ -621,7 +617,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy minus the same number of atomic energies of the most stable form of the element calculated with the same method (functional,...), basisset and accuracy.",
+      "description": "Total energy minus the same number of atomic energies of the most stable form of the element calculated with the same method (functional,...), basis set and accuracy.",
       "name": "energy_formation_method_consistent",
       "superNames": [
         "energy_total_potential"
@@ -639,7 +635,7 @@
     }, {
       "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_scf per atom ",
       "dtypeStr": "f",
-      "name": "energy_free_per_atom_scf",
+      "name": "energy_free_per_atom_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -659,7 +655,7 @@
     }, {
       "description": "Free energy (whose minimum gives the smeared occupation for the density) calculated with XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_free_scf",
+      "name": "energy_free_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -667,9 +663,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method",
+      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method_perturbative",
       "dtypeStr": "f",
-      "name": "energy_free",
+      "name": "energy_free_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -683,7 +679,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial",
+        "error_estimate_partial_scf_iteration",
         "energy"
       ],
       "units": "J"
@@ -694,7 +690,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial",
+        "error_estimate_partial_scf_converged",
         "energy"
       ],
       "units": "J"
@@ -731,7 +727,7 @@
     }, {
       "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_scf per atom",
       "dtypeStr": "f",
-      "name": "energy_sum_eigenvalues_per_atom",
+      "name": "energy_sum_eigenvalues_per_atom_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -751,7 +747,7 @@
     }, {
       "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_sum_eigenvalues_scf",
+      "name": "energy_sum_eigenvalues_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -759,9 +755,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy using XC_method per atom extapolated for T=0",
+      "description": "Total energy using XC_method_perturbative per atom extapolated for T=0",
       "dtypeStr": "f",
-      "name": "energy_T0_per_atom",
+      "name": "energy_T0_per_atom_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -769,6 +765,16 @@
       ],
       "units": "J"
     }, {
+      "description": "Total energy using XC_method_scf per atom extapolated for T=0",
+      "dtypeStr": "f",
+      "name": "energy_T0_per_atom_scf",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential_per_atom"
+      ],
+      "units": "J"
+    },{
       "description": "Converged total MP2 energy (XC_method_scf + MP2 correction)",
       "dtypeStr": "f",
       "name": "energy_total_MP2",
@@ -821,8 +827,10 @@
       ]
     }, {
       "description": "A total (final, converged) energy calculated with XC_method_scf",
-      "name": "energy_total_scf",
+      "name": "energy_total_scf_converged",
       "repeats": false,
+      "dtypeStr": "f",
+      "units": "J",
       "shape": [],
       "superNames": [
         "energy_total_potential"
@@ -840,7 +848,7 @@
     }, {
       "description": "Total energy using XC_method_scf per atom extapolated for T=0",
       "dtypeStr": "f",
-      "name": "energy_total_T0_per_atom_scf",
+      "name": "energy_total_T0_per_atom_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -860,7 +868,7 @@
     }, {
       "description": "Total energy (or equivalently free energy) calculated with XC_method_scf extrapolated for T=0 (for metals)",
       "dtypeStr": "f",
-      "name": "energy_total_T0_scf",
+      "name": "energy_total_T0_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -868,9 +876,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (or equivalently free energy), electronic + ions, calculated with the method described in XC_method and extrapolated for T=0 (for metals)",
+      "description": "Total energy (or equivalently free energy), electronic + ions, calculated with the method described in XC_method_perturbative and extrapolated for T=0 (for metals)",
       "dtypeStr": "f",
-      "name": "energy_total_T0",
+      "name": "energy_total_T0_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -878,9 +886,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (electronic + ions) calculated with the method described in XC_method",
+      "description": "Total energy (electronic + ions) calculated with the method described in XC_method_perturbative",
       "dtypeStr": "f",
-      "name": "energy_total",
+      "name": "energy_total_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -975,7 +983,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
+      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixing, full unscaled value)",
       "dtypeStr": "f",
       "name": "energy_X_mGGA",
       "repeats": false,
@@ -987,7 +995,7 @@
     }, {
       "description": "Converged exchange (X) energy using XC_functional_scf",
       "dtypeStr": "f",
-      "name": "energy_X_scf",
+      "name": "energy_X_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1036,7 +1044,7 @@
     }, {
       "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of XC_functional_scf, integral v_xc*electron_density, i.e. the component of XC that is in the sum of the eigenvalues. Typically DFT only. Value associated with the configuration, should be the most converged value.",
       "dtypeStr": "f",
-      "name": "energy_XC_potential_scf",
+      "name": "energy_XC_potential_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1056,7 +1064,7 @@
     }, {
       "description": "Final exchange correlation (XC) energy calculated with XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_XC_scf",
+      "name": "energy_XC_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1064,9 +1072,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Final exchange correlation (XC) energy calculated with XC_functional",
+      "description": "Exchange correlation (XC) energy calculated with XC_functional_perturbative",
       "dtypeStr": "f",
-      "name": "energy_XC",
+      "name": "energy_XC_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1074,9 +1082,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged exchange (X) energy using XC_functional",
+      "description": "Exchange (X) energy using XC_functional_perturbative",
       "dtypeStr": "f",
-      "name": "energy_X",
+      "name": "energy_X_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1101,16 +1109,16 @@
     }, {
       "description": "Some estimate of a quantity contributing to the error of the final values at self consistency level",
       "kindStr": "type_abstract_document_content",
-      "name": "error_estimate_partial_scf",
+      "name": "error_estimate_partial_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Some estimate of a quantity contributing to the error of the final values",
+      "description": "Some estimate of a quantity contributing to the error of the perturbative values",
       "kindStr": "type_abstract_document_content",
-      "name": "error_estimate_partial",
+      "name": "error_estimate_partial_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1123,7 +1131,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial"
+        "error_estimate_partial_perturbative"
       ]
     }, {
       "description": "Method used to calculate the extra_stress_tensor (numeric or analytic)",
@@ -1154,7 +1162,7 @@
       ],
       "units": "Pa"
     }, {
-      "description": "A debugging message of the computational program, associated with a single point evaluation",
+      "description": "A debugging message of the computational program, associated with a single configuration calculation",
       "dtypeStr": "C",
       "name": "message_debug_evaluation",
       "superNames": [
@@ -1176,7 +1184,7 @@
       "name": "message_debug",
       "superNames": []
     }, {
-      "description": "An error message of the computational program, associated with a single point evaluation",
+      "description": "An error message of the computational program, associated with a single configuration calculation",
       "dtypeStr": "C",
       "name": "message_error_evaluation",
       "superNames": [
@@ -1200,7 +1208,7 @@
         "message_warning"
       ]
     }, {
-      "description": "An information message of the computational program, associated with a a single point evaluation",
+      "description": "An information message of the computational program, associated with a a single configuration calculation",
       "dtypeStr": "C",
       "name": "message_info_evaluation",
       "superNames": [
@@ -1302,7 +1310,7 @@
         "accessory_info_run"
       ]
     }, {
-      "description": "A debugging message of the parsing program, associated with a single point evaluation",
+      "description": "A debugging message of the parsing program, associated with a single configuration calculation",
       "dtypeStr": "C",
       "name": "parsing_message_debug_evaluation",
       "superNames": [
@@ -1324,7 +1332,7 @@
       "name": "parsing_message_debug",
       "superNames": []
     }, {
-      "description": "An error message of the parsing program, associated with a single point evaluation",
+      "description": "An error message of the parsing program, associated with a single configuration calculation",
       "dtypeStr": "C",
       "name": "parsing_message_error_evaluation",
       "superNames": [
@@ -1348,7 +1356,7 @@
         "parsing_message_warning"
       ]
     }, {
-      "description": "An information message of the parsing program, associated with a a single point evaluation",
+      "description": "An information message of the parsing program, associated with a a single configuration calculation",
       "dtypeStr": "C",
       "name": "parsing_message_info_evaluation",
       "superNames": [
@@ -1452,13 +1460,15 @@
       "description": "Short string describing the relativity treatment used during the self consitency cycle (and thus valid for the self consistent density. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment_scf).",
       "name": "relativity_treatment_scf",
       "superNames": [
-        "settings_relativity_treatment"
+        "settings_relativity_treatment",
+        "settings_scf_method"
       ]
     }, {
-      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment).",
-      "name": "relativity_treatment",
+      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment_perturbative wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/relativity_treatment_perturbative).",
+      "name": "relativity_treatment_perturbative",
       "superNames": [
-        "settings_relativity_treatment"
+        "settings_relativity_treatment",
+        "settings_perturbative_method"
       ]
     }, {
       "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
@@ -1508,18 +1518,18 @@
         "section_method"
       ]
     }, {
-      "description": "Every section_atom represents a atom (atom, ghost,...).",
+      "description": "Every section_atom represents an atom (atom, ghost,...).",
       "kindStr": "type_section",
       "name": "section_atom",
       "superNames": [
         "section_atom_kind"
       ]
     }, {
-      "description": "Atom centered part of the basis (assignement atom -> basis)",
+      "description": "Atom centered part of the basis set (assignement atom -> basis set)",
       "kindStr": "type_section",
-      "name": "section_basis_atom_centered",
+      "name": "section_basis_set_atom_centered_mapping",
       "superNames": [
-        "section_basis",
+        "section_basis_set",
         "section_atom",
         "section_basis_set_atom_centered"
       ]
@@ -1531,12 +1541,12 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Global part of the basis",
+      "description": "Global, i.e. non atom specific (non atom-centered), part of the basis set",
       "kindStr": "type_section",
-      "name": "section_basis_global",
+      "name": "section_basis_set_cell_associated_mapping",
       "superNames": [
-        "section_basis",
-        "section_basis_set_global"
+        "section_basis_set",
+        "section_basis_set_cell_associated"
       ]
     }, {
       "description": "Total number of basis functions (some might need complex coefficients).",
@@ -1545,7 +1555,7 @@
       "name": "section_basis_nbasis_functions",
       "shape": [],
       "superNames": [
-        "section_basis"
+        "section_basis_set"
       ]
     }, {
       "description": "An atom centered basis set",
@@ -1555,16 +1565,16 @@
         "basis_set_description"
       ]
     }, {
-      "description": "A global (atom independent) basis set",
+      "description": "A cell_associated (atom independent) basis set",
       "kindStr": "type_section",
-      "name": "section_basis_set_global",
+      "name": "section_basis_set_cell_associated",
       "superNames": [
         "basis_set_description"
       ]
     }, {
       "description": "Represents a concrete basis set instatiated with parameters given in the section_method for the system section_system_description.",
       "kindStr": "type_section",
-      "name": "section_basis",
+      "name": "section_basis_set",
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1628,7 +1638,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_single_configuration_calculation section contains the values computated or evaluated during a single point evaluation.",
+      "description": "Every section_single_configuration_calculation section contains the values computated or evaluated during a single configuration calculation.",
       "kindStr": "type_section",
       "name": "section_single_configuration_calculation",
       "superNames": [
@@ -1646,13 +1656,15 @@
       "description": "Short string for the self interaction (SIC) treatment used during the self consistency cicle (and thus valid for the self consitent density). No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction_scf).",
       "name": "self_interaction_correction_scf",
       "superNames": [
-        "settings_self_interaction_correction"
+        "settings_self_interaction_correction",
+        "settings_scf_method"
       ]
     }, {
-      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction).",
-      "name": "self_interaction_correction",
+      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self_interaction_correction_perturbative wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/self_interaction_correction_perturbative).",
+      "name": "self_interaction_correction_perturbative",
       "superNames": [
-        "settings_self_interaction_correction"
+        "settings_self_interaction_correction",
+        "settings_perturbative_method"
       ]
     }, {
       "description": "parameters of one atom kind",
@@ -1709,21 +1721,21 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_post_hartree_fock",
       "superNames": [
-        "settings_XC_functional"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Parameters and information connected with the relativity treatment used in the calculation",
       "kindStr": "type_abstract_document_content",
       "name": "settings_relativity_treatment",
       "superNames": [
-        "settings_XC"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Parameters and information connected with self interaction correction (SIC) method used",
       "kindStr": "type_abstract_document_content",
       "name": "settings_self_interaction_correction",
       "superNames": [
-        "settings_XC"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Parameters that control the simulation",
@@ -1731,7 +1743,7 @@
       "name": "settings_simulation",
       "superNames": []
     }, {
-      "description": "Method parameters that control single point evaluation. This covers things like the theory level, but not the temperature of an molecular dynamics.",
+      "description": "Method parameters that control single configuration calculation. This covers things like the theory level, but not the temperature of an molecular dynamics.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_single_configuration_method",
       "superNames": [
@@ -1740,36 +1752,29 @@
       ]
     }, {
       "description": "Parameters and information connected with the van der Waals treatment used in the calculation",
+      "kindStr": "type_abstract_document_content",
       "name": "settings_van_der_Waals_treatment",
       "superNames": [
-        "settings_XC"
-      ]
-    }, {
-      "description": "Parameters and information connected Exchange correlation (XC) functional used in the self consistency cycle (and thus the one for the self consistent density)",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_XC_functional_scf",
-      "repeats": false,
-      "superNames": [
-        "settings_XC_scf"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Parameters connected with defining the exchange correlation (XC) functional",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC_functional",
       "superNames": [
-        "settings_XC"
+        "settings_single_configuration_method"
       ]
     }, {
       "description": "Parameters connected with defining the exchange correlation (XC) treatment during the self consisten cycle and thus valid for the self consistent density.",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_XC_scf",
+      "name": "settings_scf_method",
       "superNames": [
         "settings_single_configuration_method"
       ]
     }, {
-      "description": "Parameters connected with defining the exchange correlation (XC) treatment for the final energy and related quantities",
+      "description": "Parameters connected with defining the exchange correlation (XC) treatment for a perturbative energy, using as starting point the scf method",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_XC",
+      "name": "settings_perturbative_method",
       "superNames": [
         "settings_single_configuration_method"
       ]
@@ -1782,7 +1787,7 @@
         "section_run"
       ]
     }, {
-      "description": "Method used to calculate the stress_tensor_scf (numeric or analytic)",
+      "description": "Method used to calculate the stress_tensor_scf (numeric or analytic), i.e., using scf converged energy and orbitals",
       "dtypeStr": "C",
       "name": "stress_tensor_method_scf",
       "shape": [],
@@ -1791,18 +1796,18 @@
         "stress_tensor_setting_scf"
       ]
     }, {
-      "description": "Method used to calculate the stress_tensor (numeric or analytic)",
+      "description": "Method used to calculate the stress_tensor_perturbative (numeric or analytic), i.e., using the perturbative energy and orbitals",
       "dtypeStr": "C",
-      "name": "stress_tensor_method",
+      "name": "stress_tensor_method_perturbative",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation",
-        "stress_tensor_setting"
+        "stress_tensor_setting_perturbative"
       ]
     }, {
       "description": "A final value of the default stress tensor of energy_total_scf calculated with stress_tensor_setting_scf",
       "dtypeStr": "f",
-      "name": "stress_tensor_scf",
+      "name": "stress_tensor_scf_converged",
       "shape": [
         3,
         3
@@ -1813,16 +1818,16 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Setting to calculate stress_tensor_scf",
+      "description": "Setting to calculate stress_tensor_scf, i.e., using scf converged energy and orbitals",
       "kindStr": "type_abstract_document_content",
       "name": "stress_tensor_setting_scf",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Setting to calculate stress_tensor",
+      "description": "Setting to calculate stress_tensor_perturbative, i.e., using the perturbative energy and orbitals",
       "kindStr": "type_abstract_document_content",
-      "name": "stress_tensor_setting",
+      "name": "stress_tensor_setting_perturbative",
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1851,9 +1856,9 @@
       ],
       "units": "Pa"
     }, {
-      "description": "End time of the single point evaluation on CPU 1",
+      "description": "End time of the single configuration calculation on CPU 1",
       "dtypeStr": "f",
-      "name": "time_evaluation_cpu1_end",
+      "name": "time_single_configuration_calculation_cpu1_end",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1861,9 +1866,9 @@
       ],
       "units": "s"
     }, {
-      "description": "Start time of the single point evaluation on CPU 1",
+      "description": "Start time of the single configuration calculation on CPU 1",
       "dtypeStr": "f",
-      "name": "time_evaluation_cpu1_start",
+      "name": "time_single_configuration_calculation_cpu1_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1871,9 +1876,9 @@
       ],
       "units": "s"
     }, {
-      "description": "End date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "description": "End date of the single configuration calculation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "dtypeStr": "f",
-      "name": "time_evaluation_date_end",
+      "name": "time_single_configuration_calculation_date_end",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1881,9 +1886,9 @@
       ],
       "units": "s"
     }, {
-      "description": "Start date of the single point evaluation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "description": "Start date of the single configuration calculation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "dtypeStr": "f",
-      "name": "time_evaluation_date_start",
+      "name": "time_single_configuration_calculation_date_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1891,9 +1896,9 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the end of the single point evaluation",
+      "description": "Internal wall clock time at the end of the single configuration calculation",
       "dtypeStr": "f",
-      "name": "time_evaluation_wall_end",
+      "name": "time_single_configuration_calculation_wall_end",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1901,9 +1906,9 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the start of the single point evaluation",
+      "description": "Internal wall clock time at the start of the single configuration calculation",
       "dtypeStr": "f",
-      "name": "time_evaluation_wall_start",
+      "name": "time_single_configuration_calculation_wall_start",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1911,7 +1916,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Information on single point evaluation date, and timings",
+      "description": "Information on single configuration calculation date, and timings",
       "kindStr": "type_abstract_document_content",
       "name": "time_info_evaluation",
       "superNames": [
@@ -2065,22 +2070,29 @@
       "description": "Short string describing the van der Waals treatment during the self consitency cycle (and thus valid for the self consistent density). No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment_scf).",
       "name": "van_der_Waals_treatment_scf",
       "superNames": [
-        "settings_van_der_Waals_treatment"
-      ]
-    }, {
-      "description": "Short string describing the van der Waals treatment in the final energy. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment).",
-      "name": "van_der_Waals_treatment",
-      "superNames": [
-        "settings_van_der_Waals_treatment"
-      ]
-    }, {
-      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC_functional wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional).",
+        "settings_van_der_Waals_treatment",
+        "settings_scf_method"
+      ],
       "dtypeStr": "C",
-      "name": "XC_functional",
+      "shape": []
+    }, {
+      "description": "Short string describing the perturbative van der Waals treatment. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van_der_Waals_treatment wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaData/van_der_Waals_treatment).",
+      "name": "van_der_Waals_treatment_perturbative",
+      "superNames": [
+        "settings_van_der_Waals_treatment",
+        "settings_perturbative_method"
+      ],
+      "dtypeStr": "C",
+      "shape": []
+    }, {
+      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC_functional wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional_perturbative).",
+      "dtypeStr": "C",
+      "name": "XC_functional_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC_functional"
+        "settings_XC_functional",
+        "settings_perturbative_method"
       ]
     }, {
       "description": "Exchange correlation (XC) functional used during the scf cycle (and thus for the density) in a unique short form as described in the [XC_functional_scf wiki page](https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/XC_functional_scf).",
@@ -2089,16 +2101,17 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC_functional_scf"
+        "settings_XC_functional",
+        "settings_scf_method"
       ]
     }, {
-      "description": "Exchange correlation (XC) method used for the final energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction '_' van_der_Waals '_' relativity_treatment '@' XC_method_scf. With empty strings the connecting character is skipped.",
+      "description": "Exchange correlation (XC) method used for the perturbative energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: post_hartree_fock_method '_' XC_functional_perturbative '_' self_interaction_correction_perturbative '_' van_der_Waals_perturbative '_' relativity_treatment_perturbative '@' XC_method_scf. With empty strings the connecting character is skipped.",
       "dtypeStr": "C",
-      "name": "XC_method",
+      "name": "XC_method_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC"
+        "settings_perturbative_method"
       ]
     }, {
       "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_scf '_' self_iteraction_correction_scf '_' van_der_Waals_scf '_' relativity_treatment_scf. For empty strings the connecting character is skipped.",
@@ -2107,16 +2120,25 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC_scf"
+        "settings_scf_method"
       ]
     }, {
-      "description": "String that represent the exchange correlation (XC) treatment in a unique short form. This string keeps in account all settings in settings_XC. It is built from XC_method plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all settings_XC exluding this one",
+      "description": "String that represents the perturbative exchange correlation (XC) treatment in a unique short form. This string keeps in account all settings in settings_XC. It is built from XC_method_perturbative plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all settings_XC exluding this one",
       "dtypeStr": "C",
-      "name": "XC_method_unique",
+      "name": "XC_method_perturbative_unique",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC"
+        "settings_perturbative_method"
+      ]
+    }, {
+      "description": "String that represents the scf exchange correlation (XC) treatment in a unique short form. This string keeps in account all settings in settings_XC. It is built from XC_method_scf plus '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all settings_XC exluding this one",
+      "dtypeStr": "C",
+      "name": "XC_method_scf_unique",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_scf_method"
       ]
     }]
 }
