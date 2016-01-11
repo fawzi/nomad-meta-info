@@ -23,6 +23,30 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "Target value of the s quantum number, which implies a $s*(s+1)$ value for $S^2$. It is a multiple of $1/2$. This value is not necessarily enforced",
+      "name": "target_spin_quantum_number",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Value of the total spin moment operator $S^2$ for the converged wavefunctions calculated with the XC_method_scf, which can be used to calculate the spin contamination in spin unrestricted calculations.",
+      "name": "spin_S2_scf_converged",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method_scf. Can be used to calculate the spin contamination in spin unrestricted calculations.",
+      "name": "spin_S2_scf_iteration",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Forces on the atoms as minus gradient of energy_free_scf_converged.",
       "dtypeStr": "f",
       "name": "atom_forces_free_scf_converged",
