@@ -469,16 +469,10 @@
       "name": "energy_atomization_method_consistent",
       "superNames": [
         "energy_total_potential"
-      ]
-    }, {
-      "description": "Component of the correlation (C) energy at the LDA level calculated with the self-consistent density of the target functional.",
+      ],
       "dtypeStr": "f",
-      "name": "energy_C_LDA",
       "repeats": false,
       "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
       "units": "J"
     }, {
       "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self-consistent density of the target functional (no exact exchange mixin, full unscaled value)",
@@ -846,6 +840,7 @@
       "name": "energy_total_scf_iteration",
       "repeats": false,
       "shape": [],
+      "units": "J",
       "superNames": [
         "energy_total_potential_scf_iteration"
       ]
@@ -865,6 +860,7 @@
       "name": "energy_total_T0_per_atom_scf_iteration",
       "repeats": false,
       "shape": [],
+      "units": "J",
       "superNames": [
         "energy_total_potential_per_atom"
       ],
@@ -954,6 +950,7 @@
       "dtypeStr": "f",
       "kindStr": "type_abstract_document_content",
       "name": "energy_type_X",
+      "units": "J",
       "shape": [],
       "superNames": [
         "energy_component"
@@ -974,6 +971,7 @@
       "name": "energy_van_der_Waals_value",
       "repeats": false,
       "shape": [],
+      "units": "J",
       "superNames": [
         "section_energy_van_der_Waals",
         "energy_type_van_der_Waals"
@@ -984,18 +982,10 @@
       "name": "energy_van_der_Waals",
       "repeats": false,
       "shape": [],
+      "units": "J",
       "superNames": [
         "energy_type_van_der_Waals"
       ]
-    }, {
-      "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
-      "dtypeStr": "f",
-      "name": "energy_X_LDA",
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
     }, {
       "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional, scaled accordingly to the mixing parameter",
       "dtypeStr": "f",
@@ -1024,15 +1014,6 @@
       "shape": [],
       "superNames": [
         "energy_type_X"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange correlation (XC) energy at the LDA level calculated with the self consistent density of the target functional.",
-      "dtypeStr": "f",
-      "name": "energy_XC_LDA",
-      "shape": [],
-      "superNames": [
-        "energy_type_XC"
       ],
       "units": "J"
     }, {

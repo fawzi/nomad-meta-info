@@ -24,6 +24,16 @@
         "fhi_aims_section_eigenvalues_list"
       ]
     }, {
+      "description": "Component of the correlation (C) energy at the LDA level calculated with the self-consistent density of the target functional.",
+      "dtypeStr": "f",
+      "name": "fhi_aims_energy_C_LDA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component"
+      ],
+      "units": "J"
+    }, {
       "description": "Electrostatic energy contributions from superposition of free atom densities during the scf iterations",
       "dtypeStr": "f",
       "name": "fhi_aims_energy_electrostatic_free_atom_scf_iteration",
@@ -31,6 +41,24 @@
       "shape": [],
       "superNames": [
         "energy_component_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
+      "dtypeStr": "f",
+      "name": "fhi_aims_energy_X_LDA",
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the exchange correlation (XC) energy at the LDA level calculated with the self consistent density of the target functional.",
+      "dtypeStr": "f",
+      "name": "fhi_aims_energy_XC_LDA",
+      "shape": [],
+      "superNames": [
+        "energy_type_XC"
       ],
       "units": "J"
     }, {
