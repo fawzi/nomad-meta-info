@@ -441,16 +441,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy minus the energy of the same number of isolated atoms calculated with the same method (functional,...), basis set and accuracy.",
-      "dtypeStr": "f",
-      "name": "energy_atomization_method_consistent",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential"
-      ],
-      "units": "J"
-    }, {
       "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self-consistent density of the target functional (no exact exchange mixin, full unscaled value)",
       "dtypeStr": "f",
       "name": "energy_C_mGGA",
@@ -492,18 +482,23 @@
       ],
       "units": "J"
     }, {
-      "description": "First version of the fit of the total energy minus the an atom dependent contibution that depends on method, periodicity, basis set and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
-      "name": "energy_comparable_fitted_v1",
+      "dTypeStr": "C",
+      "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/Energy_Comparable.",
+      "name": "energy_comparable_type",
+      "shape": [],
       "superNames": [
-        "energy_comparable_fitted"
+        "section_energy_comparable"
       ]
     }, {
-      "description": "Total energy minus an atom dependent contibution that depends on method, periodicity, basis set and accuracy, fitted so that the spread of the resulting binding energies is minimized.",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_comparable_fitted",
+      "dTypeStr": "f",
+      "description": "Value of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/Energy_Comparable.",
+      "name": "energy_comparable_value",
+      "shape": [],
       "superNames": [
-        "energy_total_potential"
-      ]
+        "energy_total_potential",
+        "section_energy_comparable"
+      ],
+      "units": "J"
     }, {
       "description": "An energy component per atom during scf",
       "kindStr": "type_abstract_document_content",
@@ -610,12 +605,6 @@
         "energy_component"
       ],
       "units": "J"
-    }, {
-      "description": "Total energy minus the same number of atomic energies of the most stable form of the element calculated with the same method (functional,...), basis set and accuracy.",
-      "name": "energy_formation_method_consistent",
-      "superNames": [
-        "energy_total_potential"
-      ]
     }, {
       "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_scf per atom ",
       "dtypeStr": "f",
@@ -761,7 +750,7 @@
     }, {
       "description": "Total energy using XC_method_scf per atom extapolated for T=0",
       "dtypeStr": "f",
-      "name": "energy_T0_per_atom_scf",
+      "name": "energy_T0_per_atom_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -940,6 +929,26 @@
         "section_energy_van_der_Waals"
       ]
     }, {
+      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_treatment_perturbative",
+      "dtypeStr": "f",
+      "name": "energy_van_der_Waals_perturbative",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_van_der_Waals"
+      ],
+      "units": "J"
+    }, {
+      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_treatment_scf",
+      "dtypeStr": "f",
+      "name": "energy_van_der_Waals_scf_converged",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_van_der_Waals"
+      ],
+      "units": "J"
+    }, {
       "description": "Some value of van der Waals energy calculated with the method described in energy_van_der_Waals_kind",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals_value",
@@ -947,16 +956,6 @@
       "shape": [],
       "superNames": [
         "section_energy_van_der_Waals",
-        "energy_type_van_der_Waals"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals",
-      "dtypeStr": "f",
-      "name": "energy_van_der_Waals",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
         "energy_type_van_der_Waals"
       ],
       "units": "J"
@@ -998,26 +997,6 @@
       "shape": [],
       "superNames": [
         "energy_type_X"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange and correlation (XC) energy at the (Meta)GGA level using the self consistent density of the target functional scaled accordingly to the mixing parameter",
-      "dtypeStr": "f",
-      "name": "energy_XC_mGGA_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_XC"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange and correlation (XC) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixin, full unscaled value)",
-      "dtypeStr": "f",
-      "name": "energy_XC_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_XC"
       ],
       "units": "J"
     }, {
@@ -1570,6 +1549,13 @@
       "name": "section_eigenvalues",
       "superNames": [
         "section_eigenvalues_group"
+      ]
+    }, {
+      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/Energy_Comparable.",
+      "kindStr": "type_section",
+      "name": "section_energy_comparable",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section containing some van der Waals energy value",
