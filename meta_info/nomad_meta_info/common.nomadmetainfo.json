@@ -2,26 +2,10 @@
   "type": "nomad_meta_info_1_0",
   "description": "common meta info, not specific to any code",
   "metaInfos": [ {
-      "description": "Information on a single configuration calculation which *in theory* should have no influence on the results",
+      "description": "Information that *in theory* should have no influence on the results",
       "kindStr": "type_abstract_document_content",
-      "name": "accessory_info_evaluation",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Information on the run which *in theory* should have no influence on the results",
-      "kindStr": "type_abstract_document_content",
-      "name": "accessory_info_run",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Information on an scf iteration which *in theory* should have no influence on the results",
-      "kindStr": "type_abstract_document_content",
-      "name": "accessory_info_scf_iteration",
-      "superNames": [
-        "section_scf_iteration"
-      ]
+      "name": "accessory_info",
+      "superNames": []
     }, {
       "description": "Forces on the atoms as minus gradient of energy_free_perturbative.",
       "dtypeStr": "f",
@@ -203,7 +187,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "l value (of the angular part given by the spherical harmonic $Y_{lm}$) of the basis function",
+      "description": "Azimuthal quantum number ($l$) value (of the angular part given by the spherical harmonic $Y_{lm}$) of the basis function",
       "dtypeStr": "i",
       "name": "basis_set_atom_centered_ls",
       "shape": [
@@ -213,7 +197,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "number of different basis functions in this set",
+      "description": "Number of different basis functions in this set. This is equal to the number of actual coefficents that are specified when using this basis set.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "basis_set_atom_centered_nbasis_functions",
@@ -222,7 +206,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "number of different kind of basis functions in this set",
+      "description": "Number of different kinds of radial basis functions in this set. In practice, all the basis functions with the same $n$ and $l$ quantum number, here are counted only once",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "basis_set_atom_centered_nkinds",
@@ -421,23 +405,36 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Electronic kinetic energy at a single scf iteration",
+      "description": "Electronic kinetic energy as defined in XC_method_converged",
+      "dtypeStr": "f",
+      "name": "electronic_kinetic_energy_perturbative",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electronic kinetic energy as defined in XC_method_scf",
+      "dtypeStr": "f",
+      "name": "electronic_kinetic_energy_scf_converged",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electronic kinetic energy, as defined in XC_method_scf, at a single scf iteration",
       "dtypeStr": "f",
       "name": "electronic_kinetic_energy_scf_iteration",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
-      ],
-      "units": "J"
-    }, {
-      "description": "Electronic kinetic energy",
-      "dtypeStr": "f",
-      "name": "electronic_kinetic_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -496,45 +493,37 @@
       "shape": [],
       "superNames": [
         "energy_total_potential",
+        "section_single_configuration_calculation",
         "section_energy_comparable"
       ],
       "units": "J"
     }, {
-      "description": "An energy component per atom during scf",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_component_per_atom_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "energy",
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "A final value of an energy component per atom",
+      "description": "A value of an energy component per atom",
       "kindStr": "type_abstract_document_content",
       "name": "energy_component_per_atom",
       "shape": [],
       "superNames": [
-        "energy",
-        "section_single_configuration_calculation"
+        "energy"
       ]
     }, {
-      "description": "An energy component of the non final, non converged energy, expected to be an extensive property",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_component_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "energy",
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "A final value of an energy component, expected to be an extensive property. ",
+      "description": "A value of an energy component, expected to be an extensive property. ",
       "kindStr": "type_abstract_document_content",
       "name": "energy_component",
       "shape": [],
       "superNames": [
-        "energy",
-        "section_single_configuration_calculation"
+        "energy"
       ]
+    }, {
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Defined consistently with XC_method_scf",
+      "dtypeStr": "f",
+      "name": "energy_correction_entropy_scf_converged",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
     }, {
       "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Value during the SCF cycle.",
       "dtypeStr": "f",
@@ -542,17 +531,19 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
-      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account.",
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy. Defined consistently with XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_correction_entropy",
+      "name": "energy_correction_hartree_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -562,27 +553,30 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
-      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy",
+      "description": "Energy correction of the perturbative method XC_method_perturbative, wrt energy_total_scf_converged",
       "dtypeStr": "f",
-      "name": "energy_correction_hartree",
+      "name": "energy_correction_perturbative",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
-      "description": "Converged Mp2 energy correction",
+      "description": "Total electostatic energy (atom + electrons), defined consistently with XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_correction_MP2",
+      "name": "energy_electrostatic_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -592,17 +586,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
-      ],
-      "units": "J"
-    }, {
-      "description": "Total electostatic energy (atom + electrons)",
-      "dtypeStr": "f",
-      "name": "energy_electrostatic",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -612,7 +597,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_per_atom"
+        "energy_component_per_atom",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -622,7 +608,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_per_atom_scf_iteration"
+        "energy_component_per_atom",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -632,7 +619,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "energy_total_potential",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -642,7 +630,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "energy_total_potential",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -652,7 +641,19 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_scf_iteration"
+        "energy_total_potential",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Error in the hartree (electrostatic) potential energy. Defined consistently with XC_method_scf",
+      "dtypeStr": "f",
+      "name": "energy_hartree_error_scf_converged",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "error_estimate_partial_scf_converged",
+        "energy"
       ],
       "units": "J"
     }, {
@@ -667,30 +668,20 @@
       ],
       "units": "J"
     }, {
-      "description": "Error in the hartree (electrostatic) potential energy",
+      "description": "Scaled (depending on the mix paramenter of the functional) exact exchange energy. Defined consistently with XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_hartree_error",
+      "name": "energy_hartree_fock_X_scaled_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial_scf_converged",
-        "energy"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
-      "description": "Scaled (depending on the mix paramenter of the functional) exact exchange energy",
+      "description": "Converged exact exchange energy (not scaled). Defined consistently with XC_method_scf",
       "dtypeStr": "f",
-      "name": "energy_hartree_fock_X_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged exact exchange energy (not scaled)",
-      "dtypeStr": "f",
-      "name": "energy_hartree_fock_X",
+      "name": "energy_hartree_fock_X_scf_converged",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -704,7 +695,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_per_atom"
+        "energy_component_per_atom",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -714,7 +706,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_per_atom_scf_iteration"
+        "energy_component_per_atom",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -724,7 +717,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -734,7 +728,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -744,7 +739,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_per_atom"
+        "energy_total_potential_per_atom",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -754,17 +750,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_per_atom"
-      ],
-      "units": "J"
-    }, {
-      "description": "Converged total MP2 energy (XC_method_scf + MP2 correction)",
-      "dtypeStr": "f",
-      "name": "energy_total_MP2",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_total_potential"
+        "energy_total_potential_per_atom",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -774,19 +761,12 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "energy_total_potential",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
-      "description": "A final value of a total potential energy per atom during the scf",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_total_potential_per_atom_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "energy_component_per_atom_scf_iteration"
-      ]
-    }, {
-      "description": "A final value of a total potential energy per atom",
+      "description": "A value of a total potential energy per atom. Different total energies might have different 0, and so might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_total_potential_per_atom",
       "shape": [],
@@ -794,15 +774,7 @@
         "energy_component"
       ]
     }, {
-      "description": "A final value of a total potential energy during the scf. Different total energies might have different 0, and so might not be directly comparable.",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy_total_potential_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "energy_component_scf_iteration"
-      ]
-    }, {
-      "description": "A final value of a total potential energy. Different total energies might have different 0, and so might not be directly comparable.",
+      "description": "A value of a total potential energy. Different total energies might have different 0, and so might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_total_potential",
       "shape": [],
@@ -816,7 +788,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "energy_total_potential",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -826,7 +799,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_scf_iteration"
+        "energy_total_potential",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -836,7 +810,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_per_atom"
+        "energy_total_potential_per_atom",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -846,7 +821,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_per_atom"
+        "energy_total_potential_per_atom",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -856,7 +832,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "energy_total_potential",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -866,7 +843,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential"
+        "energy_total_potential",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -876,7 +854,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_total_potential_scf_iteration"
+        "energy_total_potential",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -886,7 +865,8 @@
       "name": "energy_type_C",
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -897,7 +877,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Some exchange-correlation (XC) energy.",
@@ -906,7 +887,8 @@
       "name": "energy_type_XC",
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -916,7 +898,8 @@
       "name": "energy_type_X",
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -966,7 +949,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -1016,7 +1000,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component"
+        "energy_component",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -1026,7 +1011,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -1046,7 +1032,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_component_scf_iteration"
+        "energy_component",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -1252,20 +1239,11 @@
     }, {
       "description": "Information on the parallelization of the program",
       "kindStr": "type_abstract_document_content",
-      "name": "parallelization_info_scf_iteration",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "accessory_info_scf_iteration"
-      ]
-    }, {
-      "description": "Information on the parallelization of the program",
-      "kindStr": "type_abstract_document_content",
       "name": "parallelization_info",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "accessory_info_run"
+        "accessory_info"
       ]
     }, {
       "description": "A debugging message of the parsing program, associated with a single configuration calculation",
@@ -1395,7 +1373,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "accessory_info_run"
+        "accessory_info",
+        "section_run"
       ]
     }, {
       "description": "Name of the program that generated the data",
@@ -1455,35 +1434,21 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_atom_kind_ref refers to a section_atom_kind by using the same unique string.",
-      "kindStr": "type_section",
-      "name": "section_atom_kind_ref",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Every section_atom_kind contains information about a different kind of atom, and is identified by a unique string.",
+      "description": "Every section_atom_kind contains information about a different kind of atom, and is identified by a unique string. This categorisation into atom kinds is more flexible than just atomic species, becasue to different atoms of the same species different atom centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_atom_kind.",
       "kindStr": "type_section",
       "name": "section_atom_kind",
       "superNames": [
         "section_system_description"
       ]
     }, {
-      "description": "Every section_atom_ref refers to a section_atom by its index within the atom kind.",
-      "kindStr": "type_section",
-      "name": "section_atom_ref",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Every section_atom represents an atom (atom, ghost,...).",
+      "description": "Every section_atom represents a single atom. It can be a real atom or also a ghost (used for bsse correction).",
       "kindStr": "type_section",
       "name": "section_atom",
       "superNames": [
         "section_atom_kind"
       ]
     }, {
-      "description": "Description of one or a sub group of basis function in this basis set",
+      "description": "Description of one or a sub group of basis functions in this basis set",
       "kindStr": "type_section",
       "name": "section_basis_functions_atom_centered",
       "superNames": [
@@ -1499,23 +1464,23 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Atom centered part of the basis set (assignement atom -> basis set)",
+      "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom (as identified in section_atom).",
       "kindStr": "type_section",
       "name": "section_basis_set_atom_centered_mapping",
       "superNames": [
         "section_basis_set",
-        "section_basis_set_atom_centered",
-        "section_atom"
+        "section_atom",
+        "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "An atom centered basis set",
+      "description": "Each section_basis_set_atom_centered contains the definition of a specific atom centered basis set for a specific atom",
       "kindStr": "type_section",
       "name": "section_basis_set_atom_centered",
       "superNames": [
         "basis_set_description"
       ]
     }, {
-      "description": "Global, i.e. non atom specific (non atom-centered), part of the basis set",
+      "description": "Assignement, for each section_basis_set, of a cell associated (i.e., non atom centered) part of the basis set (as given in section_basis_set_cell_associated)",
       "kindStr": "type_section",
       "name": "section_basis_set_cell_associated_mapping",
       "superNames": [
@@ -1523,14 +1488,14 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A cell_associated (atom independent) basis set",
+      "description": "A cell associated (atom independent) basis set, e.g., planewaves",
       "kindStr": "type_section",
       "name": "section_basis_set_cell_associated",
       "superNames": [
         "basis_set_description"
       ]
     }, {
-      "description": "Represents a concrete basis set instatiated with parameters given in the section_method for the system section_system_description.",
+      "description": "Contains reference to all basis sets used for a single configuration calculation. More than one basis set instance per single configuration calculation is needed, for example, for codes that implement adaptive basis sets along the scf convergence (see, .e.g., exciting). In such cases there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for RI, ...",
       "kindStr": "type_section",
       "name": "section_basis_set",
       "superNames": [
@@ -1573,7 +1538,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "section collecting the information on a k band evaluation",
+      "description": "Section collecting the information on a k band evaluation",
       "kindStr": "type_section",
       "name": "section_k_band",
       "repeats": true,
@@ -1581,7 +1546,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_method section contains the various parameters that define the theory used and he approximations done (convergence thresholds,...)",
+      "description": "Every section_method section contains the various parameters that define the theory used and the approximations done (convergence, thresholds,...)",
       "kindStr": "type_section",
       "name": "section_method",
       "superNames": [
@@ -1603,7 +1568,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_single_configuration_calculation section contains the values computated or evaluated during a single configuration calculation.",
+      "description": "Every section_single_configuration_calculation contains the values computed during a single configuration calculation.",
       "kindStr": "type_section",
       "name": "section_single_configuration_calculation",
       "superNames": [
@@ -1611,7 +1576,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Every section_system_description section contains the properties required to describe the Physical system simulated: the given atomic configuration, if relevant the periodic cell, extenal potentials,...",
+      "description": "Every section_system_description contains the properties required to describe the physical system simulated, i.e., the given atomic configuration, the definition of periodic cell (if present), external potentials,...",
       "kindStr": "type_section",
       "name": "section_system_description",
       "superNames": [
@@ -1846,34 +1811,21 @@
         "settings_single_configuration_method"
       ]
     }, {
-      "description": "Information on single configuration calculation date, and timings",
+      "description": "Information on date and timings",
       "kindStr": "type_abstract_document_content",
-      "name": "time_info_evaluation",
+      "name": "time_info",
       "superNames": [
-        "accessory_info_evaluation"
+        "accessory_info"
       ]
     }, {
-      "description": "Information on run date, and run timings",
-      "kindStr": "type_abstract_document_content",
-      "name": "time_info_run",
-      "superNames": [
-        "accessory_info_run"
-      ]
-    }, {
-      "description": "Information on scf iteration date, and timings",
-      "kindStr": "type_abstract_document_content",
-      "name": "time_info_scf_iteration",
-      "superNames": [
-        "accessory_info_scf_iteration"
-      ]
-    }, {
-      "description": "Wall time needed for an MP2 calculation",
+      "description": "Wall time needed for a perturbative calculation, as defined in XC_treatment_perturbative",
       "dtypeStr": "f",
-      "name": "time_MP2",
+      "name": "time_perturbative",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -1883,7 +1835,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_run"
+        "time_info",
+        "section_run"
       ],
       "units": "s"
     }, {
@@ -1893,7 +1846,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_run"
+        "time_info",
+        "section_run"
       ],
       "units": "s"
     }, {
@@ -1903,7 +1857,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_run"
+        "time_info",
+        "section_run"
       ],
       "units": "s"
     }, {
@@ -1913,7 +1868,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_run"
+        "time_info",
+        "section_run"
       ],
       "units": "s"
     }, {
@@ -1923,7 +1879,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_run"
+        "time_info",
+        "section_run"
       ],
       "units": "s"
     }, {
@@ -1933,7 +1890,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_run"
+        "time_info",
+        "section_run"
       ],
       "units": "s"
     }, {
@@ -1943,7 +1901,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_scf_iteration"
+        "time_info",
+        "section_scf_iteration"
       ],
       "units": "s"
     }, {
@@ -1953,7 +1912,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_scf_iteration"
+        "time_info",
+        "section_scf_iteration"
       ],
       "units": "s"
     }, {
@@ -1963,7 +1923,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_scf_iteration"
+        "time_info",
+        "section_scf_iteration"
       ],
       "units": "s"
     }, {
@@ -1973,7 +1934,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_scf_iteration"
+        "time_info",
+        "section_scf_iteration"
       ],
       "units": "s"
     }, {
@@ -1983,7 +1945,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_scf_iteration"
+        "time_info",
+        "section_scf_iteration"
       ],
       "units": "s"
     }, {
@@ -1993,7 +1956,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_scf_iteration"
+        "time_info",
+        "section_scf_iteration"
       ],
       "units": "s"
     }, {
@@ -2003,7 +1967,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -2013,7 +1978,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -2023,7 +1989,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -2033,7 +2000,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -2043,7 +2011,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -2053,7 +2022,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "time_info_evaluation"
+        "time_info",
+        "section_single_configuration_calculation"
       ],
       "units": "s"
     }, {
@@ -2095,7 +2065,7 @@
         "settings_scf_method"
       ]
     }, {
-      "description": "Exchange correlation (XC) method used for the perturbative energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: post_hartree_fock_method '_' XC_functional_perturbative '_' self_interaction_correction_perturbative '_' van_der_Waals_perturbative '_' relativity_treatment_perturbative '@' XC_method_scf. With empty strings the connecting character is skipped.",
+      "description": "Exchange correlation (XC) method used for the perturbative energy and related quantities in standarized short form, this string ignores convergence settings, and might collapse several similar methods. Built joining *only* the values that are different from their self consistent (sc) values in the following order: post_hartree_fock_method '_' XC_functional_perturbative '_' self_interaction_correction_perturbative '_' van_der_Waals_treatment_perturbative '_' relativity_treatment_perturbative '@' XC_method_scf. With empty strings the connecting character is skipped.",
       "dtypeStr": "C",
       "name": "XC_method_perturbative",
       "repeats": false,
@@ -2113,7 +2083,7 @@
         "settings_perturbative_method"
       ]
     }, {
-      "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_scf '_' self_iteraction_correction_scf '_' van_der_Waals_scf '_' relativity_treatment_scf. For empty strings the connecting character is skipped.",
+      "description": "Exchange correlation (XC) method used during the self consitency cycle and thus valid for the self consistent density. This string ignores convergence settings, and might collapse several similar methods. Built joining XC_functional_scf '_' self_interaction_correction_scf '_' van_der_Waals_treatment_scf '_' relativity_treatment_scf. For empty strings the connecting character is skipped.",
       "dtypeStr": "C",
       "name": "XC_method_scf",
       "repeats": false,
