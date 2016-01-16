@@ -1,10 +1,285 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the CASTEP parser, all names are expected to start with castep_",
+  "description": "meta info used by the EP parser, all names are expected to start with castep_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {
+      "description": "Positions of the atoms in fractional coordinates",
+      "dtypeStr": "f",
+      "name": "castep_atom_position",
+      "repeats": true,
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_cell_angle_alpha",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_cell_angle_beta",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_cell_angle_gamma",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position"
+      ]
+    }, {
+      "description": "a unit cell edge length",
+      "dtypeStr": "f",
+      "name": "castep_cell_length_a",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position"
+      ]
+    }, {
+      "description": "b unit cell edge length",
+      "dtypeStr": "f",
+      "name": "castep_cell_length_b",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position"
+      ]
+    }, {
+      "description": "c unit cell edge length",
+      "dtypeStr": "f",
+      "name": "castep_cell_length_c",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_cell_matrix",
+      "shape": [],
+      "superNames": [
+        "castep_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_cell_vector_a",
+      "shape": [],
+      "superNames": [
+        "castep_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_cell_vector_b",
+      "shape": [],
+      "superNames": [
+        "castep_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_cell_vector_c",
+      "shape": [],
+      "superNames": [
+        "castep_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_cell_vector",
+      "shape": [],
+      "superNames": [
+        "castep_section_cell"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_compiler",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Fundamental constant data source",
+      "dtypeStr": "C",
+      "name": "castep_constants_reference",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_fft_library",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_functional_name",
+      "shape": [],
+      "superNames": [
+        "castep_section_functionals"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_maths_library",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_program_compilation_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_program_compilation_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_program_execution_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_program_execution_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_relativity_treatment_scf",
+      "shape": [],
+      "superNames": [
+        "castep_section_functionals"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_atom_position",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_cell",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_eigenvalues",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_functionals",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_points",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_forces",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_position",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_store_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "castep_section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "castep_store_k_points",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_points"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_system_description",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
+      "dtypeStr": "f",
+      "name": "energy_total_scf_iteration_list",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }]
 }
