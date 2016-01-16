@@ -33,16 +33,23 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "cp2k_system_description",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "cp2k_section_cell",
       "superNames": [
-        "section_system_description"
+        "cp2k_system_description"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "cp2k_section_atom_position",
       "superNames": [
-        "section_system_description"
+        "cp2k_system_description"
       ]
     }, {
       "description": "-",
@@ -73,7 +80,7 @@
       "kindStr": "type_section",
       "name": "cp2k_section_numbers",
       "superNames": [
-        "section_run"
+        "cp2k_system_description"
       ]
     }, {
       "description": "-",
@@ -96,7 +103,131 @@
       "kindStr": "type_section",
       "name": "cp2k_section_functionals",
       "superNames": [
+        "cp2k_system_description"
+      ]
+    }, {
+      "description": "Section grouping together the quantities calculated during an MD.",
+      "kindStr": "type_section",
+      "name": "cp2k_section_md",
+      "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Section grouping together the quantities calculated during an MD step.",
+      "kindStr": "type_section",
+      "name": "cp2k_section_md_step",
+      "repeats": true,
+      "superNames": [
+        "cp2k_section_md"
+      ]
+    }, {
+      "description": "The number of a molecular dynamics step.",
+      "name": "cp2k_md_step_number",
+      "dtypeStr": "i",
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "The instantaneous temperature during MD step.",
+      "name": "cp2k_md_temperature_instantaneous",
+      "dtypeStr": "f",
+      "unit": "K",
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "The average temperature during MD step.",
+      "name": "cp2k_md_temperature_average",
+      "dtypeStr": "f",
+      "unit": "K",
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "The simulation time of a molecular dynamics step.",
+      "name": "cp2k_md_step_time",
+      "dtypeStr": "f",
+      "units": "s",
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Section for atomic forces during an MD step.",
+      "name": "cp2k_section_md_forces",
+      "kindStr": "type_section",
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Section for atomic forces during an MD step.",
+      "name": "cp2k_section_md_force_atom",
+      "kindStr": "type_section",
+      "superNames": [
+        "cp2k_section_md_forces"
+      ]
+    }, {
+      "description": "The force components of an individual atom during an MD step.",
+      "name": "cp2k_md_force_atom_string",
+      "dtypeStr": "C",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "cp2k_section_md_force_atom"
+      ]
+    }, {
+      "description": "The force components of an individual atom during an MD step.",
+      "name": "cp2k_md_force_atom_float",
+      "dtypeStr": "f",
+      "shape": [1, 3],
+      "superNames": [
+        "cp2k_section_md_forces"
+      ]
+    }, {
+      "description": "The atomic forces during an MD step.",
+      "name": "cp2k_md_forces",
+      "dtypeStr": "f",
+      "shape": ["atom_number", 3],
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Section for atomic coordinates during an MD step.",
+      "name": "cp2k_section_md_coordinates",
+      "kindStr": "type_section",
+      "superNames": [
+        "cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Section for atomic forces during an MD step.",
+      "name": "cp2k_section_md_coordinate_atom",
+      "kindStr": "type_section",
+      "superNames": [
+        "cp2k_section_md_coordinates"
+      ]
+    }, {
+      "description": "The coordinate components of an individual atom  as a string during an MD step.",
+      "name": "cp2k_md_coordinate_atom_string",
+      "dtypeStr": "C",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "cp2k_section_md_coordinate_atom"
+      ]
+    }, {
+      "description": "The coordinate components of an individual atom as a numpy array during an MD step.",
+      "name": "cp2k_md_coordinate_atom_float",
+      "dtypeStr": "f",
+      "shape": [1, 3],
+      "superNames": [
+        "cp2k_section_md_coordinates"
+      ]
+    }, {
+      "description": "The atomic coordinates during an MD step.",
+      "name": "cp2k_md_coordinates",
+      "dtypeStr": "f",
+      "shape": ["atom_number", 3],
+      "superNames": [
+        "cp2k_section_md_step"
       ]
     }, {
       "description": "-",
