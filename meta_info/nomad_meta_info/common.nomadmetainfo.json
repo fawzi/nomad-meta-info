@@ -277,7 +277,7 @@
       ],
       "units": "J"
     }, {
-      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method_scf. It should refer (and be the same) to some basis_set_name which is described in the [basis_set_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-name).",
+      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It should refer (and be the same) to some basis_set_name which is described in the [basis_set_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set",
       "shape": [],
@@ -381,6 +381,17 @@
         "section_eigenvalues"
       ]
     }, {
+      "description": "Electronic kinetic energy as defined in XC_method during the scf iterations",
+      "dtypeStr": "f",
+      "name": "electronic_kinetic_energy_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
       "description": "Electronic kinetic energy as defined in XC_method",
       "dtypeStr": "f",
       "name": "electronic_kinetic_energy",
@@ -459,9 +470,20 @@
         "energy"
       ]
     }, {
-      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Defined consistently with XC_method_scf",
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Values during the scf iteration. Defined consistently with XC_method.",
       "dtypeStr": "f",
-      "name": "energy_correction_entropy_scf",
+      "name": "energy_correction_entropy_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Defined consistently with XC_method.",
+      "dtypeStr": "f",
+      "name": "energy_correction_entropy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -470,7 +492,18 @@
       ],
       "units": "J"
     }, {
-      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy. Defined consistently with XC_method_scf",
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy during the scf iterations. Defined consistently with XC_method",
+      "dtypeStr": "f",
+      "name": "energy_correction_hartree_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy. Defined consistently with XC_method",
       "dtypeStr": "f",
       "name": "energy_correction_hartree",
       "repeats": false,
@@ -493,7 +526,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Total electostatic energy (atom + electrons) during the scf itrations",
+      "description": "Total electrostatic energy (atom + electrons) during the scf itrations",
       "dtypeStr": "f",
       "name": "energy_electrostatic_scf_iteration",
       "repeats": false,
@@ -504,7 +537,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total electostatic energy (atom + electrons), defined consistently with method",
+      "description": "Total electrostatic energy (atom + electrons), defined consistently with method",
       "dtypeStr": "f",
       "name": "energy_electrostatic",
       "repeats": false,
@@ -515,7 +548,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method_scf per atom during the scf iterations",
+      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method per atom during the scf iterations",
       "dtypeStr": "f",
       "name": "energy_free_per_atom_scf_iteration",
       "repeats": false,
@@ -535,6 +568,17 @@
       "superNames": [
         "energy_component_per_atom",
         "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method during the scf iterations",
+      "dtypeStr": "f",
+      "name": "energy_free_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential",
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -1105,24 +1149,6 @@
         "section_system_description"
       ]
     }, {
-      "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
-      "dtypeStr": "D",
-      "name": "parallel_tasks_assignement",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "parallelization_info"
-      ]
-    }, {
-      "description": "Number of parallel tasks used",
-      "dtypeStr": "i",
-      "name": "parallel_tasks_number",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "parallelization_info"
-      ]
-    }, {
       "description": "Information on the parallelization of the program",
       "kindStr": "type_abstract_document_content",
       "name": "parallelization_info",
@@ -1292,6 +1318,16 @@
       "name": "run_clean_end",
       "shape": [],
       "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
+      "dtypeStr": "D",
+      "name": "run_hosts",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "parallelization_info",
         "section_run"
       ]
     }, {
