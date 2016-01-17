@@ -438,8 +438,8 @@
       "shape": [],
       "superNames": [
         "energy_total_potential",
-        "section_single_configuration_calculation",
-        "section_energy_comparable"
+        "section_energy_comparable",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -477,6 +477,17 @@
       "shape": [],
       "superNames": [
         "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "energy calculated with method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - base_calculation.energy_total) for preturbation methods. [energy-current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/energy-current)",
+      "dtypeStr": "f",
+      "name": "energy_current",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential",
         "section_single_configuration_calculation"
       ],
       "units": "J"
@@ -1037,9 +1048,19 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative this string does not describe the base_method_ref. For normal ab-initio calculation for example this is composed of XC_method and basis_set and a unique sha,  see [method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/method_current) for the details",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative this string does not describe the base_method_ref. For normal ab-initio calculation for example this is composed of XC_method and basis_set and a unique sha,  see [method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/method-current) for the details",
       "dtypeStr": "C",
       "name": "method_current",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_method",
+        "section_method"
+      ]
+    }, {
+      "description": "kind of method in method_current: absolute or perturbative",
+      "dtypeStr": "C",
+      "name": "method_kind",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1384,7 +1405,7 @@
         "section_eigenvalues_group"
       ]
     }, {
-      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/Energy_Comparable.",
+      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy-comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/energy-comparable).",
       "kindStr": "type_section",
       "name": "section_energy_comparable",
       "superNames": [
