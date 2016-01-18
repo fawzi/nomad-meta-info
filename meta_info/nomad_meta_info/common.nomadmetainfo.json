@@ -449,8 +449,7 @@
       "shape": [],
       "superNames": [
         "energy_total_potential",
-        "section_energy_comparable",
-        "section_single_configuration_calculation"
+        "section_energy_comparable"
       ],
       "units": "J"
     }, {
@@ -997,6 +996,31 @@
       ],
       "units": "Pa"
     }, {
+      "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom (as identified in section_atom).",
+      "dtypeStr": "r",
+      "name": "mapping_section_basis_set_atom_centered",
+      "referencedSections": [
+        "section_basis_set_atom_centered"
+      ],
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "Assignement, for each section_basis_set, of the cell associated (i.e., non atom centered) parts of the basis set (as given in section_basis_set_cell_associated)",
+      "dtypeStr": "r",
+      "name": "mapping_section_basis_set_cell_associated",
+      "referencedSections": [
+        "section_basis_set_cell_associated"
+      ],
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
       "description": "A debugging message of the computational program, associated with a single configuration calculation",
       "dtypeStr": "C",
       "name": "message_debug_evaluation",
@@ -1379,38 +1403,11 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom (as identified in section_atom).",
-      "dtypeStr": "r",
-      "name": "section_basis_set_atom_centered_mapping",
-      "referencedSections": [
-        "section_atom",
-        "section_basis_set_atom_centered"
-      ],
-      "shape": [
-        2,
-        "number_of_atoms"
-      ],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
       "description": "Each section_basis_set_atom_centered contains the definition of a specific atom centered basis set for a specific atom",
       "kindStr": "type_section",
       "name": "section_basis_set_atom_centered",
       "superNames": [
         "basis_set_description"
-      ]
-    }, {
-      "description": "Assignement, for each section_basis_set, of the cell associated (i.e., non atom centered) parts of the basis set (as given in section_basis_set_cell_associated)",
-      "dtypeStr": "r",
-      "name": "section_basis_set_cell_associated_mapping",
-      "referencedSections": [
-        "section_basis_set_cell_associated"
-      ],
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
       ]
     }, {
       "description": "A cell associated (atom independent) basis set, e.g., planewaves",
@@ -1497,8 +1494,7 @@
       "kindStr": "type_section",
       "name": "section_single_configuration_calculation",
       "superNames": [
-        "section_method",
-        "section_system_description"
+        "section_run"
       ]
     }, {
       "description": "Every section_system_description contains the properties required to describe the physical system simulated, i.e., the given atomic configuration, the definition of periodic cell (if present), external potentials,...",
@@ -1620,6 +1616,28 @@
       "superNames": [
         "settings_single_configuration_method",
         "section_method"
+      ]
+    }, {
+      "description": "Reference to the method used for the calculation",
+      "dtypeStr": "r",
+      "name": "single_configuration_calculation_method_ref",
+      "referencedSections": [
+        "section_method"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Reference to the system (atomic configuration, cell, ...) that is calculated",
+      "dtypeStr": "r",
+      "name": "single_configuration_calculation_system_description_ref",
+      "referencedSections": [
+        "section_system_description"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "References to the source of the data (uri,...)",
