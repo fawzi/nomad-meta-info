@@ -56,19 +56,19 @@
       ],
       "units": "N"
     }, {
-      "description": "Number of atoms of this kind",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "atom_kind_natoms",
-      "shape": [],
+      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with atom name plus possible a number, X can be used for particles that do not correspond to atoms. (this defines a configuration and is required).",
+      "dtypeStr": "C",
+      "name": "atom_label",
+      "shape": [
+        "number_of_atoms"
+      ],
       "superNames": [
-        "section_atom_kind"
+        "configuration_core"
       ]
     }, {
       "description": "Positions of the atoms (this defines a configuration and is required).",
       "dtypeStr": "f",
       "name": "atom_position",
-      "repeats": true,
       "shape": [
         "number_of_atoms",
         3
@@ -82,7 +82,7 @@
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
-        "n_k_point_segments",
+        "number_of_k_point_segments",
         "max_spin_channel",
         "n_k_points",
         "n_eigen_values"
@@ -95,7 +95,7 @@
       "dtypeStr": "f",
       "name": "band_k_points",
       "shape": [
-        "n_k_point_segments",
+        "number_of_k_point_segments",
         "n_k_points_per_segment",
         3
       ],
@@ -107,7 +107,7 @@
       "dtypeStr": "f",
       "name": "band_occupation",
       "shape": [
-        "n_k_point_segments",
+        "number_of_k_point_segments",
         "max_spin_channel",
         "n_k_points",
         "n_eigen_values"
@@ -120,7 +120,7 @@
       "dtypeStr": "C",
       "name": "band_segm_labels",
       "shape": [
-        "n_k_point_segments",
+        "number_of_k_point_segments",
         2
       ],
       "superNames": [
@@ -131,7 +131,7 @@
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [
-        "n_k_point_segments",
+        "number_of_k_point_segments",
         2,
         3
       ],
@@ -139,54 +139,12 @@
         "section_k_band"
       ]
     }, {
-      "description": "Reference to the basis calculation, used for perturbative methods.",
-      "dtypeStr": "r",
-      "name": "base_calculation_ref",
-      "referencedSections": [
-        "section_single_configuration_calculation"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Reference to the method of the basis calculation, used for perturbative methods.",
-      "dtypeStr": "r",
-      "name": "base_method_ref",
-      "referencedSections": [
-        "section_method"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
       "description": "Azimuthal quantum number ($l$) value (of the angular part given by the spherical harmonic $Y_{lm}$) of the basis function",
       "dtypeStr": "i",
       "name": "basis_set_atom_centered_ls",
       "shape": [
-        "basis_set_atom_centered_nkinds"
+        "number_of_kinds_in_basis_set_atom_centered"
       ],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-      "description": "Number of different basis functions in this set. This is equal to the number of actual coefficents that are specified when using this basis set.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "basis_set_atom_centered_nbasis_functions",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_atom_centered"
-      ]
-    }, {
-      "description": "Number of different kinds of radial basis functions in this set. In practice, all the basis functions with the same $n$ and $l$ quantum number, here are counted only once",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "basis_set_atom_centered_nkinds",
-      "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
@@ -195,7 +153,7 @@
       "dtypeStr": "f",
       "name": "basis_set_atom_centered_radial_functions",
       "shape": [
-        "basis_set_atom_centered_nkinds",
+        "number_of_kinds_in_basis_set_atom_centered",
         401,
         5
       ],
@@ -203,7 +161,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis_set_atom_centered_base_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_short_name",
       "shape": [],
@@ -211,7 +169,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_short_name and if not equal to the default basis set implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis_set_atom_centered_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-atom-centered-unique-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_short_name and if not equal to the default basis set implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-atom-centered-unique-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_unique_name",
       "shape": [],
@@ -219,15 +177,15 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "atom number of kind of atom this basis set is thought for (0 means unspecified, or a pseudo atom)",
+      "description": "atomic number (number of protons) of the atom this basis set is thought for (0 means unspecified, or a pseudo atom)",
       "dtypeStr": "i",
-      "name": "basis_set_atom_kind_number",
+      "name": "basis_set_atom_number",
       "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "A cell_associated basis set type, string should be as defined in the [basis_set_cell_associated_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-cell-associated-kind).",
+      "description": "A cell_associated basis set type, string should be as defined in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-cell-associated-kind).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_kind",
       "repeat": false,
@@ -236,7 +194,7 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A descriptive name identifying the basis set be as defined in the [basis_set_cell_associated_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-cell-associated-name).",
+      "description": "A descriptive name identifying the basis set be as defined in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-cell-associated-name).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_name",
       "repeat": false,
@@ -245,14 +203,14 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A basis set description",
+      "description": "Description of the building blocs of a basis set",
       "kindStr": "type_abstract_document_content",
       "name": "basis_set_description",
       "superNames": [
-        "section_method"
+        "section_run"
       ]
     }, {
-      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis_set_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-kind).",
+      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-kind).",
       "dtypeStr": "C",
       "name": "basis_set_kind",
       "shape": [],
@@ -260,7 +218,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "String identifying the basis set in an unique way. The values are described in the [basis_set_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-name).",
+      "description": "String identifying the basis set in an unique way. The values are described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set_name",
       "shape": [],
@@ -277,7 +235,7 @@
       ],
       "units": "J"
     }, {
-      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It should refer (and be the same) to some basis_set_name which is described in the [basis_set_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/basis-set-name).",
+      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It should refer (and be the same) to some basis_set_name which is described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set",
       "shape": [],
@@ -285,18 +243,34 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
-      "dtypeStr": "f",
-      "name": "cell",
-      "repeats": true,
-      "shape": [
-        3,
-        3
-      ],
+      "derived": true,
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative this string does not describe the source_method_ref. For normal ab-initio calculation for example this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-method-current) for the details",
+      "dtypeStr": "C",
+      "name": "calculation_method_current",
+      "repeats": false,
+      "shape": [],
       "superNames": [
-        "configuration_core"
-      ],
-      "units": "m"
+        "section_method"
+      ]
+    }, {
+      "description": "kind of method in calculation_method_current: absolute or perturbative",
+      "dtypeStr": "C",
+      "name": "calculation_method_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "derived": true,
+      "description": "String that uniquely represents the method used to calculate energy_total, this consists of calculation_method_current plus '@' and calculation_method of the source_method_ref for perturbative methods.",
+      "dtypeStr": "C",
+      "name": "calculation_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }, {
       "description": "Properties actually defining the current configuration",
       "kindStr": "type_abstract_document_content",
@@ -322,38 +296,20 @@
       "shape": [],
       "superNames": []
     }, {
-      "description": "Number of eigenvalues",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "eigenvalues_eigenvalues_number",
-      "shape": [],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
       "description": "Values of the eigenvalues",
       "dtypeStr": "f",
       "name": "eigenvalues_eigenvalues",
       "shape": [
-        "eigenvalues_kpoints_number",
-        "eigenvalues_eigenvalues_number"
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
       ],
       "superNames": [
         "section_eigenvalues"
       ]
     }, {
-      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/eigenvalues-kind).",
+      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/eigenvalues-kind).",
       "dtypeStr": "C",
       "name": "eigenvalues_kind",
-      "shape": [],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "description": "number of kpoints",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "eigenvalues_kpoints_number",
       "shape": [],
       "superNames": [
         "section_eigenvalues"
@@ -363,7 +319,7 @@
       "dtypeStr": "f",
       "name": "eigenvalues_kpoints",
       "shape": [
-        "eigenvalues_kpoints_number",
+        "number_of_eigenvalues_kpoints",
         3
       ],
       "superNames": [
@@ -374,8 +330,8 @@
       "dtypeStr": "f",
       "name": "eigenvalues_occupation",
       "shape": [
-        "eigenvalues_kpoints_number",
-        "eigenvalues_eigenvalues_number"
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
       ],
       "superNames": [
         "section_eigenvalues"
@@ -430,13 +386,13 @@
       "shape": [],
       "superNames": [
         "error_estimate_partial",
-        "energy",
+        "energy_value",
         "section_scf_iteration"
       ],
       "units": "J"
     }, {
       "dTypeStr": "C",
-      "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/Energy_Comparable.",
+      "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
       "name": "energy_comparable_type",
       "shape": [],
       "superNames": [
@@ -444,7 +400,7 @@
       ]
     }, {
       "dTypeStr": "f",
-      "description": "Value of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on https://nomad-dev.rz-berlin.mpg.de/wiki/MetaInfo/Energy_Comparable.",
+      "description": "Value of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
       "name": "energy_comparable_value",
       "shape": [],
       "superNames": [
@@ -458,7 +414,7 @@
       "name": "energy_component_per_atom",
       "shape": [],
       "superNames": [
-        "energy"
+        "energy_value"
       ]
     }, {
       "description": "A value of an energy component, expected to be an extensive property. ",
@@ -466,7 +422,7 @@
       "name": "energy_component",
       "shape": [],
       "superNames": [
-        "energy"
+        "energy_value"
       ]
     }, {
       "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Values during the scf iteration. Defined consistently with XC_method.",
@@ -513,7 +469,7 @@
       ],
       "units": "J"
     }, {
-      "description": "energy calculated with method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - base_calculation.energy_total) for preturbation methods. [energy-current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/energy-current)",
+      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - source_calculation_ref.energy_total) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-current)",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -536,7 +492,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total electrostatic energy (atom + electrons), defined consistently with method",
+      "description": "Total electrostatic energy (atom + electrons), defined consistently with calculation_method",
       "dtypeStr": "f",
       "name": "energy_electrostatic",
       "repeats": false,
@@ -599,7 +555,7 @@
       "shape": [],
       "superNames": [
         "error_estimate_partial",
-        "energy",
+        "energy_value",
         "section_scf_iteration"
       ],
       "units": "J"
@@ -611,8 +567,8 @@
       "shape": [],
       "superNames": [
         "error_estimate_partial",
-        "energy",
-        "section_single_configuration_calculation"
+        "section_single_configuration_calculation",
+        "energy_value"
       ],
       "units": "J"
     }, {
@@ -637,7 +593,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Energy of the method method_current. Depending on method kind it might be a total energy or only a correction",
+      "description": "Energy of the method calculation_method_current. Depending on calculation_method_kind it might be a total energy or only a correction",
       "dtypeStr": "f",
       "name": "energy_method_current",
       "repeats": false,
@@ -777,7 +733,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (electronic + ions) calculated with the method described in method",
+      "description": "Total energy (electronic + ions) calculated with the method described in calculation_method",
       "dtypeStr": "f",
       "name": "energy_total",
       "repeats": false,
@@ -832,7 +788,13 @@
       ],
       "units": "J"
     }, {
-      "description": "Method used to compute the van der Waals energy stored in energy_van_der_Waals_value",
+      "description": "Some energy value",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_value",
+      "shape": [],
+      "superNames": []
+    }, {
+      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value, which is an alternative to energy_van_der_Waals which is used in energy_current and related quantities",
       "dtypeStr": "C",
       "name": "energy_van_der_Waals_kind",
       "repeats": false,
@@ -841,7 +803,7 @@
         "section_energy_van_der_Waals"
       ]
     }, {
-      "description": "Some value of van der Waals energy calculated with the method described in energy_van_der_Waals_kind",
+      "description": "Value of van der Waals energy of kind energy_van_der_Waals_kind, which is an alternative to energy_van_der_Waals which is used in energy_current and related quantities",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals_value",
       "repeats": false,
@@ -852,7 +814,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_treatment",
+      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_method, and used in energy_current",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals",
       "repeats": false,
@@ -946,12 +908,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Some energy value",
-      "kindStr": "type_abstract_document_content",
-      "name": "energy",
-      "shape": [],
-      "superNames": []
-    }, {
       "description": "Some estimate of a quantity contributing to the error of some values",
       "kindStr": "type_abstract_document_content",
       "name": "error_estimate_partial",
@@ -968,35 +924,7 @@
         "error_estimate_partial"
       ]
     }, {
-      "description": "Method used to calculate the extra_stress_tensor (numeric or analytic)",
-      "dtypeStr": "C",
-      "name": "extra_stress_tensor_method",
-      "shape": [],
-      "superNames": [
-        "extra_stress_tensor_setting"
-      ]
-    }, {
-      "description": "Setting used to calculate the extra_stress_tensor",
-      "kindStr": "type_abstract_document_content",
-      "name": "extra_stress_tensor_setting",
-      "superNames": [
-        "section_extra_stress_tensor"
-      ]
-    }, {
-      "description": "Extra stress tensor",
-      "dtypeStr": "f",
-      "name": "extra_stress_tensor",
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "section_extra_stress_tensor",
-        "stress_tensor_type"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom (as identified in section_atom).",
+      "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
       "referencedSections": [
@@ -1115,44 +1043,32 @@
         "message_info"
       ]
     }, {
-      "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative this string does not describe the base_method_ref. For normal ab-initio calculation for example this is composed of XC_method and basis_set and a unique sha,  see [method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/method-current) for the details",
+      "description": "Atomic number (number of protons) of this atom kind, use 0 if not an atom.",
       "dtypeStr": "C",
-      "name": "method_current",
-      "repeats": false,
+      "name": "method_atom_kind_atom_number",
       "shape": [],
       "superNames": [
-        "settings_method",
-        "section_method"
+        "section_method_atom_kind"
       ]
     }, {
-      "description": "kind of method in method_current: absolute or perturbative",
+      "description": "String used to identify the atoms of this kind. This should correspond to the atom_label of the configuration. It is possible for one atom kind to have multiple labels.",
       "dtypeStr": "C",
-      "name": "method_kind",
-      "repeats": false,
+      "name": "method_atom_kind_label",
+      "repeats": true,
       "shape": [],
       "superNames": [
-        "settings_method",
-        "section_method"
+        "section_method_atom_kind"
       ]
     }, {
-      "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total, this consists of method_current plus '@' and method of the base_method_ref for perturbative methods.",
-      "dtypeStr": "C",
-      "name": "method",
-      "repeats": false,
+      "description": "Reference to the atom centered wavefunctions basis functions that should be used for the atoms of this kind.",
+      "dtypeStr": "r",
+      "name": "method_atom_kind_wavefunctions_basis_set_ref",
+      "referencedSections": [
+        "section_basis_set_atom_centered"
+      ],
       "shape": [],
       "superNames": [
-        "settings_single_configuration_method"
-      ]
-    }, {
-      "description": "number of k point segments",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "n_k_point_segments",
-      "shape": [],
-      "superNames": [
-        "section_k_band"
+        "section_method_atom_kind"
       ]
     }, {
       "description": "number of k points in each segment",
@@ -1171,6 +1087,60 @@
       "shape": [],
       "superNames": [
         "section_system_description"
+      ]
+    }, {
+      "description": "Number of different basis functions in this set. This is equal to the number of actual coefficents that are specified when using this basis set.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_basis_functions_in_basis_set_atom_centered",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "Total number of basis functions (some might need complex coefficients).",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_basis_functions",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "number of kpoints",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_eigenvalues_kpoints",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Number of eigenvalues",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "number of k point segments",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_k_point_segments",
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Number of different kinds of radial basis functions in this set. In practice, all the basis functions with the same $n$ and $l$ quantum number, here are counted only once",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_kinds_in_basis_set_atom_centered",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_atom_centered"
       ]
     }, {
       "description": "Information on the parallelization of the program",
@@ -1330,11 +1300,10 @@
         "program_info"
       ]
     }, {
-      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity_treatment wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/relativity-treatment).",
-      "name": "relativity_treatment",
+      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/relativity-method).",
+      "name": "relativity_method",
       "superNames": [
-        "settings_relativity_treatment",
-        "section_method"
+        "settings_relativity"
       ]
     }, {
       "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
@@ -1373,34 +1342,11 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_atom_kind contains information about a different kind of atom, and is identified by a unique string. This categorisation into atom kinds is more flexible than just atomic species, becasue to different atoms of the same species different atom centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_atom_kind.",
-      "kindStr": "type_section",
-      "name": "section_atom_kind",
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "Every section_atom represents a single atom. It can be a real atom or also a ghost (used for bsse correction).",
-      "kindStr": "type_section",
-      "name": "section_atom",
-      "superNames": [
-        "section_atom_kind"
-      ]
-    }, {
       "description": "Description of one or a sub group of basis functions in this basis set",
       "kindStr": "type_section",
       "name": "section_basis_functions_atom_centered",
       "superNames": [
         "section_basis_set_atom_centered"
-      ]
-    }, {
-      "description": "Total number of basis functions (some might need complex coefficients).",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "section_basis_nbasis_functions",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
       ]
     }, {
       "description": "Each section_basis_set_atom_centered contains the definition of a specific atom centered basis set for a specific atom",
@@ -1438,24 +1384,17 @@
         "section_eigenvalues_group"
       ]
     }, {
-      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy-comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/energy-comparable).",
+      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy-comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
       "kindStr": "type_section",
       "name": "section_energy_comparable",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section containing some van der Waals energy value",
+      "description": "Section containing a van der Waals energy value of type van_der_Waals_kind, which is an alternative to energy_van_der_Waals which is used in energy_current and related values",
       "kindStr": "type_section",
       "name": "section_energy_van_der_Waals",
       "repeats": true,
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Section to keep extra stress tensors that have been calculated",
-      "kindStr": "type_section",
-      "name": "section_extra_stress_tensor",
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1468,7 +1407,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_method section contains the various parameters that define the theory used and the approximations done (convergence, thresholds,...)",
+      "description": "Every section_method_atom_kind contains method related information about a kind of atom, and is identified by one or more string method_atom_kind_label. This categorisation into atom kinds is more flexible than just atomic species, because to different atoms of the same species different atom centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_method_atom_kind.",
+      "kindStr": "type_section",
+      "name": "section_method_atom_kind",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "section_method contains the various parameters that define the theory used and the approximations done (convergence, thresholds,...) to perform a single configuration calculation. It does *not* contain the settings for dynamics, goemetry optimization,...",
       "kindStr": "type_section",
       "name": "section_method",
       "superNames": [
@@ -1497,6 +1443,13 @@
         "section_run"
       ]
     }, {
+      "description": "Section to keep alternative values to stress_tensor that have been calculated",
+      "kindStr": "type_section",
+      "name": "section_stress_tensor",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Every section_system_description contains the properties required to describe the physical system simulated, i.e., the given atomic configuration, the definition of periodic cell (if present), external potentials,...",
       "kindStr": "type_section",
       "name": "section_system_description",
@@ -1504,18 +1457,10 @@
         "section_run"
       ]
     }, {
-      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self\\_interaction\\_correction wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/self-interaction-correction).",
-      "name": "self_interaction_correction",
+      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/self-interaction-correction-method).",
+      "name": "self_interaction_correction_method",
       "superNames": [
-        "settings_XC",
-        "section_method"
-      ]
-    }, {
-      "description": "parameters of one atom kind",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_atom_kind",
-      "superNames": [
-        "settings_single_configuration_method"
+        "settings_self_interaction_correction"
       ]
     }, {
       "description": "Coupled Clusters method parameters",
@@ -1539,14 +1484,6 @@
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "Parameters that control the simulation and are in the method section",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_method",
-      "superNames": [
-        "settings_simulation",
-        "section_method"
-      ]
-    }, {
       "description": "Møller–Plesset perturbation theory parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_moller_plesset_perturbation_theory",
@@ -1565,14 +1502,21 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_post_hartree_fock",
       "superNames": [
-        "settings_single_configuration_method"
+        "settings_XC"
       ]
     }, {
       "description": "Parameters and information connected with the relativity treatment used in the calculation",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_relativity_treatment",
+      "name": "settings_relativity",
       "superNames": [
         "settings_XC"
+      ]
+    }, {
+      "description": "Parameters that control the whole run (but not the single configuration calculation)",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_run",
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "Parameters and information connected with self interaction correction (SIC) method used",
@@ -1582,22 +1526,16 @@
         "settings_XC"
       ]
     }, {
-      "description": "Parameters that control the simulation",
+      "description": "Setting to calculate stress_tensor with respect to energy_total and orbitals",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_simulation",
-      "superNames": []
-    }, {
-      "description": "Method parameters that control single configuration calculation. This covers things like the theory level, but not the temperature of an molecular dynamics.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_single_configuration_method",
+      "name": "settings_stress_tensor",
       "superNames": [
-        "settings_simulation",
         "section_method"
       ]
     }, {
-      "description": "Parameters and information connected with the van der Waals treatment used in the calculation",
+      "description": "Parameters and information connected with the van der Waals treatment used in the calculation to compute energy_van_der_Waals",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_van_der_Waals_treatment",
+      "name": "settings_van_der_Waals",
       "superNames": [
         "settings_XC"
       ]
@@ -1606,17 +1544,28 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC_functional",
       "superNames": [
-        "settings_XC",
-        "section_method"
+        "settings_XC"
       ]
     }, {
       "description": "Parameters connected with defining the exchange correlation (XC) treatment",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
       "superNames": [
-        "settings_single_configuration_method",
         "section_method"
       ]
+    }, {
+      "description": "Simulation cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
+      "dtypeStr": "f",
+      "name": "simulation_cell",
+      "repeats": true,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
     }, {
       "description": "Reference to the method used for the calculation",
       "dtypeStr": "r",
@@ -1638,6 +1587,30 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Reference to the source calculation, used for perturbative methods.",
+      "dtypeStr": "r",
+      "name": "source_calculation_ref",
+      "referencedSections": [
+        "section_single_configuration_calculation"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Reference to the method of the source calculation, used for perturbative methods.",
+      "dtypeStr": "r",
+      "name": "source_method_ref",
+      "referencedSections": [
+        "section_method"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "References to the source of the data (uri,...)",
@@ -1664,20 +1637,12 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Method used to calculate the stress_tensor (numeric or analytic).",
+      "description": "Method used to calculate stress_tensor, the value of which is used (if needed) for dynamics, geometry minimization,...  The value should be with numeric or analytic.",
       "dtypeStr": "C",
       "name": "stress_tensor_method",
       "shape": [],
       "superNames": [
-        "section_method",
-        "stress_tensor_setting"
-      ]
-    }, {
-      "description": "Setting to calculate stress_tensor with respect to energy_total and orbitals",
-      "kindStr": "type_abstract_document_content",
-      "name": "stress_tensor_setting",
-      "superNames": [
-        "section_single_configuration_calculation"
+        "settings_stress_tensor"
       ]
     }, {
       "description": "A final value of a stress tensor",
@@ -1689,7 +1654,20 @@
       ],
       "superNames": []
     }, {
-      "description": "A final value of the default stress tensor of energy_total calculated with stress_tensor_setting",
+      "description": "Stress tensor of kind stress_tensor_kind, which is an *alternative* to the one choosen in stress_tensor_method which is stored in stress_tensor and (if needed) used for dynamics, minimization,...",
+      "dtypeStr": "f",
+      "name": "stress_tensor_value",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_stress_tensor",
+        "stress_tensor_type"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "A final value of the default stress tensor of energy_total calculated with stress_tensor_method",
       "dtypeStr": "f",
       "name": "stress_tensor",
       "shape": [
@@ -1707,11 +1685,10 @@
       "name": "target_spin_quantum_number",
       "shape": [],
       "superNames": [
-        "section_method",
-        "settings_single_configuration_method"
+        "section_method"
       ]
     }, {
-      "description": "Wall time needed for a calculation, using method",
+      "description": "Wall time needed for a calculation, using calculation_method_current",
       "dtypeStr": "f",
       "name": "time_calculation",
       "repeats": true,
@@ -1927,15 +1904,24 @@
       ],
       "units": "s"
     }, {
-      "description": "Short string describing the van der Waals treatment. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_treatment wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/van-der-Waals-treatment).",
+      "description": "Short string describing the van der Waals treatment. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/van-der-Waals-method).",
       "dtypeStr": "C",
-      "name": "van_der_Waals_treatment",
+      "name": "van_der_Waals_method",
       "shape": [],
       "superNames": [
-        "settings_van_der_Waals_treatment"
+        "settings_van_der_Waals"
       ]
     }, {
-      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-lab-base/wikis/metainfo/XC-functional).",
+      "description": "Reference to the cell associated basis function to use for the wavefunctions.",
+      "dtypeStr": "r",
+      "name": "wavefunctions_basis_set_cell_associated_ref",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional",
       "repeats": false,
@@ -1945,25 +1931,23 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the base_method_ref for perturbative methods.",
+      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the source_method_ref for perturbative methods.",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC",
-        "section_method"
+        "settings_XC"
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. Built joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction '_' van_der_Waals_treatment '_' relativity_treatment. Finally a '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all non redundant non derived settings_XC appended to make the string unique for every setting. With empty strings the connecting character is skipped. If done perturbatively this writes only the perturbation method, not the reference.",
+      "description": "Exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. Built joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. Finally a '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all non redundant non derived settings_XC appended to make the string unique for every setting. With empty strings the connecting character is skipped. If done perturbatively this writes only the perturbation method, not the reference.",
       "dtypeStr": "C",
       "name": "XC_method_current",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC",
-        "section_method"
+        "settings_XC"
       ]
     }]
 }
