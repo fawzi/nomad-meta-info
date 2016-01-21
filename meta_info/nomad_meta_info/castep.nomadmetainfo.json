@@ -183,6 +183,14 @@
         "section_system_description"
       ]
     }, {
+      "description": "Temporary storing atom labels",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_label",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
       "description": "Temporary storing eigenvalues",
       "dtypeStr": "f",
       "name": "castep_store_eigenvalues",
@@ -197,6 +205,14 @@
       "shape": [],
       "superNames": [
         "castep_section_k_points"
+      ]
+    }, {
+      "description": "Temporary storing plane wave cutoff as string",
+      "dtypeStr": "C",
+      "name": "castep_basis_set_plan_wave_cutoff",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_cell_associated"
       ]
     }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
@@ -240,7 +256,7 @@
       "kindStr": "type_section",
       "name": "castep_section_functionals",
       "superNames": [
-        "section_run"
+        "section_method"
       ]
     }, {
       "description": "-",
