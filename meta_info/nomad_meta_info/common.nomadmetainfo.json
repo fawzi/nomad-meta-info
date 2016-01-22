@@ -244,7 +244,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative this string does not describe the source_method_ref. For normal ab-initio calculation for example this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-method-current) for the details",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting_point_method_ref. For normal ab-initio calculation, for example, this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-method-current) for the details",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -263,7 +263,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total, this consists of calculation_method_current plus '@' and calculation_method of the source_method_ref for perturbative methods.",
+      "description": "String that uniquely represents the method used to calculate energy_total, this consists of calculation_method_current plus '@' and calculation_method of the starting_point_method_ref for perturbative methods.",
       "dtypeStr": "C",
       "name": "calculation_method",
       "repeats": false,
@@ -393,7 +393,7 @@
     }, {
       "dTypeStr": "C",
       "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
-      "name": "energy_comparable_type",
+      "name": "energy_comparable_kind",
       "shape": [],
       "superNames": [
         "section_energy_comparable"
@@ -469,7 +469,7 @@
       ],
       "units": "J"
     }, {
-      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - source_calculation_ref.energy_total) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-current)",
+      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - starting_point_calculation_ref.energy_total) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-current)",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -794,7 +794,7 @@
       "shape": [],
       "superNames": []
     }, {
-      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value, which is an alternative to energy_van_der_Waals which is used in energy_current and related quantities",
+      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals",
       "dtypeStr": "C",
       "name": "energy_van_der_Waals_kind",
       "repeats": false,
@@ -803,7 +803,7 @@
         "section_energy_van_der_Waals"
       ]
     }, {
-      "description": "Value of van der Waals energy of kind energy_van_der_Waals_kind, which is an alternative to energy_van_der_Waals which is used in energy_current and related quantities",
+      "description": "Value of van der Waals energy, calculated with the method defined in energy_van_der_Waals_kind. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals_value",
       "repeats": false,
@@ -814,7 +814,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_method, and used in energy_current",
+      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_method, and used in energy_current. This is the main van der Waals method (consistent with, e.g., forces used for relaxation or dynamics). Alternative methods are listed in section_energy_van_der_Waals.",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals",
       "repeats": false,
@@ -1391,7 +1391,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section containing a van der Waals energy value of type van_der_Waals_kind, which is an alternative to energy_van_der_Waals which is used in energy_current and related values",
+      "description": "Section containing a van der Waals energy value energy_van_der_Waals_value, of type van_der_Waals_kind. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
       "kindStr": "type_section",
       "name": "section_energy_van_der_Waals",
       "repeats": true,
@@ -1526,7 +1526,7 @@
         "settings_XC"
       ]
     }, {
-      "description": "Setting to calculate stress_tensor with respect to energy_total and orbitals",
+      "description": "Setting to calculate stress_tensor, consistent with energy_total.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_stress_tensor",
       "superNames": [
@@ -1589,30 +1589,6 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Reference to the source calculation, used for perturbative methods.",
-      "dtypeStr": "r",
-      "name": "source_calculation_ref",
-      "referencedSections": [
-        "section_single_configuration_calculation"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Reference to the method of the source calculation, used for perturbative methods.",
-      "dtypeStr": "r",
-      "name": "source_method_ref",
-      "referencedSections": [
-        "section_method"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
       "description": "References to the source of the data (uri,...)",
       "dtypeStr": "C",
       "name": "source_references",
@@ -1637,6 +1613,38 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Reference to the starting point (unperturbed) calculation, onto which the perturbative methods are constructed.",
+      "dtypeStr": "r",
+      "name": "starting_point_calculation_ref",
+      "referencedSections": [
+        "section_single_configuration_calculation"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Reference to the method of the starting point (unperturbed) calculation, onto which the perturbative methods are constructed.",
+      "dtypeStr": "r",
+      "name": "starting_point_method_ref",
+      "referencedSections": [
+        "section_method"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method. The value of the latter is stored in stress_tensor and (if needed) it is the one used for dynamics, minimization,...",
+      "dtypeStr": "C",
+      "name": "stress_tensor_kind",
+      "shape": [],
+      "superNames": [
+        "section_stress_tensor"
+      ]
+    }, {
       "description": "Method used to calculate stress_tensor, the value of which is used (if needed) for dynamics, geometry minimization,...  The value should be with numeric or analytic.",
       "dtypeStr": "C",
       "name": "stress_tensor_method",
@@ -1654,7 +1662,7 @@
       ],
       "superNames": []
     }, {
-      "description": "Stress tensor of kind stress_tensor_kind, which is an *alternative* to the one choosen in stress_tensor_method which is stored in stress_tensor and (if needed) used for dynamics, minimization,...",
+      "description": "Stress tensor of kind stress_tensor_kind, which is an *alternative* to the one chosen in stress_tensor_method. The value of the latter is stored in stress_tensor and (if needed) it is the one used for dynamics, minimization,...",
       "dtypeStr": "f",
       "name": "stress_tensor_value",
       "shape": [
@@ -1904,7 +1912,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Short string describing the van der Waals treatment. No treatement if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/van-der-Waals-method).",
+      "description": "Short string describing the van der Waals method. No such method, if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/van-der-Waals-method).",
       "dtypeStr": "C",
       "name": "van_der_Waals_method",
       "shape": [],
@@ -1931,7 +1939,7 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the source_method_ref for perturbative methods.",
+      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the starting_point_method_ref for perturbative methods.",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
