@@ -99,7 +99,7 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "fhi_aims_controlIn_relativistic_zora",
+      "name": "fhi_aims_controlIn_relativistic_label",
       "shape": [],
       "superNames": [
         "fhi_aims_section_controlIn"
@@ -193,6 +193,68 @@
         "fhi_aims_section_eigenvalues_list"
       ],
       "units": "J"
+    }, {
+      "description": "x component of lattice vector",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_lattice_vector_x",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of lattice vector",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_lattice_vector_y",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of lattice vector",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_lattice_vector_z",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "fhi_aims_geometry_atom_label",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_position_x",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_position_y",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_position_z",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
     }, {
       "description": "Component 1 of kpoints on which the eigenvalues were evaluated",
       "dtypeStr": "f",
@@ -375,13 +437,6 @@
       "name": "fhi_aims_section_eigenvalues_spin",
       "superNames": [
         "fhi_aims_section_eigenvalues_group"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "fhi_aims_section_geometryIn",
-      "superNames": [
-        "section_run"
       ]
     }, {
       "description": "-",
