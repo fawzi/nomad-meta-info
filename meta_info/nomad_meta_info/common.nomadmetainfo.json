@@ -1597,6 +1597,15 @@
         "section_run"
       ]
     }, {
+      "derived": true,
+      "description": "International Union of Crystallography number of the 3D space group",
+      "dtypeStr": "i",
+      "name": "spacegroup_3D_number",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
       "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method. Can be used to calculate the spin contamination in spin unrestricted calculations.",
       "dtypeStr": "f",
       "name": "spin_S2_scf_iteration",
