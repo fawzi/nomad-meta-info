@@ -7,103 +7,94 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "cp2k_run_start_date",
-      "shape": [],
+      "description": "The DBCSR (Distributed Block Compressed Sparse Row) information.",
+      "name": "cp2k_section_dbcsr",
+      "kindStr": "type_section",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "-",
+      "description": "Contains information about the starting conditions for this run.",
+      "name": "cp2k_section_startinformation",
+      "kindStr": "type_section",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "The time when this run was started.",
       "dtypeStr": "C",
       "name": "cp2k_run_start_time",
       "shape": [],
       "superNames": [
-        "section_run"
+        "cp2k_section_startinformation"
       ]
     }, {
-      "description": "-",
+      "description": "The date when this run was started.",
+      "dtypeStr": "C",
+      "name": "cp2k_run_start_date",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "Contains information about the software version used for this run.",
+      "name": "cp2k_section_programinformation",
+      "kindStr": "type_section",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "The SVN revision number.",
       "dtypeStr": "i",
       "name": "cp2k_svn_revision",
       "shape": [],
       "superNames": [
-        "section_run"
+        "cp2k_section_programinformation"
       ]
     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "cp2k_system_description",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
+      "description": "Information about the cell used in the simulation.",
       "kindStr": "type_section",
       "name": "cp2k_section_cell",
       "superNames": [
-        "cp2k_system_description"
+        "section_run"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "cp2k_section_atom_position",
+      "name": "cp2k_section_functional",
       "superNames": [
-        "cp2k_system_description"
+        "section_run"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "cp2k_cell_vector_a",
+      "repeats": true,
+      "name": "cp2k_functional_name",
       "shape": [],
       "superNames": [
-        "cp2k_section_cell"
+        "cp2k_section_functional"
       ]
     }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "cp2k_cell_vector_b",
-      "shape": [],
-      "superNames": [
-        "cp2k_section_cell"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "cp2k_cell_vector_c",
-      "shape": [],
-      "superNames": [
-        "cp2k_section_cell"
-      ]
-    }, {
-      "description": "-",
+      "description": "The total number of different entities in the calculation.",
       "kindStr": "type_section",
-      "name": "cp2k_section_numbers",
+      "name": "cp2k_section_total_numbers",
       "superNames": [
-        "cp2k_system_description"
+        "section_run"
       ]
     }, {
-      "description": "-",
+      "description": "The number of shell sets in the calculation.",
       "dtypeStr": "i",
       "name": "cp2k_shell_sets",
       "shape": [],
       "superNames": [
-        "cp2k_section_numbers"
+        "cp2k_section_total_numbers"
       ]
     }, {
-      "description": "-",
-      "dtypeStr": "i",
-      "name": "cp2k_atom_number",
-      "shape": [],
-      "superNames": [
-        "cp2k_section_numbers"
-      ]
-    }, {
-      "description": "-",
+      "description": "Information about the atoms in a Quickstep calculation.",
       "kindStr": "type_section",
-      "name": "cp2k_section_functionals",
+      "name": "cp2k_section_quickstep_atom_information",
       "superNames": [
-        "cp2k_system_description"
+        "section_run"
       ]
     }, {
       "description": "Section grouping together the quantities calculated during an MD.",
@@ -228,15 +219,6 @@
       "shape": ["atom_number", 3],
       "superNames": [
         "cp2k_section_md_step"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "repeats": true,
-      "name": "cp2k_functional_name",
-      "shape": [],
-      "superNames": [
-        "cp2k_section_functionals"
       ]
     }]
 }
