@@ -78,6 +78,36 @@
       ],
       "units": "m"
     }, {
+      "description": "string describing the method used to obtain the multipoles as described in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/atomic-multipole-kind)",
+      "dtypeStr": "C",
+      "name": "atomic_multipole_kind",
+      "shape": [],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
+      "description": "l and m value of the multipoles",
+      "dtypeStr": "i",
+      "name": "atomic_multipole_lm",
+      "shape": [
+        2,
+        "section_atomic_multipoles"
+      ],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
+      "description": "value of the dipole (or monopole/charge for l = 0) of each atom calculated of atomic_multipole_kind",
+      "dtypeStr": "f",
+      "name": "atomic_multipole_value",
+      "shape": [
+        "number_of_atomic_multipoles",
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
       "description": "k band energies",
       "dtypeStr": "f",
       "name": "band_energies",
@@ -1080,6 +1110,15 @@
         "section_k_band"
       ]
     }, {
+      "description": "string describing the method used to obtain the multipoles",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_atomic_multipoles",
+      "shape": [],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
       "description": "Total number of atoms",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1338,6 +1377,13 @@
       "name": "scf_info",
       "repeats": true,
       "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "multipoles (charges, dipole,...) for each atom",
+      "kindStr": "type_section",
+      "name": "section_atomic_multipoles",
       "superNames": [
         "section_single_configuration_calculation"
       ]
