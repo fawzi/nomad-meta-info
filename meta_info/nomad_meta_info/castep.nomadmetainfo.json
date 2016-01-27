@@ -207,6 +207,22 @@
         "castep_section_k_points"
       ]
     }, {
+      "description": "Temporary storing eigenvalues",
+      "dtypeStr": "f",
+      "name": "castep_store_eigenvalues_1",
+      "shape": [],
+      "superNames": [
+        "castep_section_eigenvalues_1"
+      ]
+    }, {
+      "description": "Temporary storing k points coordinates (fractional)",
+      "dtypeStr": "C",
+      "name": "castep_store_k_points_1",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_points_1"
+      ]
+    }, {
       "description": "Temporary storing plane wave cutoff as string",
       "dtypeStr": "C",
       "name": "castep_basis_set_plan_wave_cutoff",
@@ -214,7 +230,45 @@
       "superNames": [
         "section_basis_set_cell_associated"
       ]
+    },
+
+
+       {
+      "description": "Number of k points used in the band structure calculation",
+      "dtypeStr": "f",
+      "name": "castep_number_of_band_kpoints",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
+      ]
     }, {
+      "description": "Number of eigenvalues used in the band structure calculation",
+      "dtypeStr": "f",
+      "name": "castep_number_of_band_energies",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_band_energies",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_band_kpoints",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
+      ]
+    },
+
+
+       {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
       "dtypeStr": "f",
       "name": "energy_total_scf_iteration_list",
@@ -247,7 +301,35 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "castep_section_atom_forces",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_band_group",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_band",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "castep_section_eigenvalues",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_eigenvalues_1",
       "superNames": [
         "section_eigenvalues"
       ]
@@ -262,6 +344,13 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_k_points",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_points_1",
       "superNames": [
         "section_eigenvalues"
       ]
