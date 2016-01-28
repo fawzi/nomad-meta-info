@@ -12,7 +12,16 @@
       "name": "fhi_aims_controlIn_charge",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlIn_hse_omega",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlIn_method",
+        "settings_XC_functional"
       ]
     }, {
       "description": "-",
@@ -20,7 +29,8 @@
       "name": "fhi_aims_controlIn_hse_unit",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method",
+        "settings_XC_functional"
       ]
     }, {
       "description": "-",
@@ -28,7 +38,7 @@
       "name": "fhi_aims_controlIn_k1",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -36,7 +46,7 @@
       "name": "fhi_aims_controlIn_k2",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -44,7 +54,7 @@
       "name": "fhi_aims_controlIn_k3",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -54,7 +64,23 @@
         3
       ],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlIn_MD_time_step",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlIn_run"
+      ],
+      "units": "s"
+    }, {
+      "description": "Parameters of control.in belonging to section method.",
+      "kindStr": "type_abstract_document_content",
+      "name": "fhi_aims_controlIn_method",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "-",
@@ -62,7 +88,7 @@
       "name": "fhi_aims_controlIn_occupation_order",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -70,7 +96,7 @@
       "name": "fhi_aims_controlIn_occupation_type",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -78,7 +104,7 @@
       "name": "fhi_aims_controlIn_occupation_width",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -86,7 +112,8 @@
       "name": "fhi_aims_controlIn_override_relativity",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "settings_relativity",
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -94,15 +121,8 @@
       "name": "fhi_aims_controlIn_relativistic_threshold",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "fhi_aims_controlIn_relativistic_label",
-      "shape": [],
-      "superNames": [
-        "fhi_aims_section_controlIn"
+        "settings_relativity",
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -110,7 +130,15 @@
       "name": "fhi_aims_controlIn_relativistic",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "settings_relativity",
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "Parameters of control.in belonging to settings run.",
+      "kindStr": "type_abstract_document_content",
+      "name": "fhi_aims_controlIn_run",
+      "superNames": [
+        "settings_run"
       ]
     }, {
       "description": "-",
@@ -118,7 +146,7 @@
       "name": "fhi_aims_controlIn_sc_accuracy_eev",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -126,7 +154,7 @@
       "name": "fhi_aims_controlIn_sc_accuracy_etot",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -134,7 +162,7 @@
       "name": "fhi_aims_controlIn_sc_accuracy_forces",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -142,7 +170,7 @@
       "name": "fhi_aims_controlIn_sc_accuracy_rho",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -150,7 +178,7 @@
       "name": "fhi_aims_controlIn_sc_accuracy_stress",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -158,7 +186,7 @@
       "name": "fhi_aims_controlIn_sc_iter_limit",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -166,15 +194,7 @@
       "name": "fhi_aims_controlIn_spin",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "f",
-      "name": "fhi_aims_controlIn_xc_omega",
-      "shape": [],
-      "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method"
       ]
     }, {
       "description": "-",
@@ -182,7 +202,119 @@
       "name": "fhi_aims_controlIn_xc",
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlIn"
+        "fhi_aims_controlIn_method",
+        "settings_XC_functional"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_hse_omega",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method",
+        "settings_XC_functional"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_hse_unit",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method",
+        "settings_XC_functional"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlInOut_k1",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlInOut_k2",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlInOut_k3",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlInOut_k_grid",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_MD_time_step",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_run"
+      ],
+      "units": "s"
+    }, {
+      "description": "Parameters of aims output of parsed control.in belonging to section method.",
+      "kindStr": "type_abstract_document_content",
+      "name": "fhi_aims_controlInOut_method",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_override_relativity",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method",
+        "settings_relativity"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_relativistic_threshold",
+      "shape": [],
+      "superNames": [
+        "settings_relativity",
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_relativistic",
+      "shape": [],
+      "superNames": [
+        "settings_relativity",
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "Parameters of aims output of parsed control.in belonging to settings run.",
+      "kindStr": "type_abstract_document_content",
+      "name": "fhi_aims_controlInOut_run",
+      "superNames": [
+        "settings_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_xc",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method",
+        "settings_XC_functional"
       ]
     }, {
       "description": "Single eigenvalue",
@@ -193,68 +325,6 @@
         "fhi_aims_section_eigenvalues_list"
       ],
       "units": "J"
-    }, {
-      "description": "x component of lattice vector",
-      "dtypeStr": "f",
-      "name": "fhi_aims_geometry_lattice_vector_x",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "y component of lattice vector",
-      "dtypeStr": "f",
-      "name": "fhi_aims_geometry_lattice_vector_y",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "z component of lattice vector",
-      "dtypeStr": "f",
-      "name": "fhi_aims_geometry_lattice_vector_z",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "labels of atom",
-      "dtypeStr": "C",
-      "name": "fhi_aims_geometry_atom_label",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "x component of atomic position",
-      "dtypeStr": "f",
-      "name": "fhi_aims_geometry_atom_position_x",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "y component of atomic position",
-      "dtypeStr": "f",
-      "name": "fhi_aims_geometry_atom_position_y",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "z component of atomic position",
-      "dtypeStr": "f",
-      "name": "fhi_aims_geometry_atom_position_z",
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
     }, {
       "description": "Component 1 of kpoints on which the eigenvalues were evaluated",
       "dtypeStr": "f",
@@ -330,6 +400,76 @@
       ],
       "units": "J"
     }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "fhi_aims_geometry_atom_label",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_position_x",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_position_y",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_position_z",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "x component of lattice vector",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_lattice_vector_x",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of lattice vector",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_lattice_vector_y",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of lattice vector",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_lattice_vector_z",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_MD_flag",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_number_of_tasks",
@@ -402,20 +542,6 @@
       "superNames": [
         "time_info",
         "section_scf_iteration"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "fhi_aims_section_controlIn",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "fhi_aims_section_controlOut",
-      "superNames": [
-        "section_run"
       ]
     }, {
       "description": "section for full list of k-points for different spin and kpoints",
