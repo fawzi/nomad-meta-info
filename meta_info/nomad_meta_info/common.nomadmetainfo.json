@@ -567,7 +567,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method",
+      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density calculated with smearing_kind) calculated with the method described in XC_method",
       "dtypeStr": "f",
       "name": "energy_free",
       "repeats": false,
@@ -1572,6 +1572,13 @@
         "settings_XC"
       ]
     }, {
+      "description": "Parameters controlling the smearing of the orbital occupation (finite electronic temperature)",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_smearing",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Setting to calculate stress_tensor, consistent with energy_total.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_stress_tensor",
@@ -1633,6 +1640,22 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "The kind of smearing on the electron occupation used to calculate energy_free, valid values are given in the [smearing\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/smearing-kind)",
+      "dtypeStr": "C",
+      "name": "smearing_kind",
+      "shape": [],
+      "superNames": [
+        "settings_smearing"
+      ]
+    }, {
+      "description": "The width of the smearing in energy for the electon occupation used to calculate energy_free (if the method specified in smearing_kind uses it)",
+      "dtypeStr": "f",
+      "name": "smearing_width",
+      "shape": [],
+      "superNames": [
+        "settings_smearing"
       ]
     }, {
       "description": "References to the source of the data (uri,...)",
