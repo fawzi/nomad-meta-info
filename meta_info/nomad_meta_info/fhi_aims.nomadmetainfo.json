@@ -540,6 +540,14 @@
       ],
       "units": "m"
     }, {
+      "description": "Determines whether a geoemtry optimization is converged.",
+      "dtypeStr": "C",
+      "name": "fhi_aims_geometry_optimization_converged",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_MD_flag",
@@ -600,14 +608,6 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_program_execution_time",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Determines whether a run is converged.",
-      "dtypeStr": "C",
-      "name": "fhi_aims_run_converged",
       "shape": [],
       "superNames": [
         "section_run"
@@ -704,7 +704,7 @@
       "name": "fhi_aims_single_configuration_calculation_converged",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }]
 }

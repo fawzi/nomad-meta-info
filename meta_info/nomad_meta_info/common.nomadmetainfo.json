@@ -953,6 +953,14 @@
         "error_estimate_partial"
       ]
     }, {
+      "description": "Determines whether a geometry optimization is converged.",
+      "dtypeStr": "b",
+      "name": "geometry_optimization_converged",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
@@ -1347,14 +1355,6 @@
       "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
       "dtypeStr": "b",
       "name": "run_clean_end",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Determines whether a run is converged.",
-      "dtypeStr": "b",
-      "name": "run_converged",
       "shape": [],
       "superNames": [
         "section_run"
