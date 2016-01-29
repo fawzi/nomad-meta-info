@@ -10,6 +10,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_charge",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -18,6 +19,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_hse_omega",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method",
@@ -27,6 +29,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_hse_unit",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method",
@@ -36,6 +39,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k1",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -44,6 +48,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k2",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -52,6 +57,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k3",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -70,6 +76,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_MD_time_step",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_run"
@@ -86,6 +93,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_occupation_order",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -94,6 +102,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_occupation_type",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -102,6 +111,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_occupation_width",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -110,6 +120,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_override_relativity",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -119,6 +130,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_relativistic_threshold",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -128,6 +140,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_relativistic",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -144,6 +157,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_eev",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -152,6 +166,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_etot",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -160,6 +175,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_forces",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -168,6 +184,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_rho",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -176,6 +193,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_stress",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -184,6 +202,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_sc_iter_limit",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -192,6 +211,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_spin",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -200,6 +220,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_xc",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method",
@@ -209,6 +230,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_hse_omega",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -218,6 +240,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_hse_unit",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -227,6 +250,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k1",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
@@ -235,6 +259,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k2",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
@@ -243,6 +268,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k3",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
@@ -261,6 +287,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_MD_time_step",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_run"
@@ -277,6 +304,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_override_relativity",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -286,6 +314,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_relativistic_threshold",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -295,6 +324,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_relativistic",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -311,6 +341,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_xc",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -320,6 +351,7 @@
       "description": "Single eigenvalue of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_eigenvalue_ZORA",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_list_ZORA"
@@ -329,6 +361,7 @@
       "description": "Single eigenvalue",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_eigenvalue",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_list"
@@ -338,6 +371,7 @@
       "description": "Component 1 of kpoints on which the eigenvalues were evaluated of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_kpoint1_ZORA",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_spin_ZORA"
@@ -346,6 +380,7 @@
       "description": "Component 1 of kpoints on which the eigenvalues were evaluated",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_kpoint1",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_spin"
@@ -354,6 +389,7 @@
       "description": "Component 2 of kpoints on which the eigenvalues were evaluated of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_kpoint2_ZORA",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_spin_ZORA"
@@ -362,6 +398,7 @@
       "description": "Component 2 of kpoints on which the eigenvalues were evaluated",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_kpoint2",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_spin"
@@ -370,6 +407,7 @@
       "description": "Component 3 of kpoints on which the eigenvalues were evaluated of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_kpoint3_ZORA",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_spin_ZORA"
@@ -378,6 +416,7 @@
       "description": "Component 3 of kpoints on which the eigenvalues were evaluated",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_kpoint3",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_spin"
@@ -386,6 +425,7 @@
       "description": "Occupation of single eigenfunction of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_occupation_ZORA",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_list_ZORA"
@@ -394,6 +434,7 @@
       "description": "Occupation of single eigenfunction",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_occupation",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_list"
@@ -433,6 +474,7 @@
       "description": "labels of atom",
       "dtypeStr": "C",
       "name": "fhi_aims_geometry_atom_label",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -441,6 +483,7 @@
       "description": "x component of atomic position",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_atom_position_x",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -450,6 +493,7 @@
       "description": "y component of atomic position",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_atom_position_y",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -459,6 +503,7 @@
       "description": "z component of atomic position",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_atom_position_z",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -468,6 +513,7 @@
       "description": "x component of lattice vector",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_lattice_vector_x",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -477,6 +523,7 @@
       "description": "y component of lattice vector",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_lattice_vector_y",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -486,6 +533,7 @@
       "description": "z component of lattice vector",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_lattice_vector_z",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system_description"
@@ -495,6 +543,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_MD_flag",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -599,6 +648,7 @@
       "description": "section for one list of eigenvalues at specific kpoint and spin of scaled ZORA",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_list_ZORA",
+      "repeats": true,
       "superNames": [
         "fhi_aims_section_eigenvalues_spin_ZORA"
       ]
@@ -606,6 +656,7 @@
       "description": "section for one list of eigenvalues at specific kpoint and spin",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_list",
+      "repeats": true,
       "superNames": [
         "fhi_aims_section_eigenvalues_spin"
       ]
@@ -613,6 +664,7 @@
       "description": "section for one spin orientation of scaled ZORA",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_spin_ZORA",
+      "repeats": true,
       "superNames": [
         "fhi_aims_section_eigenvalues_group_ZORA"
       ]
@@ -620,6 +672,7 @@
       "description": "section for one spin orientation",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_spin",
+      "repeats": true,
       "superNames": [
         "fhi_aims_section_eigenvalues_group"
       ]
@@ -634,6 +687,7 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "fhi_aims_section_parallel_task_assignement",
+      "repeats": true,
       "superNames": [
         "fhi_aims_section_parallel_tasks"
       ]
