@@ -1781,9 +1781,9 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Target value of the s quantum number, which implies a $s*(s+1)$ value for $S^2$. It is a multiple of $1/2$. This value is not necessarily enforced",
-      "dtypeStr": "f",
-      "name": "target_spin_quantum_number",
+      "description": "Target value of the multiplicity $M=2S+1$ where $S$ is the total spin. It is an integer number. This value is not necessarly reached.",
+      "dtypeStr": "i",
+      "name": "target_multiplicity",
       "shape": [],
       "superNames": [
         "section_method"
@@ -2004,6 +2004,14 @@
         "section_single_configuration_calculation"
       ],
       "units": "s"
+    }, {
+      "description": "Total charge of the system.",
+      "dtypeStr": "i",
+      "name": "total_charge",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }, {
       "description": "Short string describing the van der Waals method. No such method, if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/van-der-Waals-method).",
       "dtypeStr": "C",
