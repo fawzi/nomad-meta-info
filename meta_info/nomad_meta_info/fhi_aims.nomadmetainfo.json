@@ -556,6 +556,14 @@
         "section_run"
       ]
     }, {
+      "description": "Determines whether a run is converged.",
+      "dtypeStr": "C",
+      "name": "fhi_aims_run_converged",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_scf_date_start",
@@ -635,6 +643,14 @@
       "name": "fhi_aims_section_parallel_tasks",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Determines whether a single configuration calculation is converged.",
+      "dtypeStr": "C",
+      "name": "fhi_aims_single_configuration_calculation_converged",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }]
 }

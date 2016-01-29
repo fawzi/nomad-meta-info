@@ -40,8 +40,7 @@
       "repeats": true,
       "superNames": [
         "section_single_configuration_calculation"
-      ],
-      "units": "N"
+      ]
     }, {
       "description": "Forces on the atoms as minus gradient of energy_total.",
       "dtypeStr": "f",
@@ -1353,6 +1352,14 @@
         "section_run"
       ]
     }, {
+      "description": "Determines whether a run is converged.",
+      "dtypeStr": "b",
+      "name": "run_converged",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used",
       "dtypeStr": "D",
       "name": "run_hosts",
@@ -1619,6 +1626,14 @@
         "configuration_core"
       ],
       "units": "m"
+    }, {
+      "description": "Determines whether a single configuration calculation is converged.",
+      "dtypeStr": "b",
+      "name": "single_configuration_calculation_converged",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "Reference to the method used for the calculation",
       "dtypeStr": "r",
