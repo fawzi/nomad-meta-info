@@ -6,5 +6,72 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {
+      "description": "label for atoms",
+      "dtypeStr": "C",
+      "name": "gaussian_atom_label",
+      "shape": [],
+      "superNames": [
+        "gaussian_section_geometry"
+      ]
+    }, {
+      "description": "x coordinate for the atoms",
+      "dtypeStr": "f",
+      "name": "gaussian_atom_x_coord",
+      "shape": [],
+      "superNames": [
+        "gaussian_section_geometry"
+      ],
+      "units": "m"
+    }, {
+      "description": "y coordinate for the atoms",
+      "dtypeStr": "f",
+      "name": "gaussian_atom_y_coord",
+      "shape": [],
+      "superNames": [
+        "gaussian_section_geometry"
+      ],
+      "units": "m"
+    }, {
+      "description": "z coordinate for the atoms",
+      "dtypeStr": "f",
+      "name": "gaussian_atom_z_coord",
+      "shape": [],
+      "superNames": [
+        "gaussian_section_geometry"
+      ],
+      "units": "m"
+    }, {
+      "description": "binary file with detailed output information",
+      "dtypeStr": "C",
+      "name": "gaussian_chk_file",
+      "shape": [],
+      "superNames": [
+        "settings_run"
+      ]
+    }, {
+      "description": "total memory for the run",
+      "dtypeStr": "C",
+      "name": "gaussian_memory",
+      "shape": [],
+      "superNames": [
+        "settings_run"
+      ]
+    }, {
+      "description": "number of processors used",
+      "dtypeStr": "C",
+      "name": "gaussian_number_of_processors",
+      "shape": [],
+      "superNames": [
+        "settings_run",
+        "parallelization_info"
+      ]
+    }, {
+      "description": "section that contains the Cartesian coordinates of the system",
+      "kindStr": "type_section",
+      "name": "gaussian_section_geometry",
+      "superNames": [
+        "section_system_description"
+      ]
+    }]
 }
