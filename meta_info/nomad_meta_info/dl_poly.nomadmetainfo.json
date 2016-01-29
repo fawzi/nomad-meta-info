@@ -1,0 +1,88 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the EP parser, all names are expected to start with dl_poly_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "Program version date",
+      "dtypeStr": "C",
+      "name": "dl_poly_program_version_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "MD equilibration step number",
+      "dtypeStr": "i",
+      "name": "dl_poly_step_number_equilibration",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "MD total step number",
+      "dtypeStr": "i",
+      "name": "dl_poly_step_number",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Simulation run title",
+      "dtypeStr": "C",
+      "name": "dl_poly_system_description",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Thermostat coupling temperature",
+      "dtypeStr": "f",
+      "name": "dl_poly_thermostat_temperature",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Section modelling the MD topology",
+      "kindStr": "type_section",
+      "name": "dl_poly_section_md_topology",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Number of molecular types in topology",
+      "dtypeStr": "i",
+      "name": "dl_poly_md_molecular_types",
+      "superNames": [
+        "dl_poly_section_md_topology"
+      ]
+    }, {
+      "description": "Section to store molecule type information",
+      "kindStr": "type_section",
+      "name": "dl_poly_section_md_molecule_type",
+      "superNames": [
+        "dl_poly_section_md_topology"
+      ]
+    }, {
+      "description": "Molecule type id",
+      "dtypeStr": "i",
+      "name": "dl_poly_md_molecule_type_id",
+      "superNames": [
+        "dl_poly_section_md_molecule_type"
+      ]
+    }, {
+      "description": "Molecule type name",
+      "dtypeStr": "C",
+      "name": "dl_poly_md_molecule_type_name",
+      "superNames": [
+        "dl_poly_section_md_molecule_type"
+      ]
+    }]
+}
+
+
+
