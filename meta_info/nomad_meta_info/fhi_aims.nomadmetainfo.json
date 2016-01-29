@@ -420,17 +420,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Exact exchange energy (not scaled) during the scf iterations",
-      "dtypeStr": "f",
-      "name": "fhi_aims_energy_hartree_fock_X_scf_iteration",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_X",
-        "section_scf_iteration"
-      ],
-      "units": "J"
-    }, {
       "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
       "name": "fhi_aims_energy_X_LDA",
