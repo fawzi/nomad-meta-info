@@ -10,7 +10,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_charge",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -19,7 +19,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_hse_omega",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method",
@@ -30,7 +30,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_hse_unit",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method",
@@ -40,7 +40,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k1",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -49,7 +49,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k2",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -58,7 +58,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k3",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -67,6 +67,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k_grid",
+      "repeats": false,
       "shape": [
         3
       ],
@@ -77,7 +78,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_MD_time_step",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_run"
@@ -94,7 +95,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_occupation_order",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -103,7 +104,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_occupation_type",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -112,7 +113,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_occupation_width",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -121,7 +122,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_override_relativity",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -131,7 +132,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_relativistic_threshold",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -141,7 +142,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_relativistic",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -158,7 +159,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_eev",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -167,7 +168,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_etot",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -176,7 +177,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_forces",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -185,7 +186,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_rho",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -194,7 +195,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_sc_accuracy_stress",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -203,7 +204,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_sc_iter_limit",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -212,7 +213,16 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_spin",
-      "repeats": true,
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlIn_verbatim_writeout",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -221,7 +231,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlIn_xc",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method",
@@ -231,7 +241,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_hse_omega",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -242,7 +252,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_hse_unit",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -252,7 +262,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k1",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
@@ -261,7 +271,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k2",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
@@ -270,7 +280,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k3",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
@@ -279,6 +289,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlInOut_k_grid",
+      "repeats": false,
       "shape": [
         3
       ],
@@ -289,7 +300,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_MD_time_step",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_run"
@@ -306,7 +317,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_override_relativity",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -316,7 +327,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_relativistic_threshold",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -326,7 +337,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_relativistic",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
@@ -343,7 +354,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_xc",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method",
@@ -445,6 +456,7 @@
       "description": "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
       "name": "fhi_aims_energy_C_LDA",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "energy_type_C",
@@ -466,6 +478,7 @@
       "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
       "name": "fhi_aims_energy_X_LDA",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "energy_type_X",
@@ -545,6 +558,7 @@
       "description": "Determines whether a geoemtry optimization is converged.",
       "dtypeStr": "C",
       "name": "fhi_aims_geometry_optimization_converged",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -553,7 +567,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_MD_flag",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_controlIn_method"
@@ -562,6 +576,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_number_of_tasks",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_run"
@@ -570,6 +585,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_parallel_task_host",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_section_parallel_task_assignement"
@@ -578,6 +594,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_parallel_task_nr",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "fhi_aims_section_parallel_task_assignement"
@@ -586,6 +603,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_program_compilation_date",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_run"
@@ -594,6 +612,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_program_compilation_time",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_run"
@@ -602,6 +621,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_program_execution_date",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_run"
@@ -610,6 +630,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_program_execution_time",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_run"
@@ -618,6 +639,7 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_scf_date_start",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "time_info",
@@ -627,22 +649,25 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_scf_time_start",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "time_info",
         "section_scf_iteration"
       ]
     }, {
-      "description": "section for full list of k-points for different spin and kpoints of scaled ZORA",
+      "description": "section for full list of eigenvalues for different spin and kpoints of scaled ZORA",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_group_ZORA",
+      "repeats": false,
       "superNames": [
         "fhi_aims_section_eigenvalues_ZORA"
       ]
     }, {
-      "description": "section for full list of k-points for different spin and kpoints",
+      "description": "section for full list of eigenvalues for different spin and kpoints",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_group",
+      "repeats": false,
       "superNames": [
         "section_scf_iteration"
       ]
@@ -682,6 +707,7 @@
       "description": "section for gathering eigenvalues of scaled ZORA",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_ZORA",
+      "repeats": false,
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -697,6 +723,7 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "fhi_aims_section_parallel_tasks",
+      "repeats": false,
       "superNames": [
         "section_run"
       ]
@@ -704,6 +731,7 @@
       "description": "Determines whether a single configuration calculation is converged.",
       "dtypeStr": "C",
       "name": "fhi_aims_single_configuration_calculation_converged",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
