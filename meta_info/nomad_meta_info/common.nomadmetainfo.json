@@ -1511,6 +1511,13 @@
         "section_run"
       ]
     }, {
+      "description": "Section created to contain one of the exchange correlation (XC) functionals that are combined to the define XC_functional.",
+      "kindStr": "type_section",
+      "name": "section_XC_functionals",
+      "superNames": [
+        "settings_XC_functional"
+      ]
+    }, {
       "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/self-interaction-correction-method).",
       "dtypeStr": "C",
       "name": "self_interaction_correction_method",
@@ -2032,13 +2039,41 @@
         "section_method"
       ]
     }, {
-      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short form as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional).",
+      "derived": true,
+      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short obtained combining the data in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional",
       "repeats": false,
       "shape": [],
       "superNames": [
         "settings_XC_functional"
+      ]
+    }, {
+      "description": "Name of one of the exchange correlation (XC) functionals combined in XC_functional. The valid unique names that can be used are defined in [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional).",
+      "dtypeStr": "C",
+      "name": "XC_functional_name",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    }, {
+      "description": "Dictionary containing non default values of the parameters for the functional XC_functional_name. The names and units of these values should be defined in the section dedicated to XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional). If not given the default parameter values are assumed.",
+      "dtypeStr": "D",
+      "name": "XC_functional_parameters",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    }, {
+      "description": "Weigth that should be given to XC_functional_name when combining it to obtain XC_functional. If not given it defaults to 1.",
+      "dtypeStr": "f",
+      "name": "XC_functional_weight",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
       ]
     }, {
       "derived": true,
