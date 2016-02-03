@@ -55,19 +55,6 @@
       ],
       "units": "N"
     }, {
-      "description": "Reference to the atom type of each atom in the molecule.",
-      "dtypeStr": "r",
-      "name": "atom_in_molecule_atom_type_ref",
-      "referencedSections": [
-        "section_atom_type"
-      ],
-      "shape": [
-        "number_of_atoms_in_molecule"
-      ],
-      "superNames": [
-        "settings_atom_in_molecule"
-      ]
-    }, {
       "description": "Name (label) of each atom in the molecule.",
       "dtypeStr": "f",
       "name": "atom_in_molecule_charge",
@@ -81,6 +68,19 @@
       "description": "Name (label) of each atom in the molecule.",
       "dtypeStr": "C",
       "name": "atom_in_molecule_name",
+      "shape": [
+        "number_of_atoms_in_molecule"
+      ],
+      "superNames": [
+        "settings_atom_in_molecule"
+      ]
+    }, {
+      "description": "Reference to the atom type of each atom in the molecule.",
+      "dtypeStr": "r",
+      "name": "atom_in_molecule_to_atom_type_ref",
+      "referencedSections": [
+        "section_atom_type"
+      ],
       "shape": [
         "number_of_atoms_in_molecule"
       ],
@@ -1116,6 +1116,19 @@
       ],
       "units": "J"
     }, {
+      "description": "Reference to local frames (which are just section_single_configuration_calculation), if not defined then frame_sequence_external_url *must* be defined, if both are defined this is expected to be a local copy of the reference.",
+      "dtypeStr": "r",
+      "name": "frame_sequence_local_frames_ref",
+      "referencedSections": [
+        "section_single_configuration_calculation"
+      ],
+      "shape": [
+        "number_of_frames_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
       "description": "Average potential energy and standard deviation of this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy_stats",
@@ -1160,17 +1173,6 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Reference to the sampling method section defining the parameters used in this frame sequence.",
-      "dtypeStr": "r",
-      "name": "frame_sequence_section_sampling_ref",
-      "referencedSections": [
-        "section_sampling_method"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
       "description": "Average temperature and standard deviation of this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_temperature_stats",
@@ -1203,6 +1205,17 @@
         "section_frame_sequence"
       ],
       "units": "s"
+    }, {
+      "description": "Reference to the sampling method section defining the parameters used in this frame sequence.",
+      "dtypeStr": "r",
+      "name": "frame_sequence_to_sampling_ref",
+      "referencedSections": [
+        "section_sampling_method"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
     }, {
       "description": "Name of the user defined quantity.",
       "dtypeStr": "C",
@@ -1267,19 +1280,6 @@
       "shape": [],
       "superNames": [
         "section_interaction"
-      ]
-    }, {
-      "description": "Reference to local frames, if not defined then frame_sequence_external_url *must* be defined, if both are defined this is expected to be a local copy of the reference.",
-      "dtypeStr": "r",
-      "name": "local_frames_ref",
-      "referencedSections": [
-        "section_single_configuration_calculation"
-      ],
-      "shape": [
-        "number_of_frames_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
       ]
     }, {
       "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom.",
@@ -2320,22 +2320,22 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Reference to the method used for the calculation",
+      "description": "Reference to the system (atomic configuration, cell, ...) that is calculated",
       "dtypeStr": "r",
-      "name": "single_configuration_calculation_method_ref",
+      "name": "single_configuration_calculation_to_system_description_ref",
       "referencedSections": [
-        "section_method"
+        "section_system_description"
       ],
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Reference to the system (atomic configuration, cell, ...) that is calculated",
+      "description": "Reference to the method used for the calculation",
       "dtypeStr": "r",
-      "name": "single_configuration_calculation_system_description_ref",
+      "name": "single_configuration_to_calculation_method_ref",
       "referencedSections": [
-        "section_system_description"
+        "section_method"
       ],
       "shape": [],
       "superNames": [
