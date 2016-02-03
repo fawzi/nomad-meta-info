@@ -338,7 +338,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting_point_method_ref. For normal ab-initio calculation, for example, this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-method-current) for the details",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For normal ab-initio calculation, for example, this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-method-current) for the details",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -357,13 +357,43 @@
       ]
     }, {
       "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total, this consists of calculation_method_current plus '@' and calculation_method of the starting_point_method_ref for perturbative methods.",
+      "description": "String that uniquely represents the method used to calculate energy_total, this consists of calculation_method_current plus '@' and calculation_method of the method_to_method_ref with method_to_method_kind = starting\\_point for perturbative methods.",
       "dtypeStr": "C",
       "name": "calculation_method",
       "repeats": false,
       "shape": [],
       "superNames": [
         "section_method"
+      ]
+    }, {
+      "description": "Url used to reference externally stored calculation as defined in the [calculation\\_to\\_calculation\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-to-calculation-external-url)",
+      "dtypeStr": "C",
+      "name": "calculation_to_calculation_external_url",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_calculation_to_calculation_refs"
+      ]
+    }, {
+      "description": "String defining the kind of relatioship that there is between this and the referenced calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-to-calculation-kind)",
+      "dtypeStr": "C",
+      "name": "calculation_to_calculation_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_calculation_to_calculation_refs"
+      ]
+    }, {
+      "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given this is assumed to be a local copy of the url. The kind of relationship is specified by calculation_to_calculation_kind.",
+      "dtypeStr": "r",
+      "name": "calculation_to_calculation_ref",
+      "referencedSections": [
+        "section_single_configuration_calculation"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_calculation_to_calculation_refs"
       ]
     }, {
       "description": "Properties actually defining the current configuration",
@@ -590,7 +620,7 @@
       ],
       "units": "J"
     }, {
-      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - starting_point_calculation_ref.energy_total) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-current)",
+      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-current)",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -1429,6 +1459,31 @@
         "section_method_atom_kind"
       ]
     }, {
+      "description": "Url used to reference externally stored methods as defined in the [method\\_to\\_method\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/method-to-method-external-url)",
+      "dtypeStr": "C",
+      "name": "method_to_method_external_url",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method_to_method_refs"
+      ]
+    }, {
+      "description": "String describing the relationship between the referenced method and this one. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/method-to-method-kind).",
+      "dtypeStr": "C",
+      "name": "method_to_method_kind",
+      "shape": [],
+      "superNames": [
+        "section_method_to_method_refs"
+      ]
+    }, {
+      "description": "Reference to a local method. If both this and method_to_method_external_url are given this is expected to contain a local copy of that value. The kind of relationship between this method and the referenced one is described by method_to_method_kind.",
+      "dtypeStr": "r",
+      "name": "method_to_method_ref",
+      "shape": [],
+      "superNames": [
+        "section_method_to_method_refs"
+      ]
+    }, {
       "description": "Reference to the topology and force fields to be used",
       "dtypeStr": "r",
       "name": "method_to_topology_ref",
@@ -1974,6 +2029,13 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Section that describes relationships between single configuration calculations.",
+      "kindStr": "type_section",
+      "name": "section_calculation_to_calculation_refs",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "describes a constraint between arbitrary atoms",
       "kindStr": "type_section",
       "name": "section_constraint",
@@ -2044,6 +2106,14 @@
       "description": "Every section_method_atom_kind contains method related information about a kind of atom, and is identified by one or more string method_atom_kind_label. This categorisation into atom kinds is more flexible than just atomic species, because to different atoms of the same species different atom centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_method_atom_kind.",
       "kindStr": "type_section",
       "name": "section_method_atom_kind",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Describes connections between methods (for example the starting point of a perturbation, or the QM and MM methods in a QM/MM method",
+      "kindStr": "type_section",
+      "name": "section_method_to_method_refs",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -2389,30 +2459,6 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Reference to the starting point (unperturbed) calculation, onto which the perturbative methods are constructed.",
-      "dtypeStr": "r",
-      "name": "starting_point_calculation_ref",
-      "referencedSections": [
-        "section_single_configuration_calculation"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Reference to the method of the starting point (unperturbed) calculation, onto which the perturbative methods are constructed.",
-      "dtypeStr": "r",
-      "name": "starting_point_method_ref",
-      "referencedSections": [
-        "section_method"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_method"
       ]
     }, {
       "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method. The value of the latter is stored in stress_tensor and (if needed) it is the one used for dynamics, minimization,...",
@@ -2782,7 +2828,7 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the starting_point_method_ref for perturbative methods.",
+      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the method_to_method_ref with method_to_method_kind = starting\\_point_method for perturbative methods.",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
