@@ -185,7 +185,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Coordinates of the k points actually building the band",
+      "description": "Fractional coordinates of the k points (i.e. in the basis of the reciprocal lattice vectors) actually building the band",
       "dtypeStr": "f",
       "name": "band_k_points",
       "shape": [
@@ -221,7 +221,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Coordinates of the start and end point of the segments sampled in the k-space",
+      "description": "Fractional coordinates of the start and end point (i.e. in the basis of the reciprocal lattice vectors) of the segments sampled in the k-space",
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [

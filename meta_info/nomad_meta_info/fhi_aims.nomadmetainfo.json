@@ -44,6 +44,15 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_band_segment",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlIn_charge",
       "repeats": false,
@@ -276,6 +285,60 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_band_segment_end1",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_band_segment_end2",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_band_segment_end3",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_band_segment_start1",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_band_segment_start2",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_band_segment_start3",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_hse_omega",
       "repeats": false,
       "shape": [],
@@ -329,6 +392,15 @@
       "shape": [
         3
       ],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlInOut_max_spin_channel",
+      "repeats": false,
+      "shape": [],
       "superNames": [
         "fhi_aims_controlInOut_method"
       ]
