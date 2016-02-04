@@ -83,6 +83,15 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlIn_hybrid_xc_coeff",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "i",
       "name": "fhi_aims_controlIn_k1",
       "repeats": false,
@@ -356,6 +365,15 @@
       "superNames": [
         "fhi_aims_controlInOut_method",
         "settings_XC_functional"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_hybrid_xc_coeff",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_controlInOut_method"
       ]
     }, {
       "description": "-",
