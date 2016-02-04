@@ -129,6 +129,22 @@
         "section_atom_type"
       ]
     }, {
+      "description": "Mass of the atom type in au.",
+      "dtypeStr": "C",
+      "name": "atom_type_mass",
+      "shape": [],
+      "superNames": [
+        "section_atom_type"
+      ]
+    }, {
+      "description": "Charge of the atom type in au.",
+      "dtypeStr": "C",
+      "name": "atom_type_charge",
+      "shape": [],
+      "superNames": [
+        "section_atom_type"
+      ]
+    }, {
       "description": "velocities of the atoms.",
       "dtypeStr": "f",
       "name": "atom_velocities",
