@@ -487,6 +487,25 @@
         "settings_XC_functional"
       ]
     }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_dos_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_dos_value_string",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
       "description": "Single eigenvalue of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_eigenvalue_ZORA",

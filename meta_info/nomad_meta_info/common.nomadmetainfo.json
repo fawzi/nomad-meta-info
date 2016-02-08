@@ -121,9 +121,9 @@
         "section_atom_type"
       ]
     }, {
-      "description": "Name (label) of the atom type.",
+      "description": "Charge of the atom type in au.",
       "dtypeStr": "C",
-      "name": "atom_type_name",
+      "name": "atom_type_charge",
       "shape": [],
       "superNames": [
         "section_atom_type"
@@ -137,9 +137,9 @@
         "section_atom_type"
       ]
     }, {
-      "description": "Charge of the atom type in au.",
+      "description": "Name (label) of the atom type.",
       "dtypeStr": "C",
-      "name": "atom_type_charge",
+      "name": "atom_type_name",
       "shape": [],
       "superNames": [
         "section_atom_type"
@@ -462,6 +462,28 @@
       "shape": [],
       "superNames": [
         "section_constraint"
+      ]
+    }, {
+      "description": "Density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "dos_energies",
+      "shape": [
+        "n_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Density of states (DOS) values",
+      "dtypeStr": "f",
+      "name": "dos_values",
+      "shape": [
+        "max_spin_channel",
+        "n_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
       ]
     }, {
       "description": "Values of the eigenvalues",
@@ -2059,6 +2081,14 @@
       "superNames": [
         "section_topology",
         "settings_constraint"
+      ]
+    }, {
+      "description": "Section collecting the information on a density of states (DOS) evaluation",
+      "kindStr": "type_section",
+      "name": "section_dos",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "groups eigenvalues of different spins",
