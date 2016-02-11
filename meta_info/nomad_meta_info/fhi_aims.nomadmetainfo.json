@@ -487,6 +487,17 @@
         "settings_XC_functional"
       ]
     }, {
+      "description": "Density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "fhi_aims_dos_energies",
+      "shape": [
+        "fhi_aims_n_dos_values"
+      ],
+      "superNames": [
+        "fhi_aims_section_dos"
+      ],
+      "units": "J"
+    }, {
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_dos_energy",
@@ -497,6 +508,17 @@
       ],
       "units": "J"
     }, {
+      "description": "Reference to the single configuration calculation where the dos belongs to",
+      "dtypeStr": "r",
+      "name": "fhi_aims_dos_to_single_configuration_ref",
+      "referencedSections": [
+        "section_single_configuration_calculation"
+      ],
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_dos"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_dos_value_string",
@@ -504,6 +526,17 @@
       "shape": [],
       "superNames": [
         "section_dos"
+      ]
+    }, {
+      "description": "Density of states (DOS) values",
+      "dtypeStr": "f",
+      "name": "fhi_aims_dos_values",
+      "shape": [
+        "max_spin_channel",
+        "fhi_aims_n_dos_values"
+      ],
+      "superNames": [
+        "fhi_aims_section_dos"
       ]
     }, {
       "description": "Single eigenvalue of scaled ZORA",
@@ -709,6 +742,15 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "number of energy values for the density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "fhi_aims_n_dos_values",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_dos"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_number_of_tasks",
@@ -790,6 +832,14 @@
       "superNames": [
         "time_info",
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if section_run is closed. Therefore, this section belongs to section_run.",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_dos",
+      "repeats": true,
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "section for full list of eigenvalues for different spin and kpoints of scaled ZORA",
