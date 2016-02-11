@@ -166,13 +166,21 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "l and m value of the multipoles",
+      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
-        2,
-        "section_atomic_multipoles"
+        "number_of_atomic_multipoles",
+        2
       ],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "dtypeStr": "C",
+      "name": "atomic_multipole_m_kind",
+      "shape": [],
       "superNames": [
         "section_atomic_multipoles"
       ]
@@ -1620,7 +1628,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "string describing the method used to obtain the multipoles",
+      "description": "number of lm combinations for which atomic multipoles are given",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_atomic_multipoles",
