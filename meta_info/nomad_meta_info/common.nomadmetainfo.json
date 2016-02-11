@@ -110,6 +110,47 @@
       ],
       "units": "m"
     }, {
+      "description": "Atom projected density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "atom_projected_dos_energies",
+      "shape": [
+        "n_atom_projected_dos_values"
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "dtypeStr": "i",
+      "name": "atom_projected_dos_lm",
+      "shape": [
+        "number_of_lm_atom_projected_dos",
+        2
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "dtypeStr": "C",
+      "name": "atom_projected_dos_m_kind",
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "Atom projected density of states (DOS) values, summed up over all l",
+      "dtypeStr": "f",
+      "name": "atom_projected_dos_values_total",
+      "shape": [
+        "max_spin_channel",
+        "n_atom_projected_dos_values"
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
       "description": "mapping atom to molecules: molecule number, atom in molecule number.",
       "dtypeStr": "i",
       "name": "atom_to_molecule",
@@ -170,7 +211,7 @@
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
-        "number_of_atomic_multipoles",
+        "number_of_lm_atomic_multipoles",
         2
       ],
       "superNames": [
@@ -189,7 +230,7 @@
       "dtypeStr": "f",
       "name": "atomic_multipole_value",
       "shape": [
-        "number_of_atomic_multipoles",
+        "number_of_lm_atomic_multipoles",
         "number_of_atoms"
       ],
       "superNames": [
@@ -1619,6 +1660,24 @@
         "section_molecule_type"
       ]
     }, {
+      "description": "number of energy values for the atom projected density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "n_atom_projected_dos_values",
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "number of energy values for the density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "n_dos_values",
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
       "description": "number of k points in each segment",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1628,13 +1687,13 @@
         "section_k_band"
       ]
     }, {
-      "description": "number of lm combinations for which atomic multipoles are given",
+      "description": "number of energy values for the species projected density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "number_of_atomic_multipoles",
+      "name": "n_species_projected_dos_values",
       "shape": [],
       "superNames": [
-        "section_atomic_multipoles"
+        "section_species_projected_dos"
       ]
     }, {
       "description": "Number of atoms in this molecule.",
@@ -1779,6 +1838,33 @@
       "shape": [],
       "superNames": [
         "section_basis_set_atom_centered"
+      ]
+    }, {
+      "description": "number of lm combinations for which atom projected density of states (DOS) are given",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_lm_atom_projected_dos",
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "number of lm combinations for which atomic multipoles are given",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_lm_atomic_multipoles",
+      "shape": [],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
+      "description": "number of lm combinations for which species projected density of states (DOS) are given",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_lm_species_projected_dos",
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
       ]
     }, {
       "description": "Number of constraints of this type",
@@ -2036,6 +2122,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Section collecting the information on a atom projected density of states (DOS) evaluation",
+      "kindStr": "type_section",
+      "name": "section_atom_projected_dos",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Describes a type of atom in the system.",
       "kindStr": "type_section",
       "name": "section_atom_type",
@@ -2232,6 +2326,14 @@
       "name": "section_single_configuration_calculation",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Section collecting the information on a species projected density of states (DOS) evaluation",
+      "kindStr": "type_section",
+      "name": "section_species_projected_dos",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section to keep alternative values to stress_tensor that have been calculated",
@@ -2500,6 +2602,59 @@
       "shape": [],
       "superNames": [
         "section_system_description"
+      ]
+    }, {
+      "description": "Species projected density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_energies",
+      "shape": [
+        "n_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "dtypeStr": "i",
+      "name": "species_projected_dos_lm",
+      "shape": [
+        "number_of_lm_species_projected_dos",
+        2
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "dtypeStr": "C",
+      "name": "species_projected_dos_m_kind",
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "Species projected density of states (DOS) values, divided into contributions from lm",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_values_lm",
+      "shape": [
+        "max_spin_channel",
+        "number_of_lm_species_projected_dos",
+        "n_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "Species projected density of states (DOS) values, summed up over all l",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_values_total",
+      "shape": [
+        "max_spin_channel",
+        "n_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
       ]
     }, {
       "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method. Can be used to calculate the spin contamination in spin unrestricted calculations.",
