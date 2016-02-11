@@ -121,7 +121,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atom_projected_dos_lm",
       "shape": [
@@ -132,7 +132,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atom_projected_dos_m_kind",
       "shape": [],
@@ -207,7 +207,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
@@ -218,7 +218,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_m_kind",
       "shape": [],
@@ -2615,7 +2615,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "species_projected_dos_lm",
       "shape": [
@@ -2626,7 +2626,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/m-kind).",
+      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "species_projected_dos_m_kind",
       "shape": [],
