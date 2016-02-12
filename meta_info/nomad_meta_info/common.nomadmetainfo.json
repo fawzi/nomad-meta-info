@@ -140,11 +140,25 @@
         "section_atom_projected_dos"
       ]
     }, {
+      "description": "Atom projected density of states (DOS) values, divided into contributions from lm",
+      "dtypeStr": "f",
+      "name": "atom_projected_dos_values_lm",
+      "shape": [
+        "number_of_lm_atom_projected_dos",
+        "max_spin_channel",
+        "number_of_atoms",
+        "n_atom_projected_dos_values"
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
       "description": "Atom projected density of states (DOS) values, summed up over all l",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
         "max_spin_channel",
+        "number_of_atoms",
         "n_atom_projected_dos_values"
       ],
       "superNames": [
@@ -1885,6 +1899,15 @@
         "section_molecule_interaction"
       ]
     }, {
+      "description": "number of species for the species projected density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_species",
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
       "description": "Number of atoms in the system described by this topology.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -2634,12 +2657,23 @@
         "section_species_projected_dos"
       ]
     }, {
+      "description": "Species labels for the species projected density of states (DOS)",
+      "dtypeStr": "C",
+      "name": "species_projected_dos_species_label",
+      "shape": [
+        "number_of_species"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
       "description": "Species projected density of states (DOS) values, divided into contributions from lm",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_lm",
       "shape": [
-        "max_spin_channel",
         "number_of_lm_species_projected_dos",
+        "max_spin_channel",
+        "number_of_species",
         "n_species_projected_dos_values"
       ],
       "superNames": [
@@ -2651,6 +2685,7 @@
       "name": "species_projected_dos_values_total",
       "shape": [
         "max_spin_channel",
+        "number_of_species",
         "n_species_projected_dos_values"
       ],
       "superNames": [
