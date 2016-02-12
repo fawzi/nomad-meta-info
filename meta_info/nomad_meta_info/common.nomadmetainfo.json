@@ -110,6 +110,61 @@
       ],
       "units": "m"
     }, {
+      "description": "Atom projected density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "atom_projected_dos_energies",
+      "shape": [
+        "n_atom_projected_dos_values"
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "dtypeStr": "i",
+      "name": "atom_projected_dos_lm",
+      "shape": [
+        "number_of_lm_atom_projected_dos",
+        2
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "dtypeStr": "C",
+      "name": "atom_projected_dos_m_kind",
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "Atom projected density of states (DOS) values, divided into contributions from lm",
+      "dtypeStr": "f",
+      "name": "atom_projected_dos_values_lm",
+      "shape": [
+        "number_of_lm_atom_projected_dos",
+        "max_spin_channel",
+        "number_of_atoms",
+        "n_atom_projected_dos_values"
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "Atom projected density of states (DOS) values, summed up over all l",
+      "dtypeStr": "f",
+      "name": "atom_projected_dos_values_total",
+      "shape": [
+        "max_spin_channel",
+        "number_of_atoms",
+        "n_atom_projected_dos_values"
+      ],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
       "description": "mapping atom to molecules: molecule number, atom in molecule number.",
       "dtypeStr": "i",
       "name": "atom_to_molecule",
@@ -121,9 +176,9 @@
         "section_atom_type"
       ]
     }, {
-      "description": "Name (label) of the atom type.",
+      "description": "Charge of the atom type in au.",
       "dtypeStr": "C",
-      "name": "atom_type_name",
+      "name": "atom_type_charge",
       "shape": [],
       "superNames": [
         "section_atom_type"
@@ -137,9 +192,9 @@
         "section_atom_type"
       ]
     }, {
-      "description": "Charge of the atom type in au.",
+      "description": "Name (label) of the atom type.",
       "dtypeStr": "C",
-      "name": "atom_type_charge",
+      "name": "atom_type_name",
       "shape": [],
       "superNames": [
         "section_atom_type"
@@ -166,13 +221,21 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "l and m value of the multipoles",
+      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
-        2,
-        "section_atomic_multipoles"
+        "number_of_lm_atomic_multipoles",
+        2
       ],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "dtypeStr": "C",
+      "name": "atomic_multipole_m_kind",
+      "shape": [],
       "superNames": [
         "section_atomic_multipoles"
       ]
@@ -181,7 +244,7 @@
       "dtypeStr": "f",
       "name": "atomic_multipole_value",
       "shape": [
-        "number_of_atomic_multipoles",
+        "number_of_lm_atomic_multipoles",
         "number_of_atoms"
       ],
       "superNames": [
@@ -199,7 +262,8 @@
       ],
       "superNames": [
         "section_k_band"
-      ]
+      ],
+      "units": "J"
     }, {
       "description": "Fractional coordinates of the k points (i.e. in the basis of the reciprocal lattice vectors) actually building the band",
       "dtypeStr": "f",
@@ -424,7 +488,9 @@
       "dtypeStr": "b",
       "name": "configuration_periodic_dimensions",
       "repeats": true,
-      "shape": [],
+      "shape": [
+        3
+      ],
       "superNames": [
         "configuration_core"
       ]
@@ -461,6 +527,28 @@
       "shape": [],
       "superNames": [
         "section_constraint"
+      ]
+    }, {
+      "description": "Density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "dos_energies",
+      "shape": [
+        "n_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Density of states (DOS) values",
+      "dtypeStr": "f",
+      "name": "dos_values",
+      "shape": [
+        "max_spin_channel",
+        "n_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
       ]
     }, {
       "description": "Values of the eigenvalues",
@@ -1586,6 +1674,24 @@
         "section_molecule_type"
       ]
     }, {
+      "description": "number of energy values for the atom projected density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "n_atom_projected_dos_values",
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "number of energy values for the density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "n_dos_values",
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
       "description": "number of k points in each segment",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1595,13 +1701,13 @@
         "section_k_band"
       ]
     }, {
-      "description": "string describing the method used to obtain the multipoles",
+      "description": "number of energy values for the species projected density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "number_of_atomic_multipoles",
+      "name": "n_species_projected_dos_values",
       "shape": [],
       "superNames": [
-        "section_atomic_multipoles"
+        "section_species_projected_dos"
       ]
     }, {
       "description": "Number of atoms in this molecule.",
@@ -1748,6 +1854,33 @@
         "section_basis_set_atom_centered"
       ]
     }, {
+      "description": "number of lm combinations for which atom projected density of states (DOS) are given",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_lm_atom_projected_dos",
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "number of lm combinations for which atomic multipoles are given",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_lm_atomic_multipoles",
+      "shape": [],
+      "superNames": [
+        "section_atomic_multipoles"
+      ]
+    }, {
+      "description": "number of lm combinations for which species projected density of states (DOS) are given",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_lm_species_projected_dos",
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
       "description": "Number of constraints of this type",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1764,6 +1897,15 @@
       "shape": [],
       "superNames": [
         "section_molecule_interaction"
+      ]
+    }, {
+      "description": "number of species for the species projected density of states (DOS)",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_species",
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
       ]
     }, {
       "description": "Number of atoms in the system described by this topology.",
@@ -2003,6 +2145,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Section collecting the information on a atom projected density of states (DOS) evaluation",
+      "kindStr": "type_section",
+      "name": "section_atom_projected_dos",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Describes a type of atom in the system.",
       "kindStr": "type_section",
       "name": "section_atom_type",
@@ -2058,6 +2208,14 @@
       "superNames": [
         "section_topology",
         "settings_constraint"
+      ]
+    }, {
+      "description": "Section collecting the information on a density of states (DOS) evaluation",
+      "kindStr": "type_section",
+      "name": "section_dos",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "groups eigenvalues of different spins",
@@ -2191,6 +2349,14 @@
       "name": "section_single_configuration_calculation",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Section collecting the information on a species projected density of states (DOS) evaluation",
+      "kindStr": "type_section",
+      "name": "section_species_projected_dos",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section to keep alternative values to stress_tensor that have been calculated",
@@ -2459,6 +2625,71 @@
       "shape": [],
       "superNames": [
         "section_system_description"
+      ]
+    }, {
+      "description": "Species projected density of states (DOS) energies",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_energies",
+      "shape": [
+        "n_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "dtypeStr": "i",
+      "name": "species_projected_dos_lm",
+      "shape": [
+        "number_of_lm_species_projected_dos",
+        2
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "dtypeStr": "C",
+      "name": "species_projected_dos_m_kind",
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "Species labels for the species projected density of states (DOS)",
+      "dtypeStr": "C",
+      "name": "species_projected_dos_species_label",
+      "shape": [
+        "number_of_species"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "Species projected density of states (DOS) values, divided into contributions from lm",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_values_lm",
+      "shape": [
+        "number_of_lm_species_projected_dos",
+        "max_spin_channel",
+        "number_of_species",
+        "n_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "Species projected density of states (DOS) values, summed up over all l",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_values_total",
+      "shape": [
+        "max_spin_channel",
+        "number_of_species",
+        "n_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
       ]
     }, {
       "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method. Can be used to calculate the spin contamination in spin unrestricted calculations.",

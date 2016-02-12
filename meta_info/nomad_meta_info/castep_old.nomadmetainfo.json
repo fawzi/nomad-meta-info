@@ -172,7 +172,7 @@
       "name": "castep_store_atom_forces",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_system_description"
       ]
     }, {
       "description": "Temporary storing atomic positions",
@@ -233,90 +233,39 @@
     },
 
 
-        {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "castep_store_k_path",
+       {
+      "description": "Number of k points used in the band structure calculation",
+      "dtypeStr": "f",
+      "name": "castep_number_of_band_kpoints",
       "shape": [],
       "superNames": [
-        "section_k_band"
+        "castep_section_k_band"
+      ]
+    }, {
+      "description": "Number of eigenvalues used in the band structure calculation",
+      "dtypeStr": "f",
+      "name": "castep_number_of_band_energies",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "castep_k_path",
+      "name": "castep_band_energies",
       "shape": [],
       "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_k_points",
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_k_points_1",
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_scf_k_points",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_spin_number",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "i",
-      "name": "castep_spin_number",
-      "shape": [],
-      "superNames": [
-        "castep_section_spin_number"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_scf_eigenvalues",
-      "superNames": [
-        "castep_section_scf_k_points"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "castep_store_scf_k_points",
-      "shape": [],
-      "superNames": [
-        "castep_section_scf_k_points"
+        "castep_section_k_band"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "castep_store_scf_eigenvalues",
+      "name": "castep_band_kpoints",
       "shape": [],
       "superNames": [
-        "castep_section_scf_eigenvalues"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_collect_scf_eigenvalues",
-      "superNames": [
-        "section_run"
+        "castep_section_k_band"
       ]
     },
-
 
 
        {
@@ -326,6 +275,14 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_system_description",
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "-",
@@ -344,23 +301,37 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "castep_section_atom_forces",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_band_group",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "castep_section_k_band",
       "superNames": [
-        "section_k_band"
+        "section_system_description"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_eigenvalues",
       "superNames": [
-        "section_k_band"
+        "section_eigenvalues"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_eigenvalues_1",
       "superNames": [
-        "section_k_band"
+        "section_eigenvalues"
       ]
     }, {
       "description": "-",
@@ -368,6 +339,20 @@
       "name": "castep_section_functionals",
       "superNames": [
         "section_method"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_points",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_k_points_1",
+      "superNames": [
+        "section_eigenvalues"
       ]
     }]
 }
