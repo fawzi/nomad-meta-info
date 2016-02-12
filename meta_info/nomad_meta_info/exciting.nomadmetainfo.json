@@ -6,5 +6,39 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {
+      "description": "x component of lattice vector",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_lattice_vector_x",
+      "shape": [],
+      "superNames": [
+        "exciting_section_lattice_vectors"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of lattice vector",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_lattice_vector_y",
+      "shape": [],
+      "superNames": [
+        "exciting_section_lattice_vectors"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of lattice vector",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_lattice_vector_z",
+      "shape": [],
+      "superNames": [
+        "exciting_section_lattice_vectors"
+      ],
+      "units": "m"
+    }, {
+      "description": "lattice vectors",
+      "kindStr": "type_section",
+      "name": "exciting_section_lattice_vectors",
+      "superNames": [
+        "section_system_description"
+      ]
+    }]
 }
