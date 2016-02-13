@@ -11,7 +11,7 @@
       "name": "cp2k_section_dbcsr",
       "kindStr": "type_section",
       "superNames": [
-        "section_run"
+        "settings_run"
       ]
     }, {
       "description": "Contains information about the starting conditions for this run.",
@@ -52,34 +52,11 @@
         "cp2k_section_programinformation"
       ]
     }, {
-      "description": "Information about the cell used in the simulation.",
-      "kindStr": "type_section",
-      "name": "cp2k_section_cell",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "cp2k_section_functional",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "repeats": true,
-      "name": "cp2k_functional_name",
-      "shape": [],
-      "superNames": [
-        "cp2k_section_functional"
-      ]
-    }, {
       "description": "The total number of different entities in the calculation.",
       "kindStr": "type_section",
       "name": "cp2k_section_total_numbers",
       "superNames": [
-        "section_run"
+        "section_system_description"
       ]
     }, {
       "description": "The number of shell sets in the calculation.",
@@ -88,13 +65,6 @@
       "shape": [],
       "superNames": [
         "cp2k_section_total_numbers"
-      ]
-    }, {
-      "description": "Information about the atoms in a Quickstep calculation.",
-      "kindStr": "type_section",
-      "name": "cp2k_section_quickstep_atom_information",
-      "superNames": [
-        "section_run"
       ]
     }, {
       "description": "Section grouping together the quantities calculated during an MD.",
