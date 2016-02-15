@@ -15,73 +15,88 @@
         "section_run"
       ]
     }, {
-      "description": "MD equilibration step number",
-      "dtypeStr": "i",
-      "name": "lammps_step_number_equilibration",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "MD total step number",
-      "dtypeStr": "i",
-      "name": "lammps_step_number",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Simulation run title",
+      "description": "MD integrator type, valid values are defined in the integrator_type wiki page",
       "dtypeStr": "C",
-      "name": "lammps_system_description",
+      "name": "integrator_type",
       "shape": [],
       "superNames": [
-        "section_run"
+        "settings_integrator"
       ]
     }, {
-      "description": "Thermostat coupling temperature",
+      "description": "MD integration time step",
       "dtypeStr": "f",
-      "name": "lammps_thermostat_temperature",
+      "name": "integrator_dt",
       "shape": [],
       "superNames": [
-        "section_method"
+        "settings_integrator"
       ]
     }, {
-      "description": "Section modelling the MD topology",
-      "kindStr": "type_section",
-      "name": "lammps_section_md_topology",
+      "description": "Number of requested MD integration time steps",
+      "dtypeStr": "f",
+      "name": "number_of_steps_requested",
+      "shape": [],
       "superNames": [
-        "section_system_description"
+        "settings_integrator"
       ]
     }, {
-      "description": "Number of molecular types in topology",
-      "dtypeStr": "i",
-      "name": "lammps_md_molecular_types",
-      "superNames": [
-        "lammps_section_md_topology"
-      ]
-    }, {
-      "description": "Section to store molecule type information",
-      "kindStr": "type_section",
-      "name": "lammps_section_md_molecule_type",
-      "superNames": [
-        "lammps_section_md_topology"
-      ]
-    }, {
-      "description": "Molecule type id",
-      "dtypeStr": "i",
-      "name": "lammps_md_molecule_type_id",
-      "superNames": [
-        "lammps_section_md_molecule_type"
-      ]
-    }, {
-      "description": "Molecule type name",
+      "description": "MD thermostat type, valid values are defined in the thermostat_type wiki page",
       "dtypeStr": "C",
-      "name": "lammps_md_molecule_type_name",
+      "name": "thermostat_type",
+      "shape": [],
       "superNames": [
-        "lammps_section_md_molecule_type"
+        "settings_thermostat"
       ]
-    }]
+    }, {
+      "description": "MD thermostat level (see wiki: single, multiple, regional)",
+      "dtypeStr": "C",
+      "name": "thermostat_level",
+      "shape": [],
+      "superNames": [
+        "settings_thermostat"
+      ]
+    }, {
+      "description": "MD thermostat target temperature",
+      "dtypeStr": "f",
+      "name": "thermostat_target_temperature",
+      "shape": [],
+      "superNames": [
+        "settings_thermostat"
+      ]
+    }, {
+      "description": "MD thermostat relaxation time",
+      "dtypeStr": "f",
+      "name": "thermostat_tau",
+      "shape": [],
+      "superNames": [
+        "settings_thermostat"
+      ]
+    }, {
+      "description": "MD barostat type, valid values are defined in the barostat_type wiki page",
+      "dtypeStr": "C",
+      "name": "barostat_type",
+      "shape": [],
+      "superNames": [
+        "settings_barostat"
+      ]
+    }, {
+      "description": "MD barostat target pressure",
+      "dtypeStr": "f",
+      "name": "barostat_target_pressure",
+      "shape": [],
+      "superNames": [
+        "settings_barostat"
+      ]
+    }, {
+      "description": "MD barostat relaxation time",
+      "dtypeStr": "f",
+      "name": "barostat_tau",
+      "shape": [],
+      "superNames": [
+        "settings_barostat"
+      ]
+    }
+    
+  ]
 }
 
 
