@@ -8,6 +8,66 @@
     }],
   "metaInfos": [ {
       "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_atom_forces_free_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_atom_forces_free_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_atom_forces_free_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_atom_forces_raw_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_atom_forces_raw_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_atom_forces_raw_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_atom_projected_dos_file",
       "repeats": false,
