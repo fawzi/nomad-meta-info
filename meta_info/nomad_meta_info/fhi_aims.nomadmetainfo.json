@@ -8,6 +8,15 @@
     }],
   "metaInfos": [ {
       "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_atom_projected_dos_file",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_band_k1",
       "repeats": false,
@@ -50,6 +59,38 @@
       "shape": [],
       "superNames": [
         "section_k_band"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlIn_basis_func_l",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlIn_basis_func_n",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlIn_basis_func_radius",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlIn_basis_func_type",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlIn_basis_set"
       ]
     }, {
       "description": "-",
@@ -266,6 +307,14 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
+      "name": "fhi_aims_controlIn_species_name",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
       "name": "fhi_aims_controlIn_spin",
       "repeats": false,
       "shape": [],
@@ -347,6 +396,38 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_basis_func_l",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "fhi_aims_controlInOut_basis_func_n",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_basis_func_radius",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_basis_func_type",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_hse_omega",
       "repeats": false,
@@ -366,125 +447,7 @@
         "fhi_aims_controlInOut_method",
         "settings_XC_functional"
       ]
-    }, {                                                                        
-      "description": "-",                                                       
-      "kindStr": "type_section",                                                          
-      "name": "fhi_aims_section_controlInOut_atom_species",                             
-      "superNames": [                                                           
-        "fhi_aims_controlInOut_method"                                       
-      ] 
-    }, {                                                                        
-      "description": "-",                                                       
-      "kindStr": "type_section",                                                
-      "name": "fhi_aims_section_controlInOut_basis_func",                        
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                                          
-      ]                                                                             
-    },{                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlInOut_species_name",                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                          
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlInOut_basis_func_type",                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                                          
-      ]                                                                         
-    },{                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "i",                                                          
-      "name": "fhi_aims_controlInOut_basis_func_n",                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                                       
-      ]                                                                         
-    },{                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlInOut_basis_func_l",                              
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                                       
-      ]                                                                         
-    },{                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                       
-      "name": "fhi_aims_controlInOut_basis_func_radius",                           
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                                  
-      ] 
-    },{                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_controlInOut_species_charge",                        
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                            
-      ] 
-    },{                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_controlInOut_species_mass",                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                            
-      ],                             
-      "units": "kg"
-    }, {                                                                        
-      "description": "-",                                                       
-      "kindStr": "type_section",                                                
-      "name": "fhi_aims_section_controlIn_basis_set",                        
-      "superNames": [                                                           
-        "fhi_aims_controlIn_method"                                          
-      ]
-    },{                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlIn_species_name",                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlIn_basis_set"                               
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlIn_basis_func_type",                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlIn_basis_set"                               
-      ]                                                                         
-    },{                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "i",                                                          
-      "name": "fhi_aims_controlIn_basis_func_n",                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlIn_basis_set"                               
-      ]                                                                         
-    },{                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlIn_basis_func_l",                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlIn_basis_set"                               
-      ]                                                                         
-    }, {                                                                         
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_controlIn_basis_func_radius",                              
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlIn_basis_set"                                       
-      ]                                                                         
-    },{                                                                         
+    }, {
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_hybrid_xc_coeff",
@@ -596,6 +559,31 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_species_charge",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_controlInOut_species_mass",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ],
+      "units": "kg"
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_species_name",
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "C",
       "name": "fhi_aims_controlInOut_xc",
       "repeats": false,
@@ -635,33 +623,6 @@
       "shape": [],
       "superNames": [
         "fhi_aims_section_dos"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "fhi_aims_species_projected_dos_species_label",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_species_projected_dos"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "fhi_aims_species_projected_dos_file",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_species_projected_dos"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "fhi_aims_atom_projected_dos_file",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_atom_projected_dos"
       ]
     }, {
       "description": "-",
@@ -979,6 +940,27 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_controlIn_basis_set",
+      "superNames": [
+        "fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_controlInOut_atom_species",
+      "superNames": [
+        "fhi_aims_controlInOut_method"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_controlInOut_basis_func",
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
       "description": "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if section_run is closed. Therefore, this section belongs to section_run.",
       "kindStr": "type_section",
       "name": "fhi_aims_section_dos",
@@ -1075,6 +1057,24 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_species_projected_dos_file",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_species_projected_dos_species_label",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_species_projected_dos"
       ]
     }]
 }
