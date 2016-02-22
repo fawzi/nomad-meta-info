@@ -71,6 +71,14 @@
         "settings_thermostat"
       ]
     }, {
+      "description": "Langevin thermostat damping factor",
+      "dtypeStr": "f",
+      "name": "langevin_gamma",
+      "shape": [],
+      "superNames": [
+        "settings_thermostat"
+      ]
+    }, {
       "description": "MD barostat type, valid values are defined in the barostat_type wiki page",
       "dtypeStr": "C",
       "name": "barostat_type",
