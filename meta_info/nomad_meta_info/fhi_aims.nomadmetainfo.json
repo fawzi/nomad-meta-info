@@ -877,6 +877,36 @@
       ],
       "units": "m"
     }, {
+      "description": "x component of atomic velocity",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_velocity_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m/s"
+    }, {
+      "description": "y component of atomic velocity",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_velocity_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m/s"
+    }, {
+      "description": "z component of atomic velocity",
+      "dtypeStr": "f",
+      "name": "fhi_aims_geometry_atom_velocity_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m/s"
+    }, {
       "description": "x component of lattice vector",
       "dtypeStr": "f",
       "name": "fhi_aims_geometry_lattice_vector_x",
