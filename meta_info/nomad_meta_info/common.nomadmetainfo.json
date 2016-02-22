@@ -7,7 +7,20 @@
       "name": "accessory_info",
       "superNames": []
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free.",
+      "description": "Forces on the atoms as minus gradient of energy_free without unitary forces cleaning and constraints.",
+      "dtypeStr": "f",
+      "name": "atom_forces_free_raw",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_free including unitary forces cleaning and constraints if present.",
       "dtypeStr": "f",
       "name": "atom_forces_free",
       "repeats": true,
@@ -20,7 +33,33 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0.",
+      "description": "Forces on the atoms as minus gradient of energy_total without unitary forces cleaning and constraints.",
+      "dtypeStr": "f",
+      "name": "atom_forces_raw",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total_T0 without unitary forces cleaning and constraints.",
+      "dtypeStr": "f",
+      "name": "atom_forces_T0_raw",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "atom_forces_type"
+      ],
+      "units": "N"
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total_T0 including unitary forces cleaning and constraints if present.",
       "dtypeStr": "f",
       "name": "atom_forces_T0",
       "repeats": true,
@@ -42,7 +81,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total.",
+      "description": "Forces on the atoms as minus gradient of energy_total including unitary forces cleaning and constraints if present.",
       "dtypeStr": "f",
       "name": "atom_forces",
       "repeats": true,
