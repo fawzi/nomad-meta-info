@@ -13,7 +13,7 @@
       "superNames": [
         "section_system_description"
       ],
-      "units": "m"
+      "units": "m^-3"
     }, {
       "description": "Core-electron kinetic energy",
       "dtypeStr": "f",
@@ -94,6 +94,27 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
+    }, {
+      "description": "energy value for a dos point",
+      "dtypeStr": "f",
+      "name": "exciting_dos_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "exciting_section_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Density of states values",
+      "dtypeStr": "f",
+      "name": "exciting_dos_value",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "exciting_section_dos"
+      ],
+      "units": "J^-1"
     }, {
       "description": "Effective potential energy",
       "dtypeStr": "f",
@@ -260,6 +281,13 @@
       ],
       "units": "J"
     }, {
+      "description": "dos values",
+      "kindStr": "type_section",
+      "name": "exciting_section_dos",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "lattice vectors",
       "kindStr": "type_section",
       "name": "exciting_section_lattice_vectors",
@@ -273,7 +301,7 @@
       "superNames": [
         "section_system_description"
       ],
-      "units": "m"
+      "units": "m^3"
     }, {
       "description": "XC potential",
       "dtypeStr": "f",
