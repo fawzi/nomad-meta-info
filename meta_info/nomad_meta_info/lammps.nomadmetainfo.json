@@ -102,6 +102,17 @@
       "superNames": [
         "settings_barostat"
       ]
+    }, {
+      "description": "Reference to the atom type of each interaction atoms",
+      "dtypeStr": "r",
+      "name": "interaction_atoms_to_atom_type_ref",
+      "referencedSections": [
+        "section_atom_type"
+      ],
+      "shape": [],
+      "superNames": [
+        "settings_interaction"
+      ]
     }
     
   ]
