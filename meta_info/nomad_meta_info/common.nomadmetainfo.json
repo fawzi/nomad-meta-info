@@ -216,20 +216,21 @@
       ]
     }, {
       "description": "Charge of the atom type in au.",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "atom_type_charge",
       "shape": [],
       "superNames": [
         "section_atom_type"
       ]
     }, {
-      "description": "Mass of the atom type in au.",
-      "dtypeStr": "C",
+      "description": "Mass of the atom type in kg.",
+      "dtypeStr": "f",
       "name": "atom_type_mass",
       "shape": [],
       "superNames": [
         "section_atom_type"
-      ]
+      ],
+      "units": "kg"
     }, {
       "description": "Name (label) of the atom type.",
       "dtypeStr": "C",

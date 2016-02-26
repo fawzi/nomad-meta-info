@@ -7,6 +7,193 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "Brillouin zone volume",
+      "dtypeStr": "f",
+      "name": "exciting_brillouin_zone_volume",
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m^-3"
+    }, {
+      "description": "Core-electron kinetic energy",
+      "dtypeStr": "f",
+      "name": "exciting_core_electron_kinetic_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Core-electron kinetic energy final",
+      "dtypeStr": "f",
+      "name": "exciting_core_electron_kinetic_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Correlation energy",
+      "dtypeStr": "f",
+      "name": "exciting_correlation_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Correlation energy final",
+      "dtypeStr": "f",
+      "name": "exciting_correlation_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Coulomb energy",
+      "dtypeStr": "f",
+      "name": "exciting_coulomb_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Coulomb energy final",
+      "dtypeStr": "f",
+      "name": "exciting_coulomb_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Coulomb potential energy",
+      "dtypeStr": "f",
+      "name": "exciting_coulomb_potential_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Coulomb potential energy final",
+      "dtypeStr": "f",
+      "name": "exciting_coulomb_potential_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "energy value for a dos point",
+      "dtypeStr": "f",
+      "name": "exciting_dos_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "exciting_section_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Density of states values",
+      "dtypeStr": "f",
+      "name": "exciting_dos_value",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "exciting_section_dos"
+      ],
+      "units": "J^-1"
+    }, {
+      "description": "Effective potential energy",
+      "dtypeStr": "f",
+      "name": "exciting_effective_potential_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Effective potential energy final",
+      "dtypeStr": "f",
+      "name": "exciting_effective_potential_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electron-nuclear energy",
+      "dtypeStr": "f",
+      "name": "exciting_electron_nuclear_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Electron-nuclear energy final",
+      "dtypeStr": "f",
+      "name": "exciting_electron_nuclear_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Exchange energy",
+      "dtypeStr": "f",
+      "name": "exciting_exchange_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Exchange energy final",
+      "dtypeStr": "f",
+      "name": "exciting_exchange_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fermi energy",
+      "dtypeStr": "f",
+      "name": "exciting_fermi_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fermi energy final",
+      "dtypeStr": "f",
+      "name": "exciting_fermi_energy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
       "description": "x component of lattice vector",
       "dtypeStr": "f",
       "name": "exciting_geometry_lattice_vector_x",
@@ -34,11 +221,106 @@
       ],
       "units": "m"
     }, {
+      "description": "Hartree energy",
+      "dtypeStr": "f",
+      "name": "exciting_hartree_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Hartree energy final",
+      "dtypeStr": "f",
+      "name": "exciting_hartree_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Madelung energy",
+      "dtypeStr": "f",
+      "name": "exciting_madelung_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Madelung energy final",
+      "dtypeStr": "f",
+      "name": "exciting_madelung_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Nuclear-nuclear energy",
+      "dtypeStr": "f",
+      "name": "exciting_nuclear_nuclear_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Nuclear-nuclear energy final",
+      "dtypeStr": "f",
+      "name": "exciting_nuclear_nuclear_energy",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "dos values",
+      "kindStr": "type_section",
+      "name": "exciting_section_dos",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "lattice vectors",
       "kindStr": "type_section",
       "name": "exciting_section_lattice_vectors",
       "superNames": [
         "section_system_description"
       ]
+    }, {
+      "description": "unit cell volume",
+      "dtypeStr": "f",
+      "name": "exciting_unit_cell_volume",
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m^3"
+    }, {
+      "description": "XC potential",
+      "dtypeStr": "f",
+      "name": "exciting_XC_potential_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "XC potential final",
+      "dtypeStr": "f",
+      "name": "exciting_XC_potential",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
     }]
 }
