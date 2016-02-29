@@ -348,7 +348,7 @@
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
       "dtypeStr": "f",
       "name": "energy_total_scf_iteration_list",
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "section_single_configuration_calculation"
       ]
