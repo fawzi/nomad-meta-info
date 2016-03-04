@@ -70,7 +70,34 @@
       "superNames": [
         "section_run"
       ]
+    
     }, {
+      "description": "castep_Initialisation_time",
+      "dtypeStr": "f",
+      "name": "castep_initialisation_time",
+      "shape": [],
+      "superNames": [
+        "castep_section_time"
+      ]
+ 
+    }, {
+      "description": "castep_calculation_time",
+      "dtypeStr": "f",
+      "name": "castep_calculation_time",
+      "shape": [],
+      "superNames": [
+        "castep_section_time"
+      ]
+    }, {
+      "description": "castep_finalisation_time",
+      "dtypeStr": "f",
+      "name": "castep_finalisation_time",
+      "shape": [],
+       "superNames": [
+        "castep_section_time"
+      ]
+
+     }, {
       "description": "XC functional in CASTEP convention",
       "dtypeStr": "C",
       "name": "castep_functional_name",
@@ -174,7 +201,7 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
-    
+
     }, {
       "description": "Temporary storing stress tensor components",
       "dtypeStr": "C",
@@ -340,11 +367,7 @@
       "superNames": [
         "section_run"
       ]
-    },
-
-
-
-       {
+    }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
       "dtypeStr": "f",
       "name": "energy_total_scf_iteration_list",
@@ -370,6 +393,13 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_stress_tensor",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_time",
       "superNames": [
         "section_single_configuration_calculation"
       ]
