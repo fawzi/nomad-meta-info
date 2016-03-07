@@ -459,13 +459,22 @@
         "fhi_aims_controlInOut_method"
       ]
     }, {
+      "description": "-",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "fhi_aims_controlInOut_basis_func_type",                          
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_controlInOut_basis_func"                              
+      ]                                                                         
+    }, {  
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_basis_func_eff_charge",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -474,7 +483,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ],
       "units": "m**-2"
     }, {
@@ -484,7 +493,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -493,7 +502,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -502,7 +511,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -511,7 +520,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -520,7 +529,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -529,7 +538,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
@@ -538,7 +547,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ],
       "units": "m**-2"
     }, {
@@ -548,16 +557,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "C",
-      "name": "fhi_aims_controlInOut_basis_func_type",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "fhi_aims_section_controlInOut_atom_species"
+        "fhi_aims_section_controlInOut_basis_func"
       ]
     }, {
       "description": "-",
