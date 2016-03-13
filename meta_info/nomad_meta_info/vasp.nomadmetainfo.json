@@ -1,0 +1,10 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the Vasp parser, all names are expected to start with vasp_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ ]
+}
