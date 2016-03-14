@@ -52,6 +52,61 @@
         "cp2k_section_programinformation"
       ]
     }, {
+      "description": "Information about the ancillary files that are taken as input or that are output by this calculation.",
+      "kindStr": "type_section",
+      "name": "cp2k_section_filenames",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The name of the CP2K input file that produced this calculation.",
+      "dtypeStr": "C",
+      "name": "cp2k_input_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the basis set file.",
+      "dtypeStr": "C",
+      "name": "cp2k_basis_set_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the geminal file.",
+      "dtypeStr": "C",
+      "name": "cp2k_geminal_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the potential file.",
+      "dtypeStr": "C",
+      "name": "cp2k_potential_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the MM potential file.",
+      "dtypeStr": "C",
+      "name": "cp2k_mm_potential_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the coordinate file.",
+      "dtypeStr": "C",
+      "name": "cp2k_coordinate_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
       "description": "The total number of different entities in the calculation.",
       "kindStr": "type_section",
       "name": "cp2k_section_total_numbers",
