@@ -1199,7 +1199,83 @@
       "superNames": [                                                           
         "fhi_aims_section_vdW_TS"                                               
       ],
-      "units": "J"           
+      "units": "J"          
+    }, {                                                                        
+      "description": "scGW total energy at each iteration calculated using the Galitskii-Migdal formula",
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_scgw_galitskii_migdal_total_energy",                           
+      "repeats": true,                                                         
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"  
+    }, {                                                                        
+      "description": "scGW kinetic energy at each iteration",
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_scgw_kinetic_energy",                    
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"  
+    }, {                                                                        
+      "description": "scGW sum of eigenvalues calculated from the trace over the Hamiltonian times the Greens function matrices",                   
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_scgw_hartree_energy_sum_eigenvalues_scf_iteration",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J" 
+    }, {                                                                        
+      "description": "scGW correlation energy at each iteration",
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_energy_scgw_correlation_energy",     
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J" 
+    }, {                                                                        
+      "description": "scGW single particle energy at each iteration",               
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_single_particle_energy",                        
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J" 
+    }, {                                                                        
+      "description": "The RPA correlation energy calculated from the Green's functions of the scGW at each iteration",           
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_scgw_rpa_correlation_energy",                                
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"   
+    }, {                                                                        
+      "description": "Fit acccuracy for the Fast-Fourier Transforms necessary in the scGW formalism",           
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_poles_fit_accuracy",                                
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ]                                                                        
     }, {
       "description": "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if section_run is closed. Therefore, this section belongs to section_run.",
       "kindStr": "type_section",
