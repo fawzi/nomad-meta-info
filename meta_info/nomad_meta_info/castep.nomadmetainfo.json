@@ -106,12 +106,37 @@
         "castep_section_functionals"
       ]
     }, {
+      "description": "XC functional definition in CASTEP convention",
+      "dtypeStr": "C",
+      "name": "castep_functional_type",
+      "shape": [],
+      "superNames": [
+        "castep_section_functional_definition"
+      ]  
+    }, {
+      "description": "XC functional weight in CASTEP convention",
+      "dtypeStr": "C",
+      "name": "castep_functional_weight",
+      "shape": [],
+      "superNames": [
+        "castep_section_functional_definition"
+      ]
+
+    }, {
+      "description": "XC functional+weight in CASTEP convention",
+      "dtypeStr": "C",
+      "name": "castep_functional_and_weight",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]    
+    }, {
       "description": "Relativity treatment in CASTEP convention",
       "dtypeStr": "C",
       "name": "castep_relativity_treatment_scf",
       "shape": [],
       "superNames": [
-        "castep_section_functionals"
+        "castep_section_relativity_treatment"
       ]
     }, {
       "description": "Storing atomic positions in fractional coordinates",
@@ -428,6 +453,20 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_functionals",
+      "superNames": [
+        "section_method"
+      ]
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_functional_definition",
+      "superNames": [
+        "section_method"
+      ]
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_relativity_treatment",
       "superNames": [
         "section_method"
       ]
