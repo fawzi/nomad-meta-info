@@ -12,7 +12,7 @@
       "name": "gaussian_atom_label",
       "shape": [],
       "superNames": [
-        "gaussian_section_geometry"
+        "gaussian_section_labels"
       ]
     }, {
       "description": "x coordinate for the atoms",
@@ -65,6 +65,13 @@
       "superNames": [
         "settings_run",
         "parallelization_info"
+      ]
+    }, {
+      "description": "section that contains charge, multiplicity and system element labels",
+      "kindStr": "type_section",
+      "name": "gaussian_section_labels",
+      "superNames": [
+        "section_system_description"
       ]
     }, {
       "description": "section that contains the Cartesian coordinates of the system",
