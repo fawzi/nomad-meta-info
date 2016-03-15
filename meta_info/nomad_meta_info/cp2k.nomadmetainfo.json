@@ -11,7 +11,7 @@
       "name": "cp2k_section_dbcsr",
       "kindStr": "type_section",
       "superNames": [
-        "section_run"
+        "settings_run"
       ]
     }, {
       "description": "Contains information about the starting conditions for this run.",
@@ -52,34 +52,66 @@
         "cp2k_section_programinformation"
       ]
     }, {
-      "description": "Information about the cell used in the simulation.",
+      "description": "Information about the ancillary files that are taken as input or that are output by this calculation.",
       "kindStr": "type_section",
-      "name": "cp2k_section_cell",
+      "name": "cp2k_section_filenames",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "cp2k_section_functional",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
+      "description": "The name of the CP2K input file that produced this calculation.",
       "dtypeStr": "C",
-      "repeats": true,
-      "name": "cp2k_functional_name",
+      "name": "cp2k_input_filename",
       "shape": [],
       "superNames": [
-        "cp2k_section_functional"
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the basis set file.",
+      "dtypeStr": "C",
+      "name": "cp2k_basis_set_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the geminal file.",
+      "dtypeStr": "C",
+      "name": "cp2k_geminal_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the potential file.",
+      "dtypeStr": "C",
+      "name": "cp2k_potential_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the MM potential file.",
+      "dtypeStr": "C",
+      "name": "cp2k_mm_potential_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the coordinate file.",
+      "dtypeStr": "C",
+      "name": "cp2k_coordinate_filename",
+      "shape": [],
+      "superNames": [
+        "cp2k_section_filenames"
       ]
     }, {
       "description": "The total number of different entities in the calculation.",
       "kindStr": "type_section",
       "name": "cp2k_section_total_numbers",
       "superNames": [
-        "section_run"
+        "section_system_description"
       ]
     }, {
       "description": "The number of shell sets in the calculation.",
@@ -88,13 +120,6 @@
       "shape": [],
       "superNames": [
         "cp2k_section_total_numbers"
-      ]
-    }, {
-      "description": "Information about the atoms in a Quickstep calculation.",
-      "kindStr": "type_section",
-      "name": "cp2k_section_quickstep_atom_information",
-      "superNames": [
-        "section_run"
       ]
     }, {
       "description": "Section grouping together the quantities calculated during an MD.",
