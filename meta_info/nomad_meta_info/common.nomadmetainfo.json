@@ -160,7 +160,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atom_projected_dos_lm",
       "shape": [
@@ -171,7 +171,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atom_projected_dos_m_kind",
       "shape": [],
@@ -253,7 +253,7 @@
       ],
       "units": "m/s"
     }, {
-      "description": "string describing the method used to obtain the multipoles as described in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/atomic-multipole-kind)",
+      "description": "string describing the method used to obtain the multipoles as described in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind)",
       "dtypeStr": "C",
       "name": "atomic_multipole_kind",
       "shape": [],
@@ -261,7 +261,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
@@ -272,7 +272,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_m_kind",
       "shape": [],
@@ -375,7 +375,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_short_name",
       "shape": [],
@@ -383,7 +383,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_short_name and if not equal to the default basis set implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-atom-centered-unique-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_short_name and if not equal to the default basis set implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_unique_name",
       "shape": [],
@@ -399,7 +399,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "A cell_associated basis set type, string should be as defined in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-cell-associated-kind).",
+      "description": "A cell_associated basis set type, string should be as defined in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-kind).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_kind",
       "repeat": false,
@@ -408,7 +408,7 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A descriptive name identifying the basis set be as defined in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-cell-associated-name).",
+      "description": "A descriptive name identifying the basis set be as defined in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-name).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_name",
       "repeat": false,
@@ -424,7 +424,7 @@
         "section_run"
       ]
     }, {
-      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-kind).",
+      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
       "dtypeStr": "C",
       "name": "basis_set_kind",
       "shape": [],
@@ -432,7 +432,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "String identifying the basis set in an unique way. The values are described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-name).",
+      "description": "String identifying the basis set in an unique way. The values are described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set_name",
       "shape": [],
@@ -449,7 +449,7 @@
       ],
       "units": "J"
     }, {
-      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It should refer (and be the same) to some basis_set_name which is described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/basis-set-name).",
+      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It should refer (and be the same) to some basis_set_name which is described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set",
       "shape": [],
@@ -458,7 +458,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For normal ab-initio calculation, for example, this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-method-current) for the details",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For normal ab-initio calculation, for example, this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -486,7 +486,7 @@
         "section_method"
       ]
     }, {
-      "description": "Url used to reference externally stored calculation as defined in the [calculation\\_to\\_calculation\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-to-calculation-external-url)",
+      "description": "Url used to reference externally stored calculation as defined in the [calculation\\_to\\_calculation\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-external-url)",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_external_url",
       "repeats": false,
@@ -495,7 +495,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "String defining the kind of relatioship that there is between this and the referenced calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/calculation-to-calculation-kind)",
+      "description": "String defining the kind of relatioship that there is between this and the referenced calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind)",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_kind",
       "repeats": false,
@@ -553,7 +553,7 @@
         "section_constraint"
       ]
     }, {
-      "description": "Short and unique name for this constraint type. Valid names are described in the [constraint\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/constraint-kind)",
+      "description": "Short and unique name for this constraint type. Valid names are described in the [constraint\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/constraint-kind)",
       "dtypeStr": "C",
       "name": "constraint_kind",
       "shape": [],
@@ -602,7 +602,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/eigenvalues-kind).",
+      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind).",
       "dtypeStr": "C",
       "name": "eigenvalues_kind",
       "shape": [],
@@ -686,7 +686,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
+      "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "dtypeStr": "C",
       "name": "energy_comparable_kind",
       "shape": [],
@@ -694,7 +694,7 @@
         "section_energy_comparable"
       ]
     }, {
-      "description": "Value of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
+      "description": "Value of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "dtypeStr": "f",
       "name": "energy_comparable_value",
       "shape": [],
@@ -764,7 +764,7 @@
       ],
       "units": "J"
     }, {
-      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-current)",
+      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current)",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -1203,7 +1203,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Kind of ensamble one tries to sample, valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/ensemble-type).",
+      "description": "Kind of ensamble one tries to sample, valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
       "dtypeStr": "C",
       "name": "ensemble_type",
       "shape": [],
@@ -1260,7 +1260,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Reference to an external evaluation as described in the [frame\\_sequence\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/frame-sequence-external-url)",
+      "description": "Reference to an external evaluation as described in the [frame\\_sequence\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url)",
       "dtypeStr": "C",
       "name": "frame_sequence_external_url",
       "shape": [],
@@ -1440,7 +1440,7 @@
         "section_interaction"
       ]
     }, {
-      "description": "Short and unique name for this interaction type. Valid names are described in the [interaction\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/interaction-kind)",
+      "description": "Short and unique name for this interaction type. Valid names are described in the [interaction\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/interaction-kind)",
       "dtypeStr": "C",
       "name": "interaction_kind",
       "shape": [],
@@ -1603,7 +1603,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "Url used to reference externally stored methods as defined in the [method\\_to\\_method\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/method-to-method-external-url)",
+      "description": "Url used to reference externally stored methods as defined in the [method\\_to\\_method\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-external-url)",
       "dtypeStr": "C",
       "name": "method_to_method_external_url",
       "repeats": false,
@@ -1612,7 +1612,7 @@
         "section_method_to_method_refs"
       ]
     }, {
-      "description": "String describing the relationship between the referenced method and this one. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/method-to-method-kind).",
+      "description": "String describing the relationship between the referenced method and this one. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind).",
       "dtypeStr": "C",
       "name": "method_to_method_kind",
       "shape": [],
@@ -1650,7 +1650,7 @@
         "section_molecule_constraint"
       ]
     }, {
-      "description": "Short and unique name for this constraint type. Valid names are described in the [constraint\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/constraint-kind)",
+      "description": "Short and unique name for this constraint type. Valid names are described in the [constraint\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/constraint-kind)",
       "dtypeStr": "C",
       "name": "molecule_constraint_kind",
       "shape": [],
@@ -1677,7 +1677,7 @@
         "section_molecule_interaction"
       ]
     }, {
-      "description": "Short and unique name for this interaction type. Valid names are described in the [interaction\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/interaction-kind)",
+      "description": "Short and unique name for this interaction type. Valid names are described in the [interaction\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/interaction-kind)",
       "dtypeStr": "C",
       "name": "molecule_interaction_kind",
       "shape": [],
@@ -2134,7 +2134,7 @@
         "program_info"
       ]
     }, {
-      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/relativity-method).",
+      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/relativity-method).",
       "dtypeStr": "C",
       "name": "relativity_method",
       "superNames": [
@@ -2159,7 +2159,7 @@
         "section_run"
       ]
     }, {
-      "description": "Type of method used to do the sampling [sampling_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/sampling-method).",
+      "description": "Type of method used to do the sampling [sampling_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/sampling-method).",
       "dtypeStr": "C",
       "name": "sampling_method",
       "shape": [],
@@ -2272,7 +2272,7 @@
         "section_eigenvalues_group"
       ]
     }, {
-      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy-comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/energy-comparable).",
+      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy-comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "kindStr": "type_section",
       "name": "section_energy_comparable",
       "superNames": [
@@ -2427,7 +2427,7 @@
         "settings_XC_functional"
       ]
     }, {
-      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/self-interaction-correction-method).",
+      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/self-interaction-correction-method).",
       "dtypeStr": "C",
       "name": "self_interaction_correction_method",
       "superNames": [
@@ -2634,7 +2634,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "The kind of smearing on the electron occupation used to calculate energy_free, valid values are given in the [smearing\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/smearing-kind)",
+      "description": "The kind of smearing on the electron occupation used to calculate energy_free, valid values are given in the [smearing\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/smearing-kind)",
       "dtypeStr": "C",
       "name": "smearing_kind",
       "shape": [],
@@ -2678,7 +2678,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "species_projected_dos_lm",
       "shape": [
@@ -2689,7 +2689,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/public-wiki/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "species_projected_dos_m_kind",
       "shape": [],
@@ -3032,7 +3032,7 @@
       ],
       "units": "s"
     }, {
-      "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/topology-force-field-name)",
+      "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name)",
       "dtypeStr": "C",
       "name": "topology_force_field_name",
       "shape": [],
@@ -3060,7 +3060,7 @@
         "section_method"
       ]
     }, {
-      "description": "Short string describing the van der Waals method. No such method, if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/van-der-Waals-method).",
+      "description": "Short string describing the van der Waals method. No such method, if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/van-der-Waals-method).",
       "dtypeStr": "C",
       "name": "van_der_Waals_method",
       "shape": [],
@@ -3078,7 +3078,7 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short obtained combining the data in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional).",
+      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short obtained combining the data in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional",
       "repeats": false,
@@ -3087,7 +3087,7 @@
         "settings_XC_functional"
       ]
     }, {
-      "description": "Name of one of the exchange correlation (XC) functionals combined in XC_functional. The valid unique names that can be used are defined in [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional).",
+      "description": "Name of one of the exchange correlation (XC) functionals combined in XC_functional. The valid unique names that can be used are defined in [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional_name",
       "repeats": false,
@@ -3096,7 +3096,7 @@
         "section_XC_functionals"
       ]
     }, {
-      "description": "Dictionary containing non default values of the parameters for the functional XC_functional_name. The names and units of these values should be defined in the section dedicated to XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/public-wiki/wikis/metainfo/XC-functional). If not given the default parameter values are assumed.",
+      "description": "Dictionary containing non default values of the parameters for the functional XC_functional_name. The names and units of these values should be defined in the section dedicated to XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional). If not given the default parameter values are assumed.",
       "dtypeStr": "D",
       "name": "XC_functional_parameters",
       "repeats": false,
