@@ -1,0 +1,34 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the gaussian parser, all names are expected to start with gaussian",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "dmol compilation date",
+      "dtypeStr": "C",
+      "name": "dmol3_functional_name",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "dmol3 compilation date",
+      "dtypeStr": "C",
+      "name": "dmol3_program_compilation_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "dmol compilation date",
+      "dtypeStr": "C",
+      "name": "dmol3_program_compilation_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }]
+}
