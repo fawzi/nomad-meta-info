@@ -2089,6 +2089,14 @@
         "section_frame_sequence"
       ]
     }, {
+      "description": "Type of basis set used by the program to represent the wavefunctions, valid values are given in the [basis set type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/program-basis-set-type)",
+      "dtypeStr": "C",
+      "name": "program_basis_set_type",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "Program compilation date and time as seconds from unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "dtypeStr": "f",
       "name": "program_compilation_datetime",
