@@ -451,6 +451,108 @@
       "superNames": [
         "section_method"
       ]
+    },
+
+
+
+    {
+      "description": "dmol3 binding energy at every SCF",
+      "dtypeStr": "f",
+      "name": "dmol3_binding_energy_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+        "units": "J"
+    },
+
+
+    {
+      "description": "dmol3 convergence at every SCF",
+      "dtypeStr": "f",
+      "name": "dmol3_convergence_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+
+    {
+      "description": "dmol3 time at every SCF",
+      "dtypeStr": "f",
+      "name": "dmol3_time_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+
+    {
+      "description": "dmol3 iteration number at every SCF",
+      "dtypeStr": "i",
+      "name": "dmol3_number_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+
+    {
+      "description": "Single eigenvalue",
+      "dtypeStr": "f",
+      "name": "dmol3_eigenvalue_eigenvalue",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ],
+      "units": "J"
+    },
+
+    {
+      "description": "Occupation of single eigenfunction",
+      "dtypeStr": "f",
+      "name": "dmol3_eigenvalue_occupation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    },
+
+
+    {
+      "description": "Single total energy ",
+      "dtypeStr": "f",
+      "name": "dmol3_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    },
+
+
+
+    {
+      "description": "Hirshfeld Population Analysis",
+      "dtypeStr": "f",
+      "name": "dmol3_hirshfeld_population",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    },
+
+    {
+      "description": "Mulliken Population Analysis",
+      "dtypeStr": "f",
+      "name": "dmol3_mulliken_population",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
     }
  
 ]
