@@ -113,6 +113,17 @@
       "superNames": [
         "section_interaction"
       ]
+    }, {
+      "description": "Reference to the atom type of each molecule interaction atoms",
+      "dtypeStr": "r",
+      "name": "molecule_interaction_atom_to_atom_type_ref",
+      "referencedSections": [
+        "section_atom_type"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_molecule_interaction"
+      ]
     }
     
   ]
