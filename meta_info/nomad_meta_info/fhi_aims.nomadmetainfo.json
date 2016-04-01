@@ -809,13 +809,53 @@
       ],
       "units": "J"
     }, {                                                                        
-      "description": "Single eigenvalue of perturbative GW",                        
+      "description": "KS ground state energy at a given eigenstate needed in perturbative GW",                        
       "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_eigenvalue_perturbativeGW",                            
+      "name": "fhi_aims_eigenvalue_ks_GroundState",                            
       "repeats": true,                                                          
       "shape": [],                                                              
       "superNames": [                                                           
         "fhi_aims_section_eigenvalues_list_perturbativeGW"                                
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Exact exchange energy at given eigenstate from perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_ExactExchange_perturbativeGW",                  
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_ks_ExchangeCorrelation",               
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Correlation energy at a given eigenstate from perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_correlation_perturbativeGW",                     
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Quasiparticle energy at a given eigenstate from perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_quasiParticle_energy",                 
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
       ],                                                                        
       "units": "J"                                                              
     }, {
