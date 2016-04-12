@@ -7,7 +7,7 @@
       "name": "accessory_info",
       "superNames": []
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free without unitary forces cleaning and constraints.",
+      "description": "Forces on the atoms as minus gradient of energy_free, without forces' unitary-transformation (rigid body) filtering and without constraints.",
       "dtypeStr": "f",
       "name": "atom_forces_free_raw",
       "repeats": true,
@@ -20,7 +20,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free including unitary forces cleaning and constraints if present.",
+      "description": "Forces on the atoms as minus gradient of energy_free, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
       "dtypeStr": "f",
       "name": "atom_forces_free",
       "repeats": true,
@@ -33,7 +33,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total without unitary forces cleaning and constraints.",
+      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
       "dtypeStr": "f",
       "name": "atom_forces_raw",
       "repeats": true,
@@ -46,7 +46,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0 without unitary forces cleaning and constraints.",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0, without forces' unitary-transformation (rigid body) filtering and without constraints.",
       "dtypeStr": "f",
       "name": "atom_forces_T0_raw",
       "repeats": true,
@@ -59,7 +59,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0 including unitary forces cleaning and constraints if present.",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
       "dtypeStr": "f",
       "name": "atom_forces_T0",
       "repeats": true,
@@ -81,7 +81,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total including unitary forces cleaning and constraints if present.",
+      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
       "dtypeStr": "f",
       "name": "atom_forces",
       "repeats": true,
@@ -127,7 +127,7 @@
         "settings_atom_in_molecule"
       ]
     }, {
-      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with atom name plus possible a number, X can be used for particles that do not correspond to atoms. (this defines a configuration and is required).",
+      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic species plus possible a number. They can be used for particles that do not correspond to atoms (e.g., ghost atoms in some atom centered codes). This metadata defines a configuration and is required.",
       "dtypeStr": "C",
       "name": "atom_label",
       "shape": [
@@ -137,7 +137,7 @@
         "configuration_core"
       ]
     }, {
-      "description": "Positions of the atoms (this defines a configuration and is required).",
+      "description": "Positions of the atoms. This metadata defines a configuration and is required.",
       "dtypeStr": "f",
       "name": "atom_position",
       "shape": [
@@ -149,7 +149,7 @@
       ],
       "units": "m"
     }, {
-      "description": "Atom projected density of states (DOS) energies",
+      "description": "Energy values of the atom-projected density of (electronic-energy) states (DOS)",
       "dtypeStr": "f",
       "name": "atom_projected_dos_energies",
       "shape": [
@@ -160,7 +160,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of l and m values for which atom_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. The integer numbers for $m$ have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atom_projected_dos_lm",
       "shape": [
@@ -171,7 +171,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atom_projected_dos_m_kind",
       "shape": [],
@@ -179,7 +179,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Atom projected density of states (DOS) values, divided into contributions from lm",
+      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_lm",
       "shape": [
@@ -192,7 +192,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Atom projected density of states (DOS) values, summed up over all l",
+      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
@@ -204,7 +204,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "mapping atom to molecules: molecule number, atom in molecule number.",
+      "description": "Table mapping atom to molecules: the first column is the index of the molecule and the second column the index of the atom, signifying that the atom in the second column belongs to the molecule in the first column in the same row.",
       "dtypeStr": "i",
       "name": "atom_to_molecule",
       "shape": [
@@ -215,15 +215,16 @@
         "section_topology"
       ]
     }, {
-      "description": "Charge of the atom type in au.",
+      "description": "Charge of the atom type.",
       "dtypeStr": "f",
       "name": "atom_type_charge",
       "shape": [],
       "superNames": [
         "section_atom_type"
-      ]
+      ],
+      "units": "C"
     }, {
-      "description": "Mass of the atom type in kg.",
+      "description": "Mass of the atom type.",
       "dtypeStr": "f",
       "name": "atom_type_mass",
       "shape": [],
@@ -240,7 +241,7 @@
         "section_atom_type"
       ]
     }, {
-      "description": "velocities of the atoms.",
+      "description": "Velocities of the nuclei.",
       "dtypeStr": "f",
       "name": "atom_velocities",
       "repeats": true,
@@ -253,7 +254,7 @@
       ],
       "units": "m/s"
     }, {
-      "description": "string describing the method used to obtain the multipoles as described in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind)",
+      "description": "String describing the method used to obtain the multipoles as described in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_kind",
       "shape": [],
@@ -261,7 +262,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Tuples of l and m values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "Tuples of $l$ and $m$ values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
@@ -272,7 +273,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of $m$ in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_m_kind",
       "shape": [],
@@ -280,7 +281,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "value of the dipole (or monopole/charge for l = 0) of each atom calculated of atomic_multipole_kind",
+      "description": "Value of the dipole (or monopole/charge for $l$ = 0) for each atom, calculated as described in atomic_multipole_kind.",
       "dtypeStr": "f",
       "name": "atomic_multipole_value",
       "shape": [
@@ -291,7 +292,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "k band energies",
+      "description": "Energies of the $k$ bands (electronic band structure).",
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
@@ -305,7 +306,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Fractional coordinates of the k points (i.e. in the basis of the reciprocal lattice vectors) actually building the band",
+      "description": "Fractional coordinates of the $k$ points (i.e. in the basis of the reciprocal lattice vectors) actually building the band.",
       "dtypeStr": "f",
       "name": "band_k_points",
       "shape": [
@@ -317,7 +318,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Occupation of the k-point along the band",
+      "description": "Occupation of the $k$-point along the band",
       "dtypeStr": "f",
       "name": "band_occupation",
       "shape": [
@@ -330,7 +331,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Start and end labels of the points sampled in the k-space",
+      "description": "Start and end labels of the points in the one-dimensional pathway sampled in the $k$-space",
       "dtypeStr": "C",
       "name": "band_segm_labels",
       "shape": [
@@ -341,7 +342,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Fractional coordinates of the start and end point (i.e. in the basis of the reciprocal lattice vectors) of the segments sampled in the k-space",
+      "description": "Fractional coordinates of the start and end point (i.e. in the basis of the reciprocal lattice vectors) of the segments sampled in the $k$-space",
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [
@@ -375,7 +376,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent but explicative base name of the basis function, not unique. For example fhi-aims looks at the closest standard basis set, and uses that name. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent but explicative base name of the basis function, not unique. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_short_name",
       "shape": [],
@@ -391,7 +392,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "atomic number (number of protons) of the atom this basis set is thought for (0 means unspecified, or a pseudo atom)",
+      "description": "Atomic number (number of protons) of the atom for which this basis set is thought (0 means unspecified, or a pseudo atom)",
       "dtypeStr": "i",
       "name": "basis_set_atom_number",
       "shape": [],
@@ -399,7 +400,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "A cell_associated basis set type, string should be as defined in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-kind).",
+      "description": "A cell_associated basis set type. This string should appear as defined in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-kind).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_kind",
       "repeat": false,
@@ -408,7 +409,7 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A descriptive name identifying the basis set be as defined in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-name).",
+      "description": "A descriptive name identifying the basis set. This string should appear as defined in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-name).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_name",
       "repeat": false,
@@ -440,7 +441,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Spherical cutoff for a plane wave basis set in reciprocal space, as energy of the highest plane wave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$, constants to check!) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
+      "description": "Spherical cutoff  in reciprocal space for a planewave basis set. It is the energy of the highest planewave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
       "dtypeStr": "f",
       "name": "basis_set_plan_wave_cutoff",
       "shape": [],
@@ -458,7 +459,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For normal ab-initio calculation, for example, this is composed of XC_method and basis_set and a unique sha,  see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For scf ab initio calculation, for example, this is composed of XC_method and basis_set and a unique sha, see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -467,7 +468,7 @@
         "section_method"
       ]
     }, {
-      "description": "kind of method in calculation_method_current: absolute or perturbative",
+      "description": "Kind of method in calculation_method_current: absolute or perturbative.",
       "dtypeStr": "C",
       "name": "calculation_method_kind",
       "repeats": false,
@@ -477,7 +478,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total, this consists of calculation_method_current plus '@' and calculation_method of the method_to_method_ref with method_to_method_kind = starting\\_point for perturbative methods.",
+      "description": "String that uniquely represents the method used to calculate energy_total; this consists of calculation_method_current plus '@' and calculation_method of the method_to_method_ref with method_to_method_kind = starting\\_point for perturbative methods.",
       "dtypeStr": "C",
       "name": "calculation_method",
       "repeats": false,
@@ -486,7 +487,7 @@
         "section_method"
       ]
     }, {
-      "description": "Url used to reference externally stored calculation as defined in the [calculation\\_to\\_calculation\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-external-url)",
+      "description": "URL used to reference externally stored calculation as defined in the [calculation\\_to\\_calculation\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-external-url)",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_external_url",
       "repeats": false,
@@ -495,7 +496,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "String defining the kind of relatioship that there is between this and the referenced calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind)",
+      "description": "String defining the kind of relationship that there is between this and the referenced calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind)",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_kind",
       "repeats": false,
@@ -504,7 +505,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given this is assumed to be a local copy of the url. The kind of relationship is specified by calculation_to_calculation_kind.",
+      "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given, this is assumed to be a local copy of the URL. The kind of relationship is specified by calculation_to_calculation_kind.",
       "dtypeStr": "r",
       "name": "calculation_to_calculation_ref",
       "referencedSections": [
@@ -524,7 +525,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Which of the lattice vectors use periodic boundary conditions.\n    A value is valid from the definition point for all subsequent values until redefined\n    (i.e. if not changing it can be defined just once at the beginning).",
+      "description": "Which of the lattice vectors use periodic boundary conditions.",
       "dtypeStr": "b",
       "name": "configuration_periodic_dimensions",
       "repeats": true,
@@ -561,7 +562,7 @@
         "section_constraint"
       ]
     }, {
-      "description": "Explicit constraint parameters for this kind of constraint (depending on the constraint type some might be given implicitly through other means).",
+      "description": "Explicit constraint parameters for this kind of constraint (depending on the constraint type, some might be given implicitly through other means).",
       "dtypeStr": "D",
       "name": "constraint_parameters",
       "shape": [],
@@ -569,7 +570,7 @@
         "section_constraint"
       ]
     }, {
-      "description": "Density of states (DOS) energies",
+      "description": "Energies of the Density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies",
       "dtypeStr": "f",
       "name": "dos_energies",
       "shape": [
@@ -580,7 +581,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Density of states (DOS) values",
+      "description": "Values (number of states for a given energy, given in dos_energies) of Density of (electronic-energy) states (DOS)",
       "dtypeStr": "f",
       "name": "dos_values",
       "shape": [
@@ -591,7 +592,7 @@
         "section_dos"
       ]
     }, {
-      "description": "Values of the eigenvalues",
+      "description": "Values of the (electronic-energy) eigenvalues.",
       "dtypeStr": "f",
       "name": "eigenvalues_eigenvalues",
       "shape": [
@@ -610,7 +611,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "kpoints on which the eigenvalues were evaluated",
+      "description": "$k$ points on which the eigenvalues tabulated in eigenvalues_eigenvalues were evaluated.",
       "dtypeStr": "f",
       "name": "eigenvalues_kpoints",
       "shape": [
@@ -621,7 +622,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Occupation of that eigenfunction",
+      "description": "Occupation of the eigenstates",
       "dtypeStr": "f",
       "name": "eigenvalues_occupation",
       "shape": [
@@ -654,7 +655,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Component of the correlation (C) energy at the (Meta)GGA level using the self-consistent density of the target functional (no exact exchange mixin, full unscaled value)",
+      "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing)",
       "dtypeStr": "f",
       "name": "energy_C_mGGA",
       "repeats": false,
@@ -686,7 +687,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Type of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Type of the shifted total energy, created to be comparable among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "dtypeStr": "C",
       "name": "energy_comparable_kind",
       "shape": [],
@@ -694,7 +695,7 @@
         "section_energy_comparable"
       ]
     }, {
-      "description": "Value of the shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Value of the shifted total energy, created to be comparable among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "dtypeStr": "f",
       "name": "energy_comparable_value",
       "shape": [],
@@ -764,7 +765,7 @@
       ],
       "units": "J"
     }, {
-      "description": "energy calculated with calculation_method_current. energy_current is equal to energy_total for non perturbation methods, and to the correction (energy_total - energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point) for preturbation methods. [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current)",
+      "description": "Energy calculated with calculation_method_current. energy_current is equal to energy_total for non-perturbative methods. For perturbative methods, energy_current is equal to the correction: energy_total minus energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point. See also [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current)",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -776,7 +777,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Total electrostatic energy (atom + electrons) during the scf itrations",
+      "description": "Total electrostatic energy (nuclei + electrons) during the scf itrations",
       "dtypeStr": "f",
       "name": "energy_electrostatic_scf_iteration",
       "repeats": false,
@@ -787,7 +788,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total electrostatic energy (atom + electrons), defined consistently with calculation_method",
+      "description": "Total electrostatic energy (nuclei + electrons), defined consistently with calculation_method",
       "dtypeStr": "f",
       "name": "energy_electrostatic",
       "repeats": false,
@@ -832,7 +833,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density calculated with smearing_kind) calculated with the method described in XC_method",
+      "description": "Free energy (nuclei + electrons) (whose minimum gives the smeared occupation density calculated with smearing_kind) calculated with the method described in XC_method",
       "dtypeStr": "f",
       "name": "energy_free",
       "repeats": false,
@@ -900,7 +901,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method per atom during the scf iterations.",
+      "description": "Energy per atom defined as the sum of the eigenvalues of the hamiltonian matrix defined by XC_method, during the scf iterations.",
       "dtypeStr": "f",
       "name": "energy_sum_eigenvalues_per_atom_scf_iteration",
       "repeats": false,
@@ -912,7 +913,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method per atom",
+      "description": "Energy per atom defined as the sum of the eigenvalues of the hamiltonian matrix defined by XC_method",
       "dtypeStr": "f",
       "name": "energy_sum_eigenvalues_per_atom",
       "repeats": false,
@@ -923,7 +924,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method during the scf iterations.",
+      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method, during the scf iterations.",
       "dtypeStr": "f",
       "name": "energy_sum_eigenvalues_scf_iteration",
       "repeats": false,
@@ -945,7 +946,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy using XC_method per atom extapolated for T=0",
+      "description": "Total energy using XC_method per atom, extapolated to $T=0$, based on a free electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_T0_per_atom",
       "repeats": false,
@@ -956,7 +957,7 @@
       ],
       "units": "J"
     }, {
-      "description": "A value of a total potential energy per atom. Different total energies might have different 0, and so might not be directly comparable.",
+      "description": "A value of a total potential energy per atom. Different total energies methods might have different energy zeros, and so they might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_total_potential_per_atom",
       "shape": [],
@@ -964,7 +965,7 @@
         "energy_component"
       ]
     }, {
-      "description": "A value of a total potential energy. Different total energies might have different 0, and so might not be directly comparable.",
+      "description": "A value of a total potential energy. Different total energies methods might have different energy zeros, and so they might not be directly comparable.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_total_potential",
       "shape": [],
@@ -983,7 +984,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy using XC_method per atom extapolated for T=0 during the scf iterations",
+      "description": "Total energy using XC_method per atom extapolated to $T=0$, based on a free electron gas argument, during the scf iterations",
       "dtypeStr": "f",
       "name": "energy_total_T0_per_atom_scf_iteration",
       "repeats": false,
@@ -995,7 +996,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Total energy using XC_method per atom extapolated for T=0",
+      "description": "Total energy using XC_method per atom extapolated to $T=0$, based on a free electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_total_T0_per_atom",
       "repeats": false,
@@ -1006,7 +1007,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (or equivalently free energy) calculated with XC_method extrapolated for T=0 during the scf iterations",
+      "description": "Total energy (or equivalently free energy) calculated with XC_method extrapolated to $T=0$, based on a free electron gas argument, during the scf iterations.",
       "dtypeStr": "f",
       "name": "energy_total_T0_scf_iteration",
       "repeats": false,
@@ -1017,7 +1018,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (or equivalently free energy), electronic + ions, calculated with the method described in XC_method and extrapolated for T=0 (for metals)",
+      "description": "Total energy (or equivalently free energy), nuclei + electrons, calculated with the method described in XC_method and extrapolated to $T=0$, based on a free electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_total_T0",
       "repeats": false,
@@ -1028,7 +1029,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (electronic + ions) calculated with the method described in calculation_method",
+      "description": "Total energy (nuclei + electrons) calculated with the method described in calculation_method",
       "dtypeStr": "f",
       "name": "energy_total",
       "repeats": false,
@@ -1089,7 +1090,7 @@
       "shape": [],
       "superNames": []
     }, {
-      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals",
+      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics, is given in energy_van_der_Waals and defined in settings_van_der_Waals",
       "dtypeStr": "C",
       "name": "energy_van_der_Waals_kind",
       "repeats": false,
@@ -1119,7 +1120,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional, scaled accordingly to the mixing parameter",
+      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the self consistent density of the target functional, scaled accordingly to the mixing parameter",
       "dtypeStr": "f",
       "name": "energy_X_mGGA_scaled",
       "repeats": false,
@@ -1130,7 +1131,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Component of the exchange (X) energy at the (Meta)GGA level using the self consistent density of the target functional (no exact exchange mixing, full unscaled value)",
+      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing)",
       "dtypeStr": "f",
       "name": "energy_X_mGGA",
       "repeats": false,
@@ -1140,7 +1141,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Exchange correlation (XC) energy calculated with XC_functional",
+      "description": "Exchange-correlation (XC) energy calculated with XC_functional",
       "dtypeStr": "f",
       "name": "energy_XC_functional",
       "repeats": false,
@@ -1150,7 +1151,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of the XC_functional, integral v_xc*electron_density, i.e. the component of xc that is in the sum of the eigenvalues. Typically DFT only. Value during the SCF cycle (not converged)",
+      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of the XC_functional (integral of v_xc*electron_density), i.e., the component of xc that is in the sum of the eigenvalues. Typically DFT only. Value during the SCF cycle (not converged)",
       "dtypeStr": "f",
       "name": "energy_XC_potential_scf_iteration",
       "repeats": false,
@@ -1161,7 +1162,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of XC_functional, integral v_xc*electron_density, i.e. the component of XC that is in the sum of the eigenvalues. Typically DFT only. Value associated with the configuration, should be the most converged value.",
+      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of XC_functional (integral of v_xc*electron_density), i.e., the component of XC that is in the sum of the eigenvalues. Typically DFT only. Value associated with the configuration, should be the most converged value.",
       "dtypeStr": "f",
       "name": "energy_XC_potential",
       "repeats": false,
@@ -1172,7 +1173,7 @@
       ],
       "units": "J"
     }, {
-      "description": "XC energy (integral of e_xc in the DFT case) during the scf iterations using XC_method",
+      "description": "XC energy (integral of e_xc in the DFT case), during the scf iterations, using XC_method",
       "dtypeStr": "f",
       "name": "energy_XC_scf_iteration",
       "repeats": false,
@@ -1183,7 +1184,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Final exchange correlation (XC) energy calculated with XC_method",
+      "description": "Final exchange-correlation (XC) energy calculated with XC_method",
       "dtypeStr": "f",
       "name": "energy_XC",
       "repeats": false,
@@ -1203,7 +1204,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Kind of ensamble one tries to sample, valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
+      "description": "Kind of sampled ensemble; valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
       "dtypeStr": "C",
       "name": "ensemble_type",
       "shape": [],
@@ -1227,7 +1228,7 @@
         "error_estimate_partial"
       ]
     }, {
-      "description": "Average of frame_sequence_conserved_quantity and its standard deviation in this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
+      "description": "Average of energy-like frame_sequence_conserved_quantity and its standard deviation in this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_conserved_quantity_stats",
       "shape": [
@@ -1238,7 +1239,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Conserved quantity, i.e. a quantity that should be conserved by the evalution (for example the total energy in the NVE ensemble) along this frame sequence.",
+      "description": "Energy-like conserved quantity, i.e., a quantity that should be conserved by the evalution (for example the total energy in the NVE ensemble) along this sequence of frames (frame = configuration).",
       "dtypeStr": "f",
       "name": "frame_sequence_conserved_quantity",
       "shape": [
@@ -1249,7 +1250,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Kind of continuation that has been preformed from the previous sequence: pos (position of atom and cell only), pos_vel (also the velocities are restarted), all (everything is restarted, including thermostats,...)",
+      "description": "Type of continuation that has been performed from the previous sequence. Allowed values are: pos (position of atom and cell only), pos_vel (also the velocities are restarted), all (everything is restarted, including thermostats,...)",
       "dtypeStr": "C",
       "name": "frame_sequence_continuation_kind",
       "referencedSections": [
@@ -1268,7 +1269,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Average kinetic energy and standard deviation of this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
+      "description": "Average kinetic energy and standard deviation of this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_kinetic_energy_stats",
       "shape": [
@@ -1279,7 +1280,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Kinetic energy along this frame sequence.",
+      "description": "Kinetic energy along this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_kinetic_energy",
       "shape": [
@@ -1290,7 +1291,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Reference to local frames (which are just section_single_configuration_calculation), if not defined then frame_sequence_external_url *must* be defined, if both are defined this is expected to be a local copy of the reference.",
+      "description": "Reference to local frames (a frame is one section_single_configuration_calculation), if not defined then frame_sequence_external_url *must* be defined, if both are defined this is expected to be a local copy of the reference.",
       "dtypeStr": "r",
       "name": "frame_sequence_local_frames_ref",
       "referencedSections": [
@@ -1303,7 +1304,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Average potential energy and standard deviation of this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
+      "description": "Average potential energy and standard deviation of this of sequence frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy_stats",
       "shape": [
@@ -1314,7 +1315,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Potential energy along this frame sequence. This should be equal to energy_total of the frames (remove?).",
+      "description": "Potential energy along this sequence of frames (a frame is one section_single_configuration_calculation). This should be equal to energy_total of the frames (remove?).",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy",
       "shape": [
@@ -1325,7 +1326,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Average pressure and standard deviation of this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
+      "description": "Average pressure and standard deviation of this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_pressure_stats",
       "shape": [
@@ -1336,7 +1337,7 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Pressure along this frame sequence.",
+      "description": "Pressure along this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_pressure",
       "shape": [
@@ -1347,7 +1348,7 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Average temperature and standard deviation of this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
+      "description": "Average temperature and standard deviation of this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_temperature_stats",
       "shape": [
@@ -1358,7 +1359,7 @@
       ],
       "units": "K"
     }, {
-      "description": "Istantaneus temperature (kinetic energy) along this frame sequence.",
+      "description": "Instantaneus temperature (related to kinetic energy) along this sequence of frames.",
       "dtypeStr": "f",
       "name": "frame_sequence_temperature",
       "shape": [
@@ -1369,7 +1370,7 @@
       ],
       "units": "K"
     }, {
-      "description": "Time value along this trajectory.",
+      "description": "Time value along this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_time",
       "shape": [
@@ -1380,7 +1381,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Reference to the sampling method section defining the parameters used in this frame sequence.",
+      "description": "Reference to the sampling method section defining the parameters used in this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "r",
       "name": "frame_sequence_to_sampling_ref",
       "referencedSections": [
@@ -1391,7 +1392,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Name of the user defined quantity.",
+      "description": "Name of a user defined quantity, sampled along this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "frame_sequence_user_quantity_name",
       "shape": [],
@@ -1399,7 +1400,7 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "description": "Average of frame_sequence_user_quantity and its standard deviation in this frame sequence. This should be defined if number_of_frames_in_sequence is large.",
+      "description": "Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
       "dtypeStr": "f",
       "name": "frame_sequence_user_quantity_stats",
       "shape": [
@@ -1410,7 +1411,7 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "description": "User specified quantity frame_sequence_user_quantity_name defined in  along this frame sequence.",
+      "description": "User specified quantity defined in frame_sequence_user_quantity_name, evaluated along this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_user_quantity",
       "shape": [
@@ -1429,7 +1430,7 @@
         "section_run"
       ]
     }, {
-      "description": "List of the indexes involved in this interaction. The fist atom has index 1, the last number_of_topology_atoms.",
+      "description": "List of the indexes involved in this interaction. The fist atom has index 1, the last atom index number_of_topology_atoms.",
       "dtypeStr": "i",
       "name": "interaction_atoms",
       "shape": [
@@ -1448,7 +1449,7 @@
         "section_interaction"
       ]
     }, {
-      "description": "Explicit interaction parameters for this kind of interaction (depending on the interaction type some might be given implicitly through other means).",
+      "description": "Explicit interaction parameters for this kind of interaction (depending on the interaction_kind some might be given implicitly through other means).",
       "dtypeStr": "D",
       "name": "interaction_parameters",
       "shape": [],
@@ -1456,7 +1457,7 @@
         "section_interaction"
       ]
     }, {
-      "description": "Assignent, for each section_basis_set, of a basis set (as given in section_basis_set_atom_centered) to an atom.",
+      "description": "For each section_basis_set, assignent of a basis set (as given in section_basis_set_atom_centered) to an atom.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
       "referencedSections": [
@@ -1469,7 +1470,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Assignement, for each section_basis_set, of the cell associated (i.e., non atom centered) parts of the basis set (as given in section_basis_set_cell_associated)",
+      "description": "For each section_basis_set, assignement of the cell-associated (i.e., non atom centered) parts of the basis set (as given in section_basis_set_cell_associated)",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_cell_associated",
       "referencedSections": [
@@ -1481,7 +1482,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "A debugging message of the computational program, associated with a single configuration calculation",
+      "description": "A debugging message of the computational program, associated with a single configuration calculation.",
       "dtypeStr": "C",
       "name": "message_debug_evaluation",
       "superNames": [
@@ -1489,7 +1490,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "A debugging message of the computational program, associated with a run",
+      "description": "A debugging message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_debug_run",
       "superNames": [
@@ -1497,13 +1498,13 @@
         "message_debug"
       ]
     }, {
-      "description": "A debugging message of the computational program",
+      "description": "A debugging message of the computational program.",
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "message_debug",
       "superNames": []
     }, {
-      "description": "An error message of the computational program, associated with a single configuration calculation",
+      "description": "An error message of the computational program, associated with a single configuration calculation.",
       "dtypeStr": "C",
       "name": "message_error_evaluation",
       "superNames": [
@@ -1511,7 +1512,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "An error message of the computational program, associated with a run",
+      "description": "An error message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_error_run",
       "superNames": [
@@ -1519,7 +1520,7 @@
         "message_error"
       ]
     }, {
-      "description": "An error message of the computational program",
+      "description": "An error message of the computational program.",
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "message_error",
@@ -1527,7 +1528,7 @@
         "message_warning"
       ]
     }, {
-      "description": "An information message of the computational program, associated with a a single configuration calculation",
+      "description": "An information message of the computational program, associated with a a single configuration calculation.",
       "dtypeStr": "C",
       "name": "message_info_evaluation",
       "superNames": [
@@ -1535,7 +1536,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "An information message of the computational program, associated with a run",
+      "description": "An information message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_info_run",
       "superNames": [
@@ -1543,7 +1544,7 @@
         "message_info"
       ]
     }, {
-      "description": "An information message of the computational program",
+      "description": "An information message of the computational program.",
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "message_info",
@@ -1551,7 +1552,7 @@
         "message_debug"
       ]
     }, {
-      "description": "A warning message of the computational program",
+      "description": "A warning message of the computational program.",
       "dtypeStr": "C",
       "name": "message_warning_evaluation",
       "superNames": [
@@ -1559,7 +1560,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "A warning message of the computational program, associated with a run",
+      "description": "A warning message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_warning_run",
       "superNames": [
@@ -1567,7 +1568,7 @@
         "message_warning"
       ]
     }, {
-      "description": "A warning message of the computational program",
+      "description": "A warning message of the computational program.",
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "message_warning",
@@ -1583,7 +1584,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "String used to identify the atoms of this kind. This should correspond to the atom_label of the configuration. It is possible for one atom kind to have multiple labels.",
+      "description": "String used to identify the atoms of this kind. This should correspond to the atom_label of the configuration. It is possible for one atom kind to have multiple labels (in order to allow two atoms of the same kind to have two differently defined sets of atom-centered basis functions or two different pseudopotentials). Atom kind is typically the symbol of the atomic species but it can be also a ghost or pseudoatom",
       "dtypeStr": "C",
       "name": "method_atom_kind_label",
       "repeats": true,
@@ -1592,7 +1593,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "Reference to the atom centered wavefunctions basis functions that should be used for the atoms of this kind.",
+      "description": "Reference to the atom-centered orbitals basis functions that are used for the atoms of this kind.",
       "dtypeStr": "r",
       "name": "method_atom_kind_wavefunctions_basis_set_ref",
       "referencedSections": [
@@ -1603,7 +1604,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "Url used to reference externally stored methods as defined in the [method\\_to\\_method\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-external-url)",
+      "description": "URL used to reference externally stored methods as defined in the [method\\_to\\_method\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-external-url)",
       "dtypeStr": "C",
       "name": "method_to_method_external_url",
       "repeats": false,
@@ -1612,7 +1613,7 @@
         "section_method_to_method_refs"
       ]
     }, {
-      "description": "String describing the relationship between the referenced method and this one. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind).",
+      "description": "String describing the relationship between the referenced method defined in the present section_method. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind).",
       "dtypeStr": "C",
       "name": "method_to_method_kind",
       "shape": [],
@@ -1620,7 +1621,7 @@
         "section_method_to_method_refs"
       ]
     }, {
-      "description": "Reference to a local method. If both this and method_to_method_external_url are given this is expected to contain a local copy of that value. The kind of relationship between this method and the referenced one is described by method_to_method_kind.",
+      "description": "Reference to a local method. If both method_to_method_ref and method_to_method_external_url are given, then method_to_method_ref is expected to contain a local copy of the value contained in method_to_method_external_url. The kind of relationship between the method defined in the present section_method and the referenced one is described by method_to_method_kind.",
       "dtypeStr": "r",
       "name": "method_to_method_ref",
       "shape": [],
@@ -1639,7 +1640,7 @@
         "section_method"
       ]
     }, {
-      "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last number_of_atoms_in_molecule.",
+      "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last index is number_of_atoms_in_molecule.",
       "dtypeStr": "i",
       "name": "molecule_constraint_atoms",
       "shape": [
@@ -1666,7 +1667,7 @@
         "section_molecule_constraint"
       ]
     }, {
-      "description": "List of the indexes involved in this interaction. The fist atom has index 1, the last number_of_atoms_in_molecule.",
+      "description": "List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_molecule.",
       "dtypeStr": "i",
       "name": "molecule_interaction_atoms",
       "shape": [
@@ -1677,7 +1678,7 @@
         "section_molecule_interaction"
       ]
     }, {
-      "description": "Short and unique name for this interaction type. Valid names are described in the [interaction\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/interaction-kind)",
+      "description": "Short and unique name for this interaction type, used for bonded interactions for atoms in a molecule. Valid names are described in the [interaction\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/interaction-kind)",
       "dtypeStr": "C",
       "name": "molecule_interaction_kind",
       "shape": [],
@@ -1685,7 +1686,7 @@
         "section_molecule_interaction"
       ]
     }, {
-      "description": "Explicit interaction parameters for this kind of interaction (depending on the interaction type some might be given implicitly through other means).",
+      "description": "Explicit interaction parameters for this kind of interaction (depending on the interaction type some might be given implicitly through other means), used for bonded interactions for atoms in a molecule.",
       "dtypeStr": "D",
       "name": "molecule_interaction_parameters",
       "shape": [],
@@ -1693,7 +1694,7 @@
         "section_molecule_interaction"
       ]
     }, {
-      "description": "mapping from molecules to molecule types.",
+      "description": "Mapping from molecules to molecule types.",
       "dtypeStr": "r",
       "name": "molecule_to_molecule_type_map",
       "referencedSections": [
@@ -1714,7 +1715,7 @@
         "section_molecule_type"
       ]
     }, {
-      "description": "number of energy values for the atom projected density of states (DOS)",
+      "description": "Number of energy values for the atom-projected density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "n_atom_projected_dos_values",
@@ -1723,7 +1724,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "number of energy values for the density of states (DOS)",
+      "description": "Number of energy values for the density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "n_dos_values",
@@ -1732,7 +1733,7 @@
         "section_dos"
       ]
     }, {
-      "description": "number of k points in each segment",
+      "description": "Number of $k$ points in each segment of the band structure.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "n_k_points_per_segment",
@@ -1741,7 +1742,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "number of energy values for the species projected density of states (DOS)",
+      "description": "Number of energy values for the species-projected density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "n_species_projected_dos_values",
@@ -1759,7 +1760,7 @@
         "section_molecule_type"
       ]
     }, {
-      "description": "Number of atoms involved in this constraint",
+      "description": "Number of atoms involved in this constraint.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_atoms_per_constraint",
@@ -1768,7 +1769,7 @@
         "section_constraint"
       ]
     }, {
-      "description": "Number of atoms involved in this interaction",
+      "description": "Number of atoms involved in this interaction.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_atoms_per_interaction",
@@ -1777,7 +1778,7 @@
         "section_interaction"
       ]
     }, {
-      "description": "Number of atoms involved in this constraint",
+      "description": "Number of atoms, in this molecule, involved in this constraint.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_atoms_per_molecule_constraint",
@@ -1786,7 +1787,7 @@
         "section_molecule_constraint"
       ]
     }, {
-      "description": "Number of atoms involved in this interaction",
+      "description": "Number of atoms, in this molecule, involved in this interaction",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_atoms_per_molecule_interaction",
@@ -1795,7 +1796,7 @@
         "section_molecule_interaction"
       ]
     }, {
-      "description": "Total number of atoms",
+      "description": "Total number of atoms.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_atoms",
@@ -1822,7 +1823,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Number of constraints of this type",
+      "description": "Number of constraints of this type.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_constraints",
@@ -1831,7 +1832,7 @@
         "section_constraint"
       ]
     }, {
-      "description": "number of kpoints",
+      "description": "Number of kpoints.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_eigenvalues_kpoints",
@@ -1840,7 +1841,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Number of eigenvalues",
+      "description": "Number of eigenvalues.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_eigenvalues",
@@ -1849,7 +1850,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "dimension of the user quantity.",
+      "description": "Dimension of the user-defined quantity (monitored in a sequence of frames, i.e., a trajectory).",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_frame_sequence_user_quantity_components",
@@ -1858,7 +1859,7 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "description": "The number of frames in this sequence.",
+      "description": "The number of frames in this sequence (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_frames_in_sequence",
@@ -1867,7 +1868,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Number of interactions of this type",
+      "description": "Number of interactions of this type.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_interactions",
@@ -1876,7 +1877,7 @@
         "section_interaction"
       ]
     }, {
-      "description": "number of k point segments",
+      "description": "Number of $k$ point segments.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_k_point_segments",
@@ -1885,7 +1886,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Number of different kinds of radial basis functions in this set. In practice, all the basis functions with the same $n$ and $l$ quantum number, here are counted only once",
+      "description": "Number of different kinds of radial basis functions in this set. In practice, all the basis functions with the same $n$ and $l$ quantum number, here are counted only once.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_kinds_in_basis_set_atom_centered",
@@ -1894,7 +1895,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "number of lm combinations for which atom projected density of states (DOS) are given",
+      "description": "Number of $l,m$ combinations for which atom projected density of states (DOS) are given",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_lm_atom_projected_dos",
@@ -1903,7 +1904,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "number of lm combinations for which atomic multipoles are given",
+      "description": "Number of $l,m$ combinations for which atomic multipoles are given",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_lm_atomic_multipoles",
@@ -1912,7 +1913,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "number of lm combinations for which species projected density of states (DOS) are given",
+      "description": "Number of $l,m$ combinations for which species-projected density of states (DOS) are given",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_lm_species_projected_dos",
@@ -1930,7 +1931,7 @@
         "section_molecule_constraint"
       ]
     }, {
-      "description": "Number of interactions of this type",
+      "description": "Number of bonded interactions of this type",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_molecule_interactions",
@@ -1939,7 +1940,7 @@
         "section_molecule_interaction"
       ]
     }, {
-      "description": "number of species for the species projected density of states (DOS)",
+      "description": "Number of species for the species-projected density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_species",
@@ -1957,7 +1958,7 @@
         "section_topology"
       ]
     }, {
-      "description": "Number of molecules in the system described by this topology.",
+      "description": "Number of molecules in the system, as described by this topology.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_topology_molecules",
@@ -2013,7 +2014,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "An error message of the parsing program",
+      "description": "An error message of the parsing program.",
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_error",
@@ -2069,7 +2070,7 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '' then no post hartree_fock method has been used.",
+      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '', then no post hartree_fock method has been used.",
       "dtypeStr": "C",
       "name": "post_hartree_fock_method",
       "repeats": false,
@@ -2078,7 +2079,7 @@
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "Reference to the previous sequence to this one (if not given a start from a initial configuration is assumed).",
+      "description": "Reference from the present sequence of frames (i.e., trajectory; a frame is one section_single_configuration_calculation), to the previous sequence. If not given, a start from an initial configuration is assumed.",
       "dtypeStr": "r",
       "name": "previous_sequence_ref",
       "referencedSections": [
@@ -2104,9 +2105,10 @@
       "shape": [],
       "superNames": [
         "program_info"
-      ]
+      ],
+      "units": "s"
     }, {
-      "description": "Host on which the program was compiled",
+      "description": "Host on which the program was compiled.",
       "dtypeStr": "C",
       "name": "program_compilation_host",
       "repeats": false,
@@ -2115,7 +2117,7 @@
         "program_info"
       ]
     }, {
-      "description": "Information on the program that generated the data",
+      "description": "Information on the program that generated the data.",
       "kindStr": "type_abstract_document_content",
       "name": "program_info",
       "repeats": false,
@@ -2125,7 +2127,7 @@
         "section_run"
       ]
     }, {
-      "description": "Name of the program that generated the data",
+      "description": "Name of the program that generated the data.",
       "dtypeStr": "C",
       "name": "program_name",
       "shape": [],
@@ -2142,14 +2144,14 @@
         "program_info"
       ]
     }, {
-      "description": "Short string describing the relativity treatment used for the calculation of the final energy and related quantities. No special treatment if skipped or empty. Relativity treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/relativity-method).",
+      "description": "Short string describing the relativistic treatment used for the calculation of the final energy and related quantities. No relativistic treatment, if skipped or empty. Relativistic treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/relativity-method).",
       "dtypeStr": "C",
       "name": "relativity_method",
       "superNames": [
         "settings_relativity"
       ]
     }, {
-      "description": "If this run was terminated properly. If false the run might have been killed or ended with an error",
+      "description": "True, if this run was terminated properly. If false, the run might have been killed or ended with an error",
       "dtypeStr": "b",
       "name": "run_clean_end",
       "shape": [],
@@ -2175,7 +2177,7 @@
         "section_sampling_method"
       ]
     }, {
-      "description": "number of scf iterations at Dft level",
+      "description": "number of scf iterations at DFT level",
       "dtypeStr": "i",
       "name": "scf_dft_number_of_iterations",
       "repeats": false,
@@ -2201,21 +2203,21 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Describes a type of atom in the system.",
+      "description": "Section describing a type of atom in the system.",
       "kindStr": "type_section",
       "name": "section_atom_type",
       "superNames": [
         "section_topology"
       ]
     }, {
-      "description": "multipoles (charges, dipole,...) for each atom",
+      "description": "Section describing multipoles (charges, dipole,...) for each atom",
       "kindStr": "type_section",
       "name": "section_atomic_multipoles",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Description of one or a sub group of basis functions in this basis set",
+      "description": "Section describing one or a sub group of basis functions in an atom centered basis set.",
       "kindStr": "type_section",
       "name": "section_basis_functions_atom_centered",
       "superNames": [
@@ -2229,14 +2231,14 @@
         "basis_set_description"
       ]
     }, {
-      "description": "A cell associated (atom independent) basis set, e.g., planewaves",
+      "description": "Section describing a cell associated (atom independent) basis set, e.g., planewaves",
       "kindStr": "type_section",
       "name": "section_basis_set_cell_associated",
       "superNames": [
         "basis_set_description"
       ]
     }, {
-      "description": "Contains reference to all basis sets used for a single configuration calculation. More than one basis set instance per single configuration calculation is needed, for example, for codes that implement adaptive basis sets along the scf convergence (see, .e.g., exciting). In such cases there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for RI, ...",
+      "description": "Section containing references to all basis sets used for a single configuration calculation. More than one basis set instance per single configuration calculation may be needed, for example, for codes that implement adaptive basis sets along the scf convergence (see, .e.g., exciting). In such cases, there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc.",
       "kindStr": "type_section",
       "name": "section_basis_set",
       "superNames": [
@@ -2250,7 +2252,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "describes a constraint between arbitrary atoms",
+      "description": "Section describing a constraint between arbitrary atoms",
       "kindStr": "type_section",
       "name": "section_constraint",
       "superNames": [
@@ -2258,7 +2260,7 @@
         "settings_constraint"
       ]
     }, {
-      "description": "Section collecting the information on a density of states (DOS) evaluation",
+      "description": "Section collecting the information on a (electronic-energy) density of states (DOS) evaluation",
       "kindStr": "type_section",
       "name": "section_dos",
       "repeats": true,
@@ -2273,14 +2275,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "eigenvalues of some energy for one spin channel",
+      "description": "Section containing eigenvalues of some energy for one spin channel",
       "kindStr": "type_section",
       "name": "section_eigenvalues",
       "superNames": [
         "section_eigenvalues_group"
       ]
     }, {
-      "description": "A shifted total energy that should be more comparable among different codes, numerical settings, ... Details can be found on the [energy-comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Section describing a shifted total energy, created to be comparable among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "kindStr": "type_section",
       "name": "section_energy_comparable",
       "superNames": [
@@ -2295,21 +2297,21 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Collection of some user defined quantity collected during the sampling",
+      "description": "Section collecting some user-defined quantities evaluated along a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation)",
       "kindStr": "type_section",
       "name": "section_frame_sequence_user_quantity",
       "superNames": [
         "section_frame_sequence"
       ]
     }, {
-      "description": "A sequence of frames, evaluated with a common sampling method, this might be a subset of the whole trajectory",
+      "description": "Section containing a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), evaluated with a common sampling method; this might be a subset of the whole trajectory",
       "kindStr": "type_section",
       "name": "section_frame_sequence",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "describes a bounded interaction between arbitrary atoms",
+      "description": "Section containing the description of a bonded interaction between arbitrary atoms",
       "kindStr": "type_section",
       "name": "section_interaction",
       "superNames": [
@@ -2317,7 +2319,7 @@
         "settings_interaction"
       ]
     }, {
-      "description": "Section collecting the information on a k band evaluation",
+      "description": "Section collecting the information on a $k$-band evaluation",
       "kindStr": "type_section",
       "name": "section_k_band",
       "repeats": true,
@@ -2325,14 +2327,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_method_atom_kind contains method related information about a kind of atom, and is identified by one or more string method_atom_kind_label. This categorisation into atom kinds is more flexible than just atomic species, because to different atoms of the same species different atom centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_method_atom_kind.",
+      "description": "Every section_method_atom_kind contains method related information about a kind of atom, and is identified by one or more string method_atom_kind_label. This categorisation into atom kinds is more flexible than just atomic species, because to different atoms of the same species different atom-centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_method_atom_kind.",
       "kindStr": "type_section",
       "name": "section_method_atom_kind",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Describes connections between methods (for example the starting point of a perturbation, or the QM and MM methods in a QM/MM method",
+      "description": "Section describing connections between methods used for the same configuration (for example the starting point of a perturbation, or the QM and MM methods in a QM/MM method",
       "kindStr": "type_section",
       "name": "section_method_to_method_refs",
       "shape": [],
@@ -2340,14 +2342,14 @@
         "section_method"
       ]
     }, {
-      "description": "section_method contains the various parameters that define the theory used and the approximations done (convergence, thresholds,...) to perform a single configuration calculation. It does *not* contain the settings for dynamics, goemetry optimization,...",
+      "description": "Section containing the various parameters that define the theory used and the approximations done (convergence, thresholds,...) to perform a single configuration calculation. It does *not* contain the settings for dynamics, goemetry optimization,...",
       "kindStr": "type_section",
       "name": "section_method",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "describes a bounded constraint between atoms within a molecule",
+      "description": "Section describing a constraint between atoms within a molecule",
       "kindStr": "type_section",
       "name": "section_molecule_constraint",
       "superNames": [
@@ -2355,7 +2357,7 @@
         "settings_constraint"
       ]
     }, {
-      "description": "describes a bounded interaction between atoms within a molecule",
+      "description": "Section describing a bonded interaction between atoms within a molecule",
       "kindStr": "type_section",
       "name": "section_molecule_interaction",
       "superNames": [
@@ -2363,7 +2365,7 @@
         "settings_interaction"
       ]
     }, {
-      "description": "Describes a type of molecule in the system.",
+      "description": "Section describing a type of molecule in the system.",
       "kindStr": "type_section",
       "name": "section_molecule_type",
       "superNames": [
@@ -2375,7 +2377,7 @@
       "name": "section_run",
       "superNames": []
     }, {
-      "description": "Section containing the settings describing a sampling method.",
+      "description": "Section containing the settings describing a sampling (of the potential-energy surface) method.",
       "kindStr": "type_section",
       "name": "section_sampling_method",
       "superNames": [
@@ -2399,7 +2401,7 @@
         "section_run"
       ]
     }, {
-      "description": "Section collecting the information on a species projected density of states (DOS) evaluation",
+      "description": "Section collecting the information on a species-projected density of states (DOS) evaluation",
       "kindStr": "type_section",
       "name": "section_species_projected_dos",
       "repeats": true,
@@ -2407,7 +2409,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section to keep alternative values to stress_tensor that have been calculated",
+      "description": "Section collecting alternative values to stress_tensor that have been calculated",
       "kindStr": "type_section",
       "name": "section_stress_tensor",
       "superNames": [
@@ -2421,14 +2423,14 @@
         "section_run"
       ]
     }, {
-      "description": "Topology, force field, and constraints of a system",
+      "description": "Section containing the definition of topology (connectivity among atoms in force fileds), force field, and constraints of a system",
       "kindStr": "type_section",
       "name": "section_topology",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "Section created to contain one of the exchange correlation (XC) functionals that are combined to the define XC_functional.",
+      "description": "Section containing one of the exchange correlation (XC) functionals that are combined to form the XC_functional used in the present section_method.",
       "kindStr": "type_section",
       "name": "section_XC_functionals",
       "superNames": [
@@ -2449,7 +2451,7 @@
         "section_molecule_type"
       ]
     }, {
-      "description": "parameters controlling the barostat.",
+      "description": "Parameters controlling the barostat.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_barostat",
       "superNames": [
@@ -2461,54 +2463,54 @@
       "name": "settings_constraint",
       "superNames": []
     }, {
-      "description": "Coupled Clusters method parameters",
+      "description": "Coupled-Clusters method parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_coupled_cluster",
       "superNames": [
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "GW method parameters",
+      "description": "GW-method parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_GW",
       "superNames": [
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "parameters controlling the md integrator.",
+      "description": "Parameters controlling the MD integrator.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_integrator",
       "superNames": [
         "settings_md"
       ]
     }, {
-      "description": "Some parameters that describe a bounded interaction",
+      "description": "Some parameters that describe a bonded interaction",
       "kindStr": "type_abstract_document_content",
       "name": "settings_interaction",
       "superNames": []
     }, {
-      "description": "Multi-configurational self-consistent field method parameters",
+      "description": "Multi-configurational self-consistent-field method parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_MCSCF",
       "superNames": [
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "parameters controlling the montecarlo sampling.",
+      "description": "Parameters controlling the Monte-Carlo sampling.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_mc",
       "superNames": [
         "section_sampling_method"
       ]
     }, {
-      "description": "parameters controlling the md sampling.",
+      "description": "Parameters controlling the MD sampling.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_md",
       "superNames": [
         "section_sampling_method"
       ]
     }, {
-      "description": "parameters controlling the metadynamics sampling.",
+      "description": "Parameters controlling the metadynamics sampling.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_metadynamics",
       "superNames": [
@@ -2536,7 +2538,7 @@
         "settings_XC"
       ]
     }, {
-      "description": "Parameters and information connected with the relativity treatment used in the calculation",
+      "description": "Parameters and information connected with the relativistic treatment used in the calculation",
       "kindStr": "type_abstract_document_content",
       "name": "settings_relativity",
       "superNames": [
@@ -2550,7 +2552,7 @@
         "section_run"
       ]
     }, {
-      "description": "Parameters and information connected with self interaction correction (SIC) method used",
+      "description": "Parameters and information connected with self-interaction correction (SIC) method used",
       "kindStr": "type_abstract_document_content",
       "name": "settings_self_interaction_correction",
       "superNames": [
@@ -2564,14 +2566,14 @@
         "section_method"
       ]
     }, {
-      "description": "Setting to calculate stress_tensor, consistent with energy_total.",
+      "description": "Settings to calculate stress_tensor, consistent with energy_total.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_stress_tensor",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "parameters controlling the thermostat.",
+      "description": "Parameters controlling the thermostat used in MD.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_thermostat",
       "superNames": [
@@ -2585,14 +2587,14 @@
         "settings_XC"
       ]
     }, {
-      "description": "Parameters connected with defining the exchange correlation (XC) functional",
+      "description": "Parameters connected with defining the exchange-correlation (XC) functional",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC_functional",
       "superNames": [
         "settings_XC"
       ]
     }, {
-      "description": "Parameters connected with defining the exchange correlation (XC) treatment",
+      "description": "Parameters connected with defining the exchange-correlation (XC) treatment",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
       "superNames": [
@@ -2658,7 +2660,7 @@
         "settings_smearing"
       ]
     }, {
-      "description": "References to the source of the data (uri,...)",
+      "description": "References to the source of the data (URI,etc.)",
       "dtypeStr": "C",
       "name": "source_references",
       "shape": [],
@@ -2675,7 +2677,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Species projected density of states (DOS) energies",
+      "description": "Energies of the species-projected density of states (DOS).",
       "dtypeStr": "f",
       "name": "species_projected_dos_energies",
       "shape": [
@@ -2686,7 +2688,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of l and m values for which species_projected_dos_values_lm are given. The integer numbers for m have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "Tuples of $l$ and $m$ values for which species_projected_dos_values_lm are given. The integer numbers for $m$ have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "i",
       "name": "species_projected_dos_lm",
       "shape": [
@@ -2697,7 +2699,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of m in species_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of $m$ in species_projected_dos_lm mean, as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "species_projected_dos_m_kind",
       "shape": [],
@@ -2705,7 +2707,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Species labels for the species projected density of states (DOS)",
+      "description": "Species labels for the species-projected density of states (DOS)",
       "dtypeStr": "C",
       "name": "species_projected_dos_species_label",
       "shape": [
@@ -2715,7 +2717,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Species projected density of states (DOS) values, divided into contributions from lm",
+      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, divided into contributions from each $l,m$ channel",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_lm",
       "shape": [
@@ -2728,7 +2730,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Species projected density of states (DOS) values, summed up over all l",
+      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, summed up over all $l$",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_total",
       "shape": [
@@ -2740,7 +2742,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method. Can be used to calculate the spin contamination in spin unrestricted calculations.",
+      "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method. It can be used to calculate the spin contamination in spin-unrestricted calculations.",
       "dtypeStr": "f",
       "name": "spin_S2_scf_iteration",
       "shape": [],
@@ -2748,7 +2750,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Value of the total spin moment operator $S^2$ for the converged wavefunctions calculated with the XC_method, which can be used to calculate the spin contamination in spin unrestricted calculations.",
+      "description": "Value of the total spin moment operator $S^2$ for the converged wavefunctions calculated with the XC_method, which can be used to calculate the spin contamination in spin-unrestricted calculations.",
       "dtypeStr": "f",
       "name": "spin_S2",
       "shape": [],
@@ -2816,7 +2818,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Target value of the multiplicity $M=2S+1$ where $S$ is the total spin. It is an integer number. This value is not necessarly reached.",
+      "description": "Target (user-imposed) value of the multiplicity $M=2S+1$ where $S$ is the total spin. It is an integer number. This value is not necessarly reached.",
       "dtypeStr": "i",
       "name": "target_multiplicity",
       "shape": [],
@@ -2824,7 +2826,7 @@
         "section_method"
       ]
     }, {
-      "description": "Wall time needed for a calculation, using calculation_method_current",
+      "description": "Wall-time needed for a calculation, using calculation_method_current",
       "dtypeStr": "f",
       "name": "time_calculation",
       "repeats": true,
@@ -2886,7 +2888,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the end of the run",
+      "description": "Internal wall-clock time at the end of the run",
       "dtypeStr": "f",
       "name": "time_run_wall_end",
       "repeats": false,
@@ -2897,7 +2899,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the start of the run",
+      "description": "Internal wall-clock time at the start of the run",
       "dtypeStr": "f",
       "name": "time_run_wall_start",
       "repeats": false,
@@ -3048,7 +3050,7 @@
         "section_topology"
       ]
     }, {
-      "description": "Reference to the topology used by this system, if not given the trivial topology should be assumed.",
+      "description": "Reference to the topology used for this system; if not given, the trivial topology should be assumed.",
       "dtypeStr": "r",
       "name": "topology_ref",
       "referencedSections": [
@@ -3066,7 +3068,8 @@
       "shape": [],
       "superNames": [
         "section_method"
-      ]
+      ],
+      "units": "C"      
     }, {
       "description": "Short string describing the van der Waals method. No such method, if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/van-der-Waals-method).",
       "dtypeStr": "C",
@@ -3076,7 +3079,7 @@
         "settings_van_der_Waals"
       ]
     }, {
-      "description": "Reference to the cell associated basis function to use for the wavefunctions.",
+      "description": "Reference to the cell-associated basis function to use for the wavefunctions.",
       "dtypeStr": "r",
       "name": "wavefunctions_basis_set_cell_associated_ref",
       "repeats": true,
@@ -3104,7 +3107,7 @@
         "section_XC_functionals"
       ]
     }, {
-      "description": "Dictionary containing non default values of the parameters for the functional XC_functional_name. The names and units of these values should be defined in the section dedicated to XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional). If not given the default parameter values are assumed.",
+      "description": "Dictionary containing non default values of the parameters for the functional XC_functional_name. The names and units of these values should be defined in the section dedicated to XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional). If not given, the default parameter values for the XC_functional are assumed.",
       "dtypeStr": "D",
       "name": "XC_functional_parameters",
       "repeats": false,
