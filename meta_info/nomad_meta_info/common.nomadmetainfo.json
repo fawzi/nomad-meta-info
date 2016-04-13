@@ -33,7 +33,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
+      "description": "Forces on the atoms as minus gradient of energy_total, without forces' unitary-transformation (rigid body) filtering and without constraints.",
       "dtypeStr": "f",
       "name": "atom_forces_raw",
       "repeats": true,
