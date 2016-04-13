@@ -2489,6 +2489,13 @@
       "name": "settings_interaction",
       "superNames": []
     }, {
+      "description": "Parameters that control the k point mesh.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_k_points",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Multi-configurational self-consistent-field method parameters",
       "kindStr": "type_abstract_document_content",
       "name": "settings_MCSCF",
