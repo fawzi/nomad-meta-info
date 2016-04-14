@@ -808,6 +808,56 @@
         "fhi_aims_section_eigenvalues_list_ZORA"
       ],
       "units": "J"
+    }, {                                                                        
+      "description": "KS ground state energy at a given eigenstate needed in perturbative GW",                        
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_ks_GroundState",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                                
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Exact exchange energy at given eigenstate from perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_ExactExchange_perturbativeGW",                  
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_ks_ExchangeCorrelation",               
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Correlation energy at a given eigenstate from perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_correlation_perturbativeGW",                     
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Quasiparticle energy at a given eigenstate from perturbative GW",                    
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_quasiParticle_energy",                 
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
+      ],                                                                        
+      "units": "J"                                                              
     }, {
       "description": "Single eigenvalue",
       "dtypeStr": "f",
@@ -881,6 +931,15 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_list_ZORA"
       ]
+    }, {                                                                        
+      "description": "Occupation of single eigenfunction of perturbative GW",       
+      "dtypeStr": "f",                                                          
+      "name": "fhi_aims_eigenvalue_occupation_perturbativeGW",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"                                
+      ]                                                                         
     }, {
       "description": "Occupation of single eigenfunction",
       "dtypeStr": "f",
@@ -1284,6 +1343,14 @@
       "superNames": [
         "section_run"
       ]
+    }, {                                                                        
+      "description": "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation",
+      "kindStr": "type_section",                                                
+      "name": "fhi_aims_section_eigenvalues_group_perturbativeGW",                        
+      "repeats": false,                                                         
+      "superNames": [                                                           
+        "section_single_configuration_calculation"                                     
+      ]                                                                         
     }, {
       "description": "section for full list of eigenvalues for different spin and kpoints of scaled ZORA",
       "kindStr": "type_section",
@@ -1316,6 +1383,14 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_spin"
       ]
+    }, {                                                                        
+      "description": "section for one list of eigenvalues from a perturbative GW calculation",
+      "kindStr": "type_section",                                                
+      "name": "fhi_aims_section_eigenvalues_list_perturbativeGW",                              
+      "repeats": true,                                                          
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_spin"                                     
+      ]                                                                         
     }, {
       "description": "section for one spin orientation of scaled ZORA",
       "kindStr": "type_section",
@@ -1324,6 +1399,14 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_group_ZORA"
       ]
+    },  {                                                                        
+      "description": "section for one spin orientation from a perturbative GW calculation",         
+      "kindStr": "type_section",                                                
+      "name": "fhi_aims_section_eigenvalues_spin_perturbativeGW",                         
+      "repeats": true,                                                          
+      "superNames": [                                                           
+        "fhi_aims_section_eigenvalues_group_perturbativeGW"                               
+      ]                                                                         
     }, {
       "description": "section for one spin orientation",
       "kindStr": "type_section",
