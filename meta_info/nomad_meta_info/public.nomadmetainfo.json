@@ -1100,7 +1100,7 @@
         "error_estimate_partial"
       ]
     }, {
-      "derived": true,    
+      "derived": true,
       "description": "Average value of energy-like frame_sequence_conserved_quantity, and its standard deviation, over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_conserved_quantity_stats",
@@ -1142,7 +1142,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "derived": true,        
+      "derived": true,
       "description": "Average kinetic energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_kinetic_energy_stats",
@@ -1178,7 +1178,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "derived": true,        
+      "derived": true,
       "description": "Average potential energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). ",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy_stats",
@@ -1201,7 +1201,7 @@
       ],
       "units": "J"
     }, {
-      "derived": true,            
+      "derived": true,
       "description": "Average pressure (one third of the trace of the stress tensor) and standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_pressure_stats",
@@ -1224,7 +1224,7 @@
       ],
       "units": "Pa"
     }, {
-      "derived": true,                
+      "derived": true,
       "description": "Average temperature and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_temperature_stats",
@@ -1277,7 +1277,7 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "derived": true,        
+      "derived": true,
       "description": "Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_user_quantity_stats",
@@ -1307,6 +1307,41 @@
       "superNames": [
         "section_frame_sequence"
       ]
+    }, {
+      "description": "Maximum total-energy change between two geometry optimization steps, as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the total-energy change between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "geometry_optimization_energy_change",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ],
+      "units": "J"
+    }, {
+      "description": "Maximum displacement of the nuclei between two geometry optimization steps as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum among the displacements of the nuclei between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "geometry_optimization_geometry_change",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ],
+      "units": "m"
+    }, {
+      "description": "Algorithm for the geometry optimization. Allowed values are listed in the [geometry_optimization_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/geometry-optimization-method).",
+      "dtypeStr": "C",
+      "name": "geometry_optimization_method",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ]
+    }, {
+      "description": "Maximum force modulus as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum modulus of the force on one atom is below this threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "geometry_optimization_threshold_force",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ],
+      "units": "N"
     }, {
       "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, as defined in a section_basis_set_atom_centered that is referred to.",
       "dtypeStr": "r",
@@ -1854,6 +1889,23 @@
         "section_sampling_method"
       ]
     }, {
+      "description": "Information on the scf procedure.",
+      "kindStr": "type_abstract_document_content",
+      "name": "scf_info",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Maximum allowed number of scf iterations.",
+      "dtypeStr": "f",
+      "name": "scf_max_iteration",
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ]
+    }, {
       "description": "Number of scf iterations at DFT level.",
       "dtypeStr": "i",
       "name": "scf_number_of_iterations",
@@ -1863,14 +1915,14 @@
         "scf_info"
       ]
     }, {
-      "description": "Information on the scf procedure.",
-      "kindStr": "type_abstract_document_content",
-      "name": "scf_info",
-      "repeats": true,
+      "description": "Maximum allowed number of scf iterations. The scf is considered converged when the total-energy change between two scf cycels is below the threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "scf_threshold_energy_change",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
-      ]
+        "settings_scf"
+      ],
+      "units": "J"
     }, {
       "description": "Section collecting the information on a atom projected density of states (DOS) evaluation.",
       "kindStr": "type_section",
@@ -2087,6 +2139,13 @@
         "settings_post_hartree_fock"
       ]
     }, {
+      "description": "Parameters controlling the geometry optimization",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_geometry_optimization",
+      "superNames": [
+        "section_sampling_method"
+      ]
+    }, {
       "description": "GW-method parameters.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_GW",
@@ -2120,9 +2179,9 @@
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "Parameters controlling the Monte-Carlo sampling.",
+      "description": "Parameters controlling the metadynamics sampling.",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_Monte_Carlo",
+      "name": "settings_metadynamics",
       "superNames": [
         "section_sampling_method"
       ]
@@ -2134,25 +2193,18 @@
         "section_sampling_method"
       ]
     }, {
-      "description": "Parameters controlling the metadynamics sampling.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_metadynamics",
-      "superNames": [
-        "section_sampling_method"
-      ]
-    }, {
-      "description": "Parameters controlling the geometry optimization",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_geometry_optimization",
-      "superNames": [
-        "section_sampling_method"
-      ]
-    }, {
       "description": "Møller–Plesset perturbation theory parameters.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_moller_plesset_perturbation_theory",
       "superNames": [
         "settings_post_hartree_fock"
+      ]
+    }, {
+      "description": "Parameters controlling the Monte-Carlo sampling.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_Monte_Carlo",
+      "superNames": [
+        "section_sampling_method"
       ]
     }, {
       "description": "Multireference single and double configuration interaction method parameters.",
@@ -2181,6 +2233,13 @@
       "name": "settings_run",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Parameters connected with the convergence of the scf iterations.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_scf",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "Parameters and information connected with self-interaction correction (SIC) method used.",
@@ -2228,13 +2287,6 @@
       "description": "Parameters connected with defining the exchange-correlation (XC) treatment. *Treatment* is more general than *functional* and can include, e.g., post hartree-fock methods",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Parameters connected with the convergence of the scf iterations.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_scf",
       "superNames": [
         "section_method"
       ]
@@ -2774,57 +2826,5 @@
       "superNames": [
         "settings_XC"
       ]
-    }, {
-      "description": "Algorithm for the geometry optimization. Allowed values are listed in the [geometry_optimization_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/geometry-optimization-method).",
-      "dtypeStr": "C",
-      "name": "geometry_optimization_method",
-      "shape": [],
-      "superNames": [
-        "settings_geometry_optimization"
-      ]
-    }, {
-      "description": "Maximum force modulus as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum modulus of the force on one atom is below this threshold (possibly in combination with other criteria)",
-      "dtypeStr": "f",
-      "name": "geometry_optimization_threshold_force",
-      "shape": [],
-      "superNames": [
-        "settings_geometry_optimization"
-      ],
-      "units": "N"      
-    }, {
-      "description": "Maximum total-energy change between two geometry optimization steps, as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the total-energy change between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
-      "dtypeStr": "f",
-      "name": "geometry_optimization_energy_change",
-      "shape": [],
-      "superNames": [
-        "settings_geometry_optimization"
-      ],
-      "units": "J"      
-    }, {
-      "description": "Maximum displacement of the nuclei between two geometry optimization steps as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum among the displacements of the nuclei between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
-      "dtypeStr": "f",
-      "name": "geometry_optimization_geometry_change",
-      "shape": [],
-      "superNames": [
-        "settings_geometry_optimization"
-      ],
-      "units": "m"      
-    }, {
-      "description": "Maximum allowed number of scf iterations.",
-      "dtypeStr": "f",
-      "name": "scf_max_iteration",
-      "shape": [],
-      "superNames": [
-        "settings_scf"
-      ]
-    }, {
-      "description": "Maximum allowed number of scf iterations. The scf is considered converged when the total-energy change between two scf cycels is below the threshold (possibly in combination with other criteria)",
-      "dtypeStr": "f",
-      "name": "scf_threshold_energy_change",
-      "shape": [],
-      "superNames": [
-        "settings_scf"
-      ],
-      "units": "J"      
     }]
 }

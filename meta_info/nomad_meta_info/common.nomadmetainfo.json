@@ -103,6 +103,37 @@
         "section_constraint"
       ]
     }, {
+      "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
+      "dtypeStr": "f",
+      "name": "energy_C_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_C"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the self consistent density of the target functional, scaled accordingly to the mixing parameter.",
+      "dtypeStr": "f",
+      "name": "energy_X_mGGA_scaled",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
+      "dtypeStr": "f",
+      "name": "energy_X_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
+    }, {
       "description": "List of the indexes involved in this interaction. The fist atom has index 1, the last atom index number_of_topology_atoms.",
       "dtypeStr": "i",
       "name": "interaction_atoms",
@@ -371,36 +402,5 @@
       "superNames": [
         "section_topology"
       ]
-    }, {
-      "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
-      "dtypeStr": "f",
-      "name": "energy_C_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_C"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the self consistent density of the target functional, scaled accordingly to the mixing parameter.",
-      "dtypeStr": "f",
-      "name": "energy_X_mGGA_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
-      "dtypeStr": "f",
-      "name": "energy_X_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
     }]
 }
