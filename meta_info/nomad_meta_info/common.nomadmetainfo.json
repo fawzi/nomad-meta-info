@@ -7,7 +7,7 @@
       "name": "accessory_info",
       "superNames": []
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free, without forces' unitary-transformation (rigid body) filtering and without constraints.",
+      "description": "Forces on the atoms as minus gradient of energy_free, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, so that in its derivatives also these changes are accounted for (yielding a truly conserved energy quantity). These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces_free). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces_free).",
       "dtypeStr": "f",
       "name": "atom_forces_free_raw",
       "repeats": true,
@@ -20,7 +20,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
+      "description": "Forces on the atoms as minus gradient of energy_free, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, so that in its derivatives also these changes are accounted for (yielding a truly conserved energy quantity). In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_free_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_free",
       "repeats": true,
@@ -33,7 +33,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total, without forces' unitary-transformation (rigid body) filtering and without constraints.",
+      "description": "Forces on the atoms as minus gradient of energy_total, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces).",
       "dtypeStr": "f",
       "name": "atom_forces_raw",
       "repeats": true,
@@ -46,7 +46,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0, without forces' unitary-transformation (rigid body) filtering and without constraints.",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces_T0). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces_T0).",
       "dtypeStr": "f",
       "name": "atom_forces_T0_raw",
       "repeats": true,
@@ -59,7 +59,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_free_T0_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_T0_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_T0",
       "repeats": true,
@@ -81,7 +81,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present.",
+      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces",
       "repeats": true,
@@ -94,7 +94,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Name (label) of each atom in the molecule.",
+      "description": "Charge of each atom in the molecule.",
       "dtypeStr": "f",
       "name": "atom_in_molecule_charge",
       "shape": [
@@ -102,7 +102,8 @@
       ],
       "superNames": [
         "settings_atom_in_molecule"
-      ]
+      ],
+      "units": "C"
     }, {
       "description": "Name (label) of each atom in the molecule.",
       "dtypeStr": "C",
