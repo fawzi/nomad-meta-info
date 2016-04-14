@@ -7,7 +7,7 @@
       "name": "accessory_info",
       "superNames": []
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, so that in its derivatives also these changes are accounted for (yielding a truly conserved energy quantity). These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces_free). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces_free).",
+      "description": "Forces on the atoms as minus gradient of energy_free, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, so that in its derivatives also these changes are accounted for (yielding a truly conserved energy quantity). These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces_free). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces_free).",
       "dtypeStr": "f",
       "name": "atom_forces_free_raw",
       "repeats": true,
@@ -20,7 +20,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_free, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, so that in its derivatives also these changes are accounted for (yielding a truly conserved energy quantity). In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_free_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_raw for the unfiltered counterpart).",
+      "description": "Forces on the atoms as minus gradient of energy_free, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, so that in its derivatives also these changes are accounted for (yielding a truly conserved energy quantity). In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_free_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_free",
       "repeats": true,
@@ -33,7 +33,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces).",
+      "description": "Forces on the atoms as minus gradient of energy_total, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated in Cartesian coordinates. These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces).",
       "dtypeStr": "f",
       "name": "atom_forces_raw",
       "repeats": true,
@@ -46,7 +46,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces_T0). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces_T0).",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei in the gradient are evaluated in Cartesian coordinates. These forces may contain unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic) that are normally filtered separately (see atom_forces_T0). Also forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are considered separately (see atom_forces_T0).",
       "dtypeStr": "f",
       "name": "atom_forces_T0_raw",
       "repeats": true,
@@ -59,7 +59,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total_T0, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_free_T0_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_T0_raw for the unfiltered counterpart).",
+      "description": "Forces on the atoms as minus gradient of energy_total_T0, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_free_T0_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_T0_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_T0",
       "repeats": true,
@@ -81,7 +81,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
+      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces",
       "repeats": true,
@@ -94,7 +94,7 @@
       ],
       "units": "N"
     }, {
-      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic species plus possible a number. They can be used for particles that do not correspond to atoms (e.g., ghost atoms in some atom centered codes). This metadata defines a configuration and is required.",
+      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic species, possibly followed by a number. The same atomic species can be labelled with more than one atom_label in order to distinguish, e.g., atoms of the same species assigned to different atom-centered basis sets or pseudopotentials, or simply atoms in different locations in the structure (e.g., bulk and surface). These labels can also be used for *particles* that do not correspond to physical atoms (e.g., ghost atoms in some codes using atom-centered basis sets). This metadata defines a configuration and is therefore required.",
       "dtypeStr": "C",
       "name": "atom_label",
       "shape": [
@@ -104,7 +104,7 @@
         "configuration_core"
       ]
     }, {
-      "description": "Positions of the atoms. This metadata defines a configuration and is required.",
+      "description": "Positions of the atoms, in Cartesian coordinates. This metadata defines a configuration and is therefore required.",
       "dtypeStr": "f",
       "name": "atom_position",
       "shape": [
@@ -146,7 +146,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel.",
+      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_lm",
       "shape": [
@@ -159,7 +159,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels.",
+      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
@@ -408,7 +408,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total; this consists of calculation_method_current plus '@' and calculation_method of the method_to_method_ref with method_to_method_kind = starting\\_point for perturbative methods.",
+      "description": "String that uniquely represents the method used to calculate energy_total, If the present calculation_method_current is a perturnative method Y that uses a method X as starting point, this string is automatically created as X@Y, where X is taken from calculation_method_current and Y from method_to_method_ref. In order to activate this, method_to_method_kind must have the value starting\\_point.",
       "dtypeStr": "C",
       "name": "calculation_method",
       "repeats": false,
@@ -417,7 +417,7 @@
         "section_method"
       ]
     }, {
-      "description": "URL used to reference externally stored calculation as defined in the [calculation\\_to\\_calculation\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-external-url).",
+      "description": "URL used to reference an externally stored calculation. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_calculation_kind.",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_external_url",
       "repeats": false,
@@ -426,7 +426,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "String defining the kind of relationship that there is between this and the referenced calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind).",
+      "description": "String defining the kind of relationship that the referenced section_single_configuration_calculation has with the present section_single_configuration_calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The referenced calculation is identified via calculation_to_calculation_ref (typically used for a calculation in the same section_run) or calculation_to_calculation_external_url.",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_kind",
       "repeats": false,
@@ -435,7 +435,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given, this is assumed to be a local copy of the URL. The kind of relationship is specified by calculation_to_calculation_kind.",
+      "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given, then calculation_to_calculation_ref is a local copy of the URL given in calculation_to_calculation_external_url. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_calculation_kind.",
       "dtypeStr": "r",
       "name": "calculation_to_calculation_ref",
       "referencedSections": [
@@ -455,7 +455,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Which of the lattice vectors use periodic boundary conditions.",
+      "description": "Which of the lattice vectors use periodic boundary conditions.Note for the parser developers: This value is not expected to be given for each section_single_configuration_calculation. It is assumed to be valid from the section_single_configuration_calculation where it is defined for all subsequent values section_single_configuration_calculation in section_run, unitl redefined.",
       "dtypeStr": "b",
       "name": "configuration_periodic_dimensions",
       "repeats": true,
@@ -555,16 +555,6 @@
       "superNames": [
         "energy_component",
         "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
-      "dtypeStr": "f",
-      "name": "energy_C_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_C"
       ],
       "units": "J"
     }, {
@@ -1023,27 +1013,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the self consistent density of the target functional, scaled accordingly to the mixing parameter.",
-      "dtypeStr": "f",
-      "name": "energy_X_mGGA_scaled",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
-      "dtypeStr": "f",
-      "name": "energy_X_mGGA",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "energy_type_X"
-      ],
-      "units": "J"
-    }, {
       "description": "Exchange-correlation (XC) energy calculated with XC_functional.",
       "dtypeStr": "f",
       "name": "energy_XC_functional",
@@ -1107,7 +1076,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Kind of sampled ensemble; valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
+      "description": "Kind of sampled ensemble in this section_frame_sequence; valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
       "dtypeStr": "C",
       "name": "ensemble_type",
       "shape": [],
@@ -1115,7 +1084,7 @@
         "section_sampling_method"
       ]
     }, {
-      "description": "Some estimate of a quantity contributing to the error of some values.",
+      "description": "An estimate of a partial quantity contributing to the error of some given quantity.",
       "kindStr": "type_abstract_document_content",
       "name": "error_estimate_partial",
       "repeats": false,
@@ -1131,7 +1100,8 @@
         "error_estimate_partial"
       ]
     }, {
-      "description": "Average of energy-like frame_sequence_conserved_quantity and its standard deviation in this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
+      "derived": true,    
+      "description": "Average value of energy-like frame_sequence_conserved_quantity, and its standard deviation, over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_conserved_quantity_stats",
       "shape": [
@@ -1142,7 +1112,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Energy-like conserved quantity, i.e., a quantity that should be conserved by the evalution (for example the total energy in the NVE ensemble) along this sequence of frames (frame = configuration).",
+      "description": "Array containing the values of the energy-like conserved quantity, i.e., a quantity that should be conserved along the sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble.",
       "dtypeStr": "f",
       "name": "frame_sequence_conserved_quantity",
       "shape": [
@@ -1153,7 +1123,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Type of continuation that has been performed from the previous sequence. Allowed values are: pos (position of atom and cell only), pos_vel (also the velocities are restarted), all (everything is restarted, including thermostats,...).",
+      "description": "Type of continuation that has been performed from the previous sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), upon restart. Allowed values are: pos (position of atom and cell only), pos_vel (also the velocities are restarted), all (everything is restarted, including thermostats,etc.).",
       "dtypeStr": "C",
       "name": "frame_sequence_continuation_kind",
       "referencedSections": [
@@ -1164,7 +1134,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Reference to an external evaluation as described in the [frame\\_sequence\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url).",
+      "description": "In case the energy, forces, and other quantities for the frames (a frame is one section_single_configuration_calculation) in this section_frame_sequence are obtained by calling a different code than the code that drives the sequence (e.g., a wrapper that drives a molecular dynamics, Monte Carlo, geometry optimization and calls an electroinc-structure code for energy and forces for each configuration), this metadata hold the reference to where the section_single_configuration_calculation for each frame are located. The format for this reference is described in the [frame\\_sequence\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url).",
       "dtypeStr": "C",
       "name": "frame_sequence_external_url",
       "shape": [],
@@ -1172,7 +1142,8 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Average kinetic energy and standard deviation of this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
+      "derived": true,        
+      "description": "Average kinetic energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_kinetic_energy_stats",
       "shape": [
@@ -1183,7 +1154,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Kinetic energy along this sequence of frames (a frame is one section_single_configuration_calculation).",
+      "description": "Array containing the values of the kinetic energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_kinetic_energy",
       "shape": [
@@ -1194,7 +1165,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Reference to local frames (a frame is one section_single_configuration_calculation), if not defined then frame_sequence_external_url *must* be defined, if both are defined this is expected to be a local copy of the reference.",
+      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to a molecular dynamics trajectory, or geometry optimization, etc. The full information for each frame is stored in a section_single_configuration_calculation and this metadata establishes the link for each frame.",
       "dtypeStr": "r",
       "name": "frame_sequence_local_frames_ref",
       "referencedSections": [
@@ -1207,7 +1178,8 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Average potential energy and standard deviation of this of sequence frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
+      "derived": true,        
+      "description": "Average potential energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). ",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy_stats",
       "shape": [
@@ -1218,7 +1190,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Potential energy along this sequence of frames (a frame is one section_single_configuration_calculation). This should be equal to energy_total of the frames (remove?).",
+      "description": "Array containing the value of the potential energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). This is equal to energy_total of the corresponding section_single_configuration_calculation and repeated here in a summary array for easier access.",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy",
       "shape": [
@@ -1229,7 +1201,8 @@
       ],
       "units": "J"
     }, {
-      "description": "Average pressure and standard deviation of this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
+      "derived": true,            
+      "description": "Average pressure (one third of the trace of the stress tensor) and standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_pressure_stats",
       "shape": [
@@ -1240,7 +1213,7 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Pressure along this sequence of frames (a frame is one section_single_configuration_calculation).",
+      "description": "Array containing the values of the pressure (one third of the trace of the stress tensor) along this sequence of frames (a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_pressure",
       "shape": [
@@ -1251,7 +1224,8 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Average temperature and standard deviation of this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
+      "derived": true,                
+      "description": "Average temperature and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_temperature_stats",
       "shape": [
@@ -1262,7 +1236,7 @@
       ],
       "units": "K"
     }, {
-      "description": "Instantaneus temperature (related to kinetic energy) along this sequence of frames.",
+      "description": "Array containing the values of the instantaneus temperature (a quantity, proportional to frame_sequence_kinetic_energy, whose ensemble average equals the thermodynamic temperature) along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_temperature",
       "shape": [
@@ -1273,7 +1247,7 @@
       ],
       "units": "K"
     }, {
-      "description": "Time value along this sequence of frames (a frame is one section_single_configuration_calculation).",
+      "description": "Time value along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_time",
       "shape": [
@@ -1284,7 +1258,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Reference to the sampling method section defining the parameters used in this sequence of frames (a frame is one section_single_configuration_calculation).",
+      "description": "Reference from the present section_frame_sequence to the section_sampling_method, that defines the parameters used in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "r",
       "name": "frame_sequence_to_sampling_ref",
       "referencedSections": [
@@ -1295,7 +1269,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Name of a user defined quantity, sampled along this sequence of frames (a frame is one section_single_configuration_calculation).",
+      "description": "Descriptive name of a user-defined quantity, sampled along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (frame_sequence_kinetic_energy and frame_sequence_potential_energy), the instantaneous temperature (frame_sequence_temperature) and the pressure (frame_sequence_pressure). This metadata should be used for other quantities that are monitored along a sequence of frames.",
       "dtypeStr": "C",
       "name": "frame_sequence_user_quantity_name",
       "shape": [],
@@ -1303,7 +1277,8 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "description": "Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (a frame is one section_single_configuration_calculation). This should be defined if number_of_frames_in_sequence is large.",
+      "derived": true,        
+      "description": "Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_user_quantity_stats",
       "shape": [
@@ -1314,7 +1289,7 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "description": "User specified quantity defined in frame_sequence_user_quantity_name, evaluated along this sequence of frames (a frame is one section_single_configuration_calculation).",
+      "description": "Array containing the values of the user-defined quantity defined in frame_sequence_user_quantity_name, evaluated along this sequence of frames (i.e., trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_user_quantity",
       "shape": [
@@ -1330,10 +1305,10 @@
       "name": "geometry_optimization_converged",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_frame_sequence"
       ]
     }, {
-      "description": "For each section_basis_set, assignent of a basis set (as given in section_basis_set_atom_centered) to an atom.",
+      "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, as defined in a section_basis_set_atom_centered that is referred to.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
       "referencedSections": [
@@ -1346,7 +1321,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "For each section_basis_set, assignement of the cell-associated (i.e., non atom centered) parts of the basis set (as given in section_basis_set_cell_associated).",
+      "description": "Assignement of the cell-associated (i.e., non atom centered, e.g., planewaves) parts of the basis set, as given in a section_basis_set_cell_associated that is referred to.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_cell_associated",
       "referencedSections": [
@@ -1480,7 +1455,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "URL used to reference externally stored methods as defined in the [method\\_to\\_method\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-external-url).",
+      "description": "URL used to reference an externally stored section_method. The kind of relationship between the present and the referenced section_method is specified by method_to_method_kind.",
       "dtypeStr": "C",
       "name": "method_to_method_external_url",
       "repeats": false,
@@ -1489,7 +1464,7 @@
         "section_method_to_method_refs"
       ]
     }, {
-      "description": "String describing the relationship between the referenced method defined in the present section_method. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind).",
+      "description": "String defining the kind of relationship that the referenced section_method has with the present section_method. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
       "dtypeStr": "C",
       "name": "method_to_method_kind",
       "shape": [],
@@ -1497,7 +1472,7 @@
         "section_method_to_method_refs"
       ]
     }, {
-      "description": "Reference to a local method. If both method_to_method_ref and method_to_method_external_url are given, then method_to_method_ref is expected to contain a local copy of the value contained in method_to_method_external_url. The kind of relationship between the method defined in the present section_method and the referenced one is described by method_to_method_kind.",
+      "description": "Reference to a local section_method. If both method_to_method_ref and method_to_method_external_url are given, then method_to_method_ref is a local copy of the value contained in method_to_method_external_url. The kind of relationship between the method defined in the present section_method and the referenced one is described by method_to_method_kind.",
       "dtypeStr": "r",
       "name": "method_to_method_ref",
       "shape": [],
@@ -1597,7 +1572,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Dimension of the user-defined quantity (monitored in a sequence of frames, i.e., a trajectory).",
+      "description": "Dimension of the user-defined quantity defined by frame_sequence_user_quantity_name and monitored in a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (frame_sequence_kinetic_energy and frame_sequence_potential_energy), the instantaneous temperature (frame_sequence_temperature) and the pressure (frame_sequence_pressure), monitored along a sequence of frames. This section bundles other quantities that are monitored along a sequence of frames.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_frame_sequence_user_quantity_components",
@@ -1606,7 +1581,7 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
-      "description": "The number of frames in this sequence (a frame is one section_single_configuration_calculation).",
+      "description": "The number of frames in this sequence (i.e., trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_frames_in_sequence",
@@ -1881,7 +1856,7 @@
     }, {
       "description": "Number of scf iterations at DFT level.",
       "dtypeStr": "i",
-      "name": "scf_dft_number_of_iterations",
+      "name": "scf_number_of_iterations",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1926,7 +1901,7 @@
         "basis_set_description"
       ]
     }, {
-      "description": "Section describing a cell associated (atom independent) basis set, e.g., planewaves.",
+      "description": "Section describing a cell-associated (atom-independent) basis set, e.g., planewaves.",
       "kindStr": "type_section",
       "name": "section_basis_set_cell_associated",
       "superNames": [
@@ -1940,7 +1915,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section that describes relationships between single configuration calculations.",
+      "description": "Section that describes the relationship between different section_single_configuration_calculation. Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The kind of relationship between the calculation defined in this section and the referenced one is described by calculation_to_calculation_kind. The referenced section_single_configuration_calculation is identified via calculation_to_calculation_ref (typically used for a section_single_configuration_calculation in the same section_run) or calculation_to_calculation_external_url.",
       "kindStr": "type_section",
       "name": "section_calculation_to_calculation_refs",
       "superNames": [
@@ -1955,21 +1930,21 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Groups eigenvalues of different spins.",
+      "description": "This section groups the eigenvalues from different spin channels, described in each section_eigenvalues.",
       "kindStr": "type_section",
       "name": "section_eigenvalues_group",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section containing eigenvalues of some energy for one spin channel.",
+      "description": "Section containing (electronic-energy) eigenvalues for one spin channel.",
       "kindStr": "type_section",
       "name": "section_eigenvalues",
       "superNames": [
         "section_eigenvalues_group"
       ]
     }, {
-      "description": "Section describing a shifted total energy, created to be comparable among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Section describing a shifted total energy, created to allow for compararisons among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "kindStr": "type_section",
       "name": "section_energy_comparable",
       "superNames": [
@@ -1991,7 +1966,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Section containing a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), evaluated with a common sampling method; this might be a subset of the whole trajectory.",
+      "description": "Section containing a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), evaluated with a sampling method (e.g, molecular dynamics, Monte Carlo, geometry optimization); this might be a subset of the whole trajectory. Information on the methd used for the sampling are in a section_sampling_method and information of each frame of the sequence are in a  section_single_configuration_calculation.",
       "kindStr": "type_section",
       "name": "section_frame_sequence",
       "superNames": [
@@ -2013,7 +1988,7 @@
         "section_method"
       ]
     }, {
-      "description": "Section describing connections between methods used for the same configuration (for example the starting point of a perturbation, or the QM and MM methods in a QM/MM method.",
+      "description": "Section that describes the relationship between different section_method. Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The kind of relationship between the method defined in this section and the referenced one is described by method_to_method_kind. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
       "kindStr": "type_section",
       "name": "section_method_to_method_refs",
       "shape": [],
@@ -2033,7 +2008,7 @@
       "name": "section_run",
       "superNames": []
     }, {
-      "description": "Section containing the settings describing a sampling (of the potential-energy surface) method.",
+      "description": "Section containing the settings describing a (potential-energy surface) sampling method. The results and monitored quantities of such sampling are collected in a section_frame_sequence.",
       "kindStr": "type_section",
       "name": "section_sampling_method",
       "superNames": [
@@ -2057,7 +2032,7 @@
         "section_run"
       ]
     }, {
-      "description": "Section collecting the information on a species-projected density of states (DOS) evaluation.",
+      "description": "Section collecting the information on a species-projected density-of-states (DOS) evaluation.",
       "kindStr": "type_section",
       "name": "section_species_projected_dos",
       "repeats": true,
@@ -2097,7 +2072,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_barostat",
       "superNames": [
-        "settings_md"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Some parameters that describe a constraint",
@@ -2123,7 +2098,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_integrator",
       "superNames": [
-        "settings_md"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Some parameters that describe a bonded interaction.",
@@ -2147,14 +2122,14 @@
     }, {
       "description": "Parameters controlling the Monte-Carlo sampling.",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_mc",
+      "name": "settings_Monte_Carlo",
       "superNames": [
         "section_sampling_method"
       ]
     }, {
       "description": "Parameters controlling the MD sampling.",
       "kindStr": "type_abstract_document_content",
-      "name": "settings_md",
+      "name": "settings_molecular_dynamics",
       "superNames": [
         "section_sampling_method"
       ]
@@ -2162,6 +2137,13 @@
       "description": "Parameters controlling the metadynamics sampling.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_metadynamics",
+      "superNames": [
+        "section_sampling_method"
+      ]
+    }, {
+      "description": "Parameters controlling the geometry optimization",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_geometry_optimization",
       "superNames": [
         "section_sampling_method"
       ]
@@ -2226,7 +2208,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_thermostat",
       "superNames": [
-        "settings_md"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Parameters and information connected with the van der Waals treatment used in the calculation to compute energy_van_der_Waals.",
@@ -2243,9 +2225,16 @@
         "settings_XC"
       ]
     }, {
-      "description": "Parameters connected with defining the exchange-correlation (XC) treatment.",
+      "description": "Parameters connected with defining the exchange-correlation (XC) treatment. *Treatment* is more general than *functional* and can include, e.g., post hartree-fock methods",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Parameters connected with the convergence of the scf iterations.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_scf",
       "superNames": [
         "section_method"
       ]
@@ -2356,7 +2345,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Species labels for the species-projected density of states (DOS).",
+      "description": "Labels of the atomic species for the species-projected density of states (DOS). Differently from atom_label, which allows for more than one label for the same atomic species (by adding a number or a string to the label), this list is expected to refer to actual atomic sepcies, i.e., belonging to the periodic table of elements. So the species-projected DOS are expected to be as many as the different atomic species in the system.",
       "dtypeStr": "C",
       "name": "species_projected_dos_species_label",
       "shape": [
@@ -2366,7 +2355,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, divided into contributions from each $l,m$ channel.",
+      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, divided into contributions from each $l,m$ channel. Here, there are as many species-projected DOS as the number_of_species, the list of labels of the species is in species_projected_dos_species_label.",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_lm",
       "shape": [
@@ -2379,7 +2368,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, summed up over all $l$.",
+      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, summed up over all $l$. Here, there are as many species-projected DOS as the number_of_species, the list of labels of the species is in species_projected_dos_species_label.",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_total",
       "shape": [
@@ -2785,5 +2774,57 @@
       "superNames": [
         "settings_XC"
       ]
+    }, {
+      "description": "Algorithm for the geometry optimization. Allowed values are listed in the [geometry_optimization_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/geometry-optimization-method).",
+      "dtypeStr": "C",
+      "name": "geometry_optimization_method",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ]
+    }, {
+      "description": "Maximum force modulus as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum modulus of the force on one atom is below this threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "geometry_optimization_threshold_force",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ],
+      "units": "N"      
+    }, {
+      "description": "Maximum total-energy change between two geometry optimization steps, as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the total-energy change between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "geometry_optimization_energy_change",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ],
+      "units": "J"      
+    }, {
+      "description": "Maximum displacement of the nuclei between two geometry optimization steps as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum among the displacements of the nuclei between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "geometry_optimization_geometry_change",
+      "shape": [],
+      "superNames": [
+        "settings_geometry_optimization"
+      ],
+      "units": "m"      
+    }, {
+      "description": "Maximum allowed number of scf iterations.",
+      "dtypeStr": "f",
+      "name": "scf_max_iteration",
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ]
+    }, {
+      "description": "Maximum allowed number of scf iterations. The scf is considered converged when the total-energy change between two scf cycels is below the threshold (possibly in combination with other criteria)",
+      "dtypeStr": "f",
+      "name": "scf_threshold_energy_change",
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ],
+      "units": "J"      
     }]
 }
