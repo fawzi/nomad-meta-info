@@ -402,5 +402,17 @@
       "superNames": [
         "section_topology"
       ]
+    }, {
+      "description": "Reference to the topology used for this system; if not given, the trivial topology should be assumed.",
+      "dtypeStr": "r",
+      "name": "topology_ref",
+      "referencedSections": [
+        "section_topology"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
     }]
 }

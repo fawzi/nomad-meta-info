@@ -127,7 +127,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. While for the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted, for the quantum number $m$, a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
+      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
       "dtypeStr": "i",
       "name": "atom_projected_dos_lm",
       "shape": [
@@ -192,7 +192,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Tuples of $l$ and $m$ values for which the atomic multipoles (including the electric charge, dipole, etc.) are given. The method used to obtain the multipoles is specified by atomic_multipole_kind. The meaning of the integer number $l$ is monopole/charge for $l=0$, dipole for $l=1$, quadrupole for $l=2@, etc. The meaning of the integer numbers $m$ is specified by atomic_multipole_m_kind.",
+      "description": "Tuples of $l$ and $m$ values for which the atomic multipoles (including the electric charge, dipole, etc.) are given. The method used to obtain the multipoles is specified by atomic_multipole_kind. The meaning of the integer number $l$ is monopole/charge for $l=0$, dipole for $l=1$, quadrupole for $l=2$, etc. The meaning of the integer numbers $m$ is specified by atomic_multipole_m_kind.",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
@@ -222,7 +222,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Values of the energies of the $k$ bands in the electronic band structure. This is a fourth-order tensor, with one dimension used for the spin channels, one for the $k$ point segments (e.g., Gamma-L, the labels are specified in band_segm_labels), one for the $k$ points for each segment, and one for the eigenvalue sequence",
+      "description": "Values of the energies of the $k$ bands in the electronic band structure. This is a fourth-order tensor, with one dimension used for the spin channels, one for the $k$ point segments (e.g., Gamma-L, the labels are specified in band_segm_labels), one for the $k$ points for each segment, and one for the eigenvalue sequence.",
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
@@ -236,7 +236,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Fractional coordinates of the $k$ points (i.e. in the basis of the reciprocal lattice vectors) actually building the band.",
+      "description": "Fractional coordinates of the $k$ points (i.e. in the basis of the reciprocal-lattice vectors) actually building the band.",
       "dtypeStr": "f",
       "name": "band_k_points",
       "shape": [
@@ -294,7 +294,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Values of the radial function of the different basis function kinds. The values are numerically tabulated on a default equispaced grid from 0 to 4 nm. The 5 tabulated values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\\frac{d}{dr}(f(r)*r)$.",
+      "description": "Values of the radial function of the different basis function kinds. The values are numerically tabulated on a default 0.01-nm equispaced grid from 0 to 4 nm. The 5 tabulated values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\\frac{d}{dr}(f(r)*r)$.",
       "dtypeStr": "f",
       "name": "basis_set_atom_centered_radial_functions",
       "shape": [
@@ -306,7 +306,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent, but explicative, base name of the basis function, not unique. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code-specific, but explicative, base name of the basis set, not unique. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_short_name",
       "shape": [],
@@ -314,7 +314,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent explicative and unique name of the basis function, it uses basis_set_atom_centered_short_name and if not equal to the default basis set implied by that name appends the first 10 characters of the base64 url encoding of the SHA-512 of the diffs stored as normalized json, details are explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code-specific, explicative and unique name of the basis set. This string starts with basis_set_atom_centered_short_name. If the basis set defined in this section_basis_set_atom_centered is not identical to the default definition (stored in a database) of the basis set with the same name stored in a database, then the string is extended by 10 identificative characters as explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name). The reason for this procedure is that often atom-centered basis sets are obtained by fine tuning basis sets provided by the code developers or other sources. Each basis sets, which has normally a standard name, often reported in publications, has also several parameters that can be tuned. This metadata tries to keep track of the original basis set and its modifications. This string here defined should not contain the *atom kind* for which this basis set is intended for, in order to simplify the use of a single name for multiple *atom kinds* (see atom_label for the actual meaning of *atom kind*).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_unique_name",
       "shape": [],
@@ -373,7 +373,7 @@
     }, {
       "description": "Spherical cutoff  in reciprocal space for a planewave basis set. It is the energy of the highest planewave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$) kept into the basis. Note that normally this basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
       "dtypeStr": "f",
-      "name": "basis_set_plan_wave_cutoff",
+      "name": "basis_set_planewave_cutoff",
       "shape": [],
       "superNames": [
         "section_basis_set_cell_associated"
@@ -495,7 +495,7 @@
         "section_dos"
       ]
     }, {
-      "description": "Values of the (electronic-energy) eigenvalues.",
+      "description": "Values of the (electronic-energy) eigenvalues. The coordinates of the corresponding eigenstates in the reciprocal space are defined in eigenvalues_kpoints and their occupation are given in eigenvalues_occupation.",
       "dtypeStr": "f",
       "name": "eigenvalues_eigenvalues",
       "shape": [
@@ -504,7 +504,8 @@
       ],
       "superNames": [
         "section_eigenvalues"
-      ]
+      ],
+      "units": "J"
     }, {
       "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind).",
       "dtypeStr": "C",
@@ -514,7 +515,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "$k$ points on which the eigenvalues tabulated in eigenvalues_eigenvalues were evaluated.",
+      "description": "Coordinates of the $k$ points (in the basis of the reciprocal lattice vectors) at which the eigenvalues tabulated in eigenvalues_eigenvalues are evaluated.",
       "dtypeStr": "f",
       "name": "eigenvalues_kpoints",
       "shape": [
@@ -525,7 +526,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Occupation of the eigenstates.",
+      "description": "Occupation of the eigenstates whose coordinate in the reciprocal space are defined in eigenvalues_kpoints and whose (energy) eigenvalues are given in eigenvalues_eigenvalues.",
       "dtypeStr": "f",
       "name": "eigenvalues_occupation",
       "shape": [
@@ -1343,7 +1344,7 @@
       ],
       "units": "N"
     }, {
-      "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, as defined in a section_basis_set_atom_centered that is referred to.",
+      "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, for this section_single_configuration_calculation. The actual definition of the atom-centered basis set is in the section_basis_set_atom_centered that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
       "referencedSections": [
@@ -1356,7 +1357,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Assignement of the cell-associated (i.e., non atom centered, e.g., planewaves) parts of the basis set, as given in a section_basis_set_cell_associated that is referred to.",
+      "description": "Assignement of the cell-associated (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in the section_basis_set_cell_associated that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_cell_associated",
       "referencedSections": [
@@ -1479,7 +1480,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "Reference to the atom-centered orbitals basis functions that are used for the atoms of this kind.",
+      "description": "Reference to the atom-centered basis functions that are used for the atoms of this kind (see atom_label for the actual meaning of *atom kind*).",
       "dtypeStr": "r",
       "name": "method_atom_kind_wavefunctions_basis_set_ref",
       "referencedSections": [
@@ -1571,7 +1572,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Number of different basis functions in this set. This is equal to the number of actual coefficents that are specified when using this basis set.",
+      "description": "Number of different basis functions in this section_basis_set_atom_centered. This equals the number of actual coefficents that are specified when using this basis set.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_basis_functions_in_basis_set_atom_centered",
@@ -1580,7 +1581,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Total number of basis functions (some might need complex coefficients).",
+      "description": "Total number of basis functions in this section_basis_set.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_basis_functions",
@@ -1634,7 +1635,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Number of different kinds of radial basis functions in this set. In practice, all the basis functions with the same $n$ and $l$ quantum number, here are counted only once.",
+      "description": "Number of different *kinds* of radial basis functions in this section_basis_set_atom_centered. Specifically, basis functions with the same $n$ and $l$ quantum numbers are grouped in sets. Each set counts as one *kind*.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_kinds_in_basis_set_atom_centered",
@@ -1939,28 +1940,28 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section describing one or a sub group of basis functions in an atom centered basis set.",
+      "description": "This section contains the description of the basis functions (at least one function) contained in the (atom-centered) basis set that is being defined in this section_basis_set_atom_centered.",
       "kindStr": "type_section",
       "name": "section_basis_functions_atom_centered",
       "superNames": [
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Each section_basis_set_atom_centered contains the definition of a specific atom centered basis set for a specific atom.",
+      "description": "Section describing an atom-centered basis set. The main contained information is a short, non unique but human-interpretable, name for identifying the basis set ( basis_set_atom_centered_short_name ), a longer, unique name ( basis_set_atom_centered_unique_name ), the atomic number of the atomic species the basis set is meant for (basis_set_atom_number), and the list of actual basis functions in section_basis_functions_atom_centered.",
       "kindStr": "type_section",
       "name": "section_basis_set_atom_centered",
       "superNames": [
         "basis_set_description"
       ]
     }, {
-      "description": "Section describing a cell-associated (atom-independent) basis set, e.g., planewaves.",
+      "description": "Section describing a cell-associated (atom-independent) basis set, e.g., planewaves. The contained information is the type of basis set (in basis_set_cell_associated_kind), its parameters (e.g., for planewaves in basis_set_planewave_cutoff), and a name that identifies the actually used basi set (a string combining the type and the parameter(s), stored in basis_set_cell_associated_name).",
       "kindStr": "type_section",
       "name": "section_basis_set_cell_associated",
       "superNames": [
         "basis_set_description"
       ]
     }, {
-      "description": "Section containing references to all basis sets used for a single configuration calculation. More than one basis set instance per single configuration calculation may be needed, for example, for codes that implement adaptive basis sets along the scf convergence (e.g., exciting). In such cases, there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc.",
+      "description": "This section contains references to *all* basis sets used in this section_single_configuration_calculation. More than one basis set instance per single configuration calculation may be needed, for example, for codes that implement adaptive basis sets along the scf convergence (e.g., exciting). In such cases, there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc. Supported are the two broad classes of basis sets: atom-centered (e.g., gaussian-type, numerical atomic orbitals) and cell-associated (like planewaves or real-space grid, so named because they are typically used for periodic-system calculations and associated to the simulated cell as a whole). Basis sets used in this section_single_configuration_calculation, belonging to either class, are defined in the dedicated section: section_basis_set_cell_associated or section_basis_set_atom_centered. The correspondence between the basis sets listed in this section and the definition given in th dedicated sessions in given in by the two concrete metadata: mapping_section_basis_set_atom_centered and mapping_section_basis_set_cell_associated.",
       "kindStr": "type_section",
       "name": "section_basis_set",
       "superNames": [
@@ -1989,7 +1990,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section containing (electronic-energy) eigenvalues for one spin channel.",
+      "description": "Section containing (electronic-energy) eigenvalues for one spin channel. If, for example, the eigenvalues of the Kohn-Sham operator are to be stored, a string identifying this kind of eigenvalues is put in eigenvalues_kind (see the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind for the allowed strings), the coordinates of the $k$-points at which the eigenvalues were evaluated is stored in eigenvalues_kpoints, and the energy values of the eigenstates and their occupation is stored in eigenvalues_eigenvalues and eigenvalues_occupation , respectively.",
       "kindStr": "type_section",
       "name": "section_eigenvalues",
       "superNames": [
@@ -2025,7 +2026,7 @@
         "section_run"
       ]
     }, {
-      "description": "Section collecting the information on a $k$-band evaluation.",
+      "description": "Section collecting the information on a $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways (here called segments) in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as fourth-order tensors: one dimension for the spin channels, one for the list of $k$ point segments (e.g., Gamma-L, the labels for each segment are specified in band_segm_labels), one for the sequence of $k$ points for each segment (the same number of $k$-point per segment is assumed and this number is given in n_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupation, respectively.",    
       "kindStr": "type_section",
       "name": "section_k_band",
       "repeats": true,
@@ -2291,7 +2292,7 @@
         "section_method"
       ]
     }, {
-      "description": "Simulation cell (lattice vectors). The first index is x,y,z and the second index the lattice vector.",
+      "description": "Simulation cell (lattice vectors). The first index is x,y,z Cartesian coordinates, and the second index labels the lattice vector.",
       "dtypeStr": "f",
       "name": "simulation_cell",
       "repeats": false,
@@ -2312,7 +2313,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Reference to the system (atomic configuration, cell, ...) that is calculated.",
+      "description": "Reference to the system (atomic configuration, cell, ...) that is calculated in this section_single_configuration_calculation.",
       "dtypeStr": "r",
       "name": "single_configuration_calculation_to_system_description_ref",
       "referencedSections": [
@@ -2323,7 +2324,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Reference to the method used for the calculation.",
+      "description": "Reference to the method used for the calculation in this section_single_configuration_calculation.",
       "dtypeStr": "r",
       "name": "single_configuration_to_calculation_method_ref",
       "referencedSections": [
@@ -2378,7 +2379,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of $l$ and $m$ values for which species_projected_dos_values_lm are given. While for the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted, for the quantum number $m$, a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
+      "description": "Tuples of $l$ and $m$ values for which species_projected_dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
       "dtypeStr": "i",
       "name": "species_projected_dos_lm",
       "shape": [
@@ -2448,7 +2449,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method. The value of the latter is stored in stress_tensor and (if needed) it is the one used for dynamics, minimization,etc.",
+      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method. This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed). The value of the latter is stored in stress_tensor.",
       "dtypeStr": "C",
       "name": "stress_tensor_kind",
       "shape": [],
@@ -2456,7 +2457,7 @@
         "section_stress_tensor"
       ]
     }, {
-      "description": "Method used to calculate stress_tensor, the value of which is used (if needed) for dynamics, geometry minimization,...  The value should be with numeric or analytic.",
+      "description": "Method used to calculate stress_tensor, the value of which is used (if needed) for dynamics, geometry minimization, etc.  The allowed values are: numeric and analytic.",
       "dtypeStr": "C",
       "name": "stress_tensor_method",
       "shape": [],
@@ -2473,7 +2474,7 @@
       ],
       "superNames": []
     }, {
-      "description": "Stress tensor of kind stress_tensor_kind, which is an *alternative* to the one chosen in stress_tensor_method. The value of the latter is stored in stress_tensor and (if needed) it is the one used for dynamics, minimization,etc..",
+      "description": "Value of the stress tensor of kind defined in stress_tensor_kind. This is an *alternative* definition to the one chosen in stress_tensor_method. This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed). The value of the latter is stored in stress_tensor. ",
       "dtypeStr": "f",
       "name": "stress_tensor_value",
       "shape": [
@@ -2732,18 +2733,6 @@
       ],
       "units": "s"
     }, {
-      "description": "Reference to the topology used for this system; if not given, the trivial topology should be assumed.",
-      "dtypeStr": "r",
-      "name": "topology_ref",
-      "referencedSections": [
-        "section_topology"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
       "description": "Total charge of the system.",
       "dtypeStr": "i",
       "name": "total_charge",
@@ -2753,7 +2742,7 @@
       ],
       "units": "C"
     }, {
-      "description": "Short string describing the van der Waals method. No such method, if skipped or empty. Van der Waals treatement strings are described on the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/van-der-Waals-method).",
+      "description": "Short string describing the van der Waals method. If skipped or empty, no such method is used. Allowed string for describing the Van der Waals treatement are listed in the [van\\_der\\_Waals\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/van-der-Waals-method).",
       "dtypeStr": "C",
       "name": "van_der_Waals_method",
       "shape": [],
@@ -2771,7 +2760,7 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) functional used for the final energy and related quantities in a unique short obtained combining the data in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
+      "description": "String describing the exchange correlation (XC) functional used for the final energy and related quantities, with a unique short name obtained combining the data in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional",
       "repeats": false,
@@ -2808,7 +2797,7 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) method used for energy_XC consisting of XC_method_current plus '@' and the XC_method of the method_to_method_ref with method_to_method_kind = starting\\_point_method for perturbative methods.",
+      "description": "String describing the exchange correlation (XC) method used for evaluating energy_XC, consisting of XC_method_current plus '@' and the XC_method of the method_to_method_ref with method_to_method_kind = starting\\_point_method for perturbative methods.",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
