@@ -1361,6 +1361,7 @@
       "description": "A debugging message of the computational program, associated with a single configuration calculation.",
       "dtypeStr": "C",
       "name": "message_debug_evaluation",
+      "repeats": true,
       "superNames": [
         "message_debug",
         "section_single_configuration_calculation"
@@ -1369,6 +1370,7 @@
       "description": "A debugging message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_debug_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "message_debug"
@@ -1383,6 +1385,7 @@
       "description": "An error message of the computational program, associated with a single configuration calculation.",
       "dtypeStr": "C",
       "name": "message_error_evaluation",
+      "repeats": true,
       "superNames": [
         "message_error",
         "section_single_configuration_calculation"
@@ -1391,6 +1394,7 @@
       "description": "An error message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_error_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "message_error"
@@ -1407,6 +1411,7 @@
       "description": "An information message of the computational program, associated with a a single configuration calculation.",
       "dtypeStr": "C",
       "name": "message_info_evaluation",
+      "repeats": true,
       "superNames": [
         "message_info",
         "section_single_configuration_calculation"
@@ -1415,6 +1420,7 @@
       "description": "An information message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_info_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "message_info"
@@ -1431,6 +1437,7 @@
       "description": "A warning message of the computational program.",
       "dtypeStr": "C",
       "name": "message_warning_evaluation",
+      "repeats": true,
       "superNames": [
         "message_warning",
         "section_single_configuration_calculation"
@@ -1439,6 +1446,7 @@
       "description": "A warning message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_warning_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "message_warning"
@@ -1681,6 +1689,7 @@
       "description": "A debugging message of the parsing program, associated with a single configuration calculation.",
       "dtypeStr": "C",
       "name": "parsing_message_debug_evaluation",
+      "repeats": true,
       "superNames": [
         "parsing_message_debug",
         "section_single_configuration_calculation"
@@ -1689,6 +1698,7 @@
       "description": "A debugging message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_debug_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "parsing_message_debug"
@@ -1698,11 +1708,13 @@
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_debug",
+      "repeats": true,
       "superNames": []
     }, {
       "description": "An error message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_error_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "parsing_message_error"
@@ -1711,6 +1723,7 @@
       "description": "An error message of the parsing program, associated with a single configuration calculation.",
       "dtypeStr": "C",
       "name": "parsing_message_error_single_configuration",
+      "repeats": true,
       "superNames": [
         "parsing_message_error",
         "section_single_configuration_calculation"
@@ -1720,6 +1733,7 @@
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_error",
+      "repeats": true,
       "superNames": [
         "parsing_message_warning"
       ]
@@ -1727,6 +1741,7 @@
       "description": "An information message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_info_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "parsing_message_info"
@@ -1735,6 +1750,7 @@
       "description": "An information message of the parsing program, associated with a a single configuration calculation.",
       "dtypeStr": "C",
       "name": "parsing_message_info_single_configuration",
+      "repeats": true,
       "superNames": [
         "parsing_message_info",
         "section_single_configuration_calculation"
@@ -1744,6 +1760,7 @@
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_info",
+      "repeats": true,
       "superNames": [
         "parsing_message_debug"
       ]
@@ -1751,6 +1768,7 @@
       "description": "A warning message of the parsing program.",
       "dtypeStr": "C",
       "name": "parsing_message_warning_evaluation",
+      "repeats": true,
       "superNames": [
         "parsing_message_warning",
         "section_single_configuration_calculation"
@@ -1759,6 +1777,7 @@
       "description": "A warning message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_warning_run",
+      "repeats": true,
       "superNames": [
         "section_run",
         "parsing_message_warning"
@@ -1768,6 +1787,7 @@
       "dtypeStr": "C",
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_warning",
+      "repeats": true,
       "superNames": [
         "parsing_message_info"
       ]
