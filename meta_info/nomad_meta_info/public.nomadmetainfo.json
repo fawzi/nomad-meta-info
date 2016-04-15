@@ -2449,7 +2449,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method. This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed). The value of the latter is stored in stress_tensor.",
+      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed).",
       "dtypeStr": "C",
       "name": "stress_tensor_kind",
       "shape": [],
@@ -2474,7 +2474,7 @@
       ],
       "superNames": []
     }, {
-      "description": "Value of the stress tensor of kind defined in stress_tensor_kind. This is an *alternative* definition to the one chosen in stress_tensor_method. This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed). The value of the latter is stored in stress_tensor. ",
+      "description": "Value of the stress tensor of kind defined in stress_tensor_kind. This is an *alternative* definition to the one chosen in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed). ",
       "dtypeStr": "f",
       "name": "stress_tensor_value",
       "shape": [
