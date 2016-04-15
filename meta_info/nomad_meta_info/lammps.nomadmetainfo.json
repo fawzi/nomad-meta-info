@@ -9,7 +9,7 @@
   "metaInfos": [ {
       "description": "Program version date",
       "dtypeStr": "C",
-      "name": "lammps_program_version_date",
+      "name": "x_lammps_program_version_date",
       "shape": [],
       "superNames": [
         "section_run"
@@ -120,6 +120,62 @@
       "referencedSections": [
         "section_atom_type"
       ],
+      "shape": [],
+      "superNames": [
+        "section_molecule_interaction"
+      ]
+    }, {
+      "description": "Reference to the atom type for pair interactions",
+      "dtypeStr": "r",
+      "name": "pair_interaction_atom_type_ref",
+      "referencedSections": [
+        "section_atom_type"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_interaction"
+      ]
+    }, {
+      "description": "Reference to the atom type for pair interactions within a molecule",
+      "dtypeStr": "r",
+      "name": "pair_molecule_interaction_to_atom_type_ref",
+      "referencedSections": [
+        "section_atom_type"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_molecule_interaction"
+      ]
+    }, {
+      "description": "Pair interactions parameters",
+      "dtypeStr": "f",
+      "name": "pair_interaction_parameters",
+      "shape": [ "number_of_defined_pair_interactions",
+                  2 ],
+      "superNames": [
+        "section_interaction"
+      ]
+    }, {
+      "description": "Molecule pair interactions parameters",
+      "dtypeStr": "f",
+      "name": "pair_molecule_interaction_parameters",
+      "shape": [ "number_of_defined_molecule_pair_interactions",
+                  2 ],
+      "superNames": [
+        "section_molecule_interaction"
+      ]
+    }, {
+      "description": "Number of defined pair interactions (L-J pairs)",
+      "dtypeStr": "i",
+      "name": "number_of_defined_pair_interactions",
+      "shape": [],
+      "superNames": [
+        "section_interaction"
+      ]
+    }, {
+      "description": "Number of defined pair interactions within a molecule (L-J pairs)",
+      "dtypeStr": "i",
+      "name": "number_of_defined_molecule_pair_interactions",
       "shape": [],
       "superNames": [
         "section_molecule_interaction"

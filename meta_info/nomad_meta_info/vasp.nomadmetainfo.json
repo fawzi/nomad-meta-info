@@ -7,6 +7,22 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "build date as string",
+      "dtypeStr": "C",
+      "name": "vasp_build_date",
+      "shape": [],
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "date of last modification of the source as string",
+      "dtypeStr": "C",
+      "name": "vasp_src_date",
+      "shape": [],
+      "superNames": [
+        "program_info"
+      ]
+    }, {
       "description": "algorithm: Normal (Davidson) | Fast | Very_Fast (RMM-DIIS) | Conjugate | All | Damped | Subrot | Eigenval | None | Nothing | Exact | Diag",
       "dtypeStr": "C",
       "name": "x_vasp_incar_ALGO",
@@ -140,14 +156,6 @@
       "description": "initial electr wf. : 0-lowe 1-rand",
       "dtypeStr": "i",
       "name": "x_vasp_incar_INIWAV",
-      "shape": [],
-      "superNames": [
-        "x_vasp_incar_param"
-      ]
-    }, {
-      "description": "number of bands are optimized at the same time with RMM-DIIS (IALGO=48)",
-      "dtypeStr": "i",
-      "name": "x_vasp_incar_NSIM",
       "shape": [],
       "superNames": [
         "x_vasp_incar_param"
@@ -430,6 +438,14 @@
       "description": "parallelization over bands",
       "dtypeStr": "i",
       "name": "x_vasp_incar_NPAR",
+      "shape": [],
+      "superNames": [
+        "x_vasp_incar_param"
+      ]
+    }, {
+      "description": "number of bands are optimized at the same time with RMM-DIIS (IALGO=48)",
+      "dtypeStr": "i",
+      "name": "x_vasp_incar_NSIM",
       "shape": [],
       "superNames": [
         "x_vasp_incar_param"
