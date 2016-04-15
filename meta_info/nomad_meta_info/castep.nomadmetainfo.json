@@ -195,9 +195,7 @@
       "description": "Simulation cell angle beta",
       "dtypeStr": "f",
       "name": "castep_cell_angle_beta_optim",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position_optim"
       ]
@@ -205,9 +203,7 @@
       "description": "Simulation cell angle gamma",
       "dtypeStr": "f",
       "name": "castep_cell_angle_gamma_optim",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position_optim"
       ]  
@@ -215,9 +211,7 @@
       "description": "a unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_a",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position"
       ]
@@ -225,9 +219,7 @@
       "description": "b unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_b",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position"
       ]
@@ -235,9 +227,7 @@
       "description": "c unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_c",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position"
       ]
@@ -245,9 +235,7 @@
       "description": "a unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_a_optim",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position_optim"
       ]
@@ -255,9 +243,7 @@
       "description": "b unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_b_optim",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position_optim"
       ]
@@ -265,9 +251,7 @@
       "description": "c unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_c_optim",
-      "shape": [
-        ""
-      ],
+      "shape": [],
       "superNames": [
         "castep_section_atom_position_optim"
       ]  
@@ -293,9 +277,17 @@
       "name": "castep_store_atom_forces",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_single_configuration_calculation"  
       ]
-
+    }, {
+      "description": "Temporary storing converged atom forces",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_forces_band",
+      "shape": [],
+      "superNames": [
+        
+        "section_run"  
+      ]
     }, {
       "description": "Temporary storing stress tensor components",
       "dtypeStr": "C",
@@ -318,6 +310,19 @@
         
       ]
 
+    }, {
+      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
+      "dtypeStr": "f",
+      "name": "castep_atom_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+        
+      ]  
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
@@ -609,8 +614,7 @@
       "superNames": [
         "castep_section_geom_optimisation_iteration_0"
       ]
-    
-   
+     
     }, {
       "description": "-",
       "kindStr": "type_section",
