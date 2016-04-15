@@ -116,7 +116,7 @@
       ],
       "units": "m"
     }, {
-      "description": "Energy values of the atom-projected density of (electronic-energy) states (DOS).",
+      "description": "Array containing the set of discrete energy values for the atom-projected density of (electronic-energy) states (DOS).",
       "dtypeStr": "f",
       "name": "atom_projected_dos_energies",
       "shape": [
@@ -127,7 +127,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. The integer numbers for $m$ have a different meaning depending on atom_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. While for the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted, for the quantum number $m$, a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
       "dtypeStr": "i",
       "name": "atom_projected_dos_lm",
       "shape": [
@@ -138,7 +138,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean. The admitted values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atom_projected_dos_m_kind",
       "shape": [],
@@ -146,7 +146,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_lm",
       "shape": [
@@ -159,7 +159,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
@@ -171,7 +171,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Velocities of the nuclei.",
+      "description": "Velocities of the nuclei, as derivative with respect to time of the coordinates expressed in Cartesian coordinates.",
       "dtypeStr": "f",
       "name": "atom_velocities",
       "repeats": true,
@@ -184,7 +184,7 @@
       ],
       "units": "m/s"
     }, {
-      "description": "String describing the method used to obtain the multipoles as described in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind).",
+      "description": "String describing the method used to obtain the electrostatic multipoles (including the electric charge, dipole, etc.) for each atom. Such multipoles require a charge-density partitionig scheme, specified by the value of this metadata. Admitted values are listed in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_kind",
       "shape": [],
@@ -192,7 +192,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Tuples of $l$ and $m$ values for which the atomic multipoles are given. The integer numbers for m have a different meaning depending on atomic_multipole_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "Tuples of $l$ and $m$ values for which the atomic multipoles (including the electric charge, dipole, etc.) are given. The method used to obtain the multipoles is specified by atomic_multipole_kind. The meaning of the integer number $l$ is monopole/charge for $l=0$, dipole for $l=1$, quadrupole for $l=2@, etc. The meaning of the integer numbers $m$ is specified by atomic_multipole_m_kind.",
       "dtypeStr": "i",
       "name": "atomic_multipole_lm",
       "shape": [
@@ -203,7 +203,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "String describing what the integer numbers of $m$ in atomic_multipole_lm mean as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers $m$ in atomic_multipole_lm mean. Admitted values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_m_kind",
       "shape": [],
@@ -211,7 +211,7 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Value of the dipole (or monopole/charge for $l$ = 0) for each atom, calculated as described in atomic_multipole_kind.",
+      "description": "Value of the multipoles (including the monopole/charge for $l$ = 0, the dipole for $l$ = 1, etc.) for each atom, calculated as described in atomic_multipole_kind.",
       "dtypeStr": "f",
       "name": "atomic_multipole_value",
       "shape": [
@@ -222,13 +222,13 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "Energies of the $k$ bands (electronic band structure).",
+      "description": "Values of the energies of the $k$ bands in the electronic band structure. This is a fourth-order tensor, with one dimension used for the spin channels, one for the $k$ point segments (e.g., Gamma-L, the labels are specified in band_segm_labels), one for the $k$ points for each segment, and one for the eigenvalue sequence",
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
         "number_of_k_point_segments",
         "max_spin_channel",
-        "n_k_points",
+        "n_k_points_per_segment",
         "n_eigen_values"
       ],
       "superNames": [
@@ -248,20 +248,20 @@
         "section_k_band"
       ]
     }, {
-      "description": "Occupation of the $k$-point along the band.",
+      "description": "Occupation of the $k$-points along the band. The size of the dimensions of this fourth-order tensor are the same as for the tensor in band_energies",
       "dtypeStr": "f",
       "name": "band_occupation",
       "shape": [
         "number_of_k_point_segments",
         "max_spin_channel",
-        "n_k_points",
+        "n_k_points_per_segment",
         "n_eigen_values"
       ],
       "superNames": [
         "section_k_band"
       ]
     }, {
-      "description": "Start and end labels of the points in the one-dimensional pathway sampled in the $k$-space.",
+      "description": "Start and end labels of the points in the segments (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L, etc. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
       "dtypeStr": "C",
       "name": "band_segm_labels",
       "shape": [
@@ -272,7 +272,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Fractional coordinates of the start and end point (i.e. in the basis of the reciprocal lattice vectors) of the segments sampled in the $k$-space.",
+      "description": "Fractional coordinates of the start and end point (i.e. in the basis of the reciprocal lattice vectors) of the segments sampled in the $k$-space. The conventional symbols (e.g., e.g., Gamma, K, L, etc.) of the same points are given in band_segm_labels",
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [
@@ -284,7 +284,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Azimuthal quantum number ($l$) value (of the angular part given by the spherical harmonic $Y_{lm}$) of the basis function.",
+      "description": "Azimuthal quantum number ($l$) values (of the angular part given by the spherical harmonic $Y_{lm}$) of the atom-centered basis function defined in the current section_basis_set_atom_centered.",
       "dtypeStr": "i",
       "name": "basis_set_atom_centered_ls",
       "shape": [
@@ -294,7 +294,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Radial function of the different basis function kinds, the 5 values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\\frac{d}{dr}(f(r)*r)$ and are given by default on an equispaced grid from 0 to 4 nm.",
+      "description": "Values of the radial function of the different basis function kinds. The values are numerically tabulated on a default equispaced grid from 0 to 4 nm. The 5 tabulated values are $r$, $f(r)$, $f'(r)$, $f(r)*r$, $\\frac{d}{dr}(f(r)*r)$.",
       "dtypeStr": "f",
       "name": "basis_set_atom_centered_radial_functions",
       "shape": [
@@ -306,7 +306,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code dependent but explicative base name of the basis function, not unique. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code dependent, but explicative, base name of the basis function, not unique. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_short_name",
       "shape": [],
@@ -330,7 +330,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "A cell_associated basis set type. This string should appear as defined in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-kind).",
+      "description": "A string defining the type of the cell-associated basis set (i.e., non atom centered, like planewaves). Admitted values are listed in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-kind).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_kind",
       "repeat": false,
@@ -339,7 +339,7 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "A descriptive name identifying the basis set. This string should appear as defined in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-name).",
+      "description": "A descriptive name identifying the cell-associated basis set (i.e., non atom centered, like planewaves). Admitted values are listed in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-name).",
       "dtypeStr": "C",
       "name": "basis_set_cell_associated_name",
       "repeat": false,
@@ -348,14 +348,14 @@
         "section_basis_set_cell_associated"
       ]
     }, {
-      "description": "Description of the building blocs of a basis set.",
+      "description": "Description of the building blocks of a basis set.",
       "kindStr": "type_abstract_document_content",
       "name": "basis_set_description",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "String describing the kind of basis set (its use, for example wavefunction). The values are described in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
+      "description": "String describing the kind of the basis set, i.e., its purpose, e.g., representation of a wavefunction. Admitted values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
       "dtypeStr": "C",
       "name": "basis_set_kind",
       "shape": [],
@@ -363,7 +363,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "String identifying the basis set in an unique way. The values are described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
+      "description": "String identifying the basis set in an unique way. The rules for building this string are specified in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set_name",
       "shape": [],
@@ -371,7 +371,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Spherical cutoff  in reciprocal space for a planewave basis set. It is the energy of the highest planewave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$) kept into the basis. Note that normally the basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
+      "description": "Spherical cutoff  in reciprocal space for a planewave basis set. It is the energy of the highest planewave ($\\frac{\\hbar^2|k+G|^2}{2m_e}$) kept into the basis. Note that normally this basis set is used for the wavefunctions, and the density would have 4 times the cutoff, but this actually depends on the use of the basis set by the method.",
       "dtypeStr": "f",
       "name": "basis_set_plan_wave_cutoff",
       "shape": [],
@@ -380,7 +380,7 @@
       ],
       "units": "J"
     }, {
-      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It should refer (and be the same) to some basis_set_name which is described in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
+      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It must match one of the strings given in any of basis_set_name.",
       "dtypeStr": "C",
       "name": "basis_set",
       "shape": [],
@@ -447,7 +447,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "Properties actually defining the current configuration.",
+      "description": "Properties defining the current configuration.",
       "kindStr": "type_abstract_document_content",
       "name": "configuration_core",
       "repeats": false,
@@ -455,7 +455,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Which of the lattice vectors use periodic boundary conditions.Note for the parser developers: This value is not expected to be given for each section_single_configuration_calculation. It is assumed to be valid from the section_single_configuration_calculation where it is defined for all subsequent values section_single_configuration_calculation in section_run, unitl redefined.",
+      "description": "Which of the lattice vectors use periodic boundary conditions.Note for the parser developers: This value is not expected to be given for each section_single_configuration_calculation. It is assumed to be valid from the section_single_configuration_calculation where it is defined for all subsequent section_single_configuration_calculation in section_run, until redefined.",
       "dtypeStr": "b",
       "name": "configuration_periodic_dimensions",
       "repeats": true,
@@ -473,7 +473,7 @@
       "shape": [],
       "superNames": []
     }, {
-      "description": "Energies of the Density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies.",
+      "description": "Array containing the set of discrete energy values for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
       "dtypeStr": "f",
       "name": "dos_energies",
       "shape": [
@@ -484,7 +484,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Values (number of states for a given energy, given in dos_energies) of Density of (electronic-energy) states (DOS).",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of Density of (electronic-energy) states (DOS).",
       "dtypeStr": "f",
       "name": "dos_values",
       "shape": [
@@ -558,7 +558,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Correlation (C) energy using XC_functional.",
+      "description": "Correlation (C) energy, using XC_functional.",
       "dtypeStr": "f",
       "name": "energy_C",
       "repeats": false,
@@ -1932,7 +1932,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section describing multipoles (charges, dipole,...) for each atom.",
+      "description": "Section describing multipoles (charges, dipoles,...) for each atom.",
       "kindStr": "type_section",
       "name": "section_atomic_multipoles",
       "superNames": [
@@ -1960,7 +1960,7 @@
         "basis_set_description"
       ]
     }, {
-      "description": "Section containing references to all basis sets used for a single configuration calculation. More than one basis set instance per single configuration calculation may be needed, for example, for codes that implement adaptive basis sets along the scf convergence (see, .e.g., exciting). In such cases, there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc.",
+      "description": "Section containing references to all basis sets used for a single configuration calculation. More than one basis set instance per single configuration calculation may be needed, for example, for codes that implement adaptive basis sets along the scf convergence (e.g., exciting). In such cases, there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc.",
       "kindStr": "type_section",
       "name": "section_basis_set",
       "superNames": [
@@ -2367,7 +2367,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Energies of the species-projected density of states (DOS).",
+      "description": "Array containing the set of discrete energy values for the species-projected density of states (DOS).",
       "dtypeStr": "f",
       "name": "species_projected_dos_energies",
       "shape": [
@@ -2378,7 +2378,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Tuples of $l$ and $m$ values for which species_projected_dos_values_lm are given. The integer numbers for $m$ have a different meaning depending on species_projected_dos_m_kind and this is described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "Tuples of $l$ and $m$ values for which species_projected_dos_values_lm are given. While for the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted, for the quantum number $m$, a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
       "dtypeStr": "i",
       "name": "species_projected_dos_lm",
       "shape": [
@@ -2389,7 +2389,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "String describing what the integer numbers of $m$ in species_projected_dos_lm mean, as described in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers $m$ in species_projected_dos_lm mean. Admitted values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "species_projected_dos_m_kind",
       "shape": [],
@@ -2407,7 +2407,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, divided into contributions from each $l,m$ channel. Here, there are as many species-projected DOS as the number_of_species, the list of labels of the species is in species_projected_dos_species_label.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in species_projected_dos_energies) of species-projected density of states (DOS) values, divided into contributions from each $l,m$ channel. Here, there are as many species-projected DOS as the number_of_species, the list of labels of the species is in species_projected_dos_species_label.",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_lm",
       "shape": [
@@ -2420,7 +2420,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, given in species_projected_dos_energies) of species-projected density of states (DOS) values, summed up over all $l$. Here, there are as many species-projected DOS as the number_of_species, the list of labels of the species is in species_projected_dos_species_label.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in species_projected_dos_energies) of species-projected density of states (DOS) values, summed up over all $l$. Here, there are as many species-projected DOS as the number_of_species, the list of labels of the species is in species_projected_dos_species_label.",
       "dtypeStr": "f",
       "name": "species_projected_dos_values_total",
       "shape": [
