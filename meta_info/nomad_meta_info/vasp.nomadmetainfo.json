@@ -145,6 +145,14 @@
         "x_vasp_incar_param"
       ]
     }, {
+      "description": "number of bands are optimized at the same time with RMM-DIIS (IALGO=48)",
+      "dtypeStr": "i",
+      "name": "x_vasp_incar_NSIM",
+      "shape": [],
+      "superNames": [
+        "x_vasp_incar_param"
+      ]
+    }, {
       "description": "calculate stress and what to relax",
       "dtypeStr": "i",
       "name": "x_vasp_incar_ISIF",
