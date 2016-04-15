@@ -149,6 +149,7 @@
       ],
       "superNames": [
         "section_system_description"
+        
       ]
     }, {
       "description": "Simulation cell angle alpha",
@@ -181,6 +182,36 @@
         "castep_section_atom_position"
       ]
     }, {
+      "description": "Simulation cell angle alpha",
+      "dtypeStr": "f",
+      "name": "castep_cell_angle_alpha_optim",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position_optim"
+      ]
+    }, {
+      "description": "Simulation cell angle beta",
+      "dtypeStr": "f",
+      "name": "castep_cell_angle_beta_optim",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position_optim"
+      ]
+    }, {
+      "description": "Simulation cell angle gamma",
+      "dtypeStr": "f",
+      "name": "castep_cell_angle_gamma_optim",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position_optim"
+      ]  
+    }, {
       "description": "a unit cell edge length",
       "dtypeStr": "f",
       "name": "castep_cell_length_a",
@@ -211,12 +242,50 @@
         "castep_section_atom_position"
       ]
     }, {
+      "description": "a unit cell edge length",
+      "dtypeStr": "f",
+      "name": "castep_cell_length_a_optim",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position_optim"
+      ]
+    }, {
+      "description": "b unit cell edge length",
+      "dtypeStr": "f",
+      "name": "castep_cell_length_b_optim",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position_optim"
+      ]
+    }, {
+      "description": "c unit cell edge length",
+      "dtypeStr": "f",
+      "name": "castep_cell_length_c_optim",
+      "shape": [
+        ""
+      ],
+      "superNames": [
+        "castep_section_atom_position_optim"
+      ]  
+    }, {
       "description": "Temporay storage for cell vectors",
       "dtypeStr": "C",
       "name": "castep_cell_vector",
       "shape": [],
       "superNames": [
         "castep_section_cell"
+      ]
+    }, {
+      "description": "Temporay storage for cell vectors",
+      "dtypeStr": "C",
+      "name": "castep_cell_vector_optim",
+      "shape": [],
+      "superNames": [
+        "castep_section_cell_optim"
       ]
     }, {
       "description": "Temporary storing converged atom forces",
@@ -235,6 +304,20 @@
       "superNames": [
         "castep_section_stress_tensor"
       ]
+     }, {
+      "description": "Storing atomic optimised positions in fractional coordinates",
+      "dtypeStr": "f",
+      "name": "castep_optimised_atom_position",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_system_description"
+        
+      ]
+
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
@@ -243,6 +326,30 @@
       "superNames": [
         "section_system_description"
       ]
+    }, {
+      "description": "Temporary storing atomic positions",
+      "dtypeStr": "C",
+      "name": "castep_store_optimised_atom_position",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]  
+    }, {
+      "description": "Temporary storing atomic positions",
+      "dtypeStr": "C",
+      "name": "castep_store_optimised_atom_label",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]   
+    }, {
+      "description": "Temporary storing atomic positions",
+      "dtypeStr": "C",
+      "name": "castep_optimised_atom_label",
+      "shape": "number_of_atoms",
+      "superNames": [
+        "section_system_description"
+      ]     
     }, {
       "description": "Temporary storing atom labels",
       "dtypeStr": "C",
@@ -307,10 +414,7 @@
       "superNames": [
         "section_basis_set_cell_associated"
       ]
-    },
-
-
-        {
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "castep_store_k_path",
@@ -393,6 +497,14 @@
         "section_run"
       ]
     }, {
+      "description": "Total electronic energy that includes dispersion energy computed with Disp_method_name not corrected for finite basis-set",
+      "dtypeStr": "f",
+      "name": "castep_total_dispersion_corrected_energy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
       "dtypeStr": "f",
       "name": "energy_total_scf_iteration_list",
@@ -401,11 +513,146 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
+      "dtypeStr": "f",
+      "name": "castep_energy_total_scf_iteration_0_list",
+      "shape": [-1],
+      "superNames": [
+        "castep_section_SCF_iteration_0"
+      ]  
+    }, {
+      "description": "Name type",
+      "dtypeStr": "C",
+      "name": "Disp_method_name",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ] 
+    }, {
+      "description": "Parameter for dispersion method TS",
+      "dtypeStr": "f",
+      "name": "Parameter_sR",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ] 
+    }, {
+      "description": "Parameter for dispersion method TS",
+      "dtypeStr": "f",
+      "name": "Parameter_d",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ]
+    }, {
+      "description": "Parameter for dispersion method OBS",
+      "dtypeStr": "f",
+      "name": "Parameter_LAMBDA",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ] 
+    }, {
+      "description": "Parameter for dispersion method OBS",
+      "dtypeStr": "f",
+      "name": "Parameter_n",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ]
+    }, {
+      "description": "Parameter for dispersion method G06",
+      "dtypeStr": "f",
+      "name": "Parameter_s6",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ] 
+    }, {
+      "description": "Parameter for dispersion method G06",
+      "dtypeStr": "f",
+      "name": "Parameter_d",
+      "shape": [],
+      "superNames": [
+        "castep_section_van_der_Waals_parameters"
+      ]                          
+
+    }, {
+      "description": "Determines optimisation method used",
+      "dtypeStr": "C",
+      "name": "castep_geometry_optim_method",
+      "shape": [],
+      "superNames": [
+        "castep_section_geom_optimisation_method"
+      ]
+      }, {
+      "description": "CASTEP_geom_converged",
+      "dtypeStr": "C",
+      "name": "CASTEP_geom_converged",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]     
+     }, {
+      "description": "cutoff at iteration 0 of geometry optimisation",
+      "dtypeStr": "C",
+      "name": "castep_basis_set_plan_wave_cutoff_iteration_0",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_SCF_iteration_0",
+      "superNames": [
+        "castep_section_geom_optimisation_iteration_0"
+      ]
+    
+   
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_cell_optim",
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_atom_position_optim",
+      "superNames": [
+        "section_system_description"
+      ]    
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_geom_optimisation_iteration_0",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_geom_optimisation_method",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_van_der_Waals_parameters",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_atom_position",
       "superNames": [
         "section_system_description"
+        
       ]
     }, {
       "description": "-",
@@ -413,6 +660,7 @@
       "name": "castep_section_cell",
       "superNames": [
         "section_system_description"
+        
       ]
     }, {
       "description": "-",
@@ -426,7 +674,7 @@
       "kindStr": "type_section",
       "name": "castep_section_time",
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_run"
       ]
     }, {
       "description": "-",
