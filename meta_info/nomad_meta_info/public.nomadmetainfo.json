@@ -94,9 +94,9 @@
       ],
       "units": "N"
     }, {
-      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic species, possibly followed by a number. The same atomic species can be labelled with more than one atom_label in order to distinguish, e.g., atoms of the same species assigned to different atom-centered basis sets or pseudopotentials, or simply atoms in different locations in the structure (e.g., bulk and surface). These labels can also be used for *particles* that do not correspond to physical atoms (e.g., ghost atoms in some codes using atom-centered basis sets). This metadata defines a configuration and is therefore required.",
+      "description": "Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic species, possibly followed by a number. The same atomic species can be labelled with more than one atom_labels in order to distinguish, e.g., atoms of the same species assigned to different atom-centered basis sets or pseudopotentials, or simply atoms in different locations in the structure (e.g., bulk and surface). These labels can also be used for *particles* that do not correspond to physical atoms (e.g., ghost atoms in some codes using atom-centered basis sets). This metadata defines a configuration and is therefore required.",
       "dtypeStr": "C",
-      "name": "atom_label",
+      "name": "atom_labels",
       "shape": [
         "number_of_atoms"
       ],
@@ -106,7 +106,7 @@
     }, {
       "description": "Positions of the atoms, in Cartesian coordinates. This metadata defines a configuration and is therefore required.",
       "dtypeStr": "f",
-      "name": "atom_position",
+      "name": "atom_positions",
       "shape": [
         "number_of_atoms",
         3
@@ -146,7 +146,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_labels, see atom_labels for what it is meant by *atom label*.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_lm",
       "shape": [
@@ -159,7 +159,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_label, see atom_label fro what it is meant by *atom label*.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_labels, see atom_labels for what it is meant by *atom label*.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
@@ -171,7 +171,7 @@
         "section_atom_projected_dos"
       ]
     }, {
-      "description": "Velocities of the nuclei, as derivative with respect to time of the coordinates expressed in Cartesian coordinates.",
+      "description": "Velocities of the nuclei, defined as the change in Cartesian coordinates of the nuclei with respect to time.",
       "dtypeStr": "f",
       "name": "atom_velocities",
       "repeats": true,
@@ -213,7 +213,7 @@
     }, {
       "description": "Value of the multipoles (including the monopole/charge for $l$ = 0, the dipole for $l$ = 1, etc.) for each atom, calculated as described in atomic_multipole_kind.",
       "dtypeStr": "f",
-      "name": "atomic_multipole_value",
+      "name": "atomic_multipole_values",
       "shape": [
         "number_of_lm_atomic_multipoles",
         "number_of_atoms"
@@ -261,7 +261,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Start and end labels of the points in the segments (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L, etc. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
+      "description": "Start and end labels of the points in the segments (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
       "dtypeStr": "C",
       "name": "band_segm_labels",
       "shape": [
@@ -272,7 +272,7 @@
         "section_k_band"
       ]
     }, {
-      "description": "Fractional coordinates of the start and end point (i.e. in the basis of the reciprocal lattice vectors) of the segments sampled in the $k$-space. The conventional symbols (e.g., e.g., Gamma, K, L, etc.) of the same points are given in band_segm_labels",
+      "description": "Fractional coordinates of the start and end point (in the basis of the reciprocal lattice vectors) of the segments sampled in the reciprocal space. The conventional symbols (e.g., Gamma, K, L) of the same points are given in band_segm_labels",
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [
@@ -314,7 +314,7 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "Code-specific, explicative and unique name of the basis set. This string starts with basis_set_atom_centered_short_name. If the basis set defined in this section_basis_set_atom_centered is not identical to the default definition (stored in a database) of the basis set with the same name stored in a database, then the string is extended by 10 identificative characters as explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name). The reason for this procedure is that often atom-centered basis sets are obtained by fine tuning basis sets provided by the code developers or other sources. Each basis sets, which has normally a standard name, often reported in publications, has also several parameters that can be tuned. This metadata tries to keep track of the original basis set and its modifications. This string here defined should not contain the *atom kind* for which this basis set is intended for, in order to simplify the use of a single name for multiple *atom kinds* (see atom_label for the actual meaning of *atom kind*).",
+      "description": "Code-specific, explicative and unique name of the basis set. This string starts with basis_set_atom_centered_short_name. If the basis set defined in this section_basis_set_atom_centered is not identical to the default definition (stored in a database) of the basis set with the same name stored in a database, then the string is extended by 10 identificative characters as explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name). The reason for this procedure is that often atom-centered basis sets are obtained by fine tuning basis sets provided by the code developers or other sources. Each basis sets, which has normally a standard name, often reported in publications, has also several parameters that can be tuned. This metadata tries to keep track of the original basis set and its modifications. This string here defined should not contain the *atom kind* for which this basis set is intended for, in order to simplify the use of a single name for multiple *atom kinds* (see atom_labels for the actual meaning of *atom kind*).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_unique_name",
       "shape": [],
@@ -389,7 +389,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For scf ab initio calculation, for example, this is composed of XC_method and basis_set and a unique sha, see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method which should be referenced through section_method_to_method_refs. For self-consistent field (SCF) ab initio calculation, for example, this is composed of XC_method and basis_set and a unique SHA checksum, see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -398,7 +398,7 @@
         "section_method"
       ]
     }, {
-      "description": "Kind of method in calculation_method_current: absolute or perturbative.",
+      "description": "Kind of method in calculation_method_current. Accepted values are: absolute, perturbative.",
       "dtypeStr": "C",
       "name": "calculation_method_kind",
       "repeats": false,
@@ -408,7 +408,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total, If the present calculation_method_current is a perturnative method Y that uses a method X as starting point, this string is automatically created as X@Y, where X is taken from calculation_method_current and Y from method_to_method_ref. In order to activate this, method_to_method_kind must have the value starting\\_point.",
+      "description": "String that uniquely represents the method used to calculate energy_total, If the present calculation_method_current is a perturnative method Y that uses a method X as starting point, this string is automatically created as X@Y, where X is taken from calculation_method_current and Y from method_to_method_ref. In order to activate this, method_to_method_kind must have the value starting\\_point (see the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind)).",
       "dtypeStr": "C",
       "name": "calculation_method",
       "repeats": false,
@@ -426,7 +426,7 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
-      "description": "String defining the kind of relationship that the referenced section_single_configuration_calculation has with the present section_single_configuration_calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The referenced calculation is identified via calculation_to_calculation_ref (typically used for a calculation in the same section_run) or calculation_to_calculation_external_url.",
+      "description": "String defining the kind of relationship that the referenced section_single_configuration_calculation has with the present section_single_configuration_calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The referenced calculation is identified via calculation_to_calculation_ref (typically used for a calculation in the same section_run) or calculation_to_calculation_external_url.",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_kind",
       "repeats": false,
@@ -537,7 +537,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Electronic kinetic energy as defined in XC_method during the scf iterations.",
+      "description": "Electronic kinetic energy as defined in XC_method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "electronic_kinetic_energy_scf_iteration",
       "repeats": false,
@@ -569,7 +569,7 @@
       ],
       "units": "J"
     }, {
-      "description": "At each scf iteration, change of total energy with respect to the previous scf iteration.",
+      "description": "At each self-consistent field (SCF) iteration, change of total energy with respect to the previous SCF iteration.",
       "dtypeStr": "f",
       "name": "energy_change_scf_iteration",
       "repeats": false,
@@ -581,7 +581,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Type of the shifted total energy, created to be comparable among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Type of the shifted total energy, created to be comparable among different codes and numerical settings. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "dtypeStr": "C",
       "name": "energy_comparable_kind",
       "shape": [],
@@ -589,7 +589,7 @@
         "section_energy_comparable"
       ]
     }, {
-      "description": "Value of the shifted total energy, created to be comparable among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Value of the shifted total energy, created to be comparable among different codes and numerical settings. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "dtypeStr": "f",
       "name": "energy_comparable_value",
       "shape": [],
@@ -615,7 +615,7 @@
         "energy_value"
       ]
     }, {
-      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Values during the scf iteration. Defined consistently with XC_method.",
+      "description": "Entropy correction, to have a potential energy that compensates the changes in occupation, so that forces at finite T do not need to keep the change of occupation in account. Values during the self-consistent field (SCF) iteration. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "energy_correction_entropy_scf_iteration",
       "repeats": false,
@@ -637,7 +637,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy during the scf iterations. Defined consistently with XC_method.",
+      "description": "Correction to the density-density electrostatic energy in the sum of eigenvalues (that uses the mixed density on one side), and the fully consistend density-density electrostatic energy during the self-consistent field (SCF) iterations. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "energy_correction_hartree_scf_iteration",
       "repeats": false,
@@ -659,7 +659,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Energy calculated with calculation_method_current. energy_current is equal to energy_total for non-perturbative methods. For perturbative methods, energy_current is equal to the correction: energy_total minus energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point. See also [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current).",
+      "description": "Value of the energy calculated with calculation_method_current. energy_current is equal to energy_total for non-perturbative methods. For perturbative methods, energy_current is equal to the correction: energy_total minus energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point (see the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind)). See also [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current).",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -671,7 +671,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Total electrostatic energy (nuclei + electrons) during the scf itrations.",
+      "description": "Total electrostatic energy (nuclei + electrons) during the self-consistent field (SCF) itrations.",
       "dtypeStr": "f",
       "name": "energy_electrostatic_scf_iteration",
       "repeats": false,
@@ -693,7 +693,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method per atom during the scf iterations.",
+      "description": "Free energy (whose minimum gives a density with smeared occupation) calculated with XC_method per atom during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_free_per_atom_scf_iteration",
       "repeats": false,
@@ -716,7 +716,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method during the scf iterations.",
+      "description": "Free energy (electronic + ions) (whose minimum gives the smeared occupation density) calculated with the method described in XC_method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_free_scf_iteration",
       "repeats": false,
@@ -738,7 +738,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Error in the hartree (electrostatic) potential energy during the scf iterations. Defined consistently with XC_method.",
+      "description": "Error in the hartree (electrostatic) potential energy during the self-consistent field (SCF) iterations. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "energy_hartree_error_scf_iteration",
       "repeats": false,
@@ -773,7 +773,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged exact exchange energy (not scaled). Defined consistently with XC_method.",
+      "description": "Converged exact-exchange (hartree-fock) energy. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "energy_hartree_fock_X",
       "repeats": false,
@@ -783,7 +783,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Energy of the method calculation_method_current. Depending on calculation_method_kind it might be a total energy or only a correction.",
+      "description": "Value of the energy of the method calculation_method_current. Depending on calculation_method_kind it might be a total energy or only a correction.",
       "dtypeStr": "f",
       "name": "energy_method_current",
       "repeats": false,
@@ -795,7 +795,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Energy per atom defined as the sum of the eigenvalues of the hamiltonian matrix defined by XC_method, during the scf iterations.",
+      "description": "Value of the energy per atom defined as the sum of the eigenvalues of the hamiltonian matrix defined by XC_method, during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_sum_eigenvalues_per_atom_scf_iteration",
       "repeats": false,
@@ -807,7 +807,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Energy per atom defined as the sum of the eigenvalues of the hamiltonian matrix defined by XC_method.",
+      "description": "Value of the energy per atom defined as the sum of the eigenvalues of the hamiltonian matrix defined by XC_method.",
       "dtypeStr": "f",
       "name": "energy_sum_eigenvalues_per_atom",
       "repeats": false,
@@ -818,7 +818,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method, during the scf iterations.",
+      "description": "Sum of the eigenvalues of the hamiltonian matrix defined by XC_method, during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_sum_eigenvalues_scf_iteration",
       "repeats": false,
@@ -840,7 +840,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy using XC_method per atom, extapolated to $T=0$, based on a free electron gas argument.",
+      "description": "Value of the total energy per atom, calculated using XC_method, extapolated to $T=0$, based on a free electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_T0_per_atom",
       "repeats": false,
@@ -867,7 +867,7 @@
         "energy_component"
       ]
     }, {
-      "description": "Total electronic energy calculated with XC_method during the scf iterations.",
+      "description": "Total electronic energy calculated with XC_method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_total_scf_iteration",
       "repeats": false,
@@ -878,7 +878,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy using XC_method per atom extapolated to $T=0$, based on a free electron gas argument, during the scf iterations.",
+      "description": "Total energy using XC_method per atom extapolated to $T=0$, based on a free electron gas argument, during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_total_T0_per_atom_scf_iteration",
       "repeats": false,
@@ -890,7 +890,7 @@
       "units": "J"
     }, {
       "derived": true,
-      "description": "Total energy using XC_method per atom extapolated to $T=0$, based on a free electron gas argument.",
+      "description": "Value of the total energy, calculated using XC_method per atom extapolated to $T=0$, based on a free electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_total_T0_per_atom",
       "repeats": false,
@@ -901,7 +901,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (or equivalently free energy) calculated with XC_method extrapolated to $T=0$, based on a free electron gas argument, during the scf iterations.",
+      "description": "Value of the  total energy (or equivalently free energy), calculated with XC_method extrapolated to $T=0$, based on a free electron gas argument, during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_total_T0_scf_iteration",
       "repeats": false,
@@ -912,7 +912,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (or equivalently free energy), nuclei + electrons, calculated with the method described in XC_method and extrapolated to $T=0$, based on a free electron gas argument.",
+      "description": "Value of the total energy (or equivalently free energy), nuclei + electrons, calculated with the method described in XC_method and extrapolated to $T=0$, based on a free electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_total_T0",
       "repeats": false,
@@ -923,7 +923,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total energy (nuclei + electrons) calculated with the method described in calculation_method.",
+      "description": "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method.",
       "dtypeStr": "f",
       "name": "energy_total",
       "repeats": false,
@@ -984,7 +984,7 @@
       "shape": [],
       "superNames": []
     }, {
-      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics, is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
+      "description": "Method used to compute van der Waals energy stored in energy_van_der_Waals_value. This metadata is used when more than one van der Waals method is applied in the same *single configuration calculation* (see section_single_configuration_calculation). The main van der Waals method (the one consistent with energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics), is defined in settings_van_der_Waals.",
       "dtypeStr": "C",
       "name": "energy_van_der_Waals_kind",
       "repeats": false,
@@ -993,7 +993,7 @@
         "section_energy_van_der_Waals"
       ]
     }, {
-      "description": "Value of van der Waals energy, calculated with the method defined in energy_van_der_Waals_kind. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
+      "description": "Value of van der Waals energy as calculated with the method defined in energy_van_der_Waals_kind. This metadata is used when more than one van der Waals method is applied in the same *single configuration calculation* (see section_single_configuration_calculation). The value of the van der Waals energy consistent with energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics, is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals_value",
       "repeats": false,
@@ -1004,7 +1004,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_method, and used in energy_current. This is the main van der Waals method (consistent with, e.g., forces used for relaxation or dynamics). Alternative methods are listed in section_energy_van_der_Waals.",
+      "description": "Converged van der Waals energy calculated using the method described in van_der_Waals_method, and used in energy_current. This is the van der Waals method consistent with, e.g., forces used for relaxation or dynamics. Alternative methods are listed in section_energy_van_der_Waals.",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals",
       "repeats": false,
@@ -1024,7 +1024,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of the XC_functional (integral of v_xc*electron_density), i.e., the component of xc that is in the sum of the eigenvalues. Typically DFT only. Value during the SCF cycle (not converged).",
+      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of the XC_functional, i.e., the component of XC that is in the sum of the eigenvalues. Typically DFT only. Values obtained during the self-consistent field (SCF) cycles (i.e., not the converged value, the latter being stored in energy_XC_potential).",
       "dtypeStr": "f",
       "name": "energy_XC_potential_scf_iteration",
       "repeats": false,
@@ -1046,7 +1046,7 @@
       ],
       "units": "J"
     }, {
-      "description": "XC energy (integral of e_xc in the DFT case), during the scf iterations, using XC_method.",
+      "description": "Exchange-correlation (XC) energy during the self-consistent field (SCF) iterations, using XC_method.",
       "dtypeStr": "f",
       "name": "energy_XC_scf_iteration",
       "repeats": false,
@@ -1124,7 +1124,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Type of continuation that has been performed from the previous sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), upon restart. Allowed values are: pos (position of atom and cell only), pos_vel (also the velocities are restarted), all (everything is restarted, including thermostats,etc.).",
+      "description": "Type of continuation that has been performed from the previous sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), upon restart. Allowed values are: pos (position of atom and cell only), pos_vel (also the velocities are restarted), all (everything is restarted, including, e.g., thermostats).",
       "dtypeStr": "C",
       "name": "frame_sequence_continuation_kind",
       "referencedSections": [
@@ -1166,7 +1166,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to a molecular dynamics trajectory, or geometry optimization, etc. The full information for each frame is stored in a section_single_configuration_calculation and this metadata establishes the link for each frame.",
+      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in a section_single_configuration_calculation and this metadata establishes the link for each frame.",
       "dtypeStr": "r",
       "name": "frame_sequence_local_frames_ref",
       "referencedSections": [
@@ -1309,7 +1309,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Maximum total-energy change between two geometry optimization steps, as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the total-energy change between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
+      "description": "Threshold for the energy_total change between two geometry optimization steps, as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the energy_total change between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
       "dtypeStr": "f",
       "name": "geometry_optimization_energy_change",
       "shape": [],
@@ -1318,7 +1318,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Maximum displacement of the nuclei between two geometry optimization steps as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum among the displacements of the nuclei between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
+      "description": "Threshold for the displacement of the nuclei between two geometry optimization steps as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum among the displacements of the nuclei between two geometry optimization steps is below the threshold (possibly in combination with other criteria)",
       "dtypeStr": "f",
       "name": "geometry_optimization_geometry_change",
       "shape": [],
@@ -1335,7 +1335,7 @@
         "settings_geometry_optimization"
       ]
     }, {
-      "description": "Maximum force modulus as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum modulus of the force on one atom is below this threshold (possibly in combination with other criteria)",
+      "description": "Threshold for the force modulus as convergence criterion of the geometry_optimization_method. A geometry optimization is considered converged when the maximum of the moduli of the force on each of the atoms is below this threshold (possibly in combination with other criteria)",
       "dtypeStr": "f",
       "name": "geometry_optimization_threshold_force",
       "shape": [],
@@ -1369,7 +1369,7 @@
         "section_basis_set"
       ]
     }, {
-      "description": "A debugging message of the computational program, associated with a single configuration calculation.",
+      "description": "A debugging message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "message_debug_evaluation",
       "superNames": [
@@ -1391,7 +1391,7 @@
       "name": "message_debug",
       "superNames": []
     }, {
-      "description": "An error message of the computational program, associated with a single configuration calculation.",
+      "description": "An error message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "message_error_evaluation",
       "superNames": [
@@ -1415,7 +1415,7 @@
         "message_warning"
       ]
     }, {
-      "description": "An information message of the computational program, associated with a a single configuration calculation.",
+      "description": "An information message of the computational program, associated with a a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "message_info_evaluation",
       "superNames": [
@@ -1471,7 +1471,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "String used to identify the atoms of this kind. This should correspond to the atom_label of the configuration. It is possible for one atom kind to have multiple labels (in order to allow two atoms of the same kind to have two differently defined sets of atom-centered basis functions or two different pseudopotentials). Atom kind is typically the symbol of the atomic species but it can be also a ghost or pseudoatom.",
+      "description": "String used to identify the atoms of this kind. This should correspond to the atom_labels of the configuration. It is possible for one atom kind to have multiple labels (in order to allow two atoms of the same kind to have two differently defined sets of atom-centered basis functions or two different pseudopotentials). Atom kind is typically the symbol of the atomic species but it can be also a ghost or pseudoatom.",
       "dtypeStr": "C",
       "name": "method_atom_kind_label",
       "repeats": true,
@@ -1480,7 +1480,7 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "Reference to the atom-centered basis functions that are used for the atoms of this kind (see atom_label for the actual meaning of *atom kind*).",
+      "description": "Reference to the atom-centered basis set for the atoms of the kind described in this section_method_atom_kind (see atom_labels for the actual meaning of *atom kind*), used to represent the wavefunctions.",
       "dtypeStr": "r",
       "name": "method_atom_kind_wavefunctions_basis_set_ref",
       "referencedSections": [
@@ -1500,7 +1500,7 @@
         "section_method_to_method_refs"
       ]
     }, {
-      "description": "String defining the kind of relationship that the referenced section_method has with the present section_method. Valid values are described in the [method\\_to\\_method\\_kind page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
+      "description": "String defining the kind of relationship that the referenced section_method has with the present section_method. Valid values are described in the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
       "dtypeStr": "C",
       "name": "method_to_method_kind",
       "shape": [],
@@ -1514,17 +1514,6 @@
       "shape": [],
       "superNames": [
         "section_method_to_method_refs"
-      ]
-    }, {
-      "description": "Reference to the topology and force fields to be used.",
-      "dtypeStr": "r",
-      "name": "method_to_topology_ref",
-      "referencedSections": [
-        "section_topology"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_method"
       ]
     }, {
       "description": "Number of energy values for the atom-projected density of states (DOS).",
@@ -1689,7 +1678,7 @@
         "accessory_info"
       ]
     }, {
-      "description": "A debugging message of the parsing program, associated with a single configuration calculation.",
+      "description": "A debugging message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "parsing_message_debug_evaluation",
       "superNames": [
@@ -1719,7 +1708,7 @@
         "parsing_message_error"
       ]
     }, {
-      "description": "An error message of the parsing program, associated with a single configuration calculation.",
+      "description": "An error message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "parsing_message_error_single_configuration",
       "superNames": [
@@ -1743,7 +1732,7 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "An information message of the parsing program, associated with a a single configuration calculation.",
+      "description": "An information message of the parsing program, associated with a a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "parsing_message_info_single_configuration",
       "superNames": [
@@ -1783,7 +1772,7 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "Post Hartree-Fock method in standarized form. This is not fully unique. Some of the methods are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q)...; MP2, MP3, MP4,...; GW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '', then no post hartree_fock method has been used.",
+      "description": "Non-unique string identifying the used Post Hartree-Fock method. It is not unique in the sense that two calculations with the same post_hartree_fock_method string may have not been performed with exactly the same method. A standardized, unique identifier for Post Hartree-Fock method is still not available in this verison of Meta Info. The allowed strings are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q); MP2, MP3, MP4; G0W0, scGW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '', then no post hartree_fock method has been used.",
       "dtypeStr": "C",
       "name": "post_hartree_fock_method",
       "repeats": false,
@@ -1872,7 +1861,7 @@
         "section_run"
       ]
     }, {
-      "description": "Hosts that did run this simulation, this is a mapping, host->json value that might give extra program dependent information on how that host is used.",
+      "description": "Host(s) that performed this simulation. This is a JSON dictionary that contains program-dependent information on how the host was used. Useful for debugging purposes.",
       "dtypeStr": "D",
       "name": "run_hosts",
       "repeats": false,
@@ -1882,7 +1871,7 @@
         "section_run"
       ]
     }, {
-      "description": "Type of method used to do the sampling [sampling_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/sampling-method).",
+      "description": "Type of method used to do the sampling. Allowed values are listed in the [sampling_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/sampling-method).",
       "dtypeStr": "C",
       "name": "sampling_method",
       "shape": [],
@@ -1890,7 +1879,7 @@
         "section_sampling_method"
       ]
     }, {
-      "description": "Information on the scf procedure.",
+      "description": "Information on the self-consistent field (SCF) procedure.",
       "kindStr": "type_abstract_document_content",
       "name": "scf_info",
       "repeats": true,
@@ -1899,7 +1888,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Maximum allowed number of scf iterations.",
+      "description": "Maximum allowed number of self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "scf_max_iteration",
       "shape": [],
@@ -1907,7 +1896,7 @@
         "settings_scf"
       ]
     }, {
-      "description": "Number of scf iterations at DFT level.",
+      "description": "Number of performed self-consistent field (SCF) iterations at DFT level.",
       "dtypeStr": "i",
       "name": "scf_number_of_iterations",
       "repeats": false,
@@ -1916,7 +1905,7 @@
         "scf_info"
       ]
     }, {
-      "description": "Maximum allowed number of scf iterations. The scf is considered converged when the total-energy change between two scf cycels is below the threshold (possibly in combination with other criteria)",
+      "description": "Threshold for the energy_total_scf_iteration change between two subsequent self-consistent field (SCF) iterations. The SCF is considered converged when the total-energy change between two SCF cycles is below the threshold (possibly in combination with other criteria)",
       "dtypeStr": "f",
       "name": "scf_threshold_energy_change",
       "shape": [],
@@ -1961,14 +1950,14 @@
         "basis_set_description"
       ]
     }, {
-      "description": "This section contains references to *all* basis sets used in this section_single_configuration_calculation. More than one basis set instance per single configuration calculation may be needed, for example, for codes that implement adaptive basis sets along the scf convergence (e.g., exciting). In such cases, there is a section_basis_set instance per scf iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc. Supported are the two broad classes of basis sets: atom-centered (e.g., gaussian-type, numerical atomic orbitals) and cell-associated (like planewaves or real-space grids, so named because they are typically used for periodic-system calculations and associated to the simulated cell as a whole). Basis sets used in this section_single_configuration_calculation, belonging to either class, are defined in the dedicated section: section_basis_set_cell_associated or section_basis_set_atom_centered. The correspondence between the basis sets listed in this section and the definition given in th dedicated sessions in given in by the two concrete metadata: mapping_section_basis_set_atom_centered and mapping_section_basis_set_cell_associated.",
+      "description": "This section contains references to *all* basis sets used in this section_single_configuration_calculation. More than one basis set instance per *single configuration calculation* (see section_single_configuration_calculation) may be needed, for example, for codes that implement adaptive basis sets along the self-consistent field (SCF) convergence (e.g., exciting). In such cases, there is a section_basis_set instance per SCF iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc. Supported are the two broad classes of basis sets: atom-centered (e.g., gaussian-type, numerical atomic orbitals) and cell-associated (like planewaves or real-space grids, so named because they are typically used for periodic-system calculations and associated to the simulated cell as a whole). Basis sets used in this section_single_configuration_calculation, belonging to either class, are defined in the dedicated section: section_basis_set_cell_associated or section_basis_set_atom_centered. The correspondence between the basis sets listed in this section and the definition given in the dedicated sessions is given by the two concrete metadata: mapping_section_basis_set_cell_associated and mapping_section_basis_set_atom_centered. The latter metadata is an array that connects each atom in the system with its basis set (of course, the same basis set can be assigned to more than one atom)",
       "kindStr": "type_section",
       "name": "section_basis_set",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section that describes the relationship between different section_single_configuration_calculation. Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The kind of relationship between the calculation defined in this section and the referenced one is described by calculation_to_calculation_kind. The referenced section_single_configuration_calculation is identified via calculation_to_calculation_ref (typically used for a section_single_configuration_calculation in the same section_run) or calculation_to_calculation_external_url.",
+      "description": "Section that describes the relationship between different section_single_configuration_calculation. Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The kind of relationship between the calculation defined in this section and the referenced one is described by calculation_to_calculation_kind. The referenced section_single_configuration_calculation is identified via calculation_to_calculation_ref (typically used for a section_single_configuration_calculation in the same section_run) or calculation_to_calculation_external_url.",
       "kindStr": "type_section",
       "name": "section_calculation_to_calculation_refs",
       "superNames": [
@@ -1997,14 +1986,14 @@
         "section_eigenvalues_group"
       ]
     }, {
-      "description": "Section describing a shifted total energy, created to allow for compararisons among different codes, numerical settings, etc. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
+      "description": "Section describing a shifted total energy, created to allow for compararisons among different codes and numerical settings. Details can be found on the [energy\\_comparable wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-comparable).",
       "kindStr": "type_section",
       "name": "section_energy_comparable",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Section containing a van der Waals energy value energy_van_der_Waals_value, of type van_der_Waals_kind. This is used when more than one van der Waals methods are applied in the same single configuration calculation. The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
+      "description": "Section containing a van der Waals energy value energy_van_der_Waals_value, of type van_der_Waals_kind. This is used when more than one van der Waals methods are applied in the same *single configuration calculation* (see section_single_configuration_calculation). The main van der Waals method (the one concurring to energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
       "kindStr": "type_section",
       "name": "section_energy_van_der_Waals",
       "repeats": true,
@@ -2034,14 +2023,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_method_atom_kind contains method related information about a kind of atom, and is identified by one or more string method_atom_kind_label. This categorisation into atom kinds is more flexible than just atomic species, because to different atoms of the same species different atom-centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_method_atom_kind.",
+      "description": "Every section_method_atom_kind contains method-related information about a kind of atom, and is identified by one or more strings stored in method_atom_kind_label. This categorisation into atom kinds is more flexible than just atomic species, because to different atoms of the same species different atom-centered basis sets or pseudopotentials may be assigned. So, if for instance two different oxygen atoms are assigned two different basis sets or pseudopotentials, we have two distinguish them into two different *kinds* of O atoms, by creating two distinct section_method_atom_kind.",
       "kindStr": "type_section",
       "name": "section_method_atom_kind",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Section that describes the relationship between different section_method. Often calculations are connected, for instance, one calculation is a perturbation performed using an scf calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (like QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT, etc.). Hence, the need of keeping track of these connected calculations. The kind of relationship between the method defined in this section and the referenced one is described by method_to_method_kind. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
+      "description": "Section that describes the relationship between different section_method. Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitiond in regions with different but connected hamiltonians (e.g., QM/MM or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The kind of relationship between the method defined in this section and the referenced one is described by method_to_method_kind. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
       "kindStr": "type_section",
       "name": "section_method_to_method_refs",
       "shape": [],
@@ -2049,7 +2038,7 @@
         "section_method"
       ]
     }, {
-      "description": "Section containing the various parameters that define the theory used and the approximations done (convergence, thresholds,...) to perform a single configuration calculation. It does *not* contain the settings for dynamics, goemetry optimization,etc.",
+      "description": "Section containing the various parameters that define the theory used and the approximations (convergence, thresholds,...) used to perform a *single configuration calculation* (see section_single_configuration_calculation). It does *not* contain the settings for e.g., molecular dynamics, goemetry optimization (see section frame_sequence for these other settings).",
       "kindStr": "type_section",
       "name": "section_method",
       "superNames": [
@@ -2068,7 +2057,7 @@
         "section_run"
       ]
     }, {
-      "description": "Every section_scf_iteration section represents an scf iteration.",
+      "description": "Every section_scf_iteration section represents a self-consistent field (SCF) iteration.",
       "kindStr": "type_section",
       "name": "section_scf_iteration",
       "repeats": true,
@@ -2078,7 +2067,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_single_configuration_calculation contains the values computed during a single configuration calculation.",
+      "description": "Every section_single_configuration_calculation contains the values computed during a *single configuration calculation*, i.e., a calculation performed on a given configuration of the system (as defined in section_system_description) and a given computational method (e.g., exchange-correlation method, basis sets, as defined in section_method). The link between the current section_single_configuration_calculation and the related section_system_description and section_method is established by the values stored in single_configuration_calculation_to_system_description_ref and single_configuration_to_calculation_method_ref, respectively. The reason why information on the system configuration and computational method is stored separately is that several *single configuration calculations* can be performed on the same system configuration, viz. several system configurations can be evaluated with the same computational method. This storage strategy avoids redundancies.",
       "kindStr": "type_section",
       "name": "section_single_configuration_calculation",
       "superNames": [
@@ -2100,21 +2089,21 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_system_description contains the properties required to describe the physical system simulated, i.e., the given atomic configuration, the definition of periodic cell (if present), external potentials,etc.",
+      "description": "Every section_system_description contains the properties required to describe the physical system simulated, e.g., the given atomic configuration, the definition of periodic cell (if present), external potentials.",
       "kindStr": "type_section",
       "name": "section_system_description",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "Section containing one of the exchange correlation (XC) functionals that are combined to form the XC_functional used in the present section_method.",
+      "description": "Section containing one of the exchange-correlation (XC) functionals that are combined to form the XC_functional used in the present section_method.",
       "kindStr": "type_section",
       "name": "section_XC_functionals",
       "superNames": [
         "settings_XC_functional"
       ]
     }, {
-      "description": "Short string for the self interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Other SIC treatment strings as described on the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/self-interaction-correction-method).",
+      "description": "Short string for the self-interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Allowed values ofr this string are listed in the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/self-interaction-correction-method).",
       "dtypeStr": "C",
       "name": "self_interaction_correction_method",
       "superNames": [
@@ -2128,12 +2117,7 @@
         "settings_molecular_dynamics"
       ]
     }, {
-      "description": "Some parameters that describe a constraint",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_constraint",
-      "superNames": []
-    }, {
-      "description": "Coupled-Clusters method parameters.",
+      "description": "Parameters for the Coupled-Cluster method.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_coupled_cluster",
       "superNames": [
@@ -2160,11 +2144,6 @@
       "superNames": [
         "settings_molecular_dynamics"
       ]
-    }, {
-      "description": "Some parameters that describe a bonded interaction.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_interaction",
-      "superNames": []
     }, {
       "description": "Parameters that control the $k$-point mesh.",
       "kindStr": "type_abstract_document_content",
@@ -2194,7 +2173,7 @@
         "section_sampling_method"
       ]
     }, {
-      "description": "Møller–Plesset perturbation theory parameters.",
+      "description": "Parameters for Møller–Plesset perturbation theory.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_moller_plesset_perturbation_theory",
       "superNames": [
@@ -2208,14 +2187,14 @@
         "section_sampling_method"
       ]
     }, {
-      "description": "Multireference single and double configuration interaction method parameters.",
+      "description": "Parameters for the multireference single and double configuration interaction method.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_multi_reference",
       "superNames": [
         "settings_post_hartree_fock"
       ]
     }, {
-      "description": "Post hartree-fock method parameters.",
+      "description": "Parameters for the post hartree-fock method.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_post_hartree_fock",
       "superNames": [
@@ -2229,21 +2208,21 @@
         "settings_XC"
       ]
     }, {
-      "description": "Parameters that control the whole run (but not the single configuration calculation).",
+      "description": "Parameters that control the whole run (but not the *single configuration calculation*, see section_single_configuration_calculation).",
       "kindStr": "type_abstract_document_content",
       "name": "settings_run",
       "superNames": [
         "section_run"
       ]
     }, {
-      "description": "Parameters connected with the convergence of the scf iterations.",
+      "description": "Parameters connected with the convergence of the self-consistent field (SCF) iterations.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_scf",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Parameters and information connected with self-interaction correction (SIC) method used.",
+      "description": "Parameters and information connected with the self-interaction correction (SIC) method (see self_interaction_correction_method) used.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_self_interaction_correction",
       "superNames": [
@@ -2278,21 +2257,21 @@
         "settings_XC"
       ]
     }, {
-      "description": "Parameters connected with defining the exchange-correlation (XC) functional.",
+      "description": "Parameters connected with the defintion of the exchange-correlation (XC) functional.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC_functional",
       "superNames": [
         "settings_XC"
       ]
     }, {
-      "description": "Parameters connected with defining the exchange-correlation (XC) treatment. *Treatment* is more general than *functional* and can include, e.g., post hartree-fock methods",
+      "description": "Parameters connected with the definition of the exchange-correlation (XC) *method*. *Method* is more general than *functional* and can include, e.g., post hartree-fock methods",
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Simulation cell (lattice vectors). The first index is x,y,z Cartesian coordinates, and the second index labels the lattice vector.",
+      "description": "Lattice vectors (in Cartesian coordinates) of the simulation cell. The first index runs over the $x,y,z$ Cartesian coordinates, and the second index runs over the 3 lattice vectors.",
       "dtypeStr": "f",
       "name": "simulation_cell",
       "repeats": false,
@@ -2305,7 +2284,7 @@
       ],
       "units": "m"
     }, {
-      "description": "Determines whether a single configuration calculation is converged.",
+      "description": "Determines whether a *single configuration calculation* (see section_single_configuration_calculation) is converged.",
       "dtypeStr": "b",
       "name": "single_configuration_calculation_converged",
       "shape": [],
@@ -2343,7 +2322,7 @@
         "settings_smearing"
       ]
     }, {
-      "description": "The width of the smearing in energy for the electon occupation used to calculate energy_free (if the method specified in smearing_kind uses it).",
+      "description": "The width of the smearing in energy for the electron occupation used to calculate energy_free (if the method specified in smearing_kind uses it).",
       "dtypeStr": "f",
       "name": "smearing_width",
       "shape": [],
@@ -2351,7 +2330,7 @@
         "settings_smearing"
       ]
     }, {
-      "description": "References to the source of the data (URI,etc.).",
+      "description": "References to the location of the raw the data (e.g., URI).",
       "dtypeStr": "C",
       "name": "source_references",
       "shape": [],
@@ -2398,7 +2377,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Labels of the atomic species for the species-projected density of states (DOS). Differently from atom_label, which allows for more than one label for the same atomic species (by adding a number or a string to the label), this list is expected to refer to actual atomic sepcies, i.e., belonging to the periodic table of elements. So the species-projected DOS are expected to be as many as the different atomic species in the system.",
+      "description": "Labels of the atomic species for the species-projected density of states (DOS). Differently from atom_labels, which allows for more than one label for the same atomic species (by adding a number or a string to the label), this list is expected to refer to actual atomic species, i.e., belonging to the periodic table of elements. So the species-projected DOS are expected to be as many as the different atomic species in the system.",
       "dtypeStr": "C",
       "name": "species_projected_dos_species_label",
       "shape": [
@@ -2433,7 +2412,7 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Value of the total spin moment operator $S^2$ during the scf iterations of XC_method. It can be used to calculate the spin contamination in spin-unrestricted calculations.",
+      "description": "Value of the total spin moment operator $S^2$ during the self-consistent field (SCF) iterations of XC_method. It can be used to calculate the spin contamination in spin-unrestricted calculations.",
       "dtypeStr": "f",
       "name": "spin_S2_scf_iteration",
       "shape": [],
@@ -2449,7 +2428,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed).",
+      "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics or geometry optimization (if needed).",
       "dtypeStr": "C",
       "name": "stress_tensor_kind",
       "shape": [],
@@ -2457,7 +2436,7 @@
         "section_stress_tensor"
       ]
     }, {
-      "description": "Method used to calculate stress_tensor, the value of which is used (if needed) for dynamics, geometry minimization, etc.  The allowed values are: numeric and analytic.",
+      "description": "Method used to calculate stress_tensor, the value of which is used (if needed) for, e.g., molecular dynamics or geometry optimization.  The allowed values are: numeric and analytic.",
       "dtypeStr": "C",
       "name": "stress_tensor_method",
       "shape": [],
@@ -2474,7 +2453,7 @@
       ],
       "superNames": []
     }, {
-      "description": "Value of the stress tensor of kind defined in stress_tensor_kind. This is an *alternative* definition to the one chosen in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for dynamics, minimization,etc (if needed). ",
+      "description": "Value of the stress tensor of the kind defined in stress_tensor_kind. This is an *alternative* definition to the one chosen in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics or geometry optimization (if needed). ",
       "dtypeStr": "f",
       "name": "stress_tensor_value",
       "shape": [
@@ -2487,7 +2466,7 @@
       ],
       "units": "Pa"
     }, {
-      "description": "A final value of the default stress tensor of energy_total calculated with stress_tensor_method.",
+      "description": "A final value of the default stress tensor consistent with energy_total, calculated with the method specified in stress_tensor_method. This value is used (if needed) for, e.g., molecular dynamics, geometry optimization. Alternative definitions of the stress tensor can be assigned with stress_tensor_kind",
       "dtypeStr": "f",
       "name": "stress_tensor",
       "shape": [
@@ -2500,7 +2479,7 @@
       ],
       "units": "Pa"
     }, {
-      "description": "Name of the system (for debugging/visualization purposes).",
+      "description": "Name of the system. This information is provided by the user in some codes and is stored here for debugging/visualization purposes.",
       "dtypeStr": "C",
       "name": "system_name",
       "repeats": false,
@@ -2509,7 +2488,7 @@
         "section_system_description"
       ]
     }, {
-      "description": "Target (user-imposed) value of the multiplicity $M=2S+1$ where $S$ is the total spin. It is an integer number. This value is not necessarly reached.",
+      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer number.This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
       "dtypeStr": "i",
       "name": "target_multiplicity",
       "shape": [],
@@ -2517,7 +2496,7 @@
         "section_method"
       ]
     }, {
-      "description": "Wall-time needed for a calculation, using calculation_method_current.",
+      "description": "Wall time needed for a calculation, using calculation_method_current.",
       "dtypeStr": "f",
       "name": "time_calculation",
       "repeats": true,
@@ -2528,7 +2507,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Information on date and timings.",
+      "description": "Information on date and timings of the calculation.",
       "kindStr": "type_abstract_document_content",
       "name": "time_info",
       "superNames": [
@@ -2601,7 +2580,7 @@
       ],
       "units": "s"
     }, {
-      "description": "End time of an scf iteration on CPU 1.",
+      "description": "End time of a self-consistent field (SCF) iteration on CPU 1.",
       "dtypeStr": "f",
       "name": "time_scf_iteration_cpu1_end",
       "repeats": false,
@@ -2612,7 +2591,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Start time of an scf iteration on CPU 1.",
+      "description": "Start time of an self-consistent field (SCF) iteration on CPU 1.",
       "dtypeStr": "f",
       "name": "time_scf_iteration_cpu1_start",
       "repeats": false,
@@ -2623,7 +2602,7 @@
       ],
       "units": "s"
     }, {
-      "description": "End date of scf stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds.",
+      "description": "End date of a self-consistent field (SCF) iteration stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds.",
       "dtypeStr": "f",
       "name": "time_scf_iteration_date_end",
       "repeats": false,
@@ -2634,7 +2613,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Start date of an scf iteration stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds.",
+      "description": "Start date of a self-consistent field (SCF) iteration stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds.",
       "dtypeStr": "f",
       "name": "time_scf_iteration_date_start",
       "repeats": false,
@@ -2645,7 +2624,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the end of an scf iteration.",
+      "description": "Internal wall clock time at the end of a self-consistent field (SCF) iteration.",
       "dtypeStr": "f",
       "name": "time_scf_iteration_wall_end",
       "repeats": false,
@@ -2656,7 +2635,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the start of an scf iteration.",
+      "description": "Internal wall clock time at the start of a self-consistent field (SCF) iteration.",
       "dtypeStr": "f",
       "name": "time_scf_iteration_wall_start",
       "repeats": false,
@@ -2667,7 +2646,7 @@
       ],
       "units": "s"
     }, {
-      "description": "End time of the single configuration calculation on CPU 1.",
+      "description": "End time of the *single configuration calculation* (see section_single_configuration_calculation) on CPU 1.",
       "dtypeStr": "f",
       "name": "time_single_configuration_calculation_cpu1_end",
       "repeats": false,
@@ -2678,7 +2657,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Start time of the single configuration calculation on CPU 1.",
+      "description": "Start time of the *single configuration calculation* (see section_single_configuration_calculation) on CPU 1.",
       "dtypeStr": "f",
       "name": "time_single_configuration_calculation_cpu1_start",
       "repeats": false,
@@ -2689,7 +2668,7 @@
       ],
       "units": "s"
     }, {
-      "description": "End date of the single configuration calculation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "description": "End date of the *single configuration calculation* (see section_single_configuration_calculation) stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "dtypeStr": "f",
       "name": "time_single_configuration_calculation_date_end",
       "repeats": false,
@@ -2700,7 +2679,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Start date of the single configuration calculation stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
+      "description": "Start date of the *single configuration calculation* (see section_single_configuration_calculation) stored as time since the unix epoch (00:00:00 UTC on 1 January 1970) in seconds. Default to GMT timezone for date and times without timezone.",
       "dtypeStr": "f",
       "name": "time_single_configuration_calculation_date_start",
       "repeats": false,
@@ -2711,7 +2690,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the end of the single configuration calculation.",
+      "description": "Internal wall clock time at the end of the *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "time_single_configuration_calculation_wall_end",
       "repeats": false,
@@ -2722,7 +2701,7 @@
       ],
       "units": "s"
     }, {
-      "description": "Internal wall clock time at the start of the single configuration calculation.",
+      "description": "Internal wall clock time at the start of the *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "time_single_configuration_calculation_wall_start",
       "repeats": false,
@@ -2750,7 +2729,7 @@
         "settings_van_der_Waals"
       ]
     }, {
-      "description": "Reference to the cell-associated basis function to use for the wavefunctions.",
+      "description": "Reference to the cell-associated basis, listed in section_basis_set_cell_associated, that is used for the wavefunctions.",
       "dtypeStr": "r",
       "name": "wavefunctions_basis_set_cell_associated_ref",
       "repeats": true,
@@ -2760,7 +2739,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String describing the exchange correlation (XC) functional used for the final energy and related quantities, with a unique short name obtained combining the data in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
+      "description": "String describing the exchange-correlation (XC) functional used for evaluating the energy value stored in energy_XC_functional, and related quantities (e.g., forces). It is a unique short name obtained combining the data stored in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional",
       "repeats": false,
@@ -2769,7 +2748,7 @@
         "settings_XC_functional"
       ]
     }, {
-      "description": "Name of one of the exchange correlation (XC) functionals combined in XC_functional. The valid unique names that can be used are defined in [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
+      "description": "Name of one of the exchange and/or correlation (XC) functionals combined in XC_functional (i.e., this string could refer to a correlation- or exchange-only functional or an exchange-correlation functional). The valid unique names that can be used are listed in [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
       "name": "XC_functional_name",
       "repeats": false,
@@ -2778,7 +2757,7 @@
         "section_XC_functionals"
       ]
     }, {
-      "description": "Dictionary containing non default values of the parameters for the functional XC_functional_name. The names and units of these values should be defined in the section dedicated to XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional). If not given, the default parameter values for the XC_functional are assumed.",
+      "description": "Dictionary containing non-default values of the parameters for the functional declared in XC_functional_name in this section_XC_functionals (e.g., if in this calculation with a hybrid XC functional like HSE06, user-gven value of the mixing parameter between exact and GGA exchange is used, this non-standard value should be reported in this metadata). The labels and units of these values are defined in the paragraph dedicated to the functional declared in XC_functional_name of the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional). If this metadata is not given, the default parameter values for the XC_functional_name are assumed.",
       "dtypeStr": "D",
       "name": "XC_functional_parameters",
       "repeats": false,
@@ -2787,7 +2766,7 @@
         "section_XC_functionals"
       ]
     }, {
-      "description": "Weigth that should be given to XC_functional_name when combining it to obtain XC_functional. If not given it defaults to 1.",
+      "description": "Value of the weigth for the (exchange, correlation, or exchange-correlation) functional declared in XC_functional_name in this section_XC_functionals. This weight is used in the linear combination of the different XC_functional_name in different section_XC_functionals to form the XC_functional used for evaluating energy_XC_functional and related quantities. If not given it defaults to 1.",
       "dtypeStr": "f",
       "name": "XC_functional_weight",
       "repeats": false,
@@ -2797,7 +2776,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String describing the exchange correlation (XC) method used for evaluating energy_XC, consisting of XC_method_current plus '@' and the XC_method of the method_to_method_ref with method_to_method_kind = starting\\_point_method for perturbative methods.",
+      "description": "String describing the exchange correlation (XC) method used for evaluating energy_XC. Differently from XC_functional, here also perturbative treatments are accounted for and the string contains reference to both the perturbative (e.g., MP2) and the starting point (e.g, Hartree-Fock) XC method defined in this section_method. The string consists of XC_method_current plus '@' and the XC_method defined in the section_method that is referred to by method_to_method_ref that has method_to_method_kind = starting\\_point_method. (see the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind))",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
@@ -2807,7 +2786,7 @@
       ]
     }, {
       "derived": true,
-      "description": "Exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. Built joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. Finally a '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all non redundant non derived settings_XC appended to make the string unique for every setting. With empty strings the connecting character is skipped. If done perturbatively this writes only the perturbation method, not the reference.",
+      "description": "String identifying the exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. It is built by joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. Finally, a '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all non-redundant non-derived settings_XC, appended to make the string unique for every setting. With empty strings, the connecting character '_' is skipped. If the method defined in this section_method is perturbative, this XC_method_current contains only the perturbative method, not the starting point (e.g. the DFT XC functional used as a starting point for a RPA perturbative calculation). In this case, the string that contains both the perturbative and starting point method is stored in XC_method.",
       "dtypeStr": "C",
       "name": "XC_method_current",
       "repeats": false,

@@ -161,6 +161,17 @@
         "section_interaction"
       ]
     }, {
+      "description": "Reference to the topology and force fields to be used.",
+      "dtypeStr": "r",
+      "name": "method_to_topology_ref",
+      "referencedSections": [
+        "section_topology"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last index is number_of_atoms_in_molecule.",
       "dtypeStr": "i",
       "name": "molecule_constraint_atoms",
@@ -188,7 +199,7 @@
         "section_molecule_constraint"
       ]
     }, {
-      "description": "List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_molecule.",
+      "description": "List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_.",
       "dtypeStr": "i",
       "name": "molecule_interaction_atoms",
       "shape": [
@@ -394,6 +405,16 @@
       "superNames": [
         "section_molecule_type"
       ]
+    }, {
+      "description": "Some parameters that describe a constraint",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_constraint",
+      "superNames": []
+    }, {
+      "description": "Some parameters that describe a bonded interaction.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_interaction",
+      "superNames": []
     }, {
       "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
       "dtypeStr": "C",
