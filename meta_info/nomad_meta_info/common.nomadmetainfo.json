@@ -161,6 +161,40 @@
         "section_interaction"
       ]
     }, {
+      "description": "Reference to an atom-centered basis set defined in section_basis_set_atom_centered and to the atom kind as defined in section_method_atom_kind.",
+      "dtypeStr": "r",
+      "name": "mapping_section_method_basis_set_atom_centered",
+      "referencedSections": [
+        "section_method_atom_kind",
+        "section_basis_set_atom_centered"
+      ],
+      "shape": [
+        "number_of_basis_sets_atom_centered",
+        2
+      ],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
+      "description": "Reference to a cell-associated basis set.",
+      "dtypeStr": "r",
+      "name": "mapping_section_method_basis_set_cell_associated",
+      "referencedSections": [
+        "section_basis_set_cell_associated"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "C",
+      "name": "method_basis_set_kind",
+      "shape": [],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
       "description": "Reference to the topology and force fields to be used.",
       "dtypeStr": "r",
       "name": "method_to_topology_ref",
@@ -292,6 +326,15 @@
         "section_molecule_interaction"
       ]
     }, {
+      "description": "String describing the use of the basis set, i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_basis_sets_atom_centered",
+      "shape": [],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
       "description": "Number of constraints of this type.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -367,6 +410,13 @@
       "superNames": [
         "section_topology",
         "settings_interaction"
+      ]
+    }, {
+      "description": "This section contains the definition of the basis sets that are defined independently of the atomic configuration.",
+      "kindStr": "type_section",
+      "name": "section_method_basis_set",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "Section describing a constraint between atoms within a molecule.",

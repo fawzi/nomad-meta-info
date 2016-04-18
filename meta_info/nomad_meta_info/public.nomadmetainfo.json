@@ -151,7 +151,7 @@
       "name": "atom_projected_dos_values_lm",
       "shape": [
         "number_of_lm_atom_projected_dos",
-        "max_spin_channel",
+        "number_of_spin_channels",
         "number_of_atoms",
         "number_of_atom_projected_dos_values"
       ],
@@ -163,7 +163,7 @@
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
-        "max_spin_channel",
+        "number_of_spin_channels",
         "number_of_atoms",
         "number_of_atom_projected_dos_values"
       ],
@@ -226,8 +226,8 @@
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
+        "number_of_spin_channels",
         "number_of_k_point_segments",
-        "max_spin_channel",
         "number_of_k_points_per_segment",
         "number_of_eigen_values"
       ],
@@ -252,8 +252,8 @@
       "dtypeStr": "f",
       "name": "band_occupation",
       "shape": [
+        "number_of_spin_channels",
         "number_of_k_point_segments",
-        "max_spin_channel",
         "number_of_k_points_per_segment",
         "number_of_eigen_values"
       ],
@@ -355,7 +355,7 @@
         "section_run"
       ]
     }, {
-      "description": "String describing the use of the basis set, , i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
+      "description": "String describing the use of the basis set, i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
       "dtypeStr": "C",
       "name": "basis_set_kind",
       "shape": [],
@@ -389,7 +389,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method, the latter being referenced to by section_method_to_method_refs. For self-consistent field (SCF) ab initio calculation, for example, this is composed of XC_method and basis_set and a unique SHA checksum, see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method, the latter being referenced to by section_method_to_method_refs. For self-consistent field (SCF) ab initio calculation, for example, this is composed by concatenating XC_method_current and basis_set, see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -488,24 +488,12 @@
       "dtypeStr": "f",
       "name": "dos_values",
       "shape": [
-        "max_spin_channel",
+        "number_of_spin_channels",
         "number_of_dos_values"
       ],
       "superNames": [
         "section_dos"
       ]
-    }, {
-      "description": "Values of the (electronic-energy) eigenvalues. The coordinates of the corresponding eigenstates in the reciprocal space are defined in eigenvalues_kpoints and their occupation are given in eigenvalues_occupation.",
-      "dtypeStr": "f",
-      "name": "eigenvalues_eigenvalues",
-      "shape": [
-        "number_of_eigenvalues_kpoints",
-        "number_of_eigenvalues"
-      ],
-      "superNames": [
-        "section_eigenvalues"
-      ],
-      "units": "J"
     }, {
       "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind).",
       "dtypeStr": "C",
@@ -515,7 +503,7 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Coordinates of the $k$ points (in the basis of the reciprocal lattice vectors) at which the eigenvalues tabulated in eigenvalues_eigenvalues are evaluated.",
+      "description": "Coordinates of the $k$ points (in the basis of the reciprocal lattice vectors) at which the eigenvalues tabulated in eigenvalues_values are evaluated.",
       "dtypeStr": "f",
       "name": "eigenvalues_kpoints",
       "shape": [
@@ -526,16 +514,30 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Occupation of the eigenstates whose coordinate in the reciprocal space are defined in eigenvalues_kpoints and whose (energy) eigenvalues are given in eigenvalues_eigenvalues.",
+      "description": "Occupation of the eigenstates whose coordinate in the reciprocal space are defined in eigenvalues_kpoints and whose (energy) eigenvalues are given in eigenvalues_values.",
       "dtypeStr": "f",
       "name": "eigenvalues_occupation",
       "shape": [
+        "number_of_spin_channels",
         "number_of_eigenvalues_kpoints",
         "number_of_eigenvalues"
       ],
       "superNames": [
         "section_eigenvalues"
       ]
+    }, {
+      "description": "Values of the (electronic-energy) eigenvalues. The coordinates of the corresponding eigenstates in the reciprocal space are defined in eigenvalues_kpoints and their occupation are given in eigenvalues_occupation.",
+      "dtypeStr": "f",
+      "name": "eigenvalues_values",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ],
+      "units": "J"
     }, {
       "description": "Electronic kinetic energy as defined in XC_method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
@@ -1480,17 +1482,6 @@
         "section_method_atom_kind"
       ]
     }, {
-      "description": "Reference to the atom-centered basis set for the atoms of the kind described in this section_method_atom_kind (see atom_labels for the actual meaning of *atom kind*), used to represent the wavefunctions.",
-      "dtypeStr": "r",
-      "name": "method_atom_kind_wavefunctions_basis_set_ref",
-      "referencedSections": [
-        "section_basis_set_atom_centered"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_method_atom_kind"
-      ]
-    }, {
       "description": "URL used to reference an externally stored section_method. The kind of relationship between the present and the referenced section_method is specified by method_to_method_kind.",
       "dtypeStr": "C",
       "name": "method_to_method_external_url",
@@ -1651,6 +1642,15 @@
         "section_species_projected_dos"
       ]
     }, {
+      "description": "Number of performed self-consistent field (SCF) iterations at DFT level.",
+      "dtypeStr": "i",
+      "name": "number_of_scf_iterations",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "scf_info"
+      ]
+    }, {
       "description": "Number of energy values for the species-projected density of states (DOS).",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1669,13 +1669,13 @@
         "section_species_projected_dos"
       ]
     }, {
-      "description": "Number of performed self-consistent field (SCF) iterations at DFT level.",
+      "description": "Number of spin channels.",
       "dtypeStr": "i",
-      "name": "number_scf_iterations",
-      "repeats": false,
+      "kindStr": "type_dimension",
+      "name": "number_of_spin_channels",
       "shape": [],
       "superNames": [
-        "scf_info"
+        "section_method"
       ]
     }, {
       "description": "Information on the parallelization of the program.",
@@ -1972,18 +1972,11 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "This section groups the eigenvalues from different spin channels, described in each section_eigenvalues.",
-      "kindStr": "type_section",
-      "name": "section_eigenvalues_group",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Section containing (electronic-energy) eigenvalues for one spin channel. If, for example, the eigenvalues of the Kohn-Sham operator are to be stored, a string identifying this kind of eigenvalues is put in eigenvalues_kind (see the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind for the allowed strings), the coordinates of the $k$-points at which the eigenvalues were evaluated is stored in eigenvalues_kpoints, and the energy values of the eigenstates and their occupation is stored in eigenvalues_eigenvalues and eigenvalues_occupation , respectively.",
+      "description": "Section containing (electronic-energy) eigenvalues for one spin channel. If, for example, the eigenvalues of the Kohn-Sham operator are to be stored, a string identifying this kind of eigenvalues is put in eigenvalues_kind (see the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind for the allowed strings), the coordinates of the $k$-points at which the eigenvalues were evaluated is stored in eigenvalues_kpoints, and the energy values of the eigenstates and their occupation is stored in eigenvalues_values and eigenvalues_occupation , respectively.",
       "kindStr": "type_section",
       "name": "section_eigenvalues",
       "superNames": [
-        "section_eigenvalues_group"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section describing a code-independent total energy, obtained by subtracting some reference energy calculated with the same code, created to allow for comparisons among different codes and numerical settings. Details can be found on the [energy\\_code\\_independent wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-code-independent).",
@@ -2392,7 +2385,7 @@
       "name": "species_projected_dos_values_lm",
       "shape": [
         "number_of_lm_species_projected_dos",
-        "max_spin_channel",
+        "number_of_spin_channels",
         "number_of_species",
         "number_of_species_projected_dos_values"
       ],
@@ -2404,7 +2397,7 @@
       "dtypeStr": "f",
       "name": "species_projected_dos_values_total",
       "shape": [
-        "max_spin_channel",
+        "number_of_spin_channels",
         "number_of_species",
         "number_of_species_projected_dos_values"
       ],
@@ -2729,15 +2722,6 @@
         "settings_van_der_Waals"
       ]
     }, {
-      "description": "Reference to the cell-associated basis, listed in section_basis_set_cell_associated, that is used for the wavefunctions.",
-      "dtypeStr": "r",
-      "name": "wavefunctions_basis_set_cell_associated_ref",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
       "derived": true,
       "description": "String describing the exchange-correlation (XC) functional used for evaluating the energy value stored in energy_XC_functional, and related quantities (e.g., forces). It is a unique short name obtained combining the data stored in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
       "dtypeStr": "C",
@@ -2786,7 +2770,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String identifying the exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. It is built by joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. Finally, a '_' and the first 10 characters of the base64 url encoding of SHA 512 checksum of a normalized json with all non-redundant non-derived settings_XC, appended to make the string unique for every setting. With empty strings, the connecting character '_' is skipped. If the method defined in this section_method is perturbative, this XC_method_current contains only the perturbative method, not the starting point (e.g. the DFT XC functional used as a starting point for a RPA perturbative calculation). In this case, the string that contains both the perturbative and starting point method is stored in XC_method.",
+      "description": "String identifying the exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. It is built by joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. More details on the construction of the string are given in the [XC\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-method-current). If the method defined in this section_method is perturbative, this XC_method_current contains only the perturbative method, not the starting point (e.g. the DFT XC functional used as a starting point for a RPA perturbative calculation). In this case, the string that contains both the perturbative and starting point method is stored in XC_method.",
       "dtypeStr": "C",
       "name": "XC_method_current",
       "repeats": false,
