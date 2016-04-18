@@ -1327,7 +1327,7 @@
       ],
       "units": "m"
     }, {
-      "description": "Algorithm for the geometry optimization. Allowed values are listed in the [geometry_optimization_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/geometry-optimization-method).",
+      "description": "Algorithm for the geometry optimization. Allowed values are listed in the [geometry_optimization_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/geometry-optimization-method).",
       "dtypeStr": "C",
       "name": "geometry_optimization_method",
       "shape": [],
@@ -2038,7 +2038,7 @@
         "section_method"
       ]
     }, {
-      "description": "Section containing the various parameters that define the theory used and the approximations (convergence, thresholds,...) used to perform a *single configuration calculation* (see section_single_configuration_calculation). It does *not* contain the settings for e.g., molecular dynamics, goemetry optimization (see section frame_sequence for these other settings).",
+      "description": "Section containing the various parameters that define the theory used and the approximations (convergence, thresholds,...) used to perform a *single configuration calculation* (see section_single_configuration_calculation). It does *not* contain the settings for e.g., molecular dynamics, geometry optimization (see section frame_sequence for these other settings).",
       "kindStr": "type_section",
       "name": "section_method",
       "superNames": [
