@@ -180,7 +180,7 @@
         3
       ],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ],
       "units": "m/s"
     }, {
@@ -250,7 +250,7 @@
     }, {
       "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this fourth-order tensor are the same as for the tensor in band_energies",
       "dtypeStr": "f",
-      "name": "band_occupation",
+      "name": "band_occupations",
       "shape": [
         "number_of_spin_channels",
         "number_of_k_point_segments",
@@ -330,22 +330,22 @@
         "section_basis_set_atom_centered"
       ]
     }, {
-      "description": "A string defining the type of the cell-associated basis set (i.e., non atom centered, e.g., planewaves). Allowed values are listed in the [basis\\_set\\_cell\\_associated\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-kind).",
+      "description": "A string defining the type of the cell-dependent basis set (i.e., non atom centered, e.g., planewaves). Allowed values are listed in the [basis\\_set\\_cell\\_dependent\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-dependent-kind).",
       "dtypeStr": "C",
-      "name": "basis_set_cell_associated_kind",
+      "name": "basis_set_cell_dependent_kind",
       "repeat": false,
       "shape": [],
       "superNames": [
-        "section_basis_set_cell_associated"
+        "section_basis_set_cell_dependent"
       ]
     }, {
-      "description": "A label identifying the cell-associated basis set (i.e., non atom centered, like planewaves). Allowed values are listed in the [basis\\_set\\_cell\\_associated\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-associated-name).",
+      "description": "A label identifying the cell-dependent basis set (i.e., non atom centered, like planewaves). Allowed values are listed in the [basis\\_set\\_cell\\_dependent\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-dependent-name).",
       "dtypeStr": "C",
-      "name": "basis_set_cell_associated_name",
+      "name": "basis_set_cell_dependent_name",
       "repeat": false,
       "shape": [],
       "superNames": [
-        "section_basis_set_cell_associated"
+        "section_basis_set_cell_dependent"
       ]
     }, {
       "description": "One of the parts building the basis set of the system (e.g., some atom-centered basis set and/or planewaves).",
@@ -376,7 +376,7 @@
       "name": "basis_set_planewave_cutoff",
       "shape": [],
       "superNames": [
-        "section_basis_set_cell_associated"
+        "section_basis_set_cell_dependent"
       ],
       "units": "J"
     }, {
@@ -452,7 +452,7 @@
       "name": "configuration_core",
       "repeats": false,
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Array labelling Which of the lattice vectors use periodic boundary conditions. Note for the parser developers: This value is not expected to be given for each section_single_configuration_calculation. It is assumed to be valid from the section_single_configuration_calculation where it is defined for all subsequent section_single_configuration_calculation in section_run, until redefined.",
@@ -577,7 +577,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial",
+        "error_estimate_contribution",
         "section_scf_iteration",
         "energy_value"
       ],
@@ -746,7 +746,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial",
+        "error_estimate_contribution",
         "section_scf_iteration",
         "energy_value"
       ],
@@ -758,7 +758,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial",
+        "error_estimate_contribution",
         "section_single_configuration_calculation",
         "energy_value"
       ],
@@ -1089,7 +1089,7 @@
     }, {
       "description": "An estimate of a partial quantity contributing to the error of some given quantity.",
       "kindStr": "type_abstract_document_content",
-      "name": "error_estimate_partial",
+      "name": "error_estimate_contribution",
       "repeats": false,
       "shape": [],
       "superNames": []
@@ -1100,7 +1100,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "error_estimate_partial"
+        "error_estimate_contribution"
       ]
     }, {
       "derived": true,
@@ -1359,11 +1359,11 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Assignement of the cell-associated (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in the section_basis_set_cell_associated that is referred to by this metadata.",
+      "description": "Assignement of the cell-dependent (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in the section_basis_set_cell_dependent that is referred to by this metadata.",
       "dtypeStr": "r",
-      "name": "mapping_section_basis_set_cell_associated",
+      "name": "mapping_section_basis_set_cell_dependent",
       "referencedSections": [
-        "section_basis_set_cell_associated"
+        "section_basis_set_cell_dependent"
       ],
       "repeats": true,
       "shape": [],
@@ -1417,7 +1417,7 @@
         "message_warning"
       ]
     }, {
-      "description": "An information message of the computational program, associated with a a *single configuration calculation* (see section_single_configuration_calculation).",
+      "description": "An information message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "message_info_evaluation",
       "superNames": [
@@ -1522,7 +1522,7 @@
       "name": "number_of_atoms",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Number of different basis functions in this section_basis_set_atom_centered. This equals the number of actual coefficents that are specified when using this basis set.",
@@ -1741,7 +1741,7 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "An information message of the parsing program, associated with a a *single configuration calculation* (see section_single_configuration_calculation).",
+      "description": "An information message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
       "name": "parsing_message_info_single_configuration",
       "superNames": [
@@ -1943,14 +1943,14 @@
         "basis_set_description"
       ]
     }, {
-      "description": "Section describing a cell-associated (atom-independent) basis set, e.g., planewaves. The contained information is the type of basis set (in basis_set_cell_associated_kind), its parameters (e.g., for planewaves in basis_set_planewave_cutoff), and a name that identifies the actually used basi set (a string combining the type and the parameter(s), stored in basis_set_cell_associated_name).",
+      "description": "Section describing a cell-dependent (atom-independent) basis set, e.g., planewaves. The contained information is the type of basis set (in basis_set_cell_dependent_kind), its parameters (e.g., for planewaves in basis_set_planewave_cutoff), and a name that identifies the actually used basi set (a string combining the type and the parameter(s), stored in basis_set_cell_dependent_name).",
       "kindStr": "type_section",
-      "name": "section_basis_set_cell_associated",
+      "name": "section_basis_set_cell_dependent",
       "superNames": [
         "basis_set_description"
       ]
     }, {
-      "description": "This section contains references to *all* basis sets used in this section_single_configuration_calculation. More than one basis set instance per *single configuration calculation* (see section_single_configuration_calculation) may be needed, for example, for codes that implement adaptive basis sets along the self-consistent field (SCF) convergence (e.g., exciting). In such cases, there is a section_basis_set instance per SCF iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc. Supported are the two broad classes of basis sets: atom-centered (e.g., gaussian-type, numerical atomic orbitals) and cell-associated (like planewaves or real-space grids, so named because they are typically used for periodic-system calculations and associated to the simulated cell as a whole). Basis sets used in this section_single_configuration_calculation, belonging to either class, are defined in the dedicated section: section_basis_set_cell_associated or section_basis_set_atom_centered. The correspondence between the basis sets listed in this section and the definition given in the dedicated sessions is given by the two concrete metadata: mapping_section_basis_set_cell_associated and mapping_section_basis_set_atom_centered. The latter metadata is an array that connects each atom in the system with its basis set (of course, the same basis set can be assigned to more than one atom)",
+      "description": "This section contains references to *all* basis sets used in this section_single_configuration_calculation. More than one basis set instance per *single configuration calculation* (see section_single_configuration_calculation) may be needed, for example, for codes that implement adaptive basis sets along the self-consistent field (SCF) convergence (e.g., exciting). In such cases, there is a section_basis_set instance per SCF iteration, if necessary. Another example is having a basis set for wavefunctions, a differet one for the density, an auxiliary basis set for resolution of identity (RI), etc. Supported are the two broad classes of basis sets: atom-centered (e.g., gaussian-type, numerical atomic orbitals) and cell-dependent (like planewaves or real-space grids, so named because they are typically used for periodic-system calculations and dependent to the simulated cell as a whole). Basis sets used in this section_single_configuration_calculation, belonging to either class, are defined in the dedicated section: section_basis_set_cell_dependent or section_basis_set_atom_centered. The correspondence between the basis sets listed in this section and the definition given in the dedicated sessions is given by the two concrete metadata: mapping_section_basis_set_cell_dependent and mapping_section_basis_set_atom_centered. The latter metadata is an array that connects each atom in the system with its basis set (of course, the same basis set can be assigned to more than one atom)",
       "kindStr": "type_section",
       "name": "section_basis_set",
       "superNames": [
@@ -2008,7 +2008,7 @@
         "section_run"
       ]
     }, {
-      "description": "Section collecting the information on a $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways (here called segments) in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as fourth-order tensors: one dimension for the spin channels, one for the list of $k$ point segments (e.g., Gamma-L, the labels for each segment are specified in band_segm_labels), one for the sequence of $k$ points for each segment (the same number of $k$-point per segment is assumed and this number is given in n_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupation, respectively.",
+      "description": "Section collecting the information on a $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways (here called segments) in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as fourth-order tensors: one dimension for the spin channels, one for the list of $k$ point segments (e.g., Gamma-L, the labels for each segment are specified in band_segm_labels), one for the sequence of $k$ points for each segment (the same number of $k$-point per segment is assumed and this number is given in n_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively.",
       "kindStr": "type_section",
       "name": "section_k_band",
       "repeats": true,
@@ -2060,7 +2060,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_single_configuration_calculation contains the values computed during a *single configuration calculation*, i.e., a calculation performed on a given configuration of the system (as defined in section_system_description) and a given computational method (e.g., exchange-correlation method, basis sets, as defined in section_method). The link between the current section_single_configuration_calculation and the related section_system_description and section_method is established by the values stored in single_configuration_calculation_to_system_description_ref and single_configuration_to_calculation_method_ref, respectively. The reason why information on the system configuration and computational method is stored separately is that several *single configuration calculations* can be performed on the same system configuration, viz. several system configurations can be evaluated with the same computational method. This storage strategy avoids redundancies.",
+      "description": "Every section_single_configuration_calculation contains the values computed during a *single configuration calculation*, i.e., a calculation performed on a given configuration of the system (as defined in section_system) and a given computational method (e.g., exchange-correlation method, basis sets, as defined in section_method). The link between the current section_single_configuration_calculation and the related section_system and section_method is established by the values stored in single_configuration_calculation_to_system_ref and single_configuration_to_calculation_method_ref, respectively. The reason why information on the system configuration and computational method is stored separately is that several *single configuration calculations* can be performed on the same system configuration, viz. several system configurations can be evaluated with the same computational method. This storage strategy avoids redundancies.",
       "kindStr": "type_section",
       "name": "section_single_configuration_calculation",
       "superNames": [
@@ -2082,9 +2082,9 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Every section_system_description contains the properties required to describe the physical system simulated, e.g., the given atomic configuration, the definition of periodic cell (if present), external potentials.",
+      "description": "Every section_system contains the properties required to describe the physical system simulated, e.g., the given atomic configuration, the definition of periodic cell (if present), external potentials.",
       "kindStr": "type_section",
-      "name": "section_system_description",
+      "name": "section_system",
       "superNames": [
         "section_run"
       ]
@@ -2287,9 +2287,9 @@
     }, {
       "description": "Reference to the system (atomic configuration, cell, ...) that is calculated in this section_single_configuration_calculation.",
       "dtypeStr": "r",
-      "name": "single_configuration_calculation_to_system_description_ref",
+      "name": "single_configuration_calculation_to_system_ref",
       "referencedSections": [
-        "section_system_description"
+        "section_system"
       ],
       "shape": [],
       "superNames": [
@@ -2337,7 +2337,7 @@
       "name": "spacegroup_3D_number",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Array containing the set of discrete energy values for the species-projected density of states (DOS).",
@@ -2421,6 +2421,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer number.This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
+      "dtypeStr": "i",
+      "name": "spin_target_multiplicity",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method (the value of the latter is stored in stress_tensor). This feature allows for multiple definitions and storage of the evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics or geometry optimization (if needed).",
       "dtypeStr": "C",
       "name": "stress_tensor_kind",
@@ -2478,15 +2486,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer number.This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
-      "dtypeStr": "i",
-      "name": "target_multiplicity",
-      "shape": [],
-      "superNames": [
-        "section_method"
+        "section_system"
       ]
     }, {
       "description": "Wall time needed for a calculation, using calculation_method_current.",
