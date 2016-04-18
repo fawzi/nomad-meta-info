@@ -148,7 +148,7 @@
         3
       ],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Simulation cell angle alpha",
@@ -241,7 +241,7 @@
       "name": "castep_store_atom_position",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Temporary storing atom labels",
@@ -249,7 +249,7 @@
       "name": "castep_store_atom_label",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Temporary storing atom mass",
@@ -305,7 +305,7 @@
       "name": "castep_basis_set_plan_wave_cutoff",
       "shape": [],
       "superNames": [
-        "section_basis_set_cell_associated"
+       "section_basis_set_cell_dependent" 
       ]
     },
 
@@ -405,14 +405,14 @@
       "kindStr": "type_section",
       "name": "castep_section_atom_position",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_cell",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
