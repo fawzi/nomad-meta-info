@@ -67,16 +67,16 @@
         "parallelization_info"
       ]
     }, {
-      "description": "section that contains charge, multiplicity and system element labels",
+      "description": "section that contains the Cartesian coordinates of the system",
       "kindStr": "type_section",
-      "name": "gaussian_section_labels",
+      "name": "gaussian_section_geometry",
       "superNames": [
         "section_system_description"
       ]
     }, {
-      "description": "section that contains the Cartesian coordinates of the system",
+      "description": "section that contains charge, multiplicity and system element labels",
       "kindStr": "type_section",
-      "name": "gaussian_section_geometry",
+      "name": "gaussian_section_labels",
       "superNames": [
         "section_system_description"
       ]

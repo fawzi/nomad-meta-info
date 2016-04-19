@@ -77,6 +77,15 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_atom_type_vdW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_vdW_TS"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_band_k1",
       "repeats": false,
@@ -459,15 +468,6 @@
         "fhi_aims_controlInOut_method"
       ]
     }, {
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_controlInOut_basis_func_type",                          
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_basis_func"                              
-      ]                                                                         
-    }, {  
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_basis_func_eff_charge",
@@ -554,6 +554,15 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "fhi_aims_controlInOut_basis_func_radius",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_controlInOut_basis_func"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "fhi_aims_controlInOut_basis_func_type",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -799,6 +808,16 @@
         "fhi_aims_section_dos"
       ]
     }, {
+      "description": "Correlation energy at a given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_correlation_perturbativeGW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
       "description": "Single eigenvalue of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_eigenvalue_ZORA",
@@ -808,56 +827,6 @@
         "fhi_aims_section_eigenvalues_list_ZORA"
       ],
       "units": "J"
-    }, {                                                                        
-      "description": "KS ground state energy at a given eigenstate needed in perturbative GW",                        
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_ks_GroundState",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_list_perturbativeGW"                                
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Exact exchange energy at given eigenstate from perturbative GW",                    
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_ExactExchange_perturbativeGW",                  
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",                    
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_ks_ExchangeCorrelation",               
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Correlation energy at a given eigenstate from perturbative GW",                    
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_correlation_perturbativeGW",                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Quasiparticle energy at a given eigenstate from perturbative GW",                    
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_quasiParticle_energy",                 
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_list_perturbativeGW"                      
-      ],                                                                        
-      "units": "J"                                                              
     }, {
       "description": "Single eigenvalue",
       "dtypeStr": "f",
@@ -866,6 +835,16 @@
       "shape": [],
       "superNames": [
         "fhi_aims_section_eigenvalues_list"
+      ],
+      "units": "J"
+    }, {
+      "description": "Exact exchange energy at given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_ExactExchange_perturbativeGW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"
       ],
       "units": "J"
     }, {
@@ -923,6 +902,35 @@
         "fhi_aims_section_eigenvalues_spin"
       ]
     }, {
+      "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_ks_ExchangeCorrelation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "KS ground state energy at a given eigenstate needed in perturbative GW",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_ks_GroundState",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "Occupation of single eigenfunction of perturbative GW",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_occupation_perturbativeGW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"
+      ]
+    }, {
       "description": "Occupation of single eigenfunction of scaled ZORA",
       "dtypeStr": "f",
       "name": "fhi_aims_eigenvalue_occupation_ZORA",
@@ -931,15 +939,6 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_list_ZORA"
       ]
-    }, {                                                                        
-      "description": "Occupation of single eigenfunction of perturbative GW",       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_eigenvalue_occupation_perturbativeGW",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_list_perturbativeGW"                                
-      ]                                                                         
     }, {
       "description": "Occupation of single eigenfunction",
       "dtypeStr": "f",
@@ -949,6 +948,16 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_list"
       ]
+    }, {
+      "description": "Quasiparticle energy at a given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "fhi_aims_eigenvalue_quasiParticle_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
     }, {
       "description": "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
@@ -972,6 +981,17 @@
       ],
       "units": "J"
     }, {
+      "description": "scGW correlation energy at each iteration",
+      "dtypeStr": "f",
+      "name": "fhi_aims_energy_scgw_correlation_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
       "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
       "name": "fhi_aims_energy_X_LDA",
@@ -982,6 +1002,15 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_free_atom_volume",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_vdW_TS"
+      ]
     }, {
       "description": "labels of atom",
       "dtypeStr": "C",
@@ -1091,6 +1120,24 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_hirschfeld_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_vdW_TS"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_hirschfeld_volume",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_vdW_TS"
+      ]
+    }, {
       "description": "number of energy values for the density of states (DOS)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1125,6 +1172,16 @@
       "shape": [],
       "superNames": [
         "fhi_aims_section_parallel_task_assignement"
+      ]
+    }, {
+      "description": "Fit acccuracy for the Fast-Fourier Transforms necessary in the scGW formalism",
+      "dtypeStr": "f",
+      "name": "fhi_aims_poles_fit_accuracy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -1183,6 +1240,50 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "scGW total energy at each iteration calculated using the Galitskii-Migdal formula",
+      "dtypeStr": "f",
+      "name": "fhi_aims_scgw_galitskii_migdal_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "scGW sum of eigenvalues calculated from the trace over the Hamiltonian times the Greens function matrices",
+      "dtypeStr": "f",
+      "name": "fhi_aims_scgw_hartree_energy_sum_eigenvalues_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "scGW kinetic energy at each iteration",
+      "dtypeStr": "f",
+      "name": "fhi_aims_scgw_kinetic_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "The RPA correlation energy calculated from the Green's functions of the scGW at each iteration",
+      "dtypeStr": "f",
+      "name": "fhi_aims_scgw_rpa_correlation_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "fhi_aims_section_controlIn_basis_set",
@@ -1205,136 +1306,6 @@
       "superNames": [
         "fhi_aims_section_controlInOut_atom_species"
       ]
-    }, {                                                                        
-      "description": "-",                                                       
-      "kindStr": "type_section",                                                
-      "name": "fhi_aims_section_vdW_TS",                       
-      "repeats": true,                                                          
-      "superNames": [                                                           
-        "fhi_aims_section_controlInOut_atom_species"                            
-      ]
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "fhi_aims_atom_type_vdW",                                        
-      "repeats": true,                                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_vdW_TS"                                                 
-      ]
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_hirschfeld_charge",                                         
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_vdW_TS"                                               
-      ]
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_free_atom_volume",                                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_vdW_TS"                                               
-      ]  
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_hirschfeld_volume",                                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_vdW_TS"                                               
-      ]
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_vdW_energy_corr_TS",                                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "fhi_aims_section_vdW_TS"                                               
-      ],
-      "units": "J"          
-    }, {                                                                        
-      "description": "scGW total energy at each iteration calculated using the Galitskii-Migdal formula",
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_scgw_galitskii_migdal_total_energy",                           
-      "repeats": true,                                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"  
-    }, {                                                                        
-      "description": "scGW kinetic energy at each iteration",
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_scgw_kinetic_energy",                    
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"  
-    }, {                                                                        
-      "description": "scGW sum of eigenvalues calculated from the trace over the Hamiltonian times the Greens function matrices",                   
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_scgw_hartree_energy_sum_eigenvalues_scf_iteration",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J" 
-    }, {                                                                        
-      "description": "scGW correlation energy at each iteration",
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_energy_scgw_correlation_energy",     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J" 
-    }, {                                                                        
-      "description": "scGW single particle energy at each iteration",               
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_single_particle_energy",                        
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J" 
-    }, {                                                                        
-      "description": "The RPA correlation energy calculated from the Green's functions of the scGW at each iteration",           
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_scgw_rpa_correlation_energy",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"   
-    }, {                                                                        
-      "description": "Fit acccuracy for the Fast-Fourier Transforms necessary in the scGW formalism",           
-      "dtypeStr": "f",                                                          
-      "name": "fhi_aims_poles_fit_accuracy",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ]                                                                        
     }, {
       "description": "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if section_run is closed. Therefore, this section belongs to section_run.",
       "kindStr": "type_section",
@@ -1343,14 +1314,14 @@
       "superNames": [
         "section_run"
       ]
-    }, {                                                                        
+    }, {
       "description": "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation",
-      "kindStr": "type_section",                                                
-      "name": "fhi_aims_section_eigenvalues_group_perturbativeGW",                        
-      "repeats": false,                                                         
-      "superNames": [                                                           
-        "section_single_configuration_calculation"                                     
-      ]                                                                         
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_eigenvalues_group_perturbativeGW",
+      "repeats": false,
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "section for full list of eigenvalues for different spin and kpoints of scaled ZORA",
       "kindStr": "type_section",
@@ -1368,6 +1339,14 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "section for one list of eigenvalues from a perturbative GW calculation",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_eigenvalues_list_perturbativeGW",
+      "repeats": true,
+      "superNames": [
+        "fhi_aims_section_eigenvalues_spin"
+      ]
+    }, {
       "description": "section for one list of eigenvalues at specific kpoint and spin of scaled ZORA",
       "kindStr": "type_section",
       "name": "fhi_aims_section_eigenvalues_list_ZORA",
@@ -1383,14 +1362,14 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_spin"
       ]
-    }, {                                                                        
-      "description": "section for one list of eigenvalues from a perturbative GW calculation",
-      "kindStr": "type_section",                                                
-      "name": "fhi_aims_section_eigenvalues_list_perturbativeGW",                              
-      "repeats": true,                                                          
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_spin"                                     
-      ]                                                                         
+    }, {
+      "description": "section for one spin orientation from a perturbative GW calculation",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_eigenvalues_spin_perturbativeGW",
+      "repeats": true,
+      "superNames": [
+        "fhi_aims_section_eigenvalues_group_perturbativeGW"
+      ]
     }, {
       "description": "section for one spin orientation of scaled ZORA",
       "kindStr": "type_section",
@@ -1399,14 +1378,6 @@
       "superNames": [
         "fhi_aims_section_eigenvalues_group_ZORA"
       ]
-    },  {                                                                        
-      "description": "section for one spin orientation from a perturbative GW calculation",         
-      "kindStr": "type_section",                                                
-      "name": "fhi_aims_section_eigenvalues_spin_perturbativeGW",                         
-      "repeats": true,                                                          
-      "superNames": [                                                           
-        "fhi_aims_section_eigenvalues_group_perturbativeGW"                               
-      ]                                                                         
     }, {
       "description": "section for one spin orientation",
       "kindStr": "type_section",
@@ -1449,6 +1420,14 @@
         "section_run"
       ]
     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "fhi_aims_section_vdW_TS",
+      "repeats": true,
+      "superNames": [
+        "fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
       "description": "Determines whether a single configuration calculation is converged.",
       "dtypeStr": "C",
       "name": "fhi_aims_single_configuration_calculation_converged",
@@ -1457,6 +1436,17 @@
       "superNames": [
         "section_scf_iteration"
       ]
+    }, {
+      "description": "scGW single particle energy at each iteration",
+      "dtypeStr": "f",
+      "name": "fhi_aims_single_particle_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
     }, {
       "description": "-",
       "dtypeStr": "C",
@@ -1475,5 +1465,15 @@
       "superNames": [
         "section_species_projected_dos"
       ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "fhi_aims_vdW_energy_corr_TS",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "fhi_aims_section_vdW_TS"
+      ],
+      "units": "J"
     }]
 }
