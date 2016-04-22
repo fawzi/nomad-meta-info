@@ -7,6 +7,18 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
+      "dtypeStr": "f",
+      "name": "castep_atom_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
       "name": "castep_atom_position",
@@ -24,7 +36,7 @@
       "name": "castep_basis_set_plan_wave_cutoff_iteration_0",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_run"
       ]
     }, {
       "description": "Temporary storing plane wave cutoff as string",
@@ -155,6 +167,14 @@
         "castep_section_cell"
       ]
     }, {
+      "description": "CASTEP_cell_volume",
+      "dtypeStr": "C",
+      "name": "CASTEP_cell_volume",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
       "description": "Compiler name",
       "dtypeStr": "C",
       "name": "castep_compiler",
@@ -179,6 +199,14 @@
       ],
       "superNames": [
         "castep_section_SCF_iteration_0"
+      ]
+    }, {
+      "description": "CASTEP_Enthalpy",
+      "dtypeStr": "C",
+      "name": "CASTEP_enthalpy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "fft library name",
@@ -232,6 +260,14 @@
       "description": "CASTEP_geom_converged",
       "dtypeStr": "C",
       "name": "CASTEP_geom_converged",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Index for number of iterations in geometry optimisation",
+      "dtypeStr": "f",
+      "name": "CASTEP_geom_iteration_index",
       "shape": [],
       "superNames": [
         "section_run"
@@ -291,114 +327,63 @@
         "section_system_description"
       ]
     }, {
-
-      "description": "Simulation cell angle beta",
-      "dtypeStr": "f",
-      "name": "castep_cell_angle_beta_optim",
-
       "description": "Compilation date (string)",
       "dtypeStr": "C",
       "name": "castep_program_compilation_date",
-
       "shape": [],
       "superNames": [
         "section_run"
       ]
     }, {
-
-      "description": "Simulation cell angle gamma",
-      "dtypeStr": "f",
-      "name": "castep_cell_angle_gamma_optim",
-
       "description": "Compilation time (string)",
       "dtypeStr": "C",
       "name": "castep_program_compilation_time",
-
       "shape": [],
       "superNames": [
         "section_run"
       ]
     }, {
-
-      "description": "a unit cell edge length",
-      "dtypeStr": "f",
-      "name": "castep_cell_length_a",
-
       "description": "Run execution date (string)",
       "dtypeStr": "C",
       "name": "castep_program_execution_date",
-
       "shape": [],
       "superNames": [
         "section_run"
       ]
     }, {
-
-      "description": "b unit cell edge length",
-      "dtypeStr": "f",
-      "name": "castep_cell_length_b",
-
       "description": "Run execution start time (string)",
       "dtypeStr": "C",
       "name": "castep_program_execution_time",
-
       "shape": [],
       "superNames": [
         "section_run"
       ]
     }, {
-
-      "description": "c unit cell edge length",
-      "dtypeStr": "f",
-      "name": "castep_cell_length_c",
-
       "description": "Relativity treatment in CASTEP convention",
       "dtypeStr": "C",
       "name": "castep_relativity_treatment_scf",
-
       "shape": [],
       "superNames": [
         "castep_section_relativity_treatment"
       ]
     }, {
-
-      "description": "a unit cell edge length",
-      "dtypeStr": "f",
-      "name": "castep_cell_length_a_optim",
-      "shape": [],
-
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_atom_position_optim",
-
       "superNames": [
         "section_system_description"
       ]
     }, {
-
-      "description": "b unit cell edge length",
-      "dtypeStr": "f",
-      "name": "castep_cell_length_b_optim",
-      "shape": [],
-
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_atom_position",
-
       "superNames": [
         "section_system_description"
       ]
     }, {
-
-      "description": "c unit cell edge length",
-      "dtypeStr": "f",
-      "name": "castep_cell_length_c_optim",
-      "shape": [],
-
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_cell_optim",
-
       "superNames": [
         "section_system_description"
       ]
@@ -449,16 +434,7 @@
       "kindStr": "type_section",
       "name": "castep_section_geom_optimisation_iteration_0",
       "superNames": [
-        "section_single_configuration_calculation"  
-      ]
-    }, {
-      "description": "Temporary storing converged atom forces",
-      "dtypeStr": "C",
-      "name": "castep_store_atom_forces_band",
-      "shape": [],
-      "superNames": [
-        
-        "section_run"  
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "-",
@@ -475,29 +451,9 @@
         "section_k_band"
       ]
     }, {
-
-      "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
-      "dtypeStr": "f",
-      "name": "castep_atom_forces",
-      "repeats": true,
-      "shape": [
-        "number_of_atoms",
-        3
-      ],
-      "superNames": [
-        "section_run"
-        
-      ]  
-    }, {
-      "description": "Temporary storing atomic positions",
-      "dtypeStr": "C",
-      "name": "castep_store_atom_position",
-      "shape": [],
-
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_k_points_1",
-
       "superNames": [
         "section_k_band"
       ]
@@ -571,6 +527,14 @@
       "shape": [],
       "superNames": [
         "castep_section_spin_number"
+      ]
+    }, {
+      "description": "Temporary storing converged atom forces",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_forces_band",
+      "shape": [],
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "Temporary storing converged atom forces",
@@ -701,6 +665,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "CASTEP_total_energy_corrected_for_finite_basis",
+      "dtypeStr": "C",
+      "name": "CASTEP_total_energy_corrected_for_finite_basis",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Name type",
       "dtypeStr": "C",
       "name": "Disp_method_name",
@@ -757,149 +729,6 @@
       "shape": [],
       "superNames": [
         "castep_section_van_der_Waals_parameters"
-
-      ]                          
-
-    }, {
-      "description": "Determines optimisation method used",
-      "dtypeStr": "C",
-      "name": "castep_geometry_optim_method",
-      "shape": [],
-      "superNames": [
-        "castep_section_geom_optimisation_method"
-      ]
-      }, {
-      "description": "CASTEP_geom_converged",
-      "dtypeStr": "C",
-      "name": "CASTEP_geom_converged",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]     
-     }, {
-      "description": "cutoff at iteration 0 of geometry optimisation",
-      "dtypeStr": "C",
-      "name": "castep_basis_set_plan_wave_cutoff_iteration_0",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-
-     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_SCF_iteration_0",
-      "superNames": [
-        "castep_section_geom_optimisation_iteration_0"
-      ]
-     
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_cell_optim",
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_atom_position_optim",
-      "superNames": [
-        "section_system_description"
-      ]    
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_geom_optimisation_iteration_0",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_geom_optimisation_method",
-      "superNames": [
-        "section_run"
-      ]  
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_van_der_Waals_parameters",
-      "superNames": [
-        "section_run"
-      ]  
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_atom_position",
-      "superNames": [
-        "section_system_description"
-        
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_cell",
-      "superNames": [
-        "section_system_description"
-        
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_stress_tensor",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_time",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_k_band",
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_eigenvalues",
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_eigenvalues_1",
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_functionals",
-      "superNames": [
-        "section_method"
-      ]
-     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_functional_definition",
-      "superNames": [
-        "section_method"
-      ]
-     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_relativity_treatment",
-      "superNames": [
-        "section_method"
-
       ]
     }]
 }

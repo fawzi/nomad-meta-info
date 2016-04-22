@@ -6,87 +6,7 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [{
-      "description": "Compiler name",
-      "dtypeStr": "C",
-      "name": "castep_compiler",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Fundamental constant data source",
-      "dtypeStr": "C",
-      "name": "castep_constants_reference",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "fft library name",
-      "dtypeStr": "C",
-      "name": "castep_fft_library",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Maths library name",
-      "dtypeStr": "C",
-      "name": "castep_maths_library",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Compilation date (string)",
-      "dtypeStr": "C",
-      "name": "castep_program_compilation_date",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Compilation time (string)",
-      "dtypeStr": "C",
-      "name": "castep_program_compilation_time",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Run execution date (string)",
-      "dtypeStr": "C",
-      "name": "castep_program_execution_date",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Run execution start time (string)",
-      "dtypeStr": "C",
-      "name": "castep_program_execution_time",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "XC functional in CASTEP convention",
-      "dtypeStr": "C",
-      "name": "castep_functional_name",
-      "shape": [],
-      "superNames": [
-        "castep_section_functionals"
-      ]
-    }, {
-      "description": "Relativity treatment in CASTEP convention",
-      "dtypeStr": "C",
-      "name": "castep_relativity_treatment_scf",
-      "shape": [],
-      "superNames": [
-        "castep_section_functionals"
-      ]
-    }, {
+  "metaInfos": [ {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
       "name": "castep_atom_position",
@@ -97,6 +17,30 @@
       ],
       "superNames": [
         "section_system_description"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_band_energies",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "castep_band_kpoints",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_band"
+      ]
+    }, {
+      "description": "Temporary storing plane wave cutoff as string",
+      "dtypeStr": "C",
+      "name": "castep_basis_set_plan_wave_cutoff",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_cell_associated"
       ]
     }, {
       "description": "Simulation cell angle alpha",
@@ -167,79 +111,44 @@
         "castep_section_cell"
       ]
     }, {
-      "description": "Temporary storing converged atom forces",
+      "description": "Compiler name",
       "dtypeStr": "C",
-      "name": "castep_store_atom_forces",
+      "name": "castep_compiler",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_run"
       ]
     }, {
-      "description": "Temporary storing atomic positions",
+      "description": "Fundamental constant data source",
       "dtypeStr": "C",
-      "name": "castep_store_atom_position",
+      "name": "castep_constants_reference",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_run"
       ]
     }, {
-      "description": "Temporary storing atom labels",
+      "description": "fft library name",
       "dtypeStr": "C",
-      "name": "castep_store_atom_label",
+      "name": "castep_fft_library",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_run"
       ]
     }, {
-      "description": "Temporary storing eigenvalues",
-      "dtypeStr": "f",
-      "name": "castep_store_eigenvalues",
-      "shape": [],
-      "superNames": [
-        "castep_section_eigenvalues"
-      ]
-    }, {
-      "description": "Temporary storing k points coordinates (fractional)",
+      "description": "XC functional in CASTEP convention",
       "dtypeStr": "C",
-      "name": "castep_store_k_points",
+      "name": "castep_functional_name",
       "shape": [],
       "superNames": [
-        "castep_section_k_points"
+        "castep_section_functionals"
       ]
     }, {
-      "description": "Temporary storing eigenvalues",
-      "dtypeStr": "f",
-      "name": "castep_store_eigenvalues_1",
-      "shape": [],
-      "superNames": [
-        "castep_section_eigenvalues_1"
-      ]
-    }, {
-      "description": "Temporary storing k points coordinates (fractional)",
+      "description": "Maths library name",
       "dtypeStr": "C",
-      "name": "castep_store_k_points_1",
+      "name": "castep_maths_library",
       "shape": [],
       "superNames": [
-        "castep_section_k_points_1"
-      ]
-    }, {
-      "description": "Temporary storing plane wave cutoff as string",
-      "dtypeStr": "C",
-      "name": "castep_basis_set_plan_wave_cutoff",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_cell_associated"
-      ]
-    },
-
-
-       {
-      "description": "Number of k points used in the band structure calculation",
-      "dtypeStr": "f",
-      "name": "castep_number_of_band_kpoints",
-      "shape": [],
-      "superNames": [
-        "castep_section_k_band"
+        "section_run"
       ]
     }, {
       "description": "Number of eigenvalues used in the band structure calculation",
@@ -250,39 +159,59 @@
         "castep_section_k_band"
       ]
     }, {
-      "description": "-",
+      "description": "Number of k points used in the band structure calculation",
       "dtypeStr": "f",
-      "name": "castep_band_energies",
+      "name": "castep_number_of_band_kpoints",
       "shape": [],
       "superNames": [
         "castep_section_k_band"
       ]
     }, {
-      "description": "-",
-      "dtypeStr": "f",
-      "name": "castep_band_kpoints",
+      "description": "Compilation date (string)",
+      "dtypeStr": "C",
+      "name": "castep_program_compilation_date",
       "shape": [],
       "superNames": [
-        "castep_section_k_band"
+        "section_run"
       ]
-    },
-
-
-       {
-      "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
-      "dtypeStr": "f",
-      "name": "energy_total_scf_iteration_list",
+    }, {
+      "description": "Compilation time (string)",
+      "dtypeStr": "C",
+      "name": "castep_program_compilation_time",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
+        "section_run"
+      ]
+    }, {
+      "description": "Run execution date (string)",
+      "dtypeStr": "C",
+      "name": "castep_program_execution_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Run execution start time (string)",
+      "dtypeStr": "C",
+      "name": "castep_program_execution_time",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Relativity treatment in CASTEP convention",
+      "dtypeStr": "C",
+      "name": "castep_relativity_treatment_scf",
+      "shape": [],
+      "superNames": [
+        "castep_section_functionals"
+      ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_system_description",
+      "name": "castep_section_atom_forces",
       "superNames": [
-        "section_run"
+        "section_system_description"
       ]
     }, {
       "description": "-",
@@ -301,9 +230,23 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_forces",
+      "name": "castep_section_eigenvalues_1",
       "superNames": [
-        "section_system_description"
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_eigenvalues",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_functionals",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "-",
@@ -322,23 +265,9 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_eigenvalues",
+      "name": "castep_section_k_points_1",
       "superNames": [
         "section_eigenvalues"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_eigenvalues_1",
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "castep_section_functionals",
-      "superNames": [
-        "section_method"
       ]
     }, {
       "description": "-",
@@ -348,11 +277,76 @@
         "section_eigenvalues"
       ]
     }, {
+      "description": "Temporary storing converged atom forces",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_forces",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Temporary storing atom labels",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_label",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Temporary storing atomic positions",
+      "dtypeStr": "C",
+      "name": "castep_store_atom_position",
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Temporary storing eigenvalues",
+      "dtypeStr": "f",
+      "name": "castep_store_eigenvalues_1",
+      "shape": [],
+      "superNames": [
+        "castep_section_eigenvalues_1"
+      ]
+    }, {
+      "description": "Temporary storing eigenvalues",
+      "dtypeStr": "f",
+      "name": "castep_store_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "castep_section_eigenvalues"
+      ]
+    }, {
+      "description": "Temporary storing k points coordinates (fractional)",
+      "dtypeStr": "C",
+      "name": "castep_store_k_points_1",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_points_1"
+      ]
+    }, {
+      "description": "Temporary storing k points coordinates (fractional)",
+      "dtypeStr": "C",
+      "name": "castep_store_k_points",
+      "shape": [],
+      "superNames": [
+        "castep_section_k_points"
+      ]
+    }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_k_points_1",
+      "name": "castep_system_description",
       "superNames": [
-        "section_eigenvalues"
+        "section_run"
       ]
+    }, {
+      "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
+      "dtypeStr": "f",
+      "name": "energy_total_scf_iteration_list",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
     }]
 }
