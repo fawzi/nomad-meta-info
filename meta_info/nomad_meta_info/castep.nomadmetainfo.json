@@ -367,6 +367,78 @@
         "castep_section_relativity_treatment"
       ]
     }, {
+       "description": "Phonon calculation method",
+      "dtypeStr": "C",
+      "name": "castep_phonon_method",
+      "shape": [],
+      "superNames": [
+        "castep_section_phonons"
+      ]
+    }, {
+       "description": "Phonon DFPT solver method",
+      "dtypeStr": "C",
+      "name": "castep_DFPT_solver_method",
+      "shape": [],
+      "superNames": [
+        "castep_section_phonons"
+      ]   
+    }, {
+       "description": "Vibration Frequenices (cm-1)",
+      "dtypeStr": "C",
+      "name": "castep_vibrationl_frequencies",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
+       "description": "Irreducible representation in the Point Group",
+      "dtypeStr": "C",
+      "name": "castep_ir",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+
+    }, {
+       "description": "Raman activity (A**4/amu)",
+      "dtypeStr": "C",
+      "name": "castep_raman_activity",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
+       "description": "IR intensities (D/A)**2/amu",
+      "dtypeStr": "C",
+      "name": "castep_ir_intensity",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]        
+     }, {
+       "description": "Point group of the crystal (Schoenflies notation)",
+      "dtypeStr": "C",
+      "name": "castep_crystal_point_group",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]   
+     }, {
+       "description": "Point space of the crystal",
+      "dtypeStr": "C",
+      "name": "castep_space_group",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]   
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_vibrational_frequencies",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_atom_position_optim",
@@ -446,6 +518,13 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "castep_section_phonons",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "castep_section_k_band",
       "superNames": [
         "section_k_band"
@@ -518,6 +597,13 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "section_castep_raman_tensor",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "castep_section_van_der_Waals_parameters",
       "superNames": [
         "section_run"
@@ -538,6 +624,7 @@
       "superNames": [
         "section_run"
       ]
+    
     }, {
       "description": "Temporary storing converged atom forces",
       "dtypeStr": "C",
@@ -546,6 +633,36 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
+    
+    }, {
+      "description": "Temporary storing converged Raman susceptibility tensor",
+      "dtypeStr": "C",
+      "name": "castep_store_raman_tensor",
+      "shape": [],
+      "superNames": [
+        "section_castep_raman_tensor"
+      ]
+   
+    }, {
+      "description": "Number of electrons",
+      "dtypeStr": "C",
+      "name": "castep_number_of_electrons",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Ramen_tensor",
+      "dtypeStr": "f",
+      "name": "castep_ramen_tensor",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_castep_raman_tensor"
+      ],
+      "units": "(A/amu)*0.5"
     }, {
       "description": "Temporary storing atom labels",
       "dtypeStr": "C",
