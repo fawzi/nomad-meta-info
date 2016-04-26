@@ -191,12 +191,21 @@
       ]
     }, {
       "description": "Position of the atoms wrapped back to the periodic box.",
-      "dtypeStr": "i",
+      "dtypeStr": "f",
       "name": "atom_position_wrapped",
       "shape": [ "number_of_atoms",
                   3 ],
       "superNames": [
         "section_system_description"
+      ]
+    }, {
+      "description": "Position of the atoms in a scaled format [0, 1].",
+      "dtypeStr": "f",
+      "name": "atom_position_scaled",
+      "shape": [ "number_of_atoms",
+                  3 ],
+      "superNames": [
+        "section_system"
       ]
     }
     
