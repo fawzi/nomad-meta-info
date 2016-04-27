@@ -432,6 +432,87 @@
         "section_run"
       ]   
     }, {
+       "description": "Mulliken_atom_index",
+      "dtypeStr": "C",
+      "name": "castep_mulliken_atom_index",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]   
+    }, {
+       "description": "Mulliken_atom kind",
+      "dtypeStr": "C",
+      "name": "castep_mulliken_atom",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]   
+    }, {
+       "description": "Mulliken_contribution_orbital s",
+      "dtypeStr": "C",
+      "name": "castep_orbital_contributions",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]     
+    }, {
+       "description": "Mulliken_contribution_orbital s",
+      "dtypeStr": "C",
+      "name": "castep_orbital_s",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]     
+    }, {
+       "description": "Mulliken_contribution_orbital p",
+      "dtypeStr": "C",
+      "name": "castep_orbital_p",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]     
+    
+    }, {
+       "description": "Mulliken_contribution_orbital d",
+      "dtypeStr": "C",
+      "name": "castep_orbital_d",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]     
+    }, {
+       "description": "Mulliken_contribution_orbital f",
+      "dtypeStr": "C",
+      "name": "castep_orbital_f",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]     
+    }, {
+       "description": "Mulliken_total_contribution",
+      "dtypeStr": "f",
+      "name": "castep_total_orbital",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]     
+    }, {
+       "description": "Mulliken_charges",
+      "dtypeStr": "C",
+      "name": "castep_mulliken_charge_store",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]       
+     }, {
+       "description": "Mulliken_charges",
+      "dtypeStr": "C",
+      "name": "castep_mulliken_charge",
+      "shape": [],
+      "superNames": [
+        "castep_section_population_analysis"
+      ]         
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_vibrational_frequencies",
@@ -507,6 +588,13 @@
       "name": "castep_section_geom_optimisation_iteration_0",
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "castep_section_population_analysis",
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "-",
