@@ -14,5 +14,75 @@
       "superNames": [
         "section_run"
       ]
-    }]
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "qbox_geometry_atom_label",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_atom_position_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_atom_position_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_atom_position_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "x component of vector of unit cell",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_lattice_vector_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of vector of unit cell",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_lattice_vector_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of vector of unit cell",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_lattice_vector_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }
+]
 }
