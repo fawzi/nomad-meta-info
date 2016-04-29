@@ -83,6 +83,40 @@
         "section_system_description"
       ],
       "units": "m"
+    }, {
+      "description": "plane-wave basis energy cutoff, according to qbox,  it must given in Rydberg units.",
+      "dtypeStr": "f",
+      "name": "qbox_ecut",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "J"
+    }, {
+      "description": "atom dynamics control variable",
+      "dtypeStr": "C",
+      "name": "qbox_atoms_dyn",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "cell dynamics control variable",
+      "dtypeStr": "C",
+      "name": "qbox_cell_dyn",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "wave function dynamics control variable",
+      "dtypeStr": "C",
+      "name": "qbox_wf_dyn",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }
 ]
 }
