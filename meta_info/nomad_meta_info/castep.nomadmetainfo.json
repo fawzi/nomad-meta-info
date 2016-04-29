@@ -391,6 +391,22 @@
         "castep_section_vibrational_frequencies"
       ]
     }, {
+       "description": "Vibration Frequenices (cm-1)",
+      "dtypeStr": "C",
+      "name": "castep_vibrationl_frequencies_store",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
+       "description": "Irreducible representation in the Point Group",
+      "dtypeStr": "C",
+      "name": "castep_ir_store",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
        "description": "Irreducible representation in the Point Group",
       "dtypeStr": "C",
       "name": "castep_ir",
@@ -408,6 +424,38 @@
         "castep_section_vibrational_frequencies"
       ]
     }, {
+       "description": "Raman activity (A**4/amu)",
+      "dtypeStr": "C",
+      "name": "castep_raman_active",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
+       "description": "Number of iterations in phonons",
+      "dtypeStr": "C",
+      "name": "castep_n_iterations_phonons",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
+       "description": "Raman activity (A**4/amu)",
+      "dtypeStr": "C",
+      "name": "castep_raman_activity_store",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
+       "description": "Raman activity (A**4/amu)",
+      "dtypeStr": "C",
+      "name": "castep_raman_active_store",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]
+    }, {
        "description": "IR intensities (D/A)**2/amu",
       "dtypeStr": "C",
       "name": "castep_ir_intensity",
@@ -415,6 +463,14 @@
       "superNames": [
         "castep_section_vibrational_frequencies"
       ]        
+     }, {
+       "description": "IR intensities (D/A)**2/amu",
+      "dtypeStr": "C",
+      "name": "castep_ir_intensity_store",
+      "shape": [],
+      "superNames": [
+        "castep_section_vibrational_frequencies"
+      ]      
      }, {
        "description": "Point group of the crystal (Schoenflies notation)",
       "dtypeStr": "C",
