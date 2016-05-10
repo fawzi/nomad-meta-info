@@ -6,5 +6,109 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {                                                              
+      "description": "compute node",                                            
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_nodename",                                                  
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run"                                                           
+      ]                                                                         
+    }, {                                                              
+      "description": "turbomole_basis_prim_number",                                            
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_basis_prim_number",                                             
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_basis_set"                                                    
+      ]                                                                         
+    }, {                                                              
+      "description": "turbomole_basis_cont_number",                                            
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_basis_cont_number",                                             
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_basis_set"
+      ]                                                                         
+    }, {                                                                        
+      "description": "turbomole_basis_type",                             
+      "dtypeStr": "C",                                                         
+      "name": "turbomole_basis_type",                                    
+      "shape": [],                                                              
+      "superNames": [                                                          
+        "section_basis_set"                                                    
+      ]                                                                         
+    }, {                                                                        
+      "description": "turbomole_tot_primitive_shells",                                    
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_tot_primitive_shells",                                           
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_basis_set"                                                    
+      ]                                                                         
+    }, {                                                                        
+      "description": "turbomole_tot_contracted_shells",                          
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_tot_contracted_shells",                                 
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_basis_set"                                                    
+      ]                                                                         
+    }, {                                                                        
+      "description": "turbomole_tot_cartesian_func",                         
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_tot_cartesian_func",                                
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_basis_set"                                                    
+      ]                                                                         
+    }, {                                                                        
+      "description": "turbomole_tot_scf_basis_func",                            
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_tot_scf_basis_func",                                   
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_basis_set"                                                    
+      ]                                                                         
+    }, {                                                                        
+      "description": "labels of atom",                                          
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_geometry_atom_label",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                                    
+      ]                                                                         
+    }, {                                                                        
+      "description": "x component of atomic position",                          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_geometry_atom_position_x",                              
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ],                                                                        
+      "units": "m"                                                              
+    }, {                                                                        
+      "description": "y component of atomic position",                          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_geometry_atom_position_y",                              
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ],                                                                        
+      "units": "m"                                                              
+    }, {                                                                        
+      "description": "z component of atomic position",                          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_geometry_atom_position_z",                              
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ],                                                                        
+      "units": "m"                                                              
+    }
+  ]
 }
