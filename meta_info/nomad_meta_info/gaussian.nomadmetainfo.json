@@ -1,50 +1,50 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the gaussian parser, all names are expected to start with gaussian",
+  "description": "meta info used by the x_gaussian parser, all names are expected to start with x_gaussian",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ {
-      "description": "label for atoms",
+  "metaInfos": [{ 
+      "description": "atomic number for atoms",
       "dtypeStr": "C",
-      "name": "gaussian_atom_label",
+      "name": "x_gaussian_atomic_number",
       "shape": [],
       "superNames": [
-        "gaussian_section_labels"
-      ]
+        "x_gaussian_section_geometry"
+       ]
     }, {
       "description": "x coordinate for the atoms",
       "dtypeStr": "f",
-      "name": "gaussian_atom_x_coord",
+      "name": "x_gaussian_atom_x_coord",
       "shape": [],
       "superNames": [
-        "gaussian_section_geometry"
+        "x_gaussian_section_geometry"
       ],
       "units": "m"
     }, {
       "description": "y coordinate for the atoms",
       "dtypeStr": "f",
-      "name": "gaussian_atom_y_coord",
+      "name": "x_gaussian_atom_y_coord",
       "shape": [],
       "superNames": [
-        "gaussian_section_geometry"
+        "x_gaussian_section_geometry"
       ],
       "units": "m"
     }, {
       "description": "z coordinate for the atoms",
       "dtypeStr": "f",
-      "name": "gaussian_atom_z_coord",
+      "name": "x_gaussian_atom_z_coord",
       "shape": [],
       "superNames": [
-        "gaussian_section_geometry"
+        "x_gaussian_section_geometry"
       ],
       "units": "m"
     }, {
       "description": "binary file with detailed output information",
       "dtypeStr": "C",
-      "name": "gaussian_chk_file",
+      "name": "x_gaussian_chk_file",
       "shape": [],
       "superNames": [
         "settings_run"
@@ -52,7 +52,7 @@
     }, {
       "description": "total memory for the run",
       "dtypeStr": "C",
-      "name": "gaussian_memory",
+      "name": "x_gaussian_memory",
       "shape": [],
       "superNames": [
         "settings_run"
@@ -60,7 +60,7 @@
     }, {
       "description": "number of processors used",
       "dtypeStr": "C",
-      "name": "gaussian_number_of_processors",
+      "name": "x_gaussian_number_of_processors",
       "shape": [],
       "superNames": [
         "settings_run",
@@ -69,16 +69,17 @@
     }, {
       "description": "section that contains the Cartesian coordinates of the system",
       "kindStr": "type_section",
-      "name": "gaussian_section_geometry",
+      "name": "x_gaussian_section_geometry",
       "superNames": [
         "section_system_description"
       ]
     }, {
-      "description": "section that contains charge, multiplicity and system element labels",
+      "description": "section that contains charge and multiplicity",
       "kindStr": "type_section",
-      "name": "gaussian_section_labels",
+      "name": "x_gaussian_section_chargemult",
       "superNames": [
         "section_system_description"
       ]
-    }]
+    }
+]
 }
