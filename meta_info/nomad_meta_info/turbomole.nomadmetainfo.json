@@ -80,6 +80,15 @@
         "section_system_description"                                                    
       ]                                                                         
     }, {                                                                        
+      "description": "type of the used functional",                                          
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_functional_type",                                  
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    }, {                                                                        
       "description": "x component of atomic position",                          
       "dtypeStr": "f",                                                          
       "name": "turbomole_geometry_atom_position_x",                              
