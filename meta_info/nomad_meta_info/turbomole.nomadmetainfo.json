@@ -88,6 +88,96 @@
       "superNames": [                                                           
         "section_system_description"                                            
       ]                                                                         
+    },{                                                                        
+      "description": "type of the used exchange functional",                             
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_functional_type_exchange",                                      
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "type of the used correlation functional",                    
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_functional_type_correlation",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "type of the used grid integration",                    
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_grid_integration",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "The size of the used grid",                    
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_grid_size",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "Grid points number",                    
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_grid_points_number",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "The radial integration type",                    
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_grid_radial_integration",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "The size of the radial grid",                    
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_grid_radial_gridsize",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "The integration cells",                    
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_grid_integration_cells",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "Type of the partition function used",                    
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_grid_partition_func",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
+    },{                                                                         
+      "description": "Sharpness of the partition function",                    
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_grid_partition_sharpness",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system_description"                                            
+      ]                                                                         
     }, {                                                                        
       "description": "x component of atomic position",                          
       "dtypeStr": "f",                                                          
