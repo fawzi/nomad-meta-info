@@ -6,269 +6,268 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ {                                                              
-      "description": "compute node",                                            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_nodename",                                                  
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run"                                                           
-      ]                                                                         
-    }, {                                                              
-      "description": "turbomole_basis_prim_number",                                            
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_basis_prim_number",                                             
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_basis_set"                                                    
-      ]                                                                         
-    }, {                                                              
-      "description": "turbomole_basis_cont_number",                                            
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_basis_cont_number",                                             
-      "shape": [],                                                              
-      "superNames": [                                                           
+  "metaInfos": [ {
+      "description": "turbomole_basis_cont_number",
+      "dtypeStr": "i",
+      "name": "turbomole_basis_cont_number",
+      "shape": [],
+      "superNames": [
         "section_basis_set"
-      ]                                                                         
-    }, {                                                                        
-      "description": "turbomole_basis_type",                             
-      "dtypeStr": "C",                                                         
-      "name": "turbomole_basis_type",                                    
-      "shape": [],                                                              
-      "superNames": [                                                          
-        "section_basis_set"                                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "turbomole_tot_primitive_shells",                                    
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_tot_primitive_shells",                                           
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_basis_set"                                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "turbomole_tot_contracted_shells",                          
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_tot_contracted_shells",                                 
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_basis_set"                                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "turbomole_tot_cartesian_func",                         
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_tot_cartesian_func",                                
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_basis_set"                                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "turbomole_tot_scf_basis_func",                            
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_tot_scf_basis_func",                                   
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_basis_set"                                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "labels of atom",                                          
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_geometry_atom_label",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "type of the used functional",                                          
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_functional_type",                                  
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                        
-      "description": "type of the used exchange functional",                             
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_functional_type_exchange",                                      
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "type of the used correlation functional",                    
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_functional_type_correlation",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "type of the used grid integration",                    
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_grid_integration",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "The size of the used grid",                    
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_grid_size",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "Grid points number",                    
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_grid_points_number",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "The radial integration type",                    
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_grid_radial_integration",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "The size of the radial grid",                    
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_grid_radial_gridsize",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "The integration cells",                    
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_grid_integration_cells",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "Type of the partition function used",                    
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_grid_partition_func",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    },{                                                                         
-      "description": "Sharpness of the partition function",                    
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_grid_partition_sharpness",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ]                                                                         
-    }, {                                                                        
-      "description": "x component of atomic position",                          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_geometry_atom_position_x",                              
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ],                                                                        
-      "units": "m"                                                              
-    }, {                                                                        
-      "description": "y component of atomic position",                          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_geometry_atom_position_y",                              
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ],                                                                        
-      "units": "m"                                                              
-    }, {                                                                        
-      "description": "z component of atomic position",                          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_geometry_atom_position_z",                              
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system_description"                                            
-      ],                                                                        
-      "units": "m"                                                              
-    }, {                                                                        
-      "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",                          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_energy_scf_damping",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_scf_iteration"                                            
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Number of iteration",                          
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_iteration_number",                             
-      "repeats": false,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_scf_iteration"                                            
-      ]                                                                        
-    }, {                                                                        
-      "description": "1e-ENERGY",          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_energy_one_scf_iteration",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"   
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "1e-ENERGY",          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_energy_two_scf_iteration",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"   
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Norm of the total energy at each iteration",          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_energy_norm_scf_iteration",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"   
-      ]                                                                        
-    }, {                                                                        
-      "description": "Tolerance of the total energy at each iteration",              
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_energy_tolerance_scf_iteration",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                          
-        "energy_component",                                                     
-        "section_scf_iteration"    
-      ]                                                                        
-    }
-  ]
+      ]
+    }, {
+      "description": "turbomole_basis_prim_number",
+      "dtypeStr": "i",
+      "name": "turbomole_basis_prim_number",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "turbomole_basis_type",
+      "dtypeStr": "C",
+      "name": "turbomole_basis_type",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "Norm of the total energy at each iteration",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_norm_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "1e-ENERGY",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_one_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_scf_damping",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Tolerance of the total energy at each iteration",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_tolerance_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "1e-ENERGY",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_two_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "type of the used correlation functional",
+      "dtypeStr": "C",
+      "name": "turbomole_functional_type_correlation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "type of the used exchange functional",
+      "dtypeStr": "C",
+      "name": "turbomole_functional_type_exchange",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "type of the used functional",
+      "dtypeStr": "C",
+      "name": "turbomole_functional_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "turbomole_geometry_atom_label",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_position_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_position_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_position_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ],
+      "units": "m"
+    }, {
+      "description": "The integration cells",
+      "dtypeStr": "i",
+      "name": "turbomole_grid_integration_cells",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "type of the used grid integration",
+      "dtypeStr": "C",
+      "name": "turbomole_grid_integration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Type of the partition function used",
+      "dtypeStr": "C",
+      "name": "turbomole_grid_partition_func",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Sharpness of the partition function",
+      "dtypeStr": "i",
+      "name": "turbomole_grid_partition_sharpness",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Grid points number",
+      "dtypeStr": "i",
+      "name": "turbomole_grid_points_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "The size of the radial grid",
+      "dtypeStr": "i",
+      "name": "turbomole_grid_radial_gridsize",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "The radial integration type",
+      "dtypeStr": "C",
+      "name": "turbomole_grid_radial_integration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "The size of the used grid",
+      "dtypeStr": "i",
+      "name": "turbomole_grid_size",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system_description"
+      ]
+    }, {
+      "description": "Number of iteration",
+      "dtypeStr": "i",
+      "name": "turbomole_iteration_number",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "compute node",
+      "dtypeStr": "C",
+      "name": "turbomole_nodename",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "turbomole_tot_cartesian_func",
+      "dtypeStr": "i",
+      "name": "turbomole_tot_cartesian_func",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "turbomole_tot_contracted_shells",
+      "dtypeStr": "i",
+      "name": "turbomole_tot_contracted_shells",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "turbomole_tot_primitive_shells",
+      "dtypeStr": "i",
+      "name": "turbomole_tot_primitive_shells",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }, {
+      "description": "turbomole_tot_scf_basis_func",
+      "dtypeStr": "i",
+      "name": "turbomole_tot_scf_basis_func",
+      "shape": [],
+      "superNames": [
+        "section_basis_set"
+      ]
+    }]
 }
