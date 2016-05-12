@@ -208,6 +208,67 @@
         "section_system_description"                                            
       ],                                                                        
       "units": "m"                                                              
+    }, {                                                                        
+      "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",                          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_energy_scf_damping",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_scf_iteration"                                            
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Number of iteration",                          
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_iteration_number",                             
+      "repeats": false,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_scf_iteration"                                            
+      ]                                                                        
+    }, {                                                                        
+      "description": "1e-ENERGY",          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_energy_one_scf_iteration",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"   
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "1e-ENERGY",          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_energy_two_scf_iteration",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"   
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Norm of the total energy at each iteration",          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_energy_norm_scf_iteration",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"   
+      ]                                                                        
+    }, {                                                                        
+      "description": "Tolerance of the total energy at each iteration",              
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_energy_tolerance_scf_iteration",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                          
+        "energy_component",                                                     
+        "section_scf_iteration"    
+      ]                                                                        
     }
   ]
 }
