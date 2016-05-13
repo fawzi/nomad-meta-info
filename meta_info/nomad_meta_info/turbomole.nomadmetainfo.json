@@ -238,6 +238,15 @@
         "section_run"
       ]
     }, {
+      "description": "Version of the program that was used. Should contain either the official version name or the referenze hashtag of a git repository as well as the location of the repository.",
+      "dtypeStr": "C",
+      "name": "turbomole_program_version",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "program_info"
+      ]
+    }, {
       "description": "turbomole_tot_cartesian_func",
       "dtypeStr": "i",
       "name": "turbomole_tot_cartesian_func",
