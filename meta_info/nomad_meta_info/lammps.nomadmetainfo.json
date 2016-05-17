@@ -9,7 +9,7 @@
   "metaInfos": [ {
       "description": "PBC image flag index.",
       "dtypeStr": "i",
-      "name": "atom_position_image_index",
+      "name": "atom_positions_image_index",
       "shape": [
         "number_of_atoms",
         3
@@ -20,7 +20,7 @@
     }, {
       "description": "Position of the atoms in a scaled format [0, 1].",
       "dtypeStr": "f",
-      "name": "atom_position_scaled",
+      "name": "atom_positions_scaled",
       "shape": [
         "number_of_atoms",
         3
@@ -31,7 +31,7 @@
     }, {
       "description": "Position of the atoms wrapped back to the periodic box.",
       "dtypeStr": "f",
-      "name": "atom_position_wrapped",
+      "name": "atom_positions_wrapped",
       "shape": [
         "number_of_atoms",
         3

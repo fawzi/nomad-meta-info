@@ -21,7 +21,7 @@
     }, {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
-      "name": "castep_atom_position",
+      "name": "castep_atom_positions",
       "repeats": true,
       "shape": [
         "number_of_atoms",
@@ -33,7 +33,7 @@
     }, {
       "description": "cutoff at iteration 0 of geometry optimisation",
       "dtypeStr": "C",
-      "name": "castep_basis_set_plan_wave_cutoff_iteration_0",
+      "name": "castep_basis_set_planewave_cutoff_iteration_0",
       "shape": [],
       "superNames": [
         "section_run"
@@ -41,7 +41,7 @@
     }, {
       "description": "Temporary storing plane wave cutoff as string",
       "dtypeStr": "C",
-      "name": "castep_basis_set_plan_wave_cutoff",
+      "name": "castep_basis_set_planewave_cutoff",
       "shape": [],
       "superNames": [
         "section_basis_set_cell_dependent"
@@ -60,7 +60,7 @@
       "name": "castep_cell_angle_alpha_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position_optim"
+        "castep_section_atom_positions_optim"
       ]
     }, {
       "description": "Simulation cell angle alpha",
@@ -68,7 +68,7 @@
       "name": "castep_cell_angle_alpha",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "Simulation cell angle beta",
@@ -76,7 +76,7 @@
       "name": "castep_cell_angle_beta_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position_optim"
+        "castep_section_atom_positions_optim"
       ]
     }, {
       "description": "Simulation cell angle beta",
@@ -84,7 +84,7 @@
       "name": "castep_cell_angle_beta",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "Simulation cell angle gamma",
@@ -92,7 +92,7 @@
       "name": "castep_cell_angle_gamma_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position_optim"
+        "castep_section_atom_positions_optim"
       ]
     }, {
       "description": "Simulation cell angle gamma",
@@ -100,7 +100,7 @@
       "name": "castep_cell_angle_gamma",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "a unit cell edge length",
@@ -108,7 +108,7 @@
       "name": "castep_cell_length_a_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position_optim"
+        "castep_section_atom_positions_optim"
       ]
     }, {
       "description": "a unit cell edge length",
@@ -116,7 +116,7 @@
       "name": "castep_cell_length_a",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "b unit cell edge length",
@@ -124,7 +124,7 @@
       "name": "castep_cell_length_b_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position_optim"
+        "castep_section_atom_positions_optim"
       ]
     }, {
       "description": "b unit cell edge length",
@@ -132,7 +132,7 @@
       "name": "castep_cell_length_b",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "c unit cell edge length",
@@ -140,7 +140,7 @@
       "name": "castep_cell_length_c_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position_optim"
+        "castep_section_atom_positions_optim"
       ]
     }, {
       "description": "c unit cell edge length",
@@ -148,7 +148,7 @@
       "name": "castep_cell_length_c",
       "shape": [],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "Temporay storage for cell vectors",
@@ -403,7 +403,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_optimised_atom_label",
+      "name": "castep_optimised_atom_labels",
       "shape": [
         "number_of_atoms"
       ],
@@ -413,7 +413,7 @@
     }, {
       "description": "Storing atomic optimised positions in fractional coordinates",
       "dtypeStr": "f",
-      "name": "castep_optimised_atom_position",
+      "name": "castep_optimised_atom_positions",
       "repeats": true,
       "shape": [
         "number_of_atoms",
@@ -557,14 +557,14 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_position_optim",
+      "name": "castep_section_atom_positions_optim",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_position",
+      "name": "castep_section_atom_positions",
       "superNames": [
         "section_system"
       ]
@@ -766,7 +766,7 @@
     }, {
       "description": "Temporary storing atom labels",
       "dtypeStr": "C",
-      "name": "castep_store_atom_label",
+      "name": "castep_store_atom_labels",
       "shape": [],
       "superNames": [
         "section_system"
@@ -790,7 +790,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_atom_position",
+      "name": "castep_store_atom_positions",
       "shape": [],
       "superNames": [
         "section_system"
@@ -838,7 +838,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_optimised_atom_label",
+      "name": "castep_store_optimised_atom_labels",
       "shape": [],
       "superNames": [
         "section_system"
@@ -846,7 +846,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_optimised_atom_position",
+      "name": "castep_store_optimised_atom_positions",
       "shape": [],
       "superNames": [
         "section_system"

@@ -112,7 +112,7 @@
     }, {
       "description": "labels of atom",
       "dtypeStr": "C",
-      "name": "turbomole_geometry_atom_label",
+      "name": "turbomole_geometry_atom_labels",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -121,7 +121,7 @@
     }, {
       "description": "x component of atomic position",
       "dtypeStr": "f",
-      "name": "turbomole_geometry_atom_position_x",
+      "name": "turbomole_geometry_atom_positions_x",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -131,7 +131,7 @@
     }, {
       "description": "y component of atomic position",
       "dtypeStr": "f",
-      "name": "turbomole_geometry_atom_position_y",
+      "name": "turbomole_geometry_atom_positions_y",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -141,7 +141,7 @@
     }, {
       "description": "z component of atomic position",
       "dtypeStr": "f",
-      "name": "turbomole_geometry_atom_position_z",
+      "name": "turbomole_geometry_atom_positions_z",
       "repeats": true,
       "shape": [],
       "superNames": [

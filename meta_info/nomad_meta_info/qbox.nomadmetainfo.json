@@ -125,7 +125,7 @@
     }, {
       "description": "labels of atom",
       "dtypeStr": "C",
-      "name": "qbox_geometry_atom_label",
+      "name": "qbox_geometry_atom_labels",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -134,7 +134,7 @@
     }, {
       "description": "x component of atomic position",
       "dtypeStr": "f",
-      "name": "qbox_geometry_atom_position_x",
+      "name": "qbox_geometry_atom_positions_x",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -144,7 +144,7 @@
     }, {
       "description": "y component of atomic position",
       "dtypeStr": "f",
-      "name": "qbox_geometry_atom_position_y",
+      "name": "qbox_geometry_atom_positions_y",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -154,7 +154,7 @@
     }, {
       "description": "z component of atomic position",
       "dtypeStr": "f",
-      "name": "qbox_geometry_atom_position_z",
+      "name": "qbox_geometry_atom_positions_z",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -194,7 +194,7 @@
     }, {
       "description": "x component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "qbox_geometry_MLWF_atom_position_x",
+      "name": "qbox_geometry_MLWF_atom_positions_x",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -204,7 +204,7 @@
     }, {
       "description": "y component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "qbox_geometry_MLWF_atom_position_y",
+      "name": "qbox_geometry_MLWF_atom_positions_y",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -214,7 +214,7 @@
     }, {
       "description": "z component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "qbox_geometry_MLWF_atom_position_z",
+      "name": "qbox_geometry_MLWF_atom_positions_z",
       "repeats": true,
       "shape": [],
       "superNames": [

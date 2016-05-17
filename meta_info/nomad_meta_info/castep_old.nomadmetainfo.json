@@ -9,7 +9,7 @@
   "metaInfos": [ {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
-      "name": "castep_atom_position",
+      "name": "castep_atom_positions",
       "repeats": true,
       "shape": [
         "number_of_atoms",
@@ -37,7 +37,7 @@
     }, {
       "description": "Temporary storing plane wave cutoff as string",
       "dtypeStr": "C",
-      "name": "castep_basis_set_plan_wave_cutoff",
+      "name": "castep_basis_set_planewave_cutoff",
       "shape": [],
       "superNames": [
         "section_basis_set_cell_dependent"
@@ -50,7 +50,7 @@
         ""
       ],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "Simulation cell angle beta",
@@ -60,7 +60,7 @@
         ""
       ],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "Simulation cell angle gamma",
@@ -70,7 +70,7 @@
         ""
       ],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "a unit cell edge length",
@@ -80,7 +80,7 @@
         ""
       ],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "b unit cell edge length",
@@ -90,7 +90,7 @@
         ""
       ],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "c unit cell edge length",
@@ -100,7 +100,7 @@
         ""
       ],
       "superNames": [
-        "castep_section_atom_position"
+        "castep_section_atom_positions"
       ]
     }, {
       "description": "Temporay storage for cell vectors",
@@ -216,7 +216,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_position",
+      "name": "castep_section_atom_positions",
       "superNames": [
         "section_system"
       ]
@@ -287,7 +287,7 @@
     }, {
       "description": "Temporary storing atom labels",
       "dtypeStr": "C",
-      "name": "castep_store_atom_label",
+      "name": "castep_store_atom_labels",
       "shape": [],
       "superNames": [
         "section_system"
@@ -295,7 +295,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_atom_position",
+      "name": "castep_store_atom_positions",
       "shape": [],
       "superNames": [
         "section_system"
