@@ -222,17 +222,16 @@
         "section_atomic_multipoles"
       ]
     }, {
-      "description": "$k$-dependent energies of the electronic bands (electronic band structure). This is a fourth-order tensor, with one dimension used for the spin channels, one for the $k$ point segments (e.g., Gamma-L, the labels are specified in band_segm_labels), one for the $k$ points for each segment, and one for the eigenvalue sequence.",
+      "description": "$k$-dependent energies of the electronic band segment (electronic band structure). This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
         "number_of_spin_channels",
-        "number_of_k_point_segments",
         "number_of_k_points_per_segment",
         "number_of_eigen_values"
       ],
       "superNames": [
-        "section_k_band"
+        "section_k_band_segment"
       ],
       "units": "J"
     }, {
@@ -240,48 +239,44 @@
       "dtypeStr": "f",
       "name": "band_k_points",
       "shape": [
-        "number_of_k_point_segments",
         "number_of_k_points_per_segment",
         3
       ],
       "superNames": [
-        "section_k_band"
+        "section_k_band_segment"
       ]
     }, {
-      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this fourth-order tensor are the same as for the tensor in band_energies",
+      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies",
       "dtypeStr": "f",
       "name": "band_occupations",
       "shape": [
         "number_of_spin_channels",
-        "number_of_k_point_segments",
         "number_of_k_points_per_segment",
         "number_of_eigen_values"
       ],
       "superNames": [
-        "section_k_band"
+        "section_k_band_segment"
       ]
     }, {
-      "description": "Start and end labels of the points in the segments (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
+      "description": "Start and end labels of the points in the segment (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
       "dtypeStr": "C",
       "name": "band_segm_labels",
       "shape": [
-        "number_of_k_point_segments",
         2
       ],
       "superNames": [
-        "section_k_band"
+        "section_k_band_segment"
       ]
     }, {
-      "description": "Fractional coordinates of the start and end point (in the basis of the reciprocal lattice vectors) of the segments sampled in the $k$ space. The conventional symbols (e.g., Gamma, K, L) of the same points are given in band_segm_labels",
+      "description": "Fractional coordinates of the start and end point (in the basis of the reciprocal lattice vectors) of the segment sampled in the $k$ space. The conventional symbols (e.g., Gamma, K, L) of the same points are given in band_segm_labels",
       "dtypeStr": "f",
       "name": "band_segm_start_end",
       "shape": [
-        "number_of_k_point_segments",
         2,
         3
       ],
       "superNames": [
-        "section_k_band"
+        "section_k_band_segment"
       ]
     }, {
       "description": "Azimuthal quantum number ($l$) values (of the angular part given by the spherical harmonic $Y_{lm}$) of the atom-centered basis function defined in the current section_basis_set_atom_centered.",
@@ -1588,22 +1583,13 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Number of segments in the $k$ space.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_k_point_segments",
-      "shape": [],
-      "superNames": [
-        "section_k_band"
-      ]
-    }, {
-      "description": "Number of $k$ points in each segment of the band structure.",
+      "description": "Number of $k$ points in the segment of the band structure.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_k_points_per_segment",
       "shape": [],
       "superNames": [
-        "section_k_band"
+        "section_k_band_segment"
       ]
     }, {
       "description": "Number of different *kinds* of radial basis functions in this section_basis_set_atom_centered. Specifically, basis functions with the same $n$ and $l$ quantum numbers are grouped in sets. Each set counts as one *kind*.",
@@ -2008,7 +1994,15 @@
         "section_run"
       ]
     }, {
-      "description": "Section collecting the information on a $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways (here called segments) in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as fourth-order tensors: one dimension for the spin channels, one for the list of $k$ point segments (e.g., Gamma-L, the labels for each segment are specified in band_segm_labels), one for the sequence of $k$ points for each segment (the same number of $k$-point per segment is assumed and this number is given in n_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively.",
+      "description": "Section collecting the information on a $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in n_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
+      "kindStr": "type_section",
+      "name": "section_k_band_segment",
+      "repeats": true,
+      "superNames": [
+        "section_k_band"
+      ]
+    }, {
+      "description": "Section collecting the information on a $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways in the $k$ (reciprocal) space, which are stored in section_k_band_segment. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues.",
       "kindStr": "type_section",
       "name": "section_k_band",
       "repeats": true,
