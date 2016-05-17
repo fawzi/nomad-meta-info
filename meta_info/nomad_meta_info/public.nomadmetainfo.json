@@ -556,6 +556,15 @@
       ],
       "units": "J"
     }, {
+      "description": "Non-unique string identifying the used electronic structure method. It is not unique in the sense that two calculations with the same electronic_structure_method string may have not been performed with exactly the same method. The allowed strings are given in the [electronic structure method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/electronic-structure-method).",
+      "dtypeStr": "C",
+      "name": "electronic_structure_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_XC"
+      ]
+    }, {
       "description": "Correlation (C) energy, using XC_functional.",
       "dtypeStr": "f",
       "name": "energy_C",
@@ -1767,15 +1776,6 @@
         "parsing_message_info"
       ]
     }, {
-      "description": "Non-unique string identifying the used Post Hartree-Fock method. It is not unique in the sense that two calculations with the same post_hartree_fock_method string may have not been performed with exactly the same method. A standardized, unique identifier for Post Hartree-Fock method is still not available in this verison of Meta Info. The allowed strings are: full-CI; CCS,CCS(D), CCSD, CCSD(T), CCSDT(Q); MP2, MP3, MP4; G0W0, scGW; MCSCF,CASSCF,CASPT2,MRCISD. The list should be extended or improved in particular with respect to the multi reference or local methods. If the value is absent or '', then no post hartree_fock method has been used.",
-      "dtypeStr": "C",
-      "name": "post_hartree_fock_method",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "settings_post_hartree_fock"
-      ]
-    }, {
       "description": "Reference from the present sequence of frames (i.e., trajectory; a frame is one section_single_configuration_calculation), to the previous sequence. If not given, a start from an initial configuration is assumed.",
       "dtypeStr": "r",
       "name": "previous_sequence_ref",
@@ -2764,7 +2764,7 @@
       ]
     }, {
       "derived": true,
-      "description": "String identifying the exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. It is built by joining the values in the following order: post_hartree_fock_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. More details on the construction of the string are given in the [XC\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-method-current). If the method defined in this section_method is perturbative, this XC_method_current contains only the perturbative method, not the starting point (e.g. the DFT XC functional used as a starting point for a RPA perturbative calculation). In this case, the string that contains both the perturbative and starting point method is stored in XC_method.",
+      "description": "String identifying the exchange correlation (XC) method used for energy_XC and related quantities in standarized short form. It is built by joining the values in the following order: electronic_structure_method '_' XC_functional '_' self_interaction_correction_method '_' van_der_Waals_method '_' relativity_method. More details on the construction of the string are given in the [XC\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-method-current). If the method defined in this section_method is perturbative, this XC_method_current contains only the perturbative method, not the starting point (e.g. the DFT XC functional used as a starting point for a RPA perturbative calculation). In this case, the string that contains both the perturbative and starting point method is stored in XC_method.",
       "dtypeStr": "C",
       "name": "XC_method_current",
       "repeats": false,
