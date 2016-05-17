@@ -16,7 +16,7 @@
         3
       ],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
@@ -40,7 +40,7 @@
       "name": "castep_basis_set_plan_wave_cutoff",
       "shape": [],
       "superNames": [
-        "section_basis_set_cell_associated"
+        "section_basis_set_cell_dependent"
       ]
     }, {
       "description": "Simulation cell angle alpha",
@@ -211,21 +211,21 @@
       "kindStr": "type_section",
       "name": "castep_section_atom_forces",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_atom_position",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_cell",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
@@ -253,14 +253,14 @@
       "kindStr": "type_section",
       "name": "castep_section_k_band_group",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "castep_section_k_band",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
@@ -282,7 +282,7 @@
       "name": "castep_store_atom_forces",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Temporary storing atom labels",
@@ -290,7 +290,7 @@
       "name": "castep_store_atom_label",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Temporary storing atomic positions",
@@ -298,7 +298,7 @@
       "name": "castep_store_atom_position",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Temporary storing eigenvalues",

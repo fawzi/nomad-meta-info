@@ -7,90 +7,13 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "compute node",
-      "dtypeStr": "C",
-      "name": "qbox_nodename",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "labels of atom",
-      "dtypeStr": "C",
-      "name": "qbox_geometry_atom_label",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ]
-    }, {
-      "description": "x component of atomic position",
-      "dtypeStr": "f",
-      "name": "qbox_geometry_atom_position_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "y component of atomic position",
-      "dtypeStr": "f",
-      "name": "qbox_geometry_atom_position_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "z component of atomic position",
-      "dtypeStr": "f",
-      "name": "qbox_geometry_atom_position_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "x component of vector of unit cell",
-      "dtypeStr": "f",
-      "name": "qbox_geometry_lattice_vector_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "y component of vector of unit cell",
-      "dtypeStr": "f",
-      "name": "qbox_geometry_lattice_vector_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
-      "description": "z component of vector of unit cell",
-      "dtypeStr": "f",
-      "name": "qbox_geometry_lattice_vector_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system_description"
-      ],
-      "units": "m"
-    }, {
       "description": "x component of atomic force",
       "dtypeStr": "f",
       "name": "qbox_atom_force_x",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ],
       "units": "N"
     }, {
@@ -100,7 +23,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ],
       "units": "N"
     }, {
@@ -110,83 +33,164 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ],
       "units": "N"
     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "qbox_section_stress_tensor",
+      "description": "atom dynamics control variable",
+      "dtypeStr": "C",
+      "name": "qbox_atoms_dyn",
+      "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_method"
       ]
     }, {
-      "description": "xx component of stress tensor",
-      "dtypeStr": "f",
-      "name": "qbox_stress_tensor_xx",
-      "repeats": true,
+      "description": "cell dynamics control variable",
+      "dtypeStr": "C",
+      "name": "qbox_cell_dyn",
       "shape": [],
       "superNames": [
-        "qbox_section_stress_tensor"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "yy component of stress tensor",
-      "dtypeStr": "f",
-      "name": "qbox_stress_tensor_yy",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_stress_tensor"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "zz component of stress tensor",
-      "dtypeStr": "f",
-      "name": "qbox_stress_tensor_zz",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_stress_tensor"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "xy component of stress tensor",
-      "dtypeStr": "f",
-      "name": "qbox_stress_tensor_xy",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_stress_tensor"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "yz component of stress tensor",
-      "dtypeStr": "f",
-      "name": "qbox_stress_tensor_yz",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_stress_tensor"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "xz component of stress tensor",
-      "dtypeStr": "f",
-      "name": "qbox_stress_tensor_xz",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_stress_tensor"
-      ],
-      "units": "Pa"
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "qbox_section_MLWF",
-      "superNames": [
-        "section_run"
+        "section_method"
       ]
+    }, {
+      "description": "x component of dipole",
+      "dtypeStr": "f",
+      "name": "qbox_dipole_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "qbox_section_dipole"
+      ],
+      "units": "electron Bohr"
+    }, {
+      "description": "y component of dipole",
+      "dtypeStr": "f",
+      "name": "qbox_dipole_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "qbox_section_dipole"
+      ],
+      "units": "electron Bohr"
+    }, {
+      "description": "z component of dipole",
+      "dtypeStr": "f",
+      "name": "qbox_dipole_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "qbox_section_dipole"
+      ],
+      "units": "electron Bohr"
+    }, {
+      "description": "plane-wave basis energy cutoff, according to qbox,  it must given in Rydberg units.",
+      "dtypeStr": "f",
+      "name": "qbox_ecut",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "J"
+    }, {
+      "description": "x component of efield",
+      "dtypeStr": "f",
+      "name": "qbox_efield_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Hartree/(electron*Bohr)"
+    }, {
+      "description": "y component of efield",
+      "dtypeStr": "f",
+      "name": "qbox_efield_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Hartree/(electron*Bohr)"
+    }, {
+      "description": "z component of efield",
+      "dtypeStr": "f",
+      "name": "qbox_efield_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Hartree/(electron*Bohr)"
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "qbox_geometry_atom_label",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_atom_position_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_atom_position_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_atom_position_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "x component of vector of unit cell",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_lattice_vector_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of vector of unit cell",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_lattice_vector_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of vector of unit cell",
+      "dtypeStr": "f",
+      "name": "qbox_geometry_lattice_vector_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
     }, {
       "description": "x component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
@@ -228,79 +232,14 @@
       ],
       "units": "m"
     }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "qbox_section_efield",
+      "description": "weight k point",
+      "dtypeStr": "f",
+      "name": "qbox_k_point_weight",
+      "repeats": true,
+      "shape": [],
       "superNames": [
-        "section_run"
+        "section_method"
       ]
-    }, {
-      "description": "x component of efield",
-      "dtypeStr": "f",
-      "name": "qbox_efield_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ],
-      "units": "Hartree/(electron*Bohr)" 
-    }, {
-      "description": "y component of efield",
-      "dtypeStr": "f",
-      "name": "qbox_efield_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ],
-      "units": "Hartree/(electron*Bohr)" 
-    }, {
-      "description": "z component of efield",
-      "dtypeStr": "f",
-      "name": "qbox_efield_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ],
-      "units": "Hartree/(electron*Bohr)" 
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "qbox_section_dipole",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "x component of dipole",
-      "dtypeStr": "f",
-      "name": "qbox_dipole_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_dipole"
-      ],
-      "units": "electron Bohr" 
-    }, {
-      "description": "y component of dipole",
-      "dtypeStr": "f",
-      "name": "qbox_dipole_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_dipole"
-      ],
-      "units": "electron Bohr" 
-    }, {
-      "description": "z component of dipole",
-      "dtypeStr": "f",
-      "name": "qbox_dipole_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "qbox_section_dipole"
-      ],
-      "units": "electron Bohr" 
     }, {
       "description": "x component of vector of k point",
       "dtypeStr": "f",
@@ -329,40 +268,101 @@
         "section_method"
       ]
     }, {
-      "description": "weight k point",
-      "dtypeStr": "f",
-      "name": "qbox_k_point_weight",
-      "repeats": true,
+      "description": "compute node",
+      "dtypeStr": "C",
+      "name": "qbox_nodename",
       "shape": [],
       "superNames": [
-        "section_method"
+        "section_run"
       ]
     }, {
-      "description": "plane-wave basis energy cutoff, according to qbox,  it must given in Rydberg units.",
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "qbox_section_dipole",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "qbox_section_efield",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "qbox_section_MLWF",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "qbox_section_stress_tensor",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "xx component of stress tensor",
       "dtypeStr": "f",
-      "name": "qbox_ecut",
+      "name": "qbox_stress_tensor_xx",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_method"
+        "qbox_section_stress_tensor"
       ],
-      "units": "J"
+      "units": "Pa"
     }, {
-      "description": "atom dynamics control variable",
-      "dtypeStr": "C",
-      "name": "qbox_atoms_dyn",
+      "description": "xy component of stress tensor",
+      "dtypeStr": "f",
+      "name": "qbox_stress_tensor_xy",
+      "repeats": true,
       "shape": [],
       "superNames": [
-        "section_method"
-      ]
+        "qbox_section_stress_tensor"
+      ],
+      "units": "Pa"
     }, {
-      "description": "cell dynamics control variable",
-      "dtypeStr": "C",
-      "name": "qbox_cell_dyn",
+      "description": "xz component of stress tensor",
+      "dtypeStr": "f",
+      "name": "qbox_stress_tensor_xz",
+      "repeats": true,
       "shape": [],
       "superNames": [
-        "section_method"
-      ]
+        "qbox_section_stress_tensor"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "yy component of stress tensor",
+      "dtypeStr": "f",
+      "name": "qbox_stress_tensor_yy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "qbox_section_stress_tensor"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "yz component of stress tensor",
+      "dtypeStr": "f",
+      "name": "qbox_stress_tensor_yz",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "qbox_section_stress_tensor"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "zz component of stress tensor",
+      "dtypeStr": "f",
+      "name": "qbox_stress_tensor_zz",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "qbox_section_stress_tensor"
+      ],
+      "units": "Pa"
     }, {
       "description": "wave function dynamics control variable",
       "dtypeStr": "C",
@@ -371,6 +371,5 @@
       "superNames": [
         "section_method"
       ]
-    }
-]
+    }]
 }
