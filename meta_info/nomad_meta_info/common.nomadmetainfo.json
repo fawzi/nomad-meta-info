@@ -1,6 +1,6 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "common meta info, not specific to any code",
+  "description": "Common meta info, not specific to any code",
   "dependencies": [ {
       "relativePath": "public.nomadmetainfo.json"
     }],
@@ -103,6 +103,37 @@
         "section_constraint"
       ]
     }, {
+      "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
+      "dtypeStr": "f",
+      "name": "energy_C_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_C"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the self consistent density of the target functional, scaled accordingly to the mixing parameter.",
+      "dtypeStr": "f",
+      "name": "energy_X_mGGA_scaled",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
+      "dtypeStr": "f",
+      "name": "energy_X_mGGA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_type_X"
+      ],
+      "units": "J"
+    }, {
       "description": "List of the indexes involved in this interaction. The fist atom has index 1, the last atom index number_of_topology_atoms.",
       "dtypeStr": "i",
       "name": "interaction_atoms",
@@ -128,6 +159,51 @@
       "shape": [],
       "superNames": [
         "section_interaction"
+      ]
+    }, {
+      "description": "Reference to an atom-centered basis set defined in section_basis_set_atom_centered and to the atom kind as defined in section_method_atom_kind.",
+      "dtypeStr": "r",
+      "name": "mapping_section_method_basis_set_atom_centered",
+      "referencedSections": [
+        "section_method_atom_kind",
+        "section_basis_set_atom_centered"
+      ],
+      "shape": [
+        "number_of_basis_sets_atom_centered",
+        2
+      ],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
+      "description": "Reference to a cell-associated basis set.",
+      "dtypeStr": "r",
+      "name": "mapping_section_method_basis_set_cell_associated",
+      "referencedSections": [
+        "section_basis_set_cell_associated"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
+      "description": "String describing the use of the basis set, i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
+      "dtypeStr": "C",
+      "name": "method_basis_set_kind",
+      "shape": [],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
+      "description": "Reference to the topology and force fields to be used.",
+      "dtypeStr": "r",
+      "name": "method_to_topology_ref",
+      "referencedSections": [
+        "section_topology"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last index is number_of_atoms_in_molecule.",
@@ -157,7 +233,7 @@
         "section_molecule_constraint"
       ]
     }, {
-      "description": "List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_molecule.",
+      "description": "List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_.",
       "dtypeStr": "i",
       "name": "molecule_interaction_atoms",
       "shape": [
@@ -250,6 +326,15 @@
         "section_molecule_interaction"
       ]
     }, {
+      "description": "String describing the use of the basis set, i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_basis_sets_atom_centered",
+      "shape": [],
+      "superNames": [
+        "section_method_basis_set"
+      ]
+    }, {
       "description": "Number of constraints of this type.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -327,6 +412,13 @@
         "settings_interaction"
       ]
     }, {
+      "description": "This section contains the definition of the basis sets that are defined independently of the atomic configuration.",
+      "kindStr": "type_section",
+      "name": "section_method_basis_set",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Section describing a constraint between atoms within a molecule.",
       "kindStr": "type_section",
       "name": "section_molecule_constraint",
@@ -369,12 +461,29 @@
       "name": "settings_constraint",
       "superNames": []
     }, {
+      "description": "Some parameters that describe a bonded interaction.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_interaction",
+      "superNames": []
+    }, {
       "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
       "dtypeStr": "C",
       "name": "topology_force_field_name",
       "shape": [],
       "superNames": [
         "section_topology"
+      ]
+    }, {
+      "description": "Reference to the topology used for this system; if not given, the trivial topology should be assumed.",
+      "dtypeStr": "r",
+      "name": "topology_ref",
+      "referencedSections": [
+        "section_topology"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     }]
 }

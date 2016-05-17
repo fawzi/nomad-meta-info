@@ -81,5 +81,40 @@
       "superNames": [
         "section_method"
       ]
+    }, {
+      "description": "Section modelling the MD topology",
+      "kindStr": "type_section",
+      "name": "dl_poly_section_md_topology",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of molecular types in topology",
+      "dtypeStr": "i",
+      "name": "dl_poly_md_molecular_types",
+      "superNames": [
+        "dl_poly_section_md_topology"
+      ]
+    }, {
+      "description": "Section to store molecule type information",
+      "kindStr": "type_section",
+      "name": "dl_poly_section_md_molecule_type",
+      "superNames": [
+        "dl_poly_section_md_topology"
+      ]
+    }, {
+      "description": "Molecule type id",
+      "dtypeStr": "i",
+      "name": "dl_poly_md_molecule_type_id",
+      "superNames": [
+        "dl_poly_section_md_molecule_type"
+      ]
+    }, {
+      "description": "Molecule type name",
+      "dtypeStr": "C",
+      "name": "dl_poly_md_molecule_type_name",
+      "superNames": [
+        "dl_poly_section_md_molecule_type"
+      ]
     }]
 }

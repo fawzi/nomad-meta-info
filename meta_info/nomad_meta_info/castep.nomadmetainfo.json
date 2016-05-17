@@ -601,7 +601,7 @@
       "kindStr": "type_section",
       "name": "castep_section_cell",
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "-",
@@ -793,7 +793,7 @@
       "name": "castep_number_of_electrons",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_system"
       ]
     }, {
       "description": "Ramen_tensor",
@@ -813,7 +813,7 @@
       "name": "castep_store_atom_label",
       "shape": [],
       "superNames": [
-        "section_system_description"
+        "section_system"
       ]
     }, {
       "description": "Temporary storing atom mass",
@@ -854,6 +854,14 @@
       "shape": [],
       "superNames": [
         "castep_section_eigenvalues"
+      ]
+    }, {
+      "description": "Temporary storing plane wave cutoff as string",
+      "dtypeStr": "C",
+      "name": "castep_basis_set_plan_wave_cutoff",
+      "shape": [],
+      "superNames": [
+       "section_basis_set_cell_dependent" 
       ]
     }, {
       "description": "-",
