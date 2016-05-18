@@ -250,6 +250,41 @@
         "x_cp2k_section_total_numbers"
       ]
     }, {
+      "description": "The eigenvalues of the stress tensor from biggest to lowest.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_eigenvalues",
+      "shape": [3],
+      "superNames": [
+        "section_stress_tensor"
+      ],
+      "unit": "Pa"
+    }, {
+      "description": "The determinant of the stress tensor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_determinant",
+      "shape": [],
+      "superNames": [
+        "section_stress_tensor"
+      ],
+      "unit": "Pa**3"
+    }, {
+      "description": "1/3 of the trace of the stress tensor trave.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_one_third_of_trace",
+      "shape": [],
+      "superNames": [
+        "section_stress_tensor"
+      ],
+      "unit": "Pa"
+    }, {
+      "description": "The eigenvectors of the stress tensor. The vector correponding to the ith eigenvalue is placed as the ith column of the matrix.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_eigenvectors",
+      "shape": [3,3],
+      "superNames": [
+        "section_stress_tensor"
+      ]
+    }, {
       "description": "The SVN revision number.",
       "dtypeStr": "i",
       "name": "x_cp2k_svn_revision",
