@@ -51,6 +51,17 @@
         "section_scf_iteration"
       ],
       "units": "J"
+    }, {                                                                        
+      "description": "Total Energy",                                               
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_energy_total_scf_iteration",                             
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"                                                              
     }, {
       "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
       "dtypeStr": "f",
