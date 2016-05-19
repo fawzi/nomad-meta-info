@@ -225,6 +225,14 @@
         "x_vasp_incar_param"
       ]
     }, {
+      "description": "Switches on the L(S)DA+U approach. Value stored in incar.",
+      "dtypeStr": "b",
+      "name": "x_vasp_incar_LDAU",
+      "shape": [],
+      "superNames": [
+        "x_vasp_incar_param"
+      ]
+    }, {
       "description": "create CHGCAR. Value stored in incar.",
       "dtypeStr": "b",
       "name": "x_vasp_incar_LCHARG",
@@ -611,7 +619,7 @@
       "name": "x_vasp_incarOut_ALGO",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "mixing amount. Value prinded out after evaluating the input.",
@@ -619,7 +627,7 @@
       "name": "x_vasp_incarOut_AMIX",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "maximum distance for pair correlation function. Value prinded out after evaluating the input.",
@@ -627,7 +635,7 @@
       "name": "x_vasp_incarOut_APACO",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "tags for mixing. Value prinded out after evaluating the input.",
@@ -635,7 +643,7 @@
       "name": "x_vasp_incarOut_BMIX",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "relative energy change error. Value prinded out after evaluating the input.",
@@ -643,7 +651,7 @@
       "name": "x_vasp_incarOut_DEPER",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "center of cell for dipol. Value prinded out after evaluating the input.",
@@ -653,7 +661,7 @@
         3
       ],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "fine tuning of diagonalization accuracy (EDIFF/N-BANDS/4). Value prinded out after evaluating the input.",
@@ -661,7 +669,7 @@
       "name": "x_vasp_incarOut_EBREAK",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "stopping-criterion for ionic upd. Value prinded out after evaluating the input.",
@@ -669,7 +677,7 @@
       "name": "x_vasp_incarOut_EDIFFG",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "stopping-criterion for electronic upd. Value prinded out after evaluating the input.",
@@ -677,7 +685,7 @@
       "name": "x_vasp_incarOut_EDIFF",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "EMAX energy-range for DOSCAR file. Value prinded out after evaluating the input.",
@@ -685,7 +693,7 @@
       "name": "x_vasp_incarOut_EMIN,",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "energy cutoff in eV. Value prinded out after evaluating the input.",
@@ -693,7 +701,7 @@
       "name": "x_vasp_incarOut_ENCUT",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Maximum cutoff (normally specified only in POTCAR). Value prinded out after evaluating the input.",
@@ -701,7 +709,7 @@
       "name": "x_vasp_incarOut_ENMAX",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "xc-type: 91 Perdew -Wang 91, PE Perdew-Burke-Ernzerhof, RP revised Perdew-Burke-Ernzerhof, AM AM05 (Ref. [49,50], VASP tests see Ref. [51]), PS Perdew-Burke-Ernzerhof revised for solids (PBEsol, see Ref. [52]). Value prinded out after evaluating the input.",
@@ -709,7 +717,7 @@
       "name": "x_vasp_incarOut_GGA",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "algorithm: use only 8 (CG) or 48 (RMM DIIS). Value prinded out after evaluating the input.",
@@ -717,7 +725,7 @@
       "name": "x_vasp_incarOut_IALGO",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "ionic relaxation: 0-MD 1-quasi-New 2-CG. Value prinded out after evaluating the input.",
@@ -725,7 +733,7 @@
       "name": "x_vasp_incarOut_IBRION",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "charge: 1-file 2-atom 10-const. Value prinded out after evaluating the input.",
@@ -733,7 +741,7 @@
       "name": "x_vasp_incarOut_ICHARG",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "initial electr wf. : 0-lowe 1-rand. Value prinded out after evaluating the input.",
@@ -741,7 +749,7 @@
       "name": "x_vasp_incarOut_INIWAV",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "calculate stress and what to relax. Value prinded out after evaluating the input.",
@@ -749,7 +757,7 @@
       "name": "x_vasp_incarOut_ISIF",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "part. occupancies: -5 Bloechl -4-tet -1-fermi 0-gaus >0 MP. Value prinded out after evaluating the input.",
@@ -757,7 +765,7 @@
       "name": "x_vasp_incarOut_ISMEAR",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "spin polarized calculation (2-yes 1-no). Value prinded out after evaluating the input.",
@@ -765,7 +773,7 @@
       "name": "x_vasp_incarOut_ISPIN",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "ISTART startjob: 0-new 1-cont 2-samecut. Value prinded out after evaluating the input.",
@@ -773,7 +781,7 @@
       "name": "x_vasp_incarOut_ISTART",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "symmetry: 0-nonsym 1-usesym. Value prinded out after evaluating the input.",
@@ -781,7 +789,7 @@
       "name": "x_vasp_incarOut_ISYM",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "prediction of wf.: 0-non 1-charg 2-wave 3-comb. Value prinded out after evaluating the input.",
@@ -789,7 +797,7 @@
       "name": "x_vasp_incarOut_IWAVPR",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "outer block. Value prinded out after evaluating the input.",
@@ -797,7 +805,7 @@
       "name": "x_vasp_incarOut_KBLOCK",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "overlap communcation with calculations. Value prinded out after evaluating the input.",
@@ -805,7 +813,15 @@
       "name": "x_vasp_incarOut_LASYNC",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
+      ]
+    }, {
+      "description": "Switches on the L(S)DA+U approach. Value printed out after evaluating the input.",
+      "dtypeStr": "b",
+      "name": "x_vasp_incarOut_LDAU",
+      "shape": [],
+      "superNames": [
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "create CHGCAR. Value prinded out after evaluating the input.",
@@ -813,7 +829,7 @@
       "name": "x_vasp_incarOut_LCHARG",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Harris-correction to forces. Value prinded out after evaluating the input.",
@@ -821,7 +837,7 @@
       "name": "x_vasp_incarOut_LCORR",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "create ELFCAR. Value prinded out after evaluating the input.",
@@ -829,7 +845,7 @@
       "name": "x_vasp_incarOut_LELF",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "create PROOUT. Value prinded out after evaluating the input.",
@@ -837,7 +853,7 @@
       "name": "x_vasp_incarOut_LORBIT",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "if data distribution in real space is done plane wise. Value prinded out after evaluating the input.",
@@ -845,7 +861,7 @@
       "name": "x_vasp_incarOut_LPLANE",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "non-local projectors in real space. Value prinded out after evaluating the input.",
@@ -853,7 +869,7 @@
       "name": "x_vasp_incarOut_LREAL",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "switch off scaLAPACK. Value prinded out after evaluating the input.",
@@ -861,7 +877,7 @@
       "name": "x_vasp_incarOut_LSCALAPACK",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "switch off LU decomposition. Value prinded out after evaluating the input.",
@@ -869,7 +885,7 @@
       "name": "x_vasp_incarOut_LSCALU",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Determines whether the total local potential (file LOCPOT ) contains the entire local potential (ionic plus Hartree plus exchange correlation) or the electrostatic contributions only (ionic plus Hartree). Note that in VASP.5.2.12, the default is to write the entire local potential, including the exchange correlation potential. Value prinded out after evaluating the input.",
@@ -877,7 +893,7 @@
       "name": "x_vasp_incarOut_LVHAR",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "create LOCPOT. Value prinded out after evaluating the input.",
@@ -885,7 +901,7 @@
       "name": "x_vasp_incarOut_LVTOT",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "create WAVECAR. Value prinded out after evaluating the input.",
@@ -893,7 +909,7 @@
       "name": "x_vasp_incarOut_LWAVE",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "initial magnetic moments. Value prinded out after evaluating the input.",
@@ -903,7 +919,7 @@
         "numer_of_magmom"
       ],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of bands included in the calculation. Value prinded out after evaluating the input.",
@@ -911,7 +927,7 @@
       "name": "x_vasp_incarOut_NBANDS",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Blocking for some BLAS calls. Value prinded out after evaluating the input.",
@@ -919,7 +935,7 @@
       "name": "x_vasp_incarOut_NBLK",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "inner block. Value prinded out after evaluating the input.",
@@ -927,7 +943,7 @@
       "name": "x_vasp_incarOut_NBLOCK",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "total number of electrons. Value prinded out after evaluating the input.",
@@ -935,7 +951,7 @@
       "name": "x_vasp_incarOut_NELECT",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "number of non self consistent electronic steps. Value prinded out after evaluating the input.",
@@ -943,7 +959,7 @@
       "name": "x_vasp_incarOut_NELMDL",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "min nr. of electronic steps. Value prinded out after evaluating the input.",
@@ -951,7 +967,7 @@
       "name": "x_vasp_incarOut_NELMIN",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "max nr. of electronic steps. Value prinded out after evaluating the input.",
@@ -959,7 +975,7 @@
       "name": "x_vasp_incarOut_NELM",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of points of the FFT mesh for the charges along the first lattice vector. Value prinded out after evaluating the input.",
@@ -967,7 +983,7 @@
       "name": "x_vasp_incarOut_NGXF",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of points of the FFT mesh for the orbitals along the first lattice vector. Value prinded out after evaluating the input.",
@@ -975,7 +991,7 @@
       "name": "x_vasp_incarOut_NGX",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of points of the FFT mesh for the charges along the second lattice vector. Value prinded out after evaluating the input.",
@@ -983,7 +999,7 @@
       "name": "x_vasp_incarOut_NGYF",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of points of the FFT mesh for the orbitals along the second lattice vector. Value prinded out after evaluating the input.",
@@ -991,7 +1007,7 @@
       "name": "x_vasp_incarOut_NGY",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of points of the FFT mesh for the charges along the third lattice vector. Value prinded out after evaluating the input.",
@@ -999,7 +1015,7 @@
       "name": "x_vasp_incarOut_NGZF",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Number of points of the FFT mesh for the orbitals along the third lattice vector. Value prinded out after evaluating the input.",
@@ -1007,7 +1023,7 @@
       "name": "x_vasp_incarOut_NGZ",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "number of slots in pair correlation function. Value prinded out after evaluating the input.",
@@ -1015,7 +1031,7 @@
       "name": "x_vasp_incarOut_NPACO",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "parallelization over bands. Value prinded out after evaluating the input.",
@@ -1023,7 +1039,7 @@
       "name": "x_vasp_incarOut_NPAR",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "number of bands are optimized at the same time with RMM-DIIS (IALGO=48). Value prinded out after evaluating the input.",
@@ -1031,7 +1047,7 @@
       "name": "x_vasp_incarOut_NSIM",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "number of steps for ionic upd. Value prinded out after evaluating the input.",
@@ -1039,7 +1055,7 @@
       "name": "x_vasp_incarOut_NSW",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "fix spin moment to specified value. Value prinded out after evaluating the input.",
@@ -1047,7 +1063,7 @@
       "name": "x_vasp_incarOut_NUPDOWN",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "verbosity (how much information is written by vasp). Value prinded out after evaluating the input.",
@@ -1055,7 +1071,7 @@
       "name": "x_vasp_incarOut_NWRITE",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Incar parameters. Value prinded out after evaluating the input.",
@@ -1070,7 +1086,7 @@
       "name": "x_vasp_incarOut_POMASS",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "time-step for ion-motion (fs). Value prinded out after evaluating the input.",
@@ -1078,7 +1094,7 @@
       "name": "x_vasp_incarOut_POTIM",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "precision: medium, high or low, normal, accurate. Value prinded out after evaluating the input.",
@@ -1086,7 +1102,7 @@
       "name": "x_vasp_incarOut_PREC",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "determines how precise the projectors are represented in real space. Value prinded out after evaluating the input.",
@@ -1096,7 +1112,7 @@
         "number_of_atom_types"
       ],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Wigner-Seitz radius for each atom type. Value prinded out after evaluating the input.",
@@ -1106,7 +1122,7 @@
         "numer_of_atom_types"
       ],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "broadening in eV -4-tet -1-fermi 0-gaus. Value prinded out after evaluating the input.",
@@ -1114,7 +1130,7 @@
       "name": "x_vasp_incarOut_SIGMA",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Nose mass-parameter (am). Value prinded out after evaluating the input.",
@@ -1122,7 +1138,7 @@
       "name": "x_vasp_incarOut_SMASS",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "precision in symmetry routines. Value prinded out after evaluating the input.",
@@ -1130,7 +1146,7 @@
       "name": "x_vasp_incarOut_SYMPREC",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "Name for the system (user given denomination). Value prinded out after evaluating the input.",
@@ -1138,7 +1154,7 @@
       "name": "x_vasp_incarOut_SYSTEM",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "temperature at the start of the run. Value prinded out after evaluating the input.",
@@ -1146,7 +1162,7 @@
       "name": "x_vasp_incarOut_TEBEG",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "temperature at the end of the run. Value prinded out after evaluating the input.",
@@ -1154,7 +1170,7 @@
       "name": "x_vasp_incarOut_TEEND",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "trial time step size during steepest descent phase. Value prinded out after evaluating the input.",
@@ -1162,7 +1178,7 @@
       "name": "x_vasp_incarOut_TIME",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "use Vosko, Wilk, Nusair interpolation. Value prinded out after evaluating the input.",
@@ -1170,7 +1186,7 @@
       "name": "x_vasp_incarOut_VOSKOWN",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "fine tuning of diagonalization accuracy (eigenvalues within this thrshold are considered occupied). Value prinded out after evaluating the input.",
@@ -1178,7 +1194,7 @@
       "name": "x_vasp_incarOut_WEIMIN",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "ionic valence. Value prinded out after evaluating the input.",
@@ -1186,7 +1202,7 @@
       "name": "x_vasp_incarOut_ZVAL",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incarOut_param"
       ]
     }, {
       "description": "k points generation  method",
