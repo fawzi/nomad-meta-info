@@ -117,17 +117,6 @@
         "section_scf_iteration"                                                 
       ],                                                                        
       "units": "J"                                                              
-    },{                                                                        
-      "description": "Final (converged or not) Total Energy",                   
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_total_energy_final",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"                                                              
     },{
       "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
       "dtypeStr": "f",
