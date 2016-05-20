@@ -53,6 +53,14 @@
         "section_method"
       ]
     }, {
+      "description": "xc function",
+      "dtypeStr": "C",
+      "name": "qbox_functional_name",
+      "shape": [],
+      "superNames": [
+        "qbox_section_functionals"
+      ]
+    }, {
       "description": "x component of dipole",
       "dtypeStr": "f",
       "name": "qbox_dipole_x",
@@ -302,6 +310,13 @@
       "name": "qbox_section_stress_tensor",
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "qbox_section_functionals",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "xx component of stress tensor",
