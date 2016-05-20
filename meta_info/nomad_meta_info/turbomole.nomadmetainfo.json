@@ -52,7 +52,7 @@
       ],
       "units": "J"
     }, {                                                                        
-      "description": "Total Energy",                                               
+      "description": "Total Energy for a given scf iteration",                                               
       "dtypeStr": "f",                                                          
       "name": "turbomole_energy_total_scf_iteration",                             
       "repeats": true,                                                          
@@ -62,7 +62,73 @@
         "section_scf_iteration"                                                 
       ],                                                                        
       "units": "J"                                                              
-    }, {
+    }, {                                                                        
+      "description": "Final (converged or not) Total Energy",                                            
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_total_energy_final",                           
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",
+        "section_scf_iteration"
+      ],                                                                        
+      "units": "J"                                                              
+    }, {                                                                        
+      "description": "Final kinetic Energy",                   
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_kinetic_energy_final",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"                                                              
+    },{                                                                        
+      "description": "Final poetential energy",                   
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_potential_energy_final",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"                                                              
+    },{                                                                        
+      "description": "Final value from the virial theorem",                   
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_virial_theorem_final",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"                                                              
+    },{                                                                        
+      "description": "Final Wave Function Norm",                   
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_wave_func_norm",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"                                                              
+    },{                                                                        
+      "description": "Final (converged or not) Total Energy",                   
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_total_energy_final",                                   
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "energy_component",                                                     
+        "section_scf_iteration"                                                 
+      ],                                                                        
+      "units": "J"                                                              
+    },{
       "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
       "dtypeStr": "f",
       "name": "turbomole_energy_scf_damping",
@@ -70,8 +136,7 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
-      ],
-      "units": "J"
+      ]
     }, {
       "description": "Tolerance of the total energy at each iteration",
       "dtypeStr": "f",
