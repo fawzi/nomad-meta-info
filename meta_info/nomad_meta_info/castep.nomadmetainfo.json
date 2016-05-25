@@ -526,7 +526,7 @@
         "castep_section_population_analysis"
       ]   
     }, {
-       "description": "Mulliken_contribution_orbital s",
+       "description": "Mulliken_contributions",
       "dtypeStr": "C",
       "name": "castep_orbital_contributions",
       "shape": [],
@@ -535,7 +535,7 @@
       ]     
     }, {
        "description": "Mulliken_contribution_orbital s",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "castep_orbital_s",
       "shape": [],
       "superNames": [
@@ -543,7 +543,7 @@
       ]     
     }, {
        "description": "Mulliken_contribution_orbital p",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "castep_orbital_p",
       "shape": [],
       "superNames": [
@@ -552,7 +552,7 @@
     
     }, {
        "description": "Mulliken_contribution_orbital d",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "castep_orbital_d",
       "shape": [],
       "superNames": [
@@ -560,7 +560,7 @@
       ]     
     }, {
        "description": "Mulliken_contribution_orbital f",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "castep_orbital_f",
       "shape": [],
       "superNames": [
