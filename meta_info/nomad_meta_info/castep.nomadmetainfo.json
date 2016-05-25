@@ -584,9 +584,9 @@
       ]       
      }, {
        "description": "Mulliken_charges",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "castep_mulliken_charge",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]         
