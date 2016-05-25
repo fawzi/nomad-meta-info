@@ -570,7 +570,7 @@
        "description": "Mulliken_total_contribution",
       "dtypeStr": "f",
       "name": "castep_total_orbital",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
