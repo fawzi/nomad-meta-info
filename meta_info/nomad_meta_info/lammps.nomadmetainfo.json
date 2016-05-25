@@ -86,7 +86,7 @@
       "referencedSections": [
         "section_atom_type"
       ],
-      "shape": [],
+      "shape": ["number_of_atoms_per_interaction"],
       "superNames": [
         "section_interaction"
       ]
@@ -105,7 +105,7 @@
       "referencedSections": [
         "section_atom_type"
       ],
-      "shape": [],
+      "shape": ["number_of_atoms_per_interaction"],
       "superNames": [
         "section_molecule_interaction"
       ]
@@ -140,7 +140,10 @@
       "referencedSections": [
         "section_atom_type"
       ],
-      "shape": [],
+      "shape": [
+	"number_of_defined_pair_interactions",
+        "number_of_atoms_per_interaction"
+      ],
       "superNames": [
         "section_interaction"
       ]
@@ -173,7 +176,10 @@
       "referencedSections": [
         "section_atom_type"
       ],
-      "shape": [],
+      "shape": [
+        "number_of_defined_pair_interactions",
+        "number_of_atoms_per_interaction"
+      ],
       "superNames": [
         "section_molecule_interaction"
       ]

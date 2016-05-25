@@ -27,6 +27,17 @@
         "section_system"
       ]
     }, {
+<<<<<<< HEAD
+=======
+      "description": "Number of electrons",
+      "dtypeStr": "f",
+      "name": "castep_number_of_electrons_store",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+>>>>>>> 48c99e4a4d00b98047bbf1d5c3642e5a492dd147
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
       "name": "castep_atom_positions",
@@ -529,7 +540,7 @@
        "description": "Mulliken_contribution_orbital s",
       "dtypeStr": "C",
       "name": "castep_orbital_contributions",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
@@ -537,7 +548,7 @@
        "description": "Mulliken_contribution_orbital s",
       "dtypeStr": "C",
       "name": "castep_orbital_s",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
@@ -545,7 +556,7 @@
        "description": "Mulliken_contribution_orbital p",
       "dtypeStr": "C",
       "name": "castep_orbital_p",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
@@ -554,7 +565,7 @@
        "description": "Mulliken_contribution_orbital d",
       "dtypeStr": "C",
       "name": "castep_orbital_d",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
@@ -562,7 +573,7 @@
        "description": "Mulliken_contribution_orbital f",
       "dtypeStr": "C",
       "name": "castep_orbital_f",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
@@ -570,7 +581,7 @@
        "description": "Mulliken_total_contribution",
       "dtypeStr": "f",
       "name": "castep_total_orbital",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]     
@@ -578,7 +589,7 @@
        "description": "Mulliken_charges",
       "dtypeStr": "C",
       "name": "castep_mulliken_charge_store",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]       
@@ -586,7 +597,7 @@
        "description": "Mulliken_charges",
       "dtypeStr": "C",
       "name": "castep_mulliken_charge",
-      "shape": [],
+      "shape": ["number_of_atoms"],
       "superNames": [
         "castep_section_population_analysis"
       ]         
