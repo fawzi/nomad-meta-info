@@ -2359,6 +2359,13 @@
         "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL.TF"
       ]
     }, {
+      "description": "Uses the TF functional",
+      "kindStr": "type_section",
+      "name": "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL.TF",
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL"
+      ]
+    }, {
       "description": "activates the functional",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL.TFW.SECTION_PARAMETERS",
@@ -2370,13 +2377,6 @@
       "description": "Uses the TFW functional",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL.TFW",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL"
-      ]
-    }, {
-      "description": "Uses the TF functional",
-      "kindStr": "type_section",
-      "name": "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL.TF",
       "superNames": [
         "x_cp2k_CP2K_INPUT.ATOM.METHOD.XC.XC_FUNCTIONAL"
       ]
@@ -6869,6 +6869,14 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS"
       ]
     }, {
+      "description": "Introduce additional self-consistent polarization through additional response basis functions (read in through AUX_BASIS.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS.SCP",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS"
+      ]
+    }, {
       "description": "Define cutoff for coordination number calculation",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS.SCPTB.COORDINATION_CUTOFF",
@@ -6962,14 +6970,6 @@
       "description": "Parameters needed to set up the SCPTB methods",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS.SCPTB",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS"
-      ]
-    }, {
-      "description": "Introduce additional self-consistent polarization through additional response basis functions (read in through AUX_BASIS.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS.SCP",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.QS"
       ]
@@ -11474,6 +11474,13 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL.TF"
       ]
     }, {
+      "description": "Uses the TF functional",
+      "kindStr": "type_section",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL.TF",
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL"
+      ]
+    }, {
       "description": "activates the functional",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL.TFW.SECTION_PARAMETERS",
@@ -11485,13 +11492,6 @@
       "description": "Uses the TFW functional",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL.TFW",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL"
-      ]
-    }, {
-      "description": "Uses the TF functional",
-      "kindStr": "type_section",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL.TF",
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.TDDFPT.XC.XC_FUNCTIONAL"
       ]
@@ -15690,6 +15690,13 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL.TF"
       ]
     }, {
+      "description": "Uses the TF functional",
+      "kindStr": "type_section",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL.TF",
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL"
+      ]
+    }, {
       "description": "activates the functional",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL.TFW.SECTION_PARAMETERS",
@@ -15701,13 +15708,6 @@
       "description": "Uses the TFW functional",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL.TFW",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL"
-      ]
-    }, {
-      "description": "Uses the TF functional",
-      "kindStr": "type_section",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL.TF",
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.DFT.XC.XC_FUNCTIONAL"
       ]
@@ -16404,6 +16404,14 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND"
       ]
     }, {
+      "description": "Defines the force constant of the potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.K",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND"
+      ]
+    }, {
       "description": "Define the kind of bend potential",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.KIND",
@@ -16415,14 +16423,6 @@
       "description": "Mixed bend stretch parameter",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.KSS",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND"
-      ]
-    }, {
-      "description": "Defines the force constant of the potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.K",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND"
@@ -16460,20 +16460,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB"
       ]
     }, {
-      "description": "Define the kind of Urey-Bradleypotential.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB.KIND",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB"
-      ]
-    }, {
       "description": "Defines the force constant of the potential. For MORSE potentials 2 numbers are expected. For QUARTIC potentials 3 numbers are expected.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB.K",
       "shape": [
         "n"
       ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB"
+      ]
+    }, {
+      "description": "Define the kind of Urey-Bradleypotential.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB.KIND",
+      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BEND.UB"
       ]
@@ -16518,20 +16518,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND"
       ]
     }, {
-      "description": "Define the kind of Bondpotential.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND.KIND",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND"
-      ]
-    }, {
       "description": "Defines the force constant of the potential. For MORSE potentials 2 numbers are expected. For QUARTIC potentials 3 numbers are expected.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND.K",
       "shape": [
         "n"
       ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND"
+      ]
+    }, {
+      "description": "Define the kind of Bondpotential.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND.KIND",
+      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.BOND"
       ]
@@ -16567,6 +16567,13 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.CHARGE"
       ]
     }, {
+      "description": "This section specifies the charge of the MM atoms",
+      "kindStr": "type_section",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.CHARGE",
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD"
+      ]
+    }, {
       "description": "Value of the charge for the individual atom. Order MUST reflect the one specified for the geometry.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.CHARGES.DEFAULT_KEYWORD",
@@ -16578,13 +16585,6 @@
       "description": "Allow to specify an array of classical charges, thus avoiding the packing and permitting the usage of different charges for same atomic types.",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.CHARGES",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD"
-      ]
-    }, {
-      "description": "This section specifies the charge of the MM atoms",
-      "kindStr": "type_section",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.CHARGE",
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD"
       ]
@@ -16693,17 +16693,17 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER"
       ]
     }, {
-      "description": "Define the kind of improper torsion potential",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER.KIND",
+      "description": "Defines the force constant of the potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER.K",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER"
       ]
     }, {
-      "description": "Defines the force constant of the potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER.K",
+      "description": "Define the kind of improper torsion potential",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER.KIND",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.IMPROPER"
@@ -16732,20 +16732,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD"
       ]
     }, {
+      "description": "Defines the A parameter of the Fumi-Tosi Potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT.A",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT"
+      ]
+    }, {
       "description": "Defines the atomic kind involved in the BMHFT nonbond potential",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT.ATOMS",
       "shape": [
         2
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT"
-      ]
-    }, {
-      "description": "Defines the A parameter of the Fumi-Tosi Potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT.A",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT"
       ]
@@ -16808,14 +16808,11 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT"
       ]
     }, {
-      "description": "Defines the atomic kind involved in the BMHFTD nonbond potential",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD.ATOMS",
-      "shape": [
-        2
-      ],
+      "description": "This section specifies the input parameters for BMHFT potential type.Functional form: V(r) = A * EXP(-B*r) - C/r^6 - D/r^8.Values available inside cp2k only for the Na/Cl pair.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT",
       "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD"
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED"
       ]
     }, {
       "description": "Defines the A parameter of the dispersion-damped Fumi-Tosi Potential",
@@ -16826,10 +16823,12 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD"
       ]
     }, {
-      "description": "Defines the BD parameter of the dispersion-damped Fumi-Tosi Potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD.BD",
-      "shape": [],
+      "description": "Defines the atomic kind involved in the BMHFTD nonbond potential",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD.ATOMS",
+      "shape": [
+        2
+      ],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD"
       ]
@@ -16837,6 +16836,14 @@
       "description": "Defines the B parameter of the dispersion-damped Fumi-Tosi Potential",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD.B",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD"
+      ]
+    }, {
+      "description": "Defines the BD parameter of the dispersion-damped Fumi-Tosi Potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD.BD",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFTD"
@@ -16907,11 +16914,12 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED"
       ]
     }, {
-      "description": "This section specifies the input parameters for BMHFT potential type.Functional form: V(r) = A * EXP(-B*r) - C/r^6 - D/r^8.Values available inside cp2k only for the Na/Cl pair.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BMHFT",
+      "description": "Defines the A parameter of the Buckingham potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BUCK4RANGES.A",
+      "shape": [],
       "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED"
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BUCK4RANGES"
       ]
     }, {
       "description": "Defines the atomic kind involved in the nonbond potential",
@@ -16920,14 +16928,6 @@
       "shape": [
         2
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BUCK4RANGES"
-      ]
-    }, {
-      "description": "Defines the A parameter of the Buckingham potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BUCK4RANGES.A",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.BUCK4RANGES"
       ]
@@ -17484,17 +17484,17 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN"
       ]
     }, {
-      "description": "Defines the beta parameter of Siepmann potential",
+      "description": "Defines the B parameter of Siepmann potential",
       "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN.BETA",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN.B",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN"
       ]
     }, {
-      "description": "Defines the B parameter of Siepmann potential",
+      "description": "Defines the beta parameter of Siepmann potential",
       "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN.B",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN.BETA",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.SIEPMANN"
@@ -17539,6 +17539,14 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED"
       ]
     }, {
+      "description": "Defines the A parameter of Tersoff potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF.A",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF"
+      ]
+    }, {
       "description": "Defines the alpha parameter of Tersoff potential",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF.ALPHA",
@@ -17557,9 +17565,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF"
       ]
     }, {
-      "description": "Defines the A parameter of Tersoff potential",
+      "description": "Defines the B parameter of Tersoff potential",
       "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF.A",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF.B",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF"
@@ -17584,14 +17592,6 @@
       "description": "Defines the bigR parameter of Tersoff potential",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF.BIGR",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF"
-      ]
-    }, {
-      "description": "Defines the B parameter of Tersoff potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF.B",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.TERSOFF"
@@ -17668,20 +17668,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED"
       ]
     }, {
+      "description": "Defines the A parameter of the Williams potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.WILLIAMS.A",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.WILLIAMS"
+      ]
+    }, {
       "description": "Defines the atomic kind involved in the nonbond potential",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.WILLIAMS.ATOMS",
       "shape": [
         2
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.WILLIAMS"
-      ]
-    }, {
-      "description": "Defines the A parameter of the Williams potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.WILLIAMS.A",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.WILLIAMS"
       ]
@@ -17960,20 +17960,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14"
       ]
     }, {
+      "description": "Defines the A parameter of the Williams potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14.WILLIAMS.A",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14.WILLIAMS"
+      ]
+    }, {
       "description": "Defines the atomic kind involved in the nonbond potential",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14.WILLIAMS.ATOMS",
       "shape": [
         2
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14.WILLIAMS"
-      ]
-    }, {
-      "description": "Defines the A parameter of the Williams potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14.WILLIAMS.A",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.NONBONDED14.WILLIAMS"
       ]
@@ -18049,17 +18049,17 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND"
       ]
     }, {
-      "description": "Define the kind of out of plane bend potential",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND.KIND",
+      "description": "Defines the force constant of the potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND.K",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND"
       ]
     }, {
-      "description": "Defines the force constant of the potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND.K",
+      "description": "Define the kind of out of plane bend potential",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND.KIND",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.OPBEND"
@@ -18271,17 +18271,17 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION"
       ]
     }, {
-      "description": "Define the kind of torsion potential",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION.KIND",
+      "description": "Defines the force constant of the potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION.K",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION"
       ]
     }, {
-      "description": "Defines the force constant of the potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION.K",
+      "description": "Define the kind of torsion potential",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION.KIND",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.MM.FORCEFIELD.TORSION"
@@ -20741,16 +20741,6 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
       ]
     }, {
-      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.ALPHA_BETA_GAMMA",
-      "shape": [
-        3
-      ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
-      ]
-    }, {
       "description": "Specify the Cartesian components for the cell vector A. This defines the first column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.A",
@@ -20761,9 +20751,29 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
       ]
     }, {
+      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.ALPHA_BETA_GAMMA",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
+      ]
+    }, {
       "description": "Specify the Cartesian components for the cell vector B. This defines the second column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.B",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
+      ]
+    }, {
+      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.C",
       "shape": [
         3
       ],
@@ -20797,16 +20807,6 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
       ]
     }, {
-      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.ALPHA_BETA_GAMMA",
-      "shape": [
-        3
-      ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
-      ]
-    }, {
       "description": "Specify the Cartesian components for the cell vector A. This defines the first column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.A",
@@ -20817,9 +20817,29 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
       ]
     }, {
+      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.ALPHA_BETA_GAMMA",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
+      ]
+    }, {
       "description": "Specify the Cartesian components for the cell vector B. This defines the second column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.B",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
+      ]
+    }, {
+      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.C",
       "shape": [
         3
       ],
@@ -20839,16 +20859,6 @@
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.CELL_FILE_NAME",
       "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
-      ]
-    }, {
-      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF.C",
-      "shape": [
-        3
-      ],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF"
       ]
@@ -20882,16 +20892,6 @@
       "description": "Input parameters needed to set up the CELL_REF.",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.CELL_REF",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
-      ]
-    }, {
-      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL.C",
-      "shape": [
-        3
-      ],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.CELL"
       ]
@@ -21777,20 +21777,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED"
       ]
     }, {
+      "description": "Defines the A parameter of the Williams potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED.WILLIAMS.A",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED.WILLIAMS"
+      ]
+    }, {
       "description": "Defines the atomic kind involved in the nonbond potential",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED.WILLIAMS.ATOMS",
       "shape": [
         2
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED.WILLIAMS"
-      ]
-    }, {
-      "description": "Defines the A parameter of the Williams potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED.WILLIAMS.A",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED.WILLIAMS"
       ]
@@ -22069,20 +22069,20 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14"
       ]
     }, {
+      "description": "Defines the A parameter of the Williams potential",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14.WILLIAMS.A",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14.WILLIAMS"
+      ]
+    }, {
       "description": "Defines the atomic kind involved in the nonbond potential",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14.WILLIAMS.ATOMS",
       "shape": [
         2
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14.WILLIAMS"
-      ]
-    }, {
-      "description": "Defines the A parameter of the Williams potential",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14.WILLIAMS.A",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.QMMM.FORCEFIELD.NONBONDED14.WILLIAMS"
       ]
@@ -23609,16 +23609,6 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
       ]
     }, {
-      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.ALPHA_BETA_GAMMA",
-      "shape": [
-        3
-      ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
-      ]
-    }, {
       "description": "Specify the Cartesian components for the cell vector A. This defines the first column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.A",
@@ -23629,9 +23619,29 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
       ]
     }, {
+      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.ALPHA_BETA_GAMMA",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
+      ]
+    }, {
       "description": "Specify the Cartesian components for the cell vector B. This defines the second column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.B",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
+      ]
+    }, {
+      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.C",
       "shape": [
         3
       ],
@@ -23665,16 +23675,6 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
       ]
     }, {
-      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.ALPHA_BETA_GAMMA",
-      "shape": [
-        3
-      ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
-      ]
-    }, {
       "description": "Specify the Cartesian components for the cell vector A. This defines the first column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.A",
@@ -23685,9 +23685,29 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
       ]
     }, {
+      "description": "Specify the angles between the vectors A, B and C when using the ABC keyword. The convention is that A lies along the X-axis, B is in the XY plane. ALPHA is the angle between B and C, BETA is the angle between A and C and GAMMA the angle between A and B.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.ALPHA_BETA_GAMMA",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
+      ]
+    }, {
       "description": "Specify the Cartesian components for the cell vector B. This defines the second column of the h matrix.",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.B",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
+      ]
+    }, {
+      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.C",
       "shape": [
         3
       ],
@@ -23707,16 +23727,6 @@
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.CELL_FILE_NAME",
       "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
-      ]
-    }, {
-      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF.C",
-      "shape": [
-        3
-      ],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF"
       ]
@@ -23750,16 +23760,6 @@
       "description": "Input parameters needed to set up the CELL_REF.",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.CELL_REF",
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
-      ]
-    }, {
-      "description": "Specify the Cartesian components for the cell vector C. This defines the third column of the h matrix.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL.C",
-      "shape": [
-        3
-      ],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.CELL"
       ]
@@ -25013,6 +25013,14 @@
     }, {
       "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM.P",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM"
+      ]
+    }, {
+      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM.PNH",
       "shape": [],
       "superNames": [
@@ -25072,9 +25080,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM"
       ]
     }, {
-      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM.P",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM"
@@ -25091,14 +25099,6 @@
       "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM.QNO",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM"
-      ]
-    }, {
-      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.COMBINE_COLVAR.COLVAR.HYDRONIUM"
@@ -27289,6 +27289,14 @@
     }, {
       "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM.P",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM"
+      ]
+    }, {
+      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM.PNH",
       "shape": [],
       "superNames": [
@@ -27348,9 +27356,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM"
       ]
     }, {
-      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM.P",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM"
@@ -27367,14 +27375,6 @@
       "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM.QNO",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM"
-      ]
-    }, {
-      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.DISTANCE_FROM_PATH.COLVAR.HYDRONIUM"
@@ -28692,6 +28692,14 @@
     }, {
       "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM.P",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM"
+      ]
+    }, {
+      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM.PNH",
       "shape": [],
       "superNames": [
@@ -28751,9 +28759,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM"
       ]
     }, {
-      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM.P",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM"
@@ -28770,14 +28778,6 @@
       "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM.QNO",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM"
-      ]
-    }, {
-      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.HYDRONIUM"
@@ -30018,6 +30018,14 @@
     }, {
       "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM.P",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM"
+      ]
+    }, {
+      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM.PNH",
       "shape": [],
       "superNames": [
@@ -30077,9 +30085,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM"
       ]
     }, {
-      "description": "Sets the value of the numerator of the exponential factorin the coordination FUNCTION.",
+      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM.P",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM"
@@ -30096,14 +30104,6 @@
       "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
       "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM.QNO",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM"
-      ]
-    }, {
-      "description": "Sets the value of the denominator of the exponential factorin the coordination FUNCTION.",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM.Q",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.COLVAR.REACTION_PATH.COLVAR.HYDRONIUM"
@@ -31754,9 +31754,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.ALPHA"
       ]
     }, {
-      "description": "Orbital ccupation change per angular momentum quantum number.In unrestricted calculations applied to spin alpha.",
+      "description": "Principal quantum number of theorbitals whose occupation is changed. Default is the first not occupied",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.ALPHA.NEL",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.ALPHA.N",
       "shape": [
         "n"
       ],
@@ -31764,9 +31764,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.ALPHA"
       ]
     }, {
-      "description": "Principal quantum number of theorbitals whose occupation is changed. Default is the first not occupied",
+      "description": "Orbital ccupation change per angular momentum quantum number.In unrestricted calculations applied to spin alpha.",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.ALPHA.N",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.ALPHA.NEL",
       "shape": [
         "n"
       ],
@@ -31791,9 +31791,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.BETA"
       ]
     }, {
-      "description": "Orbital ccupation change per angular momentum quantum number.Applied to spin beta and active only in unrestricted calculations.",
+      "description": "Principal quantum number of theorbitals of beta spin whose occupation is changed. Default is the first not occupied.Active only for unrestricted calculations",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.BETA.NEL",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.BETA.N",
       "shape": [
         "n"
       ],
@@ -31801,9 +31801,9 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.BETA"
       ]
     }, {
-      "description": "Principal quantum number of theorbitals of beta spin whose occupation is changed. Default is the first not occupied.Active only for unrestricted calculations",
+      "description": "Orbital ccupation change per angular momentum quantum number.Applied to spin beta and active only in unrestricted calculations.",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.BETA.N",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.KIND.BS.BETA.NEL",
       "shape": [
         "n"
       ],
@@ -32565,6 +32565,13 @@
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE.BOND"
       ]
     }, {
+      "description": "Section used to add/remove  bonds in the connectivity. Useful for systems with a complex connectivity, difficult to find out automatically.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE.BOND",
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE"
+      ]
+    }, {
       "description": "Maximum distance to generate neighbor lists to build connectivity",
       "dtypeStr": "f",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE.BONDLENGTH_MAX",
@@ -32593,13 +32600,6 @@
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE.BONDPARM",
       "shape": [],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE"
-      ]
-    }, {
-      "description": "Section used to add/remove  bonds in the connectivity. Useful for systems with a complex connectivity, difficult to find out automatically.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE.BOND",
       "superNames": [
         "x_cp2k_CP2K_INPUT.FORCE_EVAL.SUBSYS.TOPOLOGY.GENERATE"
       ]
@@ -33946,17 +33946,17 @@
         "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS"
       ]
     }, {
-      "description": "Maximum stepsize used for the line search, sometimes this parametercan be reduced to stablize the LS for particularly difficult initial geometries",
-      "dtypeStr": "f",
-      "name": "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS.MAX_STEPSIZE",
+      "description": "Specify the maximum number of optimization steps",
+      "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS.MAX_STEPS",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS"
       ]
     }, {
-      "description": "Specify the maximum number of optimization steps",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS.MAX_STEPS",
+      "description": "Maximum stepsize used for the line search, sometimes this parametercan be reduced to stablize the LS for particularly difficult initial geometries",
+      "dtypeStr": "f",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS.MAX_STEPSIZE",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.MOTION.BAND.OPTIMIZE_BAND.DIIS"
@@ -40487,17 +40487,17 @@
         "x_cp2k_CP2K_INPUT.MOTION.PINT"
       ]
     }, {
-      "description": "Specify number of processors to use for each replica",
+      "description": "Specify number beads to use",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.MOTION.PINT.PROC_PER_REPLICA",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PINT.P",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.MOTION.PINT"
       ]
     }, {
-      "description": "Specify number beads to use",
+      "description": "Specify number of processors to use for each replica",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.MOTION.PINT.P",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PINT.PROC_PER_REPLICA",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.MOTION.PINT"
@@ -42719,17 +42719,17 @@
         "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
       ]
     }, {
-      "description": "Keep product sparse",
-      "dtypeStr": "C",
-      "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.KEEPSPARSE",
+      "description": "Inner dimension M",
+      "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.K",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
       ]
     }, {
-      "description": "Inner dimension M",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.K",
+      "description": "Keep product sparse",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.KEEPSPARSE",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
@@ -42751,20 +42751,20 @@
         "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
       ]
     }, {
+      "description": "Dimension 2 of C",
+      "dtypeStr": "i",
+      "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.N",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
+      ]
+    }, {
       "description": "Number of processors to test",
       "dtypeStr": "i",
       "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.NPROC",
       "shape": [
         "n"
       ],
-      "superNames": [
-        "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
-      ]
-    }, {
-      "description": "Dimension 2 of C",
-      "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR.N",
-      "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.TEST.CP_DBCSR"
       ]
@@ -42850,17 +42850,17 @@
         "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM"
       ]
     }, {
-      "description": "block_size for rows",
+      "description": "Dimension 2 of C",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM.NROW_BLOCK",
+      "name": "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM.N",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM"
       ]
     }, {
-      "description": "Dimension 2 of C",
+      "description": "block_size for rows",
       "dtypeStr": "i",
-      "name": "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM.N",
+      "name": "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM.NROW_BLOCK",
       "shape": [],
       "superNames": [
         "x_cp2k_CP2K_INPUT.TEST.CP_FM_GEMM"
@@ -43630,7 +43630,7 @@
       "kindStr": "type_section",
       "name": "x_cp2k_section_total_numbers",
       "superNames": [
-        "section_system"
+        "section_run"
       ]
     }, {
       "description": "The number of shell sets in the calculation.",
@@ -43639,6 +43639,85 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of atoms in the calculation.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_atoms",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of atomic kinds in the calculation.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_atomic_kinds",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of shells.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_shells",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of primitive Cartesian functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_primitive_cartesian_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of Cartesian basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_cartesian_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of Spherical basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_spherical_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "Contains the maximum angular momentum values used in the calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_maximum_angular_momentum",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Maximum angular momentum of orbital basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_orbital_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_maximum_angular_momentum"
+      ]
+    }, {
+      "description": "Maximum angular momentum of the local part of the GTH pseudopotential.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_local_part_of_gth_pseudopotential",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_maximum_angular_momentum"
+      ]
+    }, {
+      "description": "Maximum angular momentum of the non-local part of the GTH pseudopotential.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_non_local_part_of_gth_pseudopotential",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_maximum_angular_momentum"
       ]
     }, {
       "description": "The determinant of the stress tensor.",
@@ -43672,7 +43751,7 @@
         "section_stress_tensor"
       ]
     }, {
-      "description": "1/3 of the trace of the stress tensor trave.",
+      "description": "1/3 of the trace of the stress tensor.",
       "dtypeStr": "f",
       "name": "x_cp2k_stress_tensor_one_third_of_trace",
       "shape": [],
@@ -43680,6 +43759,124 @@
         "section_stress_tensor"
       ],
       "unit": "Pa"
+    }, {
+      "description": "Contains information about the geometry optimization process for every optimization step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_geometry_optimization_information",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Optimization method for this step",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_method",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ]
+    }, {
+      "description": "Energy for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_energy",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "J"
+    }, {
+      "description": "Energy change for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_energy_change",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "J"
+    }, {
+      "description": "Whether there has been energy decrease. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_energy_decrease",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ]
+    }, {
+      "description": "Time used for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_used_time",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "s"
+    }, {
+      "description": "Maximum step size for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_max_step_size",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "m"
+    }, {
+      "description": "Whether there is convergence in step size. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_step_size_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ]
+    }, {
+      "description": "RMS step size for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_rms_step_size",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "m"
+    }, {
+      "description": "Whether there is convergence in rms step size. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_rms_step_size_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ]
+    }, {
+      "description": "Max gradient for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_max_gradient",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "m^-1*J"
+    }, {
+      "description": "Whether there is convergence in max gradient. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_max_gradient_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ]
+    }, {
+      "description": "RMS gradient for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_rms_gradient",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "m^-1*J"
+    }, {
+      "description": "Whether there is convergence in rms gradient. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_rms_gradient_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ]
     }, {
       "description": "The SVN revision number.",
       "dtypeStr": "i",
