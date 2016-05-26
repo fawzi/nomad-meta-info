@@ -1,6 +1,6 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the EP parser, all names are expected to start with lammps_",
+  "description": "meta info used by the EP parser, all names are expected to start with x_lammps_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }, {
@@ -9,56 +9,61 @@
   "metaInfos": [ {
       "description": "PBC image flag index.",
       "dtypeStr": "i",
-      "name": "atom_positions_image_index",
+      "name": "x_lammps_atom_positions_image_index",
       "shape": [
         "number_of_atoms",
         3
       ],
+      "units": " ",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "Position of the atoms in a scaled format [0, 1].",
       "dtypeStr": "f",
-      "name": "atom_positions_scaled",
+      "name": "x_lammps_atom_positions_scaled",
       "shape": [
         "number_of_atoms",
         3
       ],
+      "units": " ",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "Position of the atoms wrapped back to the periodic box.",
       "dtypeStr": "f",
-      "name": "atom_positions_wrapped",
+      "name": "x_lammps_atom_positions_wrapped",
       "shape": [
         "number_of_atoms",
         3
       ],
+      "units": "m",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "MD barostat target pressure.",
       "dtypeStr": "f",
-      "name": "barostat_target_pressure",
+      "name": "x_lammps_barostat_target_pressure",
       "shape": [],
+      "units": "Pa",
       "superNames": [
         "settings_barostat"
       ]
     }, {
       "description": "MD barostat relaxation time.",
       "dtypeStr": "f",
-      "name": "barostat_tau",
+      "name": "x_lammps_barostat_tau",
       "shape": [],
+      "units": "s",
       "superNames": [
         "settings_barostat"
       ]
     }, {
       "description": "MD barostat type, valid values are defined in the barostat_type wiki page.",
       "dtypeStr": "C",
-      "name": "barostat_type",
+      "name": "x_lammps_barostat_type",
       "shape": [],
       "superNames": [
         "settings_barostat"
@@ -66,15 +71,16 @@
     }, {
       "description": "MD integration time step.",
       "dtypeStr": "f",
-      "name": "integrator_dt",
+      "name": "x_lammps_integrator_dt",
       "shape": [],
+      "units": "s",
       "superNames": [
         "settings_integrator"
       ]
     }, {
       "description": "MD integrator type, valid values are defined in the integrator_type wiki page.",
       "dtypeStr": "C",
-      "name": "integrator_type",
+      "name": "x_lammps_integrator_type",
       "shape": [],
       "superNames": [
         "settings_integrator"
@@ -82,7 +88,7 @@
     }, {
       "description": "Reference to the atom type of each interaction atoms.",
       "dtypeStr": "r",
-      "name": "interaction_atom_to_atom_type_ref",
+      "name": "x_lammps_interaction_atom_to_atom_type_ref",
       "referencedSections": [
         "section_atom_type"
       ],
@@ -93,15 +99,16 @@
     }, {
       "description": "Langevin thermostat damping factor.",
       "dtypeStr": "f",
-      "name": "langevin_gamma",
+      "name": "x_lammps_langevin_gamma",
       "shape": [],
+      "units": "s",
       "superNames": [
         "settings_thermostat"
       ]
     }, {
       "description": "Reference to the atom type of each molecule interaction atoms.",
       "dtypeStr": "r",
-      "name": "molecule_interaction_atom_to_atom_type_ref",
+      "name": "x_lammps_molecule_interaction_atom_to_atom_type_ref",
       "referencedSections": [
         "section_atom_type"
       ],
@@ -112,7 +119,7 @@
     }, {
       "description": "Number of defined pair interactions within a molecule (L-J pairs).",
       "dtypeStr": "i",
-      "name": "number_of_defined_molecule_pair_interactions",
+      "name": "x_lammps_number_of_defined_molecule_pair_interactions",
       "shape": [],
       "superNames": [
         "section_molecule_interaction"
@@ -120,7 +127,7 @@
     }, {
       "description": "Number of defined pair interactions (L-J pairs).",
       "dtypeStr": "i",
-      "name": "number_of_defined_pair_interactions",
+      "name": "x_lammps_number_of_defined_pair_interactions",
       "shape": [],
       "superNames": [
         "section_interaction"
@@ -128,7 +135,7 @@
     }, {
       "description": "Number of requested MD integration time steps.",
       "dtypeStr": "f",
-      "name": "number_of_steps_requested",
+      "name": "x_lammps_number_of_steps_requested",
       "shape": [],
       "superNames": [
         "settings_integrator"
@@ -136,12 +143,12 @@
     }, {
       "description": "Reference to the atom type for pair interactions.",
       "dtypeStr": "r",
-      "name": "pair_interaction_atom_type_ref",
+      "name": "x_lammps_pair_interaction_atom_type_ref",
       "referencedSections": [
         "section_atom_type"
       ],
       "shape": [
-	"number_of_defined_pair_interactions",
+        "x_lammps_number_of_defined_pair_interactions",
         "number_of_atoms_per_interaction"
       ],
       "superNames": [
@@ -150,9 +157,9 @@
     }, {
       "description": "Pair interactions parameters.",
       "dtypeStr": "f",
-      "name": "pair_interaction_parameters",
+      "name": "x_lammps_pair_interaction_parameters",
       "shape": [
-        "number_of_defined_pair_interactions",
+        "x_lammps_number_of_defined_pair_interactions",
         2
       ],
       "superNames": [
@@ -161,7 +168,7 @@
     }, {
       "description": "Molecule pair interactions parameters.",
       "dtypeStr": "f",
-      "name": "pair_molecule_interaction_parameters",
+      "name": "x_lammps_pair_molecule_interaction_parameters",
       "shape": [
         "number_of_defined_molecule_pair_interactions",
         2
@@ -172,12 +179,12 @@
     }, {
       "description": "Reference to the atom type for pair interactions within a molecule.",
       "dtypeStr": "r",
-      "name": "pair_molecule_interaction_to_atom_type_ref",
+      "name": "x_lammps_pair_molecule_interaction_to_atom_type_ref",
       "referencedSections": [
         "section_atom_type"
       ],
       "shape": [
-        "number_of_defined_pair_interactions",
+        "x_lammps_number_of_defined_pair_interactions",
         "number_of_atoms_per_interaction"
       ],
       "superNames": [
@@ -186,7 +193,7 @@
     }, {
       "description": "MD thermostat level (see wiki: single, multiple, regional).",
       "dtypeStr": "C",
-      "name": "thermostat_level",
+      "name": "x_lammps_thermostat_level",
       "shape": [],
       "superNames": [
         "settings_thermostat"
@@ -194,23 +201,25 @@
     }, {
       "description": "MD thermostat target temperature.",
       "dtypeStr": "f",
-      "name": "thermostat_target_temperature",
+      "name": "x_lammps_thermostat_target_temperature",
       "shape": [],
+      "units": "K",
       "superNames": [
         "settings_thermostat"
       ]
     }, {
       "description": "MD thermostat relaxation time.",
       "dtypeStr": "f",
-      "name": "thermostat_tau",
+      "name": "x_lammps_thermostat_tau",
       "shape": [],
+      "units": "s",
       "superNames": [
         "settings_thermostat"
       ]
     }, {
       "description": "MD thermostat type, valid values are defined in the thermostat_type wiki page.",
       "dtypeStr": "C",
-      "name": "thermostat_type",
+      "name": "x_lammps_thermostat_type",
       "shape": [],
       "superNames": [
         "settings_thermostat"
