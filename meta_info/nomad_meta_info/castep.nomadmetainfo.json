@@ -1123,8 +1123,16 @@
       ]
     }, {
       "description": "CASTEP_total_energy_corrected_for_finite_basis",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "CASTEP_total_energy_corrected_for_finite_basis",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "CASTEP_total_energy_corrected_for_finite_basis_store",
+      "dtypeStr": "f",
+      "name": "CASTEP_total_energy_corrected_for_finite_basis_store",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
