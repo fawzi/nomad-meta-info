@@ -1,10 +1,120 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the crystal parser, all names are expected to start with x_crystal_",
+  "description": "meta info used by the Crystal parser, all names are expected to start with x_crystal_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {
+      "description": "The name of the Crystal input file that produced this calculation.",
+      "kindStr": "type_section",
+      "name": "x_crystal_section_filenames",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The name of the Crystal input file that produced this calculation.",
+      "dtypeStr": "C",
+      "name": "x_crystal_input_filename",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_filenames"
+      ]
+    }, {
+      "description": "The name of the Crystal input file that produced this calculation.",
+      "dtypeStr": "C",
+      "name": "x_crystal_output_filename",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_filenames"
+      ]
+    }, {
+      "description": "The date when this run was started.",
+      "dtypeStr": "C",
+      "name": "x_crystal_run_start_date",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_startinformation"
+      ]
+    }, {
+      "description": "The time when this run was started.",
+      "dtypeStr": "C",
+      "name": "x_crystal_run_start_time",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_startinformation"
+      ]
+    }, {
+      "description": "Contains information about the software version used for this run.",
+      "kindStr": "type_section",
+      "name": "x_crystal_section_programinformation",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "Contains information about the starting conditions for this run.",
+      "kindStr": "type_section",
+      "name": "x_crystal_section_startinformation",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "Minor version number.",
+      "dtypeStr": "C",
+      "name": "x_crystal_version_minor",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_programinformation"
+      ]
+    }, {
+      "description": "Crystal spacegroup string resembling Hermann–Mauguin notation.",
+      "dtypeStr": "C",
+      "name": "x_crystal_spacegroup",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "System dimensionality.",
+      "dtypeStr": "i",
+      "name": "x_crystal_dimensionality",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Simulation cell volume, in cubic angstroms.",
+      "dtypeStr": "f",
+      "name": "x_crystal_volume",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Density g/cm3.",
+      "dtypeStr": "f",
+      "name": "x_crystal_density",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Conversion factor Bohr as Angstroms, used by Crystal.",
+      "dtypeStr": "f",
+      "name": "x_crystal_bohr_angstrom",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Lattice parameters in angstroms and angles.",
+      "dtypeStr": "f",
+      "name": "x_crystal_lattice_parameters",
+      "shape": [6],
+      "superNames": [
+        "section_system"
+      ]
+    }]
 }
