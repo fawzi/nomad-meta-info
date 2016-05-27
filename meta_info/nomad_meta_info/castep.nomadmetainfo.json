@@ -345,7 +345,10 @@
       "description": "cell vector velocities",
       "dtypeStr": "f",
       "name": "x_castep_velocities_cell_vector",
-      "shape": [],
+      "shape": [
+        3,
+        3
+      ],
       "superNames": [
         "section_system"
       ]
