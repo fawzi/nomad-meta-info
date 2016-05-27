@@ -213,6 +213,15 @@
         "section_system"
       ],
       "units": "m"
+    }, {                                                                        
+      "description": "Charge per atom",                          
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_geometry_atom_charge",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system"                                                        
+      ]                                                                        
     }, {
       "description": "The integration cells",
       "dtypeStr": "i",
@@ -398,5 +407,50 @@
         "section_scf_iteration"                                                 
       ],
       "units": "J"                                                                         
+    }, {                                                                        
+      "description": "Maximum multipole moment used",                                                       
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_max_multipole_moment",                                
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"  
+      ]                                                                         
+    }, {                                                                        
+      "description": "Multipole precision parameter",                                                       
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_multipole_precision_parameter",                                
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                     
+        "section_method"                                                 
+      ]                                                                         
+    }, {                                                                        
+      "description": "Minimum separation between cells",                                                       
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_min_separation_cells",                                
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                     
+        "section_method"                                                 
+      ]                                                                         
+    }, {                                                                        
+      "description": "Charge Neutrality tolerance",                        
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_charge_neutrality_tol",                                 
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Total charge",                        
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_total_charge",                                 
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
     }]
 }
