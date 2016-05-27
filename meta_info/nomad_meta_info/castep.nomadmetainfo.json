@@ -9,7 +9,7 @@
   "metaInfos": [ {
       "description": "Forces on the atoms as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei in the gradient are evaluated according to the coordinate system defined in coordinate_system. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and rigid rotations of the whole system, when non periodic), atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints like fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
-      "name": "castep_atom_forces",
+      "name": "x_castep_atom_forces",
       "repeats": true,
       "shape": [
         "number_of_atoms",
@@ -21,7 +21,7 @@
     }, {
       "description": "Number of electrons",
       "dtypeStr": "f",
-      "name": "castep_number_of_electrons",
+      "name": "x_castep_number_of_electrons",
       "shape": [],
       "superNames": [
         "section_system"
@@ -29,7 +29,7 @@
     }, {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
-      "name": "castep_atom_positions",
+      "name": "x_castep_atom_positions",
       "repeats": true,
       "shape": [
         "number_of_atoms",
@@ -41,7 +41,7 @@
     }, {
       "description": "cutoff at iteration 0 of geometry optimisation",
       "dtypeStr": "C",
-      "name": "castep_basis_set_planewave_cutoff_iteration_0",
+      "name": "x_castep_basis_set_planewave_cutoff_iteration_0",
       "shape": [],
       "superNames": [
         "section_run"
@@ -49,7 +49,7 @@
     }, {
       "description": "Temporary storing plane wave cutoff as string",
       "dtypeStr": "C",
-      "name": "castep_basis_set_planewave_cutoff",
+      "name": "x_castep_basis_set_planewave_cutoff",
       "shape": [],
       "superNames": [
         "section_basis_set_cell_dependent"
@@ -57,127 +57,127 @@
     }, {
       "description": "castep_calculation_time",
       "dtypeStr": "f",
-      "name": "castep_calculation_time",
+      "name": "x_castep_calculation_time",
       "shape": [],
       "superNames": [
-        "castep_section_time"
+        "x_castep_section_time"
       ]
     }, {
       "description": "Simulation cell angle alpha",
       "dtypeStr": "f",
-      "name": "castep_cell_angle_alpha_optim",
+      "name": "x_castep_cell_angle_alpha_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions_optim"
+        "x_castep_section_atom_positions_optim"
       ]
     }, {
       "description": "Simulation cell angle alpha",
       "dtypeStr": "f",
-      "name": "castep_cell_angle_alpha",
+      "name": "x_castep_cell_angle_alpha",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions"
+        "x_castep_section_atom_positions"
       ]
     }, {
       "description": "Simulation cell angle beta",
       "dtypeStr": "f",
-      "name": "castep_cell_angle_beta_optim",
+      "name": "x_castep_cell_angle_beta_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions_optim"
+        "x_castep_section_atom_positions_optim"
       ]
     }, {
       "description": "Simulation cell angle beta",
       "dtypeStr": "f",
-      "name": "castep_cell_angle_beta",
+      "name": "x_castep_cell_angle_beta",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions"
+        "x_castep_section_atom_positions"
       ]
     }, {
       "description": "Simulation cell angle gamma",
       "dtypeStr": "f",
-      "name": "castep_cell_angle_gamma_optim",
+      "name": "x_castep_cell_angle_gamma_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions_optim"
+        "x_castep_section_atom_positions_optim"
       ]
     }, {
       "description": "Simulation cell angle gamma",
       "dtypeStr": "f",
-      "name": "castep_cell_angle_gamma",
+      "name": "x_castep_cell_angle_gamma",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions"
+        "x_castep_section_atom_positions"
       ]
     }, {
       "description": "a unit cell edge length",
       "dtypeStr": "f",
-      "name": "castep_cell_length_a_optim",
+      "name": "x_castep_cell_length_a_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions_optim"
+        "x_castep_section_atom_positions_optim"
       ]
     }, {
       "description": "a unit cell edge length",
       "dtypeStr": "f",
-      "name": "castep_cell_length_a",
+      "name": "x_castep_cell_length_a",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions"
+        "x_castep_section_atom_positions"
       ]
     }, {
       "description": "b unit cell edge length",
       "dtypeStr": "f",
-      "name": "castep_cell_length_b_optim",
+      "name": "x_castep_cell_length_b_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions_optim"
+        "x_castep_section_atom_positions_optim"
       ]
     }, {
       "description": "b unit cell edge length",
       "dtypeStr": "f",
-      "name": "castep_cell_length_b",
+      "name": "x_castep_cell_length_b",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions"
+        "x_castep_section_atom_positions"
       ]
     }, {
       "description": "c unit cell edge length",
       "dtypeStr": "f",
-      "name": "castep_cell_length_c_optim",
+      "name": "x_castep_cell_length_c_optim",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions_optim"
+        "x_castep_section_atom_positions_optim"
       ]
     }, {
       "description": "c unit cell edge length",
       "dtypeStr": "f",
-      "name": "castep_cell_length_c",
+      "name": "x_castep_cell_length_c",
       "shape": [],
       "superNames": [
-        "castep_section_atom_positions"
+        "x_castep_section_atom_positions"
       ]
     }, {
       "description": "Temporay storage for cell vectors",
       "dtypeStr": "C",
-      "name": "castep_cell_vector_optim",
+      "name": "x_castep_cell_vector_optim",
       "shape": [],
       "superNames": [
-        "castep_section_cell_optim"
+        "x_castep_section_cell_optim"
       ]
     }, {
       "description": "Temporay storage for cell vectors",
       "dtypeStr": "C",
-      "name": "castep_cell_vector",
+      "name": "x_castep_cell_vector",
       "shape": [],
       "superNames": [
-        "castep_section_cell"
+        "x_castep_section_cell"
       ]
     }, {
       "description": "CASTEP_cell_volume",
       "dtypeStr": "f",
-      "name": "CASTEP_cell_volume",
+      "name": "x_castep_cell_volume",
       "shape": [],
       "superNames": [
         "section_system"
@@ -185,7 +185,7 @@
     }, {
       "description": "Compiler name",
       "dtypeStr": "C",
-      "name": "castep_compiler",
+      "name": "x_castep_compiler",
       "shape": [],
       "superNames": [
         "section_run"
@@ -193,7 +193,7 @@
     }, {
       "description": "Fundamental constant data source",
       "dtypeStr": "C",
-      "name": "castep_constants_reference",
+      "name": "x_castep_constants_reference",
       "shape": [],
       "superNames": [
         "section_run"
@@ -201,7 +201,7 @@
     }, {
       "description": "CASTEP_Enthalpy",
       "dtypeStr": "C",
-      "name": "CASTEP_enthalpy",
+      "name": "x_castep_enthalpy",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -209,16 +209,16 @@
      }, {
       "description": "CASTEP_store_t_md_frame",
       "dtypeStr": "f",
-      "name": "castep_frame_time",
+      "name": "x_castep_frame_time",
       "shape": [],
       "superNames": [
         
-        "castep_section_SCF_iteration_frame"
+        "x_castep_section_SCF_iteration_frame"
         ]
     }, {
       "description": "CASTEP_store_t_md_frame",
       "dtypeStr": "f",
-      "name": "castep_frame_time_0",
+      "name": "x_castep_frame_time_0",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -226,7 +226,7 @@
     }, {
       "description": "fft library name",
       "dtypeStr": "C",
-      "name": "castep_fft_library",
+      "name": "x_castep_fft_library",
       "shape": [],
       "superNames": [
         "section_run"
@@ -234,15 +234,15 @@
     }, {
       "description": "castep_finalisation_time",
       "dtypeStr": "f",
-      "name": "castep_finalisation_time",
+      "name": "x_castep_finalisation_time",
       "shape": [],
       "superNames": [
-        "castep_section_time"
+        "x_castep_section_time"
       ]
     }, {
       "description": "XC functional+weight in CASTEP convention",
       "dtypeStr": "C",
-      "name": "castep_functional_and_weight",
+      "name": "x_castep_functional_and_weight",
       "shape": [],
       "superNames": [
         "section_method"
@@ -250,31 +250,31 @@
     }, {
       "description": "XC functional in CASTEP convention",
       "dtypeStr": "C",
-      "name": "castep_functional_name",
+      "name": "x_castep_functional_name",
       "shape": [],
       "superNames": [
-        "castep_section_functionals"
+        "x_castep_section_functionals"
       ]
     }, {
       "description": "XC functional definition in CASTEP convention",
       "dtypeStr": "C",
-      "name": "castep_functional_type",
+      "name": "x_castep_functional_type",
       "shape": [],
       "superNames": [
-        "castep_section_functional_definition"
+        "x_castep_section_functional_definition"
       ]
     }, {
       "description": "XC functional weight in CASTEP convention",
       "dtypeStr": "C",
-      "name": "castep_functional_weight",
+      "name": "x_castep_functional_weight",
       "shape": [],
       "superNames": [
-        "castep_section_functional_definition"
+        "x_castep_section_functional_definition"
       ]
     }, {
       "description": "CASTEP_geom_converged",
       "dtypeStr": "C",
-      "name": "CASTEP_geom_converged",
+      "name": "x_castep_geom_converged",
       "shape": [],
       "superNames": [
         "section_run"
@@ -282,7 +282,7 @@
     }, {
       "description": "Index for number of iterations in geometry optimisation",
       "dtypeStr": "f",
-      "name": "CASTEP_geom_iteration_index",
+      "name": "x_castep_geom_iteration_index",
       "shape": [],
       "superNames": [
         "section_run"
@@ -290,23 +290,23 @@
     }, {
       "description": "Determines optimisation method used",
       "dtypeStr": "C",
-      "name": "castep_geometry_optim_method",
+      "name": "x_castep_geometry_optim_method",
       "shape": [],
       "superNames": [
-        "castep_section_geom_optimisation_method"
+        "x_castep_section_geom_optimisation_method"
       ]
     }, {
-      "description": "castep_Initialisation_time",
+      "description": "x_castep_Initialisation_time",
       "dtypeStr": "f",
-      "name": "castep_initialisation_time",
+      "name": "x_castep_initialisation_time",
       "shape": [],
       "superNames": [
-        "castep_section_time"
+        "x_castep_section_time"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "castep_k_path",
+      "name": "x_castep_k_path",
       "shape": [],
       "superNames": [
         "section_k_band"
@@ -314,7 +314,7 @@
     }, {
       "description": "Maths library name",
       "dtypeStr": "C",
-      "name": "castep_maths_library",
+      "name": "x_castep_maths_library",
       "shape": [],
       "superNames": [
         "section_run"
@@ -322,7 +322,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_optimised_atom_labels",
+      "name": "x_castep_optimised_atom_labels",
       "shape": [
         "number_of_atoms"
       ],
@@ -332,7 +332,7 @@
     }, {
       "description": "Storing atomic optimised positions in fractional coordinates",
       "dtypeStr": "f",
-      "name": "castep_optimised_atom_positions",
+      "name": "x_castep_optimised_atom_positions",
       "repeats": true,
       "shape": [
         "number_of_atoms",
@@ -344,7 +344,7 @@
     }, {
       "description": "cell vector velocities",
       "dtypeStr": "f",
-      "name": "castep_velocities_cell_vector",
+      "name": "x_castep_velocities_cell_vector",
       "shape": [],
       "superNames": [
         "section_system"
@@ -352,7 +352,7 @@
     }, {
       "description": "Compilation date (string)",
       "dtypeStr": "C",
-      "name": "castep_program_compilation_date",
+      "name": "x_castep_program_compilation_date",
       "shape": [],
       "superNames": [
         "section_run"
@@ -360,7 +360,7 @@
     }, {
       "description": "Compilation time (string)",
       "dtypeStr": "C",
-      "name": "castep_program_compilation_time",
+      "name": "x_castep_program_compilation_time",
       "shape": [],
       "superNames": [
         "section_run"
@@ -368,7 +368,7 @@
     }, {
       "description": "Run execution date (string)",
       "dtypeStr": "C",
-      "name": "castep_program_execution_date",
+      "name": "x_castep_program_execution_date",
       "shape": [],
       "superNames": [
         "section_run"
@@ -376,7 +376,7 @@
     }, {
       "description": "Run execution start time (string)",
       "dtypeStr": "C",
-      "name": "castep_program_execution_time",
+      "name": "x_castep_program_execution_time",
       "shape": [],
       "superNames": [
         "section_run"
@@ -384,119 +384,119 @@
     }, {
       "description": "Relativity treatment in CASTEP convention",
       "dtypeStr": "C",
-      "name": "castep_relativity_treatment_scf",
+      "name": "x_castep_relativity_treatment_scf",
       "shape": [],
       "superNames": [
-        "castep_section_relativity_treatment"
+        "x_castep_section_relativity_treatment"
       ]
     }, {
        "description": "Phonon calculation method",
       "dtypeStr": "C",
-      "name": "castep_phonon_method",
+      "name": "x_castep_phonon_method",
       "shape": [],
       "superNames": [
-        "castep_section_phonons"
+        "x_castep_section_phonons"
       ]
     }, {
        "description": "Phonon DFPT solver method",
       "dtypeStr": "C",
-      "name": "castep_DFPT_solver_method",
+      "name": "x_castep_DFPT_solver_method",
       "shape": [],
       "superNames": [
-        "castep_section_phonons"
+        "x_castep_section_phonons"
       ]   
     }, {
        "description": "Vibration Frequenices (cm-1)",
       "dtypeStr": "C",
-      "name": "castep_vibrationl_frequencies",
+      "name": "x_castep_vibrationl_frequencies",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Vibration Frequenices (cm-1)",
       "dtypeStr": "C",
-      "name": "castep_vibrationl_frequencies_store",
+      "name": "x_castep_vibrationl_frequencies_store",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Irreducible representation in the Point Group",
       "dtypeStr": "C",
-      "name": "castep_ir_store",
+      "name": "x_castep_ir_store",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Irreducible representation in the Point Group",
       "dtypeStr": "C",
-      "name": "castep_ir",
+      "name": "x_castep_ir",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Raman activity (A**4/amu)",
       "dtypeStr": "C",
-      "name": "castep_raman_activity",
+      "name": "x_castep_raman_activity",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Raman activity (A**4/amu)",
       "dtypeStr": "C",
-      "name": "castep_raman_active",
+      "name": "x_castep_raman_active",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Number of iterations in phonons",
       "dtypeStr": "C",
-      "name": "castep_n_iterations_phonons",
+      "name": "x_castep_n_iterations_phonons",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Raman activity (A**4/amu)",
       "dtypeStr": "C",
-      "name": "castep_raman_activity_store",
+      "name": "x_castep_raman_activity_store",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Raman activity (A**4/amu)",
       "dtypeStr": "C",
-      "name": "castep_raman_active_store",
+      "name": "x_castep_raman_active_store",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "IR intensities (D/A)**2/amu",
       "dtypeStr": "C",
-      "name": "castep_ir_intensity",
+      "name": "x_castep_ir_intensity",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]        
      }, {
        "description": "IR intensities (D/A)**2/amu",
       "dtypeStr": "C",
-      "name": "castep_ir_intensity_store",
+      "name": "x_castep_ir_intensity_store",
       "shape": [],
       "superNames": [
-        "castep_section_vibrational_frequencies"
+        "x_castep_section_vibrational_frequencies"
       ]      
      }, {
        "description": "Point group of the crystal (Schoenflies notation)",
       "dtypeStr": "C",
-      "name": "castep_crystal_point_group",
+      "name": "x_castep_crystal_point_group",
       "shape": [],
       "superNames": [
         "section_run"
@@ -504,7 +504,7 @@
      }, {
        "description": "Point space of the crystal",
       "dtypeStr": "C",
-      "name": "castep_space_group",
+      "name": "x_castep_space_group",
       "shape": [],
       "superNames": [
         "section_run"
@@ -512,88 +512,88 @@
     }, {
        "description": "Mulliken_atom_index",
       "dtypeStr": "C",
-      "name": "castep_mulliken_atom_index",
+      "name": "x_castep_mulliken_atom_index",
       "shape": [],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]   
     }, {
        "description": "Mulliken_atom kind",
       "dtypeStr": "C",
-      "name": "castep_mulliken_atom",
+      "name": "x_castep_mulliken_atom",
       "shape": [],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]   
     }, {
        "description": "Mulliken_contributions",
       "dtypeStr": "C",
-      "name": "castep_orbital_contributions",
+      "name": "x_castep_orbital_contributions",
       "shape": [],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]     
     }, {
        "description": "Mulliken_contribution_orbital s",
       "dtypeStr": "f",
-      "name": "castep_orbital_s",
+      "name": "x_castep_orbital_s",
       "shape": ["number_of_atoms"],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]     
     }, {
        "description": "Mulliken_contribution_orbital p",
       "dtypeStr": "f",
-      "name": "castep_orbital_p",
+      "name": "x_castep_orbital_p",
       "shape": ["number_of_atoms"],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]     
     
     }, {
        "description": "Mulliken_contribution_orbital d",
       "dtypeStr": "f",
-      "name": "castep_orbital_d",
+      "name": "x_castep_orbital_d",
       "shape": ["number_of_atoms"],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]     
     }, {
        "description": "Mulliken_contribution_orbital f",
       "dtypeStr": "f",
-      "name": "castep_orbital_f",
+      "name": "x_castep_orbital_f",
       "shape": ["number_of_atoms"],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]     
     }, {
        "description": "Mulliken_total_contribution",
       "dtypeStr": "f",
-      "name": "castep_total_orbital",
+      "name": "x_castep_total_orbital",
       "shape": ["number_of_atoms"],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]     
     }, {
        "description": "Mulliken_charges",
       "dtypeStr": "C",
-      "name": "castep_mulliken_charge_store",
+      "name": "x_castep_mulliken_charge_store",
       "shape": [],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]       
      }, {
        "description": "Mulliken_charges",
       "dtypeStr": "f",
-      "name": "castep_mulliken_charge",
+      "name": "x_castep_mulliken_charge",
       "shape": ["number_of_atoms"],
       "superNames": [
-        "castep_section_population_analysis"
+        "x_castep_section_population_analysis"
       ]         
     }, {
        "description": "md_energy_components",
       "dtypeStr": "C",
-      "name": "castep_md_energies",
+      "name": "x_castep_md_energies",
       "shape": [],
       "superNames": [
         "section_md"
@@ -601,7 +601,7 @@
     }, {
        "description": "md_temp",
       "dtypeStr": "f",
-      "name": "castep_md_temperature",
+      "name": "x_castep_md_temperature",
       "shape": [],
       "superNames": [
         "section_md"
@@ -609,7 +609,7 @@
     }, {
        "description": "md_pressure",
       "dtypeStr": "f",
-      "name": "castep_md_pressure",
+      "name": "x_castep_md_pressure",
       "shape": [],
       "superNames": [
         "section_md"
@@ -617,7 +617,7 @@
     }, {
        "description": "md_cell_vectors",
       "dtypeStr": "C",
-      "name": "castep_md_cell_vectors",
+      "name": "x_castep_md_cell_vectors",
       "shape": [],
       "superNames": [
         "section_md"
@@ -625,7 +625,7 @@
     }, {
        "description": "md_cell_vectors_velocities",
       "dtypeStr": "C",
-      "name": "castep_md_cell_vectors_vel",
+      "name": "x_castep_md_cell_vectors_vel",
       "shape": [],
       "superNames": [
         "section_md"
@@ -633,7 +633,7 @@
     }, {
        "description": "md_stress_tensor",
       "dtypeStr": "C",
-      "name": "castep_md_stress_tensor",
+      "name": "x_castep_md_stress_tensor",
       "shape": [],
       "superNames": [
         "section_md"
@@ -641,7 +641,7 @@
      }, {
        "description": "md_positions",
       "dtypeStr": "C",
-      "name": "castep_md_positions",
+      "name": "x_castep_md_positions",
       "shape": [],
       "superNames": [
         "section_md"
@@ -649,7 +649,7 @@
     }, {
        "description": "md_forces",
       "dtypeStr": "C",
-      "name": "castep_md_forces",
+      "name": "x_castep_md_forces",
       "shape": [],
       "superNames": [
         "section_md"
@@ -657,7 +657,7 @@
     }, {
        "description": "md_lables",
       "dtypeStr": "C",
-      "name": "castep_md_lab",
+      "name": "x_castep_md_lab",
       "shape": [],
       "superNames": [
         "section_md"
@@ -665,7 +665,7 @@
     }, {
        "description": "md_veloc",
       "dtypeStr": "C",
-      "name": "castep_md_veloc",
+      "name": "x_castep_md_veloc",
       "shape": [],
       "superNames": [
         "section_md"
@@ -673,7 +673,7 @@
     }, {
        "description": "md_time",
       "dtypeStr": "C",
-      "name": "castep_md_time",
+      "name": "x_castep_md_time",
       "shape": [],
       "superNames": [
         "section_md"
@@ -681,7 +681,7 @@
     }, {
        "description": "thermostat_target_temperature",
       "dtypeStr": "f",
-      "name": "castep_thermostat_target_temperature",
+      "name": "x_castep_thermostat_target_temperature",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -689,7 +689,7 @@
     }, {
        "description": "barostat_type",
       "dtypeStr": "C",
-      "name": "castep_barostat_type",
+      "name": "x_castep_barostat_type",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -697,7 +697,7 @@
     }, {
        "description": "thermostat_type",
       "dtypeStr": "C",
-      "name": "castep_thermostat_type",
+      "name": "x_castep_thermostat_type",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -705,7 +705,7 @@
      }, {
        "description": "thermostat_type",
       "dtypeStr": "f",
-      "name": "castep_thermostat_tau",
+      "name": "x_castep_thermostat_tau",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -713,7 +713,7 @@
     }, {
        "description": "barostat_tau",
       "dtypeStr": "f",
-      "name": "castep_barostat_tau",
+      "name": "x_castep_barostat_tau",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -721,7 +721,7 @@
     }, {
        "description": "MD_time_step",
       "dtypeStr": "f",
-      "name": "castep_integrator_dt",
+      "name": "x_castep_integrator_dt",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -729,7 +729,7 @@
     }, {
        "description": "MD_time_step_number",
       "dtypeStr": "f",
-      "name": "castep_number_of_steps_requested",
+      "name": "x_castep_number_of_steps_requested",
       "shape": [],
       "superNames": [
         "section_sampling_method"
@@ -737,85 +737,85 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_vibrational_frequencies",
+      "name": "x_castep_section_vibrational_frequencies",
       "superNames": [
         "section_run"
       ]
      }, {
        "description": "energy_frame_iterations",
       "dtypeStr": "C",
-      "name": "castep_SCF_frame_energy",
+      "name": "x_castep_SCF_frame_energy",
       "shape": [],
       "superNames": [
-        "castep_section_SCF_iteration_frame"
+        "x_castep_section_SCF_iteration_frame"
       ]        
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_ionic_velocities",
+      "name": "x_castep_section_atom_ionic_velocities",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_positions_optim",
+      "name": "x_castep_section_atom_positions_optim",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_atom_positions",
+      "name": "x_castep_section_atom_positions",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_cell_optim",
+      "name": "x_castep_section_cell_optim",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_cell",
+      "name": "x_castep_section_cell",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_collect_scf_eigenvalues",
+      "name": "x_castep_section_collect_scf_eigenvalues",
       "superNames": [
         "section_run"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_eigenvalues_1",
+      "name": "x_castep_section_eigenvalues_1",
       "superNames": [
         "section_k_band"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_eigenvalues",
+      "name": "x_castep_section_eigenvalues",
       "superNames": [
         "section_k_band"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_functional_definition",
+      "name": "x_castep_section_functional_definition",
       "superNames": [
         "section_method"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_functionals",
+      "name": "x_castep_section_functionals",
       "superNames": [
         "section_method"
       ]
@@ -823,28 +823,28 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_population_analysis",
+      "name": "x_castep_section_population_analysis",
       "superNames": [
         "section_run"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_geom_optimisation_method",
+      "name": "x_castep_section_geom_optimisation_method",
       "superNames": [
         "section_run"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_phonons",
+      "name": "x_castep_section_phonons",
       "superNames": [
         "section_run"
       ]  
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_k_band",
+      "name": "x_castep_section_k_band",
       "superNames": [
         "section_k_band"
       ]
@@ -852,7 +852,7 @@
       "description": "-",
       "dtypeStr": "C",
       "kindStr": "type_section",
-      "name": "castep_section_k_points_1",
+      "name": "x_castep_section_k_points_1",
       "shape": [],
       "superNames": [
         "section_k_band"
@@ -860,43 +860,43 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_k_points",
+      "name": "x_castep_section_k_points",
       "superNames": [
         "section_k_band"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_relativity_treatment",
+      "name": "x_castep_section_relativity_treatment",
       "superNames": [
         "section_method"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_scf_eigenvalues",
+      "name": "x_castep_section_scf_eigenvalues",
       "superNames": [
-        "castep_section_scf_k_points"
+        "x_castep_section_scf_k_points"
       ]
     
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_SCF_iteration_frame",
+      "name": "x_castep_section_SCF_iteration_frame",
       "superNames": [
         "section_run"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_scf_k_points",
+      "name": "x_castep_section_scf_k_points",
       "superNames": [
         "section_single_configuration_calculation"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_spin_number",
+      "name": "x_castep_section_spin_number",
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -904,7 +904,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_stress_tensor",
+      "name": "x_castep_section_stress_tensor",
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -912,14 +912,14 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_time",
+      "name": "x_castep_section_time",
       "superNames": [
         "section_run"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "section_castep_raman_tensor",
+      "name": "x_castep_section_raman_tensor",
       "superNames": [
         "section_run"
       ]  
@@ -933,22 +933,22 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "castep_section_van_der_Waals_parameters",
+      "name": "x_castep_section_van_der_Waals_parameters",
       "superNames": [
         "section_run"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "castep_spin_number",
+      "name": "x_castep_spin_number",
       "shape": [],
       "superNames": [
-        "castep_section_spin_number"
+        "x_castep_section_spin_number"
       ]
     }, {
       "description": "Temporary storing converged atom forces",
       "dtypeStr": "C",
-      "name": "castep_store_atom_forces_band",
+      "name": "x_castep_store_atom_forces_band",
       "shape": [],
       "superNames": [
         "section_run"
@@ -957,7 +957,7 @@
     }, {
       "description": "Temporary storing converged atom forces",
       "dtypeStr": "C",
-      "name": "castep_store_atom_forces",
+      "name": "x_castep_store_atom_forces",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation",
@@ -967,28 +967,28 @@
     }, {
       "description": "Temporary storing converged Raman susceptibility tensor",
       "dtypeStr": "C",
-      "name": "castep_store_raman_tensor",
+      "name": "x_castep_store_raman_tensor",
       "shape": [],
       "superNames": [
-        "section_castep_raman_tensor"
+        "x_castep_section_raman_tensor"
       ]
  
     }, {
       "description": "Ramen_tensor",
       "dtypeStr": "f",
-      "name": "castep_ramen_tensor",
+      "name": "x_castep_ramen_tensor",
       "shape": [
         3,
         3
       ],
       "superNames": [
-        "section_castep_raman_tensor"
+        "x_castep_section_raman_tensor"
       ],
-      "units": "(A/amu)*0.5"
+      "units": "(A/amu)*0.5" 
     }, {
       "description": "Temporary storing atom labels",
       "dtypeStr": "C",
-      "name": "castep_store_atom_labels",
+      "name": "x_castep_store_atom_labels",
       "shape": [],
       "superNames": [
         "section_system"
@@ -996,7 +996,7 @@
     }, {
       "description": "Temporary storing atom mass",
       "dtypeStr": "C",
-      "name": "castep_store_atom_mass",
+      "name": "x_castep_store_atom_mass",
       "shape": [],
       "superNames": [
         "section_topology"
@@ -1004,7 +1004,7 @@
     }, {
       "description": "Temporary storing atom name",
       "dtypeStr": "C",
-      "name": "castep_store_atom_name",
+      "name": "x_castep_store_atom_name",
       "shape": [],
       "superNames": [
         "section_topology"
@@ -1012,7 +1012,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_atom_positions",
+      "name": "x_castep_store_atom_positions",
       "shape": [],
       "superNames": [
         "section_system"
@@ -1020,7 +1020,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_atom_ionic_velocities",
+      "name": "x_castep_store_atom_ionic_velocities",
       "shape": [],
       "superNames": [
         "section_system"
@@ -1028,7 +1028,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "f",
-      "name": "castep_atom_ionic_velocities",
+      "name": "x_castep_atom_ionic_velocities",
       "shape": [],
       "superNames": [
         "section_system"
@@ -1036,23 +1036,23 @@
     }, {
       "description": "Temporary storing eigenvalues",
       "dtypeStr": "f",
-      "name": "castep_store_eigenvalues_1",
+      "name": "x_castep_store_eigenvalues_1",
       "shape": [],
       "superNames": [
-        "castep_section_eigenvalues_1"
+        "x_castep_section_eigenvalues_1"
       ]
     }, {
       "description": "Temporary storing eigenvalues",
       "dtypeStr": "f",
-      "name": "castep_store_eigenvalues",
+      "name": "x_castep_store_eigenvalues",
       "shape": [],
       "superNames": [
-        "castep_section_eigenvalues"
+        "x_castep_section_eigenvalues"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "castep_store_k_path",
+      "name": "x_castep_store_k_path",
       "shape": [],
       "superNames": [
         "section_k_band"
@@ -1060,23 +1060,23 @@
     }, {
       "description": "Temporary storing k points coordinates (fractional)",
       "dtypeStr": "C",
-      "name": "castep_store_k_points_1",
+      "name": "x_castep_store_k_points_1",
       "shape": [],
       "superNames": [
-        "castep_section_k_points_1"
+        "x_castep_section_k_points_1"
       ]
     }, {
       "description": "Temporary storing k points coordinates (fractional)",
       "dtypeStr": "C",
-      "name": "castep_store_k_points",
+      "name": "x_castep_store_k_points",
       "shape": [],
       "superNames": [
-        "castep_section_k_points"
+        "x_castep_section_k_points"
       ]
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_optimised_atom_labels",
+      "name": "x_castep_store_optimised_atom_labels",
       "shape": [],
       "superNames": [
         "section_system"
@@ -1084,7 +1084,7 @@
     }, {
       "description": "Temporary storing atomic positions",
       "dtypeStr": "C",
-      "name": "castep_store_optimised_atom_positions",
+      "name": "x_castep_store_optimised_atom_positions",
       "shape": [],
       "superNames": [
         "section_system"
@@ -1092,31 +1092,31 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "castep_store_scf_eigenvalues",
+      "name": "x_castep_store_scf_eigenvalues",
       "shape": [],
       "superNames": [
-        "castep_section_scf_eigenvalues"
+        "x_castep_section_scf_eigenvalues"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "castep_store_scf_k_points",
+      "name": "x_castep_store_scf_k_points",
       "shape": [],
       "superNames": [
-        "castep_section_scf_k_points"
+        "x_castep_section_scf_k_points"
       ]
     }, {
       "description": "Temporary storing stress tensor components",
       "dtypeStr": "C",
-      "name": "castep_store_stress_tensor",
+      "name": "x_castep_store_stress_tensor",
       "shape": [],
       "superNames": [
-        "castep_section_stress_tensor"
+        "x_castep_section_stress_tensor"
       ]
     }, {
       "description": "Total electronic energy that includes dispersion energy computed with Disp_method_name not corrected for finite basis-set",
       "dtypeStr": "f",
-      "name": "castep_total_dispersion_corrected_energy",
+      "name": "x_castep_total_dispersion_corrected_energy",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -1124,7 +1124,7 @@
     }, {
       "description": "CASTEP_total_energy_corrected_for_finite_basis",
       "dtypeStr": "f",
-      "name": "CASTEP_total_energy_corrected_for_finite_basis",
+      "name": "x_castep_total_energy_corrected_for_finite_basis",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -1132,7 +1132,7 @@
     }, {
       "description": "CASTEP_total_energy_corrected_for_finite_basis_store",
       "dtypeStr": "C",
-      "name": "CASTEP_total_energy_corrected_for_finite_basis_store",
+      "name": "x_castep_total_energy_corrected_for_finite_basis_store",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -1140,10 +1140,10 @@
     }, {
       "description": "Name type",
       "dtypeStr": "C",
-      "name": "Disp_method_name",
+      "name": "x_castep_disp_method_name",
       "shape": [],
       "superNames": [
-        "castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
@@ -1158,42 +1158,42 @@
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
-      "name": "Parameter_d",
+      "name": "x_castep_Parameter_d",
       "shape": [],
       "superNames": [
-        "castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method OBS",
       "dtypeStr": "f",
-      "name": "Parameter_LAMBDA",
+      "name": "x_castep_Parameter_LAMBDA",
       "shape": [],
       "superNames": [
-        "castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method OBS",
       "dtypeStr": "f",
-      "name": "Parameter_n",
+      "name": "x_castep_Parameter_n",
       "shape": [],
       "superNames": [
-        "castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
-      "name": "Parameter_s6",
+      "name": "x_castep_Parameter_s6",
       "shape": [],
       "superNames": [
-        "castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method TS",
       "dtypeStr": "f",
-      "name": "Parameter_sR",
+      "name": "x_castep_Parameter_sR",
       "shape": [],
       "superNames": [
-        "castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_Waals_parameters"
       ]
     }]
 }
