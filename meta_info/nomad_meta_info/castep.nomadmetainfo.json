@@ -1029,7 +1029,10 @@
       "description": "Temporary storing atomic positions",
       "dtypeStr": "f",
       "name": "x_castep_atom_ionic_velocities",
-      "shape": [],
+       "shape": [
+        "number_of_atoms",
+        3
+      ],
       "superNames": [
         "section_system"
       ]
