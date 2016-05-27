@@ -599,7 +599,7 @@
       "name": "x_castep_md_energies",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]         
     }, {
        "description": "md_temp",
@@ -607,7 +607,7 @@
       "name": "x_castep_md_temperature",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]         
     }, {
        "description": "md_pressure",
@@ -615,7 +615,7 @@
       "name": "x_castep_md_pressure",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]           
     }, {
        "description": "md_cell_vectors",
@@ -623,23 +623,23 @@
       "name": "x_castep_md_cell_vectors",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]           
     }, {
-       "description": "md_cell_vectors_velocities",
+      "description": "md_cell_vectors_velocities",
       "dtypeStr": "C",
       "name": "x_castep_md_cell_vectors_vel",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
     }, {
-       "description": "md_stress_tensor",
-      "dtypeStr": "C",
+      "description": "md_stress_tensor",
+      "dtypeStr": "f",
       "name": "x_castep_md_stress_tensor",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
      }, {
        "description": "md_positions",
@@ -647,7 +647,7 @@
       "name": "x_castep_md_positions",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
     }, {
        "description": "md_forces",
@@ -655,7 +655,7 @@
       "name": "x_castep_md_forces",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
     }, {
        "description": "md_lables",
@@ -663,7 +663,7 @@
       "name": "x_castep_md_lab",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
     }, {
        "description": "md_veloc",
@@ -671,7 +671,7 @@
       "name": "x_castep_md_veloc",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
     }, {
        "description": "md_time",
@@ -679,7 +679,7 @@
       "name": "x_castep_md_time",
       "shape": [],
       "superNames": [
-        "section_md"
+        "x_castep_section_md"
       ]       
     }, {
        "description": "thermostat_target_temperature",
@@ -929,7 +929,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "section_md",
+      "name": "x_castep_section_md",
       "superNames": [
         "section_run"
       ]  
