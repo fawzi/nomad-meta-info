@@ -43878,6 +43878,24 @@
         "x_cp2k_section_geometry_optimization_information"
       ]
     }, {
+      "description": "Convergence criterium for the maximum geometry change between the current and the last optimizer iteration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_step_size_convergence_limit",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "m"
+    }, {
+      "description": "Convergence criterium for the maximum force component of the current configuration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_gradient_convergence_limit",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_information"
+      ],
+      "unit": "m^-1*J"
+    }, {
       "description": "The SVN revision number.",
       "dtypeStr": "i",
       "name": "x_cp2k_svn_revision",
