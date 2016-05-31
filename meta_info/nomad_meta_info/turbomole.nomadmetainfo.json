@@ -452,5 +452,50 @@
         "section_run",                                                          
         "section_method"                                                        
       ]                                                                         
+    }, {                                                                        
+      "description": " Coordinates of all systems centered about cell 0: Atomic label",                                            
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_embed_geometry_atom_label",                                         
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " Coordinates of all systems centered about cell 0: x-coordinate",                                            
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_geometry_atom_positions_x",                                         
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " Coordinates of all systems centered about cell 0: y-coordinate",                                            
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_geometry_atom_positions_y",                                         
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " Coordinates of all systems centered about cell 0: z-coordinate",                                            
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_geometry_atom_positions_z",                                         
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " Coordinates of all systems centered about cell 0: Charge",                                            
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_geometry_atom_charge",                                         
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
     }]
 }
