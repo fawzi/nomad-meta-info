@@ -643,7 +643,7 @@
       ]       
     }, {
       "description": "md_stress_tensor",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "x_castep_md_stress_tensor",
       "shape": [],
       "superNames": [
@@ -681,14 +681,7 @@
       "superNames": [
         "x_castep_section_md"
       ]       
-    }, {
-       "description": "md_time",
-      "dtypeStr": "C",
-      "name": "x_castep_md_time",
-      "shape": [],
-      "superNames": [
-        "x_castep_section_md"
-      ]       
+       
     }, {
        "description": "thermostat_target_temperature",
       "dtypeStr": "f",
