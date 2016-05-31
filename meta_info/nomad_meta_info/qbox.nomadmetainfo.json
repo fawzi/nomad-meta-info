@@ -379,6 +379,21 @@
       ],
       "units": "Pa"
     }, {
+      "description": "The xml file used in this calculation",
+      "dtypeStr": "C",
+      "name": "qbox_loading_xml_file",
+      "shape": [],
+      "superNames": [
+        "qbox_section_xml_file"
+      ]
+   }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "qbox_section_xml_file",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "wave function dynamics control variable",
       "dtypeStr": "C",
       "name": "qbox_wf_dyn",
