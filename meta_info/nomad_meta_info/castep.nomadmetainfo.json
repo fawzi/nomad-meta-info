@@ -286,13 +286,14 @@
       "superNames": [
         "section_run"
       ]
+   
     }, {
       "description": "Index for number of iterations in geometry optimisation",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "x_castep_geom_iteration_index",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Determines optimisation method used",
