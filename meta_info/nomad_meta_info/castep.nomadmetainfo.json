@@ -220,9 +220,8 @@
       "name": "x_castep_frame_time",
       "shape": [],
       "superNames": [
-        
-        "x_castep_section_SCF_iteration_frame"
-        ]
+       "x_castep_section_SCF_iteration_frame"
+      ]
     }, {
       "description": "CASTEP_store_t_md_frame",
       "dtypeStr": "f",
@@ -230,7 +229,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
-        ]
+      ]
     }, {
       "description": "fft library name",
       "dtypeStr": "C",
@@ -289,7 +288,7 @@
       ]
     }, {
       "description": "Index for number of iterations in geometry optimisation",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "x_castep_geom_iteration_index",
       "shape": [],
       "superNames": [
