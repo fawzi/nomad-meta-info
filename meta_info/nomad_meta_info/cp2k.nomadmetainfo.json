@@ -43725,7 +43725,7 @@
       "name": "x_cp2k_stress_tensor_determinant",
       "shape": [],
       "superNames": [
-        "section_stress_tensor"
+        "x_cp2k_section_stress_tensor"
       ],
       "unit": "Pa**3"
     }, {
@@ -43736,7 +43736,7 @@
         3
       ],
       "superNames": [
-        "section_stress_tensor"
+        "x_cp2k_section_stress_tensor"
       ],
       "unit": "Pa"
     }, {
@@ -43748,7 +43748,7 @@
         3
       ],
       "superNames": [
-        "section_stress_tensor"
+        "x_cp2k_section_stress_tensor"
       ]
     }, {
       "description": "1/3 of the trace of the stress tensor.",
@@ -43756,15 +43756,15 @@
       "name": "x_cp2k_stress_tensor_one_third_of_trace",
       "shape": [],
       "superNames": [
-        "section_stress_tensor"
+        "x_cp2k_section_stress_tensor"
       ],
       "unit": "Pa"
     }, {
       "description": "Contains information about the geometry optimization process for every optimization step.",
       "kindStr": "type_section",
-      "name": "x_cp2k_section_geometry_optimization_information",
+      "name": "x_cp2k_section_geometry_optimization_step",
       "superNames": [
-        "section_frame_sequence"
+        "x_cp2k_section_geometry_optimization"
       ]
     }, {
       "description": "Optimization method for this step",
@@ -43772,7 +43772,7 @@
       "name": "x_cp2k_optimization_method",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ]
     }, {
       "description": "Energy for this optimization step.",
@@ -43780,7 +43780,7 @@
       "name": "x_cp2k_optimization_energy",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "J"
     }, {
@@ -43789,7 +43789,7 @@
       "name": "x_cp2k_optimization_energy_change",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "J"
     }, {
@@ -43798,7 +43798,7 @@
       "name": "x_cp2k_optimization_energy_decrease",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ]
     }, {
       "description": "Time used for this optimization step.",
@@ -43806,7 +43806,7 @@
       "name": "x_cp2k_optimization_used_time",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "s"
     }, {
@@ -43815,7 +43815,7 @@
       "name": "x_cp2k_optimization_max_step_size",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "m"
     }, {
@@ -43824,7 +43824,7 @@
       "name": "x_cp2k_optimization_step_size_convergence",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ]
     }, {
       "description": "RMS step size for this optimization step.",
@@ -43832,7 +43832,7 @@
       "name": "x_cp2k_optimization_rms_step_size",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "m"
     }, {
@@ -43841,7 +43841,7 @@
       "name": "x_cp2k_optimization_rms_step_size_convergence",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ]
     }, {
       "description": "Max gradient for this optimization step.",
@@ -43849,7 +43849,7 @@
       "name": "x_cp2k_optimization_max_gradient",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "m^-1*J"
     }, {
@@ -43858,7 +43858,7 @@
       "name": "x_cp2k_optimization_max_gradient_convergence",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ]
     }, {
       "description": "RMS gradient for this optimization step.",
@@ -43866,7 +43866,7 @@
       "name": "x_cp2k_optimization_rms_gradient",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "m^-1*J"
     }, {
@@ -43875,7 +43875,7 @@
       "name": "x_cp2k_optimization_rms_gradient_convergence",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ]
     }, {
       "description": "Convergence criterium for the maximum geometry change between the current and the last optimizer iteration.",
@@ -43883,7 +43883,7 @@
       "name": "x_cp2k_optimization_step_size_convergence_limit",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "m"
     }, {
@@ -43892,9 +43892,128 @@
       "name": "x_cp2k_optimization_gradient_convergence_limit",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_geometry_optimization_information"
+        "x_cp2k_section_geometry_optimization_step"
       ],
       "unit": "m^-1*J"
+    }, {
+      "description": "Section for a CP2K QuickStep calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_quickstep_calculation",
+      "superNames": [
+        "section_single_configuration_calculation",
+        "x_cp2k_section_geometry_optimization_energy_reevaluation"
+      ]
+    }, {
+      "description": "Section for a CP2K QuickStep SCF iteration.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_scf_iteration",
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ]
+    }, {
+      "description": "Boolean indicating whether the quickstep SCF cycle converged or not.",
+      "dtypeStr": "b",
+      "name": "x_cp2k_quickstep_converged",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ]
+    }, {
+      "description": "Section for stress tensor information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_stress_tensor",
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ]
+    }, {
+      "description": "Exchange-correlation (XC) energy during the self-consistent field (SCF) iteration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_XC_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total electronic energy calculated with XC_method during the self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_total_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_energy_XC_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "At each self-consistent field (SCF) iteration, change of total energy with respect to the previous SCF iteration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_change_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Value of the total energy (nuclei + electrons) calculated with Quickstep.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_total",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Self-consistent electronic kinetic energy calculated with Quickstep",
+      "dtypeStr": "f",
+      "name": "x_cp2k_electronic_kinetic_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Forces acting on the atoms in this Quickstep calculation.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_atom_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ],
+      "units": "N"
+    }, {
+      "description": "A final value of the stress tensor in a Quickstep calculation",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_stress_tensor"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "CP2K geometry optimization information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_geometry_optimization",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Information for the energy re-evaluation at the end of an optimization procedure.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_geometry_optimization_energy_reevaluation",
+      "superNames": [
+        "x_cp2k_section_geometry_optimization"
+      ]
     }, {
       "description": "The SVN revision number.",
       "dtypeStr": "i",
