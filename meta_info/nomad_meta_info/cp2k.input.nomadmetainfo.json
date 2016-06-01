@@ -1,6 +1,9 @@
 {
   "type": "nomad_meta_info_1_0",
   "description": "Metainfo for the values parsed from a CP2K input file.",
+  "dependencies": [ {
+      "relativePath": "cp2k.nomadmetainfo.json"
+    }],
   "metaInfos": [ {
       "description": "CP2K Basis Set Standard Format",
       "dtypeStr": "C",
