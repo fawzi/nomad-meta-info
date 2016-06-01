@@ -752,6 +752,30 @@
       "superNames": [
         "x_castep_section_SCF_iteration_frame"
       ]        
+     }, {
+       "description": "energy_frame_iterations_gain",
+      "dtypeStr": "C",
+      "name": "x_castep_SCF_frame_energy_gain",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_SCF_iteration_frame"
+      ]        
+    }, {
+       "description": "energy_free",
+      "dtypeStr": "f",
+      "name": "x_castep_frame_energy_free",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_SCF_iteration_frame"
+      ]      
+    }, {
+       "description": "energy_free_corrected_for_finite_basis",
+      "dtypeStr": "f",
+      "name": "x_castep_frame_energy_total_T0",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_SCF_iteration_frame"
+      ]      
     }, {
       "description": "-",
       "kindStr": "type_section",
