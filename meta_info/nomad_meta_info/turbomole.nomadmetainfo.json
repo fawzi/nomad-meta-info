@@ -7,25 +7,25 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "turbomole_basis_cont_number",
+      "description": "turbomole_controlInOut_basis_cont_number",
       "dtypeStr": "i",
-      "name": "turbomole_basis_cont_number",
+      "name": "turbomole_controlInOut_basis_cont_number",
       "shape": [],
       "superNames": [
         "section_basis_set"
       ]
     }, {
-      "description": "turbomole_basis_prim_number",
+      "description": "turbomole_controlInOut_basis_prim_number",
       "dtypeStr": "i",
-      "name": "turbomole_basis_prim_number",
+      "name": "turbomole_controlInOut_basis_prim_number",
       "shape": [],
       "superNames": [
         "section_basis_set"
       ]
     }, {
-      "description": "turbomole_basis_type",
+      "description": "turbomole_controlInOut_basis_type",
       "dtypeStr": "C",
-      "name": "turbomole_basis_type",
+      "name": "turbomole_controlInOut_basis_type",
       "shape": [],
       "superNames": [
         "section_basis_set"
@@ -150,7 +150,7 @@
     }, {
       "description": "type of the used correlation functional",
       "dtypeStr": "C",
-      "name": "turbomole_functional_type_correlation",
+      "name": "turbomole_controlInOut_functional_type_correlation",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -159,7 +159,7 @@
     }, {
       "description": "type of the used exchange functional",
       "dtypeStr": "C",
-      "name": "turbomole_functional_type_exchange",
+      "name": "turbomole_controlInOut_functional_type_exchange",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -168,12 +168,21 @@
     }, {
       "description": "type of the used functional",
       "dtypeStr": "C",
-      "name": "turbomole_functional_type",
+      "name": "turbomole_controlInOut_functional_type",
       "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
       ]
+    }, {                                                                        
+      "description": "labels of atom",                                          
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlInOut_atom_labels",                                 
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_system"                                                        
+      ]                                                                         
     }, {
       "description": "labels of atom",
       "dtypeStr": "C",
@@ -225,7 +234,7 @@
     }, {
       "description": "The integration cells",
       "dtypeStr": "i",
-      "name": "turbomole_grid_integration_cells",
+      "name": "turbomole_controlInOut_grid_integration_cells",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -234,7 +243,7 @@
     }, {
       "description": "type of the used grid integration",
       "dtypeStr": "C",
-      "name": "turbomole_grid_integration",
+      "name": "turbomole_controlInOut_grid_integration",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -243,7 +252,7 @@
     }, {
       "description": "Type of the partition function used",
       "dtypeStr": "C",
-      "name": "turbomole_grid_partition_func",
+      "name": "turbomole_controlInOut_grid_partition_func",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -252,7 +261,7 @@
     }, {
       "description": "Sharpness of the partition function",
       "dtypeStr": "i",
-      "name": "turbomole_grid_partition_sharpness",
+      "name": "turbomole_controlInOut_grid_partition_sharpness",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -261,7 +270,7 @@
     }, {
       "description": "Grid points number",
       "dtypeStr": "i",
-      "name": "turbomole_grid_points_number",
+      "name": "turbomole_controlInOut_grid_points_number",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -270,7 +279,7 @@
     }, {
       "description": "The size of the radial grid",
       "dtypeStr": "i",
-      "name": "turbomole_grid_radial_gridsize",
+      "name": "turbomole_controlInOut_grid_radial_grid_size",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -279,7 +288,7 @@
     }, {
       "description": "The radial integration type",
       "dtypeStr": "C",
-      "name": "turbomole_grid_radial_integration",
+      "name": "turbomole_controlInOut_grid_radial_integration",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -288,7 +297,7 @@
     }, {
       "description": "The size of the used grid",
       "dtypeStr": "i",
-      "name": "turbomole_grid_size",
+      "name": "turbomole_controlInOut_grid_size",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -321,33 +330,33 @@
         "program_info"
       ]
     }, {
-      "description": "turbomole_tot_cartesian_func",
+      "description": "turbomole_controlInOut_tot_cartesian_func",
       "dtypeStr": "i",
-      "name": "turbomole_tot_cartesian_func",
+      "name": "turbomole_controlInOut_tot_cartesian_func",
       "shape": [],
       "superNames": [
         "section_basis_set"
       ]
     }, {
-      "description": "turbomole_tot_contracted_shells",
+      "description": "turbomole_controlInOut_tot_contracted_shells",
       "dtypeStr": "i",
-      "name": "turbomole_tot_contracted_shells",
+      "name": "turbomole_controlInOut_tot_contracted_shells",
       "shape": [],
       "superNames": [
         "section_basis_set"
       ]
     }, {
-      "description": "turbomole_tot_primitive_shells",
+      "description": "turbomole_controlInOut_tot_primitive_shells",
       "dtypeStr": "i",
-      "name": "turbomole_tot_primitive_shells",
+      "name": "turbomole_controlInOut_tot_primitive_shells",
       "shape": [],
       "superNames": [
         "section_basis_set"
       ]
     }, {
-      "description": "turbomole_tot_scf_basis_func",
+      "description": "turbomole_controlInOut_tot_scf_basis_func",
       "dtypeStr": "i",
-      "name": "turbomole_tot_scf_basis_func",
+      "name": "turbomole_controlInOut_tot_scf_basis_func",
       "shape": [],
       "superNames": [
         "section_basis_set"

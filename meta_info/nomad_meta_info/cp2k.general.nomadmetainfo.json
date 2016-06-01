@@ -1,0 +1,635 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the CP2K parser, all names are expected to start with x_cp2k_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "Forces acting on the atoms in this Quickstep calculation.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_atom_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ],
+      "units": "N"
+    }, {
+      "description": "The number of atomic kinds in the calculation.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_atomic_kinds",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of atoms in the calculation.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_atoms",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The name of the basis set file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_basis_set_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The number of Cartesian basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_cartesian_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The name of the coordinate file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_coordinate_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_filenames"
+      ]
+    }, {
+      "description": "Self-consistent electronic kinetic energy calculated with Quickstep",
+      "dtypeStr": "f",
+      "name": "x_cp2k_electronic_kinetic_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "At each self-consistent field (SCF) iteration, change of total energy with respect to the previous SCF iteration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_change_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total electronic energy calculated with XC_method during the self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_total_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_energy_XC_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Value of the total energy (nuclei + electrons) calculated with Quickstep.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_total",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Exchange-correlation (XC) energy during the self-consistent field (SCF) iteration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_energy_XC_scf_iteration",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "The name of the geminal file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_geminal_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The name of the CP2K input file that produced this calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_input_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_filenames"
+      ]
+    }, {
+      "description": "Maximum angular momentum of the local part of the GTH pseudopotential.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_local_part_of_gth_pseudopotential",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_maximum_angular_momentum"
+      ]
+    }, {
+      "description": "The coordinate components of an individual atom as a numpy array during an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_coordinate_atom_float",
+      "shape": [
+        1,
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_md_coordinates"
+      ]
+    }, {
+      "description": "The coordinate components of an individual atom  as a string during an MD step.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_coordinate_atom_string",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_md_coordinate_atom"
+      ]
+    }, {
+      "description": "The atomic coordinates during an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_coordinates",
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "The force components of an individual atom during an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_force_atom_float",
+      "shape": [
+        1,
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_md_forces"
+      ]
+    }, {
+      "description": "The force components of an individual atom during an MD step.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_force_atom_string",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_md_force_atom"
+      ]
+    }, {
+      "description": "The atomic forces during an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_forces",
+      "shape": [
+        "atom_number",
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "The number of a molecular dynamics step.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_step_number",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "The simulation time of a molecular dynamics step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_step_time",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ],
+      "units": "s"
+    }, {
+      "description": "The average temperature during MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_average",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ],
+      "unit": "K"
+    }, {
+      "description": "The instantaneous temperature during MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_instantaneous",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ],
+      "unit": "K"
+    }, {
+      "description": "The name of the MM potential file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_mm_potential_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_filenames"
+      ]
+    }, {
+      "description": "Maximum angular momentum of the non-local part of the GTH pseudopotential.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_non_local_part_of_gth_pseudopotential",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_maximum_angular_momentum"
+      ]
+    }, {
+      "description": "Energy change for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_energy_change",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "J"
+    }, {
+      "description": "Whether there has been energy decrease. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_energy_decrease",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ]
+    }, {
+      "description": "Energy for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_energy",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "J"
+    }, {
+      "description": "Convergence criterium for the maximum force component of the current configuration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_gradient_convergence_limit",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "m^-1*J"
+    }, {
+      "description": "Whether there is convergence in max gradient. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_max_gradient_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ]
+    }, {
+      "description": "Max gradient for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_max_gradient",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "m^-1*J"
+    }, {
+      "description": "Maximum step size for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_max_step_size",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "m"
+    }, {
+      "description": "Optimization method for this step",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_method",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ]
+    }, {
+      "description": "Whether there is convergence in rms gradient. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_rms_gradient_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ]
+    }, {
+      "description": "RMS gradient for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_rms_gradient",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "m^-1*J"
+    }, {
+      "description": "Whether there is convergence in rms step size. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_rms_step_size_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ]
+    }, {
+      "description": "RMS step size for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_rms_step_size",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "m"
+    }, {
+      "description": "Convergence criterium for the maximum geometry change between the current and the last optimizer iteration.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_step_size_convergence_limit",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "m"
+    }, {
+      "description": "Whether there is convergence in step size. YES or NO.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_optimization_step_size_convergence",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ]
+    }, {
+      "description": "Time used for this optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_optimization_used_time",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_geometry_optimization_step"
+      ],
+      "unit": "s"
+    }, {
+      "description": "Maximum angular momentum of orbital basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_orbital_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_maximum_angular_momentum"
+      ]
+    }, {
+      "description": "The name of the potential file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_potential_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_filenames"
+      ]
+    }, {
+      "description": "The number of primitive Cartesian functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_primitive_cartesian_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "Boolean indicating whether the quickstep SCF cycle converged or not.",
+      "dtypeStr": "b",
+      "name": "x_cp2k_quickstep_converged",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ]
+    }, {
+      "description": "The date when this run was started.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_run_start_date",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The time when this run was started.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_run_start_time",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The DBCSR (Distributed Block Compressed Sparse Row) information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_dbcsr",
+      "superNames": [
+        "settings_run"
+      ]
+    }, {
+      "description": "Information about the ancillary files that are taken as input or that are output by this calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_filenames",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Information for the energy re-evaluation at the end of an optimization procedure.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_geometry_optimization_energy_reevaluation",
+      "superNames": [
+        "x_cp2k_section_geometry_optimization"
+      ]
+    }, {
+      "description": "Contains information about the geometry optimization process for every optimization step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_geometry_optimization_step",
+      "superNames": [
+        "x_cp2k_section_geometry_optimization"
+      ]
+    }, {
+      "description": "CP2K geometry optimization information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_geometry_optimization",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Contains the maximum angular momentum values used in the calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_maximum_angular_momentum",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Section for atomic forces during an MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_coordinate_atom",
+      "superNames": [
+        "x_cp2k_section_md_coordinates"
+      ]
+    }, {
+      "description": "Section for atomic coordinates during an MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_coordinates",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Section for atomic forces during an MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_force_atom",
+      "superNames": [
+        "x_cp2k_section_md_forces"
+      ]
+    }, {
+      "description": "Section for atomic forces during an MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_forces",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Section grouping together the quantities calculated during an MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_step",
+      "repeats": true,
+      "superNames": [
+        "x_cp2k_section_md"
+      ]
+    }, {
+      "description": "Section grouping together the quantities calculated during an MD.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Contains information about the software version used for this run.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_programinformation",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "Section for a CP2K QuickStep calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_quickstep_calculation",
+      "superNames": [
+        "section_single_configuration_calculation",
+        "x_cp2k_section_geometry_optimization_energy_reevaluation"
+      ]
+    }, {
+      "description": "Section for a CP2K QuickStep SCF iteration.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_scf_iteration",
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ]
+    }, {
+      "description": "Contains information about the starting conditions for this run.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_startinformation",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "Section for stress tensor information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_stress_tensor",
+      "superNames": [
+        "x_cp2k_section_quickstep_calculation"
+      ]
+    }, {
+      "description": "The total number of different entities in the calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_total_numbers",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The number of shell sets in the calculation.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_shell_sets",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of shells.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_shells",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The number of Spherical basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_spherical_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_total_numbers"
+      ]
+    }, {
+      "description": "The determinant of the stress tensor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_determinant",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_stress_tensor"
+      ],
+      "unit": "Pa**3"
+    }, {
+      "description": "The eigenvalues of the stress tensor from biggest to lowest.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_eigenvalues",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_stress_tensor"
+      ],
+      "unit": "Pa"
+    }, {
+      "description": "The eigenvectors of the stress tensor. The vector correponding to the ith eigenvalue is placed as the ith column of the matrix.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_eigenvectors",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_stress_tensor"
+      ]
+    }, {
+      "description": "1/3 of the trace of the stress tensor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor_one_third_of_trace",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_stress_tensor"
+      ],
+      "unit": "Pa"
+    }, {
+      "description": "A final value of the stress tensor in a Quickstep calculation",
+      "dtypeStr": "f",
+      "name": "x_cp2k_stress_tensor",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_cp2k_section_stress_tensor"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "The SVN revision number.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_svn_revision",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_programinformation"
+      ]
+    }]
+}
