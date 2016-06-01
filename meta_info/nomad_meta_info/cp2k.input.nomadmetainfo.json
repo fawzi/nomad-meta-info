@@ -1,9 +1,6 @@
 {
   "type": "nomad_meta_info_1_0",
   "description": "Metainfo for the values parsed from a CP2K input file.",
-  "dependencies": [ {
-      "relativePath": "cp2k.nomadmetainfo.json"
-    }],
   "metaInfos": [ {
       "description": "CP2K Basis Set Standard Format",
       "dtypeStr": "C",
@@ -43392,8 +43389,6 @@
       "description": "The section containing all information that is explicitly stated in the CP2K input file. The sections that control printing (PRINT, EACH) and the hidden input keywords starting with a double underscore are not included.",
       "kindStr": "type_section",
       "name": "x_cp2k_CP2K_INPUT",
-      "superNames": [
-          "section_run"
-      ]
+      "superNames": []
     }]
 }
