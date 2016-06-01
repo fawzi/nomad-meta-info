@@ -497,5 +497,41 @@
         "section_run",                                                          
         "section_method"                                                        
       ]                                                                         
+    }, {                                                                        
+      "description": " QM cluster transformed to the center of cell 0 (au): label",
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_embed_qm_cluster_geometry_atom_label",                      
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " QM cluster transformed to the center of cell 0 (au): x-coordinate",
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_x",                      
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " QM cluster transformed to the center of cell 0 (au): y-coordinate",
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_y",                      
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": " QM cluster transformed to the center of cell 0 (au): z-coordinate",
+      "dtypeStr": "f",                                                          
+      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_z",                      
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
     }]
 }
