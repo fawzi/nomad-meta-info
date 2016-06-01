@@ -1,36 +1,79 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the EP parser, all names are expected to start with dl_poly_",
+  "description": "meta info used by the EP parser, all names are expected to start with x_dl_poly_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "MD barostat target pressure.",
+      "dtypeStr": "f",
+      "name": "x_dl_poly_barostat_target_pressure",
+      "shape": [],
+      "superNames": [
+        "settings_barostat"
+      ],
+      "units": "Pa"
+    }, {
+      "description": "MD barostat relaxation time.",
+      "dtypeStr": "f",
+      "name": "x_dl_poly_barostat_tau",
+      "shape": [],
+      "superNames": [
+        "settings_barostat"
+      ],
+      "units": "s"
+    }, {
+      "description": "MD integration time step.",
+      "dtypeStr": "f",
+      "name": "x_dl_poly_integrator_dt",
+      "shape": [],
+      "superNames": [
+        "settings_integrator"
+      ],
+      "units": "s"
+    }, {
+      "description": "MD integrator type, valid values are defined in the integrator_type wiki page.",
+      "dtypeStr": "C",
+      "name": "x_dl_poly_integrator_type",
+      "shape": [],
+      "superNames": [
+        "settings_integrator"
+      ]
+    }, {
       "description": "Number of molecular types in topology",
       "dtypeStr": "i",
-      "name": "dl_poly_md_molecular_types",
+      "name": "x_dl_poly_md_molecular_types",
       "superNames": [
-        "dl_poly_section_md_topology"
+        "x_dl_poly_section_md_topology"
       ]
     }, {
       "description": "Molecule type id",
       "dtypeStr": "i",
-      "name": "dl_poly_md_molecule_type_id",
+      "name": "x_dl_poly_md_molecule_type_id",
       "superNames": [
-        "dl_poly_section_md_molecule_type"
+        "x_dl_poly_section_md_molecule_type"
       ]
     }, {
       "description": "Molecule type name",
       "dtypeStr": "C",
-      "name": "dl_poly_md_molecule_type_name",
+      "name": "x_dl_poly_md_molecule_type_name",
       "superNames": [
-        "dl_poly_section_md_molecule_type"
+        "x_dl_poly_section_md_molecule_type"
+      ]
+    }, {
+      "description": "Number of requested MD integration time steps.",
+      "dtypeStr": "f",
+      "name": "x_dl_poly_number_of_steps_requested",
+      "shape": [],
+      "superNames": [
+        "settings_integrator"
       ]
     }, {
       "description": "Program version date",
       "dtypeStr": "C",
-      "name": "dl_poly_program_version_date",
+      "name": "x_dl_poly_program_version_date",
       "shape": [],
       "superNames": [
         "section_run"
@@ -38,21 +81,21 @@
     }, {
       "description": "Section to store molecule type information",
       "kindStr": "type_section",
-      "name": "dl_poly_section_md_molecule_type",
+      "name": "x_dl_poly_section_md_molecule_type",
       "superNames": [
-        "dl_poly_section_md_topology"
+        "x_dl_poly_section_md_topology"
       ]
     }, {
       "description": "Section modelling the MD topology",
       "kindStr": "type_section",
-      "name": "dl_poly_section_md_topology",
+      "name": "x_dl_poly_section_md_topology",
       "superNames": [
         "section_system"
       ]
     }, {
       "description": "MD equilibration step number",
       "dtypeStr": "i",
-      "name": "dl_poly_step_number_equilibration",
+      "name": "x_dl_poly_step_number_equilibration",
       "shape": [],
       "superNames": [
         "section_method"
@@ -60,7 +103,7 @@
     }, {
       "description": "MD total step number",
       "dtypeStr": "i",
-      "name": "dl_poly_step_number",
+      "name": "x_dl_poly_step_number",
       "shape": [],
       "superNames": [
         "section_method"
@@ -68,15 +111,33 @@
     }, {
       "description": "Simulation run title",
       "dtypeStr": "C",
-      "name": "dl_poly_system_description",
+      "name": "x_dl_poly_system_description",
       "shape": [],
       "superNames": [
         "section_run"
       ]
     }, {
+      "description": "MD thermostat target temperature.",
+      "dtypeStr": "f",
+      "name": "x_dl_poly_thermostat_target_temperature",
+      "shape": [],
+      "superNames": [
+        "settings_thermostat"
+      ],
+      "units": "K"
+    }, {
+      "description": "MD thermostat relaxation time.",
+      "dtypeStr": "f",
+      "name": "x_dl_poly_thermostat_tau",
+      "shape": [],
+      "superNames": [
+        "settings_thermostat"
+      ],
+      "units": "s"
+    }, {
       "description": "Thermostat coupling temperature",
       "dtypeStr": "f",
-      "name": "dl_poly_thermostat_temperature",
+      "name": "x_dl_poly_thermostat_temperature",
       "shape": [],
       "superNames": [
         "section_method"
