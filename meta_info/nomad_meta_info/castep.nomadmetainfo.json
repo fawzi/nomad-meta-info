@@ -418,9 +418,9 @@
       ]   
     }, {
        "description": "Vibration Frequenices (cm-1)",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "x_castep_vibrationl_frequencies",
-      "shape": [],
+      "shape": ["len(self.nr_iter)"],
       "superNames": [
         "x_castep_section_vibrational_frequencies"
       ]
@@ -444,15 +444,15 @@
        "description": "Irreducible representation in the Point Group",
       "dtypeStr": "C",
       "name": "x_castep_ir",
-      "shape": [],
+      "shape": ["len(self.nr_iter)"],
       "superNames": [
         "x_castep_section_vibrational_frequencies"
       ]
     }, {
        "description": "Raman activity (A**4/amu)",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "x_castep_raman_activity",
-      "shape": [],
+      "shape": ["len(self.nr_iter)"],
       "superNames": [
         "x_castep_section_vibrational_frequencies"
       ]
@@ -466,7 +466,7 @@
       ]
     }, {
        "description": "Number of iterations in phonons",
-      "dtypeStr": "C",
+      "dtypeStr": "i",
       "name": "x_castep_n_iterations_phonons",
       "shape": [],
       "superNames": [
@@ -480,19 +480,12 @@
       "superNames": [
         "x_castep_section_vibrational_frequencies"
       ]
-    }, {
-       "description": "Raman activity (A**4/amu)",
-      "dtypeStr": "C",
-      "name": "x_castep_raman_active_store",
-      "shape": [],
-      "superNames": [
-        "x_castep_section_vibrational_frequencies"
-      ]
+
     }, {
        "description": "IR intensities (D/A)**2/amu",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "x_castep_ir_intensity",
-      "shape": [],
+      "shape": ["len(self.nr_iter)"],
       "superNames": [
         "x_castep_section_vibrational_frequencies"
       ]        
