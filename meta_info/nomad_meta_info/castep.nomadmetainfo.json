@@ -834,6 +834,14 @@
         "x_castep_section_SCF_iteration_frame"
       ]        
     }, {
+      "description": "energy_frame_wall_end_time",
+      "dtypeStr": "C",
+      "name": "x_castep_frame_time_scf_iteration_wall_end",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_SCF_iteration_frame"
+      ]        
+    }, {
       "description": "energy_free",
       "dtypeStr": "f",
       "name": "x_castep_frame_energy_free",
