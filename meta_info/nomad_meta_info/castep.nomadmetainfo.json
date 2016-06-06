@@ -803,7 +803,7 @@
         "section_sampling_method"
       ]         
     }, {
-       "description": "Numbero_of iterations geom_optim",
+      "description": "Number_of iterations geom_optim",
       "dtypeStr": "f",
       "name": "x_castep_max_number_of_steps",
       "shape": [],
@@ -818,7 +818,7 @@
         "section_run"
       ]
      }, {
-       "description": "energy_frame_iterations",
+      "description": "energy_frame_iterations",
       "dtypeStr": "C",
       "name": "x_castep_SCF_frame_energy",
       "shape": [],
@@ -826,7 +826,7 @@
         "x_castep_section_SCF_iteration_frame"
       ]        
      }, {
-       "description": "energy_frame_iterations_gain",
+      "description": "energy_frame_iterations_gain",
       "dtypeStr": "C",
       "name": "x_castep_SCF_frame_energy_gain",
       "shape": [],
@@ -834,7 +834,7 @@
         "x_castep_section_SCF_iteration_frame"
       ]        
     }, {
-       "description": "energy_free",
+      "description": "energy_free",
       "dtypeStr": "f",
       "name": "x_castep_frame_energy_free",
       "shape": [],
@@ -842,25 +842,23 @@
         "x_castep_section_SCF_iteration_frame"
       ]      
     }, {
-       "description": "energy_free_corrected_for_finite_basis",
+      "description": "energy_free_corrected_for_finite_basis",
       "dtypeStr": "f",
       "name": "x_castep_frame_energy_total_T0",
       "shape": [],
       "superNames": [
         "x_castep_section_SCF_iteration_frame"
-      ]      
-    
+      ]          
     }, {
-       "description": "",
+      "description": "density_mixing_scheme",
       "dtypeStr": "C",
       "name": "x_castep_density_mixing_scheme",
       "shape": [],
       "superNames": [
         "x_castep_section_density_mixing_parameters"
-      ]      
-    
+      ]        
     }, {
-       "description": "",
+      "description": "density_mixing_scheme_length",
       "dtypeStr": "f",
       "name": "x_castep_density_mixing_length",
       "shape": [],
@@ -868,7 +866,7 @@
         "x_castep_section_density_mixing_parameters"
       ]      
     }, {
-       "description": "",
+      "description": "charge_density_mixing_amplitude",
       "dtypeStr": "f",
       "name": "x_castep_charge_density_mixing_amplitude",
       "shape": [],
@@ -876,7 +874,7 @@
         "x_castep_section_density_mixing_parameters"
       ]      
     }, {
-       "description": "Population analysis cutoff (A)",
+      "description": "Population_analysis_cutoff_(A)",
       "dtypeStr": "f",
       "name": "x_castep_population_analysis_cutoff",
       "shape": [],
