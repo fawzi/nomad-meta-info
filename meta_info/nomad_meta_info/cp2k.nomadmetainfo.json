@@ -15845,6 +15845,126 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.FILENAME",
@@ -15883,6 +16003,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -15925,6 +16165,126 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.FILENAME",
@@ -15963,6 +16323,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -16013,6 +16493,126 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.FILENAME",
@@ -16053,6 +16653,126 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.FILENAME",
@@ -16091,6 +16811,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -16139,6 +16979,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -32965,6 +33925,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CELL.FILENAME",
@@ -33003,6 +34083,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33085,6 +34285,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.FILENAME",
@@ -33139,6 +34459,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33197,6 +34637,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.FILENAME",
@@ -33243,6 +34803,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.FORCES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33301,6 +34981,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.FILENAME",
@@ -33347,6 +35147,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33397,6 +35317,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.FILENAME",
@@ -33435,6 +35475,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33517,6 +35677,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.FILENAME",
@@ -33573,6 +35853,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.FILENAME",
@@ -33627,6 +36027,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRESS.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33691,6 +36211,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -33781,6 +36421,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.FILENAME",
@@ -33837,6 +36597,126 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR"
       ]
     }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH"
+      ]
+    }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
       "dtypeStr": "C",
       "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.FILENAME",
@@ -33875,6 +36755,126 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES"
+      ]
+    }, {
+      "description": "Iteration level for the Band Calculation Steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.BAND",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Basis Set Superposition Error (BSSE) Calculation",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.BSSE",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Cell optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.CELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Energy Perturbation (EP) linear solver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.EP_LIN_SOLVER",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Geometry optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.GEO_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for an ENERGY/ENERGY_FORCE calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.JUST_ENERGY",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the MD steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.MD",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the METADYNAMICS steps (number of hills added).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.METADYNAMICS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for POWELL based optimization steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.POWELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.QS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the evaluation of the Replica Environment",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.REPLICA_EVAL",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Rotational optimization steps in the Dimer Calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.ROT_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the Shell-Core distances optimization steps",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.SHELL_OPT",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the solution of the coefficients of the splines",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.SPLINE_FIND_COEFFS",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
+      ]
+    }, {
+      "description": "Iteration level for the X-Ray Absorption Spectroscopy (XAS) SCF Steps.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH.XAS_SCF",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH"
       ]
     }, {
       "description": " controls part of the filename for output.  use __STD_OUT__ (exactly as written here) for the screen or standard logger.  use filename to obtain projectname-filename.  use ./filename to get filename. A middle name (if present), iteration numbers and extension are always added to the filename. if you want to avoid it use =filename, in this case the filename is always exactly as typed. Please note that this can lead to clashes of filenames.",
@@ -38988,11 +41988,32 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D"
+      ]
+    }, {
       "description": "Each node prints out its distribution info ...",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION1D",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.DISTRIBUTION2D"
       ]
     }, {
       "description": "Controls the printing of the distribution of matrix blocks,...",
@@ -39009,11 +42030,25 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES"
+      ]
+    }, {
       "description": "Controls the printing of the forces after each force evaluation",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.FORCES",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.GRID_INFORMATION"
       ]
     }, {
       "description": "Controls the printing of information regarding the PW and RS grid structures.",
@@ -39023,6 +42058,13 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO"
+      ]
+    }, {
       "description": "Controls the printing of basic information generated by force_eval",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.PROGRAM_RUN_INFO",
@@ -39030,11 +42072,25 @@
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR"
+      ]
+    }, {
       "description": "Controls the printing of the stress tensor",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.STRESS_TENSOR",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.FORCE_EVAL.PRINT.TOTAL_NUMBERS"
       ]
     }, {
       "description": "Controls the printing of the total number of atoms, kinds,...",
@@ -42796,11 +45852,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL"
+      ]
+    }, {
       "description": "Controls the output of the simulation cell. For later analysis of the trajectory it is recommendable that the frequency of printing is the same as the one used for the trajectory file.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CELL",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_FORCES"
       ]
     }, {
       "description": "controls the output of the forces on cores when shell-model is used",
@@ -42810,11 +45880,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY"
+      ]
+    }, {
       "description": "Controls the output of the trajectory of cores when the shell-model is used",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_TRAJECTORY",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.CORE_VELOCITIES"
       ]
     }, {
       "description": "controls the output of the velocities of cores when the shell model is used",
@@ -42824,11 +45908,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS"
+      ]
+    }, {
       "description": "Controls the output of the force mixing (FORCE_EVAL&QMMM&FORCE_MIXING) labels",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCE_MIXING_LABELS",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.FORCES"
       ]
     }, {
       "description": "Controls the output of the forces",
@@ -42838,11 +45936,32 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES"
+      ]
+    }, {
       "description": "Controls the output of the energies of the tworegular FORCE_EVALS in the MIXED methodprinted is step,time,Etot,E_F1,E_F2,CONS_QNT",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.MIXED_ENERGIES",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.RESTART_HISTORY"
       ]
     }, {
       "description": "Dumps unique restart files during the run keeping all of them.Most useful if recovery is needed at a later point.",
@@ -42859,11 +45978,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES"
+      ]
+    }, {
       "description": "controls the output of the forces on shells when shell-model is used",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_FORCES",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_TRAJECTORY"
       ]
     }, {
       "description": "Controls the output of the trajectory of shells when the shell-model is used",
@@ -42873,11 +46006,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES"
+      ]
+    }, {
       "description": "Controls the output of the velocities of shells when the shell model is used",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.SHELL_VELOCITIES",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRESS"
       ]
     }, {
       "description": "Controls the output of the stress tensor",
@@ -42887,11 +46034,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA"
+      ]
+    }, {
       "description": "Request the printing of special structure data during a structure optimization (in MOTION%PRINT) or when setting up a subsys (in SUBSYS%PRINT).",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.STRUCTURE_DATA",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRAJECTORY"
       ]
     }, {
       "description": "Controls the output of the trajectory",
@@ -42901,11 +46062,25 @@
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
       ]
     }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR"
+      ]
+    }, {
       "description": "Dumps the translation vector applied along an MD (if any). Useful for postprocessing of QMMM trajectories in which the QM fragment is continuously centered in the QM box",
       "kindStr": "type_section",
       "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.TRANSLATION_VECTOR",
       "superNames": [
         "x_cp2k_section_CP2K_INPUT.MOTION.PRINT"
+      ]
+    }, {
+      "description": "This section specifies how often this proprety is printed.Each keyword inside this section is mapping to a specific iteration level and the value of each of these keywords is matched with the iteration level during the calculation. How to handle the last iteration is treated separately in ADD_LAST (this mean that each iteration level (MD, GEO_OPT, etc..), though equal to 0, might print the last iteration). If an iteration level is specified that is not present in the flow of the calculation it is just ignored.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES.EACH",
+      "superNames": [
+        "x_cp2k_section_CP2K_INPUT.MOTION.PRINT.VELOCITIES"
       ]
     }, {
       "description": "Controls the output of the velocities",
