@@ -488,6 +488,31 @@
       "superNames": [
         "x_castep_section_phonons"
       ]   
+    
+    }, {
+       "description": "Phonon calculation tolerance (eV/A**2)",
+      "dtypeStr": "f",
+      "name": "x_castep_phonon_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_phonons"
+      ]  
+    }, {
+       "description": "Phonon calculation cycles",
+      "dtypeStr": "f",
+      "name": "x_castep_phonon_cycles",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_phonons"
+      ]  
+    }, {
+       "description": "Phonon band convergence tolerance window",
+      "dtypeStr": "f",
+      "name": "x_castep_band_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_phonons"
+      ]  
     }, {
        "description": "Vibration Frequenices (cm-1)",
       "dtypeStr": "f",
