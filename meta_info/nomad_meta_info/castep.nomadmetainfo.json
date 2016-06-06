@@ -27,6 +27,30 @@
         "section_system"
       ]
     }, {
+      "description": "Net charge of system",
+      "dtypeStr": "f",
+      "name": "x_castep_net_charge",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of bands",
+      "dtypeStr": "i",
+      "name": "x_castep_number_of_bands",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of electrons",
+      "dtypeStr": "f",
+      "name": "x_castep_number_of_electrons",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]  
+    }, {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
       "name": "x_castep_atom_positions",
@@ -50,6 +74,22 @@
       "description": "Temporary storing plane wave cutoff as string",
       "dtypeStr": "C",
       "name": "x_castep_basis_set_planewave_cutoff",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_cell_dependent"
+      ]
+    }, {
+      "description": "size of standard grid (eV)",
+      "dtypeStr": "f",
+      "name": "x_castep_size_std_grid",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_cell_dependent"
+      ]
+    }, {
+      "description": "sise of fine grid (1/A)",
+      "dtypeStr": "f",
+      "name": "x_castep_size_fine_grid",
       "shape": [],
       "superNames": [
         "section_basis_set_cell_dependent"
@@ -285,8 +325,7 @@
       "shape": [],
       "superNames": [
         "section_run"
-      ]
-   
+      ]  
     }, {
       "description": "Index for number of iterations in geometry optimisation",
       "dtypeStr": "f",
@@ -303,6 +342,14 @@
       "superNames": [
         "x_castep_section_geom_optimisation_method"
       ]
+     }, {
+      "description": "tolerance for stress components in geometry optimisation (GPa)",
+      "dtypeStr": "f",
+      "name": "x_castep_geometry_stress_com_tolerance",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]  
     }, {
       "description": "x_castep_Initialisation_time",
       "dtypeStr": "f",
@@ -392,6 +439,38 @@
       "superNames": [
         "section_run"
       ]
+    }, {
+      "description": "Energy Threshold store ",
+      "dtypeStr": "f",
+      "name": "x_castep_energy_threshold_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_scf_parameters"
+      ]
+    }, {
+      "description": "Number of maximum iterations steps store",
+      "dtypeStr": "f",
+      "name": "x_castep_max_iter_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_scf_parameters"
+      ]  
+    }, {
+      "description": "Smearing kind",
+      "dtypeStr": "C",
+      "name": "x_castep_smearing_kind",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_scf_parameters"
+      ]  
+    }, {
+      "description": "Smearing width",
+      "dtypeStr": "f",
+      "name": "x_castep_smearing_width",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_scf_parameters"
+      ]  
     }, {
       "description": "Relativity treatment in CASTEP convention",
       "dtypeStr": "C",
@@ -731,6 +810,14 @@
         "section_sampling_method"
       ]         
     }, {
+       "description": "Numbero_of iterations geom_optim",
+      "dtypeStr": "f",
+      "name": "x_castep_max_number_of_steps",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]         
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_vibrational_frequencies",
@@ -768,6 +855,38 @@
       "shape": [],
       "superNames": [
         "x_castep_section_SCF_iteration_frame"
+      ]      
+    }, {
+       "description": "",
+      "dtypeStr": "C",
+      "name": "x_castep_density_mixing_scheme",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_density_mixing_parameters"
+      ]      
+    }, {
+       "description": "",
+      "dtypeStr": "f",
+      "name": "x_castep_density_mixing_length",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_density_mixing_parameters"
+      ]      
+    }, {
+       "description": "",
+      "dtypeStr": "f",
+      "name": "x_castep_charge_density_mixing_amplitude",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_density_mixing_parameters"
+      ]      
+    }, {
+       "description": "Population analysis cutoff (A)",
+      "dtypeStr": "f",
+      "name": "x_castep_population_analysis_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_population_analysis_parameters"
       ]      
     }, {
       "description": "-",
@@ -864,6 +983,20 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "x_castep_section_density_mixing_parameters",
+      "superNames": [
+        "section_run"
+      ]  
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_population_analysis_parameters",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "x_castep_section_k_band",
       "superNames": [
         "section_k_band"
@@ -940,6 +1073,13 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_raman_tensor",
+      "superNames": [
+        "section_run"
+      ]  
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_scf_parameters",
       "superNames": [
         "section_run"
       ]  
