@@ -1325,6 +1325,14 @@
       "superNames": [
         "x_castep_section_stress_tensor"
       ]
+     }, {
+      "description": "Initial SCF iteration wall time",
+      "dtypeStr": "f",
+      "name": "x_castep_initial_scf_iteration_wall_time",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "Total electronic energy that includes dispersion energy computed with Disp_method_name not corrected for finite basis-set",
       "dtypeStr": "f",
