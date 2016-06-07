@@ -5,6 +5,8 @@
       "relativePath": "common.nomadmetainfo.json"
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
+    }, {
+      "relativePath": "cp2k.md.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "Forces acting on the atoms in this Quickstep calculation.",
@@ -86,7 +88,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_cp2k_energy_XC_scf_iteration"
+        "x_cp2k_section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -133,99 +135,6 @@
       "superNames": [
         "x_cp2k_section_maximum_angular_momentum"
       ]
-    }, {
-      "description": "The coordinate components of an individual atom as a numpy array during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_coordinate_atom_float",
-      "shape": [
-        1,
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_coordinates"
-      ]
-    }, {
-      "description": "The coordinate components of an individual atom  as a string during an MD step.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_md_coordinate_atom_string",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_md_coordinate_atom"
-      ]
-    }, {
-      "description": "The atomic coordinates during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_coordinates",
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "The force components of an individual atom during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_force_atom_float",
-      "shape": [
-        1,
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_forces"
-      ]
-    }, {
-      "description": "The force components of an individual atom during an MD step.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_md_force_atom_string",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_md_force_atom"
-      ]
-    }, {
-      "description": "The atomic forces during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_forces",
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "The number of a molecular dynamics step.",
-      "dtypeStr": "i",
-      "name": "x_cp2k_md_step_number",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "The simulation time of a molecular dynamics step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_step_time",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ],
-      "units": "s"
-    }, {
-      "description": "The average temperature during MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_temperature_average",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ],
-      "unit": "K"
-    }, {
-      "description": "The instantaneous temperature during MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_temperature_instantaneous",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ],
-      "unit": "K"
     }, {
       "description": "The name of the MM potential file.",
       "dtypeStr": "C",
@@ -462,49 +371,6 @@
         "section_run"
       ]
     }, {
-      "description": "Section for atomic forces during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_coordinate_atom",
-      "superNames": [
-        "x_cp2k_section_md_coordinates"
-      ]
-    }, {
-      "description": "Section for atomic coordinates during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_coordinates",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "Section for atomic forces during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_force_atom",
-      "superNames": [
-        "x_cp2k_section_md_forces"
-      ]
-    }, {
-      "description": "Section for atomic forces during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_forces",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "Section grouping together the quantities calculated during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_step",
-      "repeats": true,
-      "superNames": [
-        "x_cp2k_section_md"
-      ]
-    }, {
-      "description": "Section grouping together the quantities calculated during an MD.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "Contains information about the software version used for this run.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_programinformation",
@@ -517,7 +383,8 @@
       "name": "x_cp2k_section_quickstep_calculation",
       "superNames": [
         "section_single_configuration_calculation",
-        "x_cp2k_section_geometry_optimization_energy_reevaluation"
+        "x_cp2k_section_geometry_optimization_energy_reevaluation",
+        "x_cp2k_section_md_step"
       ]
     }, {
       "description": "Section for a CP2K QuickStep SCF iteration.",
