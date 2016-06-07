@@ -577,7 +577,6 @@
       "superNames": [
         "x_castep_section_vibrational_frequencies"
       ]
-
     }, {
        "description": "IR intensities (D/A)**2/amu",
       "dtypeStr": "f",
@@ -700,7 +699,7 @@
         "x_castep_section_md"
       ]         
     }, {
-       "description": "md_temp",
+       "description": "md_temp(K)",
       "dtypeStr": "f",
       "name": "x_castep_md_temperature",
       "shape": [],
@@ -772,7 +771,7 @@
         "x_castep_section_md"
       ]        
     }, {
-       "description": "thermostat_target_temperature",
+       "description": "thermostat_target_temperature(K)",
       "dtypeStr": "f",
       "name": "x_castep_thermostat_target_temperature",
       "shape": [],
@@ -812,7 +811,7 @@
         "section_sampling_method"
       ]         
     }, {
-       "description": "MD_time_step",
+       "description": "MD_time_step (ps)",
       "dtypeStr": "f",
       "name": "x_castep_integrator_dt",
       "shape": [],
@@ -835,6 +834,30 @@
       "superNames": [
         "section_sampling_method"
       ]         
+    }, {
+      "description": "MD_pressure",
+      "dtypeStr": "C",
+      "name": "x_castep_frame_pressure",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]         
+    }, {
+      "description": "MD_scf_energy tolerance (eV)",
+      "dtypeStr": "f",
+      "name": "x_castep_frame_energy_tolerance",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]          
+    }, {
+      "description": "MD_scf_eigen tolerance (eV)",
+      "dtypeStr": "f",
+      "name": "x_castep_frame_eigen_tolerance",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]       
     }, {
       "description": "-",
       "kindStr": "type_section",
@@ -1132,7 +1155,7 @@
         "x_castep_section_spin_number"
       ]
     }, {
-      "description": "Temporary storing converged atom forces",
+      "description": "Temporary storing converged atom forces (ev/A)",
       "dtypeStr": "C",
       "name": "x_castep_store_atom_forces_band",
       "shape": [],
@@ -1141,7 +1164,7 @@
       ]
     
     }, {
-      "description": "Temporary storing converged atom forces",
+      "description": "Temporary storing converged atom forces (ev/A)",
       "dtypeStr": "C",
       "name": "x_castep_store_atom_forces",
       "shape": [],
