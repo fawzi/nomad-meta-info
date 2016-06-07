@@ -1,0 +1,249 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "Metainfo for CP2K Molecular Dynamics calculations.",
+  "dependencies": [ {
+      "relativePath": "cp2k.general.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "The ensemble type in molecular dynamics.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_ensemble_type",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "CP2K Molecular Dynamics information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Settings for CP2K Molecular Dynamics.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_settings",
+      "superNames": [
+        "settings_molecular_dynamics"
+      ]
+    }, {
+      "description": "Time step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_time_step",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ],
+      "unit": "s"
+    }, {
+      "description": "Target temperature.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ],
+      "unit": "K"
+    }, {
+      "description": "Target temperature tolerance.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_tolerance",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ],
+      "unit": "K"
+    }, {
+      "description": "The print frequency of molecular dynamics information in the CP2K output file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the coordinate file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_coordinates_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the coordinate file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_coordinates_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the velocities file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_velocities_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the velocities file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_velocities_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the energies file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_energies_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the energies file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_energies_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the dump file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_dump_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the dump file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_dump_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Information from MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_step",
+      "superNames": [
+        "x_cp2k_section_md"
+      ]
+    }, {
+      "description": "Instantaneous potential energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_potential_energy_instantaneous",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average potential energy for an MD step. Averaged over this and the previous steps.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_potential_energy_average",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous kinetic energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_kinetic_energy_instantaneous",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average kinetic energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_kinetic_energy_average",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous energy drift in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_energy_drift_instantaneous",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average kinetic energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_energy_drift_average",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous temperature in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_instantaneous",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average temperature in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_average",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous CPU time for this step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cpu_time_instantaneous",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average CPU time for this step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cpu_time_average",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Simulation time for this step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_time",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Conserved quantity for this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_conserved_quantity",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Simulation cell volume in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_volume",
+      "shape": [],
+      "unit": "m^3",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Number of requested time steps in molecular dynamics.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_number_of_time_steps",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }]
+}
