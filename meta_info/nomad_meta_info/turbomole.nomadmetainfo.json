@@ -591,8 +591,7 @@
       "shape": [],                                                              
       "superNames": [                                                           
         "turbomole_section_eigenvalues_list"                                     
-      ],
-      "units": "J"                                                                         
+      ]
     }, {                                                                        
       "description": "Irreducible representation of the eigenstate",                                       
       "dtypeStr": "C",                                                          
@@ -602,5 +601,14 @@
       "superNames": [                                                           
         "turbomole_section_eigenvalues_list"                                    
       ]                                                                        
+    }, {                                                                        
+      "description": "Type of UHF molecular orbital",            
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_uhfmo_type",                     
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_method"                                    
+      ]                                                                         
     }]
 }
