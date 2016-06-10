@@ -662,6 +662,13 @@
         "section_system"
       ]
     }, {
+      "description": "exciting functional section",
+      "kindStr": "type_section",
+      "name": "exciting_section_xc",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Smearing scheme for KS occupancies",
       "dtypeStr": "C",
       "name": "exciting_smearing_type",
@@ -736,7 +743,7 @@
       "dtypeStr": "i",
       "name": "exciting_xc_functional",
       "superNames": [
-        "section_method"
+        "exciting_section_xc"
       ]
     }, {
       "description": "XC potential",
