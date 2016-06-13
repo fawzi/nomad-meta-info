@@ -7,6 +7,26 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "kpoints for bandstructure",
+      "dtypeStr": "f",
+      "name": "exciting_band_k",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "exciting_section_bandstructure"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "Bandstructure energy values",
+      "dtypeStr": "f",
+      "name": "exciting_band_value",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "exciting_section_bandstructure"
+      ],
+      "units": "J"
+    }, {
       "description": "Brillouin zone volume",
       "dtypeStr": "f",
       "name": "exciting_brillouin_zone_volume",
@@ -14,6 +34,21 @@
         "section_system"
       ],
       "units": "m^-3"
+    }, {
+      "description": "exciting charge convergence",
+      "dtypeStr": "f",
+      "name": "exciting_charge_convergence_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Core charge",
+      "dtypeStr": "f",
+      "name": "exciting_core_charge",
+      "superNames": [
+        "section_system"
+      ]
     }, {
       "description": "Core-electron kinetic energy",
       "dtypeStr": "f",
@@ -34,6 +69,24 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
+    }, {
+      "description": "Core leakage",
+      "dtypeStr": "f",
+      "name": "exciting_core_leakage_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "C"
+    }, {
+      "description": "Core leakage",
+      "dtypeStr": "f",
+      "name": "exciting_core_leakage",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "C"
     }, {
       "description": "Correlation energy",
       "dtypeStr": "f",
@@ -106,6 +159,24 @@
       ],
       "units": "J"
     }, {
+      "description": "DOS at Fermi energy",
+      "dtypeStr": "f",
+      "name": "exciting_dos_fermi_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J^-1"
+    }, {
+      "description": "DOS at Fermi energy",
+      "dtypeStr": "f",
+      "name": "exciting_dos_fermi",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J^-1"
+    }, {
       "description": "Density of states values",
       "dtypeStr": "f",
       "name": "exciting_dos_value",
@@ -115,6 +186,14 @@
         "exciting_section_dos"
       ],
       "units": "J^-1"
+    }, {
+      "description": "exciting effective potential convergence",
+      "dtypeStr": "f",
+      "name": "exciting_effective_potential_convergence_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
     }, {
       "description": "Effective potential energy",
       "dtypeStr": "f",
@@ -156,6 +235,28 @@
       ],
       "units": "J"
     }, {
+      "description": "Electronic charge",
+      "dtypeStr": "f",
+      "name": "exciting_electronic_charge",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of empty states",
+      "dtypeStr": "f",
+      "name": "exciting_empty_states",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "exciting energy convergence",
+      "dtypeStr": "f",
+      "name": "exciting_energy_convergence_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Exchange energy",
       "dtypeStr": "f",
       "name": "exciting_exchange_energy_scf_iteration",
@@ -194,6 +295,63 @@
       ],
       "units": "J"
     }, {
+      "description": "Estimated fundamental gap",
+      "dtypeStr": "f",
+      "name": "exciting_gap_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Estimated fundamental gap",
+      "dtypeStr": "f",
+      "name": "exciting_gap",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "exciting_geometry_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_atom_positions_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_atom_positions_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_atom_positions_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
       "description": "x component of lattice vector",
       "dtypeStr": "f",
       "name": "exciting_geometry_lattice_vector_x",
@@ -221,6 +379,76 @@
       ],
       "units": "m"
     }, {
+      "description": "x component of reciprocal lattice vector",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_reciprocal_lattice_vector_x",
+      "shape": [],
+      "superNames": [
+        "exciting_section_reciprocal_lattice_vectors"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "y component of reciprocal lattice vector",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_reciprocal_lattice_vector_y",
+      "shape": [],
+      "superNames": [
+        "exciting_section_reciprocal_lattice_vectors"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "z component of reciprocal lattice vector",
+      "dtypeStr": "f",
+      "name": "exciting_geometry_reciprocal_lattice_vector_z",
+      "shape": [],
+      "superNames": [
+        "exciting_section_reciprocal_lattice_vectors"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "Maximum length of |G|",
+      "dtypeStr": "f",
+      "name": "exciting_gmaxvr",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "G-vector grid size x",
+      "dtypeStr": "f",
+      "name": "exciting_gvector_size_x",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "G-vector grid size y",
+      "dtypeStr": "f",
+      "name": "exciting_gvector_size_y",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "G-vector grid size z",
+      "dtypeStr": "f",
+      "name": "exciting_gvector_size_z",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "G-vector total",
+      "dtypeStr": "f",
+      "name": "exciting_gvector_total",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Maximum Hamiltonian size",
+      "dtypeStr": "f",
+      "name": "exciting_hamiltonian_size",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Hartree energy",
       "dtypeStr": "f",
       "name": "exciting_hartree_energy_scf_iteration",
@@ -240,6 +468,59 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
+    }, {
+      "description": "Interstitial charge",
+      "dtypeStr": "f",
+      "name": "exciting_interstitial_charge_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "C"
+    }, {
+      "description": "Interstitial charge",
+      "dtypeStr": "f",
+      "name": "exciting_interstitial_charge",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "C"
+    }, {
+      "description": "K-points offset x component",
+      "dtypeStr": "f",
+      "name": "exciting_kpoint_offset_x",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "K-points offset y component",
+      "dtypeStr": "f",
+      "name": "exciting_kpoint_offset_y",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "K-points offset z component",
+      "dtypeStr": "f",
+      "name": "exciting_kpoint_offset_z",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Angular momentum cut-off for the APW functions",
+      "dtypeStr": "f",
+      "name": "exciting_lmaxapw",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Total number of local-orbitals",
+      "dtypeStr": "f",
+      "name": "exciting_lo",
+      "superNames": [
+        "section_system"
+      ]
     }, {
       "description": "Madelung energy",
       "dtypeStr": "f",
@@ -261,6 +542,28 @@
       ],
       "units": "J"
     }, {
+      "description": "muffin-tin points",
+      "dtypeStr": "i",
+      "name": "exciting_muffin_tin_points",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "muffin-tin radius",
+      "dtypeStr": "f",
+      "name": "exciting_muffin_tin_radius",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "Nuclear charge",
+      "dtypeStr": "f",
+      "name": "exciting_nuclear_charge",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Nuclear-nuclear energy",
       "dtypeStr": "f",
       "name": "exciting_nuclear_nuclear_energy_scf_iteration",
@@ -281,6 +584,63 @@
       ],
       "units": "J"
     }, {
+      "description": "number k-points x",
+      "dtypeStr": "f",
+      "name": "exciting_number_kpoint_x",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number k-points y",
+      "dtypeStr": "f",
+      "name": "exciting_number_kpoint_y",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number k-points z",
+      "dtypeStr": "f",
+      "name": "exciting_number_kpoint_z",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number k-points",
+      "dtypeStr": "f",
+      "name": "exciting_number_kpoints",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Mixing type for potential",
+      "dtypeStr": "C",
+      "name": "exciting_potential_mixing",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Maximum number of plane-waves",
+      "dtypeStr": "f",
+      "name": "exciting_pw",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Radius MT * Gmax",
+      "dtypeStr": "f",
+      "name": "exciting_rgkmax",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "bandstructure values",
+      "kindStr": "type_section",
+      "name": "exciting_section_bandstructure",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "dos values",
       "kindStr": "type_section",
       "name": "exciting_section_dos",
@@ -295,6 +655,53 @@
         "section_system"
       ]
     }, {
+      "description": "reciprocal lattice vectors",
+      "kindStr": "type_section",
+      "name": "exciting_section_reciprocal_lattice_vectors",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Smearing scheme for KS occupancies",
+      "dtypeStr": "C",
+      "name": "exciting_smearing_type",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Smearing width for KS occupancies",
+      "dtypeStr": "f",
+      "name": "exciting_smearing_width",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "scf iteration time",
+      "dtypeStr": "f",
+      "name": "exciting_time_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Total charge in muffin-tins",
+      "dtypeStr": "f",
+      "name": "exciting_total_MT_charge_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "C"
+    }, {
+      "description": "Total charge in muffin-tins",
+      "dtypeStr": "f",
+      "name": "exciting_total_MT_charge",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "C"
+    }, {
       "description": "unit cell volume",
       "dtypeStr": "f",
       "name": "exciting_unit_cell_volume",
@@ -302,6 +709,35 @@
         "section_system"
       ],
       "units": "m^3"
+    }, {
+      "description": "Valence charge",
+      "dtypeStr": "f",
+      "name": "exciting_valence_charge",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Total number of valence states",
+      "dtypeStr": "f",
+      "name": "exciting_valence_states",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Effective Wigner radius",
+      "dtypeStr": "f",
+      "name": "exciting_wigner_radius",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "index for exciting functional",
+      "dtypeStr": "i",
+      "name": "exciting_xc_functional",
+      "superNames": [
+        "section_method"
+      ]
     }, {
       "description": "XC potential",
       "dtypeStr": "f",

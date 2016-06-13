@@ -41,7 +41,7 @@
       "name": "x_cp2k_basis_set_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "The number of Cartesian basis functions.",
@@ -57,7 +57,7 @@
       "name": "x_cp2k_coordinate_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "Self-consistent electronic kinetic energy calculated with Quickstep",
@@ -86,7 +86,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_cp2k_energy_XC_scf_iteration"
+        "x_cp2k_section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -115,7 +115,7 @@
       "name": "x_cp2k_geminal_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "The name of the CP2K input file that produced this calculation.",
@@ -123,7 +123,7 @@
       "name": "x_cp2k_input_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_programinformation"
       ]
     }, {
       "description": "Maximum angular momentum of the local part of the GTH pseudopotential.",
@@ -134,105 +134,12 @@
         "x_cp2k_section_maximum_angular_momentum"
       ]
     }, {
-      "description": "The coordinate components of an individual atom as a numpy array during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_coordinate_atom_float",
-      "shape": [
-        1,
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_coordinates"
-      ]
-    }, {
-      "description": "The coordinate components of an individual atom  as a string during an MD step.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_md_coordinate_atom_string",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_md_coordinate_atom"
-      ]
-    }, {
-      "description": "The atomic coordinates during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_coordinates",
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "The force components of an individual atom during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_force_atom_float",
-      "shape": [
-        1,
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_forces"
-      ]
-    }, {
-      "description": "The force components of an individual atom during an MD step.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_md_force_atom_string",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_md_force_atom"
-      ]
-    }, {
-      "description": "The atomic forces during an MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_forces",
-      "shape": [
-        "atom_number",
-        3
-      ],
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "The number of a molecular dynamics step.",
-      "dtypeStr": "i",
-      "name": "x_cp2k_md_step_number",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "The simulation time of a molecular dynamics step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_step_time",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ],
-      "units": "s"
-    }, {
-      "description": "The average temperature during MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_temperature_average",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ],
-      "unit": "K"
-    }, {
-      "description": "The instantaneous temperature during MD step.",
-      "dtypeStr": "f",
-      "name": "x_cp2k_md_temperature_instantaneous",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ],
-      "unit": "K"
-    }, {
       "description": "The name of the MM potential file.",
       "dtypeStr": "C",
       "name": "x_cp2k_mm_potential_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "Maximum angular momentum of the non-local part of the GTH pseudopotential.",
@@ -385,7 +292,7 @@
       "name": "x_cp2k_potential_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "The number of primitive Cartesian functions.",
@@ -404,22 +311,6 @@
         "x_cp2k_section_quickstep_calculation"
       ]
     }, {
-      "description": "The date when this run was started.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_run_start_date",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_startinformation"
-      ]
-    }, {
-      "description": "The time when this run was started.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_run_start_time",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_startinformation"
-      ]
-    }, {
       "description": "The DBCSR (Distributed Block Compressed Sparse Row) information.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_dbcsr",
@@ -427,11 +318,43 @@
         "settings_run"
       ]
     }, {
-      "description": "Information about the ancillary files that are taken as input or that are output by this calculation.",
+      "description": "Global settings for this calculation.",
       "kindStr": "type_section",
-      "name": "x_cp2k_section_filenames",
+      "name": "x_cp2k_section_global_settings",
       "superNames": [
-        "section_run"
+        "settings_run"
+      ]
+    }, {
+      "description": "The method name for this run.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_method_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
+      ]
+    }, {
+      "description": "The name of the preferred FFT library.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_preferred_fft_library",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
+      ]
+    }, {
+      "description": "The name of the preferred diagonalization library.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_preferred_diagonalization_library",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
+      ]
+    }, {
+      "description": "The run type for this calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_run_type",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "Information for the energy re-evaluation at the end of an optimization procedure.",
@@ -462,49 +385,6 @@
         "section_run"
       ]
     }, {
-      "description": "Section for atomic forces during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_coordinate_atom",
-      "superNames": [
-        "x_cp2k_section_md_coordinates"
-      ]
-    }, {
-      "description": "Section for atomic coordinates during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_coordinates",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "Section for atomic forces during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_force_atom",
-      "superNames": [
-        "x_cp2k_section_md_forces"
-      ]
-    }, {
-      "description": "Section for atomic forces during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_forces",
-      "superNames": [
-        "x_cp2k_section_md_step"
-      ]
-    }, {
-      "description": "Section grouping together the quantities calculated during an MD step.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md_step",
-      "repeats": true,
-      "superNames": [
-        "x_cp2k_section_md"
-      ]
-    }, {
-      "description": "Section grouping together the quantities calculated during an MD.",
-      "kindStr": "type_section",
-      "name": "x_cp2k_section_md",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "Contains information about the software version used for this run.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_programinformation",
@@ -517,7 +397,8 @@
       "name": "x_cp2k_section_quickstep_calculation",
       "superNames": [
         "section_single_configuration_calculation",
-        "x_cp2k_section_geometry_optimization_energy_reevaluation"
+        "x_cp2k_section_geometry_optimization_energy_reevaluation",
+        "x_cp2k_section_md_step"
       ]
     }, {
       "description": "Section for a CP2K QuickStep SCF iteration.",
@@ -532,6 +413,46 @@
       "name": "x_cp2k_section_startinformation",
       "superNames": [
         "program_info"
+      ]
+    }, {
+      "description": "The starting time for this run.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_time",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The name of the host machine this calculation started on.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_host",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The name of the user that started this calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_user",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The process id for this run.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_start_id",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The path where this calculation started.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_path",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
       ]
     }, {
       "description": "Section for stress tensor information.",
@@ -630,6 +551,506 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_programinformation"
+      ]
+    }, {
+      "description": "The ensemble type in molecular dynamics.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_ensemble_type",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "CP2K Molecular Dynamics information.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Settings for CP2K Molecular Dynamics.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_settings",
+      "superNames": [
+        "settings_molecular_dynamics"
+      ]
+    }, {
+      "description": "Time step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_time_step",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ],
+      "unit": "s"
+    }, {
+      "description": "Thermostat target temperature.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_target_temperature",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ],
+      "unit": "K"
+    }, {
+      "description": "Target temperature tolerance.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_target_temperature_tolerance",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ],
+      "unit": "K"
+    }, {
+      "description": "The print frequency of molecular dynamics information in the CP2K output file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the coordinate file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_coordinates_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the coordinate file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_coordinates_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the velocities file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_velocities_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the velocities file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_velocities_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the energies file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_energies_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the energies file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_energies_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Print frequency for the dump file.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_dump_print_frequency",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Name of the dump file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_dump_filename",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Information from MD step.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_md_step",
+      "superNames": [
+        "x_cp2k_section_md"
+      ]
+    }, {
+      "description": "Instantaneous potential energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_potential_energy_instantaneous",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average potential energy for an MD step. Averaged over this and the previous steps.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_potential_energy_average",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous kinetic energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_kinetic_energy_instantaneous",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average kinetic energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_kinetic_energy_average",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous energy drift in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_energy_drift_instantaneous",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average kinetic energy in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_energy_drift_average",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous temperature in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_instantaneous",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average temperature in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_temperature_average",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous barostat temperature in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_barostat_temperature_instantaneous",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average barostat temperature in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_barostat_temperature_average",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous pressure in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_pressure_instantaneous",
+      "shape": [],
+      "unit": "Pa",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average pressure in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_pressure_average",
+      "shape": [],
+      "unit": "Pa",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous CPU time for this step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cpu_time_instantaneous",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average CPU time for this step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cpu_time_average",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Simulation time for this step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_time",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Conserved quantity for this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_conserved_quantity",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell volume in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_volume_instantaneous",
+      "shape": [],
+      "unit": "m^3",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell volume in an MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_volume_average",
+      "shape": [],
+      "unit": "m^3",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell vector a length in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_length_a_instantaneous",
+      "shape": [],
+      "unit": "m",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell vector a length in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_length_a_average",
+      "shape": [],
+      "unit": "m",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell vector b length in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_length_b_instantaneous",
+      "shape": [],
+      "unit": "m",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell vector b length in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_length_b_average",
+      "shape": [],
+      "unit": "m",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell vector c length in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_length_c_instantaneous",
+      "shape": [],
+      "unit": "m",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell vector c length in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_length_c_average",
+      "shape": [],
+      "unit": "m",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell vector a angle in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_angle_a_instantaneous",
+      "shape": [],
+      "unit": "rad",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell vector a angle in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_angle_a_average",
+      "shape": [],
+      "unit": "rad",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell vector b angle in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_angle_b_instantaneous",
+      "shape": [],
+      "unit": "rad",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell vector b angle in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_angle_b_average",
+      "shape": [],
+      "unit": "rad",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Instantaneous cell vector c angle in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_angle_c_instantaneous",
+      "shape": [],
+      "unit": "rad",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Average cell vector c angle in this MD step.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_cell_angle_c_average",
+      "shape": [],
+      "unit": "rad",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Target pressure for the barostat.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_target_pressure",
+      "shape": [],
+      "unit": "Pa",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Barostat time constant.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_md_barostat_time_constant",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Simulation cell print frequency.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_simulation_cell_print_frequency",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "Simulation cell filename.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_md_simulation_cell_filename",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "DBCSR Multiplication driver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_multiplication_driver",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "DBCSR Multrec recursion limit",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_multrec_recursion_limit",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "DBCSR Multiplication stack size.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_multiplication_stack_size",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "DBCSR Multiplication size of stacks.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_multiplication_size_stacks",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if subcommunicators are used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_subcommunicators",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if MPI combined types are used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_mpi_combined_types",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if MPI memory allocation is used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_mpi_memory_allocation",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if communication thread is used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_communication_thread",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Load of the communication thread.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_communication_thread_load",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Number of requested time steps in molecular dynamics.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_number_of_time_steps",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cp2k_section_md_settings"
       ]
     }]
 }
