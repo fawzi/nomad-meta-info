@@ -699,6 +699,92 @@
         "x_castep_section_md"
       ]         
     }, {
+       "description": "ts_energy_components",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_energy",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
+      ]    
+    }, {
+       "description": "ts_energy_components",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_energy_total",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
+      ]     
+    }, {
+       "description": "ts_energy_components",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_energy_final",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]    
+    }, {
+       "description": "ts_energy_components",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_energy_product",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]    
+    }, {
+       "description": "ts_energy_forces_final",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_forces_final_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]    
+     }, {
+       "description": "ts_energy_forces_pro",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_forces_pro_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]    
+    }, {
+       "description": "ts_energy_forces_pro",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_forces_product",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]    
+    }, {
+       "description": "ts_energy_positions_final",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_positions_final_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]  
+    }, {
+       "description": "ts_energy_positions_pro",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_positions_pro_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]  
+    }, {
+       "description": "ts_energy_positions_pro",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_positions_product",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]  
+    }, {
        "description": "md_temp(K)",
       "dtypeStr": "f",
       "name": "x_castep_md_temperature",
@@ -722,6 +808,63 @@
       "superNames": [
         "x_castep_section_md"
       ]           
+    }, {
+       "description": "ts_cell_vectors",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_cell_vectors_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
+      ]         
+    }, {
+       "description": "ts_cell_vectors",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_cell_vectors",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts"
+      ]         
+    }, {
+       "description": "ts_cell_vectors",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_cell_vectors_final",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]       
+    }, {
+       "description": "ts_cell_vectors_final",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_cell_vectors_final_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]   
+    }, {
+       "description": "ts_cell_vectors_pro",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_cell_vectors_pro_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]   
+    }, {
+       "description": "ts_product_cell_vectors",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_cell_vectors_product",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]       
     }, {
       "description": "md_cell_vectors_velocities",
       "dtypeStr": "C",
@@ -747,6 +890,36 @@
         "x_castep_section_md"
       ]       
     }, {
+       "description": "ts_positions",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_positions_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
+      ]       
+    }, {
+       "description": "ts_positions",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_positions",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts"
+      ]    
+    }, {
+       "description": "ts_positions",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_positions_final",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]    
+    }, {
        "description": "md_forces",
       "dtypeStr": "C",
       "name": "x_castep_md_forces",
@@ -755,12 +928,74 @@
         "x_castep_section_md"
       ]       
     }, {
+       "description": "ts_forces",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_forces_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
+      ]      
+    }, {
+       "description": "ts_forces",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_forces",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts"
+      ]      
+    }, {
+       "description": "ts_forces",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_forces_final",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]      
+    }, {
+       "description": "ts_path",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_path",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
+      ]      
+    }, {
+       "description": "ts_path_final",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_path_ts_final",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]      
+    }, {
+       "description": "ts_path_pro",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_path_product",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_pro"
+      ]      
+    }, {
        "description": "md_lables",
       "dtypeStr": "C",
       "name": "x_castep_md_lab",
       "shape": [],
       "superNames": [
         "x_castep_section_md"
+      ]       
+     }, {
+       "description": "ts_lables",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_lab",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts"
       ]       
     }, {
        "description": "md_veloc",
@@ -1138,6 +1373,27 @@
       "name": "x_castep_section_md",
       "superNames": [
         "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_ts",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_ts_final",
+      "superNames": [
+        "x_castep_section_ts"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_ts_pro",
+      "superNames": [
+        "x_castep_section_ts"
       ]  
     }, {
       "description": "-",
