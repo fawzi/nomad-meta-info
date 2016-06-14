@@ -906,7 +906,7 @@
         "x_castep_section_md"
       ]       
     }, {
-       "description": "ts_positions",
+       "description": "ts_positions_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_positions_store",
       "shape": [],
@@ -925,7 +925,7 @@
         "x_castep_section_ts"
       ]    
     }, {
-       "description": "ts_positions",
+       "description": "ts_positions_final",
       "dtypeStr": "f",
       "name": "x_castep_ts_positions_final",
       "shape": [
@@ -944,10 +944,10 @@
         "x_castep_section_md"
       ]       
     }, {
-       "description": "ts_forces",
+       "description": "ts_forces_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_forces_store",
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_castep_section_ts_store"
       ]      
@@ -963,7 +963,7 @@
         "x_castep_section_ts"
       ]      
     }, {
-       "description": "ts_forces",
+       "description": "ts_force_finals",
       "dtypeStr": "f",
       "name": "x_castep_ts_forces_final",
       "shape": [
