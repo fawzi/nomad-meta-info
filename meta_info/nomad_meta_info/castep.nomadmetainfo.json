@@ -974,6 +974,54 @@
         "x_castep_section_ts_final"
       ]      
     }, {
+       "description": "ts_method",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_method",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_parameters"
+      ]    
+    }, {
+       "description": "ts_protocol",
+      "dtypeStr": "C",
+      "name": "x_castep_ts_protocol",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_parameters"
+      ]
+    }, {
+       "description": "ts_qst_iterations",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_number_qst",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_parameters"
+      ]
+    }, {
+       "description": "ts_number_of_cg_iterations",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_number_cg",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_parameters"
+      ]
+    }, {
+       "description": "ts_force_tolerance",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_force_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_parameters"
+      ]
+    }, {
+       "description": "ts_displacement_tolerance",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_displacement_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_parameters"
+      ]
+    }, {
        "description": "ts_path_number",
       "dtypeStr": "f",
       "name": "x_castep_ts_path",
