@@ -699,7 +699,7 @@
         "x_castep_section_md"
       ]         
     }, {
-       "description": "ts_energy_components",
+       "description": "ts_energy_components_ts",
       "dtypeStr": "C",
       "name": "x_castep_ts_energy",
       "shape": [],
@@ -707,7 +707,23 @@
         "x_castep_section_ts"
       ]    
     }, {
-       "description": "ts_energy_components",
+       "description": "ts_energy_components_ts",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_energy_final_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_final"
+      ]    
+    }, {
+       "description": "ts_energy_components_",
+      "dtypeStr": "f",
+      "name": "x_castep_ts_energy_product_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_ts_product"
+      ]      
+    }, {
+       "description": "ts_energy_components_total",
       "dtypeStr": "f",
       "name": "x_castep_ts_energy_total",
       "shape": [],
@@ -715,7 +731,7 @@
         "x_castep_section_ts"
       ]     
     }, {
-       "description": "ts_energy_components",
+       "description": "ts_energy_final",
       "dtypeStr": "f",
       "name": "x_castep_ts_energy_final",
       "shape": [],
@@ -723,7 +739,7 @@
         "x_castep_section_ts_final"
       ]    
     }, {
-       "description": "ts_energy_components",
+       "description": "ts_energy_prod",
       "dtypeStr": "f",
       "name": "x_castep_ts_energy_product",
       "shape": [],
@@ -731,7 +747,7 @@
         "x_castep_section_ts_product"
       ]    
     }, {
-       "description": "ts_energy_forces_final",
+       "description": "ts_forces_final",
       "dtypeStr": "C",
       "name": "x_castep_ts_forces_final_store",
       "shape": [],
