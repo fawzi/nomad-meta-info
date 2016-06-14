@@ -829,6 +829,7 @@
        "description": "ts_cell_vectors",
       "dtypeStr": "C",
       "name": "x_castep_ts_cell_vectors_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_store"
@@ -913,6 +914,7 @@
        "description": "ts_positions_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_positions_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_store"
