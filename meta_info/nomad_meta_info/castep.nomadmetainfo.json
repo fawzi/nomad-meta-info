@@ -699,7 +699,7 @@
         "x_castep_section_md"
       ]         
     }, {
-       "description": "ts_energy_components_ts",
+       "description": "ts_energy_components_ts_store",
       "dtypeStr": "f",
       "name": "x_castep_ts_energy",
       "shape": [],
@@ -715,7 +715,7 @@
         "x_castep_section_ts_final"
       ]    
     }, {
-       "description": "ts_energy_components_",
+       "description": "ts_energy_components_pro",
       "dtypeStr": "f",
       "name": "x_castep_ts_energy_product_store",
       "shape": [],
@@ -755,7 +755,7 @@
         "x_castep_section_ts_final"
       ]    
      }, {
-       "description": "ts_energy_forces_pro",
+       "description": "ts_energy_forces_pro_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_forces_pro_store",
       "shape": [],
@@ -782,7 +782,7 @@
         "x_castep_section_ts_final"
       ]  
     }, {
-       "description": "ts_energy_positions_pro",
+       "description": "ts_energy_positions_pro_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_positions_pro_store",
       "shape": [],
