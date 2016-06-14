@@ -502,7 +502,7 @@
       ],
       "unit": "Pa**3"
     }, {
-      "description": "The eigenvalues of the stress tensor from biggest to lowest.",
+      "description": "The eigenvalues of the stress tensor.",
       "dtypeStr": "f",
       "name": "x_cp2k_stress_tensor_eigenvalues",
       "shape": [
@@ -513,7 +513,7 @@
       ],
       "unit": "Pa"
     }, {
-      "description": "The eigenvectors of the stress tensor. The vector correponding to the ith eigenvalue is placed as the ith column of the matrix.",
+      "description": "The eigenvectors of the stress tensor.",
       "dtypeStr": "f",
       "name": "x_cp2k_stress_tensor_eigenvectors",
       "shape": [
@@ -1049,6 +1049,115 @@
       "name": "x_cp2k_section_quickstep_settings",
       "superNames": [
         "section_method"
+      ]
+    }, {
+      "description": "Information about all the atomic kinds in this Quickstep calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_atomic_kinds",
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
+      ]
+    }, {
+      "description": "Information one atomic kind.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_atomic_kind",
+      "superNames": [
+        "x_cp2k_section_atomic_kinds"
+      ]
+    }, {
+      "description": "The atomic kind number. For each element there may be multiple kinds specified. This number differentiates them. Not the atomic number.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_kind_number",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "The element symbol for this atomic kind.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_kind_element_symbol",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "The number of atoms with this kind.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_kind_number_of_atoms",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "Description of the basis set used for this kind.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_kind_basis_set",
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "The name of the orbital basis set used for this kind.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_kind_basis_set_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of orbital shell sets.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_orbital_shell_sets",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of orbital shells.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_orbital_shells",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of primitive Cartesian functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_primitive_cartesian_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of Cartesian basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_cartesian_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of spherical basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_spherical_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Norm type.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_norm_type",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "The plane-wave cutoff for the auxiliary basis.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_plane_wave_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
       ]
     }, {
       "description": "Indicates the restriction applied for the spin (e.g. RKS).",
