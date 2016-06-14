@@ -790,9 +790,10 @@
         "x_castep_section_ts_product_store"
       ]  
     }, {
-       "description": "ts_energy_positions_pro",
+      "description": "ts_energy_positions_pro",
       "dtypeStr": "f",
       "name": "x_castep_ts_positions_product",
+      "repeats": true,
       "shape": [
         "number_of_atoms",
         3
@@ -836,6 +837,7 @@
        "description": "ts_cell_vectors",
       "dtypeStr": "f",
       "name": "x_castep_ts_cell_vectors",
+      "repeats": true,
       "shape": [
         3,
         3
@@ -847,6 +849,7 @@
        "description": "ts_cell_vectors",
       "dtypeStr": "f",
       "name": "x_castep_ts_cell_vectors_final",
+      "repeats": true,
       "shape": [
         3,
         3
@@ -874,6 +877,7 @@
        "description": "ts_product_cell_vectors",
       "dtypeStr": "f",
       "name": "x_castep_ts_cell_vectors_product",
+      "repeats": true,
       "shape": [
         3,
         3
@@ -917,6 +921,7 @@
        "description": "ts_positions",
       "dtypeStr": "f",
       "name": "x_castep_ts_positions",
+      "repeats": true,
       "shape": [
         "number_of_atoms",
         3
@@ -928,6 +933,7 @@
        "description": "ts_positions_final",
       "dtypeStr": "f",
       "name": "x_castep_ts_positions_final",
+      "repeats": true,
       "shape": [
         "number_of_atoms",
         3
@@ -955,6 +961,7 @@
        "description": "ts_forces",
       "dtypeStr": "f",
       "name": "x_castep_ts_forces",
+      "repeats": true,
       "shape": [
         "number_of_atoms",
         3
@@ -966,8 +973,9 @@
        "description": "ts_force_finals",
       "dtypeStr": "f",
       "name": "x_castep_ts_forces_final",
+      "repeats": true,
       "shape": [
-        "number_of_atoms",
+      "number_of_atoms",
         3
       ],
       "superNames": [
