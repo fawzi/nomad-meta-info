@@ -25,9 +25,9 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Target value of the z component of the spin moment operator $S^z$ for the converged calculation with the XC_method.",
+      "description": "Target value (fixed) of the z component of the spin moment operator $S^z$ for the converged calculation with the XC_method.",
       "dtypeStr": "f",
-      "name": "gpaw_target_spin_Sz",
+      "name": "gpaw_fixed_spin_Sz",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
