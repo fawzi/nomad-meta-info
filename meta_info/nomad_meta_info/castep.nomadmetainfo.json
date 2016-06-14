@@ -704,7 +704,7 @@
       "name": "x_castep_ts_energy",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts"
+        "x_castep_section_ts_store"
       ]    
     }, {
        "description": "ts_energy_components_ts",
@@ -712,7 +712,7 @@
       "name": "x_castep_ts_energy_final_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_final"
+        "x_castep_section_ts_final_store"
       ]    
     }, {
        "description": "ts_energy_components_pro",
@@ -720,7 +720,7 @@
       "name": "x_castep_ts_energy_product_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_product"
+        "x_castep_section_ts_product_store"
       ]      
     }, {
        "description": "ts_energy_components_total",
@@ -752,7 +752,7 @@
       "name": "x_castep_ts_forces_final_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_final"
+        "x_castep_section_ts_final_store"
       ]    
      }, {
        "description": "ts_energy_forces_pro_store",
@@ -760,7 +760,7 @@
       "name": "x_castep_ts_forces_pro_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_product"
+        "x_castep_section_ts_product_store"
       ]    
     }, {
        "description": "ts_energy_forces_pro",
@@ -779,7 +779,7 @@
       "name": "x_castep_ts_positions_final_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_final"
+        "x_castep_section_ts_final_store"
       ]  
     }, {
        "description": "ts_energy_positions_pro_store",
@@ -787,7 +787,7 @@
       "name": "x_castep_ts_positions_pro_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_product"
+        "x_castep_section_ts_product_store"
       ]  
     }, {
        "description": "ts_energy_positions_pro",
@@ -830,7 +830,7 @@
       "name": "x_castep_ts_cell_vectors_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts"
+        "x_castep_section_ts_store"
       ]         
     }, {
        "description": "ts_cell_vectors",
@@ -860,7 +860,7 @@
       "name": "x_castep_ts_cell_vectors_final_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_final"
+        "x_castep_section_ts_final_store"
       ]   
     }, {
        "description": "ts_cell_vectors_pro",
@@ -868,7 +868,7 @@
       "name": "x_castep_ts_cell_vectors_pro_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_product"
+        "x_castep_section_ts_product_store"
       ]   
     }, {
        "description": "ts_product_cell_vectors",
@@ -911,7 +911,7 @@
       "name": "x_castep_ts_positions_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts"
+        "x_castep_section_ts_store"
       ]       
     }, {
        "description": "ts_positions",
@@ -949,7 +949,7 @@
       "name": "x_castep_ts_forces_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts"
+        "x_castep_section_ts_store"
       ]      
     }, {
        "description": "ts_forces",
@@ -1400,6 +1400,20 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
+      "name": "x_castep_section_ts_store",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_ts_final_store",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
       "name": "x_castep_section_ts_final",
       "superNames": [
         "section_run"
@@ -1408,6 +1422,20 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_ts_product",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_ts_product_store",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_ts_parameters",
       "superNames": [
         "section_run"
       ]  
