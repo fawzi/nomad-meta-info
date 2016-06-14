@@ -728,7 +728,7 @@
       "name": "x_castep_ts_energy_product",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]    
     }, {
        "description": "ts_energy_forces_final",
@@ -744,7 +744,7 @@
       "name": "x_castep_ts_forces_pro_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]    
     }, {
        "description": "ts_energy_forces_pro",
@@ -755,7 +755,7 @@
         3
       ],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]    
     }, {
        "description": "ts_energy_positions_final",
@@ -771,7 +771,7 @@
       "name": "x_castep_ts_positions_pro_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]  
     }, {
        "description": "ts_energy_positions_pro",
@@ -782,7 +782,7 @@
         3
       ],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]  
     }, {
        "description": "md_temp(K)",
@@ -852,7 +852,7 @@
       "name": "x_castep_ts_cell_vectors_pro_store",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]   
     }, {
        "description": "ts_product_cell_vectors",
@@ -863,7 +863,7 @@
         3
       ],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]       
     }, {
       "description": "md_cell_vectors_velocities",
@@ -979,7 +979,7 @@
       "name": "x_castep_ts_path_product",
       "shape": [],
       "superNames": [
-        "x_castep_section_ts_pro"
+        "x_castep_section_ts_product"
       ]      
     }, {
        "description": "md_lables",
@@ -1386,14 +1386,14 @@
       "kindStr": "type_section",
       "name": "x_castep_section_ts_final",
       "superNames": [
-        "x_castep_section_ts"
+        "section_run"
       ]  
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_castep_section_ts_pro",
+      "name": "x_castep_section_ts_product",
       "superNames": [
-        "x_castep_section_ts"
+        "section_run"
       ]  
     }, {
       "description": "-",
