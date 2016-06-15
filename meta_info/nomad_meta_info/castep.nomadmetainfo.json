@@ -1039,6 +1039,22 @@
         "x_castep_section_ts_parameters"
       ]
     }, {
+       "description": "optics_number_of_bands",
+      "dtypeStr": "i",
+      "name": "x_castep_optics_n_bands",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_optics_parameters"
+      ]
+    }, {
+       "description": "optics_band_convergence_tolerance",
+      "dtypeStr": "f",
+      "name": "x_castep_optics_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_optics_parameters"
+      ]
+    }, {
        "description": "ts_path_number",
       "dtypeStr": "f",
       "name": "x_castep_ts_path",
@@ -1265,6 +1281,54 @@
         "x_castep_section_population_analysis_parameters"
       ]      
     }, {
+      "description": "Electronic spectroscopy parameters theory level",
+      "dtypeStr": "C",
+      "name": "x_castep_theory_level",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_electronic_spectroscpy_parameters"
+      ]      
+    }, {
+      "description": "Electronic spectroscopy parameters calculation type",
+      "dtypeStr": "C",
+      "name": "x_castep_spectroscopy_calculation",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_electronic_spectroscpy_parameters"
+      ]   
+    }, {
+      "description": "Max number of iterations",
+      "dtypeStr": "i",
+      "name": "x_castep_spec_max_iter",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_electronic_spectroscpy_parameters"
+      ]   
+    }, {
+      "description": "Max number of steps",
+      "dtypeStr": "i",
+      "name": "x_castep_spec_max_steps",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_electronic_spectroscpy_parameters"
+      ]   
+    }, {
+      "description": "Max number of bands",
+      "dtypeStr": "i",
+      "name": "x_castep_spec_max_bands",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_electronic_spectroscpy_parameters"
+      ]   
+    }, {
+      "description": "Tolerance (eV)",
+      "dtypeStr": "f",
+      "name": "x_castep_spec_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_electronic_spectroscpy_parameters"
+      ]   
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_atom_ionic_velocities",
@@ -1346,6 +1410,13 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_geom_optimisation_method",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_optics_parameters",
       "superNames": [
         "section_run"
       ]
@@ -1456,6 +1527,13 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_scf_parameters",
+      "superNames": [
+        "section_run"
+      ]  
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_electronic_spectroscpy_parameters",
       "superNames": [
         "section_run"
       ]  
