@@ -730,5 +730,95 @@
         "section_run",                                                          
         "section_method"                                                        
       ]                                                                         
+    }, {                                                                        
+      "description": "-",                                                       
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_controlIn_scfintunit_unit",                      
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "-",                                                       
+      "dtypeStr": "i",                                                          
+      "name": "turbomole_controlIn_scfintunit_size",                      
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "-",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_scfintunit_file",                      
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Status mean here ON or OFF",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_cartesian_status",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Status mean here ON or OFF",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_basis_status",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Status mean here ON or OFF",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_global_status",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Status mean here ON or OFF",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_hessian_status",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Status mean here ON or OFF",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_dipole_status",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
+    }, {                                                                        
+      "description": "Status mean here ON or OFF",                                                       
+      "dtypeStr": "C",                                                          
+      "name": "turbomole_controlIn_interconversion_status",                            
+      "repeats": true,                                                          
+      "shape": [],                                                              
+      "superNames": [                                                           
+        "section_run",                                                          
+        "section_method"                                                        
+      ]                                                                         
     }]
 }
