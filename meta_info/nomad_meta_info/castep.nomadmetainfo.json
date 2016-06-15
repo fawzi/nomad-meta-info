@@ -750,6 +750,7 @@
        "description": "ts_forces_final",
       "dtypeStr": "C",
       "name": "x_castep_ts_forces_final_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_final_store"
@@ -777,6 +778,7 @@
        "description": "ts_energy_positions_final",
       "dtypeStr": "C",
       "name": "x_castep_ts_positions_final_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_final_store"
@@ -862,6 +864,7 @@
        "description": "ts_cell_vectors_final",
       "dtypeStr": "C",
       "name": "x_castep_ts_cell_vectors_final_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_final_store"
