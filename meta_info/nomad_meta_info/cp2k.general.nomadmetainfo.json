@@ -382,7 +382,7 @@
       "kindStr": "type_section",
       "name": "x_cp2k_section_maximum_angular_momentum",
       "superNames": [
-        "section_run"
+        "x_cp2k_section_quickstep_settings"
       ]
     }, {
       "description": "Contains information about the software version used for this run.",
@@ -466,7 +466,7 @@
       "kindStr": "type_section",
       "name": "x_cp2k_section_total_numbers",
       "superNames": [
-        "section_run"
+        "x_cp2k_section_quickstep_settings"
       ]
     }, {
       "description": "The number of shell sets in the calculation.",
@@ -1163,6 +1163,14 @@
       "description": "Indicates the restriction applied for the spin (e.g. RKS).",
       "dtypeStr": "C",
       "name": "x_cp2k_spin_restriction",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
+      ]
+    }, {
+      "description": "The method used for the Quickstep calculations (GPW, GAPW).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_quickstep_method",
       "shape": [],
       "superNames": [
         "x_cp2k_section_quickstep_settings"
