@@ -759,6 +759,7 @@
        "description": "ts_energy_forces_pro_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_forces_pro_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_product_store"
@@ -787,6 +788,7 @@
        "description": "ts_energy_positions_pro_store",
       "dtypeStr": "C",
       "name": "x_castep_ts_positions_pro_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_product_store"
@@ -873,6 +875,7 @@
        "description": "ts_cell_vectors_pro",
       "dtypeStr": "C",
       "name": "x_castep_ts_cell_vectors_pro_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_ts_product_store"
@@ -1020,7 +1023,7 @@
         "x_castep_section_ts_parameters"
       ]
     }, {
-       "description": "ts_force_tolerance",
+       "description": "ts_force_tolerance (eV/A)",
       "dtypeStr": "f",
       "name": "x_castep_ts_force_tolerance",
       "shape": [],
@@ -1028,7 +1031,7 @@
         "x_castep_section_ts_parameters"
       ]
     }, {
-       "description": "ts_displacement_tolerance",
+       "description": "ts_displacement_tolerance (A)",
       "dtypeStr": "f",
       "name": "x_castep_ts_displacement_tolerance",
       "shape": [],
@@ -1241,6 +1244,14 @@
       "description": "charge_density_mixing_amplitude",
       "dtypeStr": "f",
       "name": "x_castep_charge_density_mixing_amplitude",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_density_mixing_parameters"
+      ]      
+     }, {
+      "description": "charge_density_mixing_cut_off_energy_for_mixing (A)",
+      "dtypeStr": "f",
+      "name": "x_castep_cut_off_energy_for_mixing",
       "shape": [],
       "superNames": [
         "x_castep_section_density_mixing_parameters"
