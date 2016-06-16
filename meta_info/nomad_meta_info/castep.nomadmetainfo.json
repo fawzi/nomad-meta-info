@@ -1484,6 +1484,7 @@
       "description": "Iteration number",
       "dtypeStr": "i",
       "name": "x_castep_tddft_iteration",
+      "repeats": true, 
       "shape": [],
       "superNames": [
         "x_castep_section_tddft"
@@ -1492,6 +1493,7 @@
       "description": "Iteration wall time (s)",
       "dtypeStr": "f",
       "name": "x_castep_wall_time",
+      "repeats": true, 
       "shape": [],
       "superNames": [
         "x_castep_section_tddft"
