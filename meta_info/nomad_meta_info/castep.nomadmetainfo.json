@@ -233,13 +233,21 @@
       ]
     }, {
       "description": "CASTEP_Enthalpy",
-      "dtypeStr": "C",
+      "dtypeStr": "f",
       "name": "x_castep_enthalpy",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
       ]
-      }, {
+    }, {
+      "description": "CASTEP_frequency (cm-1)",
+      "dtypeStr": "f",
+      "name": "x_castep_frequency",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
        "description": "md_forces",
       "dtypeStr": "f",
       "name": "x_castep_improved_energy_total",
@@ -1472,6 +1480,62 @@
       "superNames": [
         "x_castep_section_ts_scf"
       ]
+    }, {
+      "description": "Iteration number",
+      "dtypeStr": "i",
+      "name": "x_castep_tddft_iteration",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_tddft"
+      ]  
+    }, {
+      "description": "Iteration wall time (s)",
+      "dtypeStr": "f",
+      "name": "x_castep_wall_time",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_tddft"
+      ]  
+    }, {
+      "description": "state number",
+      "dtypeStr": "i",
+      "name": "x_castep_state_number",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_tddft"
+      ]  
+    }, {
+      "description": "state energy",
+      "dtypeStr": "f",
+      "name": "x_castep_state_energy",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_tddft"
+      ]  
+    }, {
+      "description": "state energy error",
+      "dtypeStr": "f",
+      "name": "x_castep_state_energy_error",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_tddft"
+      ] 
+    }, {
+      "description": "calculation time",
+      "dtypeStr": "f",
+      "name": "x_castep_tddft_calculation_time",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_tddft"
+      ] 
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_tddft",
+      "superNames": [
+        "section_system"
+      ]
+    
     }, {
       "description": "-",
       "kindStr": "type_section",
