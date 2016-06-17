@@ -1551,6 +1551,7 @@
     }, {
       "description": "A debugging message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_debug_evaluation",
       "repeats": true,
       "superNames": [
@@ -1560,6 +1561,7 @@
     }, {
       "description": "A debugging message of the computational program, associated with a run.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_debug_run",
       "repeats": true,
       "superNames": [
@@ -1569,12 +1571,14 @@
     }, {
       "description": "A debugging message of the computational program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_debug",
       "superNames": []
     }, {
       "description": "An error message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_error_evaluation",
       "repeats": true,
       "superNames": [
@@ -1585,6 +1589,7 @@
       "description": "An error message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_error_run",
+      "shape": [],
       "repeats": true,
       "superNames": [
         "section_run",
@@ -1593,6 +1598,7 @@
     }, {
       "description": "An error message of the computational program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_error",
       "superNames": [
@@ -1601,6 +1607,7 @@
     }, {
       "description": "An information message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_info_evaluation",
       "repeats": true,
       "superNames": [
@@ -1610,6 +1617,7 @@
     }, {
       "description": "An information message of the computational program, associated with a run.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_info_run",
       "repeats": true,
       "superNames": [
@@ -1619,6 +1627,7 @@
     }, {
       "description": "An information message of the computational program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_info",
       "superNames": [
@@ -1627,6 +1636,7 @@
     }, {
       "description": "A warning message of the computational program.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_warning_evaluation",
       "repeats": true,
       "superNames": [
@@ -1636,6 +1646,7 @@
     }, {
       "description": "A warning message of the computational program, associated with a run.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "message_warning_run",
       "repeats": true,
       "superNames": [
@@ -1645,6 +1656,7 @@
     }, {
       "description": "A warning message of the computational program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_warning",
       "superNames": [
@@ -1948,6 +1960,7 @@
     }, {
       "description": "A debugging message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "parsing_message_debug_evaluation",
       "repeats": true,
       "superNames": [
@@ -1958,6 +1971,7 @@
       "description": "A debugging message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_debug_run",
+      "shape": [],
       "repeats": true,
       "superNames": [
         "section_run",
@@ -1966,6 +1980,7 @@
     }, {
       "description": "A debugging message of the parsing program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_debug",
       "repeats": true,
@@ -1973,6 +1988,7 @@
     }, {
       "description": "An error message of the parsing program, associated with a run.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "parsing_message_error_run",
       "repeats": true,
       "superNames": [
@@ -1982,6 +1998,7 @@
     }, {
       "description": "An error message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "parsing_message_error_single_configuration",
       "repeats": true,
       "superNames": [
@@ -1991,6 +2008,7 @@
     }, {
       "description": "An error message of the parsing program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_error",
       "repeats": true,
@@ -2001,6 +2019,7 @@
       "description": "An information message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_info_run",
+      "shape": [],
       "repeats": true,
       "superNames": [
         "section_run",
@@ -2009,6 +2028,7 @@
     }, {
       "description": "An information message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "parsing_message_info_single_configuration",
       "repeats": true,
       "superNames": [
@@ -2018,6 +2038,7 @@
     }, {
       "description": "An information message of the parsing program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_info",
       "repeats": true,
@@ -2027,6 +2048,7 @@
     }, {
       "description": "A warning message of the parsing program.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "parsing_message_warning_evaluation",
       "repeats": true,
       "superNames": [
@@ -2036,6 +2058,7 @@
     }, {
       "description": "A warning message of the parsing program, associated with a run.",
       "dtypeStr": "C",
+      "shape": [],
       "name": "parsing_message_warning_run",
       "repeats": true,
       "superNames": [
@@ -2045,6 +2068,7 @@
     }, {
       "description": "A warning message of the parsing program.",
       "dtypeStr": "C",
+      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_warning",
       "repeats": true,
@@ -2119,6 +2143,7 @@
     }, {
       "description": "Short string describing the relativistic treatment used for the calculation of the final energy and related quantities. No relativistic treatment, if skipped or empty. Relativistic treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/relativity-method).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "relativity_method",
       "superNames": [
         "settings_relativity"
@@ -2375,6 +2400,7 @@
     }, {
       "description": "Short string for the self-interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Allowed values ofr this string are listed in the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/self-interaction-correction-method).",
       "dtypeStr": "C",
+      "shape": [],
       "name": "self_interaction_correction_method",
       "superNames": [
         "settings_self_interaction_correction"
