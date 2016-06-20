@@ -123,7 +123,7 @@
       "name": "x_cp2k_input_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_programinformation"
+        "x_cp2k_section_program_information"
       ]
     }, {
       "description": "Maximum angular momentum of the local part of the GTH pseudopotential.",
@@ -387,18 +387,24 @@
     }, {
       "description": "Contains information about the software version used for this run.",
       "kindStr": "type_section",
-      "name": "x_cp2k_section_programinformation",
+      "name": "x_cp2k_section_program_information",
       "superNames": [
         "program_info"
+      ]
+    }, {
+      "description": "The time when this program was compiled.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_program_compilation_datetime",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_program_information"
       ]
     }, {
       "description": "Section for a CP2K QuickStep calculation.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_quickstep_calculation",
       "superNames": [
-        "section_single_configuration_calculation",
-        "x_cp2k_section_geometry_optimization_energy_reevaluation",
-        "x_cp2k_section_md_step"
+        "section_run"
       ]
     }, {
       "description": "Section for a CP2K QuickStep SCF iteration.",
@@ -550,7 +556,7 @@
       "name": "x_cp2k_svn_revision",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_programinformation"
+        "x_cp2k_section_program_information"
       ]
     }, {
       "description": "The ensemble type in molecular dynamics.",
