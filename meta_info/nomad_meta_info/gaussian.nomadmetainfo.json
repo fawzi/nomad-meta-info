@@ -26,7 +26,7 @@
       "description": "atomic masses for atoms",
       "dtypeStr": "C",
       "name": "x_gaussian_atomic_masses",
-      "repeats": "true",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_gaussian_section_atomic_masses"
@@ -334,15 +334,6 @@
         "x_gaussian_scf_info"
       ]
     }, {
-      "description": "Total number of atoms.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_system"
-      ]
-    }, {
       "description": "Properties defining the current configuration.",
       "kindStr": "type_abstract_document_content",
       "name": "x_gaussian_configuration_core",
@@ -376,8 +367,16 @@
         "x_gaussian_section_single_configuration_calculation"
       ]
     }, {
+      "description": "Value of the total charge of the system (in electronic units).",
+      "dtypeStr": "C",
+      "name": "charge",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_molecular_multipoles"
+      ]
+    }, {
       "description": "Value of the x component of the dipole moment (Debye).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "dipole_moment_x",
       "shape": [],
       "superNames": [
@@ -385,7 +384,7 @@
       ]
     }, {
       "description": "Value of the y component of the dipole moment (Debye).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "dipole_moment_y",
       "shape": [],
       "superNames": [
@@ -393,7 +392,7 @@
       ]
     }, {
       "description": "Value of the z component of the dipole moment (Debye).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "dipole_moment_z",
       "shape": [],
       "superNames": [
@@ -401,7 +400,7 @@
       ]
     }, {
       "description": "Value of the xx component of the quadrupole moment (Debye-Ang).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "quadrupole_moment_xx",
       "shape": [],
       "superNames": [
@@ -409,7 +408,7 @@
       ]
     }, {
       "description": "Value of the yy component of the quadrupole moment (Debye-Ang).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "quadrupole_moment_yy",
       "shape": [],
       "superNames": [
@@ -417,7 +416,7 @@
       ]
     }, {
       "description": "Value of the zz component of the quadrupole moment (Debye-Ang).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "quadrupole_moment_zz",
       "shape": [],
       "superNames": [
@@ -425,7 +424,7 @@
       ]
     }, {
       "description": "Value of the xy component of the quadrupole moment (Debye-Ang).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "quadrupole_moment_xy",
       "shape": [],
       "superNames": [
@@ -433,7 +432,7 @@
       ]
     }, {
       "description": "Value of the xz component of the quadrupole moment (Debye-Ang).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "quadrupole_moment_xz",
       "shape": [],
       "superNames": [
@@ -441,7 +440,7 @@
       ]
     }, {
       "description": "Value of the yz component of the quadrupole moment (Debye-Ang).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "quadrupole_moment_yz",
       "shape": [],
       "superNames": [
@@ -449,7 +448,7 @@
       ]
     }, {
       "description": "Value of the xxx component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_xxx",
       "shape": [],
       "superNames": [
@@ -457,7 +456,7 @@
       ]
     }, {
       "description": "Value of the yyy component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_yyy",
       "shape": [],
       "superNames": [
@@ -465,7 +464,7 @@
       ]
     }, {
       "description": "Value of the zzz component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_zzz",
       "shape": [],
       "superNames": [
@@ -473,7 +472,7 @@
       ]
     }, {
       "description": "Value of the xyy component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_xyy",
       "shape": [],
       "superNames": [
@@ -481,7 +480,7 @@
       ]
     }, {
       "description": "Value of the xxy component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_xxy",
       "shape": [],
       "superNames": [
@@ -489,7 +488,7 @@
       ]
     }, {
       "description": "Value of the xxz component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_xxz",
       "shape": [],
       "superNames": [
@@ -497,7 +496,7 @@
       ]
     }, {
       "description": "Value of the xzz component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_xzz",
       "shape": [],
       "superNames": [
@@ -505,7 +504,7 @@
       ]
     }, {
       "description": "Value of the yzz component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_yzz",
       "shape": [],
       "superNames": [
@@ -513,7 +512,7 @@
       ]
     }, {
       "description": "Value of the yyz component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_yyz",
       "shape": [],
       "superNames": [
@@ -521,7 +520,7 @@
       ]
     }, {
       "description": "Value of the xyz component of the octapole moment (Debye-Ang**2).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "octapole_moment_xyz",
       "shape": [],
       "superNames": [
@@ -529,7 +528,7 @@
       ]
     }, {
       "description": "Value of the xxxx component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_xxxx",
       "shape": [],
       "superNames": [
@@ -537,7 +536,7 @@
       ]
     }, {
       "description": "Value of the yyyy component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_yyyy",
       "shape": [],
       "superNames": [
@@ -545,7 +544,7 @@
       ]
     }, {
       "description": "Value of the zzzz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_zzzz",
       "shape": [],
       "superNames": [
@@ -553,7 +552,7 @@
       ]
     }, {
       "description": "Value of the xxxy component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_xxxy",
       "shape": [],
       "superNames": [
@@ -561,7 +560,7 @@
       ]
     }, {
       "description": "Value of the xxxz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_xxxz",
       "shape": [],
       "superNames": [
@@ -569,7 +568,7 @@
       ]
     }, {
       "description": "Value of the yyyx component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_yyyx",
       "shape": [],
       "superNames": [
@@ -577,7 +576,7 @@
       ]
     }, {
       "description": "Value of the yyyz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_yyyz",
       "shape": [],
       "superNames": [
@@ -585,7 +584,7 @@
       ]
     }, {
       "description": "Value of the zzzx component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_zzzx",
       "shape": [],
       "superNames": [
@@ -593,7 +592,7 @@
       ]
     }, {
       "description": "Value of the zzzy component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_zzzy",
       "shape": [],
       "superNames": [
@@ -601,7 +600,7 @@
       ]
     }, {
       "description": "Value of the xxyy component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_xxyy",
       "shape": [],
       "superNames": [
@@ -609,7 +608,7 @@
       ]
     }, {
       "description": "Value of the xxzz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_xxzz",
       "shape": [],
       "superNames": [
@@ -617,7 +616,7 @@
       ]
     }, {
       "description": "Value of the yyzz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_yyzz",
       "shape": [],
       "superNames": [
@@ -625,7 +624,7 @@
       ]
     }, {
       "description": "Value of the xxyz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_xxyz",
       "shape": [],
       "superNames": [
@@ -633,7 +632,7 @@
       ]
     }, {
       "description": "Value of the yyxz component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_yyxz",
       "shape": [],
       "superNames": [
@@ -641,7 +640,7 @@
       ]
     }, {
       "description": "Value of the zzxy component of the hexadecapole moment (Debye-Ang**3).",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "hexadecapole_moment_zzxy",
       "shape": [],
       "superNames": [
@@ -701,7 +700,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "section for the values of the frequencies in cm-1",
+      "description": "section for the values of the frequencies, reduced masses and normal mode vectors",
       "kindStr": "type_section",
       "name": "x_gaussian_section_frequencies",
       "superNames": [
@@ -711,7 +710,6 @@
       "description": "values of frequencies, in cm-1",
       "dtypeStr": "C",
       "name": "x_gaussian_frequency_values",
-      "repeats": true,
       "shape": [],
       "superNames": [
         "x_gaussian_section_frequencies"
@@ -720,11 +718,151 @@
       "description": "values of frequencies, in cm-1",
       "dtypeStr": "f",
       "name": "x_gaussian_frequencies",
-      "shape": [ 
-          "number_of_freqs"
-              ],
+      "shape": [], 
       "superNames": [
         "x_gaussian_section_frequencies"
+      ]
+    }, {
+      "description": "values of normal mode reduced masses",
+      "dtypeStr": "C",
+      "name": "x_gaussian_reduced_masses",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_frequencies"
+      ]
+    }, {
+      "description": "values of normal mode reduced masses",
+      "dtypeStr": "f",
+      "name": "x_gaussian_red_masses",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_frequencies"
+      ]
+    }, {
+      "description": "normal mode vectors",
+      "dtypeStr": "C",
+      "name": "x_gaussian_normal_modes",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_frequencies"
+      ]
+    }, {
+      "description": "normal mode vectors",
+      "dtypeStr": "f",
+      "name": "x_gaussian_normal_mode_values",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_frequencies"
+      ]
+    }, {
+      "description": "section for thermochemical quantities",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_thermochem",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Value of temperature for thermochemical values",
+      "dtypeStr": "f",
+      "name": "x_gaussian_temperature",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Value of pressure for thermochemical values",
+      "dtypeStr": "f",
+      "name": "x_gaussian_pressure",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "X component of moment of inertia",
+      "dtypeStr": "f",
+      "name": "x_gaussian_moment_of_inertia_X",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Y component of moment of inertia",
+      "dtypeStr": "f",
+      "name": "x_gaussian_moment_of_inertia_Y",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Z component of moment of inertia",
+      "dtypeStr": "f",
+      "name": "x_gaussian_moment_of_inertia_Z",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Values of moments of inertia",
+      "dtypeStr": "f",
+      "name": "x_gaussian_moments",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Value of zero-point energy",
+      "dtypeStr": "f",
+      "name": "x_gaussian_zero_point_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Value of thermal correction to total energy",
+      "dtypeStr": "f",
+      "name": "x_gaussian_thermal_correction_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Value of thermal correction to enthalpy",
+      "dtypeStr": "f",
+      "name": "x_gaussian_thermal_correction_enthalpy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "Value of thermal correction to Gibbs free energy",
+      "dtypeStr": "f",
+      "name": "x_gaussian_thermal_correction_free_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_thermochem"
+      ]
+    }, {
+      "description": "section for force constant matrix in Cartesians. Units are mdyne.Angstrom",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_force_constant_matrix",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Force constant matrix elements",
+      "dtypeStr": "C",
+      "name": "x_gaussian_force_constants",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_force_constant_matrix"
+      ]
+    }, {
+      "description": "Force constant matrix element values",
+      "dtypeStr": "f",
+      "name": "x_gaussian_force_constant_values",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_force_constant_matrix"
       ]
     }, {
       "description": "section for the symmetry of the MOs",
