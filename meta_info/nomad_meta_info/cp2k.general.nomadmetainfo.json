@@ -41,7 +41,7 @@
       "name": "x_cp2k_basis_set_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "The number of Cartesian basis functions.",
@@ -57,7 +57,7 @@
       "name": "x_cp2k_coordinate_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "Self-consistent electronic kinetic energy calculated with Quickstep",
@@ -115,7 +115,7 @@
       "name": "x_cp2k_geminal_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "The name of the CP2K input file that produced this calculation.",
@@ -123,7 +123,7 @@
       "name": "x_cp2k_input_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_program_information"
       ]
     }, {
       "description": "Maximum angular momentum of the local part of the GTH pseudopotential.",
@@ -139,7 +139,7 @@
       "name": "x_cp2k_mm_potential_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "Maximum angular momentum of the non-local part of the GTH pseudopotential.",
@@ -292,7 +292,7 @@
       "name": "x_cp2k_potential_filename",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_filenames"
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "The number of primitive Cartesian functions.",
@@ -311,22 +311,6 @@
         "x_cp2k_section_quickstep_calculation"
       ]
     }, {
-      "description": "The date when this run was started.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_run_start_date",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_startinformation"
-      ]
-    }, {
-      "description": "The time when this run was started.",
-      "dtypeStr": "C",
-      "name": "x_cp2k_run_start_time",
-      "shape": [],
-      "superNames": [
-        "x_cp2k_section_startinformation"
-      ]
-    }, {
       "description": "The DBCSR (Distributed Block Compressed Sparse Row) information.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_dbcsr",
@@ -334,11 +318,43 @@
         "settings_run"
       ]
     }, {
-      "description": "Information about the ancillary files that are taken as input or that are output by this calculation.",
+      "description": "Global settings for this calculation.",
       "kindStr": "type_section",
-      "name": "x_cp2k_section_filenames",
+      "name": "x_cp2k_section_global_settings",
       "superNames": [
-        "section_run"
+        "settings_run"
+      ]
+    }, {
+      "description": "The method name for this run.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_method_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
+      ]
+    }, {
+      "description": "The name of the preferred FFT library.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_preferred_fft_library",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
+      ]
+    }, {
+      "description": "The name of the preferred diagonalization library.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_preferred_diagonalization_library",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
+      ]
+    }, {
+      "description": "The run type for this calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_run_type",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_global_settings"
       ]
     }, {
       "description": "Information for the energy re-evaluation at the end of an optimization procedure.",
@@ -366,23 +382,29 @@
       "kindStr": "type_section",
       "name": "x_cp2k_section_maximum_angular_momentum",
       "superNames": [
-        "section_run"
+        "x_cp2k_section_quickstep_settings"
       ]
     }, {
       "description": "Contains information about the software version used for this run.",
       "kindStr": "type_section",
-      "name": "x_cp2k_section_programinformation",
+      "name": "x_cp2k_section_program_information",
       "superNames": [
         "program_info"
+      ]
+    }, {
+      "description": "The time when this program was compiled.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_program_compilation_datetime",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_program_information"
       ]
     }, {
       "description": "Section for a CP2K QuickStep calculation.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_quickstep_calculation",
       "superNames": [
-        "section_single_configuration_calculation",
-        "x_cp2k_section_geometry_optimization_energy_reevaluation",
-        "x_cp2k_section_md_step"
+        "section_run"
       ]
     }, {
       "description": "Section for a CP2K QuickStep SCF iteration.",
@@ -399,6 +421,46 @@
         "program_info"
       ]
     }, {
+      "description": "The starting time for this run.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_time",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The name of the host machine this calculation started on.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_host",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The name of the user that started this calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_user",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The process id for this run.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_start_id",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "The path where this calculation started.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_start_path",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_startinformation"
+      ]
+    }, {
       "description": "Section for stress tensor information.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_stress_tensor",
@@ -410,7 +472,7 @@
       "kindStr": "type_section",
       "name": "x_cp2k_section_total_numbers",
       "superNames": [
-        "section_run"
+        "x_cp2k_section_quickstep_settings"
       ]
     }, {
       "description": "The number of shell sets in the calculation.",
@@ -446,7 +508,7 @@
       ],
       "unit": "Pa**3"
     }, {
-      "description": "The eigenvalues of the stress tensor from biggest to lowest.",
+      "description": "The eigenvalues of the stress tensor.",
       "dtypeStr": "f",
       "name": "x_cp2k_stress_tensor_eigenvalues",
       "shape": [
@@ -457,7 +519,7 @@
       ],
       "unit": "Pa"
     }, {
-      "description": "The eigenvectors of the stress tensor. The vector correponding to the ith eigenvalue is placed as the ith column of the matrix.",
+      "description": "The eigenvectors of the stress tensor.",
       "dtypeStr": "f",
       "name": "x_cp2k_stress_tensor_eigenvectors",
       "shape": [
@@ -494,7 +556,7 @@
       "name": "x_cp2k_svn_revision",
       "shape": [],
       "superNames": [
-        "x_cp2k_section_programinformation"
+        "x_cp2k_section_program_information"
       ]
     }, {
       "description": "The ensemble type in molecular dynamics.",
@@ -914,6 +976,210 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_md_settings"
+      ]
+    }, {
+      "description": "DBCSR Multiplication driver",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_multiplication_driver",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "DBCSR Multrec recursion limit",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_multrec_recursion_limit",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "DBCSR Multiplication stack size.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_multiplication_stack_size",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "DBCSR Multiplication size of stacks.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_multiplication_size_stacks",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if subcommunicators are used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_subcommunicators",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if MPI combined types are used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_mpi_combined_types",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if MPI memory allocation is used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_mpi_memory_allocation",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Boolean indicating if communication thread is used.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_dbcsr_use_communication_thread",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Load of the communication thread.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_dbcsr_communication_thread_load",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_dbcsr"
+      ]
+    }, {
+      "description": "Quickstep settings.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_quickstep_settings",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Information about all the atomic kinds in this Quickstep calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_atomic_kinds",
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
+      ]
+    }, {
+      "description": "Information one atomic kind.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_atomic_kind",
+      "superNames": [
+        "x_cp2k_section_atomic_kinds"
+      ]
+    }, {
+      "description": "The atomic kind number. For each element there may be multiple kinds specified. This number differentiates them. Not the atomic number.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_kind_number",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "The element symbol for this atomic kind.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_kind_element_symbol",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "The number of atoms with this kind.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_kind_number_of_atoms",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "Description of the basis set used for this kind.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_kind_basis_set",
+      "superNames": [
+        "x_cp2k_section_atomic_kind"
+      ]
+    }, {
+      "description": "The name of the orbital basis set used for this kind.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_kind_basis_set_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of orbital shell sets.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_orbital_shell_sets",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of orbital shells.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_orbital_shells",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of primitive Cartesian functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_primitive_cartesian_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of Cartesian basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_cartesian_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Number of spherical basis functions.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_number_of_spherical_basis_functions",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "Norm type.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_basis_set_norm_type",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_kind_basis_set"
+      ]
+    }, {
+      "description": "The plane-wave cutoff for the auxiliary basis.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_planewave_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
+      ]
+    }, {
+      "description": "Indicates the restriction applied for the spin (e.g. RKS).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_spin_restriction",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
+      ]
+    }, {
+      "description": "The method used for the Quickstep calculations (GPW, GAPW).",
+      "dtypeStr": "C",
+      "name": "x_cp2k_quickstep_method",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_quickstep_settings"
       ]
     }, {
       "description": "Number of requested time steps in molecular dynamics.",
