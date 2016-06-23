@@ -1307,6 +1307,38 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
+      "description": "contraction coefficients $c_{i j}$ defining the contracted basis functions with respect to *normalized* primitive gaussians. They define the gaussian basis functions as described in section_gaussian_basis_group",
+      "dtypeStr": "f",
+      "name": "gaussian_basis_group_contractions",
+      "shape": [
+        "number_of_gaussian_basis_group_contractions",
+        "number_of_gaussian_basis_group_exponents"
+      ],
+      "superNames": [
+        "section_gaussian_basis_group"
+      ]
+    }, {
+      "description": "Exponents $\\alpha_j$ of a the gaussians defining this basis set $exp(-\\alpha_j r^2)$. One should be careful about the units of the coefficients.",
+      "dtypeStr": "f",
+      "name": "gaussian_basis_group_exponents",
+      "shape": [
+        "number_of_gaussian_basis_group_exponents"
+      ],
+      "superNames": [
+        "section_gaussian_basis_group"
+      ],
+      "units": "1/m^2"
+    }, {
+      "description": "Azimuthal quantum number ($l$) values (of the angular part given by the spherical harmonic $Y_{l m}$ of the various contracted basisfunctions",
+      "dtypeStr": "f",
+      "name": "gaussian_basis_group_ls",
+      "shape": [
+        "number_of_gaussian_basis_group_contractions"
+      ],
+      "superNames": [
+        "section_gaussian_basis_group"
+      ]
+    }, {
       "description": "Specifies whether a geometry optimization is converged.",
       "dtypeStr": "b",
       "name": "geometry_optimization_converged",
@@ -1598,6 +1630,24 @@
       "shape": [],
       "superNames": [
         "section_frame_sequence"
+      ]
+    }, {
+      "description": "The number of different contractions (i.e. resulting basis functions) in a section_gaussian_basis_group",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_gaussian_basis_group_contractions",
+      "shape": [],
+      "superNames": [
+        "section_gaussian_basis_group"
+      ]
+    }, {
+      "description": "The number of different gaussian exponents in a section_gaussian_basis_group",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_gaussian_basis_group_exponents",
+      "shape": [],
+      "superNames": [
+        "section_gaussian_basis_group"
       ]
     }, {
       "description": "Number of $k$ points in the segment of the band structure.",
@@ -2013,6 +2063,13 @@
       "name": "section_frame_sequence",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Describes a group of gaussian contractions. Grouping allows one to calculate the primitive gaussian integrals once for several different linear combinations of them. This defines basis functions with radial part $f_i(r) = r^{l_i} \\sum_{j} c_{i j} A(l_i, \\alpha_j) exp(-\\alpha_j r^2)$ where $A(l_i, \\alpha_j)$ is a the normalization coefficient for primitive gaussians, $\\alpha_j$ is defined in gaussian_basis_group_exponents, $l_i$ in gaussian_basis_group_ls, and $c_{i j}$ in gaussian_basis_group_contractions, whereas the radial part is given by the spherical harmonics $Y_{l m}$. This sections is defined only if the original basis function was using gaussians, and the sequence of radial functions $f_i$ across all section_gaussian_basis_group in section_basis_set_atom_centered should match the one of basis_set_atom_centered_radial_functions",
+      "kindStr": "type_section",
+      "name": "section_gaussian_basis_group",
+      "superNames": [
+        "section_basis_set_atom_centered"
       ]
     }, {
       "description": "Section collecting the information on a $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
