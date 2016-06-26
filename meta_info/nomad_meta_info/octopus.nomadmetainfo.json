@@ -20,5 +20,26 @@
       "repeats": false,
       "shape": [],
       "superNames": [ "section_run" ]
-    } ]
+  }, {
+      "description": "ion-ion interaction energy",
+      "dtypeStr": "f",
+      "name": "x_octopus_info_energy_ion_ion",
+      "repeats": false,
+      "shape": [],
+      "superNames": [ "section_single_configuration_calculation" ]
+  }, {
+      "description": "octopus svn revision",
+      "dtypeStr": "i",
+      "name": "x_octopus_log_svn_revision",
+      "repeats": false,
+      "shape": [],
+      "superNames": [ "section_run" ]
+  }, {
+      "description": "number of scf iterations to converge calculation",
+      "dtypeStr": "i",
+      "name": "x_octopus_info_scf_converged_iterations",
+      "repeats": false,
+      "shape": [],
+      "superNames": [ "section_run" ]
+  } ]
 }
