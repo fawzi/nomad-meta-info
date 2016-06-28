@@ -509,6 +509,15 @@
         "x_octopus_input"
       ]
     }, {
+      "description": "Octopus input parameter \"ConductivityFromForces\" of type \"logical\" in section \"Utilities::oct-conductivity_spectrum\"",
+      "dtypeStr": "b",
+      "name": "x_octopus_input_ConductivityFromForces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
       "description": "Octopus input parameter \"ConductivitySpectrumTimeStepFactor\" of type \"integer\" in section \"Utilities::oct-conductivity_spectrum\"",
       "dtypeStr": "C",
       "name": "x_octopus_input_ConductivitySpectrumTimeStepFactor",
@@ -1616,6 +1625,15 @@
         "x_octopus_input"
       ]
     }, {
+      "description": "Octopus input parameter \"IonsTimeDependentDisplacements\" of type \"block\" in section \"Time-Dependent::Propagation\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_input_IonsTimeDependentDisplacements",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
       "description": "Octopus input parameter \"KdotPCalcSecondOrder\" of type \"logical\" in section \"Linear Response::KdotP\"",
       "dtypeStr": "b",
       "name": "x_octopus_input_KdotPCalcSecondOrder",
@@ -2309,6 +2327,15 @@
         "x_octopus_input"
       ]
     }, {
+      "description": "Octopus input parameter \"MixingPreconditioner\" of type \"logical\" in section \"SCF::Mixing\"",
+      "dtypeStr": "b",
+      "name": "x_octopus_input_MixingPreconditioner",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
       "description": "Octopus input parameter \"MixingScheme\" of type \"integer\" in section \"SCF::Mixing\"",
       "dtypeStr": "C",
       "name": "x_octopus_input_MixingScheme",
@@ -2321,6 +2348,15 @@
       "description": "Octopus input parameter \"Mixing\" of type \"float\" in section \"SCF::Mixing\"",
       "dtypeStr": "f",
       "name": "x_octopus_input_Mixing",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
+      "description": "Octopus input parameter \"MixInterval\" of type \"integer\" in section \"SCF::Mixing\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_input_MixInterval",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -3182,9 +3218,27 @@
         "x_octopus_input"
       ]
     }, {
+      "description": "Octopus input parameter \"PCMQtotTol\" of type \"float\" in section \"Hamiltonian::PCM\"",
+      "dtypeStr": "f",
+      "name": "x_octopus_input_PCMQtotTol",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
       "description": "Octopus input parameter \"PCMRadiusScaling\" of type \"float\" in section \"Hamiltonian::PCM\"",
       "dtypeStr": "f",
       "name": "x_octopus_input_PCMRadiusScaling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
+      "description": "Octopus input parameter \"PCMRenormCharges\" of type \"logical\" in section \"Hamiltonian::PCM\"",
+      "dtypeStr": "b",
+      "name": "x_octopus_input_PCMRenormCharges",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -3320,6 +3374,15 @@
       "description": "Octopus input parameter \"PES_Flux_EnergyGrid\" of type \"block\" in section \"Time-Dependent\"",
       "dtypeStr": "C",
       "name": "x_octopus_input_PES_Flux_EnergyGrid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
+      "description": "Octopus input parameter \"PES_Flux_Gpoint_Upsample\" of type \"integer\" in section \"Time-Dependent::PhotoElectronSpectrum\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_input_PES_Flux_Gpoint_Upsample",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -4586,6 +4649,33 @@
         "x_octopus_input"
       ]
     }, {
+      "description": "Octopus input parameter \"TDFloquetDimension\" of type \"integer\" in section \"Time-Dependent::TD Output\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_input_TDFloquetDimension",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
+      "description": "Octopus input parameter \"TDFloquetFrequency\" of type \"float\" in section \"Time-Dependent::TD Output\"",
+      "dtypeStr": "f",
+      "name": "x_octopus_input_TDFloquetFrequency",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
+      "description": "Octopus input parameter \"TDFloquetSample\" of type \"integer\" in section \"Time-Dependent::TD Output\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_input_TDFloquetSample",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_input"
+      ]
+    }, {
       "description": "Octopus input parameter \"TDFreezeHXC\" of type \"logical\" in section \"Time-Dependent\"",
       "dtypeStr": "b",
       "name": "x_octopus_input_TDFreezeHXC",
@@ -4928,18 +5018,18 @@
         "x_octopus_input"
       ]
     }, {
-      "description": "Octopus input parameter \"Units\" of type \"integer\" in section \"Execution::Units\"",
+      "description": "Octopus input parameter \"UnitsXYZFiles\" of type \"integer\" in section \"Execution::Units\"",
       "dtypeStr": "C",
-      "name": "x_octopus_input_Units",
+      "name": "x_octopus_input_UnitsXYZFiles",
       "repeats": false,
       "shape": [],
       "superNames": [
         "x_octopus_input"
       ]
     }, {
-      "description": "Octopus input parameter \"UnitsXYZFiles\" of type \"integer\" in section \"Execution::Units\"",
+      "description": "Octopus input parameter \"Units\" of type \"integer\" in section \"Execution::Units\"",
       "dtypeStr": "C",
-      "name": "x_octopus_input_UnitsXYZFiles",
+      "name": "x_octopus_input_Units",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -5712,6 +5802,15 @@
       "description": "Octopus parser log entry \"ComplexScaling\" of type \"flag\" in section \"Hamiltonian::ComplexScaling\"",
       "dtypeStr": "C",
       "name": "x_octopus_parserlog_ComplexScaling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
+      "description": "Octopus parser log entry \"ConductivityFromForces\" of type \"logical\" in section \"Utilities::oct-conductivity_spectrum\"",
+      "dtypeStr": "b",
+      "name": "x_octopus_parserlog_ConductivityFromForces",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -6825,6 +6924,15 @@
         "x_octopus_parserlog"
       ]
     }, {
+      "description": "Octopus parser log entry \"IonsTimeDependentDisplacements\" of type \"block\" in section \"Time-Dependent::Propagation\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_parserlog_IonsTimeDependentDisplacements",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
       "description": "Octopus parser log entry \"KdotPCalcSecondOrder\" of type \"logical\" in section \"Linear Response::KdotP\"",
       "dtypeStr": "b",
       "name": "x_octopus_parserlog_KdotPCalcSecondOrder",
@@ -7518,6 +7626,15 @@
         "x_octopus_parserlog"
       ]
     }, {
+      "description": "Octopus parser log entry \"MixingPreconditioner\" of type \"logical\" in section \"SCF::Mixing\"",
+      "dtypeStr": "b",
+      "name": "x_octopus_parserlog_MixingPreconditioner",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
       "description": "Octopus parser log entry \"MixingScheme\" of type \"integer\" in section \"SCF::Mixing\"",
       "dtypeStr": "C",
       "name": "x_octopus_parserlog_MixingScheme",
@@ -7530,6 +7647,15 @@
       "description": "Octopus parser log entry \"Mixing\" of type \"float\" in section \"SCF::Mixing\"",
       "dtypeStr": "f",
       "name": "x_octopus_parserlog_Mixing",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
+      "description": "Octopus parser log entry \"MixInterval\" of type \"integer\" in section \"SCF::Mixing\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_parserlog_MixInterval",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -8391,9 +8517,27 @@
         "x_octopus_parserlog"
       ]
     }, {
+      "description": "Octopus parser log entry \"PCMQtotTol\" of type \"float\" in section \"Hamiltonian::PCM\"",
+      "dtypeStr": "f",
+      "name": "x_octopus_parserlog_PCMQtotTol",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
       "description": "Octopus parser log entry \"PCMRadiusScaling\" of type \"float\" in section \"Hamiltonian::PCM\"",
       "dtypeStr": "f",
       "name": "x_octopus_parserlog_PCMRadiusScaling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
+      "description": "Octopus parser log entry \"PCMRenormCharges\" of type \"logical\" in section \"Hamiltonian::PCM\"",
+      "dtypeStr": "b",
+      "name": "x_octopus_parserlog_PCMRenormCharges",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -8529,6 +8673,15 @@
       "description": "Octopus parser log entry \"PES_Flux_EnergyGrid\" of type \"block\" in section \"Time-Dependent\"",
       "dtypeStr": "C",
       "name": "x_octopus_parserlog_PES_Flux_EnergyGrid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
+      "description": "Octopus parser log entry \"PES_Flux_Gpoint_Upsample\" of type \"integer\" in section \"Time-Dependent::PhotoElectronSpectrum\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_parserlog_PES_Flux_Gpoint_Upsample",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -9795,6 +9948,33 @@
         "x_octopus_parserlog"
       ]
     }, {
+      "description": "Octopus parser log entry \"TDFloquetDimension\" of type \"integer\" in section \"Time-Dependent::TD Output\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_parserlog_TDFloquetDimension",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
+      "description": "Octopus parser log entry \"TDFloquetFrequency\" of type \"float\" in section \"Time-Dependent::TD Output\"",
+      "dtypeStr": "f",
+      "name": "x_octopus_parserlog_TDFloquetFrequency",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
+      "description": "Octopus parser log entry \"TDFloquetSample\" of type \"integer\" in section \"Time-Dependent::TD Output\"",
+      "dtypeStr": "C",
+      "name": "x_octopus_parserlog_TDFloquetSample",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_octopus_parserlog"
+      ]
+    }, {
       "description": "Octopus parser log entry \"TDFreezeHXC\" of type \"logical\" in section \"Time-Dependent\"",
       "dtypeStr": "b",
       "name": "x_octopus_parserlog_TDFreezeHXC",
@@ -10137,18 +10317,18 @@
         "x_octopus_parserlog"
       ]
     }, {
-      "description": "Octopus parser log entry \"Units\" of type \"integer\" in section \"Execution::Units\"",
+      "description": "Octopus parser log entry \"UnitsXYZFiles\" of type \"integer\" in section \"Execution::Units\"",
       "dtypeStr": "C",
-      "name": "x_octopus_parserlog_Units",
+      "name": "x_octopus_parserlog_UnitsXYZFiles",
       "repeats": false,
       "shape": [],
       "superNames": [
         "x_octopus_parserlog"
       ]
     }, {
-      "description": "Octopus parser log entry \"UnitsXYZFiles\" of type \"integer\" in section \"Execution::Units\"",
+      "description": "Octopus parser log entry \"Units\" of type \"integer\" in section \"Execution::Units\"",
       "dtypeStr": "C",
-      "name": "x_octopus_parserlog_UnitsXYZFiles",
+      "name": "x_octopus_parserlog_Units",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -10419,8 +10599,6 @@
       "description": "section describing Octopus inputfile parser log output",
       "kindStr": "type_abstract_document_content",
       "name": "x_octopus_parserlog",
-      "repeats": false,
-      "shape": [],
       "superNames": [
         "section_run"
       ]
