@@ -630,7 +630,9 @@
        "description": "Mulliken_atom_index",
       "dtypeStr": "C",
       "name": "x_onetep_mulliken_atom_index",
-      "shape": [],
+      "shape": [
+         "number_of_atoms"
+        ],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]   
@@ -638,7 +640,9 @@
        "description": "Mulliken_atom kind",
       "dtypeStr": "C",
       "name": "x_onetep_mulliken_atom",
-      "shape": [],
+      "shape": [
+         "number_of_atoms"
+            ],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]   
@@ -665,7 +669,9 @@
        "description": "Mulliken_spin",
       "dtypeStr": "f",
       "name": "x_onetep_spin",
-      "shape": [],
+      "shape": [
+         "number_of_atoms"
+      ],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]     
@@ -689,7 +695,8 @@
        "description": "Mulliken_charges",
       "dtypeStr": "f",
       "name": "x_onetep_mulliken_charge",
-      "shape": [],
+      "shape": [
+       "number_of_atoms"],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]         
