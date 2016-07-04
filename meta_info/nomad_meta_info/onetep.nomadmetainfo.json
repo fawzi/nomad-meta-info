@@ -647,7 +647,9 @@
        "description": "Mulliken_total_contribution",
       "dtypeStr": "f",
       "name": "x_onetep_total_orbital",
-      "shape": [],
+      "shape": [
+        "number_of_atoms"
+      ],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]     
