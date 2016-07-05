@@ -645,8 +645,7 @@
             ],
       "superNames": [
         "x_onetep_section_population_analysis"
-      ]   
-     
+      ]        
     }, {
        "description": "Mulliken_total_contribution",
       "dtypeStr": "f",
@@ -675,7 +674,7 @@
       "superNames": [
         "x_onetep_section_population_analysis"
       ]     
-        }, {
+    }, {
        "description": "Mulliken_spin",
       "dtypeStr": "f",
       "name": "x_onetep_spin_store",
@@ -691,7 +690,7 @@
       "superNames": [
         "x_onetep_section_population_analysis"
       ]       
-     }, {
+    }, {
        "description": "Mulliken_charges",
       "dtypeStr": "f",
       "name": "x_onetep_mulliken_charge",
@@ -1531,6 +1530,94 @@
       "superNames": [
         "x_onetep_section_tddft"
       ] 
+    }, {
+       "description": "Pseudopotential",
+      "dtypeStr": "f",
+      "name": "x_onetep_pseudo_local",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]     
+    }, {
+       "description": "Pseudopotential",
+      "dtypeStr": "f",
+      "name": "x_onetep_pseudo_non_local",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]     
+    }, {
+       "description": "RMS Gradient",
+      "dtypeStr": "f",
+      "name": "x_onetep_scf_rms_gradient",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]     
+    }, {
+       "description": "RMS Gradient",
+      "dtypeStr": "f",
+      "name": "x_onetep_final_rms_gradient",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]     
+    }, {
+       "description": "NGWF iterations",
+      "dtypeStr": "i",
+      "name": "x_onetep_n_ngwf_iterations",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]   
+    }, {
+       "description": "number_of_atoms",
+      "dtypeStr": "i",
+      "name": "x_onetep_number_of_atoms",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]   
+    }, {
+       "description": "number_of_ngwf",
+      "dtypeStr": "i",
+      "name": "x_onetep_number_of_ngwf",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]   
+    }, {
+       "description": "number_of_proj",
+      "dtypeStr": "i",
+      "name": "x_onetep_number_of_projectors",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]   
+    }, {
+       "description": "integrated density",
+      "dtypeStr": "f",
+      "name": "x_onetep_integrated_density",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]    
+    }, {
+       "description": "Dispersion correction to the final SCF energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_dispersion_correction",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]    
+     }, {
+       "description": "Ewald",
+      "dtypeStr": "f",
+      "name": "x_onetep_ewald_correction",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]    
     }, {
       "description": "-",
       "kindStr": "type_section",
