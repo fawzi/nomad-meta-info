@@ -1,0 +1,42 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the CPMD parser, all names are expected to start with x_cpmd_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "CPMD run start time and date",
+      "dtypeStr": "C",
+      "name": "x_cpmd_start_datetime",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "CPMD input file name.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_input_file",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The user who launched this calculation.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_run_user_name",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The host on which this calculation was made on.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_run_host_name",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }]
+}
