@@ -189,7 +189,7 @@
       "name": "x_gaussian_energy_total_scf_iteration",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_scf_iteration"
+        "section_scf_iteration"
       ],
       "units": "J"
     },  {
@@ -198,7 +198,7 @@
       "name": "x_gaussian_delta_energy_total_scf_iteration",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_scf_iteration"
+        "section_scf_iteration"
       ],
       "units": "J"
     }, {
@@ -207,7 +207,7 @@
       "name": "x_gaussian_energy_total_scf_converged",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -216,35 +216,20 @@
       "name": "x_gaussian_single_configuration_calculation_converged",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
       ]
-    }, {
-      "description": "Every gaussian_section_scf_iteration section represents a self-consistent field (SCF) iteration.",
-      "kindStr": "type_section",
-      "name": "x_gaussian_section_scf_iteration",
-      "shape": [],   
-      "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
-       ]
     }, {
       "description": "Check for SCF convergence and writes the total energy value to backend",
       "kindStr": "type_section",
       "name": "x_gaussian_section_total_scf_one_geometry",
       "shape": [],  
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
        ]
     }, {
       "description": "section that contains the execution times of the run",
       "kindStr": "type_section",
       "name": "x_gaussian_section_times",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Every section_single_configuration_calculation contains the values computed during a *single configuration calculation*, i.e., a calculation performed on a given configuration of the system (as defined in section_system) and a given computational method (e.g., exchange-correlation method, basis sets, as defined in section_method).",
-      "kindStr": "type_section",
-      "name": "x_gaussian_section_single_configuration_calculation",
       "superNames": [
         "section_run"
       ]
@@ -261,7 +246,7 @@
       "name": "x_gaussian_total_charge",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_system"
+        "section_system"
       ]
     }, {
       "description": "Number of atoms of the system.",
@@ -269,7 +254,7 @@
       "name": "x_gaussian_natoms",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_system"
+        "section_system"
       ]
     }, {
       "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value. This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
@@ -277,7 +262,7 @@
       "name": "x_gaussian_spin_target_multiplicity",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_system"
+        "section_system"
       ]
     }, {
       "description": "Section containing the SCF converged value of $S^2$, and the value resulting from the annihilation of the first spin contaminant.",
@@ -285,7 +270,7 @@
       "name": "x_gaussian_section_real_spin_squared",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Real value of spin squared.",
@@ -346,7 +331,7 @@
       "shape": [],
       "name": "x_gaussian_section_atom_forces",
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Some forces on the atoms (i.e. minus derivatives of some energy with respect to the atom position).",
@@ -355,7 +340,7 @@
       "name": "x_gaussian_atom_forces_type",
       "repeats": true,
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Information on the self-consistent field (SCF) procedure.",
@@ -364,7 +349,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Value of the total charge of the system (in electronic units).",
@@ -689,7 +674,7 @@
       "kindStr": "type_section",
       "name": "x_gaussian_section_molecular_multipoles",
       "superNames": [
-        "x_gaussian_section_single_configuration_calculation"
+        "section_single_configuration_calculation"
     ]
     }, {
       "description": "Specifies whether a geometry optimization is converged.",
@@ -1024,6 +1009,44 @@
       "shape": [],
       "superNames": [
         "x_gaussian_section_atomic_masses"
+      ]
+    }, {
+      "description": "Section containing electronic structure method.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_elstruc_method",
+      "superNames": [
+        "settings_elstruc_method"
+      ]
+    }, {
+      "description": "Name of electronic structure method.",
+      "dtypeStr": "C",
+      "name": "x_gaussian_elstruc_method_name",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_elstruc_method"
+      ]
+    }, {
+      "description": "Parameters connected with the definition of the electronic structure method.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_elstruc_method",
+      "superNames": [
+        "settings_elstruc"
+      ]
+    }, {
+      "description": "Parameters connected with the definition of the electronic structure *method*. *Method* can include, e.g., post Hartree-Fock methods",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_elstruc",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "electronic structure method, basis set, etc.",
+      "dtypeStr": "C",
+      "name": "x_gaussian_settings",
+      "shape": [],
+      "superNames": [
+        "section_method"
       ]
     }
 ]
