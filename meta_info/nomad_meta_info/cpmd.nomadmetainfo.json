@@ -12,15 +12,30 @@
       "name": "x_cpmd_start_datetime",
       "shape": [],
       "superNames": [
+        "x_cpmd_section_start_information"
+      ]
+    }, {
+      "description": "Contains information about the starting conditions for this run",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_start_information",
+      "superNames": [
         "section_run"
       ]
     }, {
       "description": "CPMD input file name.",
       "dtypeStr": "C",
-      "name": "x_cpmd_input_file",
+      "name": "x_cpmd_input_filename",
       "shape": [],
       "superNames": [
-        "section_run"
+        "x_cpmd_section_start_information"
+      ]
+    }, {
+      "description": "The process id for this calculation.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_process_id",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_start_information"
       ]
     }, {
       "description": "The user who launched this calculation.",
@@ -28,13 +43,203 @@
       "name": "x_cpmd_run_user_name",
       "shape": [],
       "superNames": [
-        "section_run"
+        "x_cpmd_section_start_information"
       ]
     }, {
       "description": "The host on which this calculation was made on.",
       "dtypeStr": "C",
       "name": "x_cpmd_run_host_name",
       "shape": [],
+      "superNames": [
+        "x_cpmd_section_start_information"
+      ]
+    }, {
+      "description": "Contains information about the run type.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_run_type_information",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Contains information about the exchange-correlation functional.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_xc_information",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Contains information about the system.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_system_information",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Contains information about the pseudopotentials.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_pseudopotential_information",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Contains information about the supercell.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_supercell",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "The symmetry of the cell.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_cell_symmetry",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "The cell lattice constant.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_cell_lattice_constant",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "The cell volume.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_cell_volume",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "The cell dimension.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_cell_dimension",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Lattice vector A1",
+      "dtypeStr": "C",
+      "name": "x_cpmd_lattice_vector_A1",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Lattice vector A2",
+      "dtypeStr": "C",
+      "name": "x_cpmd_lattice_vector_A2",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Lattice vector A3",
+      "dtypeStr": "C",
+      "name": "x_cpmd_lattice_vector_A3",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Reciprocal lattice vector B1",
+      "dtypeStr": "C",
+      "name": "x_cpmd_reciprocal_lattice_vector_B1",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Reciprocal lattice vector B2",
+      "dtypeStr": "C",
+      "name": "x_cpmd_reciprocal_lattice_vector_B2",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Reciprocal lattice vector B3",
+      "dtypeStr": "C",
+      "name": "x_cpmd_reciprocal_lattice_vector_B3",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Number of points in the real space mesh.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_real_space_mesh",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Place wave cutoff energy for wave function.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_wave_function_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Place wave cutoff energy for density.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_density_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Number of plane waves for density cutoff.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_number_of_planewaves_density",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Number of plane waves for wave_function cutoff.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_number_of_planewaves_wave_function",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_supercell"
+      ]
+    }, {
+      "description": "Contains information about the wave function initialization",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_wave_function_initialization",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Contains information about the self-consistent field iteration.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_scf",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "The final results after a single point calculation.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_final_results",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Contains information about the timings.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_timing",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Contains information printed at the end of a calculation.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_end_information",
       "superNames": [
         "section_run"
       ]
