@@ -82,6 +82,68 @@
         "section_method"
       ]
     }, {
+      "description": "Contains information about the atomic kinds present in the calculation.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_atom_kinds",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Contains information about one atomic kind.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_atom_kind",
+      "superNames": [
+        "x_cpmd_section_atom_kinds"
+      ]
+    }, {
+      "description": "The label of the atomic kind.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_atom_kind_label",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_atom_kind"
+      ]
+    }, {
+      "description": "The mass of the atomic kind.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_atom_kind_mass",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_atom_kind"
+      ]
+    }, {
+      "description": "The width of the ionic charge distribution (RAGGIO) of the atomic kind.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_atom_kind_raggio",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_atom_kind"
+      ]
+    }, {
+      "description": "The nonlinear core correction (NLCC) of the atomic kind.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_atom_kind_nlcc",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_atom_kind"
+      ]
+    }, {
+      "description": "The angular part of the pseudopotential for the atomic kind.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_atom_kind_pseudopotential_l",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_atom_kind"
+      ]
+    }, {
+      "description": "The type of the pseudopotential for the atomic kind.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_atom_kind_pseudopotential_type",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_atom_kind"
+      ]
+    }, {
       "description": "Contains information about the supercell.",
       "kindStr": "type_section",
       "name": "x_cpmd_section_supercell",
@@ -216,11 +278,69 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Contains information about the self-consistent field iteration.",
+      "description": "Contains information about self-consistent field calculation",
       "kindStr": "type_section",
       "name": "x_cpmd_section_scf",
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Contains information about the self-consistent field iteration.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_scf_iteration",
+      "superNames": [
+        "x_cpmd_section_scf"
+      ]
+    }, {
+      "description": "The scf step number.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_scf_nfi",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_scf_iteration"
+      ]
+    }, {
+      "description": "GEMAX during SCF step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_scf_gemax",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_scf_iteration"
+      ]
+    }, {
+      "description": "CNORM during SCF step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_scf_cnorm",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_scf_iteration"
+      ]
+    }, {
+      "description": "The total energy (ETOT) during SCF step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_scf_etot",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cpmd_section_scf_iteration"
+      ]
+    }, {
+      "description": "The difference in total energy to the previous SCF energy (DETOT).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_scf_detot",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cpmd_section_scf_iteration"
+      ]
+    }, {
+      "description": "The CPU time used during SCF step (TCPU).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_scf_tcpu",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cpmd_section_scf_iteration"
       ]
     }, {
       "description": "The final results after a single point calculation.",
