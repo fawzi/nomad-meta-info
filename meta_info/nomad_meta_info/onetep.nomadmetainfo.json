@@ -43,6 +43,14 @@
       "superNames": [
         "section_system"
       ]  
+     }, {
+      "description": "kernel cutoff",
+      "dtypeStr": "f",
+      "name": "x_onetep_kernel_cutoff",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_cell_dependent"
+      ]  
     }, {
       "description": "Storing atomic positions in fractional coordinates",
       "dtypeStr": "f",
@@ -1571,7 +1579,7 @@
         "section_single_configuration_calculation"
       ]   
     }, {
-       "description": "number_of_atoms",
+      "description": "number_of_atoms",
       "dtypeStr": "i",
       "name": "x_onetep_number_of_atoms",
       "shape": [],
