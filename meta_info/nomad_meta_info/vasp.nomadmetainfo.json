@@ -382,6 +382,7 @@
       "description": "max nr. of electronic steps. Value stored in incar.",
       "dtypeStr": "i",
       "name": "x_vasp_incar_NELM",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_vasp_incar_param"
@@ -973,6 +974,7 @@
       "description": "max nr. of electronic steps. Value prinded out after evaluating the input.",
       "dtypeStr": "i",
       "name": "x_vasp_incarOut_NELM",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_vasp_incarOut_param"
