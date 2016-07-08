@@ -668,7 +668,9 @@
        "description": "Mulliken_total_contribution",
       "dtypeStr": "f",
       "name": "x_onetep_total_orbital_store",
-      "shape": [],
+      "shape": [
+        "number_of_atoms"
+      ],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]   
@@ -694,7 +696,9 @@
        "description": "Mulliken_charges",
       "dtypeStr": "f",
       "name": "x_onetep_mulliken_charge_store",
-      "shape": [],
+      "shape": [
+         "number_of_atoms"
+        ],
       "superNames": [
         "x_onetep_section_population_analysis"
       ]       
@@ -1980,6 +1984,38 @@
       "description": "Temporary storing atom mass",
       "dtypeStr": "C",
       "name": "x_onetep_store_atom_mass",
+      "shape": [],
+      "superNames": [
+        "section_topology"
+      ]
+    }, {
+      "description": "number ngwf per atom",
+      "dtypeStr": "i",
+      "name": "x_onetep_n_ngwf_atom_store",
+      "shape": [],
+      "superNames": [
+        "section_topology"
+      ]
+    }, {
+      "description": "radius ngwf",
+      "dtypeStr": "f",
+      "name": "x_onetep_ngwf_radius",
+      "shape": [],
+      "superNames": [
+        "section_topology"
+      ]
+    }, {
+      "description": "number ngwf per atom",
+      "dtypeStr": "i",
+      "name": "x_onetep_n_ngwf_atom",
+      "shape": [],
+      "superNames": [
+        "section_topology"
+      ]
+    }, {
+      "description": "radius ngwf",
+      "dtypeStr": "f",
+      "name": "x_onetep_ngwf_radius_store",
       "shape": [],
       "superNames": [
         "section_topology"
