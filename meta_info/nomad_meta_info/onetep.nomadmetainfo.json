@@ -2001,7 +2001,7 @@
       "description": "radius ngwf",
       "dtypeStr": "f",
       "name": "x_onetep_ngwf_radius",
-    
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_topology"
@@ -2010,7 +2010,7 @@
       "description": "number ngwf per atom",
       "dtypeStr": "i",
       "name": "x_onetep_n_ngwf_atom",
- 
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_topology"
