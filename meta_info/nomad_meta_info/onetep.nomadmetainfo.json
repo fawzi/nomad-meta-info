@@ -1562,6 +1562,7 @@
        "description": "RMS Gradient",
       "dtypeStr": "f",
       "name": "x_onetep_scf_rms_gradient",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -1570,6 +1571,7 @@
        "description": "RMS Gradient",
       "dtypeStr": "f",
       "name": "x_onetep_final_rms_gradient",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
