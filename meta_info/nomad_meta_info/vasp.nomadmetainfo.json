@@ -225,14 +225,6 @@
         "x_vasp_incar_param"
       ]
     }, {
-      "description": "Switches on the L(S)DA+U approach. Value stored in incar.",
-      "dtypeStr": "b",
-      "name": "x_vasp_incar_LDAU",
-      "shape": [],
-      "superNames": [
-        "x_vasp_incar_param"
-      ]
-    }, {
       "description": "create CHGCAR. Value stored in incar.",
       "dtypeStr": "b",
       "name": "x_vasp_incar_LCHARG",
@@ -244,6 +236,14 @@
       "description": "Harris-correction to forces. Value stored in incar.",
       "dtypeStr": "b",
       "name": "x_vasp_incar_LCORR",
+      "shape": [],
+      "superNames": [
+        "x_vasp_incar_param"
+      ]
+    }, {
+      "description": "Switches on the L(S)DA+U approach. Value stored in incar.",
+      "dtypeStr": "b",
+      "name": "x_vasp_incar_LDAU",
       "shape": [],
       "superNames": [
         "x_vasp_incar_param"
@@ -382,6 +382,7 @@
       "description": "max nr. of electronic steps. Value stored in incar.",
       "dtypeStr": "i",
       "name": "x_vasp_incar_NELM",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_vasp_incar_param"
@@ -816,14 +817,6 @@
         "x_vasp_incarOut_param"
       ]
     }, {
-      "description": "Switches on the L(S)DA+U approach. Value printed out after evaluating the input.",
-      "dtypeStr": "b",
-      "name": "x_vasp_incarOut_LDAU",
-      "shape": [],
-      "superNames": [
-        "x_vasp_incarOut_param"
-      ]
-    }, {
       "description": "create CHGCAR. Value prinded out after evaluating the input.",
       "dtypeStr": "b",
       "name": "x_vasp_incarOut_LCHARG",
@@ -835,6 +828,14 @@
       "description": "Harris-correction to forces. Value prinded out after evaluating the input.",
       "dtypeStr": "b",
       "name": "x_vasp_incarOut_LCORR",
+      "shape": [],
+      "superNames": [
+        "x_vasp_incarOut_param"
+      ]
+    }, {
+      "description": "Switches on the L(S)DA+U approach. Value printed out after evaluating the input.",
+      "dtypeStr": "b",
+      "name": "x_vasp_incarOut_LDAU",
       "shape": [],
       "superNames": [
         "x_vasp_incarOut_param"
@@ -973,6 +974,7 @@
       "description": "max nr. of electronic steps. Value prinded out after evaluating the input.",
       "dtypeStr": "i",
       "name": "x_vasp_incarOut_NELM",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_vasp_incarOut_param"

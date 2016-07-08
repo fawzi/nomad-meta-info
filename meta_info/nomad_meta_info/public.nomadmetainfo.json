@@ -375,12 +375,12 @@
       ],
       "units": "J"
     }, {
-      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It must match one of the strings given in any of basis_set_name.",
+      "description": "String identifying in an unique way the basis set used for the final wavefunctions calculated with XC_method. It might identify a class of basis sets, often matches one of the strings given in any of basis_set_name.",
       "dtypeStr": "C",
       "name": "basis_set",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_method"
       ]
     }, {
       "derived": true,
