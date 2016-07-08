@@ -1992,6 +1992,7 @@
       "description": "number ngwf per atom",
       "dtypeStr": "i",
       "name": "x_onetep_n_ngwf_atom_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_topology"
@@ -2000,6 +2001,7 @@
       "description": "radius ngwf",
       "dtypeStr": "f",
       "name": "x_onetep_ngwf_radius",
+    
       "shape": [],
       "superNames": [
         "section_topology"
@@ -2008,6 +2010,7 @@
       "description": "number ngwf per atom",
       "dtypeStr": "i",
       "name": "x_onetep_n_ngwf_atom",
+ 
       "shape": [],
       "superNames": [
         "section_topology"
@@ -2016,6 +2019,7 @@
       "description": "radius ngwf",
       "dtypeStr": "f",
       "name": "x_onetep_ngwf_radius_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_topology"
