@@ -475,7 +475,7 @@
         "x_crystal_section_startinformation"
       ]
     }, {
-      "description": "Title.",
+      "description": "Title of the runcry(14) task.",
       "dtypeStr": "C",
       "name": "x_crystal_run_title",
       "shape": [],
@@ -883,7 +883,7 @@
         "section_system"
       ]
     }, {
-      "description": "Density g/cm3.",
+      "description": "Crystal density in g/cm3.",
       "dtypeStr": "f",
       "name": "x_crystal_density",
       "shape": [],
@@ -1459,7 +1459,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "N. OF ATOMS PER CELL",
       "dtypeStr": "i",
       "name": "x_crystal_info_number_of_atoms",
       "shape": [],
@@ -1467,7 +1467,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "NUMBER OF SHELLS",
       "dtypeStr": "i",
       "name": "x_crystal_info_number_of_shells",
       "shape": [],
@@ -1475,7 +1475,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "NUMBER OF AO (Atomic orbitals)",
       "dtypeStr": "i",
       "name": "x_crystal_info_number_of_orbitals",
       "shape": [],
@@ -1483,7 +1483,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "N. OF ELECTRONS PER CELL",
       "dtypeStr": "i",
       "name": "x_crystal_info_number_of_electrons",
       "shape": [],
@@ -1491,7 +1491,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "CORE ELECTRONS PER CELL",
       "dtypeStr": "i",
       "name": "x_crystal_info_number_of_core_electrons",
       "shape": [],
@@ -1499,7 +1499,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "N. OF SYMMETRY OPERATORS",
       "dtypeStr": "i",
       "name": "x_crystal_info_number_of_symmops",
       "shape": [],
@@ -1507,7 +1507,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "POLE ORDER IN MONO ZONE",
       "dtypeStr": "i",
       "name": "x_crystal_info_pole_order",
       "shape": [],
@@ -1515,7 +1515,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Tolerance T1, power of 10",
+      "description": "COULOMB OVERLAP TOL         (T1) 10**   -6. (Tolerance T1, power of 10)",
       "dtypeStr": "f",
       "name": "x_crystal_info_tol_coulomb_overlap",
       "shape": [],
@@ -1523,7 +1523,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Tolerance T2, power of 10",
+      "description": "COULOMB PENETRATION TOL     (T2) 10**   -6. (Tolerance T2, power of 10)",
       "dtypeStr": "f",
       "name": "x_crystal_info_tol_coulomb_penetration",
       "shape": [],
@@ -1531,7 +1531,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Tolerance T3, power of 10",
+      "description": "EXCHANGE OVERLAP TOL        (T3) 10**   -6. (Tolerance T3, power of 10)",
       "dtypeStr": "f",
       "name": "x_crystal_info_tol_exchange_overlap",
       "shape": [],
@@ -1539,7 +1539,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Tolerance T4, power of 10",
+      "description": "EXCHANGE PSEUDO OVP (F(G))  (T4) 10**   -6. (Tolerance T4, power of 10)",
       "dtypeStr": "f",
       "name": "x_crystal_info_tol_pseudo_overlap_f",
       "shape": [],
@@ -1547,7 +1547,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Tolerance T5, power of 10",
+      "description": "EXCHANGE PSEUDO OVP (P(G))  (T5) 10**  -12. (Tolerance T5, power of 10)",
       "dtypeStr": "f",
       "name": "x_crystal_info_tol_pseudo_overlap_p",
       "shape": [],
@@ -1555,7 +1555,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Type of calculation",
+      "description": "TYPE OF CALCULATION :  RESTRICTED CLOSED SHELL",
       "dtypeStr": "C",
       "name": "x_crystal_info_type_of_calculation",
       "shape": [],
@@ -1563,7 +1563,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Type of calculation 2",
+      "description": "2nd line of TYPE OF CALCULATION: e.g. HARTREE-FOCK HAMILTONIAN",
       "dtypeStr": "C",
       "name": "x_crystal_info_type_of_calculation2",
       "shape": [],
@@ -1571,7 +1571,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "IS1",
+      "description": "CAPPA:IS1 16;IS2 16;IS3 16; K PTS MONK NET 145; SYMMOPS:K SPACE  48;G SPACE  48. (mentioned after the basis set)",
       "dtypeStr": "i",
       "name": "x_crystal_info_is1",
       "shape": [],
@@ -1579,7 +1579,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "IS2",
+      "description": "CAPPA:IS1 16;IS2 16;IS3 16; K PTS MONK NET 145; SYMMOPS:K SPACE  48;G SPACE  48. (mentioned after the basis set)",
       "dtypeStr": "i",
       "name": "x_crystal_info_is2",
       "shape": [],
@@ -1587,7 +1587,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "IS3",
+      "description": "CAPPA:IS1 16;IS2 16;IS3 16; K PTS MONK NET 145; SYMMOPS:K SPACE  48;G SPACE  48. (mentioned after the basis set)",
       "dtypeStr": "i",
       "name": "x_crystal_info_is3",
       "shape": [],
@@ -1595,7 +1595,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "K points monk net.",
+      "description": "CAPPA:IS1 16;IS2 16;IS3 16; K PTS MONK NET 145; SYMMOPS:K SPACE  48;G SPACE  48. (mentioned after the basis set)",
       "dtypeStr": "i",
       "name": "x_crystal_info_k_pts_monk_net",
       "shape": [],
@@ -1603,7 +1603,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Symmetry operations in K space",
+      "description": "CAPPA:IS1 16;IS2 16;IS3 16; K PTS MONK NET 145; SYMMOPS:K SPACE  48;G SPACE  48. (mentioned after the basis set)",
       "dtypeStr": "i",
       "name": "x_crystal_info_symmops_k",
       "shape": [],
@@ -1611,7 +1611,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Symmetry operations in G space",
+      "description": "CAPPA:IS1 16;IS2 16;IS3 16; K PTS MONK NET 145; SYMMOPS:K SPACE  48;G SPACE  48. (mentioned after the basis set)",
       "dtypeStr": "i",
       "name": "x_crystal_info_symmops_g",
       "shape": [],
@@ -1619,7 +1619,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MAX NUMBER OF SCF CYCLES",
       "dtypeStr": "i",
       "name": "x_crystal_info_max_scf_cycles",
       "shape": [],
@@ -1627,7 +1627,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "WEIGHT OF F(I) IN F(I+1)      30%",
       "dtypeStr": "f",
       "name": "x_crystal_info_weight_previous",
       "shape": [],
@@ -1659,7 +1659,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Shrink factors",
+      "description": "SHRINK. FACT.(MONKH.)   16 16 16",
       "dtypeStr": "i",
       "name": "x_crystal_info_shrink",
       "shape": ["n"],
@@ -1667,7 +1667,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "SHRINKING FACTOR(GILAT NET)   16",
       "dtypeStr": "f",
       "name": "x_crystal_info_shrink_gilat",
       "shape": [],
@@ -1675,7 +1675,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "NUMBER OF K POINTS IN THE IBZ    145",
       "dtypeStr": "i",
       "name": "x_crystal_info_k_points_ibz",
       "shape": [],
@@ -1683,7 +1683,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "NUMBER OF K POINTS(GILAT NET)    145",
       "dtypeStr": "i",
       "name": "x_crystal_info_k_points_gilat",
       "shape": [],
@@ -1691,7 +1691,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Power of 10",
+      "description": "Convergence seettings, on power of 10 (e.g. CONVERGENCE ON DELTAP        10**-16)",
       "dtypeStr": "f",
       "name": "x_crystal_info_convergence_on_deltap",
       "shape": [],
@@ -1699,7 +1699,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Power of 10",
+      "description": "Convergence seettings, on power of 10 (e.g. CONVERGENCE ON ENERGY        10**-10)",
       "dtypeStr": "f",
       "name": "x_crystal_info_convergence_on_energy",
       "shape": [],
@@ -1707,7 +1707,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Disk space for eigenvectors: ftn",
+      "description": "DISK SPACE FOR EIGENVECTORS (FTN 10)      351575 REALS",
       "dtypeStr": "i",
       "name": "x_crystal_info_eigenvectors_disk_space_ftn",
       "shape": [],
@@ -1715,7 +1715,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Disk space for eigenvectors: reals",
+      "description": "DISK SPACE FOR EIGENVECTORS (FTN 10)      351575 REALS",
       "dtypeStr": "i",
       "name": "x_crystal_info_eigenvectors_disk_space_reals",
       "shape": [],
@@ -1723,7 +1723,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Symmetry adaption of the Block functions enabled.",
+      "description": "SYMMETRY ADAPTION OF THE BLOCH FUNCTIONS ENABLED",
       "dtypeStr": "b",
       "name": "x_crystal_info_symmetry_adaption",
       "shape": [],
@@ -1731,7 +1731,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MATRIX SIZE: P(G)   31533, F(G)    5204, P(G) IRR    1802, F(G) IRR     964",
       "dtypeStr": "i",
       "name": "x_crystal_info_matrix_size_p",
       "shape": [],
@@ -1739,7 +1739,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MATRIX SIZE: P(G)   31533, F(G)    5204, P(G) IRR    1802, F(G) IRR     964",
       "dtypeStr": "i",
       "name": "x_crystal_info_matrix_size_f",
       "shape": [],
@@ -1747,7 +1747,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MATRIX SIZE: P(G)   31533, F(G)    5204, P(G) IRR    1802, F(G) IRR     964",
       "dtypeStr": "i",
       "name": "x_crystal_info_irr_p",
       "shape": [],
@@ -1755,7 +1755,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MATRIX SIZE: P(G)   31533, F(G)    5204, P(G) IRR    1802, F(G) IRR     964",
       "dtypeStr": "i",
       "name": "x_crystal_info_irr_f",
       "shape": [],
@@ -1763,7 +1763,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MAX G-VECTOR INDEX FOR 1- AND 2-ELECTRON INTEGRALS 247",
       "dtypeStr": "i",
       "name": "x_crystal_info_max_g_vector_index",
       "shape": [],
@@ -1771,7 +1771,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT INPUT       TELAPSE        0.01 TCPU        0.01",
       "dtypeStr": "f",
       "name": "x_crystal_info_input_telapse",
       "shape": [],
@@ -1779,7 +1779,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT INPUT       TELAPSE        0.01 TCPU        0.01",
       "dtypeStr": "f",
       "name": "x_crystal_info_input_tcpu",
       "shape": [],
@@ -1795,7 +1795,7 @@
         "section_system"
       ]
     }, {
-      "description": "K points units",
+      "description": "K points units (as in e.g. *** K POINTS COORDINATES (OBLIQUE COORDINATES IN UNITS OF IS = 16))",
       "dtypeStr": "i",
       "name": "x_crystal_kpoints_is_units",
       "shape": [],
@@ -1803,7 +1803,7 @@
         "x_crystal_section_kpoints"
       ]
     }, {
-      "description": "K point",
+      "description": "K point (as in e.g. *** K POINTS COORDINATES (OBLIQUE COORDINATES IN UNITS OF IS = 16))",
       "kindStr": "type_section",
       "name": "x_crystal_section_kpoint",
       "shape": [],
@@ -1811,7 +1811,7 @@
         "x_crystal_section_kpoints"
       ]
     }, {
-      "description": "K point number",
+      "description": "K point number (as in 21-C( 12  1  0))",
       "dtypeStr": "i",
       "name": "x_crystal_kpoint_number",
       "shape": [],
@@ -1819,7 +1819,7 @@
         "x_crystal_section_kpoint"
       ]
     }, {
-      "description": "K point symbol",
+      "description": "K point symbol (as in 21-C( 12  1  0))",
       "dtypeStr": "C",
       "name": "x_crystal_kpoint_symbol",
       "shape": [],
@@ -1827,7 +1827,7 @@
         "x_crystal_section_kpoint"
       ]
     }, {
-      "description": "K point integer coordinates.",
+      "description": "K point integer coordinates. (as in 21-C( 12  1  0))",
       "dtypeStr": "i",
       "name": "x_crystal_kpoint_coordinates",
       "shape": [],
@@ -2211,7 +2211,7 @@
         "x_crystal_section_wavefunctions"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUCLEAR CHARGE 11.0  SYMMETRY SPECIES            S    P",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_nuclear_charge",
       "shape": [],
@@ -2219,7 +2219,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): N. ELECTRONS   11.0  NUMBER OF PRIMITIVE GTOS   S:15    P:7",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_number_of_electrons",
       "shape": [],
@@ -2227,7 +2227,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUMBER OF PRIMITIVE GTOS   S:15    P:7",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_number_of_primitive_s",
       "shape": [],
@@ -2235,7 +2235,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUMBER OF PRIMITIVE GTOS   S:15    P:7",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_number_of_primitive_p",
       "shape": [],
@@ -2243,7 +2243,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUMBER OF CONTRACTED GTOS   S:4    P:3",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_number_of_contracted_s",
       "shape": [],
@@ -2251,7 +2251,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUMBER OF CONTRACTED GTOS   S:4    P:3",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_number_of_contracted_p",
       "shape": [],
@@ -2259,7 +2259,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUMBER OF CLOSED SHELLS     S:2    P:1",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_number_of_closed_shells_s",
       "shape": [],
@@ -2267,7 +2267,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): NUMBER OF CLOSED SHELLS     S:2    P:1",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_number_of_closed_shells_p",
       "shape": [],
@@ -2275,7 +2275,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): OPEN SHELL OCCUPATION       S:1    P:0",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_open_shell_occupation_s",
       "shape": [],
@@ -2283,7 +2283,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "as in ATOMIC WAVEFUNCTION(S): OPEN SHELL OCCUPATION       S:1    P:0",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_open_shell_occupation_p",
       "shape": [],
@@ -2291,7 +2291,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_znuc",
       "shape": [],
@@ -2299,7 +2299,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
       "dtypeStr": "i",
       "name": "x_crystal_wavefunctions_atom_scfit",
       "shape": [],
@@ -2307,7 +2307,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_total_hf_energy",
       "shape": [],
@@ -2315,7 +2315,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_kinetic_energy",
       "shape": [],
@@ -2323,7 +2323,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_virial_theorem",
       "shape": [],
@@ -2331,7 +2331,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
       "dtypeStr": "f",
       "name": "x_crystal_wavefunctions_atom_accuracy",
       "shape": [],
@@ -2339,7 +2339,7 @@
         "x_crystal_section_wavefunctions_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. CHARGE NORMALIZATION FACTOR   1.00000000)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_charge_normalization",
       "shape": [],
@@ -2347,7 +2347,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. TOTAL ATOMIC CHARGES:. 10.0000000  10.0000000)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_atomic_charges",
       "shape": ["n"],
@@ -2355,7 +2355,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE        0.07 TCPU        0.07)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_moqgad_telapse",
       "shape": [],
@@ -2363,7 +2363,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE        0.07 TCPU        0.07)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_moqgad_tcpu",
       "shape": [],
@@ -2371,7 +2371,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX2     TELAPSE        0.61 TCPU        0.61)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_shellx2_telapse",
       "shape": [],
@@ -2379,7 +2379,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX2     TELAPSE        0.61 TCPU        0.61)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_shellx2_tcpu",
       "shape": [],
@@ -2387,7 +2387,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles, initial step (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE        0.62 TCPU        0.62)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_monmo3_telapse",
       "shape": [],
@@ -2395,7 +2395,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "scf cycles, initial step (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE        0.62 TCPU        0.62)",
       "dtypeStr": "f",
       "name": "x_crystal_initial_monmo3_tcpu",
       "shape": [],
@@ -2403,7 +2403,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Number of a particular scf iteration cycle",
+      "description": "subsequent scf cycles, number of a particular scf iteration cycle (e.g.  CYC   0 ETOT(AU) -2.750919138897E+02 DETOT -2.75E+02 tst  0.00E+00 PX  1.00E+00)",
       "dtypeStr": "i",
       "name": "x_crystal_scf_cycle",
       "shape": [],
@@ -2411,7 +2411,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. CYC   0 ETOT(AU) -2.750919138897E+02 DETOT -2.75E+02 tst  0.00E+00 PX  1.00E+00)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_tst",
       "shape": [],
@@ -2419,7 +2419,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. CYC   0 ETOT(AU) -2.750919138897E+02 DETOT -2.75E+02 tst  0.00E+00 PX  1.00E+00)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_px",
       "shape": [],
@@ -2427,7 +2427,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE        0.63 TCPU        0.63)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_fdik_telapse",
       "shape": [],
@@ -2435,7 +2435,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE        0.63 TCPU        0.63)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_fdik_tcpu",
       "shape": [],
@@ -2443,7 +2443,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (contains text INSULATING STATE)",
       "dtypeStr": "b",
       "name": "x_crystal_scf_insulating_state",
       "shape": [],
@@ -2451,7 +2451,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "TOP OF VALENCE BANDS",
+      "description": "subsequent scf cycles (e.g. TOP OF VALENCE BANDS -    BAND     10; K    1; EIG -3.4527266E-01 AU)",
       "dtypeStr": "i",
       "name": "x_crystal_scf_valence_band",
       "shape": [],
@@ -2460,7 +2460,7 @@
       ]
 
     }, {
-      "description": "TOP OF VALENCE BANDS",
+      "description": "subsequent scf cycles (e.g. TOP OF VALENCE BANDS -    BAND     10; K    1; EIG -3.4527266E-01 AU)",
       "dtypeStr": "i",
       "name": "x_crystal_scf_valence_k",
       "shape": [],
@@ -2468,7 +2468,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "TOP OF VALENCE BANDS",
+      "description": "subsequent scf cycles (e.g. TOP OF VALENCE BANDS -    BAND     10; K    1; EIG -3.4527266E-01 AU)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_valence_eig",
       "shape": [],
@@ -2476,7 +2476,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "BOTTOM OF VIRTUAL BANDS",
+      "description": "subsequent scf cycles (e.g. BOTTOM OF VIRTUAL BANDS - BAND     11; K    1; EIG  3.7948795E-01 AU)",
       "dtypeStr": "i",
       "name": "x_crystal_scf_virtual_band",
       "shape": [],
@@ -2484,7 +2484,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "BOTTOM OF VIRTUAL BANDS",
+      "description": "subsequent scf cycles (e.g. BOTTOM OF VIRTUAL BANDS - BAND     11; K    1; EIG  3.7948795E-01 AU)",
       "dtypeStr": "i",
       "name": "x_crystal_scf_virtual_k",
       "shape": [],
@@ -2492,7 +2492,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "BOTTOM OF VIRTUAL BANDS",
+      "description": "subsequent scf cycles (e.g. BOTTOM OF VIRTUAL BANDS - BAND     11; K    1; EIG  3.7948795E-01 AU)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_virtual_eig",
       "shape": [],
@@ -2500,7 +2500,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE        0.63 TCPU        0.63)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_pdig_telapse",
       "shape": [],
@@ -2508,7 +2508,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE        0.63 TCPU        0.63)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_pdig_tcpu",
       "shape": [],
@@ -2516,7 +2516,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. CHARGE NORMALIZATION FACTOR   1.00000000)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_charge_normalization",
       "shape": [],
@@ -2524,7 +2524,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g.  TOTAL ATOMIC CHARGES:. 10.0158876   9.9841124)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_atomic_charges",
       "shape": ["n"],
@@ -2532,7 +2532,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE        0.63 TCPU        0.63)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_moqgad_telapse",
       "shape": [],
@@ -2540,7 +2540,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE        0.63 TCPU        0.63)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_moqgad_tcpu",
       "shape": [],
@@ -2548,7 +2548,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX2     TELAPSE        1.19 TCPU        1.19)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_shellx2_telapse",
       "shape": [],
@@ -2556,7 +2556,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX2     TELAPSE        1.19 TCPU        1.19)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_shellx2_tcpu",
       "shape": [],
@@ -2564,7 +2564,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE        1.20 TCPU        1.20)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_monmo3_telapse",
       "shape": [],
@@ -2572,7 +2572,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "subsequent scf cycles (e.g. TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE        1.20 TCPU        1.20)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_monmo3_tcpu",
       "shape": [],
@@ -2580,7 +2580,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: EXT EL-POLE                                  -5.2914791274154E+02",
       "dtypeStr": "f",
       "name": "x_crystal_scf_ext_elpole",
       "shape": [],
@@ -2588,7 +2588,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: EXT EL-SPHEROPOLE                             3.9924168445258E+00",
       "dtypeStr": "f",
       "name": "x_crystal_scf_ext_spheropole",
       "shape": [],
@@ -2596,7 +2596,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: BIELET ZONE E-E                               5.7175063847322E+02",
       "dtypeStr": "f",
       "name": "x_crystal_scf_bielet_zone_ee",
       "shape": [],
@@ -2604,7 +2604,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: TOTAL E-E                                     4.6595142576204E+01",
       "dtypeStr": "f",
       "name": "x_crystal_scf_total_ee",
       "shape": [],
@@ -2612,7 +2612,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: TOTAL E-N + N-E                              -5.2283101954878E+02",
       "dtypeStr": "f",
       "name": "x_crystal_scf_total_en_ne",
       "shape": [],
@@ -2620,7 +2620,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: TOTAL N-N                                    -7.3084276676762E+01 ",
       "dtypeStr": "f",
       "name": "x_crystal_scf_total_nn",
       "shape": [],
@@ -2628,7 +2628,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: KINETIC ENERGY                                2.7465596172356E+02",
       "dtypeStr": "f",
       "name": "x_crystal_scf_kinetic_energy",
       "shape": [],
@@ -2636,7 +2636,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: TOTAL   ENERGY                               -2.7466419192577E+02",
       "dtypeStr": "f",
       "name": "x_crystal_scf_total_energy",
       "shape": [],
@@ -2644,7 +2644,7 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "+++ ENERGIES IN A.U. +++. ::: VIRIAL COEFFICIENT                            9.9998501747632E-01",
       "dtypeStr": "f",
       "name": "x_crystal_scf_virial_coefficient",
       "shape": [],
@@ -2668,7 +2668,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Final scf step, cycle number (e.g. in TOTAL ENERGY(HF)(AU)(  22) -6.2149540004172E+02 DE-3.7E-11 tst 1.6E-15 PX 1.2E-08)",
       "dtypeStr": "i",
       "name": "x_crystal_scf_final_cycle",
       "shape": [],
@@ -2676,7 +2676,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Final scf step, total energy (e.g. in TOTAL ENERGY(HF)(AU)(  22) -6.2149540004172E+02 DE-3.7E-11 tst 1.6E-15 PX 1.2E-08)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_final_total_energy",
       "shape": [],
@@ -2684,7 +2684,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Final scf step, delta energy (e.g. in TOTAL ENERGY(HF)(AU)(  22) -6.2149540004172E+02 DE-3.7E-11 tst 1.6E-15 PX 1.2E-08)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_final_delta_energy",
       "shape": [],
@@ -2692,7 +2692,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Final scf step, tst value (e.g. in TOTAL ENERGY(HF)(AU)(  22) -6.2149540004172E+02 DE-3.7E-11 tst 1.6E-15 PX 1.2E-08)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_final_tst",
       "shape": [],
@@ -2700,7 +2700,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Final scf step, px value (e.g. in TOTAL ENERGY(HF)(AU)(  22) -6.2149540004172E+02 DE-3.7E-11 tst 1.6E-15 PX 1.2E-08)",
       "dtypeStr": "f",
       "name": "x_crystal_scf_final_px",
       "shape": [],
@@ -2724,7 +2724,7 @@
         "x_crystal_section_forces"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Atom label (number), e.g. in 1  11            -2.045495870088E-15 -2.044980874056E-15 -2.242718650102E-15",
       "dtypeStr": "i",
       "name": "x_crystal_forces_atom_label",
       "shape": [],
@@ -2732,7 +2732,7 @@
         "x_crystal_section_forces_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Atom proton number, e.g. in 1  11            -2.045495870088E-15 -2.044980874056E-15 -2.242718650102E-15",
       "dtypeStr": "i",
       "name": "x_crystal_forces_atom_z",
       "shape": [],
@@ -2820,7 +2820,7 @@
         "x_crystal_section_forces"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "  ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM.    CENTRAL POINT             -6.214954000417E+02    22     0.0000E+00    48",
       "dtypeStr": "i",
       "name": "x_crystal_forces_central_point_cycles",
       "shape": [],
@@ -2828,7 +2828,7 @@
         "x_crystal_section_forces"
       ]
     }, {
-      "description": "Force matrix: central point delta energy",
+      "description": "  ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM.    CENTRAL POINT             -6.214954000417E+02    22     0.0000E+00    48",
       "dtypeStr": "f",
       "name": "x_crystal_forces_central_point_de",
       "shape": [],
@@ -2836,7 +2836,7 @@
         "x_crystal_section_forces"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "  ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM.    CENTRAL POINT             -6.214954000417E+02    22     0.0000E+00    48",
       "dtypeStr": "i",
       "name": "x_crystal_forces_central_point_sym",
       "shape": [],
@@ -2852,7 +2852,7 @@
         "x_crystal_section_forces"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Atom label in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DX   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "i",
       "name": "x_crystal_forces_matrix_atom_label",
       "shape": [],
@@ -2860,7 +2860,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Element symbol in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DX   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "C",
       "name": "x_crystal_forces_matrix_atom_element",
       "shape": [],
@@ -2868,7 +2868,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Direction in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DX   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "C",
       "name": "x_crystal_forces_matrix_atom_dir",
       "shape": [],
@@ -2876,7 +2876,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "MAX ABS(DGRAD) in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. X   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "f",
       "name": "x_crystal_forces_matrix_atom_grad",
       "shape": [],
@@ -2884,7 +2884,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "TOTAL ENERGY (AU) in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. X   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "f",
       "name": "x_crystal_forces_matrix_atom_energy",
       "shape": [],
@@ -2892,7 +2892,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "number of cycles (N.CYC) in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. X   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "i",
       "name": "x_crystal_forces_matrix_atom_cycles",
       "shape": [],
@@ -2900,7 +2900,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "delta energy (DE) in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. X   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "f",
       "name": "x_crystal_forces_matrix_atom_de",
       "shape": [],
@@ -2908,7 +2908,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "number of symmetries (SYM) in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. X   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
       "dtypeStr": "i",
       "name": "x_crystal_forces_matrix_atom_sym",
       "shape": [],
@@ -2924,7 +2924,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Atom label in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DY                   GENERATED FROM A PREVIOUS LINE)",
       "dtypeStr": "i",
       "name": "x_crystal_forces_matrix_atom_gen_label",
       "shape": [],
@@ -2932,7 +2932,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Element symbol in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DY                   GENERATED FROM A PREVIOUS LINE)",
       "dtypeStr": "C",
       "name": "x_crystal_forces_matrix_atom_gen_element",
       "shape": [],
@@ -2940,7 +2940,7 @@
         "x_crystal_section_forces_matrix_atom"
       ]
     }, {
-      "description": "Insert description here.",
+      "description": "Direction in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DY                   GENERATED FROM A PREVIOUS LINE)",
       "dtypeStr": "C",
       "name": "x_crystal_forces_matrix_atom_gen_dir",
       "shape": [],
