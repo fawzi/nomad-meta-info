@@ -1553,10 +1553,74 @@
     }, {
        "description": "Pseudopotential",
       "dtypeStr": "f",
+      "name": "x_onetep_pseudo_local_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]     
+    }, {
+       "description": "Kinetic component store",
+      "dtypeStr": "f",
+      "name": "x_onetep_electronic_kinetic_energy",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]     
+    }, {
+       "description": "Hartree correction store",
+      "dtypeStr": "f",
+      "name": "x_onetep_energy_correction_hartree_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]      
+    }, {
+       "description": "exchange energy store",
+      "dtypeStr": "f",
+      "name": "x_onetep_energy_XC_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]    
+    }, {
+       "description": "ewald correction store",
+      "dtypeStr": "f",
+      "name": "x_onetep_ewald_correction_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]      
+    }, {
+       "description": "dispersion correction store",
+      "dtypeStr": "f",
+      "name": "x_onetep_dispersion_correction_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]       
+    }, {
+       "description": "store_integrated density",
+      "dtypeStr": "f",
+      "name": "x_onetep_integrated_density_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
+      ]      
+    }, {
+       "description": "Pseudopotential",
+      "dtypeStr": "f",
       "name": "x_onetep_pseudo_non_local",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ]     
+    }, {
+       "description": "Pseudopotential",
+      "dtypeStr": "f",
+      "name": "x_onetep_pseudo_non_local_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_energy_components"
       ]     
     }, {
        "description": "RMS Gradient",
@@ -1928,6 +1992,13 @@
       ]
     }, {
       "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_energy_components",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "i",
       "name": "x_onetep_spin_number",
       "shape": [],
@@ -2231,6 +2302,7 @@
       "superNames": [
         "x_onetep_section_van_der_Waals_parameters"
       ]
+    
     }, {
       "description": "Parameter for dispersion method TS",
       "dtypeStr": "f",
