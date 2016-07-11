@@ -6,5 +6,16 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [
+    {
+      "description": "-",
+      "name": "x_qe_time_run_date_start",
+      "superNames": [],
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }
+  ]
 }
