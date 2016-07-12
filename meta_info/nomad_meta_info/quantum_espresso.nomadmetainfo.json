@@ -156,6 +156,110 @@
       "superNames": [
         "section_system"
       ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b1_x",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b1_y",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b1_z",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b2_x",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b2_y",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b2_z",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b3_x",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b3_y",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_b3_z",
+      "superNames": [],
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Reciprocal Lattice vectors (in Cartesian coordinates). The first index runs over the $x,y,z$ Cartesian coordinates, and the second index runs over the 3 lattice vectors.",
+      "dtypeStr": "f",
+      "name": "x_qe_reciprocal_cell",
+      "repeats": false,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "1/m"
     }
   ]
 }
