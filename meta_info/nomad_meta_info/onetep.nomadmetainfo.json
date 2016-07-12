@@ -1688,7 +1688,7 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]    
-     }, {
+    }, {
        "description": "Ewald",
       "dtypeStr": "f",
       "name": "x_onetep_ewald_correction",
@@ -1697,13 +1697,52 @@
         "section_single_configuration_calculation"
       ]    
     }, {
+      "description": "Total_energy(Eh)",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_energy",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_kernel_optimisation"
+      ]    
+    }, {
+      "description": "band_gap",
+      "dtypeStr": "f",
+      "name": "x_onetep_band_gap",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_kernel_optimisation"
+      ]   
+    }, {
+      "description": "band_gap",
+      "dtypeStr": "f",
+      "name": "x_onetep_band_gap",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_kernel_optimisation"
+      ]   
+    }, {
+      "description": "rms_occupancy",
+      "dtypeStr": "f",
+      "name": "x_onetep_rms_occupancy_error",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_kernel_optimisation"
+      ]     
+    }, {
+      "description": "Commutator between Hamiltonian and Kernel",
+      "dtypeStr": "f",
+      "name": "x_onetep_commutator",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_kernel_optimisation"
+      ]   
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_tddft",
       "superNames": [
         "section_system"
       ]
-    
     }, {
       "description": "-",
       "kindStr": "type_section",
@@ -1817,12 +1856,19 @@
       "superNames": [
         "section_run"
       ]  
-     }, {
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_population_analysis_parameters",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_kernel_optimisation",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "-",
@@ -1995,7 +2041,7 @@
       "kindStr": "type_section",
       "name": "x_onetep_section_energy_components",
       "superNames": [
-        "section_run"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "-",
