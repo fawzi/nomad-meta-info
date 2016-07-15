@@ -2452,7 +2452,7 @@
       "description": "K point integer coordinates. (as in 21-C( 12  1  0))",
       "dtypeStr": "i",
       "name": "x_crystal_kpoint_coordinates",
-      "shape": [],
+      "shape": ["n"],
       "superNames": [
         "x_crystal_section_kpoint"
       ]
@@ -2942,7 +2942,7 @@
       ]
     }, {
       "description": "SHELL",
-      "dtypeStr": "C",
+      "dtypeStr": "i",
       "name": "x_crystal_properties_atom_shell",
       "shape": [],
       "superNames": [
