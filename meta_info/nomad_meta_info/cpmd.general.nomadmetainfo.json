@@ -30,6 +30,14 @@
         "x_cpmd_section_start_information"
       ]
     }, {
+      "description": "CPMD compilation date.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_compilation_date",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_start_information"
+      ]
+    }, {
       "description": "The process id for this calculation.",
       "dtypeStr": "i",
       "name": "x_cpmd_process_id",
@@ -292,7 +300,7 @@
         "x_cpmd_section_scf"
       ]
     }, {
-      "description": "The scf step number.",
+      "description": "The scf step number (NFI).",
       "dtypeStr": "i",
       "name": "x_cpmd_scf_nfi",
       "shape": [],
@@ -300,7 +308,7 @@
         "x_cpmd_section_scf_iteration"
       ]
     }, {
-      "description": "GEMAX during SCF step.",
+      "description": "Largest off-diagonal component (GEMAX) during SCF step.",
       "dtypeStr": "f",
       "name": "x_cpmd_scf_gemax",
       "shape": [],
@@ -308,7 +316,7 @@
         "x_cpmd_section_scf_iteration"
       ]
     }, {
-      "description": "CNORM during SCF step.",
+      "description": "Average of the off-diagonal components (CNORM) during SCF step.",
       "dtypeStr": "f",
       "name": "x_cpmd_scf_cnorm",
       "shape": [],
