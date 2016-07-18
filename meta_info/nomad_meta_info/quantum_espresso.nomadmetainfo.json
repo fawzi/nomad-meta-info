@@ -254,6 +254,44 @@
       "superNames": [
         "section_system"
       ]
+    },
+    {
+      "name": "x_qe_t_section_kbands",
+      "kindStr": "type_section",
+      "description": "pseudo-section for collecting k-hooks in band structure data",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_x",
+      "dtypeStr": "f",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_y",
+      "dtypeStr": "f",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_z",
+      "dtypeStr": "f",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_pw",
+      "dtypeStr": "i",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_point_energies",
+      "dtypeStr": "C",
+      "superNames": ["x_qe_t_section_kbands"]
     }
   ]
 }
