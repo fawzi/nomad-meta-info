@@ -437,7 +437,7 @@
         "x_cp2k_section_startinformation"
       ]
     }, {
-      "description": "The name of the user that started this calculation.",
+      "description": "The name of the user at the start of the calculation.",
       "dtypeStr": "C",
       "name": "x_cp2k_start_user",
       "shape": [],
@@ -445,7 +445,7 @@
         "x_cp2k_section_startinformation"
       ]
     }, {
-      "description": "The process id for this run.",
+      "description": "The process id at the start of this run.",
       "dtypeStr": "i",
       "name": "x_cp2k_start_id",
       "shape": [],
@@ -459,6 +459,53 @@
       "shape": [],
       "superNames": [
         "x_cp2k_section_startinformation"
+      ]
+    }, {
+      "description": "Contains information about the ending conditions for this run.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_end_information",
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "The ending time for this run.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_end_time",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_end_information"
+      ]
+    }, {
+      "description": "The name of the host machine this calculation ended on.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_end_host",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_end_information"
+      ]
+    }, {
+      "description": "The name of the user at the end of the calculation.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_end_user",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_end_information"
+      ]
+    }, {
+      "description": "The process id at the end of this run.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_end_id",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_end_information"
+      ]
+    }, {
+      "description": "The path where this calculation ended.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_end_path",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_end_information"
       ]
     }, {
       "description": "Section for stress tensor information.",
@@ -1079,9 +1126,9 @@
         "x_cp2k_section_atomic_kind"
       ]
     }, {
-      "description": "The element symbol for this atomic kind.",
+      "description": "The label for this atomic kind.",
       "dtypeStr": "C",
-      "name": "x_cp2k_kind_element_symbol",
+      "name": "x_cp2k_kind_label",
       "shape": [],
       "superNames": [
         "x_cp2k_section_atomic_kind"
