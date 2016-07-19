@@ -316,6 +316,86 @@
     },
     {
       "description": "-",
+      "name": "x_qe_pp_idx",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_pp_label",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_pp_filename",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_pp_type",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_pp_md5sum",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_pp_valence",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "f",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_pp_weight",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "f",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_kind_mass",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "f",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "-",
       "name": "x_qe_nsymm",
       "dtypeStr": "i",
       "shape": [],
