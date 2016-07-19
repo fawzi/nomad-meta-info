@@ -18,7 +18,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_time_run_date_start",
+      "name": "x_qe_t_time_run_date_start",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
@@ -72,7 +72,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a1_x",
+      "name": "x_qe_t_a1_x",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -81,7 +81,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a1_y",
+      "name": "x_qe_t_a1_y",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -90,7 +90,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a1_z",
+      "name": "x_qe_t_a1_z",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -99,7 +99,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a2_x",
+      "name": "x_qe_t_a2_x",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -108,7 +108,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a2_y",
+      "name": "x_qe_t_a2_y",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -117,7 +117,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a2_z",
+      "name": "x_qe_t_a2_z",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -126,7 +126,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a3_x",
+      "name": "x_qe_t_a3_x",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -135,7 +135,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a3_y",
+      "name": "x_qe_t_a3_y",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -144,7 +144,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_a3_z",
+      "name": "x_qe_t_a3_z",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -153,7 +153,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b1_x",
+      "name": "x_qe_t_b1_x",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -162,7 +162,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b1_y",
+      "name": "x_qe_t_b1_y",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -171,7 +171,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b1_z",
+      "name": "x_qe_t_b1_z",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -180,7 +180,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b2_x",
+      "name": "x_qe_t_b2_x",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -189,7 +189,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b2_y",
+      "name": "x_qe_t_b2_y",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -198,7 +198,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b2_z",
+      "name": "x_qe_t_b2_z",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -207,7 +207,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b3_x",
+      "name": "x_qe_t_b3_x",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -216,7 +216,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b3_y",
+      "name": "x_qe_t_b3_y",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -225,7 +225,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_b3_z",
+      "name": "x_qe_t_b3_z",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
@@ -254,6 +254,44 @@
       "superNames": [
         "section_system"
       ]
+    },
+    {
+      "name": "x_qe_t_section_kbands",
+      "kindStr": "type_section",
+      "description": "pseudo-section for collecting k-hooks in band structure data",
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_x",
+      "dtypeStr": "f",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_y",
+      "dtypeStr": "f",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_z",
+      "dtypeStr": "f",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_pw",
+      "dtypeStr": "i",
+      "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_k_point_energies",
+      "dtypeStr": "C",
+      "superNames": ["x_qe_t_section_kbands"]
     }
   ]
 }
