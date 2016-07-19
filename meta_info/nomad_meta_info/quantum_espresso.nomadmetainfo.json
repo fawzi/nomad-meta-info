@@ -247,6 +247,74 @@
       "units": "1/m"
     },
     {
+      "name": "x_qe_t_section_pseudopotential",
+      "kindStr": "type_section",
+      "description": "pseudo-section for collecting pseudopotential data (atomic number lookup requires table printed later in output)",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_pp_idx",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_pp_label",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_pp_filename",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_pp_type",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_pp_md5sum",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_pp_valence",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "f",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "-",
       "name": "x_qe_nsymm",
       "dtypeStr": "i",
