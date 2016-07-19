@@ -404,6 +404,33 @@
       ]
     },
     {
+      "description": "-",
+      "name": "x_qe_t_atom_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_atpos_x",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_atpos_y",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_atpos_z",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
       "name": "x_qe_t_section_kbands",
       "kindStr": "type_section",
       "description": "pseudo-section for collecting k-hooks in band structure data",
