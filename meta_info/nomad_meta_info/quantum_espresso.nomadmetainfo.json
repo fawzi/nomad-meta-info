@@ -405,6 +405,17 @@
     },
     {
       "description": "-",
+      "name": "x_qe_atom_idx",
+      "dtypeStr": "i",
+      "shape": [
+          "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "-",
       "name": "x_qe_t_atom_idx",
       "dtypeStr": "i",
       "shape": [],
