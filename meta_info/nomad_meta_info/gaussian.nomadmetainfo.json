@@ -7,13 +7,13 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [{
-      "description": "atomic masses of the atoms of the system",
-      "kindStr": "type_section",
-      "name": "x_gaussian_section_atomic_masses",
+      "description": "number of atoms of the system",
+      "dtypeStr": "f",
+      "name": "x_gaussian_number_of_atoms",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_system"
-      ]
+        "section_system"
+       ]
     }, {
       "description": "atomic number for atoms",
       "dtypeStr": "C",
@@ -29,7 +29,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_gaussian_section_atomic_masses"
+        "section_system"
        ]
     }, {
       "description": "x coordinate for the atoms",
@@ -135,13 +135,6 @@
         "section_run"
       ]
     }, {
-      "description": "section that contains charge and multiplicity",
-      "kindStr": "type_section",
-      "name": "x_gaussian_section_chargemult",
-      "superNames": [
-        "x_gaussian_section_system"
-      ]
-    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "x_gaussian_program_execution_date",
@@ -211,12 +204,13 @@
       ],
       "units": "J"
     }, {
-      "description": "Determines whether a *single configuration calculation* (see section_single_configuration_calculation) is converged.",
+      "description": "Determines whether a single configuration calculation is converged.",
       "dtypeStr": "C",
       "name": "x_gaussian_single_configuration_calculation_converged",
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }, {
       "description": "Check for SCF convergence and writes the total energy value to backend",
@@ -234,24 +228,9 @@
         "section_run"
       ]
     }, {
-      "description": "Every section_system contains the properties required to describe the physical system simulated, e.g., the given atomic configuration, the definition of periodic cell (if present), external potentials.",
-      "kindStr": "type_section",
-      "name": "x_gaussian_section_system",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "Total charge of the system.",
       "dtypeStr": "i",
       "name": "x_gaussian_total_charge",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "Number of atoms of the system.",
-      "dtypeStr": "i",
-      "name": "x_gaussian_natoms",
       "shape": [],
       "superNames": [
         "section_system"
@@ -678,11 +657,46 @@
     ]
     }, {
       "description": "Specifies whether a geometry optimization is converged.",
-      "dtypeStr": "b",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_geometry_optimization_info",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Specifies whether a geometry optimization is converged.",
+      "dtypeStr": "C",
       "name": "x_gaussian_geometry_optimization_converged",
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "section_frame_sequence"
+        "x_gaussian_section_geometry_optimization_info"
+      ]
+    }, {
+      "description": "x component of lattice vector",
+      "dtypeStr": "C",
+      "name": "x_gaussian_geometry_lattice_vector_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "y component of lattice vector",
+      "dtypeStr": "C",
+      "name": "x_gaussian_geometry_lattice_vector_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "z component of lattice vector",
+      "dtypeStr": "C",
+      "name": "x_gaussian_geometry_lattice_vector_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "section for the values of the frequencies, reduced masses and normal mode vectors",
@@ -1008,7 +1022,7 @@
       "name": "x_gaussian_masses",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_atomic_masses"
+        "section_system"
       ]
     }, {
       "description": "Section containing electronic structure method.",
@@ -1016,6 +1030,13 @@
       "name": "x_gaussian_section_elstruc_method",
       "superNames": [
         "settings_elstruc_method"
+      ]
+    }, {
+      "description": "Section containing total energy components",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_energy_components",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Name of electronic structure method.",
@@ -1048,6 +1069,465 @@
       "shape": [],
       "superNames": [
         "section_method"
+      ]
+    }, {
+      "description": "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_energy_total",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Total electrostatic energy (nuclei + electrons), defined consistently with calculation_method.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_energy_electrostatic",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Error in the total energy. Defined consistently with XC_method.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_energy_error",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "error_estimate_contribution",
+        "section_scf_iteration",
+        "energy_value"
+      ],
+      "units": "J"
+    }, {
+      "description": "Self-consistent electronic kinetic energy as defined in XC_method.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_electronic_kinetic_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Perturbative Moller-Plesset energies.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_moller_plesset",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "MP2 energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp2_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset" 
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and MP2 energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp2_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "MP3 energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp3_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and MP3 energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp3_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "MP4(DQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp4dq_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and MP4(DQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp4dq_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "MP4(SDQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp4sdq_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and MP4(SDQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp4sdq_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "MP4(SDTQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp4sdtq_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and MP4(SDTQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp4sdtq_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "MP5 energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp5_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and MP5 energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_mp5_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_moller_plesset"
+      ],
+      "units": "J"
+    }, {
+      "description": "Coupled cluster energies.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_coupled_cluster",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "CCSD energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_ccsd_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_coupled_cluster"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and CCSD energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_ccsd_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_coupled_cluster"
+      ],
+      "units": "J"
+    }, {
+      "description": "CCSD(T) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_ccsdt_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_coupled_cluster"
+      ],
+      "units": "J"
+    }, {
+      "description": "Quadratic CI energies.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_quadratic_ci",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Difference between SCF and QCISD energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_qcisd_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_quadratic_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "QCISD energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_qcisd_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_quadratic_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "QCISD(T) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_qcisdt_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_quadratic_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "Difference between SCF and QCISD(TQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_qcisdtq_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_quadratic_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "QCISD(TQ) energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_qcisdtq_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_quadratic_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "CI energies.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_ci",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Difference between SCF and CI energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_ci_correction_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "CI energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_ci_energy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_ci"
+      ],
+      "units": "J"
+    }, {
+      "description": "semiempirical convergence cycles and energies.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_semiempirical",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "semiempirical energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_semiempirical_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_semiempirical"
+      ],
+      "units": "J"
+    }, {
+      "description": "semiempirical method.",
+      "dtypeStr": "C",
+      "name": "x_gaussian_semiempirical_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_semiempirical"
+      ]
+    }, {
+      "description": "converged semiempirical energy.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_semiempirical_energy_converged",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_semiempirical"
+      ],
+      "units": "J"
+    }, {
+      "description": "molecular mechanics method and energies.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_molmech",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "molecular mechanics energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_molmech_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_molmech"
+      ],
+      "units": "J"
+    }, {
+      "description": "molecular mechanics method.",
+      "dtypeStr": "C",
+      "name": "x_gaussian_molmech_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_molmech"
+      ]
+    }, {
+      "description": "composite model chemistries.",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_models",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "composite model chemistries energies.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_model_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "Excited state energies and properties",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_excited_initial",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "CI singles, TDDFT/TDHF, ZINDO or EOMCCSD excited state energies and properties",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_excited",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state number",
+      "dtypeStr": "i",
+      "name": "x_gaussian_excited_state_number",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_excited"
+      ]
+    }, {
+      "description": "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state energy",
+      "dtypeStr": "f",
+      "name": "x_gaussian_excited_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_excited"
+      ],
+      "units": "J"
+    }, {
+      "description": "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state oscillator strength",
+      "dtypeStr": "f",
+      "name": "x_gaussian_excited_oscstrength",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_excited"
+      ]
+    }, {
+      "description": "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state spin squared value",
+      "dtypeStr": "f",
+      "name": "x_gaussian_excited_spin_squared",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_excited"
+      ]
+    }, { 
+      "description": "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state MOs involved in transitions and their coefficients",
+      "dtypeStr": "C",
+      "name": "x_gaussian_excited_transition",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_excited"
+      ]
+    }, {
+      "description": "CASSCF energies and properties",
+      "kindStr": "type_section",
+      "name": "x_gaussian_section_casscf",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "CASSCF energy",
+      "dtypeStr": "f",
+      "name": "x_gaussian_casscf_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_casscf"
+      ],
+      "units": "J"
+    }, {
+      "description": "CASSCF determinant number",
+      "dtypeStr": "i",
+      "name": "x_gaussian_casscf_determinant",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_casscf"
+      ]
+    }, {
+      "description": "CASSCF determinant coefficient",
+      "dtypeStr": "f",
+      "name": "x_gaussian_casscf_coefficient",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_casscf"
       ]
     }
 ]
