@@ -1531,6 +1531,94 @@
         "x_castep_section_tddft"
       ] 
     }, {
+      "description": "correlation energy",
+      "dtypeStr": "f",
+      "name": "x_castep_correction_energy",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "dE/atom",
+      "dtypeStr": "f",
+      "name": "x_castep_de_atom",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "dfmax/atom",
+      "dtypeStr": "f",
+      "name": "x_castep_dfmax_atom",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "structure energy correction",
+      "dtypeStr": "f",
+      "name": "x_castep_structure_energy_corr",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "PBC image interaction corr.",
+      "dtypeStr": "f",
+      "name": "x_castep_PBC_image_inter_corr",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "total energy correction",
+      "dtypeStr": "f",
+      "name": "x_castep_total_energy_correction",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "correction F max ev/A",
+      "dtypeStr": "f",
+      "name": "x_castep_total_fmax_correction",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]  
+    }, {
+      "description": "shell",
+      "dtypeStr": "i",
+      "name": "x_castep_shell",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ]   
+    }, {
+      "description": "total_dispersion_corrected_energy",
+      "dtypeStr": "f",
+      "name": "x_castep_total_dispersion_corrected_energy_store",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ] 
+    }, {
+      "description": "total_dispersion_corrected_free_energy",
+      "dtypeStr": "f",
+      "name": "x_castep_total_dispersion_corrected_free_energy",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ] 
+    }, {
+      "description": "dispersion corrected zero point",
+      "dtypeStr": "f",
+      "name": "x_castep_disp_corrected_energy_total_T0",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_DFT_SEDC"
+      ] 
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_tddft",
@@ -1608,7 +1696,13 @@
       "superNames": [
         "section_method"
       ]
-
+     }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_DFT_SEDC",
+      "superNames": [
+        "section_run"
+      ]  
     }, {
       "description": "-",
       "kindStr": "type_section",
@@ -1816,6 +1910,13 @@
       "name": "x_castep_section_ts_parameters",
       "superNames": [
         "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_DFT_SEDC",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]  
     }, {
       "description": "-",
