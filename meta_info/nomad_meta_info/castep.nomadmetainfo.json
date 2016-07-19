@@ -1534,6 +1534,7 @@
       "description": "correlation energy",
       "dtypeStr": "f",
       "name": "x_castep_correction_energy",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_DFT_SEDC"
@@ -1542,6 +1543,7 @@
       "description": "dE/atom",
       "dtypeStr": "f",
       "name": "x_castep_de_atom",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_castep_section_DFT_SEDC"
@@ -1551,6 +1553,7 @@
       "dtypeStr": "f",
       "name": "x_castep_dfmax_atom",
       "shape": [],
+      "repeats": true,
       "superNames": [
         "x_castep_section_DFT_SEDC"
       ]   
@@ -1591,17 +1594,11 @@
       "dtypeStr": "i",
       "name": "x_castep_shell",
       "shape": [],
+      "repeats": true,
       "superNames": [
         "x_castep_section_DFT_SEDC"
       ]   
-    }, {
-      "description": "total_dispersion_corrected_energy",
-      "dtypeStr": "f",
-      "name": "x_castep_total_dispersion_corrected_energy_store",
-      "shape": [],
-      "superNames": [
-        "x_castep_section_DFT_SEDC"
-      ] 
+   
     }, {
       "description": "total_dispersion_corrected_free_energy",
       "dtypeStr": "f",
