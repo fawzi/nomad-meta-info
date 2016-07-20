@@ -36,7 +36,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_nat",
+      "name": "x_qe_number_of_species",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -45,16 +45,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_nsp",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    },
-    {
-      "description": "-",
-      "name": "x_qe_nbnd",
+      "name": "x_qe_number_of_states",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -72,7 +63,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_xc_functional_enforced",
+      "name": "x_qe_xc_functional_shortname_enforced",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
@@ -81,7 +72,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_xc_functional",
+      "name": "x_qe_xc_functional_shortname",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
