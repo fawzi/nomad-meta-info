@@ -1705,6 +1705,14 @@
         "x_onetep_section_kernel_optimisation"
       ]    
     }, {
+      "description": "Total_energy(Eh)",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_free_energy",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_kernel_optimisation"
+      ]    
+    }, {
       "description": "band_gap",
       "dtypeStr": "f",
       "name": "x_onetep_band_gap",
@@ -1728,6 +1736,159 @@
       "superNames": [
         "x_onetep_section_kernel_optimisation"
       ]   
+    }, {
+      "description": "step",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_step",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ] 
+    }, {
+      "description": "step",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ] 
+    }, {
+      "description": "step",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_0K",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ] 
+    }, {
+      "description": "step",
+      "dtypeStr": "f",
+      "name": "x_onetep_residual_nonorthog",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ] 
+    }, {
+      "description": "step",
+      "dtypeStr": "f",
+      "name": "x_onetep_residual_n_elec",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ] 
+    }, {
+      "description": "Commutator",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_commutator",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ]   
+    }, {
+      "description": "free energy A=E-TS",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_free_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ] 
+    }, {
+      "description": "rms gradient in edft",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_rms_gradient",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ]     
+     }, {
+      "description": "rms gradient in edft",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_entropy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ]    
+    }, {
+      "description": "iteration number",
+      "dtypeStr": "i",
+      "name": "x_onetep_edft_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ]     
+     }, {
+      "description": "spin type",
+      "dtypeStr": "i",
+      "name": "x_onetep_edft_spin_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin"
+      ]   
+    }, {
+      "description": "integrated number of electrons",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_n_electrons",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin"
+      ] 
+    }, {
+      "description": "fermi level",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_fermi_level",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin"
+      ] 
+    }, {
+      "description": "fermi level",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_fermi_level_delta",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin"
+      ] 
+    }, {
+      "description": "orbital",
+      "dtypeStr": "i",
+      "name": "x_onetep_edft_orbital_iteration_spin",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin_iterations"
+      ] 
+    }, {
+      "description": "eigenvalues",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_eigenvalue",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin_iterations"
+      ]
+    }, {
+      "description": "occupancy",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_occupancy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin_iterations"
+      ]
     }, {
       "description": "-",
       "kindStr": "type_section",
@@ -1860,7 +2021,7 @@
       "kindStr": "type_section",
       "name": "x_onetep_section_kernel_optimisation",
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_run"
       ]
     }, {
       "description": "-",
@@ -2033,9 +2194,36 @@
       "kindStr": "type_section",
       "name": "x_onetep_section_energy_components",
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_run"
       ]
- 
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_edft",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_edft_spin",
+      "superNames": [
+        "x_onetep_section_edft_iterations"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_edft_spin_iterations",
+      "superNames": [
+        "x_onetep_section_edft_spin"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_edft_iterations",
+      "superNames": [
+        "x_onetep_section_edft"
+      ]
     }, {
       "description": "-",
       "kindStr": "type_section",
