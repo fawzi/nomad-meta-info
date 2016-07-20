@@ -8,7 +8,7 @@
     }],
   "metaInfos": [
     {
-      "description": "-",
+      "description": "Name of program from Quantum Espresso suite",
       "name": "x_qe_program_name",
       "dtypeStr": "C",
       "shape": [],
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Lattice Parameter 'a', constant during a run and used as unit in other quantities",
       "name": "x_qe_alat",
       "dtypeStr": "f",
       "shape": [],
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Number of Atom species, a.k.a. unique Atom labels; a label may include symmetry-breaking suffices, e.g. 'Fe1' and 'Fe2', as some quantities can only prescribed per species and not per site",
       "name": "x_qe_number_of_species",
       "dtypeStr": "i",
       "shape": [],
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Number of Kohn-Sham states/bands",
       "name": "x_qe_number_of_states",
       "dtypeStr": "i",
       "shape": [],
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Cutoff for defining the direct-space grid used to represent charge densities. Conventionally 4*basis_set_planewave_cutoff, but much larger values may be required in case of Vanderbilt/Ultrasoft pseudopotentials and PAW",
       "name": "x_qe_density_basis_set_planewave_cutoff",
       "dtypeStr": "f",
       "shape": [],
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Short name of User-enforced XC functional; overrides the setting implied by the pseudopotentials",
       "name": "x_qe_xc_functional_shortname_enforced",
       "dtypeStr": "C",
       "shape": [],
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Short name of XC functional used in calculation",
       "name": "x_qe_xc_functional_shortname",
       "dtypeStr": "C",
       "shape": [],
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for direct lattice vectors, x-component",
       "name": "x_qe_t_vec_a_x",
       "dtypeStr": "f",
       "shape": [],
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for direct lattice vectors, y-component",
       "name": "x_qe_t_vec_a_y",
       "dtypeStr": "f",
       "shape": [],
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for direct lattice vectors, z-component",
       "name": "x_qe_t_vec_a_z",
       "dtypeStr": "f",
       "shape": [],
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for reciprocal lattice vectors, x-component",
       "name": "x_qe_t_vec_b_x",
       "dtypeStr": "f",
       "shape": [],
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for reciprocal lattice vectors, y-component",
       "name": "x_qe_t_vec_b_y",
       "dtypeStr": "f",
       "shape": [],
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for reciprocal lattice vectors, z-component",
       "name": "x_qe_t_vec_b_z",
       "dtypeStr": "f",
       "shape": [],
@@ -147,7 +147,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: Index of Pseudopotential on Espresso side",
       "name": "x_qe_t_pp_idx",
       "shape": [],
       "repeats": true,
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: Label of Pseudopotential on Espresso side",
       "name": "x_qe_t_pp_label",
       "shape": [],
       "repeats": true,
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Filename of pseudopotential",
       "name": "x_qe_t_pp_filename",
       "shape": [],
       "repeats": true,
@@ -177,7 +177,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: Type of pseudopotential, e.g. 'Norm-conserving' or 'Ultrasoft'",
       "name": "x_qe_t_pp_type",
       "shape": [],
       "repeats": true,
@@ -187,7 +187,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: MD5 checksum of pseudopotential file",
       "name": "x_qe_t_pp_md5sum",
       "shape": [],
       "repeats": true,
@@ -197,7 +197,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: Number of Valence electrons in pseudopotential",
       "name": "x_qe_t_pp_valence",
       "shape": [],
       "repeats": true,
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Index of Pseudopotential on Espresso side",
       "name": "x_qe_pp_idx",
       "shape": [],
       "repeats": true,
@@ -217,7 +217,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Label of Pseudopotential on Espresso side",
       "name": "x_qe_pp_label",
       "shape": [],
       "repeats": true,
@@ -227,7 +227,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Filename of pseudopotential",
       "name": "x_qe_pp_filename",
       "shape": [],
       "repeats": true,
@@ -237,7 +237,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Type of pseudopotential, e.g. 'Norm-conserving' or 'Ultrasoft'",
       "name": "x_qe_pp_type",
       "shape": [],
       "repeats": true,
@@ -247,7 +247,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "MD5 checksum of pseudopotential file",
       "name": "x_qe_pp_md5sum",
       "shape": [],
       "repeats": true,
@@ -257,7 +257,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Number of Valence electrons in pseudopotential",
       "name": "x_qe_pp_valence",
       "shape": [],
       "repeats": true,
@@ -277,7 +277,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Atomic mass of species",
       "name": "x_qe_kind_mass",
       "shape": [],
       "repeats": true,
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Number of detected symmetry operations",
       "name": "x_qe_nsymm",
       "dtypeStr": "i",
       "shape": [],
@@ -296,7 +296,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Index of atom on Espresso side",
       "name": "x_qe_atom_idx",
       "dtypeStr": "i",
       "shape": [
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: Index of atom on Espresso side",
       "name": "x_qe_t_atom_idx",
       "dtypeStr": "i",
       "shape": [],
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary: Label of atom on Espresso side",
       "name": "x_qe_t_atom_labels",
       "dtypeStr": "C",
       "shape": [],
@@ -325,19 +325,19 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for atom position, x-component",
       "name": "x_qe_t_atpos_x",
       "dtypeStr": "f",
       "superNames": ["section_system"]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for atom position, y-component",
       "name": "x_qe_t_atpos_y",
       "dtypeStr": "f",
       "superNames": ["section_system"]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for atom position, z-component",
       "name": "x_qe_t_atpos_z",
       "dtypeStr": "f",
       "superNames": ["section_system"]
@@ -351,31 +351,31 @@
       ]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for k-point, x-component",
       "name": "x_qe_t_k_x",
       "dtypeStr": "f",
       "superNames": ["x_qe_t_section_kbands"]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for k-point, y-component",
       "name": "x_qe_t_k_y",
       "dtypeStr": "f",
       "superNames": ["x_qe_t_section_kbands"]
     },
     {
-      "description": "-",
+      "description": "Temporary storage for k-point, z-component",
       "name": "x_qe_t_k_z",
       "dtypeStr": "f",
       "superNames": ["x_qe_t_section_kbands"]
     },
     {
-      "description": "-",
+      "description": "Temporary: number of plane waves for this k-point",
       "name": "x_qe_t_k_pw",
       "dtypeStr": "i",
       "superNames": ["x_qe_t_section_kbands"]
     },
     {
-      "description": "-",
+      "description": "Temporary: k-point band energies",
       "name": "x_qe_t_k_point_energies",
       "dtypeStr": "C",
       "superNames": ["x_qe_t_section_kbands"]
