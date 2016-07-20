@@ -69,6 +69,14 @@
         "section_run"
       ]
     }, {
+      "description": "The geometry optimization method.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_geo_opt_method",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
       "description": "Contains information about the exchange-correlation functional.",
       "kindStr": "type_section",
       "name": "x_cpmd_section_xc_information",
@@ -283,7 +291,7 @@
       "kindStr": "type_section",
       "name": "x_cpmd_section_wave_function_initialization",
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_run"
       ]
     }, {
       "description": "Contains information about self-consistent field calculation",
@@ -293,7 +301,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Contains information about the self-consistent field iteration.",
+      "description": "Contains information about the self-consistent field iteration within a wavefunction optimization.",
       "kindStr": "type_section",
       "name": "x_cpmd_section_scf_iteration",
       "superNames": [
@@ -356,6 +364,202 @@
       "name": "x_cpmd_section_final_results",
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Geometry optimization initialization information.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_geo_opt_initialization",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Total number of molecular structures.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_total_number_of_molecular_structures",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_initialization"
+      ]
+    }, {
+      "description": "The initialized positions for geometry optimization. The ith row corresponds to the position for atom number i.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_initialized_positions",
+      "shape": ["number_of_atoms", 3],
+      "superNames": [
+        "x_cpmd_section_geo_opt_initialization"
+      ]
+    }, {
+      "description": "The initialized forces for geometry optimization. The ith row corresponds to the force for atom number i.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_initialized_forces",
+      "shape": ["number_of_atoms", 3],
+      "superNames": [
+        "x_cpmd_section_geo_opt_initialization"
+      ]
+    }, {
+      "description": "Time for initialization.",
+      "dtypeStr": "f",
+      "unit": "s",
+      "name": "x_cpmd_geo_opt_initialization_time",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_initialization"
+      ]
+    }, {
+      "description": "Contains information for a single geometry optimization step.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_geo_opt_step",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Contains information about the self-consistent field iteration within a geometry optimization step.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_geo_opt_scf_iteration",
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The scf step number (NFI) within geometry optimization step.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_geo_opt_scf_nfi",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_scf_iteration"
+      ]
+    }, {
+      "description": "Largest off-diagonal component (GEMAX) during SCF step within geometry optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_scf_gemax",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_scf_iteration"
+      ]
+    }, {
+      "description": "Average of the off-diagonal components (CNORM) during SCF step within geometry optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_scf_cnorm",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_scf_iteration"
+      ]
+    }, {
+      "description": "The total energy (ETOT) during SCF step within geometry optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_scf_etot",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cpmd_section_geo_opt_scf_iteration"
+      ]
+    }, {
+      "description": "The difference in total energy to the previous SCF energy (DETOT) within geometry optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_scf_detot",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cpmd_section_geo_opt_scf_iteration"
+      ]
+    }, {
+      "description": "The CPU time used during SCF step (TCPU) within geometry optimization step.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_scf_tcpu",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cpmd_section_geo_opt_scf_iteration"
+      ]
+    }, {
+      "description": "The positions from a geometry optimization step. The ith row corresponds to the position for atom number i.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_positions",
+      "shape": ["number_of_atoms", 3],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The forces from a geometry optimization step. The ith row corresponds to the force for atom number i.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_forces",
+      "shape": ["number_of_atoms", 3],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "Total number of SCF steps at the end of this geometry optimization step.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_geo_opt_step_total_number_of_scf_steps",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "Geometry optimization step number.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_geo_opt_step_number",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "Geometry optimization step number.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_geo_opt_step_number",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The largest absolute component of the force on any atom (GNMAX).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_gnmax",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "Average force on the atoms (GNORM).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_gnorm",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The largest absolute component of a constraint force on the atoms (CNSTR).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_cnstr",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The total energy at the end of a geometry optimization step (ETOT).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_etot",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The difference in total energy to the previous geometry optimization step (DETOT).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_detot",
+      "shape": [],
+      "unit": "J",
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "The CPU time used during geometry optimization step (TCPU).",
+      "dtypeStr": "f",
+      "name": "x_cpmd_geo_opt_step_tcpu",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cpmd_section_geo_opt_step"
       ]
     }, {
       "description": "Contains information about the timings.",
