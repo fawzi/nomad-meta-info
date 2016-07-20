@@ -503,14 +503,6 @@
         "x_cpmd_section_geo_opt_step"
       ]
     }, {
-      "description": "Geometry optimization step number.",
-      "dtypeStr": "i",
-      "name": "x_cpmd_geo_opt_step_number",
-      "shape": [],
-      "superNames": [
-        "x_cpmd_section_geo_opt_step"
-      ]
-    }, {
       "description": "The largest absolute component of the force on any atom (GNMAX).",
       "dtypeStr": "f",
       "name": "x_cpmd_geo_opt_step_gnmax",
