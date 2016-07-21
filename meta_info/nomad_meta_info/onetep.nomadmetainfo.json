@@ -18,7 +18,66 @@
       "superNames": [
         "section_run"
       ]
-    
+    }, {
+      "description": "forces",
+      "dtypeStr": "f",
+      "name": "x_onetep_atom_ionforces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "forces",
+      "dtypeStr": "f",
+      "name": "x_onetep_atom_local_potentialforces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "forces",
+      "dtypeStr": "f",
+      "name": "x_onetep_atom_nonlocal_potentialforces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "forces",
+      "dtypeStr": "f",
+      "name": "x_onetep_atom_nonself_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "forces",
+      "dtypeStr": "f",
+      "name": "x_onetep_atom_correction_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_run"
+      ]
     }, {
       "description": "Net charge of system",
       "dtypeStr": "f",
@@ -2508,7 +2567,51 @@
         "section_single_configuration_calculation",
         "section_run"
       ]
-    
+     }, {
+      "description": "Temporary storing converged atom forces (ev/A)",
+      "dtypeStr": "C",
+      "name": "x_onetep_store_atom_ionforces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
+      ]
+    }, {
+      "description": "Temporary storing converged atom forces (ev/A)",
+      "dtypeStr": "C",
+      "name": "x_onetep_store_atom_localforces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
+      ]
+    }, {
+      "description": "Temporary storing converged atom forces (ev/A)",
+      "dtypeStr": "C",
+      "name": "x_onetep_store_atom_nonlocalforces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
+      ]
+    }, {
+      "description": "Temporary storing converged atom forces (ev/A)",
+      "dtypeStr": "C",
+      "name": "x_onetep_store_atom_nonselfforces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
+      ]
+    }, {
+      "description": "Temporary storing converged atom forces (ev/A)",
+      "dtypeStr": "C",
+      "name": "x_onetep_store_atom_corrforces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
+      ]
     }, {
       "description": "Temporary storing converged Raman susceptibility tensor",
       "dtypeStr": "C",
