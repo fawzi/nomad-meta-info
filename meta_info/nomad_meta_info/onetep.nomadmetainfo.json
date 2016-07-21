@@ -1959,6 +1959,91 @@
         "x_onetep_section_edft_spin_iterations"
       ]
     }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_occupancy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_edft_spin_iterations"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_electronic_dipole_moment_store",
+      "repeats": true,
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_electronic_dipole_moment",
+      "shape": [3],
+      "repeats": true,
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+  
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_electronic_dipole_moment_magnitude",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_ionic_dipole_moment_magnitude",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_dipole_moment_magnitude",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_ionic_dipole_moment_store",
+      "repeats": true,
+      "shape": [3],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_ionic_dipole_moment",
+      "shape": [3],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_dipole_moment_store",
+      "repeats": true,
+      "shape": [3],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
+      "description": "",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_dipole_moment",
+      "shape": [3],
+      "superNames": [
+        "x_onetep_section_dipole"
+      ]
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_tddft",
@@ -1985,6 +2070,13 @@
       "name": "x_onetep_section_atom_positions",
       "superNames": [
         "section_system"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_dipole",
+      "superNames": [
+        "section_run"
       ]
     }, {
       "description": "-",
@@ -2368,6 +2460,33 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "x_onetep_orbital_energy",
+       "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_orbital_information"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_onetep_orbital_occupancy_store",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_orbital_information"
+      ]
+     }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "x_onetep_orbital_number_store",
+       "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_orbital_information"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_onetep_orbital_energy_store",
        "repeats": true,
       "shape": [],
       "superNames": [
