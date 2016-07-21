@@ -2283,6 +2283,7 @@
       "description": "-",
       "dtypeStr": "i",
       "name": "x_onetep_orbital_number",
+       "repeats": true,
       "shape": [],
       "superNames": [
         "x_onetep_section_orbital_information"
@@ -2291,6 +2292,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "x_onetep_orbital_energy",
+       "repeats": true,
       "shape": [],
       "superNames": [
         "x_onetep_section_orbital_information"
@@ -2299,6 +2301,7 @@
       "description": "-",
       "dtypeStr": "f",
       "name": "x_onetep_orbital_occupancy",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_onetep_section_orbital_information"
