@@ -88,7 +88,7 @@
       "kindStr": "type_section",
       "name": "x_cpmd_section_system_information",
       "superNames": [
-        "section_system"
+        "section_run"
       ]
     }, {
       "description": "Contains information about the pseudopotentials.",
@@ -164,7 +164,7 @@
       "kindStr": "type_section",
       "name": "x_cpmd_section_supercell",
       "superNames": [
-        "section_system"
+        "section_run"
       ]
     }, {
       "description": "The symmetry of the cell.",
@@ -490,14 +490,6 @@
       "description": "Total number of SCF steps at the end of this geometry optimization step.",
       "dtypeStr": "i",
       "name": "x_cpmd_geo_opt_step_total_number_of_scf_steps",
-      "shape": [],
-      "superNames": [
-        "x_cpmd_section_geo_opt_step"
-      ]
-    }, {
-      "description": "Geometry optimization step number.",
-      "dtypeStr": "i",
-      "name": "x_cpmd_geo_opt_step_number",
       "shape": [],
       "superNames": [
         "x_cpmd_section_geo_opt_step"

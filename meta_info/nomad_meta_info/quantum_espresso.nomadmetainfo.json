@@ -54,8 +54,17 @@
     },
     {
       "description": "Short name of User-enforced XC functional; overrides the setting implied by the pseudopotentials",
-      "name": "x_qe_xc_functional_shortname_enforced",
+      "name": "x_qe_t_xc_functional_shortname_enforced",
       "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "True if the user enforced setting the XC functional; overrides the setting implied by the pseudopotentials",
+      "name": "x_qe_xc_functional_user_enforced",
+      "dtypeStr": "b",
       "shape": [],
       "superNames": [
         "section_method"
@@ -64,6 +73,15 @@
     {
       "description": "Short name of XC functional used in calculation",
       "name": "x_qe_xc_functional_shortname",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: index number representation of XC functional",
+      "name": "x_qe_t_xc_functional_num",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
