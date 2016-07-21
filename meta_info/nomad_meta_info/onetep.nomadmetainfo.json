@@ -635,6 +635,75 @@
         "section_run"
       ]   
     }, {
+       "description": "nbo_atom kind",
+      "dtypeStr": "C",
+      "name": "x_onetep_nbo_atom_label_store",
+      "shape": [
+         "number_of_atoms"
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]        
+    }, {
+       "description": "nbo_atom kind",
+      "dtypeStr": "C",
+      "name": "x_onetep_nbo_atom_labels",
+      "shape": [
+         "number_of_atoms"
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]  
+    }, {
+       "description": "nbo_population",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_nbo_population_store",
+      "shape": [
+         "number_of_atoms"
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]       
+    }, {
+       "description": "nbo_population",
+      "dtypeStr": "f",
+      "name": "x_onetep_total_nbo_population",
+      "shape": [
+         "number_of_atoms"
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]       
+    }, {
+       "description": "nbo_charges",
+      "dtypeStr": "f",
+      "name": "x_onetep_nbo_partial_charge_store",
+      "shape": [
+         "number_of_atoms"
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]     
+    }, {
+       "description": "nbo_charges",
+      "dtypeStr": "f",
+      "name": "x_onetep_nbo_partial_charge",
+      "shape": [
+         "number_of_atoms"
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]     
+    }, {
+       "description": "nbo_charges",
+      "dtypeStr": "f",
+      "name": "x_onetep_nbo_total_charge",
+      "shape": [
+            ],
+      "superNames": [
+        "x_onetep_section_nbo_population_analysis"
+      ]     
+    }, {
        "description": "Mulliken_atom_index",
       "dtypeStr": "C",
       "name": "x_onetep_mulliken_atom_index",
@@ -642,7 +711,7 @@
          "number_of_atoms"
         ],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]   
     }, {
        "description": "Mulliken_atom kind",
@@ -652,7 +721,7 @@
          "number_of_atoms"
             ],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]        
     }, {
        "description": "Mulliken_total_contribution",
@@ -662,7 +731,7 @@
         "number_of_atoms"
       ],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]     
     }, {
        "description": "Mulliken_total_contribution",
@@ -672,7 +741,7 @@
         "number_of_atoms"
       ],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]   
     }, {
        "description": "Mulliken_spin",
@@ -682,7 +751,7 @@
          "number_of_atoms"
       ],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]     
     }, {
        "description": "Mulliken_spin",
@@ -690,7 +759,7 @@
       "name": "x_onetep_spin_store",
       "shape": [],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]     
     }, {
        "description": "Mulliken_charges",
@@ -700,7 +769,7 @@
          "number_of_atoms"
         ],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]       
     }, {
        "description": "Mulliken_charges",
@@ -709,7 +778,7 @@
       "shape": [
        "number_of_atoms"],
       "superNames": [
-        "x_onetep_section_population_analysis"
+        "x_onetep_section_mulliken_population_analysis"
       ]         
     }, {
        "description": "md_energy_components",
@@ -1970,7 +2039,14 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_onetep_section_population_analysis",
+      "name": "x_onetep_section_mulliken_population_analysis",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_nbo_population_analysis",
       "superNames": [
         "section_run"
       ]
