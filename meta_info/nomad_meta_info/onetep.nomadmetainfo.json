@@ -2182,6 +2182,69 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "f",
+      "name": "x_onetep_kernel_cutoff",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "x_onetep_kernel_diis_maxit",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_onetep_kernel_diis_coeff",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_onetep_kernel_diis_thershold",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_onetep_kernel_diis_size",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "x_onetep_kernel_diis_type_store",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "x_onetep_kernel_diis_type",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "Value of the shift in energy of the conduction bands with the level-shifting technique during the inner loop DIIS. Reference: ",
+      "dtypeStr": "f",
+      "name": "x_onetep_kernel_diis_lshift",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "x_onetep_kernel_diis_linear_iter",
+      "superNames": [
+        "x_onetep_section_kernel_parameters"
+      ]
+    }, {
+      "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_tddft",
       "superNames": [
@@ -2290,6 +2353,20 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_optics_parameters",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_ngwf_parameters",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_kernel_parameters",
       "superNames": [
         "section_run"
       ]
@@ -2932,6 +3009,14 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Name type",
+      "dtypeStr": "C",
+      "name": "x_onetep_disp_method_name_store",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Name type",
