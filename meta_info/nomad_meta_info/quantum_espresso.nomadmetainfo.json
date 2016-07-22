@@ -80,12 +80,48 @@
       ]
     },
     {
-      "description": "Temporary: index number representation of XC functional",
-      "name": "x_qe_t_xc_functional_num",
+      "description": "QE Index number representation of XC functional",
+      "name": "x_qe_xc_functional_num",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "section_method"
+      ]
+    },
+    {
+      "description": "Name of XC functional component in Quantum Espresso context",
+      "name": "x_qe_xc_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about meaning of XC functional component",
+      "name": "x_qe_xc_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Name of Index within Quantum Espresso where XC functional component was set from",
+      "name": "x_qe_xc_index_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Index value within Quantum Espresso where XC functional component was set from",
+      "name": "x_qe_xc_index",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
       ]
     },
     {
