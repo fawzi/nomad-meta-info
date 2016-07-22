@@ -17,6 +17,50 @@
       ]
     },
     {
+      "name": "x_qe_section_compile_options",
+      "kindStr": "type_section",
+      "description": "section for compile-time options of Quantum Espresso",
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
+      "description": "Maximum number of different atom species",
+      "name": "x_qe_ntypx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum dimension of radial grid",
+      "name": "x_qe_ndmx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of k-points",
+      "name": "x_qe_npk",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum non local angular momentum",
+      "name": "x_qe_lmaxx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
       "description": "Lattice Parameter 'a', constant during a run and used as unit in other quantities",
       "name": "x_qe_alat",
       "dtypeStr": "f",
