@@ -420,13 +420,13 @@
         "x_onetep_section_geom_optimisation_method"
       ]
      }, {
-      "description": "tolerance for stress components in geometry optimisation (GPa)",
+      "description": "Specifies the estimated average phonon frequency (as an energy) used to initialize the inverse Hessian matrix for geometry optimization. (eV))",
       "dtypeStr": "f",
-      "name": "x_onetep_geometry_stress_com_tolerance",
+      "name": "geometry_optimization_frequency_tol",
       "shape": [],
       "superNames": [
         "section_sampling_method"
-      ]  
+      ]    
     }, {
       "description": "x_onetep_Initialisation_time",
       "dtypeStr": "f",
@@ -548,6 +548,22 @@
       "superNames": [
         "x_onetep_section_scf_parameters"
       ]  
+    }, {
+      "description": "x_onetep_elec_cg_max",
+      "dtypeStr": "f",
+      "name": "x_onetep_elec_cg_max",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_scf_parameters"
+      ] 
+    }, {
+      "description": "x_onetep_elec_force_tol",
+      "dtypeStr": "f",
+      "name": "x_onetep_elec_force_tol",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_scf_parameters"
+      ]   
     }, {
       "description": "Relativity treatment in onetep convention",
       "dtypeStr": "C",
@@ -1431,6 +1447,14 @@
         "section_sampling_method"
       ]       
     }, {
+      "description": "geom optim number of consecutive iterations during which convergence must be met",
+      "dtypeStr": "i",
+      "name": "geometry_optimization_geometry_conv_win",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]    
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_vibrational_frequencies",
@@ -2017,7 +2041,69 @@
       "superNames": [
         "x_onetep_section_edft_spin_iterations"
       ]
-    
+    }, {
+      "description": "edft_commutator_thres",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_commutator_thres",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]
+    }, {
+      "description": "edft_energy_thres",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_energy_thres",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]
+     }, {
+      "description": "edft_entropy_thres",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_entropy_thres",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]  
+    }, {
+      "description": "edft_extra_bands",
+      "dtypeStr": "i",
+      "name": "x_onetep_edft_extra_bands",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]    
+    }, {
+      "description": "edft_fermi_thres",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_fermi_thres",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ] 
+    }, {
+      "description": "edft_free_energy_thres",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_free_energy_thres",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ] 
+    }, {
+      "description": "edft_maxit",
+      "dtypeStr": "i",
+      "name": "x_onetep_edft_maxit",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]    
+    }, {
+      "description": "edft_rms_gradient_thres",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_rms_gradient_thres",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]  
+    }, {
+      "description": "edft_smearing_width ",
+      "dtypeStr": "f",
+      "name": "x_onetep_edft_smearing_width",
+      "superNames": [
+        "x_onetep_section_edft_parameters"
+      ]    
     }, {
       "description": "store dipole",
       "dtypeStr": "f",
@@ -2349,6 +2435,13 @@
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_md",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_edft_parameters",
       "superNames": [
         "section_run"
       ]  
