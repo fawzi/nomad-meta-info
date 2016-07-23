@@ -26,6 +26,14 @@
       ]
     },
     {
+      "name": "x_qe_section_parallelization_options",
+      "kindStr": "type_section",
+      "description": "section for run-time parallization options of Quantum Espresso",
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
       "name": "x_qe_section_compile_options",
       "kindStr": "type_section",
       "description": "section for compile-time options of Quantum Espresso",
@@ -67,6 +75,15 @@
       "shape": [],
       "superNames": [
         "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "nthreads",
+      "name": "x_qe_nthreads",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_run"
       ]
     },
     {
