@@ -177,6 +177,15 @@
       ]
     },
     {
+      "description": "Bravais lattice index, constant during a run",
+      "name": "x_qe_ibrav",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Lattice Parameter 'a', constant during a run and used as unit in other quantities",
       "name": "x_qe_alat",
       "dtypeStr": "f",
@@ -186,9 +195,27 @@
       ]
     },
     {
+      "description": "Volume of unit cell",
+      "name": "x_qe_cell_volume",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Number of Atom species, a.k.a. unique Atom labels; a label may include symmetry-breaking suffices, e.g. 'Fe1' and 'Fe2', as some quantities can only prescribed per species and not per site",
       "name": "x_qe_number_of_species",
       "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
+      "description": "Number of electrons in system",
+      "name": "x_qe_number_of_electrons",
+      "dtypeStr": "f",
       "shape": [],
       "superNames": [
         "section_run"
@@ -215,6 +242,42 @@
     {
       "description": "Short name of User-enforced XC functional; overrides the setting implied by the pseudopotentials",
       "name": "x_qe_t_xc_functional_shortname_enforced",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Convergence threshold for potentials",
+      "name": "x_qe_potential_convergence_threshold",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Mixing scheme: parameter beta",
+      "name": "x_qe_potential_mixing_beta",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Mixing scheme: number of previous iterations",
+      "name": "x_qe_potential_mixing_iterations",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Mixing scheme: type of mixing",
+      "name": "x_qe_potential_mixing_scheme",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
