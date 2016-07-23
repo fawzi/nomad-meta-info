@@ -348,6 +348,26 @@
       ]
     },
     {
+      "description": "Temporary storage for QE cell dimensions",
+      "name": "x_qe_t_celldm",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "QE cell dimensions",
+      "name": "x_qe_celldm",
+      "dtypeStr": "f",
+      "shape": [
+        6
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Temporary storage for direct lattice vectors, x-component",
       "name": "x_qe_t_vec_a_x",
       "dtypeStr": "f",
