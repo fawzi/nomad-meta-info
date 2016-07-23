@@ -494,6 +494,16 @@
       ]
     },
     {
+      "description": "Temporary: comment about pseudopotential",
+      "name": "x_qe_t_pp_comment",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "Temporary: Number of Valence electrons in pseudopotential",
       "name": "x_qe_t_pp_valence",
       "shape": [],
@@ -546,6 +556,16 @@
     {
       "description": "MD5 checksum of pseudopotential file",
       "name": "x_qe_pp_md5sum",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Comment about pseudopotential",
+      "name": "x_qe_pp_comment",
       "shape": [],
       "repeats": true,
       "dtypeStr": "C",
