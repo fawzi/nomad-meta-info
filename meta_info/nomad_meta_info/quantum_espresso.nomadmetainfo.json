@@ -87,6 +87,15 @@
       ]
     },
     {
+      "description": "Parallelization options",
+      "name": "x_qe_compile_parallel_version",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
       "description": "Lattice Parameter 'a', constant during a run and used as unit in other quantities",
       "name": "x_qe_alat",
       "dtypeStr": "f",
