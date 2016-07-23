@@ -26,7 +26,7 @@
       ]
     },
     {
-      "name": "x_qe_section_parallelization_options",
+      "name": "x_qe_section_parallel",
       "kindStr": "type_section",
       "description": "section for run-time parallization options of Quantum Espresso",
       "superNames": [
@@ -83,7 +83,7 @@
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
-        "section_run"
+        "x_qe_section_parallel"
       ]
     },
     {
