@@ -871,6 +871,70 @@
       "superNames": ["section_system"]
     },
     {
+      "description": "K-point info, number of k-points",
+      "name": "x_qe_nk",
+      "dtypeStr": "i",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary storage for k-point info, k-index",
+      "name": "x_qe_t_k_info_ik",
+      "dtypeStr": "i",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary storage for k-point info, x-component",
+      "name": "x_qe_t_k_info_vec_x",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary storage for k-point info, y-component",
+      "name": "x_qe_t_k_info_vec_y",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary storage for k-point info, z-component",
+      "name": "x_qe_t_k_info_vec_z",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary storage for k-point info, weight",
+      "name": "x_qe_t_k_info_wk",
+      "dtypeStr": "f",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "K-point info, k-index",
+      "name": "x_qe_k_info_ik",
+      "dtypeStr": "i",
+      "shape": [
+        "x_qe_nk"
+      ],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "K-point info, cartesian coordinate",
+      "name": "x_qe_k_info_vec",
+      "dtypeStr": "f",
+      "shape": [
+        "x_qe_nk",
+        3
+      ],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary storage for k-point info, weight",
+      "name": "x_qe_k_info_wk",
+      "dtypeStr": "f",
+      "shape": [
+        "x_qe_nk"
+      ],
+      "superNames": ["section_system"]
+    },
+    {
       "name": "x_qe_t_section_kbands",
       "kindStr": "type_section",
       "description": "pseudo-section for collecting k-hooks in band structure data",
