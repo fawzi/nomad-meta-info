@@ -926,11 +926,55 @@
       "superNames": ["section_system"]
     },
     {
-      "description": "Temporary storage for k-point info, weight",
+      "description": "K-point info, weight",
       "name": "x_qe_k_info_wk",
       "dtypeStr": "f",
       "shape": [
         "x_qe_nk"
+      ],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Dense-grid info, G cutoff",
+      "name": "x_qe_dense_g_cutoff",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Dense-grid info, number of G vectors",
+      "name": "x_qe_dense_g_vectors",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Dense-grid info, FFT grid x",
+      "name": "x_qe_t_dense_FFT_grid_x",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Dense-grid info, FFT grid y",
+      "name": "x_qe_t_dense_FFT_grid_y",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Dense-grid info, FFT grid z",
+      "name": "x_qe_t_dense_FFT_grid_z",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Dense-grid info, FFT grid",
+      "name": "x_qe_dense_FFT_grid",
+      "dtypeStr": "i",
+      "shape": [
+          3
       ],
       "superNames": ["section_system"]
     },
