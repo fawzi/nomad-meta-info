@@ -745,6 +745,24 @@
       "name": "x_qe_t_k_point_energies",
       "dtypeStr": "C",
       "superNames": ["x_qe_t_section_kbands"]
+    },
+    {
+      "description": "Iteration number",
+      "name": "x_qe_iteration_number",
+      "dtypeStr": "i",
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "PW cutoff used during iteration",
+      "name": "x_qe_iteration_ecutwfc",
+      "dtypeStr": "f",
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Mixing parameter Beta during iteration",
+      "name": "x_qe_iteration_beta",
+      "dtypeStr": "f",
+      "superNames": ["section_scf_iteration"]
     }
   ]
 }
