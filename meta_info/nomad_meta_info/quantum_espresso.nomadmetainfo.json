@@ -797,9 +797,27 @@
       ]
     },
     {
+      "description": "Number of ignored symmetry operations, due to uncommensurable fractional translations",
+      "name": "x_qe_nsymm_ignored",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary: Inversion symmetry",
+      "name": "x_qe_t_symm_inversion",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Inversion symmetry",
       "name": "x_qe_symm_inversion",
-      "dtypeStr": "C",
+      "dtypeStr": "b",
       "shape": [],
       "superNames": [
         "section_system"
