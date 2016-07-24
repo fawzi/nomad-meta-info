@@ -454,6 +454,16 @@
       ]
     },
     {
+      "description": "Temporary: Radial grid of Pseudopotential on Espresso side",
+      "name": "x_qe_t_pp_ndmx",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "Temporary: Label of Pseudopotential on Espresso side",
       "name": "x_qe_t_pp_label",
       "shape": [],
@@ -509,6 +519,16 @@
       "shape": [],
       "repeats": true,
       "dtypeStr": "f",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "Temporary: Number of beta functions in pseudopotential on Espresso side",
+      "name": "x_qe_t_pp_nbeta",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
       "superNames": [
         "x_qe_t_section_pseudopotential"
       ]
@@ -599,6 +619,26 @@
       "shape": [],
       "repeats": true,
       "dtypeStr": "f",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Radial grid of Pseudopotential on Espresso side",
+      "name": "x_qe_pp_ndmx",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Number of beta functions in pseudopotential on Espresso side",
+      "name": "x_qe_pp_nbeta",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
       "superNames": [
         "section_method_atom_kind"
       ]
