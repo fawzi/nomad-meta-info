@@ -1075,6 +1075,55 @@
       "superNames": ["section_method"]
     },
     {
+      "description": "Starting potential",
+      "name": "x_qe_starting_potential",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Starting charge (warning about negative starting charge)",
+      "name": "x_qe_starting_charge_negative",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Starting charge up (warning about negative starting charge)",
+      "name": "x_qe_starting_charge_negative_up",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Starting charge down (warning about negative starting charge)",
+      "name": "x_qe_starting_charge_negative_down",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Starting charge",
+      "name": "x_qe_starting_charge",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Starting charge, renormalized",
+      "name": "x_qe_starting_charge_renormalized",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Starting Wave functions",
+      "name": "x_qe_starting_wfc",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
       "name": "x_qe_t_section_kbands",
       "kindStr": "type_section",
       "description": "pseudo-section for collecting k-hooks in band structure data",
