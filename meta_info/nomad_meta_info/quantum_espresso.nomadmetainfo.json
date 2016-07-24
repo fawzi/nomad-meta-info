@@ -569,6 +569,46 @@
       ]
     },
     {
+      "description": "Temporary: beta function l index in pseudopotential on Espresso side",
+      "name": "x_qe_t_pp_l_idx",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "Temporary: beta function l in pseudopotential on Espresso side",
+      "name": "x_qe_t_pp_l",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "Temporary: Number of coefficients in pseudopotential",
+      "name": "x_qe_t_pp_ncoefficients",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "Temporary: Inner Radii of pseudopotential",
+      "name": "x_qe_t_rinner",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "Index of Pseudopotential on Espresso side",
       "name": "x_qe_pp_idx",
       "shape": [],
@@ -669,6 +709,26 @@
       ]
     },
     {
+      "description": "Number of coefficients in pseudopotential",
+      "name": "x_qe_pp_ncoefficients",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Temporary: Inner Radii of pseudopotential",
+      "name": "x_qe_rinner",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
       "description": "Atomic mass of species",
       "name": "x_qe_kind_mass",
       "shape": [],
@@ -691,6 +751,26 @@
     {
       "description": "Number of beta functions in pseudopotential on Espresso side",
       "name": "x_qe_pp_nbeta",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Beta function l index in pseudopotential on Espresso side",
+      "name": "x_qe_pp_l_idx",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Beta function l in pseudopotential on Espresso side",
+      "name": "x_qe_pp_l",
       "shape": [],
       "repeats": true,
       "dtypeStr": "i",
