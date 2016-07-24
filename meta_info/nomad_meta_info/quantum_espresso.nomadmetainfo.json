@@ -78,6 +78,41 @@
       ]
     },
     {
+      "name": "x_qe_t_section_pp_report",
+      "kindStr": "type_section",
+      "description": "section to collect 'pseudopotential report' information in new QE, used only for 'old', non-UPF pseudopotentials",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: PP report: species number",
+      "name": "x_qe_t_pp_report_species",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_t_section_pp_report"
+      ]
+    },
+    {
+      "description": "Temporary: PP report: pp version",
+      "name": "x_qe_t_pp_report_version",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_qe_t_section_pp_report"
+      ]
+    },
+    {
+      "description": "Temporary: PP report: parsed line",
+      "name": "x_qe_t_pp_report_line",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_qe_t_section_pp_report"
+      ]
+    },
+    {
       "description": "nthreads",
       "name": "x_qe_nthreads",
       "dtypeStr": "i",
@@ -586,6 +621,26 @@
     {
       "description": "Comment about pseudopotential",
       "name": "x_qe_pp_comment",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Pseudopotential report: version of PP",
+      "name": "x_qe_pp_report_version",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Pseudopotential report: contents of PP report",
+      "name": "x_qe_pp_report_contents",
       "shape": [],
       "repeats": true,
       "dtypeStr": "C",
