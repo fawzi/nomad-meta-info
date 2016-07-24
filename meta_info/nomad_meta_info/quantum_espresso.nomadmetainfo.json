@@ -979,6 +979,102 @@
       "superNames": ["section_system"]
     },
     {
+      "description": "Temporary: allocated arrays, name",
+      "name": "x_qe_t_allocated_array_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: allocated arrays, size",
+      "name": "x_qe_t_allocated_array_size",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: allocated arrays, dimensions",
+      "name": "x_qe_t_allocated_array_dimensions",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Allocated arrays, name",
+      "name": "x_qe_allocated_array_name",
+      "dtypeStr": "C",
+      "shape": [
+          "x_qe_allocated_arrays"
+      ],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Allocated arrays, size",
+      "name": "x_qe_allocated_array_size",
+      "dtypeStr": "f",
+      "shape": [
+          "x_qe_allocated_arrays"
+      ],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Allocated arrays, dimensions",
+      "name": "x_qe_allocated_array_dimensions",
+      "dtypeStr": "C",
+      "shape": [
+          "x_qe_allocated_arrays"
+      ],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: temporary arrays, name",
+      "name": "x_qe_t_temporary_array_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: temporary arrays, size",
+      "name": "x_qe_t_temporary_array_size",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: temporary arrays, dimensions",
+      "name": "x_qe_t_temporary_array_dimensions",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary arrays, name",
+      "name": "x_qe_temporary_array_name",
+      "dtypeStr": "C",
+      "shape": [
+          "x_qe_temporary_arrays"
+      ],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary arrays, size",
+      "name": "x_qe_temporary_array_size",
+      "dtypeStr": "f",
+      "shape": [
+          "x_qe_temporary_arrays"
+      ],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary arrays, dimensions",
+      "name": "x_qe_temporary_array_dimensions",
+      "dtypeStr": "C",
+      "shape": [
+          "x_qe_temporary_arrays"
+      ],
+      "superNames": ["section_method"]
+    },
+    {
       "name": "x_qe_t_section_kbands",
       "kindStr": "type_section",
       "description": "pseudo-section for collecting k-hooks in band structure data",
