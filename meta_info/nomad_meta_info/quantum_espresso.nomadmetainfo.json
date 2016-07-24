@@ -1124,6 +1124,18 @@
       "superNames": ["section_method"]
     },
     {
+      "description": "CPU time, setup up until first iteration",
+      "name": "x_qe_time_setup_cpu1_end",
+      "dtypeStr": "f",
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Per-process dynamical memory",
+      "name": "x_qe_per_process_mem",
+      "dtypeStr": "f",
+      "superNames": ["section_method"]
+    },
+    {
       "name": "x_qe_t_section_kbands",
       "kindStr": "type_section",
       "description": "pseudo-section for collecting k-hooks in band structure data",
