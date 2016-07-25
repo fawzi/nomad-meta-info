@@ -1062,7 +1062,7 @@
       "kindStr": "type_section",
       "name": "x_gaussian_section_elstruc_method",
       "superNames": [
-        "settings_elstruc_method"
+        "section_method"
       ]
     }, {
       "description": "Section containing total energy components",
@@ -1079,20 +1079,6 @@
       "shape": [],
       "superNames": [
         "x_gaussian_section_elstruc_method"
-      ]
-    }, {
-      "description": "Parameters connected with the definition of the electronic structure method.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_elstruc_method",
-      "superNames": [
-        "settings_elstruc"
-      ]
-    }, {
-      "description": "Parameters connected with the definition of the electronic structure *method*. *Method* can include, e.g., post Hartree-Fock methods",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_elstruc",
-      "superNames": [
-        "section_method"
       ]
     }, {
       "description": "electronic structure method, basis set, etc.",
