@@ -1190,6 +1190,66 @@
       "name": "x_qe_iteration_beta",
       "dtypeStr": "f",
       "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Davidson diagonalization with overlap",
+      "name": "x_qe_david_with_overlap",
+      "dtypeStr": "b",
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Convergence Threshold in scf iteration",
+      "name": "x_qe_iteration_ethr",
+      "dtypeStr": "f",
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Convergence Threshold in scf iteration, average of iterations",
+      "name": "x_qe_iteration_avg",
+      "dtypeStr": "f",
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Charge in iteration (up)",
+      "name": "x_qe_iteration_charge_negative_up",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Charge in iteration (down)",
+      "name": "x_qe_iteration_charge_negative_down",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Harris-Foulkes estimate of total energy",
+      "name": "x_qe_energy_total_harris_foulkes_estimate_iteration",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Accuracy estimate of total energy",
+      "name": "x_qe_energy_total_accuracy_estimate_iteration",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Harris-Foulkes estimate of total energy",
+      "name": "x_qe_energy_total_harris_foulkes_estimate",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Accuracy estimate of total energy",
+      "name": "x_qe_energy_total_accuracy_estimate",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
     }
   ]
 }
