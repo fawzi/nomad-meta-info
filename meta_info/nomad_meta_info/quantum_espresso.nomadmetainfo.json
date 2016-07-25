@@ -1285,6 +1285,20 @@
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Number of iterations after which self-consistency has been achieved",
+      "name": "x_qe_convergence_iterations",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Output datafile",
+      "name": "x_qe_output_datafile",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
     }
   ]
 }
