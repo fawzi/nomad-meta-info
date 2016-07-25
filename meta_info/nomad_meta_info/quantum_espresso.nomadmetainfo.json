@@ -1329,6 +1329,34 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "Temporary: QE profiling: function name",
+      "name": "x_qe_t_profile_function",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: QE profiling: cputime spent in function",
+      "name": "x_qe_t_profile_cputime",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: QE profiling: wallclock time spent in function",
+      "name": "x_qe_t_profile_walltime",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: QE profiling: how often was function called",
+      "name": "x_qe_t_profile_ncalls",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Temporary: QE profiling: who was the caller",
       "name": "x_qe_t_profile_caller",
       "dtypeStr": "C",
