@@ -419,6 +419,15 @@
       ]
     },
     {
+      "description": "Temporary: store fraction of exact-exchange before defining section_xc_functionals",
+      "name": "x_qe_t_exact_exchange_fraction",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Temporary storage for QE cell dimensions",
       "name": "x_qe_t_celldm",
       "dtypeStr": "C",
