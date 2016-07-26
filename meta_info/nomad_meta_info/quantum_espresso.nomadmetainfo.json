@@ -1099,6 +1099,50 @@
       "superNames": ["section_system"]
     },
     {
+      "description": "Smooth-grid info, G cutoff",
+      "name": "x_qe_smooth_g_cutoff",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Smooth-grid info, number of G vectors",
+      "name": "x_qe_smooth_g_vectors",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Smooth-grid info, FFT grid x",
+      "name": "x_qe_t_smooth_FFT_grid_x",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Smooth-grid info, FFT grid y",
+      "name": "x_qe_t_smooth_FFT_grid_y",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Smooth-grid info, FFT grid z",
+      "name": "x_qe_t_smooth_FFT_grid_z",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Smooth-grid info, FFT grid",
+      "name": "x_qe_smooth_FFT_grid",
+      "dtypeStr": "i",
+      "shape": [
+          3
+      ],
+      "superNames": ["section_system"]
+    },
+    {
       "description": "Temporary: allocated arrays, name",
       "name": "x_qe_t_allocated_array_name",
       "dtypeStr": "C",
