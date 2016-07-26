@@ -1273,6 +1273,13 @@
       "superNames": ["section_method"]
     },
     {
+      "description": "QE flag: core charge treated in real space",
+      "name": "x_qe_core_charge_realspace",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
       "description": "Starting potential",
       "name": "x_qe_starting_potential",
       "dtypeStr": "C",
