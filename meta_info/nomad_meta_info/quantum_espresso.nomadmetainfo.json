@@ -140,8 +140,26 @@
       ]
     },
     {
-      "description": "nthreads",
+      "description": "Number of OpenMP threads",
       "name": "x_qe_nthreads",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_parallel"
+      ]
+    },
+    {
+      "description": "Number of MPI ranks",
+      "name": "x_qe_nproc",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_parallel"
+      ]
+    },
+    {
+      "description": "Number of K-Point pools",
+      "name": "x_qe_npool",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -161,6 +179,15 @@
       "description": "Usage of gamma-only optimized algorithms",
       "name": "x_qe_gamma_algorithms",
       "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Algorithm used in subspace diagonalization",
+      "name": "x_qe_diagonalization_algorithm",
+      "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "section_method"
