@@ -1431,6 +1431,13 @@
       "superNames": ["section_scf_iteration"]
     },
     {
+      "description": "Temporary: Conjugate-Gradient diagonalization",
+      "name": "x_qe_t_cg_diag",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
       "description": "Diagonalization algorithm",
       "name": "x_qe_diagonalization_scheme",
       "dtypeStr": "C",
