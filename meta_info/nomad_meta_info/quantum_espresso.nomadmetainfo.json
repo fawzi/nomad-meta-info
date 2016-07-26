@@ -639,6 +639,16 @@
       ]
     },
     {
+      "description": "Temporary: shape of augmentation charge",
+      "name": "x_qe_t_pp_augmentation_shape",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "Temporary: Number of Valence electrons in pseudopotential",
       "name": "x_qe_t_pp_valence",
       "shape": [],
@@ -781,6 +791,16 @@
     {
       "description": "Comment about pseudopotential",
       "name": "x_qe_pp_comment",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Shape of augmentation charge",
+      "name": "x_qe_pp_augmentation_shape",
       "shape": [],
       "repeats": true,
       "dtypeStr": "C",
@@ -1431,6 +1451,13 @@
     {
       "description": "Accuracy estimate of total energy",
       "name": "x_qe_energy_total_accuracy_estimate",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "All-electron total energy from PAW",
+      "name": "x_qe_energy_total_paw_all_electron",
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
