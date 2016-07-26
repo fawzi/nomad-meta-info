@@ -1194,14 +1194,14 @@
     {
       "description": "Temporary: Davidson diagonalization with overlap",
       "name": "x_qe_t_david_with_overlap",
-      "dtypeStr": "b",
+      "dtypeStr": "C",
       "shape": [],
       "superNames": ["section_scf_iteration"]
     },
     {
-      "description": "Davidson diagonalization with overlap",
-      "name": "x_qe_david_with_overlap",
-      "dtypeStr": "b",
+      "description": "Diagonalization algorithm",
+      "name": "x_qe_diagonalization_scheme",
+      "dtypeStr": "C",
       "shape": [],
       "superNames": ["section_scf_iteration"]
     },
@@ -1296,14 +1296,14 @@
       "description": "Total energy decomposition: contribution name",
       "name": "x_qe_energy_decomposition_name",
       "dtypeStr": "C",
-      "shape": [],
+      "shape": [ "number_of_energy_components" ],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Total energy decomposition: contribution value",
       "name": "x_qe_energy_decomposition_value",
       "dtypeStr": "f",
-      "shape": [],
+      "shape": [ "number_of_energy_components" ],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
