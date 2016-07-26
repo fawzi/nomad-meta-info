@@ -51,7 +51,7 @@
       ]
     },
     {
-      "description": "Maximum dimension of radial grid",
+      "description": "Maximum dimension of radial grid (Pseudopotential)",
       "name": "x_qe_ndmx",
       "dtypeStr": "i",
       "shape": [],
@@ -69,8 +69,35 @@
       ]
     },
     {
-      "description": "Maximum non local angular momentum",
+      "description": "Maximum non local angular momentum (Pseudopotential)",
       "name": "x_qe_lmaxx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of beta functions (Pseudopotential)",
+      "name": "x_qe_nbrx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of coefficients in Q smoothing (Pseudopotential)",
+      "name": "x_qe_nqfx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of atomic wavefunctions per Pseudopotential",
+      "name": "x_qe_nchix",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
