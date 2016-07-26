@@ -1325,70 +1325,70 @@
       "name": "x_qe_profile_function",
       "dtypeStr": "C",
       "shape": [ "x_qe_number_of_profiling_entries" ],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "QE profiling: function name",
       "name": "x_qe_profile_function",
       "dtypeStr": "C",
       "shape": [ "x_qe_number_of_profiling_entries" ],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "QE profiling: cputime spent in function",
       "name": "x_qe_profile_cputime",
       "dtypeStr": "f",
       "shape": ["x_qe_number_of_profiling_entries"],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "QE profiling: wallclock time spent in function",
       "name": "x_qe_profile_walltime",
       "dtypeStr": "f",
       "shape": ["x_qe_number_of_profiling_entries"],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "QE profiling: how often was function called",
       "name": "x_qe_profile_ncalls",
       "dtypeStr": "i",
       "shape": ["x_qe_number_of_profiling_entries"],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "Temporary: QE profiling: function name",
       "name": "x_qe_t_profile_function",
       "dtypeStr": "C",
       "shape": [],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "Temporary: QE profiling: cputime spent in function",
       "name": "x_qe_t_profile_cputime",
       "dtypeStr": "f",
       "shape": [],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "Temporary: QE profiling: wallclock time spent in function",
       "name": "x_qe_t_profile_walltime",
       "dtypeStr": "f",
       "shape": [],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "Temporary: QE profiling: how often was function called",
       "name": "x_qe_t_profile_ncalls",
       "dtypeStr": "i",
       "shape": [],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     },
     {
       "description": "Temporary: QE profiling: who was the caller",
       "name": "x_qe_t_profile_caller",
       "dtypeStr": "C",
       "shape": [],
-      "superNames": ["section_single_configuration_calculation"]
+      "superNames": ["section_run"]
     }
   ]
 }
