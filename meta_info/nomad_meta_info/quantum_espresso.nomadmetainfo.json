@@ -1296,14 +1296,14 @@
       "description": "Total energy decomposition: contribution name",
       "name": "x_qe_energy_decomposition_name",
       "dtypeStr": "C",
-      "shape": [ "number_of_energy_components" ],
+      "shape": [ "x_qe_number_of_energy_components" ],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Total energy decomposition: contribution value",
       "name": "x_qe_energy_decomposition_value",
       "dtypeStr": "f",
-      "shape": [ "number_of_energy_components" ],
+      "shape": [ "x_qe_number_of_energy_components" ],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
@@ -1324,28 +1324,28 @@
       "description": "QE profiling: function name",
       "name": "x_qe_profile_function",
       "dtypeStr": "C",
-      "shape": [],
+      "shape": [ "x_qe_number_of_profiling_entries" ],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "QE profiling: cputime spent in function",
       "name": "x_qe_profile_cputime",
       "dtypeStr": "f",
-      "shape": [],
+      "shape": ["x_qe_number_of_profiling_entries"],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "QE profiling: wallclock time spent in function",
       "name": "x_qe_profile_walltime",
       "dtypeStr": "f",
-      "shape": [],
+      "shape": ["x_qe_number_of_profiling_entries"],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "QE profiling: how often was function called",
       "name": "x_qe_profile_ncalls",
       "dtypeStr": "i",
-      "shape": [],
+      "shape": ["x_qe_number_of_profiling_entries"],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
