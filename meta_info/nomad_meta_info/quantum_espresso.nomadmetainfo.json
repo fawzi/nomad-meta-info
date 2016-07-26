@@ -645,6 +645,36 @@
       ]
     },
     {
+      "description": "Temporary: renormalized WFCs in pseudopotential: filename",
+      "name": "x_qe_t_pp_renormalized_filename",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential",
+      "name": "x_qe_t_pp_renormalized_wfc",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential",
+      "name": "x_qe_pp_renormalized_wfc",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
       "description": "Index of Pseudopotential on Espresso side",
       "name": "x_qe_pp_idx",
       "shape": [],
