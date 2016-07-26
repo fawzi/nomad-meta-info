@@ -1532,6 +1532,27 @@
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: Section for User-specified band occupations",
+      "name": "x_qe_t_section_input_occupations",
+      "kindStr": "type_section",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: User-specified band occupations",
+      "name": "x_qe_t_input_occupations",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["x_qe_t_section_input_occupations"]
+    },
+    {
+      "description": "User-specified band occupations",
+      "name": "x_qe_input_occupations",
+      "dtypeStr": "f",
+      "shape": ["number_of_spin_channels", "number_of_k_points", "number_of_eigen_values"],
+      "superNames": ["section_method"]
     }
   ]
 }
