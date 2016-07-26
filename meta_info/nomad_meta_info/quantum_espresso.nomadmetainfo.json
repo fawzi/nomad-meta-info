@@ -284,6 +284,15 @@
       ]
     },
     {
+      "description": "-",
+      "name": "x_qe_sticks_old",
+      "dtypeStr": "C",
+      "shape": ["x_qe_number_of_sticks_lines"],
+      "superNames": [
+        "section_basis_set_cell_dependent"
+      ]
+    },
+    {
       "description": "Bravais lattice index, constant during a run",
       "name": "x_qe_ibrav",
       "dtypeStr": "i",
