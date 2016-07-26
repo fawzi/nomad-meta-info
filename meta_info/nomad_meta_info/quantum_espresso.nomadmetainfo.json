@@ -1322,7 +1322,7 @@
     },
     {
       "description": "QE profiling: caller name",
-      "name": "x_qe_profile_function",
+      "name": "x_qe_profile_caller",
       "dtypeStr": "C",
       "shape": [ "x_qe_number_of_profiling_entries" ],
       "superNames": ["section_run"]
