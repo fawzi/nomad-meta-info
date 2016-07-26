@@ -1389,6 +1389,34 @@
       "dtypeStr": "C",
       "shape": [],
       "superNames": ["section_run"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_force_atom_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_force_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_force_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_force_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
     }
   ]
 }
