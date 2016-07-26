@@ -26,6 +26,15 @@
       ]
     },
     {
+      "description": "Warnings from Quantum Espresso",
+      "name": "x_qe_warning",
+      "dtypeStr": "C",
+      "shape": ["x_qe_number_of_warnings"],
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
       "name": "x_qe_section_parallel",
       "kindStr": "type_section",
       "description": "section for run-time parallization options of Quantum Espresso",
