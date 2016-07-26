@@ -6,5 +6,28 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {
+      "description": "header (labels) of wien2k.",
+      "kindStr": "type_section",
+      "name": "x_wien2k_header",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Release date of wien2k.",
+      "dtypeStr": "C",
+      "name": "x_wien2k_release_date",
+      "shape": [],
+      "superNames": [
+        "x_wien2k_header"
+      ]
+    }, {
+      "description": "Version of wien2k.",
+      "dtypeStr": "C",
+      "name": "x_wien2k_version",
+      "shape": [],
+      "superNames": [
+        "x_wien2k_header"
+      ]
+    }]
 }
