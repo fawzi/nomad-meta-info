@@ -1259,6 +1259,20 @@
       "superNames": ["section_method"]
     },
     {
+      "description": "QE check: negative core charge",
+      "name": "x_qe_core_charge_negative",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "QE check: imaginary core charge",
+      "name": "x_qe_core_charge_imaginary",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
       "description": "Starting potential",
       "name": "x_qe_starting_potential",
       "dtypeStr": "C",
