@@ -797,6 +797,15 @@
       ]
     },
     {
+      "description": "Number of detected symmetry operations including fractional translations",
+      "name": "x_qe_nsymm_with_fractional_translation",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Number of ignored symmetry operations, due to uncommensurable fractional translations",
       "name": "x_qe_nsymm_ignored",
       "dtypeStr": "i",
