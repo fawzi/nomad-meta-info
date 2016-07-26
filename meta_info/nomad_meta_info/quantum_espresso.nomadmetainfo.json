@@ -448,6 +448,51 @@
       ]
     },
     {
+      "description": "Temporary storage for supercell translation vector in fractional coordinates, x-component",
+      "name": "x_qe_t_vec_supercell_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for supercell translation vector in fractional coordinates, y-component",
+      "name": "x_qe_t_vec_supercell_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for supercell translation vector in fractional coordinates, z-component",
+      "name": "x_qe_t_vec_supercell_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Supercell translation vector in fractional coordinates",
+      "name": "x_qe_vec_supercell",
+      "dtypeStr": "f",
+      "shape": [ 3 ],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Supercell flag",
+      "name": "x_qe_supercell",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Temporary storage for direct lattice vectors, x-component",
       "name": "x_qe_t_vec_a_x",
       "dtypeStr": "f",
