@@ -1321,6 +1321,13 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "QE profiling: caller name",
+      "name": "x_qe_profile_function",
+      "dtypeStr": "C",
+      "shape": [ "x_qe_number_of_profiling_entries" ],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "QE profiling: function name",
       "name": "x_qe_profile_function",
       "dtypeStr": "C",
