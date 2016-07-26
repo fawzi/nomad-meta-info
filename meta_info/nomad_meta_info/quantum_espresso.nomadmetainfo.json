@@ -1680,6 +1680,13 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "Reason why stress tensor is not implemented",
+      "name": "x_qe_stress_unimplemented",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Temporary: Section for User-specified band occupations",
       "name": "x_qe_t_section_input_occupations",
       "kindStr": "type_section",
