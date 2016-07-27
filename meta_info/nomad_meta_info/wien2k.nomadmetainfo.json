@@ -14,12 +14,44 @@
         "section_run"
       ]
     }, {
+      "description": "scf iteration number",
+      "dtypeStr": "i",
+      "name": "x_wien2k_iteration_number",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of independent atoms in the cell",
+      "dtypeStr": "i",
+      "name": "x_wien2k_number_of_independent_atoms",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Release date of wien2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_release_date",
       "shape": [],
       "superNames": [
         "x_wien2k_header"
+      ]
+    }, {
+      "description": "user given name for this system",
+      "dtypeStr": "C",
+      "name": "x_wien2k_system_name",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total number of atoms in the cell",
+      "dtypeStr": "i",
+      "name": "x_wien2k_total_atoms",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
       ]
     }, {
       "description": "Version of wien2k.",
