@@ -30,12 +30,28 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "exchange correlation potential option",
+      "dtypeStr": "i",
+      "name": "x_wien2k_potential_option",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Release date of wien2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_release_date",
       "shape": [],
       "superNames": [
         "x_wien2k_header"
+      ]
+    }, {
+      "description": "user given name for this system given in the struct file",
+      "dtypeStr": "C",
+      "name": "x_wien2k_system_nameIn",
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "user given name for this system",
@@ -53,6 +69,15 @@
       "superNames": [
         "section_scf_iteration"
       ]
+    }, {
+      "description": "unit cell volume",
+      "dtypeStr": "f",
+      "name": "x_wien2k_unit_cell_volume",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "m^3"
     }, {
       "description": "Version of wien2k.",
       "dtypeStr": "C",
