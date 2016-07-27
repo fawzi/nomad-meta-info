@@ -3016,9 +3016,17 @@
         "x_onetep_section_ngwf_parameters"
       ]
     }, {
+      "description": "x_onetep_ngwf_max_grad",
+      "dtypeStr": "f",
+      "name": "x_onetep_ngwf_max_grad",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_ngwf_parameters"
+      ]
+    }, {
       "description": "ngwf_threshold_orig",
       "dtypeStr": "f",
-      "name": "x_onetep_threshold_orig",
+      "name": "x_onetep_ngwf_threshold_orig",
       "shape": [],
       "superNames": [
         "x_onetep_section_ngwf_parameters"
