@@ -1598,55 +1598,139 @@
         "x_onetep_section_ts_scf"
       ]
     }, {
-      "description": "Iteration number",
-      "dtypeStr": "i",
-      "name": "x_onetep_tddft_iteration",
+      "description": "lrtddft energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_energy_store",
+      "repeats": true, 
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft_iterations"
+      ]  
+    }, {
+      "description": "lrtddft energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_energies",
       "repeats": true, 
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
     }, {
-      "description": "Iteration wall time (s)",
+      "description": "lrtddft energy",
       "dtypeStr": "f",
-      "name": "x_onetep_wall_time",
+      "name": "x_onetep_tddft_penalties_store",
+      "repeats": true, 
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft_iterations"
+      ]  
+    }, {
+      "description": "lrtddft energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_penalties",
       "repeats": true, 
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
     }, {
-      "description": "state number",
+      "description": "lrtddft energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_step_store",
+      "repeats": true, 
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft_iterations"
+      ]  
+    }, {
+      "description": "lrtddft energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_steps",
+      "repeats": true, 
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft"
+      ]  
+    }, {
+      "description": "change in omega",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_omega_change",
+      "repeats": true, 
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft"
+      ]  
+    }, {
+      "description": "rms gradient tddft",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_rms_gradient",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft"
+      ]  
+    }, {
+      "description": "number converged states",
       "dtypeStr": "i",
-      "name": "x_onetep_state_number",
+      "name": "x_onetep_tddft_number_conv_states",
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
     }, {
-      "description": "state energy",
+      "description": "exciations",
       "dtypeStr": "f",
-      "name": "x_onetep_state_energy",
+      "name": "x_onetep_tddft_excit_energy_store",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft_excitations"
+      ]  
+    }, {
+      "description": "excitations",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_excit_energies",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
     }, {
-      "description": "state energy error",
+      "description": "oscillator strenght",
       "dtypeStr": "f",
-      "name": "x_onetep_state_energy_error",
+      "name": "x_onetep_tddft_excit_oscill_str_store",
+      "repeats": true,
       "shape": [],
       "superNames": [
-        "x_onetep_section_tddft"
-      ] 
+        "x_onetep_section_tddft_excitations"
+      ]  
     }, {
-      "description": "calculation time",
+      "description": "oscillator strenght",
       "dtypeStr": "f",
-      "name": "x_onetep_tddft_calculation_time",
+      "name": "x_onetep_tddft_excit_oscill_str",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft"
-      ] 
+      ]  
+    }, {
+      "description": "excit_lifetime",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_excit_lifetime_store",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft_excitations"
+      ]  
+    }, {
+      "description": "excit_lifetime",
+      "dtypeStr": "f",
+      "name": "x_onetep_tddft_excit_lifetime",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft"
+      ]  
     }, {
        "description": "Pseudopotential",
       "dtypeStr": "f",
@@ -2202,6 +2286,20 @@
       "name": "x_onetep_section_tddft",
       "superNames": [
         "section_system"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_tddft_excitations",
+      "superNames": [
+        "x_onetep_section_tddft"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_tddft_iterations",
+      "superNames": [
+        "x_onetep_section_tddft"
       ]
     }, {
       "description": "-",
