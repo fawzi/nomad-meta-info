@@ -1213,89 +1213,49 @@
         "x_onetep_section_optics_parameters"
       ]
     }, {
-       "description": "number of excited states",
-      "dtypeStr": "i",
-      "name": "x_onetep_tddft_n_excited_states",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_tddft_parameters"
-      ]
-    }, {
-       "description": "number of states for forces",
-      "dtypeStr": "i",
-      "name": "x_onetep_tddft_n_states_forces",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_tddft_parameters"
-      ]
-    }, {
-       "description": "tolerance (eV)",
+       "description": "x_onetep_lr_tddft_cg_threshold",
       "dtypeStr": "f",
-      "name": "x_onetep_tddft_state_tolerance",
+      "name": "x_onetep_lr_tddft_cg_threshold",
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft_parameters"
       ]
     }, {
-       "description": "tolerance window iterations",
+       "description": "x_onetep_lr_tddft_kernel_cutoff",
+      "dtypeStr": "f",
+      "name": "x_onetep_lr_tddft_kernel_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_tddft_parameters"
+      ]
+    }, {
+       "description": "x_onetep_lr_tddft_maxit_cg",
       "dtypeStr": "i",
-      "name": "x_onetep_tddft_state_tolerance_window",
+      "name": "x_onetep_lr_tddft_maxit_cg",
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft_parameters"
       ]
     }, {
-       "description": "max number iterations",
+       "description": "x_onetep_lr_tddft_maxit_pen",
       "dtypeStr": "i",
-      "name": "x_onetep_tddft_max_iter",
+      "name": "x_onetep_lr_tddft_maxit_pen",
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft_parameters"
       ]
     }, {
-       "description": "number of extra states",
+       "description": "x_onetep_lr_tddft_num_states",
       "dtypeStr": "i",
-      "name": "x_onetep_tddft_extra_states",
+      "name": "x_onetep_lr_tddft_num_states",
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft_parameters"
       ]
     }, {
-       "description": "tddft functional",
-      "dtypeStr": "C",
-      "name": "x_onetep_tddft_functional",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_tddft_parameters"
-      ]
-    }, {
-       "description": "tddft method",
-      "dtypeStr": "C",
-      "name": "x_onetep_tddft_method",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_tddft_parameters"
-      ]
-    }, {
-       "description": "tddft eigenmethod",
-      "dtypeStr": "C",
-      "name": "x_onetep_tddft_eigenmethod",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_tddft_parameters"
-      ]
-    }, {
-       "description": "tddft approximation",
-      "dtypeStr": "C",
-      "name": "x_onetep_tddft_approximation",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_tddft_parameters"
-      ]
-    }, {
-       "description": "tddft position operator",
-      "dtypeStr": "C",
-      "name": "x_onetep_tddft_position_op",
+       "description": "x_onetep_lr_tddft_penalty_tol",
+      "dtypeStr": "f",
+      "name": "x_onetep_lr_tddft_penalty_tol",
       "shape": [],
       "superNames": [
         "x_onetep_section_tddft_parameters"
@@ -2366,13 +2326,6 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_onetep_section_tddft_parameters",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
       "name": "x_onetep_section_phonons",
       "superNames": [
         "section_run"
@@ -2487,14 +2440,21 @@
       "superNames": [
         "section_run"
       ]  
-     }, {
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_onetep_section_tddft_parameters",
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_scf_parameters",
       "superNames": [
         "section_run"
       ]  
-     }, {
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_onetep_section_electronic_spectroscpy_parameters",
@@ -2891,6 +2851,7 @@
       "superNames": [
         "x_onetep_section_eigenvalues_1"
       ]
+    
     }, {
       "description": "Temporary storing eigenvalues",
       "dtypeStr": "f",
@@ -3029,6 +2990,39 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
+     
+     }, {
+      "description": "ngwf_cg_max_step",
+      "dtypeStr": "i",
+      "name": "x_onetep_ngwf_cg_max_step",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_ngwf_parameters"
+      ]
+    }, {
+      "description": "ngwf_cg_type",
+      "dtypeStr": "C",
+      "name": "x_onetep_ngwf_cg_type",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_ngwf_parameters"
+      ]
+    }, {
+      "description": "ngwf_halo",
+      "dtypeStr": "f",
+      "name": "x_onetep_ngwf_halo",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_ngwf_parameters"
+      ]
+    }, {
+      "description": "ngwf_threshold_orig",
+      "dtypeStr": "f",
+      "name": "x_onetep_threshold_orig",
+      "shape": [],
+      "superNames": [
+        "x_onetep_section_ngwf_parameters"
+      ] 
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
