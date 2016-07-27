@@ -554,6 +554,29 @@
         "x_cpmd_section_geo_opt_step"
       ]
     }, {
+      "description": "Molecular dynamics initialization information.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_md_initialization",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The maximum number of steps requested. In MD, this is the number of MD steps, in single point calculations this is the number of scf cycles, in geometry optimization this is the number of optimization steps.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_max_steps",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
+      "description": "The temperature control method for ion dynamics.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_ion_temperature_control",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
       "description": "Contains information about the timings.",
       "kindStr": "type_section",
       "name": "x_cpmd_section_timing",
