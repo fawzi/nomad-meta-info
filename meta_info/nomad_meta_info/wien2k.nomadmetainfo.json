@@ -7,6 +7,33 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "position of atom x in internal units",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atom_pos_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom y in internal units",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atom_pos_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom z  in internal units",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atom_pos_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    }, {
       "description": "header (labels) of wien2k.",
       "kindStr": "type_section",
       "name": "x_wien2k_header",
@@ -20,6 +47,14 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of inequivalent atoms in the unit cell",
+      "dtypeStr": "i",
+      "name": "x_wien2k_nonequiv_atoms",
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "number of independent atoms in the cell",
@@ -44,6 +79,13 @@
       "shape": [],
       "superNames": [
         "x_wien2k_header"
+      ]
+    }, {
+      "description": "section containing a class of equivalent atoms",
+      "kindStr": "type_section",
+      "name": "x_wien2k_section_equiv_atoms",
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "user given name for this system given in the struct file",
