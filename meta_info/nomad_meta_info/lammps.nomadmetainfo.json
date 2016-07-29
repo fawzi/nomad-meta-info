@@ -232,5 +232,171 @@
       "superNames": [
         "section_run"
       ]
-    }]
+    }, {
+    "description":"test",
+    "name": "x_lammps_xlo_xhi",
+    "superNames": [
+      "section_topology"
+    ],
+    "dtypeStr": "C",
+    "shape": []
+  }, {
+    "description":"Filename of data file",
+    "name": "x_lammps_data_file_store",
+    "superNames": [
+      "section_topology"
+    ],
+    "dtypeStr": "C",
+    "shape": []
+  }, {
+    "description":"dummy",
+    "name": "x_lammps_dummy",
+    "superNames": [
+      "section_topology",
+      "section_run"
+    ],
+    "dtypeStr": "C",
+    "shape": []
+  },  {
+    "name": "x_lammps_dummy_text",
+    "description": "dummy text",
+    "superNames": [
+      "section_run"
+    ],
+    "dtypeStr": "C",
+    "shape": []
+  },   {
+    "name": "x_lammps_input_units_store",
+    "description": "It determines the units of all quantities specified in the input script and data file, as well as quantities output to the screen, log file, and dump files.",
+    "superNames": ["section_topology"],
+    "dtypeStr": "C",
+    "shape": []
+  },
+    {
+      "name": "x_lammps_data_bd_types_store",
+      "description": "store temporarly",
+      "superNames": ["section_topology"],
+      "dtypeStr": "i",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_bd_count_store",
+      "description": "store temporarly",
+      "superNames": ["section_topology"],
+      "dtypeStr": "i",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_ag_count_store",
+      "description": "store temporarly",
+      "superNames": ["section_topology"],
+      "dtypeStr": "i",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_at_types_store",
+      "description": "store temporarly",
+      "superNames": ["section_topology"],
+      "dtypeStr": "i",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_dh_count_store",
+      "description": "store temporarly",
+      "superNames": ["section_topology"],
+      "dtypeStr": "i",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_angles_store",
+      "description": "store temporarly",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_angle_list_store",
+      "description": "tmp",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_bond_list_store",
+      "description": "tmp",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_dihedral_list_store",
+      "description": "tmp",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_dihedral_coeff_list_store",
+      "description": "tmp",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_masses_store",
+      "description": "tmp",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_data_topo_list_store",
+      "description": "tmp",
+      "superNames": ["section_topology"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_trj_timestep_store",
+      "description": "tmp",
+      "superNames": ["section_system"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_trj_number_of_atoms_store",
+      "description": "tmp",
+      "superNames": ["section_system"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_trj_box_bound_store",
+      "description": "tmp",
+      "superNames": ["section_system"],
+      "dtypeStr": "C",
+      "shape": []
+    },    {
+      "name": "x_lammps_trj_box_bounds_store",
+      "description": "tmp",
+      "superNames": ["section_system"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_trj_variables_store",
+      "description": "tmp",
+      "superNames": ["section_system"],
+      "dtypeStr": "C",
+      "shape": []
+    },
+    {
+      "name": "x_lammps_trj_atoms_store",
+      "description": "tmp",
+      "superNames": ["section_system"],
+      "dtypeStr": "C",
+      "shape": []
+    }
+
+  ]
 }
