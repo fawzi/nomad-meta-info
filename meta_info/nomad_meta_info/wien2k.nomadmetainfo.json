@@ -1,0 +1,132 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the wien2k parser.  All names are expected to start with x_wien2k_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "position of atom x in internal units",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atom_pos_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom y in internal units",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atom_pos_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom z  in internal units",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atom_pos_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "header (labels) of wien2k.",
+      "kindStr": "type_section",
+      "name": "x_wien2k_header",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "scf iteration number",
+      "dtypeStr": "i",
+      "name": "x_wien2k_iteration_number",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of inequivalent atoms in the unit cell",
+      "dtypeStr": "i",
+      "name": "x_wien2k_nonequiv_atoms",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number of independent atoms in the cell",
+      "dtypeStr": "i",
+      "name": "x_wien2k_number_of_independent_atoms",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "exchange correlation potential option",
+      "dtypeStr": "i",
+      "name": "x_wien2k_potential_option",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Release date of wien2k.",
+      "dtypeStr": "C",
+      "name": "x_wien2k_release_date",
+      "shape": [],
+      "superNames": [
+        "x_wien2k_header"
+      ]
+    }, {
+      "description": "section containing a class of equivalent atoms",
+      "kindStr": "type_section",
+      "name": "x_wien2k_section_equiv_atoms",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "user given name for this system given in the struct file",
+      "dtypeStr": "C",
+      "name": "x_wien2k_system_nameIn",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "user given name for this system",
+      "dtypeStr": "C",
+      "name": "x_wien2k_system_name",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total number of atoms in the cell",
+      "dtypeStr": "i",
+      "name": "x_wien2k_total_atoms",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "unit cell volume",
+      "dtypeStr": "f",
+      "name": "x_wien2k_unit_cell_volume",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "m^3"
+    }, {
+      "description": "Version of wien2k.",
+      "dtypeStr": "C",
+      "name": "x_wien2k_version",
+      "shape": [],
+      "superNames": [
+        "x_wien2k_header"
+      ]
+    }]
+}

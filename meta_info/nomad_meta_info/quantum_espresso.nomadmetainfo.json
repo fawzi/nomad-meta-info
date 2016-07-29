@@ -26,6 +26,15 @@
       ]
     },
     {
+      "description": "Warnings from Quantum Espresso",
+      "name": "x_qe_warning",
+      "dtypeStr": "C",
+      "shape": ["x_qe_number_of_warnings"],
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
       "name": "x_qe_section_parallel",
       "kindStr": "type_section",
       "description": "section for run-time parallization options of Quantum Espresso",
@@ -51,7 +60,7 @@
       ]
     },
     {
-      "description": "Maximum dimension of radial grid",
+      "description": "Maximum dimension of radial grid (Pseudopotential)",
       "name": "x_qe_ndmx",
       "dtypeStr": "i",
       "shape": [],
@@ -69,8 +78,35 @@
       ]
     },
     {
-      "description": "Maximum non local angular momentum",
+      "description": "Maximum non local angular momentum (Pseudopotential)",
       "name": "x_qe_lmaxx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of beta functions (Pseudopotential)",
+      "name": "x_qe_nbrx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of coefficients in Q smoothing (Pseudopotential)",
+      "name": "x_qe_nqfx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_compile_options"
+      ]
+    },
+    {
+      "description": "Maximum number of atomic wavefunctions per Pseudopotential",
+      "name": "x_qe_nchix",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -113,8 +149,26 @@
       ]
     },
     {
-      "description": "nthreads",
+      "description": "Number of OpenMP threads",
       "name": "x_qe_nthreads",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_parallel"
+      ]
+    },
+    {
+      "description": "Number of MPI ranks",
+      "name": "x_qe_nproc",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "x_qe_section_parallel"
+      ]
+    },
+    {
+      "description": "Number of K-Point pools",
+      "name": "x_qe_npool",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -134,6 +188,15 @@
       "description": "Usage of gamma-only optimized algorithms",
       "name": "x_qe_gamma_algorithms",
       "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Algorithm used in subspace diagonalization",
+      "name": "x_qe_diagonalization_algorithm",
+      "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "section_method"
@@ -216,6 +279,15 @@
       "name": "x_qe_sticks_tot_PW",
       "dtypeStr": "i",
       "shape": [],
+      "superNames": [
+        "section_basis_set_cell_dependent"
+      ]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_sticks_old",
+      "dtypeStr": "C",
+      "shape": ["x_qe_number_of_sticks_lines"],
       "superNames": [
         "section_basis_set_cell_dependent"
       ]
@@ -392,6 +464,15 @@
       ]
     },
     {
+      "description": "Temporary: store fraction of exact-exchange before defining section_xc_functionals",
+      "name": "x_qe_t_exact_exchange_fraction",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Temporary storage for QE cell dimensions",
       "name": "x_qe_t_celldm",
       "dtypeStr": "C",
@@ -407,6 +488,51 @@
       "shape": [
         6
       ],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for supercell translation vector in fractional coordinates, x-component",
+      "name": "x_qe_t_vec_supercell_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for supercell translation vector in fractional coordinates, y-component",
+      "name": "x_qe_t_vec_supercell_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for supercell translation vector in fractional coordinates, z-component",
+      "name": "x_qe_t_vec_supercell_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Supercell translation vector in fractional coordinates",
+      "name": "x_qe_vec_supercell",
+      "dtypeStr": "f",
+      "shape": [ 3 ],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Supercell flag",
+      "name": "x_qe_supercell",
+      "dtypeStr": "b",
+      "shape": [],
       "superNames": [
         "section_system"
       ]
@@ -558,6 +684,16 @@
       ]
     },
     {
+      "description": "Temporary: shape of augmentation charge",
+      "name": "x_qe_t_pp_augmentation_shape",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "Temporary: Number of Valence electrons in pseudopotential",
       "name": "x_qe_t_pp_valence",
       "shape": [],
@@ -618,6 +754,36 @@
       ]
     },
     {
+      "description": "Temporary: renormalized WFCs in pseudopotential: filename",
+      "name": "x_qe_t_pp_renormalized_filename",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential",
+      "name": "x_qe_t_pp_renormalized_wfc",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential",
+      "name": "x_qe_pp_renormalized_wfc",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
       "description": "Index of Pseudopotential on Espresso side",
       "name": "x_qe_pp_idx",
       "shape": [],
@@ -670,6 +836,16 @@
     {
       "description": "Comment about pseudopotential",
       "name": "x_qe_pp_comment",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Shape of augmentation charge",
+      "name": "x_qe_pp_augmentation_shape",
       "shape": [],
       "repeats": true,
       "dtypeStr": "C",
@@ -797,6 +973,15 @@
       ]
     },
     {
+      "description": "Number of detected symmetry operations including fractional translations",
+      "name": "x_qe_nsymm_with_fractional_translation",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Number of ignored symmetry operations, due to uncommensurable fractional translations",
       "name": "x_qe_nsymm_ignored",
       "dtypeStr": "i",
@@ -874,6 +1059,18 @@
       "description": "K-point info, number of k-points",
       "name": "x_qe_nk",
       "dtypeStr": "i",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "K-point info, number of smearing technique",
+      "name": "x_qe_ngauss",
+      "dtypeStr": "i",
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "K-point info, smearing width",
+      "name": "x_qe_smearing_width",
+      "dtypeStr": "f",
       "superNames": ["section_system"]
     },
     {
@@ -979,6 +1176,50 @@
       "superNames": ["section_system"]
     },
     {
+      "description": "Smooth-grid info, G cutoff",
+      "name": "x_qe_smooth_g_cutoff",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Smooth-grid info, number of G vectors",
+      "name": "x_qe_smooth_g_vectors",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Smooth-grid info, FFT grid x",
+      "name": "x_qe_t_smooth_FFT_grid_x",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Smooth-grid info, FFT grid y",
+      "name": "x_qe_t_smooth_FFT_grid_y",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Temporary: Smooth-grid info, FFT grid z",
+      "name": "x_qe_t_smooth_FFT_grid_z",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_system"]
+    },
+    {
+      "description": "Smooth-grid info, FFT grid",
+      "name": "x_qe_smooth_FFT_grid",
+      "dtypeStr": "i",
+      "shape": [
+          3
+      ],
+      "superNames": ["section_system"]
+    },
+    {
       "description": "Temporary: allocated arrays, name",
       "name": "x_qe_t_allocated_array_name",
       "dtypeStr": "C",
@@ -1072,6 +1313,27 @@
       "shape": [
           "x_qe_temporary_arrays"
       ],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "QE check: negative core charge",
+      "name": "x_qe_core_charge_negative",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "QE check: imaginary core charge",
+      "name": "x_qe_core_charge_imaginary",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "QE flag: core charge treated in real space",
+      "name": "x_qe_core_charge_realspace",
+      "dtypeStr": "b",
+      "shape": [],
       "superNames": ["section_method"]
     },
     {
@@ -1199,6 +1461,13 @@
       "superNames": ["section_scf_iteration"]
     },
     {
+      "description": "Temporary: Conjugate-Gradient diagonalization",
+      "name": "x_qe_t_cg_diag",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
       "description": "Diagonalization algorithm",
       "name": "x_qe_diagonalization_scheme",
       "dtypeStr": "C",
@@ -1272,8 +1541,29 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "All-electron total energy from PAW",
+      "name": "x_qe_energy_total_paw_all_electron",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Energy of highest occupied state",
       "name": "x_qe_highest_occupied",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Energy of lowest unoccupied state",
+      "name": "x_qe_lowest_unoccupied",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Fermi Energy",
+      "name": "x_qe_energy_fermi",
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
@@ -1459,6 +1749,34 @@
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Reason why stress tensor is not implemented",
+      "name": "x_qe_stress_unimplemented",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: Section for User-specified band occupations",
+      "name": "x_qe_t_section_input_occupations",
+      "kindStr": "type_section",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: User-specified band occupations",
+      "name": "x_qe_t_input_occupations",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["x_qe_t_section_input_occupations"]
+    },
+    {
+      "description": "User-specified band occupations",
+      "name": "x_qe_input_occupations",
+      "dtypeStr": "f",
+      "shape": ["number_of_spin_channels", "number_of_k_points", "number_of_eigen_values"],
+      "superNames": ["section_method"]
     }
   ]
 }

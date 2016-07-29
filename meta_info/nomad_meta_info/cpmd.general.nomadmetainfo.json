@@ -69,6 +69,24 @@
         "section_run"
       ]
     }, {
+      "description": "The time step for ions.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_time_step_ions",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
+      "description": "The time step for electrons.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_time_step_electrons",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
       "description": "The geometry optimization method.",
       "dtypeStr": "C",
       "name": "x_cpmd_geo_opt_method",
@@ -552,6 +570,225 @@
       "unit": "s",
       "superNames": [
         "x_cpmd_section_geo_opt_step"
+      ]
+    }, {
+      "description": "Molecular dynamics initialization information.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_md_initialization",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The maximum number of steps requested. In MD, this is the number of MD steps, in single point calculations this is the number of scf cycles, in geometry optimization this is the number of optimization steps.",
+      "dtypeStr": "i",
+      "name": "x_cpmd_max_steps",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
+      "description": "The temperature control method for ion dynamics.",
+      "dtypeStr": "C",
+      "name": "x_cpmd_ion_temperature_control",
+      "shape": [],
+      "superNames": [
+        "x_cpmd_section_run_type_information"
+      ]
+    }, {
+      "description": "Averaged quantities from a MD calculation.",
+      "kindStr": "type_section",
+      "name": "x_cpmd_section_md_averaged_quantities",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The mean electron kinetic energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_electron_kinetic_energy_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of electron kinetic energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_electron_kinetic_energy_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean ionic temperature.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_ionic_temperature_mean",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of ionic temperature.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_ionic_temperature_std",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean density functional energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_density_functional_energy_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of density functional energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_density_functional_energy_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean classical energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_classical_energy_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of classical energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_classical_energy_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean conserved energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_conserved_energy_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of conserved energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_conserved_energy_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean Nosé energy for electrons.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_nose_energy_electrons_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of Nosé energy for elctrons.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_nose_energy_electrons_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean Nosé energy for ions.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_nose_energy_ions_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of Nosé energy for ions.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_nose_energy_ions_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean constrains energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_constraints_energy_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of constraints energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_constraints_energy_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean restraints energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_restraints_energy_mean",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of restraints energy.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_restraints_energy_std",
+      "shape": [],
+      "unit": "Hartree",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean ion displacement.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_ion_displacement_mean",
+      "shape": [],
+      "unit": "Bohr",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The standard deviation of ion displacement.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_ion_displacement_std",
+      "shape": [],
+      "unit": "Bohr",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
+      ]
+    }, {
+      "description": "The mean cpu time.",
+      "dtypeStr": "f",
+      "name": "x_cpmd_cpu_time_mean",
+      "shape": [],
+      "unit": "s",
+      "superNames": [
+        "x_cpmd_section_md_averaged_quantities"
       ]
     }, {
       "description": "Contains information about the timings.",

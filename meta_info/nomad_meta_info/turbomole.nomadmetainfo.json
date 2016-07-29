@@ -7,6 +7,243 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "Number of eigenstate",
+      "dtypeStr": "f",
+      "name": "eigenstate_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ]
+    }, {
+      "description": "Charge Neutrality tolerance",
+      "dtypeStr": "f",
+      "name": "turbomole_charge_neutrality_tol",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "The label of the atoms in the system",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_atom_label",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "The number of atoms in the system",
+      "dtypeStr": "f",
+      "name": "turbomole_controlIn_atom_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Status mean here ON or OFF",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_basis_status",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Status mean here ON or OFF",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_cartesian_status",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "turbomole_controlIn_damping_parameter_min",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "turbomole_controlIn_damping_parameter_start",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "turbomole_controlIn_damping_parameter_step",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Status mean here ON or OFF",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_dipole_status",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Status mean here ON or OFF",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_global_status",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Status mean here ON or OFF",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_hessian_status",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Status mean here ON or OFF",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_interconversion_status",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "turbomole_controlIn_number_of_integral_stored",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "The kind of operating system",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_operating_system",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_pople_kind",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "turbomole_controlIn_scf_conv",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "turbomole_controlIn_scf_iter_limit",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_scfintunit_file",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "turbomole_controlIn_scfintunit_size",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "turbomole_controlIn_scfintunit_unit",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "The given symmetry of the system",
+      "dtypeStr": "C",
+      "name": "turbomole_controlIn_symmetry",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "i",
+      "name": "turbomole_controlIn_time_for_integral_calc",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "turbomole_controlInOut_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "turbomole_controlInOut_basis_cont_number",
       "dtypeStr": "i",
       "name": "turbomole_controlInOut_basis_cont_number",
@@ -30,123 +267,6 @@
       "superNames": [
         "section_basis_set"
       ]
-    }, {
-      "description": "Norm of the total energy at each iteration",
-      "dtypeStr": "f",
-      "name": "turbomole_energy_norm_scf_iteration",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "1e-ENERGY",
-      "dtypeStr": "f",
-      "name": "turbomole_energy_one_scf_iteration",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
-      ],
-      "units": "J"
-    }, {                                                                        
-      "description": "Total Energy for a given scf iteration",                                               
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_energy_total_scf_iteration",                             
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Final (converged or not) Total Energy",                                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_total_energy_final",                           
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",
-        "section_scf_iteration"
-      ],                                                                        
-      "units": "J"                                                              
-    }, {                                                                        
-      "description": "Final kinetic Energy",                   
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_kinetic_energy_final",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"                                                              
-    },{                                                                        
-      "description": "Final poetential energy",                   
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_potential_energy_final",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"                                                              
-    },{                                                                        
-      "description": "Final value from the virial theorem",                   
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_virial_theorem_final",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"                                                              
-    },{                                                                        
-      "description": "Final Wave Function Norm",                   
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_wave_func_norm",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ],                                                                        
-      "units": "J"                                                              
-    },{
-      "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
-      "dtypeStr": "f",
-      "name": "turbomole_energy_scf_damping",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "Tolerance of the total energy at each iteration",
-      "dtypeStr": "f",
-      "name": "turbomole_energy_tolerance_scf_iteration",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "1e-ENERGY",
-      "dtypeStr": "f",
-      "name": "turbomole_energy_two_scf_iteration",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
-      ],
-      "units": "J"
     }, {
       "description": "type of the used correlation functional",
       "dtypeStr": "C",
@@ -174,63 +294,6 @@
       "superNames": [
         "section_system"
       ]
-    }, {                                                                        
-      "description": "labels of atom",                                          
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlInOut_atom_labels",                                 
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system"                                                        
-      ]                                                                         
-    }, {
-      "description": "labels of atom",
-      "dtypeStr": "C",
-      "name": "turbomole_geometry_atom_labels",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "x component of atomic position",
-      "dtypeStr": "f",
-      "name": "turbomole_geometry_atom_positions_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "y component of atomic position",
-      "dtypeStr": "f",
-      "name": "turbomole_geometry_atom_positions_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "z component of atomic position",
-      "dtypeStr": "f",
-      "name": "turbomole_geometry_atom_positions_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {                                                                        
-      "description": "Charge per atom",                          
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_geometry_atom_charge",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_system"                                                        
-      ]                                                                        
     }, {
       "description": "The integration cells",
       "dtypeStr": "i",
@@ -304,32 +367,6 @@
         "section_system"
       ]
     }, {
-      "description": "Number of iteration",
-      "dtypeStr": "i",
-      "name": "turbomole_iteration_number",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "compute node",
-      "dtypeStr": "C",
-      "name": "turbomole_nodename",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "Version of the program that was used. Should contain either the official version name or the referenze hashtag of a git repository as well as the location of the repository.",
-      "dtypeStr": "C",
-      "name": "turbomole_program_version",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "program_info"
-      ]
-    }, {
       "description": "turbomole_controlInOut_tot_cartesian_func",
       "dtypeStr": "i",
       "name": "turbomole_controlInOut_tot_cartesian_func",
@@ -361,464 +398,538 @@
       "superNames": [
         "section_basis_set"
       ]
-    }, {                                                                        
-      "description": "Maximal resid. norm for Fia-block",                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_max_res_norm_fia_block",                                   
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration" 
-      ]                                                                         
-    }, {                                                                        
-      "description": "Maximal resid. fock norm",                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_max_res_norm_fock_norm",                                   
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"   
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_orbital_name_fia_block",                                   
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"  
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_orbital_name_fock_norm",                                   
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "turbomole_delta_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "energy_component",
         "section_scf_iteration"
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_virtual_orbital_shift",                               
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_delta_eigenvalues",                               
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "energy_component",                                                     
-        "section_scf_iteration"                                                 
       ],
-      "units": "J"                                                                         
-    }, {                                                                        
-      "description": "Maximum multipole moment used",                                                       
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_max_multipole_moment",                                
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"  
-      ]                                                                         
-    }, {                                                                        
-      "description": "Multipole precision parameter",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_multipole_precision_parameter",                                
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                     
-        "section_method"                                                 
-      ]                                                                         
-    }, {                                                                        
-      "description": "Minimum separation between cells",                                                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_min_separation_cells",                                
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                     
-        "section_method"                                                 
-      ]                                                                         
-    }, {                                                                        
-      "description": "Charge Neutrality tolerance",                        
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_charge_neutrality_tol",                                 
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Total charge",                        
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_total_charge",                                 
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " Coordinates of all systems centered about cell 0: Atomic label",                                            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_embed_geometry_atom_label",                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " Coordinates of all systems centered about cell 0: x-coordinate",                                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_geometry_atom_positions_x",                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " Coordinates of all systems centered about cell 0: y-coordinate",                                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_geometry_atom_positions_y",                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " Coordinates of all systems centered about cell 0: z-coordinate",                                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_geometry_atom_positions_z",                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " Coordinates of all systems centered about cell 0: Charge",                                            
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_geometry_atom_charge",                                         
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " QM cluster transformed to the center of cell 0 (au): label",
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_embed_qm_cluster_geometry_atom_label",                      
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " QM cluster transformed to the center of cell 0 (au): x-coordinate",
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_x",                      
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " QM cluster transformed to the center of cell 0 (au): y-coordinate",
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_y",                      
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": " QM cluster transformed to the center of cell 0 (au): z-coordinate",
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_z",                      
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "section for one list of eigenvalues at specific kpoint and spin",
-      "kindStr": "type_section",                                                
-      "name": "turbomole_eigenvalues_list",                              
-      "repeats": true,                                                          
-      "superNames": [                                                           
-        "turbomole_section_eigenvalues_spin"                                     
-      ]                                                                         
-    }, {                                                                        
-      "description": "section for full list of eigenvalues for different spin and kpoints",
-      "kindStr": "type_section",                                                
-      "name": "turbomole_section_eigenvalues_group",                             
-      "repeats": false,                                                         
-      "superNames": [                                                           
-        "section_scf_iteration"                                                 
-      ]                                                                         
-    }, {                                                                        
-      "description": "section for one spin orientation",                        
-      "kindStr": "type_section",                                                
-      "name": "turbomole_section_eigenvalues_spin",                              
-      "repeats": true,                                                          
-      "superNames": [                                                           
-        "turbomole_section_eigenvalues_group"                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "section for one list of eigenvalues at specific kpoint and spin",
-      "kindStr": "type_section",                                                
-      "name": "turbomole_section_eigenvalues_list",                              
-      "repeats": true,                                                          
-      "superNames": [                                                           
-        "turbomole_section_eigenvalues_spin"                                     
-      ]                                                                         
-    }, {                                                                        
-      "description": "Occupation of single eigenfunction",                      
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_eigenvalue_occupation",                                 
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "turbomole_section_eigenvalues_list"                                     
-      ]                                                                         
-    }, {                                                                        
-      "description": "Single eigenvalue",                                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_eigenvalue_eigenvalue",                                 
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "turbomole_section_eigenvalues_list"                                     
+      "units": "J"
+    }, {
+      "description": "Correlation energy at a given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_correlation_perturbativeGW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "Single eigenvalue",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_eigenvalue",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list"
       ]
-    }, {                                                                        
-      "description": "Irreducible representation of the eigenstate",                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_irreducible_representation_state",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "turbomole_section_eigenvalues_list"                                    
-      ]                                                                        
-    }, {                                                                        
-      "description": "Type of UHF molecular orbital",            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_uhfmo_type",                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_method"                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "The kind of operating system",            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_operating_system",                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
+    }, {
+      "description": "Exact exchange energy at given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_ExactExchange_perturbativeGW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "Self-energy at a given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_ExchangeCorrelation_perturbativeGW",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_ks_ExchangeCorrelation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "KS ground state energy at a given eigenstate needed in perturbative GW",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_ks_GroundState",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "Occupation of single eigenfunction",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_occupation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list"
+      ]
+    }, {
+      "description": "Quasiparticle energy at a given eigenstate from perturbative GW",
+      "dtypeStr": "f",
+      "name": "turbomole_eigenvalue_quasiParticle_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ],
+      "units": "J"
+    }, {
+      "description": "section for one list of eigenvalues at specific kpoint and spin",
+      "kindStr": "type_section",
+      "name": "turbomole_eigenvalues_list",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_spin"
+      ]
+    }, {
+      "description": " Coordinates of all systems centered about cell 0: Charge",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_geometry_atom_charge",
+      "shape": [],
+      "superNames": [
         "section_run",
-        "section_method"                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "The given symmetry of the system",            
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_symmetry",                     
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
+        "section_method"
+      ]
+    }, {
+      "description": " Coordinates of all systems centered about cell 0: Atomic label",
+      "dtypeStr": "C",
+      "name": "turbomole_embed_geometry_atom_label",
+      "shape": [],
+      "superNames": [
         "section_run",
-        "section_method"                                    
-      ]                                                                         
-    }, {                                                                        
-      "description": "The label of the atoms in the system",                        
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_atom_label",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "The number of atoms in the system",                        
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_controlIn_atom_number",                                   
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_pople_kind",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_controlIn_scf_iter_limit",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_controlIn_scf_conv",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_controlIn_number_of_integral_stored",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_controlIn_time_for_integral_calc",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_controlIn_damping_parameter_start",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_controlIn_damping_parameter_step",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                       
-      "dtypeStr": "f",                                                          
-      "name": "turbomole_controlIn_damping_parameter_min",                                
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_controlIn_scfintunit_unit",                      
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "i",                                                          
-      "name": "turbomole_controlIn_scfintunit_size",                      
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "-",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_scfintunit_file",                      
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Status mean here ON or OFF",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_cartesian_status",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Status mean here ON or OFF",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_basis_status",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Status mean here ON or OFF",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_global_status",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Status mean here ON or OFF",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_hessian_status",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Status mean here ON or OFF",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_dipole_status",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
-    }, {                                                                        
-      "description": "Status mean here ON or OFF",                                                       
-      "dtypeStr": "C",                                                          
-      "name": "turbomole_controlIn_interconversion_status",                            
-      "repeats": true,                                                          
-      "shape": [],                                                              
-      "superNames": [                                                           
-        "section_run",                                                          
-        "section_method"                                                        
-      ]                                                                         
+        "section_method"
+      ]
+    }, {
+      "description": " Coordinates of all systems centered about cell 0: x-coordinate",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_geometry_atom_positions_x",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": " Coordinates of all systems centered about cell 0: y-coordinate",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_geometry_atom_positions_y",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": " Coordinates of all systems centered about cell 0: z-coordinate",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_geometry_atom_positions_z",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": " QM cluster transformed to the center of cell 0 (au): label",
+      "dtypeStr": "C",
+      "name": "turbomole_embed_qm_cluster_geometry_atom_label",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": " QM cluster transformed to the center of cell 0 (au): x-coordinate",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_x",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": " QM cluster transformed to the center of cell 0 (au): y-coordinate",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_y",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": " QM cluster transformed to the center of cell 0 (au): z-coordinate",
+      "dtypeStr": "f",
+      "name": "turbomole_embed_qm_cluster_geometry_atom_positions_z",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Norm of the total energy at each iteration",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_norm_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "1e-ENERGY",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_one_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_scf_damping",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Tolerance of the total energy at each iteration",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_tolerance_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Total Energy for a given scf iteration",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_total_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "1e-ENERGY",
+      "dtypeStr": "f",
+      "name": "turbomole_energy_two_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "TODO:",
+      "dtypeStr": "f",
+      "name": "turbomole_ExchangeCorrelation_perturbativeGW_derivation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ]
+    }, {
+      "description": "Charge per atom",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "turbomole_geometry_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_positions_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_positions_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "turbomole_geometry_atom_positions_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "Irreducible representation of the eigenstate",
+      "dtypeStr": "C",
+      "name": "turbomole_irreducible_representation_state",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list"
+      ]
+    }, {
+      "description": "Number of iteration",
+      "dtypeStr": "i",
+      "name": "turbomole_iteration_number",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Final kinetic Energy",
+      "dtypeStr": "f",
+      "name": "turbomole_kinetic_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Maximum multipole moment used",
+      "dtypeStr": "i",
+      "name": "turbomole_max_multipole_moment",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Maximal resid. norm for Fia-block",
+      "dtypeStr": "f",
+      "name": "turbomole_max_res_norm_fia_block",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Maximal resid. fock norm",
+      "dtypeStr": "f",
+      "name": "turbomole_max_res_norm_fock_norm",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Minimum separation between cells",
+      "dtypeStr": "f",
+      "name": "turbomole_min_separation_cells",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Multipole precision parameter",
+      "dtypeStr": "f",
+      "name": "turbomole_multipole_precision_parameter",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "compute node",
+      "dtypeStr": "C",
+      "name": "turbomole_nodename",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "turbomole_orbital_name_fia_block",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "turbomole_orbital_name_fock_norm",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Final poetential energy",
+      "dtypeStr": "f",
+      "name": "turbomole_potential_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Version of the program that was used. Should contain either the official version name or the referenze hashtag of a git repository as well as the location of the repository.",
+      "dtypeStr": "C",
+      "name": "turbomole_program_version",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "program_info"
+      ]
+    }, {
+      "description": "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation",
+      "kindStr": "type_section",
+      "name": "turbomole_section_eigenvalues_group_perturbativeGW",
+      "repeats": false,
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "section for full list of eigenvalues for different spin and kpoints",
+      "kindStr": "type_section",
+      "name": "turbomole_section_eigenvalues_group",
+      "repeats": false,
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "section for one list of eigenvalues from a perturbative GW calculation",
+      "kindStr": "type_section",
+      "name": "turbomole_section_eigenvalues_list_perturbativeGW",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_spin"
+      ]
+    }, {
+      "description": "section for one list of eigenvalues at specific kpoint and spin",
+      "kindStr": "type_section",
+      "name": "turbomole_section_eigenvalues_list",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_spin"
+      ]
+    }, {
+      "description": "section for one spin orientation from a perturbative GW calculation",
+      "kindStr": "type_section",
+      "name": "turbomole_section_eigenvalues_spin_perturbativeGW",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_group_perturbativeGW"
+      ]
+    }, {
+      "description": "section for one spin orientation",
+      "kindStr": "type_section",
+      "name": "turbomole_section_eigenvalues_spin",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_group"
+      ]
+    }, {
+      "description": "Total charge",
+      "dtypeStr": "f",
+      "name": "turbomole_total_charge",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Final (converged or not) Total Energy",
+      "dtypeStr": "f",
+      "name": "turbomole_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Type of UHF molecular orbital",
+      "dtypeStr": "C",
+      "name": "turbomole_uhfmo_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Final value from the virial theorem",
+      "dtypeStr": "f",
+      "name": "turbomole_virial_theorem_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "turbomole_virtual_orbital_shift",
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Final Wave Function Norm",
+      "dtypeStr": "f",
+      "name": "turbomole_wave_func_norm",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "TODO:",
+      "dtypeStr": "f",
+      "name": "turbomole_Z_factor",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list_perturbativeGW"
+      ]
     }]
 }
