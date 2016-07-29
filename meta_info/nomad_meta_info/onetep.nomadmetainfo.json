@@ -395,7 +395,6 @@
       "superNames": [
         "section_run"
       ]  
-    
     }, {
       "description": "Index for number of iterations in geometry optimisation",
       "dtypeStr": "f",
@@ -412,7 +411,7 @@
       "superNames": [
         "x_onetep_section_geom_optimisation_method"
       ]
-     }, {
+    }, {
       "description": "Specifies the estimated average phonon frequency (as an energy) used to initialize the inverse Hessian matrix for geometry optimization. (eV))",
       "dtypeStr": "f",
       "name": "geometry_optimization_frequency_tol",
@@ -1833,6 +1832,7 @@
        "description": "NGWF iterations",
       "dtypeStr": "i",
       "name": "x_onetep_n_ngwf_iterations",
+      
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -1841,6 +1841,7 @@
       "description": "number_of_atoms",
       "dtypeStr": "i",
       "name": "x_onetep_number_of_atoms",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
