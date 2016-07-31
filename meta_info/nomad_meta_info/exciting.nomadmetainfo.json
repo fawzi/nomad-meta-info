@@ -329,6 +329,15 @@
       "superNames": [
         "section_system"
       ]
+    },  {
+      "description": "number to identify the atoms of a species",
+      "dtypeStr": "C",
+      "name": "x_exciting_geometry_atom_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
     }, {
       "description": "x component of atomic position",
       "dtypeStr": "f",
@@ -669,6 +678,19 @@
       "superNames": [
         "section_system"
       ]
+    }, {
+      "description": "Reciprocal lattice vectors (in Cartesian coordinates) of the simulation cell. The first index runs over the $x,y,z$ Cartesian coordinates, and the second index runs over the 3 lattice vectors.",
+      "dtypeStr": "f",
+      "name": "simulation_reciprocal_cell",
+      "repeats": false,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
     }, {
       "description": "exciting functional section",
       "kindStr": "type_section",
