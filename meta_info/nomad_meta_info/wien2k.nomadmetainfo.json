@@ -104,6 +104,14 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "relativistic or nonrelativistic calculation mode",
+      "dtypeStr": "C",
+      "name": "x_wien2k_calc_mode",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "total number of atoms in the cell",
       "dtypeStr": "i",
       "name": "x_wien2k_total_atoms",
