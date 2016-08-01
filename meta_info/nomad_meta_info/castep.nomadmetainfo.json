@@ -1291,13 +1291,75 @@
         "section_sampling_method"
       ]       
     }, {
+      "description": "x_castep_core_spectra_n_bands",
+      "dtypeStr": "i",
+      "name": "x_castep_core_spectra_n_bands",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_core_parameters"
+      ]       
+    }, {
+      "description": "x_castep_band_n_bands",
+      "dtypeStr": "i",
+      "name": "x_castep_band_n_bands",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_band_parameters"
+      ]   
+    }, {
+      "description": "x_castep_core_spectra_conv_tolerance",
+      "dtypeStr": "f",
+      "name": "x_castep_core_spectra_conv_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_core_parameters"
+      ]  
+    }, {
+      "description": "x_castep_band_conv_tolerance",
+      "dtypeStr": "f",
+      "name": "x_castep_band_conv_tolerance",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_band_parameters"
+      ]  
+    }, {
+      "description": "x_castep_band_n_iterations",
+      "dtypeStr": "i",
+      "name": "x_castep_band_n_iterations",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_band_parameters"
+      ]  
+    }, {
+      "description": "x_castep_band_max_cg",
+      "dtypeStr": "f",
+      "name": "x_castep_band_max_cg",
+      "shape": [],
+      "superNames": [
+        "x_castep_section_band_parameters"
+      ]  
+    }, {
       "description": "-",
       "kindStr": "type_section",
       "name": "x_castep_section_vibrational_frequencies",
       "superNames": [
         "section_run"
       ]
-     }, {
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_band_parameters",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_castep_section_core_parameters",
+      "superNames": [
+        "section_run"
+      ] 
+    }, {
       "description": "energy_frame_iterations",
       "dtypeStr": "C",
       "name": "x_castep_SCF_frame_energy",
