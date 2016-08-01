@@ -1610,7 +1610,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_tddft_energies",
       "repeats": true, 
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
@@ -1628,7 +1628,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_tddft_penalties",
       "repeats": true, 
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
@@ -1646,7 +1646,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_tddft_steps",
       "repeats": true, 
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
@@ -1690,7 +1690,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_tddft_excit_energies",
       "repeats": true,
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
@@ -1708,7 +1708,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_tddft_excit_oscill_str",
       "repeats": true,
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
@@ -1726,7 +1726,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_tddft_excit_lifetime",
       "repeats": true,
-      "shape": [],
+      "shape": [-1],
       "superNames": [
         "x_onetep_section_tddft"
       ]  
