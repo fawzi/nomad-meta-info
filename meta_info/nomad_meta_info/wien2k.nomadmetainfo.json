@@ -213,6 +213,30 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "lattice parameter a in this calculation",
+      "dtypeStr": "f",
+      "name": "x_wien2k_lattice_const_a",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "lattice parameter b in this calculation",
+      "dtypeStr": "f",
+      "name": "x_wien2k_lattice_const_b",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "lattice parameter c in this calculation",
+      "dtypeStr": "f",
+      "name": "x_wien2k_lattice_const_c",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "unit cell volume",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_volume",
