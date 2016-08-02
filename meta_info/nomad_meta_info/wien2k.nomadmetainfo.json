@@ -33,6 +33,51 @@
       "superNames": [
         "x_wien2k_section_equiv_atoms"
       ]
+    },{
+      "description": "name of atom, labelling non-equvalent atoms",
+      "dtypeStr": "C",
+      "name": "x_wien2k_atom_name",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    },{
+      "description": "number of radial mesh points",
+      "dtypeStr": "i",
+      "name": "x_wien2k_NPT",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    },{
+      "description": "atomic sphere radius (muffin-tin radius)",
+      "dtypeStr": "f",
+      "name": "x_wien2k_RMT",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    },{
+      "description": "first radial mesh point",
+      "dtypeStr": "f",
+      "name": "x_wien2k_R0",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
+    },{
+      "description": "atomic number Z",
+      "dtypeStr": "f",
+      "name": "x_wien2k_atomic_number_Z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_wien2k_section_equiv_atoms"
+      ]
     }, {
       "description": "header (labels) of wien2k.",
       "kindStr": "type_section",
