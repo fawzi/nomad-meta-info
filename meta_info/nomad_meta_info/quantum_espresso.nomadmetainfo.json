@@ -1612,6 +1612,13 @@
       "superNames": ["section_run"]
     },
     {
+      "description": "QE profiling: category",
+      "name": "x_qe_profile_category",
+      "dtypeStr": "C",
+      "shape": [ "x_qe_number_of_profiling_entries" ],
+      "superNames": ["section_run"]
+    },
+    {
       "description": "QE profiling: function name",
       "name": "x_qe_profile_function",
       "dtypeStr": "C",
@@ -1670,6 +1677,27 @@
     {
       "description": "Temporary: QE profiling: who was the caller",
       "name": "x_qe_t_profile_caller",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "Temporary: QE profiling: who was the caller (list for each function)",
+      "name": "x_qe_t_profile_caller_list",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "Temporary: QE profiling: category",
+      "name": "x_qe_t_profile_category",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "Temporary: QE profiling: category (list for each function)",
+      "name": "x_qe_t_profile_category_list",
       "dtypeStr": "C",
       "shape": [],
       "superNames": ["section_run"]
