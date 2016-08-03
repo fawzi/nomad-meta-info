@@ -14,6 +14,95 @@
         "section_system"
       ],
       "units": "m^-3"
+    },  {
+      "description": "x component of lattice vector",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_lattice_vector_x",
+      "shape": [],
+      "superNames": [
+        "x_elk_section_lattice_vectors"
+      ],
+      "units": "m"
+    }, {
+      "description": "y component of lattice vector",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_lattice_vector_y",
+      "shape": [],
+      "superNames": [
+        "x_elk_section_lattice_vectors"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of lattice vector",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_lattice_vector_z",
+      "shape": [],
+      "superNames": [
+        "x_elk_section_lattice_vectors"
+      ],
+      "units": "m"
+    }, {
+      "description": "x component of reciprocal lattice vector",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_reciprocal_lattice_vector_x",
+      "shape": [],
+      "superNames": [
+        "x_elk_section_reciprocal_lattice_vectors"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "y component of reciprocal lattice vector",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_reciprocal_lattice_vector_y",
+      "shape": [],
+      "superNames": [
+        "x_elk_section_reciprocal_lattice_vectors"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "z component of reciprocal lattice vector",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_reciprocal_lattice_vector_z",
+      "shape": [],
+      "superNames": [
+        "x_elk_section_reciprocal_lattice_vectors"
+      ],
+      "units": "m^-1"
+    },  {
+      "description": "lattice vectors",
+      "kindStr": "type_section",
+      "name": "x_elk_section_lattice_vectors",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "reciprocal lattice vectors",
+      "kindStr": "type_section",
+      "name": "x_elk_section_reciprocal_lattice_vectors",
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "Reciprocal lattice vectors of the simulation cell.",
+      "dtypeStr": "f",
+      "name": "x_elk_simulation_reciprocal_cell",
+      "repeats": false,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
+    }, {
+      "description": "unit cell volume",
+      "dtypeStr": "f",
+      "name": "x_elk_unit_cell_volume",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m^3"
     }, {
       "description": "index for exciting functional",
       "kindStr": "type_section",
