@@ -1516,8 +1516,8 @@
       "superNames": ["section_scf_iteration"]
     },
     {
-      "description": "Number of uncoverged eigenvalues (Warning from function cbands)",
-      "name": "x_qe_cbands_n_unconverged_eigenvalues",
+      "description": "Number of uncoverged eigenvalues (Warning from function c_bands)",
+      "name": "x_qe_c_bands_n_unconverged_eigenvalues",
       "dtypeStr": "i",
       "shape": ["x_qe_number_of_diagonalization_attempts"],
       "superNames": ["section_scf_iteration"]
