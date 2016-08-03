@@ -1165,15 +1165,15 @@
       ]
     }, {
        "description": "ts_qst_iterations",
-      "dtypeStr": "f",
-      "name": "x_onetep_ts_number_qst",
+      "dtypeStr": "i",
+      "name": "x_onetep_ts_qst_iter",
       "shape": [],
       "superNames": [
         "x_onetep_section_ts_parameters"
       ]
     }, {
        "description": "ts_number_of_cg_iterations",
-      "dtypeStr": "f",
+      "dtypeStr": "i",
       "name": "x_onetep_ts_number_cg",
       "shape": [],
       "superNames": [
@@ -1541,61 +1541,7 @@
       "superNames": [
         "x_onetep_section_electronic_spectroscpy_parameters"
       ]   
-    }, {
-      "description": "SCF_ts_energy",
-      "dtypeStr": "f",
-      "name": "x_onetep_scf_ts_iteration_energy",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_ts_scf_iteration"
-      ]  
-    }, {
-      "description": "SCF_ts_energy change",
-      "dtypeStr": "f",
-      "name": "x_onetep_scf_ts_iteration_energy_change",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_ts_scf_iteration"
-      ]  
-    }, {
-      "description": "SCF_ts_energy time",
-      "dtypeStr": "f",
-      "name": "x_onetep_scf_ts_time",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_ts_scf_iteration"
-      ]  
-    }, {
-      "description": "SCF_ts_energy Total",
-      "dtypeStr": "f",
-      "name": "x_onetep_scf_ts_total",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_ts_scf"
-      ]  
-    }, {
-      "description": "SCF_ts_energy Total free",
-      "dtypeStr": "f",
-      "name": "x_onetep_scf_ts_total_energy_free",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_ts_scf"
-      ]  
-    }, {
-      "description": "SCF_ts_energy T0 free",
-      "dtypeStr": "f",
-      "name": "x_onetep_scf_ts_T0",
-      "shape": [],
-      "superNames": [
-        "x_onetep_section_ts_scf"
-      ]  
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "x_onetep_section_ts_scf_iteration",
-      "superNames": [
-        "x_onetep_section_ts_scf"
-      ]
+  
     }, {
       "description": "lrtddft energy",
       "dtypeStr": "f",
@@ -2450,13 +2396,7 @@
       "superNames": [
         "section_run"
       ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "x_onetep_section_ts_scf",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
+
     }, {
       "description": "-",
       "kindStr": "type_section",
@@ -3170,6 +3110,70 @@
       "shape": [],
       "superNames": [
         "x_onetep_section_van_der_Waals_parameters"
+      ]
+    }, {
+      "description": "TS coordinate path",
+      "dtypeStr": "f",
+      "name": "x_onetep_ts_coordinate_path",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Energy of reactant",
+      "dtypeStr": "f",
+      "name": "x_onetep_energy_reac",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Energy of product",
+      "dtypeStr": "f",
+      "name": "x_onetep_energy_prod",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Energy of LST max",
+      "dtypeStr": "f",
+      "name": "x_onetep_energy_lst_max",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "location of LST max",
+      "dtypeStr": "f",
+      "name": "x_onetep_location_lst_max",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "barrier from reac",
+      "dtypeStr": "f",
+      "name": "x_onetep_barrier_reac",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "barrier from prod",
+      "dtypeStr": "f",
+      "name": "x_onetep_barrier_prod",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "reaction energy",
+      "dtypeStr": "f",
+      "name": "x_onetep_reaction_energy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }]
 }
