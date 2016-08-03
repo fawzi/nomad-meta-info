@@ -684,6 +684,26 @@
       ]
     },
     {
+      "description": "Temporary: number of integration directions (PAW)",
+      "name": "x_qe_t_pp_integral_ndirections",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
+      "description": "Temporary: maximum l for which integration is exact (PAW)",
+      "name": "x_qe_t_pp_integral_lmax_exact",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pseudopotential"
+      ]
+    },
+    {
       "description": "Temporary: shape of augmentation charge",
       "name": "x_qe_t_pp_augmentation_shape",
       "shape": [],
@@ -839,6 +859,26 @@
       "shape": [],
       "repeats": true,
       "dtypeStr": "C",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Number of integration directions (PAW)",
+      "name": "x_qe_pp_integral_ndirections",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
+      "superNames": [
+        "section_method_atom_kind"
+      ]
+    },
+    {
+      "description": "Maximum l for which integration is exact (PAW)",
+      "name": "x_qe_pp_integral_lmax_exact",
+      "shape": [],
+      "repeats": true,
+      "dtypeStr": "i",
       "superNames": [
         "section_method_atom_kind"
       ]
