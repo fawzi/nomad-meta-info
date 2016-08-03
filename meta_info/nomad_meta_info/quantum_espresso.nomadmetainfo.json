@@ -149,6 +149,59 @@
       ]
     },
     {
+      "name": "x_qe_t_section_pp_warning",
+      "kindStr": "type_section",
+      "description": "section to collect 'pseudopotential warning' information in old QE",
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential: pp index",
+      "name": "x_qe_t_pp_warning_idx",
+      "shape": [],
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pp_warning"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential: filename",
+      "name": "x_qe_t_pp_warning_filename",
+      "shape": [],
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pp_warning"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential: pseudo-wavefunction index",
+      "name": "x_qe_t_pp_warning_wfcidx",
+      "shape": [],
+      "dtypeStr": "i",
+      "superNames": [
+        "x_qe_t_section_pp_warning"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential: pseudo-wavefunction label",
+      "name": "x_qe_t_pp_warning_wfclabel",
+      "shape": [],
+      "dtypeStr": "C",
+      "superNames": [
+        "x_qe_t_section_pp_warning"
+      ]
+    },
+    {
+      "description": "Temporary: renormalized WFCs in pseudopotential: pseudo-wavefunction original norm",
+      "name": "x_qe_t_pp_warning_wfcnorm",
+      "shape": [],
+      "dtypeStr": "f",
+      "superNames": [
+        "x_qe_t_section_pp_warning"
+      ]
+    },
+    {
       "description": "Number of OpenMP threads",
       "name": "x_qe_nthreads",
       "dtypeStr": "i",
