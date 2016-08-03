@@ -573,10 +573,13 @@
       ]
     },
     {
-      "description": "Supercell translation vector in fractional coordinates",
+      "description": "Supercell translation vector(s) in fractional coordinates",
       "name": "x_qe_vec_supercell",
       "dtypeStr": "f",
-      "shape": [ 3 ],
+      "shape": [
+          "x_qe_number_of_supercell_translations",
+          3
+      ],
       "superNames": [
         "section_system"
       ]
