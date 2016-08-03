@@ -1,0 +1,25 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the elk parser, all names are expected to start with x_elk",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "Brillouin zone volume",
+      "dtypeStr": "f",
+      "name": "x_elk_brillouin_zone_volume",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m^-3"
+    }, {
+      "description": "index for exciting functional",
+      "kindStr": "type_section",
+      "name": "x_elk_section_xc",
+      "superNames": [
+        "section_system"
+      ]
+    }]
+}

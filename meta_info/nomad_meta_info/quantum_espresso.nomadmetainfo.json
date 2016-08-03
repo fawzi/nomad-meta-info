@@ -1062,15 +1062,9 @@
       "superNames": ["section_system"]
     },
     {
-      "description": "K-point info, number of smearing technique",
-      "name": "x_qe_ngauss",
+      "description": "K-point info, QE number represenation of smearing technique",
+      "name": "x_qe_smearing_ngauss",
       "dtypeStr": "i",
-      "superNames": ["section_system"]
-    },
-    {
-      "description": "K-point info, smearing width",
-      "name": "x_qe_smearing_width",
-      "dtypeStr": "f",
       "superNames": ["section_system"]
     },
     {
@@ -1618,6 +1612,13 @@
       "superNames": ["section_run"]
     },
     {
+      "description": "QE profiling: category",
+      "name": "x_qe_profile_category",
+      "dtypeStr": "C",
+      "shape": [ "x_qe_number_of_profiling_entries" ],
+      "superNames": ["section_run"]
+    },
+    {
       "description": "QE profiling: function name",
       "name": "x_qe_profile_function",
       "dtypeStr": "C",
@@ -1676,6 +1677,27 @@
     {
       "description": "Temporary: QE profiling: who was the caller",
       "name": "x_qe_t_profile_caller",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "Temporary: QE profiling: who was the caller (list for each function)",
+      "name": "x_qe_t_profile_caller_list",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "Temporary: QE profiling: category",
+      "name": "x_qe_t_profile_category",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "Temporary: QE profiling: category (list for each function)",
+      "name": "x_qe_t_profile_category_list",
       "dtypeStr": "C",
       "shape": [],
       "superNames": ["section_run"]
