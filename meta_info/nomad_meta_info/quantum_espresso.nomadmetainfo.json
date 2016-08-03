@@ -1509,6 +1509,20 @@
       "superNames": ["section_scf_iteration"]
     },
     {
+      "description": "Number of uncoverged eigenvalues (Warning)",
+      "name": "x_qe_warn_n_unconverged_eigenvalues",
+      "dtypeStr": "i",
+      "shape": ["x_qe_number_of_diagonalization_attempts"],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
+      "description": "Number of uncoverged eigenvalues (Warning from function cbands)",
+      "name": "x_qe_cbands_n_unconverged_eigenvalues",
+      "dtypeStr": "i",
+      "shape": ["x_qe_number_of_diagonalization_attempts"],
+      "superNames": ["section_scf_iteration"]
+    },
+    {
       "description": "Temporary: Convergence Threshold in scf iteration",
       "name": "x_qe_t_iteration_ethr",
       "dtypeStr": "f",
