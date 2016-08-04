@@ -547,6 +547,42 @@
       ]
     },
     {
+      "description": "Temporary: spin-orbit msg: magnetic mode (non-)collinear / (non-)magnetic",
+      "name": "x_qe_t_spin_orbit_magn",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary: spin-orbit msg: with/without spin-orbit",
+      "name": "x_qe_t_spin_orbit_mode",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Spin-orbit coupling flag: with/without spin-orbit",
+      "name": "x_qe_spin_orbit",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Noncollinear spin mode",
+      "name": "x_qe_spin_noncollinear",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Temporary storage for QE cell dimensions",
       "name": "x_qe_t_celldm",
       "dtypeStr": "C",
