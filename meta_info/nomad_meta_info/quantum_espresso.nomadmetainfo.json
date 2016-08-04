@@ -1974,6 +1974,51 @@
     },
     {
       "description": "-",
+      "name": "x_qe_t_dispersion_force_atom_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_atom_dispersion_force",
+      "dtypeStr": "f",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_dispersion_force_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_dispersion_force_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_t_dispersion_force_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
+      "name": "x_qe_dispersion_force_total",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "-",
       "name": "x_qe_force_total",
       "dtypeStr": "f",
       "shape": [],
