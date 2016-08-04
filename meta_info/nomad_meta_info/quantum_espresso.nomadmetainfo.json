@@ -589,6 +589,51 @@
       ]
     },
     {
+      "description": "Berry phase with E-field: direction",
+      "name": "x_qe_berry_efield_direction",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Berry phase with E-field: intensity",
+      "name": "x_qe_berry_efield_intensity",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Berry phase with E-field: number of k-points in string",
+      "name": "x_qe_berry_efield_strings_nk",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Berry phase with E-field: number of iterative cycles",
+      "name": "x_qe_berry_efield_niter",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Berry phase with E-field: flag if berry-efield-calc was done",
+      "name": "x_qe_berry_efield",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Temporary: spin-orbit msg: magnetic mode (non-)collinear / (non-)magnetic",
       "name": "x_qe_t_spin_orbit_magn",
       "dtypeStr": "C",
