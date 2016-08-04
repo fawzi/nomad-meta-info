@@ -245,7 +245,16 @@
         "section_scf_iteration"
       ],
       "units": "m^3"
-    }, {
+    },{
+      "description": "total energy",
+      "dtypeStr": "f",
+      "name": "x_wien2k_total_ene",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "Ry"
+    },  {
       "description": "Version of wien2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_version",
