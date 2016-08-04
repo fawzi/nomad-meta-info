@@ -1290,6 +1290,12 @@
       "superNames": ["section_system"]
     },
     {
+      "description": "K-point info, QE string represenation of smearing technique",
+      "name": "x_qe_smearing_kind",
+      "dtypeStr": "C",
+      "superNames": ["section_system"]
+    },
+    {
       "description": "Temporary storage for k-point info, k-index",
       "name": "x_qe_t_k_info_ik",
       "dtypeStr": "i",
