@@ -1081,6 +1081,33 @@
       ]
     },
     {
+      "description": "Temporary: Starting magnetic configuration: Species name",
+      "name" : "x_qe_t_starting_magnetization_species",
+      "shape": [],
+      "dtypeStr": "C",
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary: Starting magnetic configuration: Species magnetization",
+      "name" : "x_qe_t_starting_magnetization_value",
+      "shape": [],
+      "dtypeStr": "f",
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Starting magnetic configuration: Atom magnetization",
+      "name" : "x_qe_atom_starting_magnetization",
+      "shape": ["number_of_atoms"],
+      "dtypeStr": "f",
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Number of detected symmetry operations",
       "name": "x_qe_nsymm",
       "dtypeStr": "i",
