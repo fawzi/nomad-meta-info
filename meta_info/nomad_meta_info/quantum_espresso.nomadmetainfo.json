@@ -346,6 +346,27 @@
       ]
     },
     {
+      "description": "Temporary: radius used to integrate charge/magnetization over (per species)",
+      "name": "x_qe_t_species_integration_radius",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Radius used to integrate charge/magnetization over (per species)",
+      "name": "x_qe_species_integration_radius",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method_atom_kind"]
+    },
+    {
+      "description": "Temporary: radius used to integrate charge/magnetization over (per species), species index",
+      "name": "x_qe_t_species_integration_radius_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
       "description": "Bravais lattice index, constant during a run",
       "name": "x_qe_ibrav",
       "dtypeStr": "i",
