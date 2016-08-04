@@ -103,8 +103,179 @@
         "section_system"
       ],
       "units": "m^3"
+    },  {
+      "description": "labels of atom",
+      "dtypeStr": "C",
+      "name": "x_elk_geometry_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "muffin-tin radius",
+      "dtypeStr": "f",
+      "name": "x_elk_muffin_tin_radius",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    },  {
+      "description": "muffin-tin points",
+      "dtypeStr": "i",
+      "name": "x_elk_muffin_tin_points",
+      "superNames": [
+        "section_system"
+      ]
+    },   {
+      "description": "number to identify the atoms of a species",
+      "dtypeStr": "C",
+      "name": "x_elk_geometry_atom_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "x component of atomic position",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_atom_positions_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
     }, {
-      "description": "index for exciting functional",
+      "description": "y component of atomic position",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_atom_positions_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z component of atomic position",
+      "dtypeStr": "f",
+      "name": "x_elk_geometry_atom_positions_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    },  {
+      "description": "number k-points x",
+      "dtypeStr": "i",
+      "name": "x_elk_number_kpoint_x",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number k-points y",
+      "dtypeStr": "i",
+      "name": "x_elk_number_kpoint_y",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number k-points z",
+      "dtypeStr": "i",
+      "name": "x_elk_number_kpoint_z",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number k-points",
+      "dtypeStr": "i",
+      "name": "x_elk_number_kpoints",
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "K-points offset x component",
+      "dtypeStr": "f",
+      "name": "x_elk_kpoint_offset_x",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "K-points offset y component",
+      "dtypeStr": "f",
+      "name": "x_elk_kpoint_offset_y",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "K-points offset z component",
+      "dtypeStr": "f",
+      "name": "x_elk_kpoint_offset_z",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Radius MT * Gmax",
+      "dtypeStr": "f",
+      "name": "x_elk_rgkmax",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "G-vector grid size x",
+      "dtypeStr": "i",
+      "name": "x_elk_gvector_size_x",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "G-vector grid size y",
+      "dtypeStr": "i",
+      "name": "x_elk_gvector_size_y",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "G-vector grid size z",
+      "dtypeStr": "i",
+      "name": "x_elk_gvector_size_z",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "G-vector total",
+      "dtypeStr": "i",
+      "name": "x_elk_gvector_total",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Angular momentum cut-off for the APW functions",
+      "dtypeStr": "i",
+      "name": "x_elk_lmaxapw",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Maximum length of |G+k| for APW functions",
+      "dtypeStr": "f",
+      "name": "x_elk_gkmax",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "Maximum length of |G|",
+      "dtypeStr": "f",
+      "name": "x_elk_gmaxvr",
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m^-1"
+    }, {
+      "description": "index for elk functional",
       "kindStr": "type_section",
       "name": "x_elk_section_xc",
       "superNames": [
