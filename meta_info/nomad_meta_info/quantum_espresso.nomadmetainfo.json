@@ -238,6 +238,48 @@
       ]
     },
     {
+      "description": "Temporary: DFT-D species label",
+      "name": "x_qe_t_species_dispersion_correction_label",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: DFT-D species vdW radius",
+      "name": "x_qe_t_species_dispersion_correction_vdw_radius",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: DFT-D species C6 coefficient",
+      "name": "x_qe_t_species_dispersion_correction_C6",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Calculation includes semi-empirical DFT-D dispersion correction",
+      "name": "x_qe_dispersion_correction",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "DFT-D species vdW radius",
+      "name": "x_qe_dispersion_correction_vdw_radius",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method_atom_kind"]
+    },
+    {
+      "description": "DFT-D species C6 coefficient",
+      "name": "x_qe_dispersion_correction_C6",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_method_atom_kind"]
+    },
+    {
       "description": "Usage of gamma-only optimized algorithms",
       "name": "x_qe_gamma_algorithms",
       "dtypeStr": "b",
