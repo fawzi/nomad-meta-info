@@ -589,7 +589,7 @@
       ]
     },
     {
-      "description": "Berry phase with E-field: direction",
+      "description": "Finite E-field: direction",
       "name": "x_qe_berry_efield_direction",
       "dtypeStr": "i",
       "shape": [],
@@ -631,6 +631,42 @@
       "shape": [],
       "superNames": [
         "section_method"
+      ]
+    },
+    {
+      "description": "E-field: expectation value of exp(iGx), real part, in iteration",
+      "name": "x_qe_iteration_efield_eeigx_re",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "E-field: expectation value of exp(iGx), imaginary part, in iteration",
+      "name": "x_qe_iteration_efield_eeigx_im",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "E-field: Electronic dipole, in iteration",
+      "name": "x_qe_iteration_efield_dipole_electronic",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "E-field: Ionic dipole, in iteration",
+      "name": "x_qe_iteration_efield_dipole_ionic",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
       ]
     },
     {
