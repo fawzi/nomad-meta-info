@@ -377,6 +377,15 @@
         "section_constraint"
       ]
     }, {
+      "description": "Number of electrons in system",
+      "dtypeStr": "f",
+      "name": "number_of_electrons",
+      "repeats": false,
+      "shape": ["number_of_spin_channels"],
+      "superNames": [
+        "configuration_core"
+      ]
+    }, {
       "description": "Number of interactions of this type.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
