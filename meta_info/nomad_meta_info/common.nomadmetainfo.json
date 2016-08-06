@@ -124,6 +124,39 @@
       ],
       "units": "J"
     }, {
+      "description": "Fermi energy (separates occupied from unoccupied single-particle states in metals)",
+      "dtypeStr": "f",
+      "name": "energy_reference_fermi",
+      "repeats": false,
+      "shape": ["number_of_spin_channels"],
+      "superNames": [
+        "energy_type_reference",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Highest occupied single-particle state energy (in insulators or HOMO energy in finite systems)",
+      "dtypeStr": "f",
+      "name": "energy_reference_highest_occupied",
+      "repeats": false,
+      "shape": ["number_of_spin_channels"],
+      "superNames": [
+        "energy_type_reference",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Lowest unoccupied single-particle state energy (in insulators or LUMO energy in finite systems)",
+      "dtypeStr": "f",
+      "name": "energy_reference_lowest_unoccupied",
+      "repeats": false,
+      "shape": ["number_of_spin_channels"],
+      "superNames": [
+        "energy_type_reference",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
       "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
       "dtypeStr": "f",
       "name": "energy_X_mGGA",

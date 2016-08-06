@@ -951,6 +951,16 @@
       ],
       "units": "J"
     }, {
+      "description": "Some energy used as reference point.",
+      "dtypeStr": "f",
+      "kindStr": "type_abstract_document_content",
+      "name": "energy_type_reference",
+      "shape": [],
+      "superNames": [
+        "energy_value"
+      ],
+      "units": "J"
+    }, {
       "description": "Some kind of (converged) van der Waals energy.",
       "dtypeStr": "f",
       "kindStr": "type_abstract_document_content",
