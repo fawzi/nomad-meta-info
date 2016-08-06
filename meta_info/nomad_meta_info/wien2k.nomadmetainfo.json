@@ -281,6 +281,30 @@
         "section_scf_iteration"
       ],
       "units": "eV"
+    }, {
+      "description": "matrix size",
+      "dtypeStr": "i",
+      "name": "x_wien2k_matrix_size",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "rkm",
+      "dtypeStr": "f",
+      "name": "x_wien2k_rkm",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "LOs",
+      "dtypeStr": "i",
+      "name": "x_wien2k_LOs",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
     },  {
       "description": "Version of wien2k.",
       "dtypeStr": "C",
