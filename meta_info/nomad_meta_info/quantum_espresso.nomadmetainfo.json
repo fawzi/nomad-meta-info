@@ -1886,6 +1886,27 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "Temporary: Energy of highest occupied state",
+      "name": "x_qe_t_energy_reference_highest_occupied",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Energy of lowest unoccupied state",
+      "name": "x_qe_t_energy_reference_lowest_unoccupied",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Fermi Energy",
+      "name": "x_qe_t_energy_reference_fermi",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Temporary: Total energy decomposition: contribution name",
       "name": "x_qe_t_energy_decomposition_name",
       "dtypeStr": "C",
