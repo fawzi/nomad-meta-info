@@ -263,6 +263,24 @@
         "section_scf_iteration"
       ],
       "units": "Ry"
+    }, {
+      "description": "energy gap in Ry",
+      "dtypeStr": "f",
+      "name": "x_wien2k_ene_gap_Ry",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "Ry"
+    }, {
+      "description": "energy gap in eV",
+      "dtypeStr": "f",
+      "name": "x_wien2k_ene_gap_eV",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "eV"
     },  {
       "description": "Version of wien2k.",
       "dtypeStr": "C",
