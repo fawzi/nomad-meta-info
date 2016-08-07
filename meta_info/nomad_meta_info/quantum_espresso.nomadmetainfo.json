@@ -1746,6 +1746,12 @@
       "superNames": ["section_eigenvalues"]
     },
     {
+      "description": "Number of plane waves for each k-point",
+      "name": "x_qe_eigenvalues_number_of_planewaves",
+      "dtypeStr": "i",
+      "superNames": ["section_eigenvalues"]
+    },
+    {
       "description": "Temporary: k-point band energies",
       "name": "x_qe_t_k_point_energies",
       "dtypeStr": "C",
