@@ -1716,6 +1716,12 @@
       ]
     },
     {
+      "description": "Temporary storage for spin channel",
+      "name": "x_qe_t_spin_channel",
+      "dtypeStr": "C",
+      "superNames": ["section_eigenvalues"]
+    },
+    {
       "description": "Temporary storage for k-point, x-component",
       "name": "x_qe_t_k_x",
       "dtypeStr": "f",
