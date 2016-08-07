@@ -1725,25 +1725,25 @@
       "description": "Temporary storage for k-point, x-component",
       "name": "x_qe_t_k_x",
       "dtypeStr": "f",
-      "superNames": ["x_qe_t_section_kbands"]
+      "superNames": ["section_eigenvalues"]
     },
     {
       "description": "Temporary storage for k-point, y-component",
       "name": "x_qe_t_k_y",
       "dtypeStr": "f",
-      "superNames": ["x_qe_t_section_kbands"]
+      "superNames": ["section_eigenvalues"]
     },
     {
       "description": "Temporary storage for k-point, z-component",
       "name": "x_qe_t_k_z",
       "dtypeStr": "f",
-      "superNames": ["x_qe_t_section_kbands"]
+      "superNames": ["section_eigenvalues"]
     },
     {
       "description": "Temporary: number of plane waves for this k-point",
       "name": "x_qe_t_k_pw",
       "dtypeStr": "i",
-      "superNames": ["x_qe_t_section_kbands"]
+      "superNames": ["section_eigenvalues"]
     },
     {
       "description": "Temporary: k-point band energies",
