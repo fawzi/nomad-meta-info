@@ -1798,6 +1798,24 @@
       "superNames": ["section_method"]
     },
     {
+      "description": "Method used if system is assumed to be isolated",
+      "name": "x_qe_isolated_system_method",
+      "dtypeStr": "C",
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Isolated system with Martyna-Tuckerman method, parameter alpha",
+      "name": "x_qe_isolated_system_method_martyna_tuckerman_alpha",
+      "dtypeStr": "f",
+      "superNames": ["section_method"]
+    },
+    {
+      "description": "Isolated system with Martyna-Tuckerman method, parameter beta",
+      "name": "x_qe_isolated_system_method_martyna_tuckerman_beta",
+      "dtypeStr": "f",
+      "superNames": ["section_method"]
+    },
+    {
       "description": "Temporary storage for spin channel",
       "name": "x_qe_t_spin_channel",
       "dtypeStr": "C",
