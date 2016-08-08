@@ -1741,6 +1741,7 @@
       "description": "Number of plane waves for each k-point",
       "name": "x_qe_eigenvalues_number_of_planewaves",
       "dtypeStr": "i",
+      "shape": ["number_of_eigenvalues_kpoints"],
       "superNames": ["section_eigenvalues"]
     },
     {
