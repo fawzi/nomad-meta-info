@@ -2195,6 +2195,13 @@
       "superNames": ["section_method"]
     },
     {
+      "description": "Temporary: User-specified band occupations, spin channel",
+      "name": "x_qe_t_input_occupations_spin",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["x_qe_t_section_input_occupations"]
+    },
+    {
       "description": "Temporary: User-specified band occupations",
       "name": "x_qe_t_input_occupations",
       "dtypeStr": "C",
