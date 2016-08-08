@@ -454,6 +454,24 @@
       ]
     },
     {
+      "description": "Temporary: Number of electrons in system (spin up)",
+      "name": "x_qe_t_number_of_electrons_up",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "configuration_core"
+      ]
+    },
+    {
+      "description": "Temporary: Number of electrons in system (spin down)",
+      "name": "x_qe_t_number_of_electrons_down",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "configuration_core"
+      ]
+    },
+    {
       "description": "Number of Kohn-Sham states/bands",
       "name": "x_qe_number_of_states",
       "dtypeStr": "i",
