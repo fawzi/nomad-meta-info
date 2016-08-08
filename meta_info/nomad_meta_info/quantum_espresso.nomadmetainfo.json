@@ -1708,14 +1708,6 @@
       "superNames": ["section_method"]
     },
     {
-      "name": "x_qe_t_section_kbands",
-      "kindStr": "type_section",
-      "description": "pseudo-section for collecting k-hooks in band structure data",
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    },
-    {
       "description": "Temporary storage for spin channel",
       "name": "x_qe_t_spin_channel",
       "dtypeStr": "C",
@@ -1755,7 +1747,7 @@
       "description": "Temporary: k-point band energies",
       "name": "x_qe_t_k_point_energies",
       "dtypeStr": "C",
-      "superNames": ["x_qe_t_section_kbands"]
+      "superNames": ["section_eigenvalues"]
     },
     {
       "description": "Iteration number",
