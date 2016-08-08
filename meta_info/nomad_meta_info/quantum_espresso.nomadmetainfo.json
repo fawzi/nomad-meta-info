@@ -1923,8 +1923,22 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
-      "description": "Fermi Energy",
+      "description": "Temporary: Fermi Energy",
       "name": "x_qe_t_energy_reference_fermi",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: Fermi Energy (spin up)",
+      "name": "x_qe_t_energy_reference_fermi_up",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary: Fermi Energy (spin down)",
+      "name": "x_qe_t_energy_reference_fermi_down",
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
