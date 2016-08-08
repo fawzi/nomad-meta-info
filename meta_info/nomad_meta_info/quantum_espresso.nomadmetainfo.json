@@ -652,6 +652,78 @@
       ]
     },
     {
+      "description": "Temporary: iteration per-site magnetization data, atom index",
+      "name": "x_qe_t_iter_mpersite_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "Temporary: iteration per-site magnetization data, atom charge",
+      "name": "x_qe_t_iter_mpersite_charge",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "Temporary: iteration per-site magnetization data, atom magnetization",
+      "name": "x_qe_t_iter_mpersite_magn",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "Temporary: iteration per-site magnetization data, constraints",
+      "name": "x_qe_t_iter_mpersite_constr",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "iteration per-site magnetization data, atom index",
+      "name": "x_qe_iter_mpersite_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "iteration per-site magnetization data, atom charge",
+      "name": "x_qe_iter_mpersite_charge",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "iteration per-site magnetization data, atom magnetization",
+      "name": "x_qe_iter_mpersite_magn",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
+      "description": "iteration per-site magnetization data, constraints",
+      "name": "x_qe_iter_mpersite_constr",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },
+    {
       "description": "E-field: expectation value of exp(iGx), real part, in iteration",
       "name": "x_qe_iteration_efield_eeigx_re",
       "dtypeStr": "f",
