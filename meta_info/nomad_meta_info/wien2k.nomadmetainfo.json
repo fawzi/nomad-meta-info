@@ -305,7 +305,31 @@
       "superNames": [
         "section_scf_iteration"
       ]
-    },  {
+    }, {
+      "description": "total magnetic moment in cell",
+      "dtypeStr": "f",
+      "name": "x_wien2k_mmtot",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "magnetic moment in the interstital region",
+      "dtypeStr": "f",
+      "name": "x_wien2k_mmint",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "magnetic moment inside the sphere",
+      "dtypeStr": "f",
+      "name": "x_wien2k_mmi001",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Version of wien2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_version",
