@@ -607,6 +607,15 @@
       ]
     },
     {
+      "description": "Maximum number of ionic+electronic steps in dynamics (MD/relax) calculation",
+      "name": "x_qe_dynamics_max_steps",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Finite E-field: direction",
       "name": "x_qe_berry_efield_direction",
       "dtypeStr": "i",
@@ -2336,6 +2345,20 @@
       "dtypeStr": "f",
       "shape": ["number_of_spin_channels", "number_of_k_points", "number_of_eigen_values"],
       "superNames": ["section_method"]
+    },
+    {
+      "description": "MD step: iteration number",
+      "name": "x_qe_md_iteration",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "MD step: time",
+      "name": "x_qe_md_time",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
     }
   ]
 }
