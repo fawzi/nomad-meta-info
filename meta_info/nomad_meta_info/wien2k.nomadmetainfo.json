@@ -157,7 +157,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - a",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_param_a",
       "shape": [],
@@ -165,7 +165,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - b",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_param_b",
       "shape": [],
@@ -173,7 +173,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - c",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_param_c",
       "shape": [],
@@ -181,7 +181,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - alfa",
       "dtypeStr": "f",
       "name": "x_wien2k_angle_between_unit_axis_alfa",
       "shape": [],
@@ -189,7 +189,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - beta",
       "dtypeStr": "f",
       "name": "x_wien2k_angle_between_unit_axis_beta",
       "shape": [],
@@ -197,7 +197,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - gamma",
       "dtypeStr": "f",
       "name": "x_wien2k_angle_between_unit_axis_gamma",
       "shape": [],
@@ -244,7 +244,7 @@
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "m^3"
+      "units": "bohr^3"
     }, {
       "description": "total energy",
       "dtypeStr": "f",
@@ -305,8 +305,130 @@
       "superNames": [
         "section_scf_iteration"
       ]
+    }, {
+      "description": "total magnetic moment in cell",
+      "dtypeStr": "f",
+      "name": "x_wien2k_mmtot",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "magnetic moment in the interstital region",
+      "dtypeStr": "f",
+      "name": "x_wien2k_mmint",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "magnetic moment inside the sphere",
+      "dtypeStr": "f",
+      "name": "x_wien2k_mmi001",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): |F|",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_abs",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
     },  {
-      "description": "Version of wien2k.",
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fx",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fy",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fz",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic positions are specified)): Fx",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_x_gl",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic positions are specified)): Fy",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_y_gl",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic positions are specified)): Fz",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_z_gl",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of atom, labelling atoms",
+      "dtypeStr": "C",
+      "name": "x_wien2k_atom_nr",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of sphere, labelling spheres",
+      "dtypeStr": "C",
+      "name": "x_wien2k_sphere_nr",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "total difference charge density for atom xx between last 2 iterations",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_diff_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "total interstitial charge",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_int_charge",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Version of WIEN2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_version",
       "shape": [],

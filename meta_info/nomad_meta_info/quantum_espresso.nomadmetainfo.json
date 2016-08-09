@@ -607,6 +607,15 @@
       ]
     },
     {
+      "description": "Maximum number of ionic+electronic steps in dynamics (MD/relax) calculation",
+      "name": "x_qe_dynamics_max_steps",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Finite E-field: direction",
       "name": "x_qe_berry_efield_direction",
       "dtypeStr": "i",
@@ -2336,6 +2345,470 @@
       "dtypeStr": "f",
       "shape": ["number_of_spin_channels", "number_of_k_points", "number_of_eigen_values"],
       "superNames": ["section_method"]
+    },
+    {
+      "description": "Temporary: MD step: iteration number",
+      "name": "x_qe_t_md_iteration",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "MD step: time",
+      "name": "x_qe_t_md_time",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), units",
+      "name": "x_qe_t_md_vec_a_units",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), lattice parameter a",
+      "name": "x_qe_t_md_vec_a_alat",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), x-component",
+      "name": "x_qe_t_md_vec_a_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), y-component",
+      "name": "x_qe_t_md_vec_a_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), z-component",
+      "name": "x_qe_t_md_vec_a_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), units",
+      "name": "x_qe_t_md_atom_positions_units",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), atom labels",
+      "name": "x_qe_t_md_atom_labels",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), x-component",
+      "name": "x_qe_t_md_atom_positions_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), y-component",
+      "name": "x_qe_t_md_atom_positions_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), z-component",
+      "name": "x_qe_t_md_atom_positions_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom fixed flag (MD, (vc-)relax), x-component",
+      "name": "x_qe_t_md_atom_free_x",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom fixed flag (MD, (vc-)relax), y-component",
+      "name": "x_qe_t_md_atom_free_y",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom fixed flag (MD, (vc-)relax), z-component",
+      "name": "x_qe_t_md_atom_free_z",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new 2-atom distance (MD, (vc-)relax)",
+      "name": "x_qe_t_new_nat2_distance",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD setup, atom mass, labels",
+      "name": "x_qe_t_md_atom_mass_label",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD setup, atom mass, value",
+      "name": "x_qe_t_md_atom_mass_value",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD setup, timestep size",
+      "name": "x_qe_t_md_timestep_size",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD, kinetic energy",
+      "name": "x_qe_t_md_kinetic_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD, temperature",
+      "name": "x_qe_t_md_temperature",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD, sum of energies",
+      "name": "x_qe_t_md_ekin_etot",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for linear momentum (MD, (vc-)relax), x-component",
+      "name": "x_qe_t_md_linear_momentum_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for linear momentum (MD, (vc-)relax), y-component",
+      "name": "x_qe_t_md_linear_momentum_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for linear momentum (MD, (vc-)relax), z-component",
+      "name": "x_qe_t_md_linear_momentum_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for cpu time after write-datafile (MD, (vc-)relax)",
+      "name": "x_qe_t_md_write_datafile_cputime",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for dynamical memory after write-datafile (MD, (vc-)relax)",
+      "name": "x_qe_t_md_write_datafile_mem_dynamical",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for charge extrapolation scheme (MD, (vc-)relax)",
+      "name": "x_qe_t_md_extrapolation_charge",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for wave function extrapolation scheme (MD, (vc-)relax)",
+      "name": "x_qe_t_md_extrapolation_wfc",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for max_steps-reached flag (MD, (vc-)relax)",
+      "name": "x_qe_t_md_max_steps_reached",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for end-of-md flag (MD, (vc-)relax)",
+      "name": "x_qe_t_md_end",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for diffusion coeffients (MD), atom index",
+      "name": "x_qe_t_md_diffusion_atomidx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for diffusion coeffients (MD), atom coeffient",
+      "name": "x_qe_t_md_diffusion_coefficient",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for diffusion coeffients (MD), mean coeffient",
+      "name": "x_qe_t_md_diffusion_coefficient_mean",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for number of scf cycles (relax)",
+      "name": "x_qe_t_md_bfgs_scf_cycles",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for number of steps (relax)",
+      "name": "x_qe_t_md_bfgs_steps",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'old' energy (relax)",
+      "name": "x_qe_t_md_bfgs_energy_old",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'new' energy (relax)",
+      "name": "x_qe_t_md_bfgs_energy_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'old' enthalpy (relax)",
+      "name": "x_qe_t_md_bfgs_enthalpy_old",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'new' enthalpy (relax)",
+      "name": "x_qe_t_md_bfgs_enthalpy_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for BFGS case, energy comparison (relax)",
+      "name": "x_qe_t_md_bfgs_case",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new trust radius (relax)",
+      "name": "x_qe_t_md_bfgs_trust_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new electronic convergence threshold (relax)",
+      "name": "x_qe_t_md_bfgs_conv_thr_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for old negative starting charge (MD, (vc-)relax)",
+      "name": "x_qe_t_md_starting_charge_negative_old",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new negative starting charge (MD, (vc-)relax)",
+      "name": "x_qe_t_md_starting_charge_negative_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new negative starting charge (MD, (vc-)relax), spin up",
+      "name": "x_qe_t_md_starting_charge_negative_new_up",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new negative starting charge (MD, (vc-)relax), spin down",
+      "name": "x_qe_t_md_starting_charge_negative_new_down",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'converged' flag ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_converged",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for converged criteria ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_converged_criteria",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for final energy ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_final_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for final enthalpy ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_final_enthalpy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new cell volume ((vc-)relax)",
+      "name": "x_qe_t_md_new_volume",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }
   ]
 }
