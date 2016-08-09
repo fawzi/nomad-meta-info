@@ -2811,6 +2811,18 @@
       ]
     },
     {
+      "description": "Temporary MD: Isolated system with Martyna-Tuckerman method, parameter alpha",
+      "name": "x_qe_t_md_isolated_system_method_martyna_tuckerman_alpha",
+      "dtypeStr": "f",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary MD: Isolated system with Martyna-Tuckerman method, parameter beta",
+      "name": "x_qe_t_md_isolated_system_method_martyna_tuckerman_beta",
+      "dtypeStr": "f",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Temporary MD: QE check: negative core charge",
       "name": "x_qe_t_md_core_charge_negative",
       "dtypeStr": "f",
