@@ -2347,18 +2347,189 @@
       "superNames": ["section_method"]
     },
     {
-      "description": "MD step: iteration number",
-      "name": "x_qe_md_iteration",
+      "description": "Temporary: MD step: iteration number",
+      "name": "x_qe_t_md_iteration",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "MD step: time",
-      "name": "x_qe_md_time",
+      "name": "x_qe_t_md_time",
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), units",
+      "name": "x_qe_t_md_vec_a_units",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), x-component",
+      "name": "x_qe_t_md_vec_a_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), y-component",
+      "name": "x_qe_t_md_vec_a_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), z-component",
+      "name": "x_qe_t_md_vec_a_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), units",
+      "name": "x_qe_t_md_atom_positions_units",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), atom labels",
+      "name": "x_qe_t_md_atom_labels",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), x-component",
+      "name": "x_qe_t_md_atom_positions_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), y-component",
+      "name": "x_qe_t_md_atom_positions_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax), z-component",
+      "name": "x_qe_t_md_atom_positions_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new 2-atom distance (MD, (vc-)relax)",
+      "name": "x_qe_t_new_nat2_distance",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD setup, atom mass, labels",
+      "name": "x_qe_t_md_atom_mass_label",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD setup, atom mass, value",
+      "name": "x_qe_t_md_atom_mass_value",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD setup, timestep size",
+      "name": "x_qe_t_md_timestep_size",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD, kinetic energy",
+      "name": "x_qe_t_md_kinetic_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD, temperature",
+      "name": "x_qe_t_md_temperature",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for MD, sum of energies",
+      "name": "x_qe_t_md_ekin_etot",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for linear momentum (MD, (vc-)relax), x-component",
+      "name": "x_qe_t_md_linear_momentum_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for linear momentum (MD, (vc-)relax), y-component",
+      "name": "x_qe_t_md_linear_momentum_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for linear momentum (MD, (vc-)relax), z-component",
+      "name": "x_qe_t_md_linear_momentum_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }
   ]
 }
