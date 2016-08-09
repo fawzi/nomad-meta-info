@@ -402,6 +402,24 @@
         "section_scf_iteration"
       ]
     }, {
+      "description": "number of sphere, labelling spheres",
+      "dtypeStr": "C",
+      "name": "x_wien2k_sphere_nr",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "total difference charge density for atom xx between last 2 iterations",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_diff_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
       "description": "Version of WIEN2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_version",
