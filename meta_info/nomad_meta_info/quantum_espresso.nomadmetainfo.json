@@ -2809,6 +2809,20 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
+    },
+    {
+      "description": "Temporary MD: QE check: negative core charge",
+      "name": "x_qe_t_md_core_charge_negative",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary MD: QE check: imaginary core charge",
+      "name": "x_qe_t_md_core_charge_imaginary",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
     }
   ]
 }
