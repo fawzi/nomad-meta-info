@@ -157,7 +157,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - a",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_param_a",
       "shape": [],
@@ -165,7 +165,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - b",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_param_b",
       "shape": [],
@@ -173,7 +173,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - c",
       "dtypeStr": "f",
       "name": "x_wien2k_unit_cell_param_c",
       "shape": [],
@@ -181,7 +181,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - alfa",
       "dtypeStr": "f",
       "name": "x_wien2k_angle_between_unit_axis_alfa",
       "shape": [],
@@ -189,7 +189,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - beta",
       "dtypeStr": "f",
       "name": "x_wien2k_angle_between_unit_axis_beta",
       "shape": [],
@@ -197,7 +197,7 @@
         "section_system"
       ]
     }, {
-      "description": "unit cell parameters",
+      "description": "unit cell parameters - gamma",
       "dtypeStr": "f",
       "name": "x_wien2k_angle_between_unit_axis_gamma",
       "shape": [],
@@ -244,7 +244,7 @@
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "m^3"
+      "units": "bohr^3"
     }, {
       "description": "total energy",
       "dtypeStr": "f",
@@ -330,7 +330,47 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Version of wien2k.",
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): |F|",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_abs",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fx",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_x",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fy",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_y",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fz",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_z",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of atom, labelling atoms",
+      "dtypeStr": "C",
+      "name": "x_wien2k_atom_nr",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Version of WIEN2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_version",
       "shape": [],
