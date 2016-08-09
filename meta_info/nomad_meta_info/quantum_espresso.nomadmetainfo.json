@@ -2676,6 +2676,24 @@
       ]
     },
     {
+      "description": "Temporary storage for 'old' enthalpy (relax)",
+      "name": "x_qe_t_md_bfgs_enthalpy_old",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'new' enthalpy (relax)",
+      "name": "x_qe_t_md_bfgs_enthalpy_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
       "description": "Temporary storage for BFGS case, energy comparison (relax)",
       "name": "x_qe_t_md_bfgs_case",
       "dtypeStr": "C",
@@ -2750,6 +2768,15 @@
     {
       "description": "Temporary storage for final energy ((vc-)relax)",
       "name": "x_qe_t_md_bfgs_final_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for final enthalpy ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_final_enthalpy",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
