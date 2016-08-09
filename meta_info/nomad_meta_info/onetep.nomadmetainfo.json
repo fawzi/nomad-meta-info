@@ -1825,13 +1825,14 @@
         "section_single_configuration_calculation"
       ]    
     }, {
-       "description": "Ewald",
+       "description": "Ewald correction",
       "dtypeStr": "f",
       "name": "x_onetep_ewald_correction",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
       ]    
+    
     }, {
       "description": "Total_energy(Eh)",
       "dtypeStr": "f",
@@ -3004,6 +3005,15 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "number of scf iterations in single point calculation",
+      "dtypeStr": "i",
+      "name": "x_onetep_number_of_scf_iterations_store",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Name type",
       "dtypeStr": "C",
       "name": "x_onetep_disp_method_name_store",
@@ -3022,7 +3032,7 @@
     }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
       "dtypeStr": "f",
-      "name": "energy_total_scf_iteration_list",
+      "name": "x_onetep_energy_total_scf_iteration_list",
       "shape": [
         -1
       ],
@@ -3030,7 +3040,7 @@
         "section_single_configuration_calculation"
       ]
      
-     }, {
+    }, {
       "description": "ngwf_cg_max_step",
       "dtypeStr": "i",
       "name": "x_onetep_ngwf_cg_max_step",
