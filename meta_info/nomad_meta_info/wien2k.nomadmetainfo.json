@@ -420,6 +420,14 @@
         "section_scf_iteration"
       ]
     },  {
+      "description": "total interstitial charge",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_int_charge",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Version of WIEN2k.",
       "dtypeStr": "C",
       "name": "x_wien2k_version",
