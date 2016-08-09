@@ -2370,6 +2370,15 @@
       ]
     },
     {
+      "description": "Temporary storage for new direct lattice vectors (vc-relax), lattice parameter a",
+      "name": "x_qe_t_md_vec_a_alat",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
       "description": "Temporary storage for new direct lattice vectors (vc-relax), x-component",
       "name": "x_qe_t_md_vec_a_x",
       "dtypeStr": "f",
