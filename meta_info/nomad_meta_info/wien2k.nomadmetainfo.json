@@ -333,6 +333,7 @@
       "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): |F|",
       "dtypeStr": "f",
       "name": "x_wien2k_for_abs",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -341,6 +342,7 @@
       "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fx",
       "dtypeStr": "f",
       "name": "x_wien2k_for_x",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -349,6 +351,7 @@
       "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fy",
       "dtypeStr": "f",
       "name": "x_wien2k_for_y",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -357,6 +360,34 @@
       "description": "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fz",
       "dtypeStr": "f",
       "name": "x_wien2k_for_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic positions are specified)): Fx",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_x_gl",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic positions are specified)): Fy",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_y_gl",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic positions are specified)): Fz",
+      "dtypeStr": "f",
+      "name": "x_wien2k_for_z_gl",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -365,6 +396,7 @@
       "description": "number of atom, labelling atoms",
       "dtypeStr": "C",
       "name": "x_wien2k_atom_nr",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
