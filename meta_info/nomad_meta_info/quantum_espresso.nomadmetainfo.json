@@ -490,6 +490,15 @@
       ]
     },
     {
+      "description": "Cutoff for defining the direct-space grid used to compute Fock exchange in EXX",
+      "name": "x_qe_fock_operator_cutoff",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_basis_set_cell_dependent"
+      ]
+    },
+    {
       "description": "Short name of User-enforced XC functional; overrides the setting implied by the pseudopotentials",
       "name": "x_qe_t_xc_functional_shortname_enforced",
       "dtypeStr": "C",
