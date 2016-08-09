@@ -2638,6 +2638,123 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
+    },
+    {
+      "description": "Temporary storage for number of scf cycles (relax)",
+      "name": "x_qe_t_md_bfgs_scf_cycles",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for number of steps (relax)",
+      "name": "x_qe_t_md_bfgs_steps",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'old' energy (relax)",
+      "name": "x_qe_t_md_bfgs_energy_old",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'new' energy (relax)",
+      "name": "x_qe_t_md_bfgs_energy_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for BFGS case, energy comparison (relax)",
+      "name": "x_qe_t_md_bfgs_case",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new trust radius (relax)",
+      "name": "x_qe_t_md_bfgs_trust_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new electronic convergence threshold (relax)",
+      "name": "x_qe_t_md_bfgs_conv_thr_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for old negative starting charge (MD, (vc-)relax)",
+      "name": "x_qe_t_md_starting_charge_negative_old",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new negative starting charge (MD, (vc-)relax)",
+      "name": "x_qe_t_md_starting_charge_negative_new",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new negative starting charge (MD, (vc-)relax), spin up",
+      "name": "x_qe_t_md_starting_charge_negative_new_up",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new negative starting charge (MD, (vc-)relax), spin down",
+      "name": "x_qe_t_md_starting_charge_negative_new_down",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for 'converged' flag ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_converged",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for final energy ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_final_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }
   ]
 }
