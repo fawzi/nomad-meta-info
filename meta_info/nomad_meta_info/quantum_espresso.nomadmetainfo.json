@@ -2766,6 +2766,15 @@
       ]
     },
     {
+      "description": "Temporary storage for converged criteria ((vc-)relax)",
+      "name": "x_qe_t_md_bfgs_converged_criteria",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
       "description": "Temporary storage for final energy ((vc-)relax)",
       "name": "x_qe_t_md_bfgs_final_energy",
       "dtypeStr": "f",
