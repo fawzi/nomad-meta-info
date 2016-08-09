@@ -2541,6 +2541,15 @@
       ]
     },
     {
+      "description": "Temporary storage for dynamical memory after write-datafile (MD, (vc-)relax)",
+      "name": "x_qe_t_md_write_datafile_mem_dynamical",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
       "description": "Temporary storage for charge extrapolation scheme (MD, (vc-)relax)",
       "name": "x_qe_t_md_charge_approximation",
       "dtypeStr": "C",
