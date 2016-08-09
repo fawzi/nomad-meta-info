@@ -2442,6 +2442,33 @@
       ]
     },
     {
+      "description": "Temporary storage for new atom fixed flag (MD, (vc-)relax), x-component",
+      "name": "x_qe_t_md_atom_free_x",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom fixed flag (MD, (vc-)relax), y-component",
+      "name": "x_qe_t_md_atom_free_y",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom fixed flag (MD, (vc-)relax), z-component",
+      "name": "x_qe_t_md_atom_free_z",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
       "description": "Temporary storage for new 2-atom distance (MD, (vc-)relax)",
       "name": "x_qe_t_new_nat2_distance",
       "dtypeStr": "f",
