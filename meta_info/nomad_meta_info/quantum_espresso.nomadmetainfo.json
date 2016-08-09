@@ -2530,6 +2530,69 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
+    },
+    {
+      "description": "Temporary storage for cpu time after write-datafile (MD, (vc-)relax)",
+      "name": "x_qe_t_md_write_datafile_cputime",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for charge extrapolation scheme (MD, (vc-)relax)",
+      "name": "x_qe_t_md_charge_approximation",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for max_steps-reached flag (MD, (vc-)relax)",
+      "name": "x_qe_t_md_max_steps_reached",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for end-of-md flag (MD, (vc-)relax)",
+      "name": "x_qe_t_md_end",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for diffusion coeffients (MD), atom index",
+      "name": "x_qe_t_md_diffusion_atomidx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for diffusion coeffients (MD), atom coeffient",
+      "name": "x_qe_t_md_diffusion_coefficient",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for diffusion coeffients (MD), mean coeffient",
+      "name": "x_qe_t_md_diffusion_coefficient_mean",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }
   ]
 }
