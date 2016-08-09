@@ -289,6 +289,15 @@
       ]
     },
     {
+      "description": "Exact-exchange k+q grid is the same as k grid (flag)",
+      "name": "x_qe_exx_grid_same_as_k_grid",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Algorithm used in subspace diagonalization",
       "name": "x_qe_diagonalization_algorithm",
       "dtypeStr": "C",
@@ -2099,6 +2108,15 @@
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Exact-exchange has been reached (flag)",
+      "name": "x_qe_exx_self_consistency",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     },
     {
       "description": "Output datafile",
