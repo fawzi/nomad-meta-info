@@ -158,6 +158,22 @@
         "section_method"
       ]
     },  {
+      "description": "wave function switch between WFFIL, SUPWF, WPPRI",
+      "dtypeStr": "C",
+      "name": "x_wien2k_wf_switch",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "RmtKmax - determines matrix size (convergence), where Kmax is the plane wave cut-off, Rmt is the smallest of all atomic sphere radii",
+      "dtypeStr": "f",
+      "name": "x_wien2k_rkmax",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
       "description": "number of independent atoms in the cell",
       "dtypeStr": "i",
       "name": "x_wien2k_nr_of_independent_atoms",
