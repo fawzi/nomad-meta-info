@@ -2019,6 +2019,27 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "Estimated error on exchange",
+      "name": "x_qe_energy_exchange_error_estimate",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Averaged Fock potential",
+      "name": "x_qe_energy_exchange_average_fock_potential",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Fock energy",
+      "name": "x_qe_energy_fock",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "All-electron total energy from PAW",
       "name": "x_qe_energy_total_paw_all_electron",
       "dtypeStr": "f",
@@ -2108,6 +2129,15 @@
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Flag: Exact-exchange refinement is active",
+      "name": "x_qe_exx_refine",
+      "dtypeStr": "b",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     },
     {
       "description": "Exact-exchange has been reached (flag)",
