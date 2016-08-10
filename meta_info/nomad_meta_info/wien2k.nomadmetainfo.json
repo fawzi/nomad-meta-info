@@ -102,6 +102,62 @@
         "section_system"
       ]
     }, {
+      "description": "exchange-correlation potential, in in0",
+      "dtypeStr": "i",
+      "name": "x_wien2k_indxc",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "switch in in0 between TOT, KXC, POT, MULT, COUL, EXCH",
+      "dtypeStr": "C",
+      "name": "x_wien2k_switch",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "FFT-mesh parameters in x direction for the calculation of the XC-potential in the interstitial region, in in0",
+      "dtypeStr": "i",
+      "name": "x_wien2k_ifft_x",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "FFT-mesh parameters in y direction for the calculation of the XC-potential in the interstitial region, in in0",
+      "dtypeStr": "i",
+      "name": "x_wien2k_ifft_y",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "FFT-mesh parameters in z direction for the calculation of the XC-potential in the interstitial region, in in0",
+      "dtypeStr": "i",
+      "name": "x_wien2k_ifft_z",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Multiplicative factor to the IFFT grid, in in0",
+      "dtypeStr": "f",
+      "name": "x_wien2k_ifft_factor",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "optional print switch, in in0",
+      "dtypeStr": "i",
+      "name": "x_wien2k_iprint",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
       "description": "number of independent atoms in the cell",
       "dtypeStr": "i",
       "name": "x_wien2k_nr_of_independent_atoms",
