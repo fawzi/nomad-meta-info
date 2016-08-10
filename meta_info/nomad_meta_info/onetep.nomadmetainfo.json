@@ -1829,10 +1829,10 @@
       "dtypeStr": "f",
       "name": "x_onetep_ewald_correction",
       "shape": [],
+      "repeats": true,
       "superNames": [
         "section_single_configuration_calculation"
       ]    
-    
     }, {
       "description": "Total_energy(Eh)",
       "dtypeStr": "f",
@@ -3125,6 +3125,7 @@
       "description": "TS coordinate path",
       "dtypeStr": "f",
       "name": "x_onetep_ts_coordinate_path",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3133,6 +3134,7 @@
       "description": "Energy of reactant",
       "dtypeStr": "f",
       "name": "x_onetep_energy_reac",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3141,6 +3143,7 @@
       "description": "Energy of product",
       "dtypeStr": "f",
       "name": "x_onetep_energy_prod",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3149,6 +3152,7 @@
       "description": "Energy of LST max",
       "dtypeStr": "f",
       "name": "x_onetep_energy_lst_max",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3157,6 +3161,7 @@
       "description": "location of LST max",
       "dtypeStr": "f",
       "name": "x_onetep_location_lst_max",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3165,6 +3170,7 @@
       "description": "barrier from reac",
       "dtypeStr": "f",
       "name": "x_onetep_barrier_reac",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3173,6 +3179,7 @@
       "description": "barrier from prod",
       "dtypeStr": "f",
       "name": "x_onetep_barrier_prod",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3181,6 +3188,7 @@
       "description": "reaction energy",
       "dtypeStr": "f",
       "name": "x_onetep_reaction_energy",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
