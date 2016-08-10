@@ -104,7 +104,7 @@
     }, {
       "description": "number of independent atoms in the cell",
       "dtypeStr": "i",
-      "name": "x_wien2k_number_of_independent_atoms",
+      "name": "x_wien2k_nr_of_independent_atoms",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -239,7 +239,7 @@
     }, {
       "description": "unit cell volume",
       "dtypeStr": "f",
-      "name": "x_wien2k_unit_cell_volume",
+      "name": "x_wien2k_unit_cell_volume_bohr3",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -263,7 +263,15 @@
         "section_scf_iteration"
       ],
       "units": "Ry"
-    }, {
+    },{
+      "description": "number of k-points",
+      "dtypeStr": "f",
+      "name": "x_wien2k_nr_kpts",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
       "description": "energy gap in Ry",
       "dtypeStr": "f",
       "name": "x_wien2k_ene_gap_Ry",
@@ -423,6 +431,15 @@
       "description": "total interstitial charge",
       "dtypeStr": "f",
       "name": "x_wien2k_tot_int_charge",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total charge in sphere",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_charge_in_sphere",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_scf_iteration"
