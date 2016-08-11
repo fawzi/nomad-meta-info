@@ -173,7 +173,15 @@
       "superNames": [
         "section_method"
       ]
-    },  {
+    }, {
+      "description": " switch, in in2c between (TOT,FOR,QTL,EFG,ALM,CLM,FERMI)",
+      "dtypeStr": "C",
+      "name": "x_wien2k_in2c_switch",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },   {
       "description": "number of independent atoms in the cell",
       "dtypeStr": "i",
       "name": "x_wien2k_nr_of_independent_atoms",
