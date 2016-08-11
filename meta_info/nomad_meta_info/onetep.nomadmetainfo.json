@@ -416,6 +416,7 @@
       "dtypeStr": "f",
       "name": "x_onetep_geom_iteration_index",
       "shape": [],
+      "repeats": true,
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1794,7 +1795,7 @@
        "description": "NGWF iterations",
       "dtypeStr": "i",
       "name": "x_onetep_n_ngwf_iterations",
-      
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -3159,6 +3160,15 @@
       "description": "Energy of product",
       "dtypeStr": "f",
       "name": "x_onetep_energy_prod",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Energy of product",
+      "dtypeStr": "f",
+      "name": "x_onetep_geom_optim_energy_total",
       "repeats": true,
       "shape": [],
       "superNames": [
