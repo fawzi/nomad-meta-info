@@ -326,9 +326,9 @@
       ],
       "units": "bohr^3"
     }, {
-      "description": "total energy",
+      "description": "energy total",
       "dtypeStr": "f",
-      "name": "x_wien2k_total_ene",
+      "name": "energy_total",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -413,6 +413,14 @@
       "description": "magnetic moment inside the sphere",
       "dtypeStr": "f",
       "name": "x_wien2k_mmi001",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "charge distance between last 2 iterations",
+      "dtypeStr": "f",
+      "name": "x_wien2k_charge_distance",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
