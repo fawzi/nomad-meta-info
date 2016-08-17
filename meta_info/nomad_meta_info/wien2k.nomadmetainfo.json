@@ -174,14 +174,71 @@
         "section_method"
       ]
     }, {
-      "description": " switch, in in2c between (TOT,FOR,QTL,EFG,ALM,CLM,FERMI)",
+      "description": "switch, in in2c between (TOT,FOR,QTL,EFG,ALM,CLM,FERMI)",
       "dtypeStr": "C",
       "name": "x_wien2k_in2c_switch",
       "shape": [],
       "superNames": [
         "section_method"
       ]
-    },   {
+    }, {
+      "description": "lower energy cut-off for defining the range of occupied states; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_emin",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "number of electrons (per unit cell) in given energy range in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_ne",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "LAPW2 tries to find the .mean. energies for each l channel, for both the valence and the semicore states. To define .valence. and .semicore. it starts at (EF - .esepermin.) and searches for a .gap. with a width of at least .eseper0. and defines this as separation energy of valence and semicore; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_espermin",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "minimum gap width; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_esper0",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "determines how EF is determined; in in2c",
+      "dtypeStr": "C",
+      "name": "x_wien2k_in2c_efmod",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "specifies the width of the broadening, if efmod is set to ALL, eval specifies the upper limit of the energy window; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_eval",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Ry"
+    }, {
+      "description": "max. G (magnitude of largest vector) in charge density Fourier expansion; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_gmax",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "number of independent atoms in the cell",
       "dtypeStr": "i",
       "name": "x_wien2k_nr_of_independent_atoms",
@@ -516,7 +573,7 @@
         "section_scf_iteration"
       ]
     },  {
-      "description": "total interstitial charge",
+      "description": "total interstitial charge (mixed after MIXER)",
       "dtypeStr": "f",
       "name": "x_wien2k_tot_int_charge",
       "shape": [],
@@ -524,9 +581,26 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "total charge in sphere",
+      "description": "total charge in sphere xx (mixed after MIXER)",
       "dtypeStr": "f",
       "name": "x_wien2k_tot_charge_in_sphere",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total interstitial charge (new (not mixed) from LAPW2+LCORE",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_int_charge_nm",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total charge in sphere xx (new (not mixed) from LAPW2+LCORE",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_charge_in_sphere_nm",
       "repeats": true,
       "shape": [],
       "superNames": [
