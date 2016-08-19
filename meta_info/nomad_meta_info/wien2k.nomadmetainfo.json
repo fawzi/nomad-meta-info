@@ -174,14 +174,6 @@
         "section_method"
       ]
     }, {
-      "description": "Potential and charge cut-off, Ry**.5",
-      "dtypeStr": "f",
-      "name": "x_wien2k_cutoff",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
       "description": "switch, in in2c between (TOT,FOR,QTL,EFG,ALM,CLM,FERMI)",
       "dtypeStr": "C",
       "name": "x_wien2k_in2c_switch",
@@ -412,6 +404,14 @@
       "description": "number of k-points",
       "dtypeStr": "f",
       "name": "x_wien2k_nr_kpts",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "Potential and charge cut-off, Ry**.5",
+      "dtypeStr": "f",
+      "name": "x_wien2k_cutoff",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
