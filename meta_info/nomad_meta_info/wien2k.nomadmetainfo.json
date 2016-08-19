@@ -400,7 +400,15 @@
         "section_scf_iteration"
       ],
       "units": "Ry"
-    },{
+    },  {
+      "description": "number of electrons",
+      "dtypeStr": "f",
+      "name": "x_wien2k_noe",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "number of k-points",
       "dtypeStr": "f",
       "name": "x_wien2k_nr_kpts",
