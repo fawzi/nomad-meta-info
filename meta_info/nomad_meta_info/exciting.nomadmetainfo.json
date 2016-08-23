@@ -17,6 +17,49 @@
       ],
       "units": "m^-1"
     }, {
+      "description": "Origin (in lattice coordinate) of the region where the Fermi surface is calculated",
+      "dtypeStr": "f",
+      "name": "x_exciting_origin_fermi_surface",
+      "repeats": true,
+      "shape": [3],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
+      "description": "Vectors (in lattice coordinate) defining the region where the Fermi surface is calculated",
+      "dtypeStr": "f",
+      "name": "x_exciting_vectors_fermi_surface",
+      "repeats": true,
+      "shape": [3,3],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
+      "description": "number of points in the mesh to calculate the Fermi surface",
+      "dtypeStr": "i",
+      "name": "x_exciting_grid_fermi_surface",
+      "repeats": true,
+      "shape": [3],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
+      "description": "Number of bands for fermi surface",
+      "dtypeStr": "i",
+      "name": "x_exciting_number_of_bands_fermi_surface",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Number of mesh points for fermi surface",
+      "dtypeStr": "i",
+      "name": "x_exciting_number_of_mesh_points_fermi_surface",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Bandstructure energy values",
       "dtypeStr": "f",
       "name": "x_exciting_band_value",
@@ -24,6 +67,28 @@
       "shape": [],
       "superNames": [
         "x_exciting_section_bandstructure"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fermi energy for Fermi surface",
+      "dtypeStr": "f",
+      "name": "x_exciting_fermi_energy_fermi_surface",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fermi surface values",
+      "dtypeStr": "f",
+      "name": "x_exciting_values_fermi_surface",
+      "shape": [
+        "x_exciting_number_of_bands_fermi_surface",
+        "x_exciting_number_of_mesh_points_fermi_surface"
+      ],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
       ],
       "units": "J"
     }, {
@@ -658,6 +723,13 @@
         "section_system"
       ],
       "units": "m"
+    }, {
+      "description": "Fermi surface values",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_fermi_surface",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "bandstructure values",
       "kindStr": "type_section",
