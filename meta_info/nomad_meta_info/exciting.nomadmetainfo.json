@@ -25,6 +25,19 @@
       "superNames": [
         "x_exciting_section_fermi_surface"
       ]
+    },  {
+      "description": "Forces acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_forces",
+      "repeats": true,
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
     }, {
       "description": "Vectors (in lattice coordinate) defining the region where the Fermi surface is calculated",
       "dtypeStr": "f",
@@ -33,6 +46,15 @@
       "shape": [3,3],
       "superNames": [
         "x_exciting_section_fermi_surface"
+      ]
+    }, {
+      "description": "The number of atoms in the unit cell",
+      "dtypeStr": "i",
+      "name": "x_exciting_number_of_atoms",
+      "shape": [],
+      "superNames": [
+        "section_run",
+        "section_method"
       ]
     }, {
       "description": "number of points in the mesh to calculate the Fermi surface",
@@ -79,6 +101,16 @@
         "x_exciting_section_fermi_surface"
       ],
       "units": "J"
+    }, {
+      "description": "Temporary storing converged atom forces cartesian",
+      "dtypeStr": "C",
+      "name": "x_exciting_store_total_forces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
+      ]
+
     }, {
       "description": "Fermi surface values",
       "dtypeStr": "f",
