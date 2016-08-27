@@ -103,13 +103,21 @@
       ]
     }, {
       "description": "exchange-correlation potential, in in0",
-      "dtypeStr": "i",
+      "dtypeStr": "C",
       "name": "x_wien2k_indxc",
       "shape": [],
       "superNames": [
         "section_method"
       ]
     }, {
+      "description": "exchange-correlation potential, in in0",
+      "kindStr": "type_section",
+      "name": "x_wien2k_section_XC",
+      "superNames": [
+        "section_method"
+      ]
+    },
+ {
       "description": "switch in in0 between TOT, KXC, POT, MULT, COUL, EXCH",
       "dtypeStr": "C",
       "name": "x_wien2k_switch",
