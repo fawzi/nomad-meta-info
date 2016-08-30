@@ -883,6 +883,71 @@
       ],
       "units": "J"
     }, {
+      "description": "Hartree-Fock Total Energy",
+      "dtypeStr": "f",
+      "name": "turbomole_HF_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "MP2 total energies",
+      "dtypeStr": "f",
+      "name": "turbomole_MP2_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "CCSD total energies",
+      "dtypeStr": "f",
+      "name": "turbomole_CCSD_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "CCSD(T) total energies",
+      "dtypeStr": "f",
+      "name": "turbomole_CCSDparT_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Perturbation theory total energies",
+      "dtypeStr": "f",
+      "name": "turbomole_PT_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "D1 diagnostic of CCSD",
+      "dtypeStr": "f",
+      "name": "turbomole_D1_diagnostic",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "Type of UHF molecular orbital",
       "dtypeStr": "C",
       "name": "turbomole_uhfmo_type",
