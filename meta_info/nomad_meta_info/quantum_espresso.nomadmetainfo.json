@@ -626,6 +626,15 @@
       ]
     },
     {
+      "description": "Fraction of exact-exchange in EXX-refinement",
+      "name": "x_qe_exact_exchange_fraction",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Maximum number of ionic+electronic steps in dynamics (MD/relax) calculation",
       "name": "x_qe_dynamics_max_steps",
       "dtypeStr": "i",
