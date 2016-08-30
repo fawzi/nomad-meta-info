@@ -71,7 +71,7 @@
       "name": "x_exciting_number_of_bands_fermi_surface",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "x_exciting_section_fermi_surface"
       ]
     }, {
       "description": "Number of mesh points for fermi surface",
@@ -79,7 +79,7 @@
       "name": "x_exciting_number_of_mesh_points_fermi_surface",
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "x_exciting_section_fermi_surface"
       ]
     }, {
       "description": "Bandstructure energy values",
@@ -116,8 +116,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_values_fermi_surface",
       "shape": [
-        "x_exciting_number_of_bands_fermi_surface",
-        "x_exciting_number_of_mesh_points_fermi_surface"
+      "x_exciting_number_of_bands_fermi_surface"
       ],
       "superNames": [
         "x_exciting_section_fermi_surface"
