@@ -29,7 +29,8 @@
       "description": "Warnings from Quantum Espresso",
       "name": "x_qe_warning",
       "dtypeStr": "C",
-      "shape": ["x_qe_number_of_warnings"],
+      "shape": [],
+      "repeats": true,
       "superNames": [
         "section_run"
       ]
