@@ -106,13 +106,6 @@
         "x_abinit_section_dataset"
       ]
    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "x_abinit_section_var",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "Variable dataset number",
       "dtypeStr": "i",
       "name": "x_abinit_vardtset",
@@ -140,25 +133,11 @@
         "x_abinit_section_var"
       ]
     }, {
-      "description": "section describing the ABINIT variables",
-      "kindStr": "type_abstract_document_content",
-      "name": "x_abinit_var",
-      "superNames": [
-        "x_abinit_section_input"
-      ]
-    }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_abinit_section_dataset",
+      "name": "x_abinit_section_var",
       "superNames": [
         "section_run"
-      ]
-    }, {
-      "description": "-",
-      "kindStr": "type_section",
-      "name": "x_abinit_section_input",
-      "superNames": [
-        "x_abinit_section_dataset"
       ]
     }
   ]
