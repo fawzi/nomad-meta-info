@@ -2919,6 +2919,20 @@
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary Relax: number of steps after which structure relaxation converged",
+      "name": "x_qe_t_relax_converged_steps",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary Relax: final energy in relaxation",
+      "name": "x_qe_t_relax_final_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
     }
   ]
 }
