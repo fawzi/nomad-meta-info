@@ -2933,6 +2933,20 @@
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Directory where initial atom_positions and simulation_cell were read from",
+      "name": "x_qe_input_positions_cell_dirname",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
+    },
+    {
+      "description": "File that was used to recalculate initial potential",
+      "name": "x_qe_input_potential_recalculated_file",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["section_run"]
     }
   ]
 }
