@@ -1977,6 +1977,59 @@
       "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
+      "name": "x_qe_section_bands_diagonalization",
+      "kindStr": "type_section",
+      "description": "section for diagonalization info in QE band structure calculation",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary: Diagonalization algorithm",
+      "name": "x_qe_t_bands_diagonalization_algorithm",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["x_qe_section_bands_diagonalization"]
+    },
+    {
+      "description": "Diagonalization algorithm",
+      "name": "x_qe_bands_diagonalization_algorithm",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": ["x_qe_section_bands_diagonalization"]
+    },
+    {
+      "description": "Number of uncoverged eigenvalues (Warning)",
+      "name": "x_qe_bands_diagonalization_warn_n_unconverged_eigenvalues",
+      "dtypeStr": "i",
+      "shape": [],
+      "repeats": true,
+      "superNames": ["x_qe_section_bands_diagonalization"]
+    },
+    {
+      "description": "Number of uncoverged eigenvalues (Warning from function c_bands)",
+      "name": "x_qe_bands_diagonalization_c_bands_n_unconverged_eigenvalues",
+      "dtypeStr": "i",
+      "shape": [],
+      "repeats": true,
+      "superNames": ["x_qe_section_bands_diagonalization"]
+    },
+    {
+      "description": "Convergence Threshold in bands diagonalization",
+      "name": "x_qe_bands_diagonalization_ethr",
+      "dtypeStr": "f",
+      "repeats": true,
+      "superNames": ["x_qe_section_bands_diagonalization"]
+    },
+    {
+      "description": "Average of iterations in bands diagonalization",
+      "name": "x_qe_bands_diagonalization_iteration_avg",
+      "dtypeStr": "f",
+      "repeats": true,
+      "superNames": ["x_qe_section_bands_diagonalization"]
+    },
+    {
       "description": "Charge in iteration (up)",
       "name": "x_qe_iteration_charge_negative_up",
       "dtypeStr": "f",
