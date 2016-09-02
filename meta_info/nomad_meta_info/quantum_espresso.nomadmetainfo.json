@@ -1924,63 +1924,57 @@
       "superNames": ["section_scf_iteration"]
     },
     {
-      "description": "Temporary: Davidson diagonalization with overlap",
-      "name": "x_qe_t_david_with_overlap",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": ["section_scf_iteration"]
+      "name": "x_qe_section_scf_diagonalization",
+      "kindStr": "type_section",
+      "description": "section for diagonalization info in QE scf iterations",
+      "repeats": true,
+      "superNames": [
+        "section_scf_iteration"
+      ]
     },
     {
-      "description": "Temporary: Conjugate-Gradient diagonalization",
-      "name": "x_qe_t_cg_diag",
+      "description": "Temporary: Diagonalization algorithm",
+      "name": "x_qe_t_scf_diagonalization_algorithm",
       "dtypeStr": "C",
       "shape": [],
-      "superNames": ["section_scf_iteration"]
+      "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
       "description": "Diagonalization algorithm",
-      "name": "x_qe_diagonalization_scheme",
+      "name": "x_qe_scf_diagonalization_algorithm",
       "dtypeStr": "C",
       "shape": [],
-      "superNames": ["section_scf_iteration"]
+      "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
       "description": "Number of uncoverged eigenvalues (Warning)",
-      "name": "x_qe_warn_n_unconverged_eigenvalues",
+      "name": "x_qe_scf_diagonalization_warn_n_unconverged_eigenvalues",
       "dtypeStr": "i",
-      "shape": ["x_qe_number_of_diagonalization_attempts"],
-      "superNames": ["section_scf_iteration"]
+      "shape": [],
+      "repeats": true,
+      "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
       "description": "Number of uncoverged eigenvalues (Warning from function c_bands)",
-      "name": "x_qe_c_bands_n_unconverged_eigenvalues",
+      "name": "x_qe_scf_diagonalization_c_bands_n_unconverged_eigenvalues",
       "dtypeStr": "i",
-      "shape": ["x_qe_number_of_diagonalization_attempts"],
-      "superNames": ["section_scf_iteration"]
+      "shape": [],
+      "repeats": true,
+      "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
-      "description": "Temporary: Convergence Threshold in scf iteration",
-      "name": "x_qe_t_iteration_ethr",
+      "description": "Convergence Threshold in scf diagonalization",
+      "name": "x_qe_scf_diagonalization_ethr",
       "dtypeStr": "f",
-      "superNames": ["section_scf_iteration"]
+      "repeats": true,
+      "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
-      "description": "Temporary: Convergence Threshold in scf iteration, average of iterations",
-      "name": "x_qe_t_iteration_avg",
+      "description": "Average of iterations in scf diagonalization",
+      "name": "x_qe_scf_diagonalization_iteration_avg",
       "dtypeStr": "f",
-      "superNames": ["section_scf_iteration"]
-    },
-    {
-      "description": "Convergence Threshold in scf iteration",
-      "name": "x_qe_iteration_ethr",
-      "dtypeStr": "f",
-      "superNames": ["section_scf_iteration"]
-    },
-    {
-      "description": "Convergence Threshold in scf iteration, average of iterations",
-      "name": "x_qe_iteration_avg",
-      "dtypeStr": "f",
-      "superNames": ["section_scf_iteration"]
+      "repeats": true,
+      "superNames": ["x_qe_section_scf_diagonalization"]
     },
     {
       "description": "Charge in iteration (up)",
