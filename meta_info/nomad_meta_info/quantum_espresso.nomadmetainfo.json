@@ -1866,31 +1866,31 @@
       "description": "Temporary storage for spin channel",
       "name": "x_qe_t_spin_channel",
       "dtypeStr": "C",
-      "superNames": ["section_eigenvalues"]
+      "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Temporary storage for k-point, x-component",
       "name": "x_qe_t_k_x",
       "dtypeStr": "f",
-      "superNames": ["section_eigenvalues"]
+      "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Temporary storage for k-point, y-component",
       "name": "x_qe_t_k_y",
       "dtypeStr": "f",
-      "superNames": ["section_eigenvalues"]
+      "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Temporary storage for k-point, z-component",
       "name": "x_qe_t_k_z",
       "dtypeStr": "f",
-      "superNames": ["section_eigenvalues"]
+      "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Temporary: number of plane waves for this k-point",
       "name": "x_qe_t_k_pw",
       "dtypeStr": "i",
-      "superNames": ["section_eigenvalues"]
+      "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Number of plane waves for each k-point",
@@ -1903,7 +1903,7 @@
       "description": "Temporary: k-point band energies",
       "name": "x_qe_t_k_point_energies",
       "dtypeStr": "C",
-      "superNames": ["section_eigenvalues"]
+      "superNames": ["section_single_configuration_calculation"]
     },
     {
       "description": "Iteration number",
