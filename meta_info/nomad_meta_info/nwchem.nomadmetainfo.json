@@ -1,0 +1,289 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "Meta info used by the NWChem parser, all names are expected to start with x_nwchem_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "Contains information about the starting conditions for this run",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_start_information",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Section for the DFT module.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_dft",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Section for a DFT energy or force task.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_dft_energy_force_task",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Contains system information for a calculation to follow. Contains all of the geometries used in different NWChem tasks contained by this calculations.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_geometry",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "NWChem DFT Module.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_dft",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "NWChem DFT Gradient Module.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_dft_gradient",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "The forces in a DFT calculation.",
+      "dtypeStr": "f",
+      "unit": "N",
+      "name": "x_nwchem_dft_forces",
+      "shape": ["number_of_atoms", 3],
+      "superNames": [
+        "x_nwchem_section_dft_gradient"
+      ]
+    }, {
+      "description": "The energy for a DFT calculation.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_dft_energy_total",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The exchange energy for a DFT calculation.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_dft_energy_X",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The number of atoms in a DFT calculation.",
+      "dtypeStr": "i",
+      "name": "x_nwchem_dft_number_of_atoms",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The multiplicity in a DFT calculation.",
+      "dtypeStr": "i",
+      "name": "x_nwchem_dft_spin_multiplicity",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The total charge in a DFT calculation.",
+      "dtypeStr": "i",
+      "name": "x_nwchem_dft_total_charge",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The maximum number of scf steps.",
+      "dtypeStr": "i",
+      "name": "x_nwchem_dft_max_iteration",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The SCF energy convergence threshold.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_dft_scf_threshold_energy_change",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "The correlation energy for a DFT calculation.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_dft_energy_C",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft"
+      ]
+    }, {
+      "description": "Section for the SCF calculation in DFT.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_dft_scf",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Section for a SCF step in DFT.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_dft_scf_step",
+      "superNames": [
+        "x_nwchem_section_dft_scf"
+      ]
+    }, {
+      "description": "The SCF step energy for a DFT calculation.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_dft_scf_energy",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft_scf_step"
+      ]
+    }, {
+      "description": "The SCF energy change with respect to the previous step.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_dft_energy_change_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_dft_scf_step"
+      ]
+    }, {
+      "description": "Section for a geometry optimization task.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_geo_opt_task",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Section for a geometry optimization step.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_geo_opt_step",
+      "superNames": [
+        "x_nwchem_section_geo_opt_task"
+      ]
+    }, {
+      "description": "The energy for a geometry optimization step.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_geo_opt_step_energy",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_geo_opt_step"
+      ]
+    }, {
+      "description": ".",
+      "dtypeStr": "C",
+      "name": "x_nwchem_input_filename",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The run start date and time.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_start_datetime",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The compilation date and time.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_compilation_datetime",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The host on which this calculation was made on.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_run_host_name",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The source directory of the code.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_source",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The main branch of the code.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_branch",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The SVN revision of the code.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_revision",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The ga revision.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_ga_revision",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The input prefix.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_input_prefix",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The database filename.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_db_filename",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "Status of the run.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_status",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "Number of processes used.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_nproc",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "Time left in seconds.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_time_left",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "The name of the program that was run.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_program_name",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_start_information"
+      ]
+    }]
+}
