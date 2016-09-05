@@ -26,6 +26,16 @@
       ]
     },
     {
+      "description": "Temporary: Warnings from Quantum Espresso",
+      "name": "x_qe_t_warning",
+      "dtypeStr": "C",
+      "shape": [],
+      "repeats": true,
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
       "description": "Warnings from Quantum Espresso",
       "name": "x_qe_warning",
       "dtypeStr": "C",
