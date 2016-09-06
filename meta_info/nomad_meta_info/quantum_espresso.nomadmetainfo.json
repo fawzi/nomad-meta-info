@@ -655,6 +655,15 @@
       ]
     },
     {
+      "description": "Mass of cell in MD/relax calculation",
+      "name": "x_qe_md_cell_mass",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Finite E-field: direction",
       "name": "x_qe_berry_efield_direction",
       "dtypeStr": "i",
