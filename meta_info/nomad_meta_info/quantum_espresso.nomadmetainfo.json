@@ -2745,6 +2745,20 @@
       ]
     },
     {
+      "description": "Temporary storage for extrapolated starting charge (MD, (vc-)relax)",
+      "name": "x_qe_t_md_starting_charge",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary storage for extrapolated starting charge, renormalized (MD, (vc-)relax)",
+      "name": "x_qe_t_md_starting_charge_renormalized",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Temporary storage for max_steps-reached flag (MD, (vc-)relax)",
       "name": "x_qe_t_md_max_steps_reached",
       "dtypeStr": "b",
