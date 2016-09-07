@@ -2772,6 +2772,15 @@
       ]
     },
     {
+      "description": "Charge extrapolation scheme (MD, (vc-)relax)",
+      "name": "x_qe_extrapolation_charge",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
       "description": "Temporary storage for wave function extrapolation scheme (MD, (vc-)relax)",
       "name": "x_qe_t_md_extrapolation_wfc",
       "dtypeStr": "C",
