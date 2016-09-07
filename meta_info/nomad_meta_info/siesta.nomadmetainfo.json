@@ -24,5 +24,26 @@
       "superNames": [
           "section_run"
       ]
+  }, {
+      "description": "XC authors (really: XC functional) in siesta calculation.",
+      "dtypeStr": "C",
+      "name": "x_siesta_xc_authors",
+      "shape": [],
+      "superNames": [
+          "x_siesta_section_xc_authors"
+      ]
+  }, {
+      "description": "XC authors section",
+      "kindStr": "type_section",
+      "name": "x_siesta_section_xc_authors",
+      "superNames": [ "section_method" ]
+  }, {
+      "description": "basis set type",
+      "dtypeStr": "C",
+      "name": "x_siesta_pao_basis_type",
+      "shape": [],
+      "superNames": [
+	  "section_basis_set"
+      ]
   }]
 }
