@@ -2700,6 +2700,15 @@
       ]
     },
     {
+      "description": "Temporary storage for MD, total energy",
+      "name": "x_qe_t_md_total_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
       "description": "Temporary storage for MD, sum of energies",
       "name": "x_qe_t_md_ekin_etot",
       "dtypeStr": "f",
