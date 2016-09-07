@@ -921,6 +921,15 @@
       ]
     },
     {
+      "description": "Temporary storage for direct lattice vectors, units",
+      "name": "x_qe_t_vec_a_units",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Temporary storage for direct lattice vectors, x-component",
       "name": "x_qe_t_vec_a_x",
       "dtypeStr": "f",
@@ -2558,6 +2567,15 @@
     {
       "description": "Temporary storage for new atom positions (MD, (vc-)relax), units",
       "name": "x_qe_t_md_atom_positions_units",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "Temporary storage for new atom positions (MD, (vc-)relax via VCSMD), units",
+      "name": "x_qe_t_md_atom_positions_units_vcsmd",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
