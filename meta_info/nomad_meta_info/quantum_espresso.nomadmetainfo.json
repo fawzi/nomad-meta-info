@@ -3063,6 +3063,36 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "Temporary MD storage for k-point info, k-index",
+      "name": "x_qe_t_md_k_info_ik",
+      "dtypeStr": "i",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary MD storage for k-point info, x-component",
+      "name": "x_qe_t_md_k_info_vec_x",
+      "dtypeStr": "f",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary MD storage for k-point info, y-component",
+      "name": "x_qe_t_md_k_info_vec_y",
+      "dtypeStr": "f",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary MD storage for k-point info, z-component",
+      "name": "x_qe_t_md_k_info_vec_z",
+      "dtypeStr": "f",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary MD storage for k-point info, weight",
+      "name": "x_qe_t_md_k_info_wk",
+      "dtypeStr": "f",
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Directory where initial atom_positions and simulation_cell were read from",
       "name": "x_qe_input_positions_cell_dirname",
       "dtypeStr": "C",
