@@ -8,12 +8,29 @@
     }],
   "metaInfos": [
  {
-      "description": "header (labels) of wien2k.",
+      "description": "header (labels) of fleur.",
       "kindStr": "type_section",
-      "name": "x_wien2k_header",
+      "name": "x_fleur_header",
       "superNames": [
         "section_run"
       ]
+    }, {
+      "description": "scf iteration number",
+      "dtypeStr": "i",
+      "name": "x_fleur_iteration_number",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },{
+      "description": "Version of Fleur",
+      "dtypeStr": "C",
+      "name": "x_fleur_version",
+      "shape": [],
+      "superNames": [
+        "x_fleur_header"
+      ]
     }
+
  ]
 }
