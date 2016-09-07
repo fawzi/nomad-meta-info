@@ -3042,6 +3042,27 @@
       "superNames": ["section_single_configuration_calculation"]
     },
     {
+      "description": "Temporary Relax: convergence threshold on energy in relaxation",
+      "name": "x_qe_t_relax_threshold_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary Relax: convergence threshold on force components in relaxation",
+      "name": "x_qe_t_relax_threshold_force",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
+      "description": "Temporary Relax: convergence threshold on pressure in relaxation",
+      "name": "x_qe_t_relax_threshold_pressure",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": ["section_single_configuration_calculation"]
+    },
+    {
       "description": "Directory where initial atom_positions and simulation_cell were read from",
       "name": "x_qe_input_positions_cell_dirname",
       "dtypeStr": "C",
