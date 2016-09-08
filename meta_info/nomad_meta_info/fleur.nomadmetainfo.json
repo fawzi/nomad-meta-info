@@ -22,7 +22,63 @@
       "superNames": [
         "section_scf_iteration"
       ]
-    },{
+    }, {
+      "description": "user given name for this system",
+      "dtypeStr": "C",
+      "name": "x_fleur_system_name",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "total number of atoms",
+      "dtypeStr": "i",
+      "name": "x_fleur_total_atoms",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number of atom types",
+      "dtypeStr": "i",
+      "name": "x_fleur_nr_of_atom_types",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Kmax is the plane wave cut-off",
+      "dtypeStr": "f",
+      "name": "x_fleur_k_max",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Gmax",
+      "dtypeStr": "f",
+      "name": "x_fleur_G_max",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "total nuclear charge",
+      "dtypeStr": "f",
+      "name": "x_fleur_tot_nucl_charge",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "total electronic charge",
+      "dtypeStr": "f",
+      "name": "x_fleur_tot_elec_charge",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
       "description": "Version of Fleur",
       "dtypeStr": "C",
       "name": "x_fleur_version",
