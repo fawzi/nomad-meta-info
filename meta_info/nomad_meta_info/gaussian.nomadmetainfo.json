@@ -244,20 +244,12 @@
         "section_system"
       ]
     }, {
-      "description": "Section containing the SCF converged value of $S^2$, and the value resulting from the annihilation of the first spin contaminant.",
-      "kindStr": "type_section",
-      "name": "x_gaussian_section_real_spin_squared",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
       "description": "Real value of spin squared.",
       "dtypeStr": "f",
       "name": "x_gaussian_spin_S2",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_real_spin_squared"
+        "section_scf_iteration"
       ]
     }, {
       "description": "Real value of spin squared resulting from the annihilation of the first spin contaminant.",
@@ -265,7 +257,7 @@
       "name": "x_gaussian_after_annihilation_spin_S2",
       "shape": [],
       "superNames": [
-        "x_gaussian_section_real_spin_squared"
+        "section_scf_iteration"
       ]
     }, {
       "description": "Positions of all the atoms, in Cartesian coordinates. This metadata defines a configuration and is therefore required.",
@@ -1109,6 +1101,17 @@
       ],
       "units": "J"
     }, {
+      "description": "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method, for double hybrid density functionals.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_energy_total_perturbative",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
       "description": "Total electrostatic energy (nuclei + electrons), defined consistently with calculation_method.",
       "dtypeStr": "f",
       "name": "x_gaussian_energy_electrostatic",
@@ -1460,9 +1463,135 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "composite model chemistries energies.",
+      "description": "composite model chemistries energies, G1",
       "dtypeStr": "f",
-      "name": "x_gaussian_model_energy",
+      "name": "x_gaussian_G1_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G1MP2",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G1MP2_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G2",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G2_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G2MP2",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G2MP2_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G3",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G3_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G3MP2",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G3MP2_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G4",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G4_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, G4MP2",
+      "dtypeStr": "f",
+      "name": "x_gaussian_G4MP2_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, CBS-4",
+      "dtypeStr": "f",
+      "name": "x_gaussian_CBS4_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, CBS-q",
+      "dtypeStr": "f",
+      "name": "x_gaussian_CBSq_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, CBS-Q",
+      "dtypeStr": "f",
+      "name": "x_gaussian_CBSQ_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, CBS-QB3",
+      "dtypeStr": "f",
+      "name": "x_gaussian_CBSQB3_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, W1U",
+      "dtypeStr": "f",
+      "name": "x_gaussian_W1U_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, W1RO",
+      "dtypeStr": "f",
+      "name": "x_gaussian_W1RO_energy",
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_models"
+      ],
+      "units": "J"
+    }, {
+      "description": "composite model chemistries energies, W1BD",
+      "dtypeStr": "f",
+      "name": "x_gaussian_W1BD_energy",
       "shape": [],
       "superNames": [
         "x_gaussian_section_models"
