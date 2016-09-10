@@ -11,9 +11,48 @@
       "dtypeStr": "C",
       "name": "x_gulp_patterson_group",
       "shape": [],
-      "superNames": [
-          "section_run"
-      ]
-  }
- ]
+      "superNames": [ "section_system" ]
+  },{
+      "description": "Space group",
+      "dtypeStr": "C",
+      "name": "x_gulp_space_group",
+      "shape": [],
+      "superNames": [ "section_system" ]
+  }, {
+    "description": "grrr",
+    "name": "x_gulp_cell_alpha",
+    "superNames": [ "section_system" ],
+    "dtypeStr": "f",
+    "shape": []
+  }, {
+    "description": "grrr",
+    "name": "x_gulp_cell_beta",
+    "superNames": [ "section_system" ],
+    "dtypeStr": "f",
+    "shape": []
+  }, {
+    "description": "grrr",
+    "name": "x_gulp_cell_gamma",
+    "superNames": [ "section_system" ],
+    "dtypeStr": "f",
+    "shape": []
+  }, {
+    "description": "grrr",
+    "name": "x_gulp_cell_a",
+    "superNames": [ "section_system" ],
+    "dtypeStr": "f",
+    "shape": []
+  }, {
+    "description": "grrr",
+    "name": "x_gulp_cell_b",
+    "superNames": [ "section_system" ],
+    "dtypeStr": "f",
+    "shape": []
+  }, {
+    "description": "grrr",
+    "name": "x_gulp_cell_c",
+    "superNames": [ "section_system" ],
+    "dtypeStr": "f",
+    "shape": []
+  }]
 }
