@@ -241,7 +241,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_basis_set"
       ]
     }, {
       "description": "turbomole_controlInOut_basis_cont_number",
@@ -268,13 +268,31 @@
         "section_basis_set"
       ]
     }, {
+      "description": "Method used for electronic structure calculatons",
+      "dtypeStr": "C",
+      "name": "electronic_structure_method",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Used exchange-correlation functional",
+      "dtypeStr": "C",
+      "name": "XC_functional_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_functionals"
+      ]
+    }, {
       "description": "type of the used correlation functional",
       "dtypeStr": "C",
       "name": "turbomole_controlInOut_functional_type_correlation",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "type of the used exchange functional",
@@ -283,16 +301,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "type of the used functional",
-      "dtypeStr": "C",
-      "name": "turbomole_controlInOut_functional_type",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "The integration cells",
@@ -301,7 +310,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "type of the used grid integration",
@@ -310,7 +319,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "Type of the partition function used",
@@ -319,7 +328,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "Sharpness of the partition function",
@@ -328,7 +337,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "Grid points number",
@@ -337,7 +346,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "The size of the radial grid",
@@ -346,7 +355,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "The radial integration type",
@@ -355,7 +364,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "The size of the used grid",
@@ -364,7 +373,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "turbomole_section_functionals"
       ]
     }, {
       "description": "turbomole_controlInOut_tot_cartesian_func",
@@ -495,6 +504,12 @@
         "turbomole_section_eigenvalues_spin"
       ]
     }, {
+      "description": "section for one list of XC functionals",
+      "kindStr": "type_section",
+      "name": "turbomole_section_functionals",
+      "repeats": true,
+      "superNames": []
+    }, {
       "description": " Coordinates of all systems centered about cell 0: Charge",
       "dtypeStr": "f",
       "name": "turbomole_embed_geometry_atom_charge",
@@ -623,6 +638,17 @@
       "shape": [],
       "superNames": [
         "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Final Total Energy",
+      "dtypeStr": "f",
+      "name": "energy_total",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run",
         "section_scf_iteration"
       ],
       "units": "J"
@@ -808,7 +834,7 @@
     }, {
       "description": "Version of the program that was used. Should contain either the official version name or the referenze hashtag of a git repository as well as the location of the repository.",
       "dtypeStr": "C",
-      "name": "turbomole_program_version",
+      "name": "program_version",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -916,6 +942,17 @@
       ],
       "units": "J"
     }, {
+      "description": "CC2 total energies",
+      "dtypeStr": "f",
+      "name": "turbomole_CC2_total_energy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_component",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
       "description": "CCSD(T) total energies",
       "dtypeStr": "f",
       "name": "turbomole_CCSDparT_total_energy_final",
@@ -998,4 +1035,3 @@
       ]
     }]
 }
-
