@@ -176,6 +176,67 @@
         "x_gaussian_section_times",
         "section_run"
       ]
+    }, {
+      "description": "section that contains coefficients for the hybrid DFT functionals",
+      "kindStr": "type_section",
+      "shape": [],
+      "name": "x_gaussian_section_hybrid_coeffs",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Coefficient for Hartree-Fock exchange in hybrid DFT functionals",
+      "dtypeStr": "f",
+      "name": "hybrid_xc_coeff1",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
+    }, {
+      "description": "Coefficients for Slater exchange, non-local exchange, local correlation, and non-local correlation, respectively, in hybrid DFT functionals",
+      "dtypeStr": "C",
+      "name": "hybrid_xc_coeff2",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
+    }, {
+      "description": "Hartree-Fock exchange",
+      "dtypeStr": "f",
+      "name": "x_gaussian_hybrid_xc_hfx",
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
+    }, {
+      "description": "Slater exchange",
+      "dtypeStr": "f",
+      "name": "x_gaussian_hybrid_xc_slater",
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
+    }, {
+      "description": "Slater exchange",
+      "dtypeStr": "f",
+      "name": "x_gaussian_hybrid_xc_nonlocalex",
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
+    }, {
+      "description": "Slater exchange",
+      "dtypeStr": "f",
+      "name": "x_gaussian_hybrid_xc_localcorr",
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
+    }, {
+      "description": "Slater exchange",
+      "dtypeStr": "f",
+      "name": "x_gaussian_hybrid_xc_nonlocalcorr",
+      "superNames": [
+        "x_gaussian_section_hybrid_coeffs"
+      ]
     },  {
       "description": "Total energy calculated with a given method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
@@ -957,11 +1018,11 @@
         "x_gaussian_section_symmetry"
       ]
     }, {
-      "description": "section for the values of the SCF eigenenergies",
+      "description": "Section containing (electronic-energy) eigenvalues for one spin channel. If, for example, the eigenvalues of the Kohn-Sham operator are to be stored, a string identifying this kind of eigenvalues is put in eigenvalues_kind (see the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind for the allowed strings), the coordinates of the $k$-points at which the eigenvalues were evaluated is stored in eigenvalues_kpoints, and the energy values of the eigenstates and their occupation is stored in eigenvalues_values and eigenvalues_occupation , respectively.",
       "kindStr": "type_section",
-      "name": "x_gaussian_section_eigenvalues",
+      "name": "section_eigenvalues",
       "superNames": [
-        "section_run"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "values of eigenenergies for occupied alpha MOs",
@@ -970,7 +1031,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies for virtual alpha MOs",
@@ -979,7 +1040,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies for occupied beta MOs",
@@ -988,7 +1049,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies for virtual beta MOs",
@@ -997,7 +1058,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies, alpha occ",
@@ -1007,7 +1068,7 @@
           "number_of_alpha_mos"
       ],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies, beta occ",
@@ -1017,7 +1078,7 @@
           "number_of_beta_mos"
       ],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies, alpha occ",
@@ -1027,7 +1088,7 @@
           "number_of_alpha_mos"
       ],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "values of eigenenergies, beta occ",
@@ -1037,8 +1098,33 @@
           "number_of_beta_mos"
       ],
       "superNames": [
-        "x_gaussian_section_eigenvalues"
+        "section_eigenvalues"
       ]
+    }, {
+      "description": "Occupation of the eigenstates whose (energy) eigenvalues are given in eigenvalues_values.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_eigenvalues_occupation",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Values of the (electronic-energy) eigenvalues. Their occupations are given in eigenvalues_occupation.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_eigenvalues_values",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ],
+      "units": "J"
     }, {
       "description": "values of atomic masses",
       "dtypeStr": "f",
@@ -1066,7 +1152,7 @@
     }, {
       "description": "Name of electronic structure method.",
       "dtypeStr": "C",
-      "name": "x_gaussian_elstruc_method_name",
+      "name": "x_gaussian_electronic_structure_method",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1092,7 +1178,18 @@
     }, {
       "description": "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method.",
       "dtypeStr": "f",
-      "name": "x_gaussian_energy_total",
+      "name": "energy_total",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Value of the SCF total energy, either HF or DFT.",
+      "dtypeStr": "f",
+      "name": "x_gaussian_energy_scf",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1101,9 +1198,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method, for double hybrid density functionals.",
+      "description": "Value of the perturbation energy for double hybrids",
       "dtypeStr": "f",
-      "name": "x_gaussian_energy_total_perturbative",
+      "name": "x_gaussian_perturbation_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1111,6 +1208,14 @@
         "section_scf_iteration"
       ],
       "units": "J"
+    }, {
+      "description": "Determine if the SCF method is one of RHF, UHF, or ROHF",
+      "dtypeStr": "C",
+      "name": "x_gaussian_hf_detect",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
     }, {
       "description": "Total electrostatic energy (nuclei + electrons), defined consistently with calculation_method.",
       "dtypeStr": "f",
@@ -1153,29 +1258,9 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "MP2 energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_mp2_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_moller_plesset" 
-      ],
-      "units": "J"
-    }, {
       "description": "Difference between SCF and MP2 energies.",
       "dtypeStr": "f",
       "name": "x_gaussian_mp2_correction_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_moller_plesset"
-      ],
-      "units": "J"
-    }, {
-      "description": "MP3 energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_mp3_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1193,29 +1278,9 @@
       ],
       "units": "J"
     }, {
-      "description": "MP4(DQ) energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_mp4dq_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_moller_plesset"
-      ],
-      "units": "J"
-    }, {
       "description": "Difference between SCF and MP4(DQ) energies.",
       "dtypeStr": "f",
       "name": "x_gaussian_mp4dq_correction_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_moller_plesset"
-      ],
-      "units": "J"
-    }, {
-      "description": "MP4(SDQ) energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_mp4sdq_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1233,29 +1298,9 @@
       ],
       "units": "J"
     }, {
-      "description": "MP4(SDTQ) energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_mp4sdtq_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_moller_plesset"
-      ],
-      "units": "J"
-    }, {
       "description": "Difference between SCF and MP4(SDTQ) energies.",
       "dtypeStr": "f",
       "name": "x_gaussian_mp4sdtq_correction_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_moller_plesset"
-      ],
-      "units": "J"
-    }, {
-      "description": "MP5 energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_mp5_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1280,29 +1325,9 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "CCSD energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_ccsd_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_coupled_cluster"
-      ],
-      "units": "J"
-    }, {
       "description": "Difference between SCF and CCSD energies.",
       "dtypeStr": "f",
       "name": "x_gaussian_ccsd_correction_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_coupled_cluster"
-      ],
-      "units": "J"
-    }, {
-      "description": "CCSD(T) energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_ccsdt_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1327,39 +1352,9 @@
       ],
       "units": "J"
     }, {
-      "description": "QCISD energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_qcisd_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_quadratic_ci"
-      ],
-      "units": "J"
-    }, {
-      "description": "QCISD(T) energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_qcisdt_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_quadratic_ci"
-      ],
-      "units": "J"
-    }, {
       "description": "Difference between SCF and QCISD(TQ) energies.",
       "dtypeStr": "f",
       "name": "x_gaussian_qcisdtq_correction_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_quadratic_ci"
-      ],
-      "units": "J"
-    }, {
-      "description": "QCISD(TQ) energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_qcisdtq_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1377,16 +1372,6 @@
       "description": "Difference between SCF and CI energies.",
       "dtypeStr": "f",
       "name": "x_gaussian_ci_correction_energy",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_ci"
-      ],
-      "units": "J"
-    }, {
-      "description": "CI energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_ci_energy",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1420,32 +1405,12 @@
         "x_gaussian_section_semiempirical"
       ]
     }, {
-      "description": "converged semiempirical energy.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_semiempirical_energy_converged",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_semiempirical"
-      ],
-      "units": "J"
-    }, {
       "description": "molecular mechanics method and energies.",
       "kindStr": "type_section",
       "name": "x_gaussian_section_molmech",
       "superNames": [
         "section_single_configuration_calculation"
       ]
-    }, {
-      "description": "molecular mechanics energies.",
-      "dtypeStr": "f",
-      "name": "x_gaussian_molmech_energy",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_molmech"
-      ],
-      "units": "J"
     }, {
       "description": "molecular mechanics method.",
       "dtypeStr": "C",
@@ -1462,141 +1427,6 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
-    }, {
-      "description": "composite model chemistries energies, G1",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G1_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G1MP2",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G1MP2_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G2",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G2_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G2MP2",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G2MP2_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G3",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G3_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G3MP2",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G3MP2_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G4",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G4_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, G4MP2",
-      "dtypeStr": "f",
-      "name": "x_gaussian_G4MP2_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, CBS-4",
-      "dtypeStr": "f",
-      "name": "x_gaussian_CBS4_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, CBS-q",
-      "dtypeStr": "f",
-      "name": "x_gaussian_CBSq_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, CBS-Q",
-      "dtypeStr": "f",
-      "name": "x_gaussian_CBSQ_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, CBS-QB3",
-      "dtypeStr": "f",
-      "name": "x_gaussian_CBSQB3_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, W1U",
-      "dtypeStr": "f",
-      "name": "x_gaussian_W1U_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, W1RO",
-      "dtypeStr": "f",
-      "name": "x_gaussian_W1RO_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
-    }, {
-      "description": "composite model chemistries energies, W1BD",
-      "dtypeStr": "f",
-      "name": "x_gaussian_W1BD_energy",
-      "shape": [],
-      "superNames": [
-        "x_gaussian_section_models"
-      ],
-      "units": "J"
     }, {
       "description": "Excited state energies and properties",
       "kindStr": "type_section",
