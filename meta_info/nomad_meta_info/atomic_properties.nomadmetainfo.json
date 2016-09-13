@@ -1,0 +1,37 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info describing atomic properties most names are expected to start with atomicp_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "collection of atomic properties",
+      "kindStr": "type_section",
+      "name": "section_atomicp_collection",
+      "superNames": [
+        "x_abinit_var"
+      ]
+    }, {
+      "description": "a single group of atomic properties",
+      "kindStr": "type_section",
+      "name": "section_atomicp",
+      "repeats": false,
+      "shape": [],
+      "units": "hartree",
+      "superNames": [
+        "section_atomicp_collection"
+      ]
+    }, {
+      "description": "ABINIT variable ACCURACY",
+      "dtypeStr": "i",
+      "name": "atomicp_atom_nr",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_atomicp"
+      ]
+    }
+]
+}
