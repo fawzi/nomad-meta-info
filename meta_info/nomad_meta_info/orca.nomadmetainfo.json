@@ -4,5 +4,993 @@
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [
+    { 
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_atom_positions"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_atom_positions_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_atom_positions"
+      ],
+      "units": "angstrom"
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_atom_positions_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_atom_positions"
+      ],
+      "units": "angstrom"
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_atom_positions_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_atom_positions"
+      ],
+      "units": "angstrom"
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_info"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_basis_set",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_info"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_basis_set_contracted",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_info"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_atom_labels",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_auxiliary_basis_set_info"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_auxiliary_basis_set",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_info"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_auxiliary_basis_set_contracted",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_info"
+	]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_nb_of_primitive_gaussian_shells",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"
+	]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_primitive_gaussian_functions",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"
+	]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_contracted_shells",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"
+	]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_contracted_basis_functions",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_highest_angular_moment",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_maximum_contraction_depth",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_primitive_gaussian_shells",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_primitive_gaussian_shells_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_primitive_gaussian_functions_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_contracted_shells_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_contracted_basis_functions_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_highest_angular_moment_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_maximum_contraction_depth_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_primitive_gaussian_shells_aux",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_basis_set_statistics_and_startup_info"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_dft_method",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_exchange_functional",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_xalpha_param",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_beckes_b_param",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_correl_functional",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_lda_part_of_gga_corr",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_scalar_relativistic_method",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_speed_of_light_used",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_hf_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_multiplicity",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nelectrons",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nuclear_repulsion",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_convergence_check_mode",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_energy_change_tolerance",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_1_elect_energy_change",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_gral_integ_accuracy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_radial_grid_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_angular_grid",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_grid_pruning_method",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_weight_gener_scheme",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_basis_fn_cutoff",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_integr_weight_cutoff",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_grid_pts_after_initial_pruning",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_grid_pts_after_weights_screening",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_nb_grid_pts",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_nb_batches",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_avg_nb_points_per_batch",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_avg_nb_grid_pts_per_atom",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_scf_settings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_iteration_nb",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+	]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_gral_integ_accuracy_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_radial_grid_type_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_angular_grid_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_grid_pruning_method_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_weight_gener_scheme_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_basis_fn_cutoff_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_integr_weight_cutoff_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_grid_pts_after_initial_pruning_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_grid_pts_after_weights_screening_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_nb_grid_pts_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_nb_batches_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_avg_nb_points_per_batch_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_avg_nb_grid_pts_per_atom_final",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_final_run_after_convergence"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nuc_repulsion",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_elec_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_one_elec_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_two_elec_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_potential_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_kinetc_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_virial_ratio",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_elect_alpha_channel",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_elect_beta_channel",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_elect_total",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_exchange_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_correlation_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_exchange_correlation_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_energy_componets"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_last_energy_change",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_last_energy_change_tolerance",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_last_max_density_change",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_last_max_density_tolerance",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_last_rms_density_change",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_last_rms_density_tolerance",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_total_energy"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_orbital_nb",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_orbital_energies"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_orbital_occupation_nb",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_orbital_energies"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_orbital_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_orbital_energies"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_atom_nb",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_atom_species",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mulliken_atom_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mulliken_total_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_atom_nb_mroc",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_atom_species_mroc",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_atom_orbital_mroc",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mulliken_partial_orbital_charge_mroc",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mulliken_analysis"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_days_time",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_hours_time",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_mins_time",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_secs_time",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_final_time",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_sum_individual_times",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_fock_matrix_formation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_coulomb_formation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_split_rj",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_xc_integration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_basis_fn_evaluation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_density_evaluation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_xc_functional_evaluation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_potential_evaluation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_diagonalization",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_density_matrix_formation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_population_analysis",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_initial_guess",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_orbital_transformation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_orbital_orthonormalization",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_diis_solution",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_grid_generation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_timings"]
+    }
+
+ ]
 }
