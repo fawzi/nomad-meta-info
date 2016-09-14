@@ -1787,6 +1787,7 @@
     {
       "description": "QE check: negative core charge",
       "name": "x_qe_core_charge_negative",
+      "repeats": true,
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_method"]
@@ -1794,6 +1795,7 @@
     {
       "description": "QE check: imaginary core charge",
       "name": "x_qe_core_charge_imaginary",
+      "repeats": true,
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_method"]
@@ -1824,12 +1826,14 @@
       "name": "x_qe_starting_charge_negative",
       "dtypeStr": "f",
       "shape": [],
+      "repeats": true,
       "superNames": ["section_method"]
     },
     {
       "description": "Starting charge up (warning about negative starting charge)",
       "name": "x_qe_starting_charge_negative_up",
       "dtypeStr": "f",
+      "repeats": true,
       "shape": [],
       "superNames": ["section_method"]
     },
@@ -1838,11 +1842,13 @@
       "name": "x_qe_starting_charge_negative_down",
       "dtypeStr": "f",
       "shape": [],
+      "repeats": true,
       "superNames": ["section_method"]
     },
     {
       "description": "Starting charge",
       "name": "x_qe_starting_charge",
+      "repeats": true,
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_method"]
@@ -1851,6 +1857,7 @@
       "description": "Starting charge, renormalized",
       "name": "x_qe_starting_charge_renormalized",
       "dtypeStr": "f",
+      "repeats": true,
       "shape": [],
       "superNames": ["section_method"]
     },
