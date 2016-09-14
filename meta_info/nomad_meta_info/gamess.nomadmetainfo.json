@@ -1,0 +1,174 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the gamess parser, all names are expected to start with x_gamess",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [{
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "x_gamess_program_execution_date",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    },{
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "x_gamess_program_implementation",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    },{
+      "description": "Total charge of the system.",
+      "dtypeStr": "i",
+      "name": "x_gaussian_total_charge",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },{
+      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value. This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
+      "dtypeStr": "i",
+      "name": "x_gamess_spin_target_multiplicity",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "X component of moment of inertia",
+      "dtypeStr": "f",
+      "name": "x_gamess_moment_of_inertia_X",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Y component of moment of inertia",
+      "dtypeStr": "f",
+      "name": "x_gamess_moment_of_inertia_Y",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Z component of moment of inertia",
+      "dtypeStr": "f",
+      "name": "x_gamess_moment_of_inertia_Z",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "x coordinate for the atoms",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_x_coord",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "y coordinate for the atoms",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_y_coord",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z coordinate for the atoms",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_z_coord",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "atomic number for atoms",
+      "dtypeStr": "f",
+      "name": "x_gamess_atomic_number",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Total memory for GAMESS job",
+      "dtypeStr": "i",
+      "name": "x_gamess_memory",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Gaussian basis set main name",
+      "dtypeStr": "C",
+      "name": "x_gamess_basis_set_gbasis",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of main Gaussians",
+      "dtypeStr": "i",
+      "name": "x_gamess_basis_set_igauss",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Exponents of polarization functions",
+      "dtypeStr": "C",
+      "name": "x_gamess_basis_set_polar",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of polarization d function sets on heavy atoms",
+      "dtypeStr": "i",
+      "name": "x_gamess_basis_set_ndfunc",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of polarization f function sets on heavy atoms",
+      "dtypeStr": "i",
+      "name": "x_gamess_basis_set_nffunc",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Include a set of SP diffuse functions on heavy atoms or not",
+      "dtypeStr": "C",
+      "name": "x_gamess_basis_set_diffsp",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Number of polarization p function sets on light atoms",
+      "dtypeStr": "C",
+      "name": "x_gamess_basis_set_npfunc",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Incluse a set of S diffuse functions on light atoms or not",
+      "dtypeStr": "C",
+      "name": "x_gamess_basis_set_diffs",
+      "shape": [],
+      "superNames": [
+        "section_system"
+       ]
+      }
+      ]
+} 
