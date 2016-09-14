@@ -412,6 +412,22 @@
         "section_run"
       ]  
     }, {
+      "description": "onetep_pbc cutoff for effect of open boundary",
+      "dtypeStr": "C",
+      "name": "x_onetep_pbc_cutoff",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
+      "description": "Turns on the smeared ion representation for electrostatics calculation. ",
+      "dtypeStr": "C",
+      "name": "x_onetep_is_smearing",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]  
+    }, {
       "description": "Index for number of iterations in geometry optimisation",
       "dtypeStr": "f",
       "name": "x_onetep_geom_iteration_index",
