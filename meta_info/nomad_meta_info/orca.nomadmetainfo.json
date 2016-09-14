@@ -990,7 +990,462 @@
       "shape": [],
       "superNames": [
         "x_orca_timings"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_basis_dimension",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mp2"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_scaling_mp2_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mp2"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_aux-basis_dimension",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mp2"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_corr_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mp2"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_mp2"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_wave_function_correlation_treatment",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_single_excitations_on_off",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_orbital_opt_on_off",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_z_vector_calc_on_off",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_Brueckner_orbitals_calc_on_off",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_perturbative_triple_excitations_on_off",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_f12_correction_on_off",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_frozen_core_treatment",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_reference_wave_function",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_atomic_orbitals",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_electrons",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_of_correlated_electrons",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_integral_transformation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_K_C_formation",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_convergence_tol_max_residuum",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_level_shift_amplitude_update",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_coulomb_transformation_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_coulomb_transformation_dimension_basis",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_internal_alpha_mol_orbitals",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_internal_beta_mol_orbitals",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_pair_cutoff",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_atomic_orbital_integral_source",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_integral_package_used",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_alpha_pairs_included",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_nb_beta_pairs_included",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_energy_spin_aa",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_energy_spin_bb",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_energy_spin_ab",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_initial_guess",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_mp2_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_<T_T>_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_total_nb_pairs_included",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_iteration_nb",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_correl_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_deltaE_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_residual_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_iteration_time",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ci_0.5<S_and_S>_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsd_correlation_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsd_total_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_single_norm_half_ss",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_t1_diagnostic",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsdt_total_triples_correction",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsdt_aaa_triples_contribution",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsdt_aab_triples_contribution",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsdt_aba_triples_contribution",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsdt_bbb_triples_contribution",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsdt_final_corr_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsd_final_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
+    },{
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "orca_x_ccsd_t_final_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_orca_driven_CI"]
     }
-
  ]
 }
