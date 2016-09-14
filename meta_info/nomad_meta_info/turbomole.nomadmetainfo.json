@@ -277,6 +277,24 @@
         "section_system"
       ]
     }, {
+      "description": "Smearing method",
+      "dtypeStr": "C",
+      "name": "smearing_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Temperature of Fermi smearing",
+      "dtypeStr": "f",
+      "name": "smearing_width",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Used exchange-correlation functional",
       "dtypeStr": "C",
       "name": "XC_functional_type",
@@ -407,6 +425,36 @@
       "superNames": [
         "section_basis_set"
       ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "atom_forces_raw_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "atom_forces_raw_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ],
+      "units": "N"
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "atom_forces_raw_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ],
+      "units": "N"
     }, {
       "description": "-",
       "dtypeStr": "f",
