@@ -103,13 +103,21 @@
       ]
     }, {
       "description": "exchange-correlation potential, in in0",
-      "dtypeStr": "i",
+      "dtypeStr": "C",
       "name": "x_wien2k_indxc",
       "shape": [],
       "superNames": [
         "section_method"
       ]
     }, {
+      "description": "exchange-correlation potential, in in0",
+      "kindStr": "type_section",
+      "name": "x_wien2k_section_XC",
+      "superNames": [
+        "section_method"
+      ]
+    },
+ {
       "description": "switch in in0 between TOT, KXC, POT, MULT, COUL, EXCH",
       "dtypeStr": "C",
       "name": "x_wien2k_switch",
@@ -174,14 +182,71 @@
         "section_method"
       ]
     }, {
-      "description": " switch, in in2c between (TOT,FOR,QTL,EFG,ALM,CLM,FERMI)",
+      "description": "switch, in in2c between (TOT,FOR,QTL,EFG,ALM,CLM,FERMI)",
       "dtypeStr": "C",
       "name": "x_wien2k_in2c_switch",
       "shape": [],
       "superNames": [
         "section_method"
       ]
-    },   {
+    }, {
+      "description": "lower energy cut-off for defining the range of occupied states; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_emin",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "number of electrons (per unit cell) in given energy range in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_ne",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "LAPW2 tries to find the .mean. energies for each l channel, for both the valence and the semicore states. To define .valence. and .semicore. it starts at (EF - .esepermin.) and searches for a .gap. with a width of at least .eseper0. and defines this as separation energy of valence and semicore; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_espermin",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "minimum gap width; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_esper0",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
+      "description": "determines how EF is determined; in in2c",
+      "dtypeStr": "C",
+      "name": "smearing_kind",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "specifies the width of the broadening, if efmod is set to ALL, eval specifies the upper limit of the energy window; in in2c",
+      "dtypeStr": "f",
+      "name": "smearing_width",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Ry"
+    }, {
+      "description": "max. G (magnitude of largest vector) in charge density Fourier expansion; in in2c",
+      "dtypeStr": "f",
+      "name": "x_wien2k_in2c_gmax",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "number of independent atoms in the cell",
       "dtypeStr": "i",
       "name": "x_wien2k_nr_of_independent_atoms",
@@ -326,9 +391,9 @@
       ],
       "units": "bohr^3"
     }, {
-      "description": "total energy",
+      "description": "energy total",
       "dtypeStr": "f",
-      "name": "x_wien2k_total_ene",
+      "name": "energy_total",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -343,10 +408,26 @@
         "section_scf_iteration"
       ],
       "units": "Ry"
-    },{
+    },  {
+      "description": "number of electrons",
+      "dtypeStr": "f",
+      "name": "x_wien2k_noe",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "number of k-points",
       "dtypeStr": "f",
       "name": "x_wien2k_nr_kpts",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "Potential and charge cut-off, Ry**.5",
+      "dtypeStr": "f",
+      "name": "x_wien2k_cutoff",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -413,6 +494,14 @@
       "description": "magnetic moment inside the sphere",
       "dtypeStr": "f",
       "name": "x_wien2k_mmi001",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "charge distance between last 2 iterations",
+      "dtypeStr": "f",
+      "name": "x_wien2k_charge_distance",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -508,7 +597,7 @@
         "section_scf_iteration"
       ]
     },  {
-      "description": "total interstitial charge",
+      "description": "total interstitial charge (mixed after MIXER)",
       "dtypeStr": "f",
       "name": "x_wien2k_tot_int_charge",
       "shape": [],
@@ -516,9 +605,106 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "total charge in sphere",
+      "description": "total charge in sphere xx (mixed after MIXER)",
       "dtypeStr": "f",
       "name": "x_wien2k_tot_charge_in_sphere",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total interstitial charge (new (not mixed) from LAPW2+LCORE",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_int_charge_nm",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total charge in sphere xx (new (not mixed) from LAPW2+LCORE",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_charge_in_sphere_nm",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "total valence charge inside unit cell",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_val_charge_cell",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "total valence charge in sphere xx",
+      "dtypeStr": "f",
+      "name": "x_wien2k_tot_val_charge_sphere",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "density for atom xx at the nucleus (first radial mesh point); valence",
+      "dtypeStr": "f",
+      "name": "x_wien2k_density_at_nucleus_valence",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "density for atom xx at the nucleus (first radial mesh point); semi-core",
+      "dtypeStr": "f",
+      "name": "x_wien2k_density_at_nucleus_semicore",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "density for atom xx at the nucleus (first radial mesh point); core",
+      "dtypeStr": "f",
+      "name": "x_wien2k_density_at_nucleus_core",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "density for atom xx at the nucleus (first radial mesh point); total",
+      "dtypeStr": "f",
+      "name": "x_wien2k_density_at_nucleus_tot",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "nuclear and electronic charge; normalization check of electronic charge densities. If a significant amount of electrons is missing, one might have core states, whose charge density is not completely confined within the respective atomic sphere. In such a case the corresponding states should be treated as band states (using LOs).",
+      "dtypeStr": "f",
+      "name": "x_wien2k_nuclear_charge",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    },  {
+      "description": "nuclear and electronic charge; normalization check of electronic charge densities. If a significant amount of electrons is missing, one might have core states, whose charge density is not completely confined within the respective atomic sphere. In such a case the corresponding states should be treated as band states (using LOs).",
+      "dtypeStr": "f",
+      "name": "x_wien2k_electronic_charge",
+      "shape": [],
+      "repeats": true,
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "number of the nec test, labelling nec",
+      "dtypeStr": "i",
+      "name": "x_wien2k_necnr",
       "repeats": true,
       "shape": [],
       "superNames": [

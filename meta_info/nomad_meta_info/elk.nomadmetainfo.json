@@ -318,6 +318,20 @@
       ],
       "units": "m"
     }, {
+      "description": "index for elk functional",
+      "kindStr": "type_section",
+      "name": "x_elk_section_xc",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "index for elk functional",
+      "dtypeStr": "i",
+      "name": "x_elk_xc_functional",
+      "superNames": [
+        "x_elk_section_xc"
+      ]
+    }, {
       "description": "Electronic charge",
       "dtypeStr": "f",
       "name": "x_elk_electronic_charge",
@@ -659,12 +673,5 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
-    }, {
-      "description": "index for elk functional",
-      "kindStr": "type_section",
-      "name": "x_elk_section_xc",
-      "superNames": [
-        "section_system"
-      ]
     }]
 }

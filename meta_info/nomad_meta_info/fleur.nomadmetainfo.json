@@ -1,0 +1,211 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "metainfo for the fleur_parser",
+  "dependencies": [ {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }, {
+      "relativePath": "common.nomadmetainfo.json"
+    }],
+  "metaInfos": [
+ {
+      "description": "header (labels) of fleur.",
+      "kindStr": "type_section",
+      "name": "x_fleur_header",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "name of atom, labelling non-equvalent atoms",
+      "dtypeStr": "C",
+      "name": "x_fleur_atom_name",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fleur_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom x",
+      "dtypeStr": "f",
+      "name": "x_fleur_atom_pos_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fleur_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom y",
+      "dtypeStr": "f",
+      "name": "x_fleur_atom_pos_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fleur_section_equiv_atoms"
+      ]
+    }, {
+      "description": "position of atom z",
+      "dtypeStr": "f",
+      "name": "x_fleur_atom_pos_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fleur_section_equiv_atoms"
+      ]
+    }, {
+      "description": "scales coordinates by 1/scale. If film=T, scales only x&y coordinates, if film=F also z",
+      "dtypeStr": "f",
+      "name": "x_fleur_atom_coord_scale",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fleur_section_equiv_atoms"
+      ]
+    }, {
+      "description": "atomic number Z",
+      "dtypeStr": "f",
+      "name": "x_fleur_atomic_number_Z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fleur_section_equiv_atoms"
+      ]
+    }, {
+      "description": "scf iteration number",
+      "dtypeStr": "i",
+      "name": "x_fleur_iteration_number",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "section containing a class of equivalent atoms",
+      "kindStr": "type_section",
+      "name": "x_fleur_section_equiv_atoms",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "user given name for this system given in the inp file",
+      "dtypeStr": "C",
+      "name": "x_fleur_system_nameIn",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "user given name for this system",
+      "dtypeStr": "C",
+      "name": "x_fleur_system_name",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "total number of atoms",
+      "dtypeStr": "i",
+      "name": "x_fleur_total_atoms",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "number of atom types",
+      "dtypeStr": "i",
+      "name": "x_fleur_nr_of_atom_types",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Kmax is the plane wave cut-off",
+      "dtypeStr": "f",
+      "name": "x_fleur_k_max",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Gmax",
+      "dtypeStr": "f",
+      "name": "x_fleur_G_max",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "total nuclear charge",
+      "dtypeStr": "f",
+      "name": "x_fleur_tot_nucl_charge",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "total electronic charge",
+      "dtypeStr": "f",
+      "name": "x_fleur_tot_elec_charge",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "unit cell volume",
+      "dtypeStr": "f",
+      "name": "x_fleur_unit_cell_volume",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "bohr^3"
+    }, {
+      "description": "unit cell volume omega tilda",
+      "dtypeStr": "f",
+      "name": "x_fleur_unit_cell_volume_omega",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "volume of interstitial region",
+      "dtypeStr": "f",
+      "name": "x_fleur_vol_interstitial",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "energy total",
+      "dtypeStr": "f",
+      "name": "x_fleur_energy_total",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "Hartree"
+    },  {
+      "description": "exchange-correlation potential, in inp",
+      "dtypeStr": "C",
+      "name": "x_fleur_exch_pot",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "exchange-correlation potential, in inp",
+      "kindStr": "type_section",
+      "name": "x_fleur_section_XC",
+      "superNames": [
+        "section_method"
+      ]
+    },
+ {
+      "description": "Version of Fleur",
+      "dtypeStr": "C",
+      "name": "x_fleur_version",
+      "shape": [],
+      "superNames": [
+        "x_fleur_header"
+      ]
+    }
+
+ ]
+}
