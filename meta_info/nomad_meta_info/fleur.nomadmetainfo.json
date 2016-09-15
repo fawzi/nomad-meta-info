@@ -116,6 +116,62 @@
         "section_system"
       ]
     }, {
+      "description": "name of atom type",
+      "dtypeStr": "C",
+      "name": "x_fleur_number_of_atom_type",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "nuclear number",
+      "dtypeStr": "i",
+      "name": "x_fleur_nuclear_number",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "x_fleurnumber_of_core_levels",
+      "dtypeStr": "i",
+      "name": "x_fleurnumber_of_core_levels",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "x_fleur_l-expansion_cutoff",
+      "dtypeStr": "i",
+      "name": "x_fleur_l-expansion_cutoff ",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": " muffin-tin gridpoints",
+      "dtypeStr": "i",
+      "name": "x_fleur_mt_gripoints",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": " muffin-tin radius",
+      "dtypeStr": "i",
+      "name": "x_fleur_mt_radius",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "logarythmic increment",
+      "dtypeStr": "i",
+      "name": "x_fleur_logarythmic_increment",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Kmax is the plane wave cut-off",
       "dtypeStr": "f",
       "name": "x_fleur_k_max",
@@ -182,7 +238,7 @@
       ],
       "units": "Hartree"
     },  {
-      "description": "exchange-correlation potential, in inp",
+      "description": "exchange-correlation potential, in out",
       "dtypeStr": "C",
       "name": "x_fleur_exch_pot",
       "shape": [],
@@ -190,14 +246,21 @@
         "section_method"
       ]
     }, {
+      "description": "informaion on relativistic correction for the exchange-correlation potential, in out",
+      "dtypeStr": "C",
+      "name": "x_fleur_xc_correction",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
       "description": "exchange-correlation potential, in inp",
       "kindStr": "type_section",
       "name": "x_fleur_section_XC",
       "superNames": [
         "section_method"
       ]
-    },
- {
+    }, {
       "description": "Version of Fleur",
       "dtypeStr": "C",
       "name": "x_fleur_version",
