@@ -479,6 +479,58 @@
       ],
       "units": "J"
     }, {
+      "description": "Fermi energy",
+      "dtypeStr": "f",
+      "name": "dos_fermi energy",
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
+      "description": "Integrated dos (starting at -Infinity), pseudo potential calculations should start with the number of core electrons if they cover only the active electrons",
+      "dtypeStr": "f",
+      "name": "dos_integrated_values",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
+      "description": "Tuples of $l$ and $m$ values for which dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by dos_m_kind.",
+      "dtypeStr": "i",
+      "name": "dos_lm",
+      "shape": [
+        "number_of_dos_lms",
+        2
+      ],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
+      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean. The allowed values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "dtypeStr": "C",
+      "name": "dos_m_kind",
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
+      "description": "Array containing the density of (electronic-energy) states (DOS) values projected on the various spherical harmonics (integrated on all atoms), see atom_projected_dos_values_lm for atom values.",
+      "dtypeStr": "f",
+      "name": "dos_values_lm",
+      "shape": [
+        "number_of_dos_lms",
+        "number_of_spin_channels",
+        "number_of_atoms",
+        "number_of_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ],
+      "units": "J"
+    }, {
       "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of Density of (electronic-energy) states (DOS).",
       "dtypeStr": "f",
       "name": "dos_values",
@@ -494,6 +546,26 @@
       "dtypeStr": "C",
       "name": "eigenvalues_kind",
       "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Multiplicity of the k point (i.e. how many distinct points per cell this expands to after applying all symmetries). This defaults to 1. If expansion is preformed then each point will have weight eigenvalues_kpoints_weights/eigenvalues_kpoints_multiplicity.",
+      "dtypeStr": "f",
+      "name": "eigenvalues_kpoints_multiplicity",
+      "shape": [
+        "number_of_eigenvalues_kpoints"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Weights of the $k$ points (in the basis of the reciprocal lattice vectors) at which the eigenvalues tabulated in eigenvalues_values are evaluated, should keep into account the symmetry too.",
+      "dtypeStr": "f",
+      "name": "eigenvalues_kpoints_weights",
+      "shape": [
+        "number_of_eigenvalues_kpoints"
+      ],
       "superNames": [
         "section_eigenvalues"
       ]
@@ -1666,6 +1738,15 @@
         "section_frame_sequence"
       ]
     }, {
+      "description": "Number of $l,m$ combinations for which projected density of states (DOS) dos_values_lm are given.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_dos_lms",
+      "shape": [],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
       "description": "Number of energy values for the density of states (DOS).",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1675,7 +1756,7 @@
         "section_dos"
       ]
     }, {
-      "description": "Number of kpoints.",
+      "description": "Number of kpoints. These should be the one really calculated (i.e. the irreducible k points if simmetry is used)",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_eigenvalues_kpoints",
