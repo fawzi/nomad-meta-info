@@ -14,25 +14,18 @@
         "section_run"
       ]
     }, {
-      "description": "Section for a DFT energy or force task.",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_dft_energy_force_task",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "Section for a part of a XC functional that is used.",
       "kindStr": "type_section",
       "name": "x_nwchem_section_xc_functional",
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "Shorcut for a XC functional definition.",
       "dtypeStr": "C",
       "name": "x_nwchem_xc_functional_shortcut",
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The name of the XC functional",
@@ -68,7 +61,7 @@
     }, {
       "description": "NWChem DFT Module.",
       "kindStr": "type_section",
-      "name": "x_nwchem_section_dft",
+      "name": "x_nwchem_section_dft_module",
       "superNames": [
         "section_run"
       ]
@@ -94,7 +87,7 @@
       "name": "x_nwchem_dft_energy_total",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The exchange energy for a DFT calculation.",
@@ -102,7 +95,7 @@
       "name": "x_nwchem_dft_energy_X",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The number of atoms in a DFT calculation.",
@@ -110,7 +103,7 @@
       "name": "x_nwchem_dft_number_of_atoms",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The multiplicity in a DFT calculation.",
@@ -118,7 +111,7 @@
       "name": "x_nwchem_dft_spin_multiplicity",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The total charge in a DFT calculation.",
@@ -126,7 +119,7 @@
       "name": "x_nwchem_dft_total_charge",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The maximum number of scf steps.",
@@ -134,7 +127,7 @@
       "name": "x_nwchem_dft_max_iteration",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The SCF energy convergence threshold.",
@@ -142,7 +135,7 @@
       "name": "x_nwchem_dft_scf_threshold_energy_change",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "The correlation energy for a DFT calculation.",
@@ -150,14 +143,14 @@
       "name": "x_nwchem_dft_energy_C",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "Section for the SCF calculation in DFT.",
       "kindStr": "type_section",
       "name": "x_nwchem_section_dft_scf",
       "superNames": [
-        "section_run"
+        "x_nwchem_section_dft_module"
       ]
     }, {
       "description": "Section for a SCF step in DFT.",
@@ -185,7 +178,7 @@
     }, {
       "description": "Section for a geometry optimization task.",
       "kindStr": "type_section",
-      "name": "x_nwchem_section_geo_opt_task",
+      "name": "x_nwchem_section_geo_opt_module",
       "superNames": [
         "section_run"
       ]
@@ -194,7 +187,7 @@
       "kindStr": "type_section",
       "name": "x_nwchem_section_geo_opt_step",
       "superNames": [
-        "x_nwchem_section_geo_opt_task"
+        "x_nwchem_section_geo_opt_module"
       ]
     }, {
       "description": "The energy for a geometry optimization step.",
@@ -307,6 +300,155 @@
       "shape": [],
       "superNames": [
         "x_nwchem_section_start_information"
+      ]
+    }, {
+      "description": "Section for QMD Module.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_qmd_module",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "QMD Module run parameters",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_qmd_run_parameters",
+      "superNames": [
+        "x_nwchem_section_qmd_module"
+      ]
+    }, {
+      "description": "Number of nuclear steps.",
+      "dtypeStr": "i",
+      "name": "x_nwchem_qmd_number_of_nuclear_steps",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Nuclear time step.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_nuclear_time_step",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Target temperature.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_target_temperature",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Thermostat for QMD.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_qmd_thermostat",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Tau for QMM thermostat.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_tau",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Random seed.",
+      "dtypeStr": "i",
+      "name": "x_nwchem_qmd_random_seed",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Integrator for nuclei.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_qmd_nuclear_integrator",
+      "shape": [],
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "Initial temperature",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_initial_temperature",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_nwchem_section_qmd_run_parameters"
+      ]
+    }, {
+      "description": "DFT QMD step",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_qmd_step",
+      "superNames": [
+        "x_nwchem_section_qmd_module"
+      ]
+    }, {
+      "description": "Elapsed simulation time.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_time",
+      "shape": [],
+      "unit": "fs",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Kinetic energy.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_kinetic_energy",
+      "shape": [],
+      "unit": "Ha",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Potential energy.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_potential_energy",
+      "shape": [],
+      "unit": "Ha",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Total energy.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_total_energy",
+      "shape": [],
+      "unit": "Ha",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Target temperature.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_target_temperature",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Temperature.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_temperature",
+      "shape": [],
+      "unit": "K",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Electric dipole moment.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_qmd_step_dipole",
+      "shape": [3],
+      "unit": "bohr*e",
+      "superNames": [
+        "x_nwchem_section_qmd_step"
       ]
     }, {
       "description": "The name of the program that was run.",
