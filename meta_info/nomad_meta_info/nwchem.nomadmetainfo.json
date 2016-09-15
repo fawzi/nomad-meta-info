@@ -14,18 +14,11 @@
         "section_run"
       ]
     }, {
-      "description": "Section for a part of a XC functional that is used.",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_xc_functional",
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
       "description": "Shorcut for a XC functional definition.",
       "dtypeStr": "C",
       "name": "x_nwchem_xc_functional_shortcut",
       "superNames": [
-        "x_nwchem_section_dft_module"
+        "settings_XC"
       ]
     }, {
       "description": "The name of the XC functional",
@@ -33,15 +26,15 @@
       "name": "x_nwchem_xc_functional_name",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_xc_functional"
+        "section_XC_functionals"
       ]
     }, {
-      "description": "The weight of the XC functional",
+      "description": "The weight of the XC functional.",
       "dtypeStr": "f",
       "name": "x_nwchem_xc_functional_weight",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_xc_functional"
+        "section_XC_functionals"
       ]
     }, {
       "description": "The type of the XC functional, local or non-local",
@@ -49,7 +42,7 @@
       "name": "x_nwchem_xc_functional_type",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_xc_functional"
+        "section_XC_functionals"
       ]
     }, {
       "description": "Contains system information for a calculation to follow. Contains all of the geometries used in different NWChem tasks contained by this calculations.",
@@ -59,121 +52,28 @@
         "section_run"
       ]
     }, {
-      "description": "NWChem DFT Module.",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_dft_module",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "NWChem DFT Gradient Module.",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_dft_gradient",
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": "The forces in a DFT calculation.",
+      "description": "The one-electron energy in a DFT calculation.",
       "dtypeStr": "f",
-      "unit": "N",
-      "name": "x_nwchem_dft_forces",
-      "shape": ["number_of_atoms", 3],
+      "name": "x_nwchem_energy_one_electron",
+      "shape": [],
       "superNames": [
-        "x_nwchem_section_dft_gradient"
+        "section_single_configuration_calculation"
       ]
     }, {
-      "description": "The energy for a DFT calculation.",
+      "description": "The Coulomb energy energy in a DFT calculation.",
       "dtypeStr": "f",
-      "name": "x_nwchem_dft_energy_total",
+      "name": "x_nwchem_energy_coulomb",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft_module"
+        "section_single_configuration_calculation"
       ]
     }, {
-      "description": "The exchange energy for a DFT calculation.",
+      "description": "The nuclear repulsion energy in a DFT calculation.",
       "dtypeStr": "f",
-      "name": "x_nwchem_dft_energy_X",
+      "name": "x_nwchem_energy_nuclear_repulsion",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "The number of atoms in a DFT calculation.",
-      "dtypeStr": "i",
-      "name": "x_nwchem_dft_number_of_atoms",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "The multiplicity in a DFT calculation.",
-      "dtypeStr": "i",
-      "name": "x_nwchem_dft_spin_multiplicity",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "The total charge in a DFT calculation.",
-      "dtypeStr": "i",
-      "name": "x_nwchem_dft_total_charge",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "The maximum number of scf steps.",
-      "dtypeStr": "i",
-      "name": "x_nwchem_dft_max_iteration",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "The SCF energy convergence threshold.",
-      "dtypeStr": "f",
-      "name": "x_nwchem_dft_scf_threshold_energy_change",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "The correlation energy for a DFT calculation.",
-      "dtypeStr": "f",
-      "name": "x_nwchem_dft_energy_C",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "Section for the SCF calculation in DFT.",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_dft_scf",
-      "superNames": [
-        "x_nwchem_section_dft_module"
-      ]
-    }, {
-      "description": "Section for a SCF step in DFT.",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_dft_scf_step",
-      "superNames": [
-        "x_nwchem_section_dft_scf"
-      ]
-    }, {
-      "description": "The SCF step energy for a DFT calculation.",
-      "dtypeStr": "f",
-      "name": "x_nwchem_dft_scf_energy",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_scf_step"
-      ]
-    }, {
-      "description": "The SCF energy change with respect to the previous step.",
-      "dtypeStr": "f",
-      "name": "x_nwchem_dft_energy_change_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "x_nwchem_section_dft_scf_step"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section for a geometry optimization task.",
