@@ -188,6 +188,40 @@
         "section_system"
       ]
     }, {
+      "description": "The Brillouin zone integration mode. It can be one of hist - Use the histogram mode, this is the default; gauss - Use Gaussian smearing, tria - Use the tetrahedron method",
+      "dtypeStr": "C",
+      "name": "x_fleur_smearing_kind",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "specifies the width of the broadening, smearing for calculation of fermi-energy & weights. The Fermi smearing can be parametrized by this energy in Hartree",
+      "dtypeStr": "f",
+      "name": "x_fleur_smearing_width",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Hartree"
+    }, {
+      "description": "The number of electrons to be represented within the valence electron framework",
+      "dtypeStr": "f",
+      "name": "x_fleur_nr_of_valence_electrons",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Fermi smearing temperature set in Kelvin",
+      "dtypeStr": "f",
+      "name": "x_fleur_smearing_temperature",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "Kelvin"
+    }, {
       "description": "total nuclear charge",
       "dtypeStr": "f",
       "name": "x_fleur_tot_nucl_charge",
