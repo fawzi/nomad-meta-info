@@ -5,6 +5,15 @@
       "relativePath": "common.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "siesta input variable \"%endblock\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_%endblock",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"Atom-Setup-Only\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_Atom-Setup-Only",
@@ -26,6 +35,24 @@
       "description": "siesta input variable \"AtomCoorFormatOut\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_AtomCoorFormatOut",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"AtomLeftVcte\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_AtomLeftVcte",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"AtomRightVcte\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_AtomRightVcte",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -59,9 +86,126 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"BuildSuperCell\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BuildSuperCell",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"BulkLead\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BulkLead",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"BulkTransport\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BulkTransport",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"BulkTransvCellSize\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BulkTransvCellSize",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"BulkTransvCellSizeX\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BulkTransvCellSizeX",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"BulkTransvCellSizeY\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BulkTransvCellSizeY",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"BulkTransvCellSizeZ\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_BulkTransvCellSizeZ",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"CB.MaxKappa\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_CB.MaxKappa",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"CB.WriteComplexBands\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_CB.WriteComplexBands",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"CDFT\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_CDFT",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"CDFT.MaxIter\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_CDFT.MaxIter",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"COOP.Write\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_COOP.Write",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"CalcIETS\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_CalcIETS",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"CalcMPSH\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_CalcMPSH",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -293,6 +437,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"Delta\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_Delta",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"DeltaWorkfunction\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_DeltaWorkfunction",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"Diag.AllInOne\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_Diag.AllInOne",
@@ -356,6 +518,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"DiagMemory\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_DiagMemory",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"DiagScale\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_DiagScale",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"DirectPhi\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_DirectPhi",
@@ -365,9 +545,198 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"DivideAndConquer\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_DivideAndConquer",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.AddRhoGate\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.AddRhoGate",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.AddVgIsolatedLocalCharges\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.AddVgIsolatedLocalCharges",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.COOPCalculate\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.COOPCalculate",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.COOPNumberOfBonds\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.COOPNumberOfBonds",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.DebugRhoGate\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.DebugRhoGate",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.NetRhoGateCharge\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.NetRhoGateCharge",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.PrintLimits\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.PrintLimits",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.RhoGateLxMax\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.RhoGateLxMax",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.RhoGateLxMin\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.RhoGateLxMin",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.RhoGateLyMax\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.RhoGateLyMax",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.RhoGateLyMin\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.RhoGateLyMin",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.RhoGateLzMax\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.RhoGateLzMax",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.RhoGateLzMin\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.RhoGateLzMin",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.TRCAddVCDFT\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.TRCAddVCDFT",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.TimeReversal\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.TimeReversal",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.Timings\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.Timings",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EM.addV\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EM.addV",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EMPDOSKSO\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EMPDOSKSO",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EMTransport\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EMTransport",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"ElectronicTemperature\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_ElectronicTemperature",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"EnergLowestBound\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_EnergLowestBound",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -392,9 +761,27 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"FinalTransmRange\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_FinalTransmRange",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"FixAuxiliaryCell\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_FixAuxiliaryCell",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"FixAuxillaryCell\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_FixAuxillaryCell",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -419,6 +806,15 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"FullRamp\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_FullRamp",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"HSetupOnly\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_HSetupOnly",
@@ -437,6 +833,60 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"HartreeLeadsBottom\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_HartreeLeadsBottom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"HartreeLeadsLeft\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_HartreeLeadsLeft",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"HartreeLeadsRight\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_HartreeLeadsRight",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"Ik_Select\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_Ik_Select",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"InitTransmRange\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_InitTransmRange",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"InitTransport\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_InitTransport",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"KB.New.Reference.Orbitals\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_KB.New.Reference.Orbitals",
@@ -449,6 +899,33 @@
       "description": "siesta input variable \"KB.Rmax\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_KB.Rmax",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"LDAU.units\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_LDAU.units",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"LDAUForces\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_LDAUForces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"LDAU_METHOD\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_LDAU_METHOD",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -491,9 +968,63 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"MD.FCAcousticSumRule\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.FCAcousticSumRule",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.FCAtomRestart\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.FCAtomRestart",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.FCAxisRestart\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.FCAxisRestart",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"MD.FCDispl\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MD.FCDispl",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.FCEigenVectors\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.FCEigenVectors",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.FCIR\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.FCIR",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.FCRead\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.FCRead",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -608,6 +1139,15 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"MD.NumNEBsteps\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.NumNEBsteps",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"MD.ParrinelloRahmanMass\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MD.ParrinelloRahmanMass",
@@ -644,6 +1184,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"MD.TRCSampling\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.TRCSampling",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.TRCSkip\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.TRCSkip",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"MD.TargetPressure\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MD.TargetPressure",
@@ -671,6 +1229,15 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"MD.Timing\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.Timing",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"MD.TypeOfRun\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MD.TypeOfRun",
@@ -683,6 +1250,15 @@
       "description": "siesta input variable \"MD.UseSaveCG\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MD.UseSaveCG",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MD.UseSaveNEB\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MD.UseSaveNEB",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -752,6 +1328,42 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"MPSHAtomFirst\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MPSHAtomFirst",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MPSHAtomLast\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MPSHAtomLast",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MPSHOrbFirst\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MPSHOrbFirst",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"MPSHOrbLast\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MPSHOrbLast",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"MaxBondDistance\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MaxBondDistance",
@@ -815,6 +1427,15 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"MixedParallel\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_MixedParallel",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"MonitorForcesInSCF\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MonitorForcesInSCF",
@@ -827,6 +1448,78 @@
       "description": "siesta input variable \"MullikenInSCF\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_MullikenInSCF",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NC.OrbitalRotationEnd\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NC.OrbitalRotationEnd",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NC.OrbitalRotationStart\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NC.OrbitalRotationStart",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NEB.SkipEdge\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NEB.SkipEdge",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NEnergReal\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NEnergReal",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NIVPoints\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NIVPoints",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NPoles\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NPoles",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NSlices\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NSlices",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NTransmPoints\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NTransmPoints",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -851,6 +1544,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"NenergImCircle\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NenergImCircle",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NenergImLine\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NenergImLine",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"NetCharge\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_NetCharge",
@@ -869,6 +1580,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"NumSkipWriteDM\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NumSkipWriteDM",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NumberLinearMix\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NumberLinearMix",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"NumberOfAtoms\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_NumberOfAtoms",
@@ -881,6 +1610,15 @@
       "description": "siesta input variable \"NumberOfEigenStates\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_NumberOfEigenStates",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"NumberOfSpecies\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_NumberOfSpecies",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1175,6 +1913,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"PS.SIC\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_PS.SIC",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ParallelOverK\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ParallelOverK",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"PartialChargesAtEveryGeometry\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_PartialChargesAtEveryGeometry",
@@ -1187,6 +1943,24 @@
       "description": "siesta input variable \"PartialChargesAtEveryScfStep\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_PartialChargesAtEveryScfStep",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"PoissonMultigrid\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_PoissonMultigrid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"Print_ldau\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_Print_ldau",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1220,6 +1994,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"ProjectionInSCF\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ProjectionInSCF",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ProjectionMethod\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ProjectionMethod",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"RcSpatial\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_RcSpatial",
@@ -1232,6 +2024,24 @@
       "description": "siesta input variable \"ReInitialiseDM\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_ReInitialiseDM",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ReadHamiltonian\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ReadHamiltonian",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ReadKPIN\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ReadKPIN",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1259,6 +2069,24 @@
       "description": "siesta input variable \"Rmax.Radial.Grid\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_Rmax.Radial.Grid",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"RotateSpin.Phi\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_RotateSpin.Phi",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"RotateSpin.Theta\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_RotateSpin.Theta",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1391,6 +2219,114 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"SIC.Flavour\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.Flavour",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.Lambda\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.Lambda",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.NoRelaxation\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.NoRelaxation",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.Npop\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.Npop",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.PopDMConv\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.PopDMConv",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.PopKgridFactor\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.PopKgridFactor",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.PopSmatSparsity\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.PopSmatSparsity",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.ProjectionMode\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.ProjectionMode",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.ProjectionType\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.ProjectionType",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SIC.Rot_Inv\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SIC.Rot_Inv",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"STT.Calculation\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_STT.Calculation",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"STT.LinearResponse\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_STT.LinearResponse",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"SaveBaderCharge\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_SaveBaderCharge",
@@ -1490,6 +2426,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"Scissor.Operator\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_Scissor.Operator",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SetBulkTransvCell\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SetBulkTransvCell",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"Siesta2Wannier90.NumberOfBands\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_Siesta2Wannier90.NumberOfBands",
@@ -1553,6 +2507,24 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"Sigma.DSigmaDE\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_Sigma.DSigmaDE",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SignatureRecords\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SignatureRecords",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"SimulateDoping\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_SimulateDoping",
@@ -1571,9 +2543,45 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"SkipLastIter\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SkipLastIter",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SlabDipoleCorrection\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SlabDipoleCorrection",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"SolutionMethod\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_SolutionMethod",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SpinConfLeads\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SpinConfLeads",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"SpinOrbit\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_SpinOrbit",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1616,9 +2624,36 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"TimeReversal\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_TimeReversal",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"TimeReversalSymmetryForKpoints\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_TimeReversalSymmetryForKpoints",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"TrCoefficients\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_TrCoefficients",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"TryMemoryIncrease\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_TryMemoryIncrease",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1673,6 +2708,33 @@
       "description": "siesta input variable \"UseTreeTimer\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_UseTreeTimer",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"VFinal\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_VFinal",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"VGate\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_VGate",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"VInitial\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_VInitial",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1787,9 +2849,36 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"WriteDMT\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteDMT",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"WriteDenchar\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_WriteDenchar",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteDiagdS\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteDiagdS",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteEDM\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteEDM",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1808,6 +2897,24 @@
       "description": "siesta input variable \"WriteForces\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_WriteForces",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteHSDeriv\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteHSDeriv",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteHamiltonPop\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteHamiltonPop",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1877,6 +2984,42 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"WriteProjections\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteProjections",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteSpinMulliken\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteSpinMulliken",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteSpinSCF\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteSpinSCF",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"WriteVNA\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_WriteVNA",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"WriteVoronoiPop\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_WriteVoronoiPop",
@@ -1916,6 +3059,24 @@
       "description": "siesta input variable \"XML.Write\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_XML.Write",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZBroadeningG\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZBroadeningG",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZLeftVcte\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZLeftVcte",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1985,6 +3146,60 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"ZRightVcte\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZRightVcte",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZVGateL\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZVGateL",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZVGateR\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZVGateR",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZeemanTermBx\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZeemanTermBx",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZeemanTermBy\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZeemanTermBy",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"ZeemanTermBz\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_ZeemanTermBz",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"alloc_report_level\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_alloc_report_level",
@@ -2003,6 +3218,15 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"blocksize\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_blocksize",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"compat-pre-v4-dynamics\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_compat-pre-v4-dynamics",
@@ -2012,9 +3236,27 @@
         "x_siesta_input"
       ]
     }, {
+      "description": "siesta input variable \"fdf-debug\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_fdf-debug",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
       "description": "siesta input variable \"kgrid_cutoff\"",
       "dtypeStr": "C",
       "name": "x_siesta_input_kgrid_cutoff",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_siesta_input"
+      ]
+    }, {
+      "description": "siesta input variable \"processorY\"",
+      "dtypeStr": "C",
+      "name": "x_siesta_input_processorY",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -2069,6 +3311,13 @@
       "description": "siesta input variables",
       "kindStr": "type_abstract_document_content",
       "name": "x_siesta_input",
+      "superNames": [
+        "x_siesta_section_input"
+      ]
+    }, {
+      "description": "input section",
+      "kindStr": "type_section",
+      "name": "x_siesta_section_input",
       "superNames": [
         "section_run"
       ]
