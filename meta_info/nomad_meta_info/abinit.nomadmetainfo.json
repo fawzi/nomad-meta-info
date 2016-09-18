@@ -80,15 +80,31 @@
       "superNames": [
         "section_run"
       ]
-   }, {
-      "description": "Default value for ixc",
-      "name": "x_abinit_default_xc",
-      "dtypeStr": "i",
+    }, {
+      "description": "Primitive axis 1",
+      "name": "x_abinit_vprim_1",
+      "dtypeStr": "C",
       "shape": [],
       "superNames": [
-        "x_abinit_section_dataset"
+        "x_abinit_section_dataset_header"
       ]
-   }, {
+    }, {
+      "description": "Primitive axis 2",
+      "name": "x_abinit_vprim_2",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_dataset_header"
+      ]
+    }, {
+      "description": "Primitive axis 3",
+      "name": "x_abinit_vprim_3",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_dataset_header"
+      ]
+    }, {
       "description": "Message that the calculation was completed",
       "name": "x_abinit_completed",
       "dtypeStr": "C",
@@ -96,16 +112,23 @@
       "superNames": [
         "section_run"
       ]
-   }, {
+    }, {
       "description": "Dataset number",
       "dtypeStr": "i",
       "name": "x_abinit_dataset_number",
       "repeats": true,
       "shape": [],
       "superNames": [
+        "x_abinit_section_dataset_header"
+      ]
+    }, {
+      "description": "-",
+      "kindStr": "type_section",
+      "name": "x_abinit_section_dataset_header",
+      "superNames": [
         "x_abinit_section_dataset"
       ]
-   }, {
+    }, {
       "description": "Variable dataset number",
       "dtypeStr": "i",
       "name": "x_abinit_vardtset",
@@ -114,7 +137,7 @@
       "superNames": [
         "x_abinit_section_var"
       ]
-   }, {
+    }, {
       "description": "Variable name",
       "dtypeStr": "C",
       "name": "x_abinit_varname",
@@ -123,7 +146,7 @@
       "superNames": [
         "x_abinit_section_var"
       ]
-   }, {
+    }, {
       "description": "Variable value",
       "dtypeStr": "C",
       "name": "x_abinit_varvalue",
