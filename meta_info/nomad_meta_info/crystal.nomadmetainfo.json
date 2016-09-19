@@ -1329,14 +1329,6 @@
         "x_crystal_section_header"
       ]
     }, {
-      "description": "Major version number of Crystal.",
-      "dtypeStr": "C",
-      "name": "x_crystal_header_version",
-      "shape": [],
-      "superNames": [
-        "x_crystal_section_header"
-      ]
-    }, {
       "description": "Convergence seettings, on power of 10 (e.g. CONVERGENCE ON DELTAP        10**-16)",
       "dtypeStr": "f",
       "name": "x_crystal_info_convergence_on_deltap",
@@ -4454,7 +4446,7 @@
       "kindStr": "type_section",
       "name": "x_crystal_section_input",
       "shape": [],
-      "superNames": []
+      "superNames": ["section_run"]
     }, {
       "description": "Mode",
       "kindStr": "type_section",
@@ -5500,6 +5492,54 @@
       "shape": [],
       "superNames": [
         "x_crystal_section_wavefunctions_atom"
+      ]
+    }, {
+      "description": "Pointgroup number name.",
+      "dtypeStr": "C",
+      "name": "x_crystal_pointgroup",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Pointgroup number.",
+      "dtypeStr": "i",
+      "name": "x_crystal_pointgroup_number",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Pointgroup number 2.",
+      "dtypeStr": "i",
+      "name": "x_crystal_pointgroup_number2",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Spacegroup corresponding to the pointgroup.",
+      "dtypeStr": "i",
+      "name": "x_crystal_pointgroup_corresponding_spacegroup",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Input TOLDEE",
+      "dtypeStr": "i",
+      "name": "x_crystal_input_toldee",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_input"
+      ]
+    }, {
+      "description": "TOLDEE info",
+      "dtypeStr": "f",
+      "name": "x_crystal_info_toldee",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_info"
       ]
     }, {
       "description": "ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY. 11.0  12   -1.616362095E+02  1.622491907E+02 -1.996221977E+00  2.6E-06",
