@@ -477,13 +477,23 @@
       "units": "J"
     }, {
       "description": "Single eigenvalue",
-      "dtypeStr": "f",
-      "name": "turbomole_eigenvalue_eigenvalue",
+      "dtypeStr": "C",
+      "name": "turbomole_eigenvalue_eigenvalue_str",
       "repeats": true,
       "shape": [],
       "superNames": [
         "turbomole_section_eigenvalues_list"
       ]
+    }, {
+      "description": "Single eigenvalue",
+      "dtypeStr": "f",
+      "name": "eigenvalues_values",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list"
+      ],
+      "units": "J"
     }, {
       "description": "Exact exchange energy at given eigenstate from perturbative GW",
       "dtypeStr": "f",
@@ -526,8 +536,17 @@
       "units": "J"
     }, {
       "description": "Occupation of single eigenfunction",
+      "dtypeStr": "C",
+      "name": "turbomole_eigenvalue_occupation_str",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_eigenvalues_list"
+      ]
+    }, {
+      "description": "Occupation of single eigenfunction",
       "dtypeStr": "f",
-      "name": "turbomole_eigenvalue_occupation",
+      "name": "eigenvalues_occupation",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -771,11 +790,20 @@
     }, {
       "description": "Irreducible representation of the eigenstate",
       "dtypeStr": "C",
+      "name": "turbomole_irreducible_representation_state_str",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "turbomole_section_irrep_list"
+      ]
+    }, {
+      "description": "Irreducible representation of the eigenstate",
+      "dtypeStr": "C",
       "name": "turbomole_irreducible_representation_state",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "turbomole_section_eigenvalues_list"
+        "turbomole_section_irrep_list"
       ]
     }, {
       "description": "Number of iteration",
@@ -913,9 +941,25 @@
         "turbomole_section_eigenvalues_spin"
       ]
     }, {
-      "description": "section for one list of eigenvalues at specific kpoint and spin",
+      "description": "section for one list of eigenvalues",
+      "kindStr": "type_section",
+      "name": "turbomole_section_irrep_list",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_spin"
+      ]
+    }, {
+      "description": "section for one list of eigenvalues",
       "kindStr": "type_section",
       "name": "turbomole_section_eigenvalues_list",
+      "repeats": true,
+      "superNames": [
+        "turbomole_section_eigenvalues_spin"
+      ]
+    }, {
+      "description": "section for one list of eigenvalues",
+      "kindStr": "type_section",
+      "name": "turbomole_section_occupation_list",
       "repeats": true,
       "superNames": [
         "turbomole_section_eigenvalues_spin"
