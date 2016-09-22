@@ -18,6 +18,27 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Density convergence criteria for break the SCF cycle",
+      "dtypeStr": "f",
+      "name": "x_gpaw_density_convergence_criterion",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Was the magnetic moment fixed? If yes the x_gpaw_fixed_sZ is set",
+      "dtypeStr": "b",
+      "name": "x_gpaw_fix_magnetic_moment",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Was it a calculation with a fixed density?",
+      "dtypeStr": "b",
+      "name": "x_gpaw_fixdensity",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Target value (fixed) of the z projection of the spin moment operator $S^z$ for the converged calculation with the XC_method.",
       "dtypeStr": "f",
       "name": "x_gpaw_fixed_spin_Sz",
@@ -34,6 +55,34 @@
       ],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Maxium angular momentum (L) for projectors",
+      "dtypeStr": "i",
+      "name": "x_gpaw_maximum_angular_momentum",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Damping parameter in the density mixer",
+      "dtypeStr": "f",
+      "name": "x_gpaw_mix_beta",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "The density mixer class name (Mixer, MixerSum, MixerDiff)",
+      "dtypeStr": "C",
+      "name": "x_gpaw_mix_class",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Number of old densities in the density mixer",
+      "dtypeStr": "i",
+      "name": "x_gpaw_mix_old",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "number of PAW projector matrix elements in packed format",
@@ -94,6 +143,21 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Was time reserval symmetry used",
+      "dtypeStr": "b",
+      "name": "x_gpaw_symmetry_time_reversal_switch",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "The XC functional name used in gpaw as input",
+      "dtypeStr": "C",
+      "name": "x_gpaw_xc_functional",
+      "shape": [],
+      "superNames": [
+        "section_method"
       ]
     }]
 }
