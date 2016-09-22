@@ -105,17 +105,19 @@
         "x_abinit_section_dataset_header"
       ]
     }, {
-      "description": "Cartesian coordinates an atom at the end of a single configuration calculation",
+      "description": "Cartesian coordinates of an atom at the end of a single configuration calculation",
       "name": "x_abinit_atom_xcart",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
       ]
     }, {
-      "description": "Cartesian coordinates an atom at the end of the dataset",
+      "description": "Cartesian coordinates of an atom at the end of the dataset",
       "name": "x_abinit_atom_xcart_final",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
@@ -124,6 +126,7 @@
       "description": "Force acting on an atom at the end of a single configuration calculation",
       "name": "x_abinit_atom_force",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -132,6 +135,7 @@
       "description": "Force acting on an atom at the end of the dataset",
       "name": "x_abinit_atom_force_final",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -140,6 +144,7 @@
       "description": "The reduced coordinates of a k-point",
       "name": "x_abinit_kpt",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_eigenvalues"
@@ -148,6 +153,7 @@
       "description": "A k-point weight",
       "name": "x_abinit_wtk",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_eigenvalues"
@@ -156,6 +162,7 @@
       "description": "List of eigenvalues on a given k-point",
       "name": "x_abinit_eigenvalues",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_eigenvalues"
@@ -164,6 +171,7 @@
       "description": "List of occupations on a given k-point",
       "name": "x_abinit_occupations",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_eigenvalues"
