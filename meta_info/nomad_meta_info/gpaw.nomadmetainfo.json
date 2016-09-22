@@ -25,16 +25,16 @@
         "section_method"
       ]
     }, {
-      "description": "Was the magnetic moment fixed? If yes the x_gpaw_fixed_sZ is set",
+      "description": "Was it a calculation with a fixed density?",
       "dtypeStr": "b",
-      "name": "x_gpaw_fix_magnetic_moment",
+      "name": "x_gpaw_fix_density",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Was it a calculation with a fixed density?",
+      "description": "Was the magnetic moment fixed? If yes the x_gpaw_fixed_sZ is set",
       "dtypeStr": "b",
-      "name": "x_gpaw_fixdensity",
+      "name": "x_gpaw_fix_magnetic_moment",
       "superNames": [
         "section_method"
       ]
