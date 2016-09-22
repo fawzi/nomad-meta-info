@@ -224,9 +224,10 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "x_fleur_section_equiv_atoms, section_system"
       ]
-    },{"description": "number_equiv_atoms_in_this_atom_type",
+    }, {
+      "description": "number_equiv_atoms_in_this_atom_type",
       "dtypeStr": "f",
       "name": "x_fleur_nr_equiv_atoms_in_this_atom_type",
       "repeats": true,
@@ -281,15 +282,6 @@
       "repeats" : true,
       "superNames": [
         "section_system"
-      ]
-    }, {
-      "description": "name of atom type",
-      "dtypeStr": "C",
-      "name": "x_fleur_name_of_atom_type",
-      "repeats" : true,
-      "shape": [],
-      "superNames": [
-        "x_fleur_section_equiv_atoms"
       ]
     },  {
       "description": "nuclear number",
