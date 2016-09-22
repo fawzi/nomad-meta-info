@@ -21,6 +21,7 @@
       "description": "Density convergence criteria for break the SCF cycle",
       "dtypeStr": "f",
       "name": "x_gpaw_density_convergence_criterion",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -28,6 +29,7 @@
       "description": "Was it a calculation with a fixed density?",
       "dtypeStr": "b",
       "name": "x_gpaw_fix_density",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -35,6 +37,7 @@
       "description": "Was the magnetic moment fixed? If yes the x_gpaw_fixed_sZ is set",
       "dtypeStr": "b",
       "name": "x_gpaw_fix_magnetic_moment",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -60,6 +63,7 @@
       "description": "Maxium angular momentum (L) for projectors",
       "dtypeStr": "i",
       "name": "x_gpaw_maximum_angular_momentum",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -67,6 +71,7 @@
       "description": "Damping parameter in the density mixer",
       "dtypeStr": "f",
       "name": "x_gpaw_mix_beta",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -81,6 +86,7 @@
       "description": "Number of old densities in the density mixer",
       "dtypeStr": "i",
       "name": "x_gpaw_mix_old",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -88,6 +94,7 @@
       "description": "Mixing weight in density mixer",
       "dtypeStr": "f",
       "name": "x_gpaw_mix_weight",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
@@ -155,6 +162,7 @@
       "description": "Was time reserval symmetry used",
       "dtypeStr": "b",
       "name": "x_gpaw_symmetry_time_reversal_switch",
+      "shape": [],
       "superNames": [
         "section_method"
       ]
