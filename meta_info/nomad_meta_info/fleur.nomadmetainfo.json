@@ -182,6 +182,15 @@
       "superNames": [
         "section_scf_iteration"
       ]
+    },{
+      "description": "number of all the k-points",
+      "dtypeStr": "i",
+      "name": "x_fleur_nkptd",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }, {
       "description": "x component of vector of k point",
       "dtypeStr": "f",
@@ -210,6 +219,15 @@
         "section_method"
       ]
     }, {
+      "description": "weights of k point",
+      "dtypeStr": "f",
+      "name": "x_fleur_k_point_weight",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
       "description": "space group",
       "dtypeStr": "C",
       "name": "x_fleur_space_group",
