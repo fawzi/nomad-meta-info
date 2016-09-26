@@ -14,11 +14,18 @@
         "section_run"
       ]
     }, {
+      "description": "Describes a part of the XC functional that is used in the calculation. Can be a local or non-local part, can be exchange or correlation, can have a weight.",
+      "kindStr": "type_section",
+      "name": "x_nwchem_section_xc_part",
+      "superNames": [
+        "settings_XC_functional"
+      ]
+    }, {
       "description": "Shorcut for a XC functional definition.",
       "dtypeStr": "C",
       "name": "x_nwchem_xc_functional_shortcut",
       "superNames": [
-        "settings_XC"
+        "settings_XC_functional"
       ]
     }, {
       "description": "The name of the XC functional",
@@ -26,7 +33,7 @@
       "name": "x_nwchem_xc_functional_name",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "x_nwchem_section_xc_part"
       ]
     }, {
       "description": "The weight of the XC functional.",
@@ -34,7 +41,7 @@
       "name": "x_nwchem_xc_functional_weight",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "x_nwchem_section_xc_part"
       ]
     }, {
       "description": "The type of the XC functional, local or non-local",
@@ -42,7 +49,7 @@
       "name": "x_nwchem_xc_functional_type",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "x_nwchem_section_xc_part"
       ]
     }, {
       "description": "Contains system information for a calculation to follow. Contains all of the geometries used in different NWChem tasks contained by this calculations.",
@@ -209,19 +216,12 @@
         "section_run"
       ]
     }, {
-      "description": "QMD Module run parameters",
-      "kindStr": "type_section",
-      "name": "x_nwchem_section_qmd_run_parameters",
-      "superNames": [
-        "x_nwchem_section_qmd_module"
-      ]
-    }, {
       "description": "Number of nuclear steps.",
       "dtypeStr": "i",
       "name": "x_nwchem_qmd_number_of_nuclear_steps",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Nuclear time step.",
@@ -229,7 +229,7 @@
       "name": "x_nwchem_qmd_nuclear_time_step",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Target temperature.",
@@ -237,7 +237,7 @@
       "name": "x_nwchem_qmd_target_temperature",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Thermostat for QMD.",
@@ -245,15 +245,15 @@
       "name": "x_nwchem_qmd_thermostat",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
-      "description": "Tau for QMM thermostat.",
+      "description": "Tau for QMD thermostat.",
       "dtypeStr": "f",
       "name": "x_nwchem_qmd_tau",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Random seed.",
@@ -261,7 +261,7 @@
       "name": "x_nwchem_qmd_random_seed",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Integrator for nuclei.",
@@ -269,7 +269,7 @@
       "name": "x_nwchem_qmd_nuclear_integrator",
       "shape": [],
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "Initial temperature",
@@ -278,7 +278,7 @@
       "shape": [],
       "unit": "K",
       "superNames": [
-        "x_nwchem_section_qmd_run_parameters"
+        "settings_molecular_dynamics"
       ]
     }, {
       "description": "DFT QMD step",
@@ -349,6 +349,50 @@
       "unit": "bohr*e",
       "superNames": [
         "x_nwchem_section_qmd_step"
+      ]
+    }, {
+      "description": "Electron spin restriction.",
+      "dtypeStr": "C",
+      "name": "x_nwchem_electron_spin_restriction",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "The simulation cell in reciprocal space.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_reciprocal_simulation_cell",
+      "shape": [3,3],
+      "unit": "m^-1",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "The lengths of the basis vectors.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_lattice_basis_vector_lengths",
+      "shape": [3],
+      "unit": "m",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "The angles between the basis vectors.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_lattice_basis_vector_angles",
+      "shape": [3],
+      "unit": "rad",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "The lattice omega value.",
+      "dtypeStr": "f",
+      "name": "x_nwchem_lattice_basis_vector_angles",
+      "shape": [3],
+      "unit": "rad",
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "The name of the program that was run.",
