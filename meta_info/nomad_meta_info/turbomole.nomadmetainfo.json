@@ -21,8 +21,7 @@
       "name": "turbomole_charge_neutrality_tol",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": "The label of the atoms in the system",
@@ -268,10 +267,10 @@
         "section_basis_set"
       ]
     }, {
-      "description": "Method used for electronic structure calculatons",
-      "dtypeStr": "C",
-      "name": "electronic_structure_method",
-      "repeats": true,
+      "description": "Temperature of Fermi smearing",
+      "dtypeStr": "f",
+      "name": "smearing_width",
+      "repeats": false,
       "shape": [],
       "superNames": [
         "section_system"
@@ -582,8 +581,7 @@
       "name": "turbomole_embed_geometry_atom_charge",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " Coordinates of all systems centered about cell 0: Atomic label",
@@ -591,8 +589,7 @@
       "name": "turbomole_embed_geometry_atom_label",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " Coordinates of all systems centered about cell 0: x-coordinate",
@@ -600,8 +597,7 @@
       "name": "turbomole_embed_geometry_atom_positions_x",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " Coordinates of all systems centered about cell 0: y-coordinate",
@@ -609,8 +605,7 @@
       "name": "turbomole_embed_geometry_atom_positions_y",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " Coordinates of all systems centered about cell 0: z-coordinate",
@@ -618,8 +613,7 @@
       "name": "turbomole_embed_geometry_atom_positions_z",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " QM cluster transformed to the center of cell 0 (au): label",
@@ -627,8 +621,7 @@
       "name": "turbomole_embed_qm_cluster_geometry_atom_label",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " QM cluster transformed to the center of cell 0 (au): x-coordinate",
@@ -636,8 +629,7 @@
       "name": "turbomole_embed_qm_cluster_geometry_atom_positions_x",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " QM cluster transformed to the center of cell 0 (au): y-coordinate",
@@ -645,8 +637,7 @@
       "name": "turbomole_embed_qm_cluster_geometry_atom_positions_y",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": " QM cluster transformed to the center of cell 0 (au): z-coordinate",
@@ -654,8 +645,7 @@
       "name": "turbomole_embed_qm_cluster_geometry_atom_positions_z",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": "Norm of the total energy at each iteration",
@@ -831,8 +821,7 @@
       "name": "turbomole_max_multipole_moment",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": "Maximal resid. norm for Fia-block",
@@ -858,8 +847,7 @@
       "name": "turbomole_min_separation_cells",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": "Multipole precision parameter",
@@ -867,8 +855,7 @@
       "name": "turbomole_multipole_precision_parameter",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": "compute node",
@@ -995,8 +982,7 @@
       "name": "turbomole_total_charge",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
+        "section_run"
       ]
     }, {
       "description": "Final (converged or not) Total Energy",
