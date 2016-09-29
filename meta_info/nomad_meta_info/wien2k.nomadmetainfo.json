@@ -224,7 +224,7 @@
     },  {
       "description": "determines how EF is determined; in in2c",
       "dtypeStr": "C",
-      "name": "smearing_kind",
+      "name": "x_wien2k_smearing_kind",
       "shape": [],
       "superNames": [
         "section_method"
@@ -232,7 +232,7 @@
     }, {
       "description": "specifies the width of the broadening, if efmod is set to ALL, eval specifies the upper limit of the energy window; in in2c",
       "dtypeStr": "f",
-      "name": "smearing_width",
+      "name": "x_wien2k_smearing_width",
       "shape": [],
       "superNames": [
         "section_method"
