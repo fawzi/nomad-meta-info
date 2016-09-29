@@ -15,6 +15,139 @@
         "x_orca_atom_positions"
       ]
     },{
+      "description": "positions of an atom",
+      "name": "x_orca_atom_positions",
+      "kindStr": "type_section",
+      "superNames" : [
+	"section_system"
+	]
+    },{
+      "description": "basis sets",
+      "name": "x_orca_basis_set_info",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_basis_set"
+        ]
+    },{
+      "description": "auxiliary basis sets",
+      "name": "x_orca_auxiliary_basis_set_info",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_basis_set"
+        ]
+    },{
+      "description": "Statistics and information on basis set",
+      "name": "x_orca_basis_set_statistics_and_startup_info",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_basis_set"
+        ]
+    },{
+      "description": "scf settings",
+      "name": "x_orca_scf_settings",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_method"
+        ]
+    },{
+      "description": "scf iterations",
+      "name": "section_scf_iteration",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_scf_iteration"
+        ]
+    },{
+      "description": "final run after scf convergence",
+      "name": "x_orca_final_run_after_convergence",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_scf_iteration"
+        ]
+    },{
+      "description": "total energy of the system after final run after scf convergence",
+      "name": "x_orca_total_energy",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_scf_iteration"
+        ]
+    },{
+      "description": "components of the scf total energy",
+      "name": "x_orca_energy_componets",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_scf_iteration"
+        ]
+    },{
+      "description": "orbital energies",
+      "name": "x_orca_orbital_energies",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_dos"
+        ]
+    },{
+      "description": "mulliken analysis",
+      "name": "x_orca_mulliken_analysis",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_dos"
+        ]
+    },{
+      "description": "scf timings",
+      "name": "x_orca_timings",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_scf_iteration"
+        ]
+    },{
+      "description": "geometry optimization",
+      "name": "x_orca_geometry_optimization",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_sampling_method"
+        ]
+    },{
+      "description": "final optimized geometry",
+      "name": "x_orca_final_geometry",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_sampling_method"
+        ]
+    },{
+      "description": "final run after geometry optimization",
+      "name": "x_orca_final_run_after_convergence",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_scf_iteration"
+        ]
+    },{
+      "description": "final total energy",
+      "name": "x_orca_total_energy",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_single_configuration_calculation"
+        ]
+    },{
+      "description": "final total energy components",
+      "name": "x_orca_energy_componets",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_single_configuration_calculation"
+        ]
+    },{
+      "description": "mp2 method",
+      "name": "x_orca_mp2",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_method"
+        ]
+    },{
+      "description": "Configuration interaction methods",
+      "name": "x_orca_driven_CI",
+      "kindStr": "type_section",
+      "superNames" : [
+        "section_method"
+        ]
+    },{
       "description": "-",
       "dtypeStr": "f",
       "name": "x_orca_atom_positions_x",
