@@ -237,7 +237,7 @@
       "superNames": [
         "section_method"
       ],
-      "units": "Ry"
+      "units": "J"
     }, {
       "description": "max. G (magnitude of largest vector) in charge density Fourier expansion; in in2c",
       "dtypeStr": "f",
@@ -393,12 +393,12 @@
     }, {
       "description": "energy total",
       "dtypeStr": "f",
-      "name": "energy_total",
+      "name": "x_wien2k_energy_total",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "Ry"
+      "units": "J"
     },  {
       "description": "Fermi energy",
       "dtypeStr": "f",
@@ -435,12 +435,12 @@
     },  {
       "description": "energy gap in Ry",
       "dtypeStr": "f",
-      "name": "x_wien2k_ene_gap_Ry",
+      "name": "x_wien2k_ene_gap",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "Ry"
+      "units": "J"
     }, {
       "description": "energy gap in eV",
       "dtypeStr": "f",
