@@ -81,32 +81,16 @@
         "section_run"
       ]
     }, {
-      "description": "Primitive axis 1",
-      "name": "x_abinit_vprim_1",
+      "description": "Message that the calculation was completed",
+      "name": "x_abinit_completed",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
-        "x_abinit_section_dataset_header"
+        "section_run"
       ]
     }, {
-      "description": "Primitive axis 2",
-      "name": "x_abinit_vprim_2",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "x_abinit_section_dataset_header"
-      ]
-    }, {
-      "description": "Primitive axis 3",
-      "name": "x_abinit_vprim_3",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "x_abinit_section_dataset_header"
-      ]
-    }, {
-      "description": "Cartesian coordinates of an atom at the end of a single configuration calculation",
-      "name": "x_abinit_atom_xcart",
+      "description": "Cartesian coordinates of an atom at the end of the dataset",
+      "name": "x_abinit_atom_xcart_final",
       "dtypeStr": "C",
       "repeats": true,
       "shape": [],
@@ -114,8 +98,8 @@
         "section_system"
       ]
     }, {
-      "description": "Cartesian coordinates of an atom at the end of the dataset",
-      "name": "x_abinit_atom_xcart_final",
+      "description": "Cartesian coordinates of an atom at the end of a single configuration calculation",
+      "name": "x_abinit_atom_xcart",
       "dtypeStr": "C",
       "repeats": true,
       "shape": [],
@@ -147,42 +131,6 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "The reduced coordinates of a k-point",
-      "name": "x_abinit_kpt",
-      "dtypeStr": "C",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "description": "A k-point weight",
-      "name": "x_abinit_wtk",
-      "dtypeStr": "C",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "description": "List of eigenvalues on a given k-point",
-      "name": "x_abinit_eigenvalues",
-      "dtypeStr": "C",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "description": "List of occupations on a given k-point",
-      "name": "x_abinit_occupations",
-      "dtypeStr": "C",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_eigenvalues"
       ]
     }, {
       "description": "Kinetic energy",
@@ -265,18 +213,70 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "Message that the calculation was completed",
-      "name": "x_abinit_completed",
+      "description": "The reduced coordinates of a k-point",
+      "name": "x_abinit_kpt",
       "dtypeStr": "C",
+      "repeats": true,
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "A k-point weight",
+      "name": "x_abinit_wtk",
+      "dtypeStr": "C",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "List of eigenvalues on a given k-point",
+      "name": "x_abinit_eigenvalues",
+      "dtypeStr": "C",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "List of occupations on a given k-point",
+      "name": "x_abinit_occupations",
+      "dtypeStr": "C",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
       ]
     }, {
       "description": "Dataset number",
       "dtypeStr": "i",
       "name": "x_abinit_dataset_number",
       "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_dataset_header"
+      ]
+    }, {
+      "description": "Primitive axis 1",
+      "name": "x_abinit_vprim_1",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_dataset_header"
+      ]
+    }, {
+      "description": "Primitive axis 2",
+      "name": "x_abinit_vprim_2",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_dataset_header"
+      ]
+    }, {
+      "description": "Primitive axis 3",
+      "name": "x_abinit_vprim_3",
+      "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "x_abinit_section_dataset_header"
