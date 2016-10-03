@@ -2567,7 +2567,7 @@
         "section_method"
       ]
     }, {
-      "description": "Lattice vectors (in Cartesian coordinates) of the simulation cell. The first index runs over the $x,y,z$ Cartesian coordinates, and the second index runs over the 3 lattice vectors.",
+      "description": "Lattice vectors (in Cartesian coordinates) of the simulation cell. The last (fastest) index runs over the $x,y,z$ Cartesian coordinates, and the first index runs over the 3 lattice vectors.",
       "dtypeStr": "f",
       "name": "simulation_cell",
       "repeats": false,
