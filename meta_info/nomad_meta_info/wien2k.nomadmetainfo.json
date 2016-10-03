@@ -14,7 +14,8 @@
       "shape": [],
       "superNames": [
         "x_wien2k_section_equiv_atoms"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "position of atom y in internal units",
       "dtypeStr": "f",
@@ -23,7 +24,8 @@
       "shape": [],
       "superNames": [
         "x_wien2k_section_equiv_atoms"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "position of atom z  in internal units",
       "dtypeStr": "f",
@@ -32,8 +34,9 @@
       "shape": [],
       "superNames": [
         "x_wien2k_section_equiv_atoms"
-      ]
-    },{
+      ],
+      "units": "m"
+    }, {
       "description": "name of atom, labelling non-equvalent atoms",
       "dtypeStr": "C",
       "name": "x_wien2k_atom_name",
@@ -308,7 +311,8 @@
       "shape": [],
       "superNames": [
         "section_system"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "unit cell parameters - b",
       "dtypeStr": "f",
@@ -316,7 +320,8 @@
       "shape": [],
       "superNames": [
         "section_system"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "unit cell parameters - c",
       "dtypeStr": "f",
@@ -324,7 +329,8 @@
       "shape": [],
       "superNames": [
         "section_system"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "unit cell parameters - alfa",
       "dtypeStr": "f",
