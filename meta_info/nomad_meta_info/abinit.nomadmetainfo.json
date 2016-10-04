@@ -107,6 +107,21 @@
         "section_system"
       ]
     }, {
+      "description": "Total magnetisation.",
+      "name": "x_abinit_magnetisation",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description" : "Section describing the stress tensor",
+      "kindStr": "type_section",
+      "name": "x_abinit_section_stress_tensor",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Determines whether a single configuration calculation is converged.",
       "name": "x_abinit_single_configuration_calculation_converged",
       "dtypeStr": "C",
@@ -284,7 +299,6 @@
     }, {
       "description": "Name of file where the eigenvalues were written to.",
       "name": "x_abinit_eig_filename",
-      "superNames": [],
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
@@ -296,6 +310,54 @@
       "name": "x_abinit_section_dataset_header",
       "superNames": [
         "x_abinit_section_dataset"
+      ]
+    }, {
+      "description": "xx component of the stress tensor",
+      "dtypeStr": "f",
+      "name": "x_abinit_stress_tensor_xx",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_stress_tensor"
+      ]
+    }, {
+      "description": "yy component of the stress tensor",
+      "dtypeStr": "f",
+      "name": "x_abinit_stress_tensor_yy",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_stress_tensor"
+      ]
+    }, {
+      "description": "zz component of the stress tensor",
+      "dtypeStr": "f",
+      "name": "x_abinit_stress_tensor_zz",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_stress_tensor"
+      ]
+    }, {
+      "description": "zy component of the stress tensor",
+      "dtypeStr": "f",
+      "name": "x_abinit_stress_tensor_zy",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_stress_tensor"
+      ]
+    }, {
+      "description": "zx component of the stress tensor",
+      "dtypeStr": "f",
+      "name": "x_abinit_stress_tensor_zx",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_stress_tensor"
+      ]
+    }, {
+      "description": "yx component of the stress tensor",
+      "dtypeStr": "f",
+      "name": "x_abinit_stress_tensor_yx",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_stress_tensor"
       ]
     }, {
       "description": "Variable dataset number",
