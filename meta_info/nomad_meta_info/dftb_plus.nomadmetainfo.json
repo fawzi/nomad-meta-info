@@ -14,12 +14,14 @@
     "shape": []
    },{
     "description": "-",
+    "repeats": true,
     "name": "x_dftbp_atom_positions_X",
     "superNames": ["section_system"],
     "dtypeStr": "f",
     "shape": []
    },{
     "description": "-",
+    "repeats": true,
     "name": "x_dftbp_atom_positions_Y",
     "superNames": ["section_system"],
     "dtypeStr": "f",
@@ -33,12 +35,14 @@
     "shape": []
    },{
     "description": "-",
+    "repeats": true,
     "name": "x_dftbp_atom_forces_X",
     "superNames": ["section_single_configuration_calculation"],
     "dtypeStr": "f",
     "shape": []
    },{
     "description": "-",
+    "repeats": true,
     "name": "x_dftbp_atom_forces_Y",
     "superNames": ["section_single_configuration_calculation"],
     "dtypeStr": "f",
