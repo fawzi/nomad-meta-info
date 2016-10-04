@@ -305,6 +305,14 @@
         "x_abinit_section_dataset_header"
       ]
     }, {
+      "description": "Determines whether a geometry optimization is converged.",
+      "name": "x_abinit_geometry_optimization_converged",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "x_abinit_section_dataset"
+      ]
+    }, {
       "description": "Name of file where the eigenvalues were written to.",
       "name": "x_abinit_eig_filename",
       "dtypeStr": "C",
