@@ -115,6 +115,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Fermi energy.",
+      "name": "x_abinit_fermi_energy",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description" : "Section describing the stress tensor",
       "kindStr": "type_section",
       "name": "x_abinit_section_stress_tensor",
