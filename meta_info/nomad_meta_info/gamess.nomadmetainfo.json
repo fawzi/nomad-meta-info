@@ -25,7 +25,7 @@
     },{
       "description": "Total charge of the system.",
       "dtypeStr": "i",
-      "name": "x_gaussian_total_charge",
+      "name": "x_gamess_total_charge",
       "shape": [],
       "superNames": [
         "section_system"
@@ -39,28 +39,12 @@
         "section_system"
       ]
     }, {
-      "description": "X component of moment of inertia",
-      "dtypeStr": "f",
-      "name": "x_gamess_moment_of_inertia_X",
+      "description": "section that contains Cartesian coordinates of the system for a given geometry",
+      "kindStr": "type_section",
       "shape": [],
+      "name": "x_gamess_section_geometry",
       "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "Y component of moment of inertia",
-      "dtypeStr": "f",
-      "name": "x_gamess_moment_of_inertia_Y",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "Z component of moment of inertia",
-      "dtypeStr": "f",
-      "name": "x_gamess_moment_of_inertia_Z",
-      "shape": [],
-      "superNames": [
-        "section_system"
+        "section_run"
       ]
     }, {
       "description": "x coordinate for the atoms",
@@ -68,7 +52,7 @@
       "name": "x_gamess_atom_x_coord",
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_gamess_section_geometry"
       ],
       "units": "m"
     }, {
@@ -77,7 +61,7 @@
       "name": "x_gamess_atom_y_coord",
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_gamess_section_geometry"
       ],
       "units": "m"
     }, {
@@ -86,7 +70,7 @@
       "name": "x_gamess_atom_z_coord",
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_gamess_section_geometry"
       ],
       "units": "m"
     }, {
@@ -97,6 +81,57 @@
       "superNames": [
         "section_system"
       ]
+    }, {
+      "description": "Initial positions of all the atoms, in Cartesian coordinates.",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_positions_initial",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
+    }, {
+      "description": "Initial positions of all the atoms, in Cartesian coordinates.",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_positions",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "x_gamess_section_geometry"
+      ],
+      "units": "m"
+    }, {
+      "description": "x coordinate for the atoms of the initial geometry",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_x_coord_initial",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "y coordinate for the atoms of the initial geometry",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_y_coord_initial",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "z coordinate for the atoms of the initial geometry",
+      "dtypeStr": "f",
+      "name": "x_gamess_atom_z_coord_initial",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
     }, {
       "description": "Total memory for GAMESS job",
       "dtypeStr": "i",
@@ -168,7 +203,7 @@
       "shape": [],
       "superNames": [
         "section_system"
-       ]
+      ]
       }
       ]
 } 
