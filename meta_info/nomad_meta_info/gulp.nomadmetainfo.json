@@ -19,6 +19,18 @@
       "shape": [],
       "superNames": [ "section_system" ]
   }, {
+      "description": "Title of GULP calculation",
+      "dtypeStr": "C",
+      "name": "x_gulp_title",
+      "shape": [],
+      "superNames": [ "section_run" ]
+  }, {
+      "description": "GULP chemical formula",
+      "dtypeStr": "C",
+      "name": "x_gulp_formula",
+      "shape": [],
+      "superNames": [ "section_system" ]
+  }, {
       "description": "Number of species in GULP",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -127,6 +139,66 @@
       "description": "GULP force field parameter D",
       "dtypeStr": "f",
       "name": "x_gulp_forcefield_parameter_d",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP force field cutoff min (can also be a string like 3Bond for some reason)",
+      "dtypeStr": "C",
+      "name": "x_gulp_forcefield_cutoff_min",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP force field cutoff max",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_cutoff_max",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 3-body force field parameter 1",
+      "dtypeStr": "C",
+      "name": "x_gulp_forcefield_threebody_1",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 3-body force field parameter 2",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_threebody_2",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 3-body force field parameter 3",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_threebody_3",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 3-body force field parameter theta",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_threebody_theta",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 4-body force field parameter force constant",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_fourbody_force_constant",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 4-body force field parameter sign",
+      "dtypeStr": "C",
+      "name": "x_gulp_forcefield_fourbody_sign",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 4-body force field parameter phase",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_fourbody_phase",
+      "shape": [],
+      "superNames": [ "x_gulp_section_forcefield" ]
+  }, {
+      "description": "GULP 4-body force field parameter phi0",
+      "dtypeStr": "f",
+      "name": "x_gulp_forcefield_fourbody_phi0",
       "shape": [],
       "superNames": [ "x_gulp_section_forcefield" ]
   }, {
@@ -288,6 +360,42 @@
   }, {
       "description": "GULP energy term for total_lattice_energy",
       "name": "x_gulp_energy_total_lattice_energy",
+      "superNames": [ "section_single_configuration_calculation" ],
+      "dtypeStr": "f",
+      "shape": []
+  }, {
+      "description": "GULP molecular dynamics time",
+      "name": "x_gulp_md_time",
+      "superNames": [ "section_single_configuration_calculation" ],
+      "dtypeStr": "f",
+      "shape": []
+  }, {
+      "description": "GULP molecular dynamics kinetic energy",
+      "name": "x_gulp_md_kinetic_energy",
+      "superNames": [ "section_single_configuration_calculation" ],
+      "dtypeStr": "f",
+      "shape": []
+  }, {
+      "description": "GULP molecular dynamics potential energy",
+      "name": "x_gulp_md_potential_energy",
+      "superNames": [ "section_single_configuration_calculation" ],
+      "dtypeStr": "f",
+      "shape": []
+  }, {
+      "description": "GULP molecular dynamics total energy",
+      "name": "x_gulp_md_total_energy",
+      "superNames": [ "section_single_configuration_calculation" ],
+      "dtypeStr": "f",
+      "shape": []
+  }, {
+      "description": "GULP molecular dynamics temperature",
+      "name": "x_gulp_md_temperature",
+      "superNames": [ "section_single_configuration_calculation" ],
+      "dtypeStr": "f",
+      "shape": []
+  }, {
+      "description": "GULP molecular dynamics pressure",
+      "name": "x_gulp_md_pressure",
       "superNames": [ "section_single_configuration_calculation" ],
       "dtypeStr": "f",
       "shape": []
