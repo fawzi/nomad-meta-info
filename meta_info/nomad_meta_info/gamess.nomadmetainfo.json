@@ -44,7 +44,7 @@
       "shape": [],
       "name": "x_gamess_section_geometry",
       "superNames": [
-        "section_run"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "x coordinate for the atoms",
@@ -204,6 +204,42 @@
       "superNames": [
         "section_system"
       ]
-      }
+    }, {
+      "description": "Total energy increment calculated with a given method during the self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_gamess_delta_energy_total_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Value of the SCF total energy, either HF or DFT.",
+      "dtypeStr": "f",
+      "name": "x_gamess_energy_scf",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "energy_total_potential",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "String identifying in an unique way the XC method used for the final wavefunctions.",
+      "dtypeStr": "C",
+      "name": "x_gamess_xc",
+      "shape": [],
+      "superNames": [
+        "section_method"
       ]
+    }, {
+      "description": "String identifying in an unique way the XC method used for the final wavefunctions.",
+      "dtypeStr": "C",
+      "name": "x_gaussian_xc",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+      }
+   ]
 } 
