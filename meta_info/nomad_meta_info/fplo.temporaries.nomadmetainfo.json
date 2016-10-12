@@ -1,0 +1,29 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info for temporaries used by the FPLO parser, all names are expected to start with x_fplo_t_",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [
+    {
+      "description": "temporary: FPLO main version",
+      "name": "x_fplo_t_program_version_main",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
+      "description": "temporary: FPLO release number",
+      "name": "x_fplo_t_program_version_release",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }
+  ]
+}
