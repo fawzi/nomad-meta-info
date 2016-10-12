@@ -6,5 +6,48 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": []
+  "metaInfos": [ {
+    "description": "Molcas method name (without UHF; see x_molcas_uhf)",
+    "dtypeStr": "C",
+    "name": "x_molcas_method_name",
+    "superNames": [ "section_method" ],
+    "shape": []
+  }, {
+    "description": "If the Molcas method is UHF.",
+    "dtypeStr": "b",
+    "name": "x_molcas_uhf",
+    "superNames": [ "section_method" ],
+    "shape": []
+  }, {
+      "description": "Section for Molcas frequency (symmetry, frequency, intensity)",
+      "kindStr": "type_section",
+      "name": "x_molcas_section_frequency",
+      "repeats": true,
+      "superNames": [ "section_single_configuration_calculation" ],
+      "shape": []
+  }, {
+      "description": "Molcas frequency value",
+      "dtypeStr": "f",
+      "name": "x_molcas_frequency_value",
+      "superNames": ["x_molcas_section_frequency"],
+      "shape": []
+  }, {
+      "description": "Molcas imaginary frequency value",
+      "dtypeStr": "f",
+      "name": "x_molcas_imaginary_frequency_value",
+      "superNames": ["x_molcas_section_frequency"],
+      "shape": []
+  }, {
+      "description": "Molcas intensity value",
+      "dtypeStr": "f",
+      "name": "x_molcas_frequency_intensity",
+      "superNames": ["x_molcas_section_frequency"],
+      "shape": []
+  }, {
+      "description": "Molcas symmetry for frequencies",
+      "dtypeStr": "C",
+      "name": "x_molcas_frequency_symmetry",
+      "superNames": ["x_molcas_section_frequency"],
+      "shape": []
+  }]
 }
