@@ -33,6 +33,60 @@
       "superNames": [
         "section_run"
       ]
+    },
+    {
+      "description": "Temporary storage for direct lattice vectors, x-component",
+      "name": "x_fplo_t_vec_a_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for direct lattice vectors, y-component",
+      "name": "x_fplo_t_vec_a_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for direct lattice vectors, z-component",
+      "name": "x_fplo_t_vec_a_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for reciprocal lattice vectors, x-component",
+      "name": "x_fplo_t_vec_b_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for reciprocal lattice vectors, y-component",
+      "name": "x_fplo_t_vec_b_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for reciprocal lattice vectors, z-component",
+      "name": "x_fplo_t_vec_b_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
     }
   ]
 }
