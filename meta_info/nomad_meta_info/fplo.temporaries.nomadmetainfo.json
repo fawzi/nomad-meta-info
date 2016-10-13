@@ -87,6 +87,69 @@
       "superNames": [
         "section_system"
       ]
+    },
+    {
+      "description": "Temporary storage for atom positions, x-component",
+      "name": "x_fplo_t_atom_positions_x",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for atom positions, y-component",
+      "name": "x_fplo_t_atom_positions_y",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for atom positions, z-component",
+      "name": "x_fplo_t_atom_positions_z",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO atom index",
+      "name": "x_fplo_t_atom_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO atom labels",
+      "name": "x_fplo_t_atom_labels",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO Wyckoff position index of each atom",
+      "name": "x_fplo_t_atom_wyckoff_idx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO CPA block of each atom",
+      "name": "x_fplo_t_atom_cpa_block",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
     }
   ]
 }
