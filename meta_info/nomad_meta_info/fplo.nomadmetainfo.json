@@ -41,6 +41,33 @@
         "configuration_core"
       ],
       "units": "1/m"
+    },
+    {
+      "description": "FPLO-internal index for each atom",
+      "name": "x_fplo_atom_idx",
+      "dtypeStr": "i",
+      "shape": ["number_of_atoms"],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "Wyckoff position index of each atom",
+      "name": "x_fplo_atom_wyckoff_idx",
+      "dtypeStr": "i",
+      "shape": ["number_of_atoms"],
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
+      "description": "CPA block of each atom",
+      "name": "x_fplo_atom_cpa_block",
+      "dtypeStr": "i",
+      "shape": ["number_of_atoms"],
+      "superNames": [
+        "section_system"
+      ]
     }
   ]
 }
