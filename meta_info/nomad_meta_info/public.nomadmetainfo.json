@@ -225,10 +225,11 @@
       "description": "$k$-dependent energies of the electronic band segment (electronic band structure). This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
       "dtypeStr": "f",
       "name": "band_energies",
+      "derived": true,
       "shape": [
         "number_of_spin_channels",
         "number_of_k_points_per_segment",
-        "number_of_eigen_values"
+        "number_of_band_segment_eigenvalues"
       ],
       "superNames": [
         "section_k_band_segment"
@@ -252,7 +253,7 @@
       "shape": [
         "number_of_spin_channels",
         "number_of_k_points_per_segment",
-        "number_of_eigen_values"
+        "number_of_band_segment_eigenvalues"
       ],
       "superNames": [
         "section_k_band_segment"
@@ -277,6 +278,68 @@
       ],
       "superNames": [
         "section_k_band_segment"
+      ]
+    }, {
+      "description": "$k$-dependent energies of the electronic band segment (electronic band structure) with respect to the top of the valence band. This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
+      "dtypeStr": "f",
+      "name": "band_energies_normalized",
+      "derived": true,
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_normalized_k_points_per_segment",
+        "number_of_normalized_band_segment_eigenvalues"
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fractional coordinates of the $k$ points (in the basis of the reciprocal-lattice vectors) for which the normalized electronic energies are given.",
+      "dtypeStr": "f",
+      "name": "band_k_points_normalized",
+      "derived": true,
+      "shape": [
+        "number_of_normalized_k_points_per_segment",
+        3
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ]
+    }, {
+      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies",
+      "dtypeStr": "f",
+      "name": "band_occupations_normalized",
+      "derived": true,
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_normalized_k_points_per_segment",
+        "number_of_normalized_band_segment_eigenvalues"
+      ],
+      "superNames": [
+        "section_normalized_k_band_segment"
+      ]
+    }, {
+      "description": "Start and end labels of the points in the segment (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end_normalized",
+      "dtypeStr": "C",
+      "derived": true,
+      "name": "band_segm_labels_normalized",
+      "shape": [
+        2
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ]
+    }, {
+      "description": "Fractional coordinates of the start and end point (in the basis of the reciprocal lattice vectors) of the segment sampled in the $k$ space. The conventional symbols (e.g., Gamma, K, L) of the same points are given in band_segm_labels",
+      "dtypeStr": "f",
+      "derived": true,
+      "name": "band_segm_start_end_normalized",
+      "shape": [
+        2,
+        3
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
       ]
     }, {
       "description": "Azimuthal quantum number ($l$) values (of the angular part given by the spherical harmonic $Y_{lm}$) of the atom-centered basis function defined in the current section_basis_set_atom_centered.",
@@ -1786,6 +1849,24 @@
         "section_eigenvalues"
       ]
     }, {
+      "description": "Number of eigenvalues in a band segment.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_band_segment_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Number of eigenvalues.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_normalized_band_segment_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
       "description": "Dimension of the user-defined quantity defined by frame_sequence_user_quantity_name and monitored in a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (frame_sequence_kinetic_energy and frame_sequence_potential_energy), the instantaneous temperature (frame_sequence_temperature) and the pressure (frame_sequence_pressure), monitored along a sequence of frames. This section bundles other quantities that are monitored along a sequence of frames.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1829,6 +1910,15 @@
       "shape": [],
       "superNames": [
         "section_k_band_segment"
+      ]
+    }, {
+      "description": "Number of $k$ points in the segment of the normalized band structure.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_normalized_k_points_per_segment",
+      "shape": [],
+      "superNames": [
+        "section_k_band_segment_normalized"
       ]
     }, {
       "description": "Number of different *kinds* of radial basis functions in this section_basis_set_atom_centered. Specifically, basis functions with the same $n$ and $l$ quantum numbers are grouped in sets. Each set counts as one *kind*.",
@@ -2308,6 +2398,24 @@
       "repeats": true,
       "superNames": [
         "section_k_band"
+      ]
+    }, {
+      "description": "Section collecting the information on a normalized $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
+      "kindStr": "type_section",
+      "derived": true,
+      "name": "section_k_band_segment_normalized",
+      "repeats": true,
+      "superNames": [
+        "section_k_band_normalized"
+      ]
+    }, {
+      "description": "Section collecting the information on a normalized $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways in the $k$ (reciprocal) space, which are stored in section_k_band_segment. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues.",
+      "kindStr": "type_section",
+      "name": "section_k_band_normalized",
+      "derived": true,
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section collecting the information on a $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways in the $k$ (reciprocal) space, which are stored in section_k_band_segment. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues.",
