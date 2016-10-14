@@ -77,6 +77,24 @@
       "superNames": [
         "section_system"
       ]
+    },
+    {
+      "description": "FPLO number xc functional",
+      "name": "x_fplo_xc_functional_number",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "FPLO notation of xc functional",
+      "name": "x_fplo_xc_functional",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }
   ]
 }
