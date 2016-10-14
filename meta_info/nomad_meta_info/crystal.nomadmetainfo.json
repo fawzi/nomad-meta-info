@@ -1052,7 +1052,7 @@
       "name": "x_crystal_forces_matrix_atom_gen_dir",
       "shape": [],
       "superNames": [
-        "x_crystal_section_forces_matrix_atom"
+        "x_crystal_section_forces_matrix_atom_gen"
       ]
     }, {
       "description": "Element symbol in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DY                   GENERATED FROM A PREVIOUS LINE)",
@@ -1060,7 +1060,7 @@
       "name": "x_crystal_forces_matrix_atom_gen_element",
       "shape": [],
       "superNames": [
-        "x_crystal_section_forces_matrix_atom"
+        "x_crystal_section_forces_matrix_atom_gen"
       ]
     }, {
       "description": "Atom label in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. 2 CL DY                   GENERATED FROM A PREVIOUS LINE)",
@@ -1068,7 +1068,7 @@
       "name": "x_crystal_forces_matrix_atom_gen_label",
       "shape": [],
       "superNames": [
-        "x_crystal_section_forces_matrix_atom"
+        "x_crystal_section_forces_matrix_atom_gen"
       ]
     }, {
       "description": "MAX ABS(DGRAD) in atom list of forces section (e.g. in ATOM      MAX ABS(DGRAD)       TOTAL ENERGY (AU)  N.CYC      DE       SYM. X   9.7672E-05      -6.214953997616E+02     4     2.8014E-07     8)",
@@ -1675,15 +1675,7 @@
         "x_crystal_section_info"
       ]
     }, {
-      "description": "2nd line of TYPE OF CALCULATION: e.g. HARTREE-FOCK HAMILTONIAN",
-      "dtypeStr": "C",
-      "name": "x_crystal_info_type_of_calculation2",
-      "shape": [],
-      "superNames": [
-        "x_crystal_section_info"
-      ]
-    }, {
-      "description": "TYPE OF CALCULATION :  RESTRICTED CLOSED SHELL",
+      "description": "The type of the calculation that was performed.",
       "dtypeStr": "C",
       "name": "x_crystal_info_type_of_calculation",
       "shape": [],
@@ -4448,6 +4440,52 @@
       "shape": [],
       "superNames": ["section_run"]
     }, {
+      "description": "DFT input.",
+      "kindStr": "type_section",
+      "name": "x_crystal_section_input_dft",
+      "shape": [],
+      "superNames": ["x_crystal_section_input"]
+    }, {
+      "description": "DFT exchange-correlation functional shortcut name",
+      "dtypeStr": "C",
+      "name": "x_crystal_input_dft_xc_shortcut",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_input_dft"
+      ]
+    }, {
+      "description": "DFT exchange functional name",
+      "dtypeStr": "C",
+      "name": "x_crystal_input_dft_exchange",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_input_dft"
+      ]
+    }, {
+      "description": "DFT correlation functional name",
+      "dtypeStr": "C",
+      "name": "x_crystal_input_dft_correlation",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_input_dft"
+      ]
+    }, {
+      "description": "Crystal system type name.",
+      "dtypeStr": "C",
+      "name": "x_crystal_input_system_type",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_input"
+      ]
+    }, {
+      "description": "Crystal calculation type name.",
+      "dtypeStr": "C",
+      "name": "x_crystal_input_calculation_type",
+      "shape": [],
+      "superNames": [
+        "x_crystal_section_input"
+      ]
+    }, {
       "description": "Mode",
       "kindStr": "type_section",
       "name": "x_crystal_section_irlo_modes_atom_mode",
@@ -5519,7 +5557,7 @@
       ]
     }, {
       "description": "Spacegroup corresponding to the pointgroup.",
-      "dtypeStr": "i",
+      "dtypeStr": "C",
       "name": "x_crystal_pointgroup_corresponding_spacegroup",
       "shape": [],
       "superNames": [
