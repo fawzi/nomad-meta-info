@@ -159,6 +159,87 @@
       "superNames": [
         "section_method"
       ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U species",
+      "name": "x_fplo_t_dftpu_species_state_species",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U element",
+      "name": "x_fplo_t_dftpu_species_state_element",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U state",
+      "name": "x_fplo_t_dftpu_species_state_state",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U F0",
+      "name": "x_fplo_t_dftpu_species_state_F0",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U F2",
+      "name": "x_fplo_t_dftpu_species_state_F2",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U F4",
+      "name": "x_fplo_t_dftpu_species_state_F4",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U F6",
+      "name": "x_fplo_t_dftpu_species_state_F6",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U U",
+      "name": "x_fplo_t_dftpu_species_state_U",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per species/state DFT+U J",
+      "name": "x_fplo_t_dftpu_species_state_J",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }
   ]
 }
