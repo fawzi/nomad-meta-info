@@ -240,6 +240,60 @@
       "superNames": [
         "section_method"
       ]
+    },
+    {
+      "description": "Temporary storage for FPLO per site DFT+U index",
+      "name": "x_fplo_t_dftpu_site_index",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per site DFT+U element",
+      "name": "x_fplo_t_dftpu_site_element",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per site DFT+U species",
+      "name": "x_fplo_t_dftpu_site_species",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per site DFT+U state",
+      "name": "x_fplo_t_dftpu_site_state",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per site DFT+U ubi1",
+      "name": "x_fplo_t_dftpu_site_ubi1",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },
+    {
+      "description": "Temporary storage for FPLO per site DFT+U ubi2",
+      "name": "x_fplo_t_dftpu_site_ubi2",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }
   ]
 }
