@@ -531,6 +531,18 @@
       "shape": [],
       "superNames": []
     }, {
+      "derived": true,
+      "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
+      "dtypeStr": "f",
+      "name": "dos_energies_normalized",
+      "shape": [
+        "number_of_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ],
+      "units": "J"
+    }, {
       "description": "Array containing the set of discrete energy values for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
       "dtypeStr": "f",
       "name": "dos_energies",
@@ -2759,6 +2771,18 @@
       "superNames": [
         "section_system"
       ]
+    }, {
+      "derived": true,
+      "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the species-projected density of states (DOS).",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_energies_normalized",
+      "shape": [
+        "number_of_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ],
+      "units": "J"
     }, {
       "description": "Array containing the set of discrete energy values for the species-projected density of states (DOS).",
       "dtypeStr": "f",
