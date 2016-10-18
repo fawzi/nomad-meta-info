@@ -17,8 +17,7 @@
       "superNames": [
         "section_run"
       ]
-    },
-    {
+    }, {
       "description": "FPLO compilation options",
       "name": "x_fplo_program_compilation_options",
       "dtypeStr": "C",
@@ -27,8 +26,7 @@
       "superNames": [
         "section_run"
       ]
-    },
-    {
+    }, {
       "description": "Reciprocal Lattice vectors (in Cartesian coordinates). The first index runs over the $x,y,z$ Cartesian coordinates, and the second index runs over the 3 lattice vectors.",
       "dtypeStr": "f",
       "name": "x_fplo_reciprocal_cell",
@@ -41,8 +39,7 @@
         "configuration_core"
       ],
       "units": "1/m"
-    },
-    {
+    }, {
       "description": "FPLO-internal index for each atom",
       "name": "x_fplo_atom_idx",
       "dtypeStr": "i",
@@ -50,8 +47,7 @@
       "superNames": [
         "section_system"
       ]
-    },
-    {
+    }, {
       "description": "Wyckoff position index of each atom",
       "name": "x_fplo_atom_wyckoff_idx",
       "dtypeStr": "i",
@@ -59,8 +55,7 @@
       "superNames": [
         "section_system"
       ]
-    },
-    {
+    }, {
       "description": "CPA block of each atom",
       "name": "x_fplo_atom_cpa_block",
       "dtypeStr": "i",
@@ -68,8 +63,7 @@
       "superNames": [
         "section_system"
       ]
-    },
-    {
+    }, {
       "description": "FPLO structure type: Crystal/Molecule",
       "name": "x_fplo_structure_type",
       "dtypeStr": "C",
@@ -77,8 +71,7 @@
       "superNames": [
         "section_system"
       ]
-    },
-    {
+    }, {
       "description": "FPLO number xc functional",
       "name": "x_fplo_xc_functional_number",
       "dtypeStr": "i",
@@ -86,8 +79,7 @@
       "superNames": [
         "section_method"
       ]
-    },
-    {
+    }, {
       "description": "FPLO notation of xc functional",
       "name": "x_fplo_xc_functional",
       "dtypeStr": "C",
@@ -95,8 +87,7 @@
       "superNames": [
         "section_method"
       ]
-    },
-    {
+    }, {
       "description": "FPLO projection method for DFT+U calculation",
       "name": "x_fplo_dftPu_projection",
       "dtypeStr": "C",
@@ -104,8 +95,7 @@
       "superNames": [
         "section_method"
       ]
-    },
-    {
+    }, {
       "description": "FPLO notation for DFT+U functional",
       "name": "x_fplo_dftPu_functional",
       "dtypeStr": "C",
@@ -113,16 +103,14 @@
       "superNames": [
         "section_method"
       ]
-    },
-    {
+    }, {
       "description": "Atom/Orbital dependent DFT+U properties",
       "name": "x_fplo_section_dftPu_orbital",
       "kindStr": "type_section",
       "superNames": [
         "section_method"
       ]
-    },
-    {
+    }, {
       "description": "Atom/Orbital dependent DFT+U property: atom index",
       "name": "x_fplo_dftPu_orbital_atom",
       "dtypeStr": "i",
@@ -130,8 +118,7 @@
       "superNames": [
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "Atom/Orbital dependent DFT+U property: orbital label (normally (n,l)), notation: '3d', '4f', ...",
       "name": "x_fplo_dftPu_orbital_label",
       "dtypeStr": "C",
@@ -139,8 +126,7 @@
       "superNames": [
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "Atom/Orbital dependent DFT+U property: value U",
       "name": "x_fplo_dftPu_orbital_U",
       "dtypeStr": "f",
@@ -149,8 +135,7 @@
         "energy_value",
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "Atom/Orbital dependent DFT+U property: value J",
       "name": "x_fplo_dftPu_orbital_J",
       "dtypeStr": "f",
@@ -159,8 +144,7 @@
         "energy_value",
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "Atom/Orbital dependent DFT+U property: value Ueff",
       "name": "x_fplo_dftPu_orbital_Ueff",
       "dtypeStr": "f",
@@ -180,8 +164,7 @@
       "superNames": [
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: species index",
       "name": "x_fplo_dftPu_orbital_species",
       "dtypeStr": "i",
@@ -189,8 +172,7 @@
       "superNames": [
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F0",
       "name": "x_fplo_dftPu_orbital_F0",
       "dtypeStr": "f",
@@ -199,8 +181,7 @@
         "energy_value",
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F2",
       "name": "x_fplo_dftPu_orbital_F2",
       "dtypeStr": "f",
@@ -209,8 +190,7 @@
         "energy_value",
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F4",
       "name": "x_fplo_dftPu_orbital_F4",
       "dtypeStr": "f",
@@ -219,8 +199,7 @@
         "energy_value",
         "x_fplo_section_dftPu_orbital"
       ]
-    },
-    {
+    }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F6",
       "name": "x_fplo_dftPu_orbital_F6",
       "dtypeStr": "f",
