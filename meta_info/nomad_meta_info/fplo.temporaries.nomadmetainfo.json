@@ -263,6 +263,16 @@
       "superNames": [
         "section_method"
       ]
+    }, {
+      "description": "Temporary storage for FPLO Fermi energy in iteration",
+      "name": "x_fplo_t_energy_reference_fermi_iteration",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "energy_type_reference",
+        "section_scf_iteration"
+      ],
+      "units": "J"
     }
   ]
 }
