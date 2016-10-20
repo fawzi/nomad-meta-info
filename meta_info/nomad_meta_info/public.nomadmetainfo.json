@@ -222,18 +222,45 @@
         "section_atomic_multipoles"
       ]
     }, {
+      "derived": true,
+      "description": "$k$-dependent energies of the electronic band segment (electronic band structure) with respect to the top of the valence band. This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
+      "dtypeStr": "f",
+      "name": "band_energies_normalized",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_normalized_k_points_per_segment",
+        "number_of_normalized_band_segment_eigenvalues"
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ],
+      "units": "J"
+    }, {
+      "derived": true,
       "description": "$k$-dependent energies of the electronic band segment (electronic band structure). This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
         "number_of_spin_channels",
         "number_of_k_points_per_segment",
-        "number_of_eigen_values"
+        "number_of_band_segment_eigenvalues"
       ],
       "superNames": [
         "section_k_band_segment"
       ],
       "units": "J"
+    }, {
+      "derived": true,
+      "description": "Fractional coordinates of the $k$ points (in the basis of the reciprocal-lattice vectors) for which the normalized electronic energies are given.",
+      "dtypeStr": "f",
+      "name": "band_k_points_normalized",
+      "shape": [
+        "number_of_normalized_k_points_per_segment",
+        3
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ]
     }, {
       "description": "Fractional coordinates of the $k$ points (in the basis of the reciprocal-lattice vectors) for which the electronic energy are given.",
       "dtypeStr": "f",
@@ -246,16 +273,40 @@
         "section_k_band_segment"
       ]
     }, {
+      "derived": true,
+      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies",
+      "dtypeStr": "f",
+      "name": "band_occupations_normalized",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_normalized_k_points_per_segment",
+        "number_of_normalized_band_segment_eigenvalues"
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ]
+    }, {
       "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies",
       "dtypeStr": "f",
       "name": "band_occupations",
       "shape": [
         "number_of_spin_channels",
         "number_of_k_points_per_segment",
-        "number_of_eigen_values"
+        "number_of_band_segment_eigenvalues"
       ],
       "superNames": [
         "section_k_band_segment"
+      ]
+    }, {
+      "derived": true,
+      "description": "Start and end labels of the points in the segment (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end_normalized",
+      "dtypeStr": "C",
+      "name": "band_segm_labels_normalized",
+      "shape": [
+        2
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
       ]
     }, {
       "description": "Start and end labels of the points in the segment (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
@@ -266,6 +317,18 @@
       ],
       "superNames": [
         "section_k_band_segment"
+      ]
+    }, {
+      "derived": true,
+      "description": "Fractional coordinates of the start and end point (in the basis of the reciprocal lattice vectors) of the segment sampled in the $k$ space. The conventional symbols (e.g., Gamma, K, L) of the same points are given in band_segm_labels",
+      "dtypeStr": "f",
+      "name": "band_segm_start_end_normalized",
+      "shape": [
+        2,
+        3
+      ],
+      "superNames": [
+        "section_k_band_segment_normalized"
       ]
     }, {
       "description": "Fractional coordinates of the start and end point (in the basis of the reciprocal lattice vectors) of the segment sampled in the $k$ space. The conventional symbols (e.g., Gamma, K, L) of the same points are given in band_segm_labels",
@@ -467,6 +530,18 @@
       "repeats": false,
       "shape": [],
       "superNames": []
+    }, {
+      "derived": true,
+      "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
+      "dtypeStr": "f",
+      "name": "dos_energies_normalized",
+      "shape": [
+        "number_of_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ],
+      "units": "J"
     }, {
       "description": "Array containing the set of discrete energy values for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
       "dtypeStr": "f",
@@ -1524,6 +1599,15 @@
       ],
       "units": "N"
     }, {
+      "derived": true,
+      "description": "If the normalized path is along the default path defined in Setyawan, W. & Curtarolo, S. High-throughput electronic band structure calculations: Challenges and tools. Comput. Mater. Sci. 49, 299",
+      "dtypeStr": "b",
+      "name": "k_band_path_normalized_is_standard",
+      "shape": [],
+      "superNames": [
+        "section_k_band_normalized"
+      ]
+    }, {
       "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, for this section_single_configuration_calculation. The actual definition of the atom-centered basis set is in the section_basis_set_atom_centered that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
@@ -1551,9 +1635,9 @@
     }, {
       "description": "A debugging message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_debug_evaluation",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "message_debug",
         "section_single_configuration_calculation"
@@ -1561,9 +1645,9 @@
     }, {
       "description": "A debugging message of the computational program, associated with a run.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_debug_run",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "message_debug"
@@ -1571,16 +1655,16 @@
     }, {
       "description": "A debugging message of the computational program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_debug",
+      "shape": [],
       "superNames": []
     }, {
       "description": "An error message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_error_evaluation",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "message_error",
         "section_single_configuration_calculation"
@@ -1589,8 +1673,8 @@
       "description": "An error message of the computational program, associated with a run.",
       "dtypeStr": "C",
       "name": "message_error_run",
-      "shape": [],
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "message_error"
@@ -1598,18 +1682,18 @@
     }, {
       "description": "An error message of the computational program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_error",
+      "shape": [],
       "superNames": [
         "message_warning"
       ]
     }, {
       "description": "An information message of the computational program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_info_evaluation",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "message_info",
         "section_single_configuration_calculation"
@@ -1617,9 +1701,9 @@
     }, {
       "description": "An information message of the computational program, associated with a run.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_info_run",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "message_info"
@@ -1627,18 +1711,18 @@
     }, {
       "description": "An information message of the computational program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_info",
+      "shape": [],
       "superNames": [
         "message_debug"
       ]
     }, {
       "description": "A warning message of the computational program.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_warning_evaluation",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "message_warning",
         "section_single_configuration_calculation"
@@ -1646,9 +1730,9 @@
     }, {
       "description": "A warning message of the computational program, associated with a run.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "message_warning_run",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "message_warning"
@@ -1656,9 +1740,9 @@
     }, {
       "description": "A warning message of the computational program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "message_warning",
+      "shape": [],
       "superNames": [
         "message_info"
       ]
@@ -1721,6 +1805,15 @@
       "shape": [],
       "superNames": [
         "section_system"
+      ]
+    }, {
+      "description": "Number of eigenvalues in a band segment.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_band_segment_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
       ]
     }, {
       "description": "Number of different basis functions in this section_basis_set_atom_centered. This equals the number of actual coefficents that are specified when using this basis set.",
@@ -1876,6 +1969,24 @@
         "section_species_projected_dos"
       ]
     }, {
+      "description": "Number of eigenvalues.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_normalized_band_segment_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
+      "description": "Number of $k$ points in the segment of the normalized band structure.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_normalized_k_points_per_segment",
+      "shape": [],
+      "superNames": [
+        "section_k_band_segment_normalized"
+      ]
+    }, {
       "description": "The number of potential energies evaluation in this sequence (i.e., trajectory, a frame is one section_single_configuration_calculation), most likely equal to number_of_frames_in_sequence.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1960,9 +2071,9 @@
     }, {
       "description": "A debugging message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "parsing_message_debug_evaluation",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_debug",
         "section_single_configuration_calculation"
@@ -1971,8 +2082,8 @@
       "description": "A debugging message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_debug_run",
-      "shape": [],
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "parsing_message_debug"
@@ -1980,17 +2091,17 @@
     }, {
       "description": "A debugging message of the parsing program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_debug",
       "repeats": true,
+      "shape": [],
       "superNames": []
     }, {
       "description": "An error message of the parsing program, associated with a run.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "parsing_message_error_run",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "parsing_message_error"
@@ -1998,9 +2109,9 @@
     }, {
       "description": "An error message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "parsing_message_error_single_configuration",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_error",
         "section_single_configuration_calculation"
@@ -2008,10 +2119,10 @@
     }, {
       "description": "An error message of the parsing program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_error",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_warning"
       ]
@@ -2019,8 +2130,8 @@
       "description": "An information message of the parsing program, associated with a run.",
       "dtypeStr": "C",
       "name": "parsing_message_info_run",
-      "shape": [],
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "parsing_message_info"
@@ -2028,9 +2139,9 @@
     }, {
       "description": "An information message of the parsing program, associated with a *single configuration calculation* (see section_single_configuration_calculation).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "parsing_message_info_single_configuration",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_info",
         "section_single_configuration_calculation"
@@ -2038,19 +2149,19 @@
     }, {
       "description": "An information message of the parsing program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_info",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_debug"
       ]
     }, {
       "description": "A warning message of the parsing program.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "parsing_message_warning_evaluation",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_warning",
         "section_single_configuration_calculation"
@@ -2058,9 +2169,9 @@
     }, {
       "description": "A warning message of the parsing program, associated with a run.",
       "dtypeStr": "C",
-      "shape": [],
       "name": "parsing_message_warning_run",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "section_run",
         "parsing_message_warning"
@@ -2068,10 +2179,10 @@
     }, {
       "description": "A warning message of the parsing program.",
       "dtypeStr": "C",
-      "shape": [],
       "kindStr": "type_abstract_document_content",
       "name": "parsing_message_warning",
       "repeats": true,
+      "shape": [],
       "superNames": [
         "parsing_message_info"
       ]
@@ -2143,8 +2254,8 @@
     }, {
       "description": "Short string describing the relativistic treatment used for the calculation of the final energy and related quantities. No relativistic treatment, if skipped or empty. Relativistic treatment strings are described on the [relativity\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/relativity-method).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "relativity_method",
+      "shape": [],
       "superNames": [
         "settings_relativity"
       ]
@@ -2302,6 +2413,24 @@
         "section_basis_set_atom_centered"
       ]
     }, {
+      "derived": true,
+      "description": "Section collecting the information on a normalized $k$-band (electronic band structure) evaluation. This section stores band structures along one-dimensional pathways in the $k$ (reciprocal) space, which are stored in section_k_band_segment. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues.",
+      "kindStr": "type_section",
+      "name": "section_k_band_normalized",
+      "repeats": true,
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "derived": true,
+      "description": "Section collecting the information on a normalized $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
+      "kindStr": "type_section",
+      "name": "section_k_band_segment_normalized",
+      "repeats": true,
+      "superNames": [
+        "section_k_band_normalized"
+      ]
+    }, {
       "description": "Section collecting the information on a $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ (reciprocal) space. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, are dealt with in section_eigenvalues. The band structres are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
       "kindStr": "type_section",
       "name": "section_k_band_segment",
@@ -2400,8 +2529,8 @@
     }, {
       "description": "Short string for the self-interaction correction (SIC) treatment used to calculate the final energy and related quantities. No special treatment if skipped or empty. Allowed values ofr this string are listed in the [self\\_interaction\\_correction\\_method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/self-interaction-correction-method).",
       "dtypeStr": "C",
-      "shape": [],
       "name": "self_interaction_correction_method",
+      "shape": [],
       "superNames": [
         "settings_self_interaction_correction"
       ]
@@ -2642,6 +2771,18 @@
       "superNames": [
         "section_system"
       ]
+    }, {
+      "derived": true,
+      "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the species-projected density of states (DOS).",
+      "dtypeStr": "f",
+      "name": "species_projected_dos_energies_normalized",
+      "shape": [
+        "number_of_species_projected_dos_values"
+      ],
+      "superNames": [
+        "section_species_projected_dos"
+      ],
+      "units": "J"
     }, {
       "description": "Array containing the set of discrete energy values for the species-projected density of states (DOS).",
       "dtypeStr": "f",
