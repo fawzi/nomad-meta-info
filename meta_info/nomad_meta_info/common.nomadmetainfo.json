@@ -560,5 +560,71 @@
       "superNames": [
         "section_system"
       ]
+    }, {
+      "description": "DFT+U: Type of orbitals used for projection in order to calculate occupation numbers. Valid names are described in the [dft\\_plus\\_u\\_projection\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/dft-plus-u-projection-type).",
+      "name": "dft_plus_u_projection_type",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Type of DFT+U functional (such as DFT/DFT+U double-counting compensation). Valid names are described in the [dft\\_plus\\_u\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/dft-plus-u-functional).",
+      "name": "dft_plus_u_functional",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Section for DFT+U-settings of a single orbital",
+      "name": "section_dft_plus_u_orbital",
+      "kindStr": "type_section",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: atom index (references index of atom_labels/atom_positions)",
+      "name": "dft_plus_u_orbital_atom",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: orbital label (normally (n,l)), notation: '3d', '4f', ...",
+      "name": "dft_plus_u_orbital_label",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: value U (on-site Coulomb interaction)",
+      "name": "dft_plus_u_orbital_U",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: value J (exchange interaction)",
+      "name": "dft_plus_u_orbital_J",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: value U_{effective} (U-J), if implementation uses it",
+      "name": "dft_plus_u_orbital_U_effective",
+      "dtypeStr": "f",
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "section_dft_plus_u_orbital"
+      ]
     }]
 }

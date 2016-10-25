@@ -88,125 +88,72 @@
         "section_method"
       ]
     }, {
-      "description": "FPLO projection method for DFT+U calculation",
-      "name": "x_fplo_dftPu_projection",
+      "description": "FPLO notation of DFT+U projection",
+      "name": "x_fplo_dft_plus_u_projection_type",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "FPLO notation for DFT+U functional",
-      "name": "x_fplo_dftPu_functional",
+      "description": "FPLO notation of DFT+U functional",
+      "name": "x_fplo_dft_plus_u_functional",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Atom/Orbital dependent DFT+U properties",
-      "name": "x_fplo_section_dftPu_orbital",
-      "kindStr": "type_section",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Atom/Orbital dependent DFT+U property: atom index",
-      "name": "x_fplo_dftPu_orbital_atom",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "x_fplo_section_dftPu_orbital"
-      ]
-    }, {
-      "description": "Atom/Orbital dependent DFT+U property: orbital label (normally (n,l)), notation: '3d', '4f', ...",
-      "name": "x_fplo_dftPu_orbital_label",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "x_fplo_section_dftPu_orbital"
-      ]
-    }, {
-      "description": "Atom/Orbital dependent DFT+U property: value U",
-      "name": "x_fplo_dftPu_orbital_U",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "energy_value",
-        "x_fplo_section_dftPu_orbital"
-      ]
-    }, {
-      "description": "Atom/Orbital dependent DFT+U property: value J",
-      "name": "x_fplo_dftPu_orbital_J",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "energy_value",
-        "x_fplo_section_dftPu_orbital"
-      ]
-    }, {
-      "description": "Atom/Orbital dependent DFT+U property: value Ueff",
-      "name": "x_fplo_dftPu_orbital_Ueff",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "energy_value",
-        "x_fplo_section_dftPu_orbital"
-      ]
-    },
-
-
-    {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: element",
-      "name": "x_fplo_dftPu_orbital_element",
+      "name": "x_fplo_dft_plus_u_orbital_element",
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
-        "x_fplo_section_dftPu_orbital"
+        "section_dft_plus_u_orbital"
       ]
     }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: species index",
-      "name": "x_fplo_dftPu_orbital_species",
+      "name": "x_fplo_dft_plus_u_orbital_species",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
-        "x_fplo_section_dftPu_orbital"
+        "section_dft_plus_u_orbital"
       ]
     }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F0",
-      "name": "x_fplo_dftPu_orbital_F0",
+      "name": "x_fplo_dft_plus_u_orbital_F0",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
         "energy_value",
-        "x_fplo_section_dftPu_orbital"
+        "section_dft_plus_u_orbital"
       ]
     }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F2",
-      "name": "x_fplo_dftPu_orbital_F2",
+      "name": "x_fplo_dft_plus_u_orbital_F2",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
         "energy_value",
-        "x_fplo_section_dftPu_orbital"
+        "section_dft_plus_u_orbital"
       ]
     }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F4",
-      "name": "x_fplo_dftPu_orbital_F4",
+      "name": "x_fplo_dft_plus_u_orbital_F4",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
         "energy_value",
-        "x_fplo_section_dftPu_orbital"
+        "section_dft_plus_u_orbital"
       ]
     }, {
       "description": "FPLO: Atom/Orbital dependent DFT+U property: value F6",
-      "name": "x_fplo_dftPu_orbital_F6",
+      "name": "x_fplo_dft_plus_u_orbital_F6",
       "dtypeStr": "f",
       "shape": [],
       "superNames": [
         "energy_value",
-        "x_fplo_section_dftPu_orbital"
+        "section_dft_plus_u_orbital"
       ]
     }
   ]
