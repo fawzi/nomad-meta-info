@@ -6,5 +6,21 @@
     }, {
       "relativePath": "common.nomadmetainfo.json"
     }],
-  "metaInfos": [ ]
+  "metaInfos": [ {
+      "description": "Final heat of formation",
+      "dtypeStr": "f",
+      "name": "x_mopac_fhof",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Mopac method, i.e. PM7, AM1, etc..",
+      "dtypeStr": "C",
+      "name": "x_mopac_method",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }]
 }
