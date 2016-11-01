@@ -7,25 +7,6 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "kpoints for bandstructure",
-      "dtypeStr": "f",
-      "name": "x_exciting_band_k",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_exciting_section_bandstructure"
-      ],
-      "units": "m^-1"
-    }, {
-      "description": "Origin (in lattice coordinate) of the region where the Fermi surface is calculated",
-      "dtypeStr": "f",
-      "name": "x_exciting_origin_fermi_surface",
-      "repeats": true,
-      "shape": [3],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ]
-    },  {
       "description": "Forces acting on the atoms.",
       "dtypeStr": "f",
       "name": "x_exciting_atom_forces",
@@ -39,48 +20,15 @@
       ],
       "units": "N"
     }, {
-      "description": "Vectors (in lattice coordinate) defining the region where the Fermi surface is calculated",
+      "description": "kpoints for bandstructure",
       "dtypeStr": "f",
-      "name": "x_exciting_vectors_fermi_surface",
+      "name": "x_exciting_band_k",
       "repeats": true,
-      "shape": [3,3],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ]
-    }, {
-      "description": "The number of atoms in the unit cell",
-      "dtypeStr": "i",
-      "name": "x_exciting_number_of_atoms",
       "shape": [],
       "superNames": [
-        "section_run",
-        "section_method"
-      ]
-    }, {
-      "description": "number of points in the mesh to calculate the Fermi surface",
-      "dtypeStr": "i",
-      "name": "x_exciting_grid_fermi_surface",
-      "repeats": true,
-      "shape": [3],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ]
-    }, {
-      "description": "Number of bands for fermi surface",
-      "dtypeStr": "i",
-      "name": "x_exciting_number_of_bands_fermi_surface",
-      "shape": [],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ]
-    }, {
-      "description": "Number of mesh points for fermi surface",
-      "dtypeStr": "i",
-      "name": "x_exciting_number_of_mesh_points_fermi_surface",
-      "shape": [],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ]
+        "x_exciting_section_bandstructure"
+      ],
+      "units": "m^-1"
     }, {
       "description": "Bandstructure energy values",
       "dtypeStr": "f",
@@ -92,37 +40,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Fermi energy for Fermi surface",
-      "dtypeStr": "f",
-      "name": "x_exciting_fermi_energy_fermi_surface",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ],
-      "units": "J"
-    }, {
-      "description": "Temporary storing converged atom forces cartesian",
-      "dtypeStr": "C",
-      "name": "x_exciting_store_total_forces",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation",
-        "section_run"
-      ]
-
-    }, {
-      "description": "Fermi surface values",
-      "dtypeStr": "f",
-      "name": "x_exciting_values_fermi_surface",
-      "shape": [
-      "x_exciting_number_of_bands_fermi_surface"
-      ],
-      "superNames": [
-        "x_exciting_section_fermi_surface"
-      ],
-      "units": "J"
-    }, {
       "description": "Brillouin zone volume",
       "dtypeStr": "f",
       "name": "x_exciting_brillouin_zone_volume",
@@ -130,14 +47,6 @@
         "section_system"
       ],
       "units": "m^-3"
-    }, {
-      "description": "exciting IBS force convergence",
-      "dtypeStr": "f",
-      "name": "x_exciting_IBS_force_convergence_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration"
-      ]
     }, {
       "description": "exciting charge convergence",
       "dtypeStr": "f",
@@ -381,6 +290,16 @@
       ],
       "units": "J"
     }, {
+      "description": "Fermi energy for Fermi surface",
+      "dtypeStr": "f",
+      "name": "x_exciting_fermi_energy_fermi_surface",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ],
+      "units": "J"
+    }, {
       "description": "Fermi energy",
       "dtypeStr": "f",
       "name": "x_exciting_fermi_energy_scf_iteration",
@@ -423,16 +342,16 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_exciting_section_atoms_group"
       ]
-    },  {
+    }, {
       "description": "number to identify the atoms of a species",
       "dtypeStr": "C",
       "name": "x_exciting_geometry_atom_number",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_exciting_section_atoms_group"
       ]
     }, {
       "description": "x component of atomic position",
@@ -441,7 +360,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_exciting_section_atoms_group"
       ],
       "units": "m"
     }, {
@@ -451,7 +370,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_exciting_section_atoms_group"
       ],
       "units": "m"
     }, {
@@ -461,7 +380,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_system"
+        "x_exciting_section_atoms_group"
       ],
       "units": "m"
     }, {
@@ -535,6 +454,17 @@
       ],
       "units": "m^-1"
     }, {
+      "description": "number of points in the mesh to calculate the Fermi surface",
+      "dtypeStr": "i",
+      "name": "x_exciting_grid_fermi_surface",
+      "repeats": true,
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
       "description": "G-vector grid size x",
       "dtypeStr": "i",
       "name": "x_exciting_gvector_size_x",
@@ -589,6 +519,14 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
+    }, {
+      "description": "exciting IBS force convergence",
+      "dtypeStr": "f",
+      "name": "x_exciting_IBS_force_convergence_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
     }, {
       "description": "Interstitial charge",
       "dtypeStr": "f",
@@ -733,11 +671,40 @@
         "section_system"
       ]
     }, {
-      "description": "Spin treatment",
-      "dtypeStr": "C",
-      "name": "x_exciting_spin_treatment",
+      "description": "The number of atoms in the unit cell",
+      "dtypeStr": "i",
+      "name": "x_exciting_number_of_atoms",
+      "shape": [],
       "superNames": [
-        "section_system"
+        "section_run",
+        "section_method"
+      ]
+    }, {
+      "description": "Number of bands for fermi surface",
+      "dtypeStr": "i",
+      "name": "x_exciting_number_of_bands_fermi_surface",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
+      "description": "Number of mesh points for fermi surface",
+      "dtypeStr": "i",
+      "name": "x_exciting_number_of_mesh_points_fermi_surface",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
+      "description": "Origin (in lattice coordinate) of the region where the Fermi surface is calculated",
+      "dtypeStr": "f",
+      "name": "x_exciting_origin_fermi_surface",
+      "repeats": true,
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
       ]
     }, {
       "description": "Mixing type for potential",
@@ -762,11 +729,11 @@
       ],
       "units": "m"
     }, {
-      "description": "Fermi surface values",
+      "description": "a group of atoms of the same type",
       "kindStr": "type_section",
-      "name": "x_exciting_section_fermi_surface",
+      "name": "x_exciting_section_atoms_group",
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_system"
       ]
     }, {
       "description": "bandstructure values",
@@ -783,6 +750,13 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Fermi surface values",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_fermi_surface",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "lattice vectors",
       "kindStr": "type_section",
       "name": "x_exciting_section_lattice_vectors",
@@ -793,6 +767,13 @@
       "description": "reciprocal lattice vectors",
       "kindStr": "type_section",
       "name": "x_exciting_section_reciprocal_lattice_vectors",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "index for exciting functional",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_xc",
       "superNames": [
         "section_system"
       ]
@@ -822,6 +803,22 @@
       "name": "x_exciting_smearing_width",
       "superNames": [
         "section_system"
+      ]
+    }, {
+      "description": "Spin treatment",
+      "dtypeStr": "C",
+      "name": "x_exciting_spin_treatment",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Temporary storing converged atom forces cartesian",
+      "dtypeStr": "C",
+      "name": "x_exciting_store_total_forces",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation",
+        "section_run"
       ]
     }, {
       "description": "scf iteration time",
@@ -872,6 +869,29 @@
         "section_system"
       ]
     }, {
+      "description": "Fermi surface values",
+      "dtypeStr": "f",
+      "name": "x_exciting_values_fermi_surface",
+      "shape": [
+        "x_exciting_number_of_bands_fermi_surface"
+      ],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ],
+      "units": "J"
+    }, {
+      "description": "Vectors (in lattice coordinate) defining the region where the Fermi surface is calculated",
+      "dtypeStr": "f",
+      "name": "x_exciting_vectors_fermi_surface",
+      "repeats": true,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "x_exciting_section_fermi_surface"
+      ]
+    }, {
       "description": "Effective Wigner radius",
       "dtypeStr": "f",
       "name": "x_exciting_wigner_radius",
@@ -879,13 +899,6 @@
         "section_system"
       ],
       "units": "m"
-    }, {
-      "description": "index for exciting functional",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_xc",
-      "superNames": [
-        "section_system"
-      ]
     }, {
       "description": "index for exciting functional",
       "dtypeStr": "i",

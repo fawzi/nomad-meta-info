@@ -22,6 +22,27 @@
    },{
     "description": "-",
     "repeats": true,
+    "name": "x_dftbp_charge",
+    "superNames": ["section_molecule_type"],
+    "dtypeStr": "f",
+    "shape": []
+   },{
+    "description": "-",
+    "repeats": true,
+    "name": "x_dftbp_eigenvalues_values",
+    "superNames": ["section_eigenvalues"],
+    "dtypeStr": "f",
+    "shape": []
+   },{
+    "description": "-",
+    "repeats": true,
+    "name": "x_dftbp_eigenvalues_occupation",
+    "superNames": ["section_eigenvalues"],
+    "dtypeStr": "f",
+    "shape": []
+   },{
+    "description": "-",
+    "repeats": true,
     "name": "x_dftbp_atom_positions_Y",
     "superNames": ["section_system"],
     "dtypeStr": "f",
