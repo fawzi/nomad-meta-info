@@ -2399,7 +2399,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Section containing a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), evaluated with a sampling method (e.g, molecular dynamics, Monte Carlo, geometry optimization); this might be a subset of the whole trajectory. Information on the methd used for the sampling are in a section_sampling_method and information of each frame of the sequence are in a  section_single_configuration_calculation.",
+      "description": "Section containing a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), evaluated with a sampling method (e.g, molecular dynamics, Monte Carlo, geometry optimization); this might be a subset of the whole trajectory. Information on the method used for the sampling are in a section_sampling_method and information of each frame of the sequence are in a  section_single_configuration_calculation.",
       "kindStr": "type_section",
       "name": "section_frame_sequence",
       "superNames": [
