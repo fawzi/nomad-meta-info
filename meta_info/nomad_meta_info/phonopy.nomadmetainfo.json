@@ -1,0 +1,39 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "Phonopy meta info, not specific to any code",
+  "metaInfos": [ {
+      "description": "Information about properties that concerne phonopy calculations.",
+      "kindStr": "type_abstract_document_content",
+      "name": "accessory_info",
+      "superNames": []
+    }, 
+    {
+    "description": "Aplitude of the atom diplacement for the phonopy supercell"
+    "dtypeStr": f
+    "name": "displacement"
+    "shape": []   
+    "units": "m"  
+    },
+    {
+    "description": "Matrix that transforms the primitive lattice into th supercell lattice"
+    "dtypeStr": f
+    "name": "SC_matrix"
+    "shape": [3,3]
+    },
+    {
+    "description": "Symmetrie threshold for the space group identification of the crystal for which the vibrational properties are to be calculated"
+    "dtypeStr": "f"
+    "name": "symprec"
+    "shape": []
+    "units": "m"
+    },
+    {
+    "description": "Symmetrie threshold for the space group identification of the crystal for which the vibrational properties are to be calculated"
+    "dtypeStr": "f"
+    "name": "symprec"
+    "shape": []
+    "units": "m"
+    },
+
+]
+}
