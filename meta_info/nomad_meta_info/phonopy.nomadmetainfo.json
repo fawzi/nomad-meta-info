@@ -7,7 +7,7 @@
   "metaInfos": [ {
       "description": "Information about properties that concerne phonopy calculations.",
       "kindStr": "type_document_content",
-      "name": "phonopy_info",
+      "name": "x_phonopy_input",
       "superNames": []
     }, 
     {
@@ -16,14 +16,28 @@
     "name": "x_phonopy_displacement"
     "shape": []   
     "units": "m"  
+    "superNames":[
+    "x_phonopy_input"
+    ]
     },
     {
-    "description": "Symmetrie threshold for the space group identification of the crystal for which the vibrational properties are to be calculated"
+    "description": "Symmetry threshold for the space group identification of the crystal for which the vibrational properties are to be calculated"
     "dtypeStr": "f"
     "name": "x_phonopy_symprec"
     "shape": []
     "units": "m"
-    }
+    "superNames": [
+    "x_phonopy_input"
+    ]
+    },
+    "description": "Origininal cell from which the supercell for the DFT calculations was constructed"
+    "dtyoeStr": "f"
+    "name": "x_phonopy_original_system_ref"
+    "shape": [3,3]
+    "units": "m"
+    "superNames": [
+    "section_system"
+]       
 
 ]
 }

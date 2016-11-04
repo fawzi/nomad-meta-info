@@ -3222,5 +3222,21 @@
       "superNames": [
         "settings_XC"
       ]
+    }, {
+      "description": "The matrix with the second derivative with respect to atom displacements",
+      "name": "hessian",
+      "dtypeStr": "f",
+      "shape": ["number_of_atoms", "number_of_atoms", 3, 3]
+      "superNames": [
+           "section_single_configuration_calculation"
+        ]
+     }, {
+      "description": "The matrix that tranforms the unitcell into the suprecell in which the actual calculation is performed"
+      "name": "SC_matrix"
+      "dtypeStr": "int"
+      "shape": [3,3]
+      "superNames": [
+           "section_system"
+    ]
     }]
 }
