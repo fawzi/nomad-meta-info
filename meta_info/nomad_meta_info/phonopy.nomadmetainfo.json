@@ -5,39 +5,38 @@
       "relativePath": "common.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "Information about properties that concerne phonopy calculations.",
-      "kindStr": "type_document_content",
+      "description": "Amplitude of the atom diplacement for the phonopy supercell",
+      "dtypeStr": "f",
+      "name": "x_phonopy_displacement",
+      "shape": [],
+      "superNames": [
+        "x_phonopy_input"
+      ],
+      "units": "m"
+    }, {
+      "description": "Information about properties that concern phonopy calculations.",
       "name": "x_phonopy_input",
       "superNames": []
-    }, 
-    {
-    "description": "Aplitude of the atom diplacement for the phonopy supercell"
-    "dtypeStr": "f"
-    "name": "x_phonopy_displacement"
-    "shape": []   
-    "units": "m"  
-    "superNames":[
-    "x_phonopy_input"
-    ]
-    },
-    {
-    "description": "Symmetry threshold for the space group identification of the crystal for which the vibrational properties are to be calculated"
-    "dtypeStr": "f"
-    "name": "x_phonopy_symprec"
-    "shape": []
-    "units": "m"
-    "superNames": [
-    "x_phonopy_input"
-    ]
-    },
-    "description": "Origininal cell from which the supercell for the DFT calculations was constructed"
-    "dtyoeStr": "f"
-    "name": "x_phonopy_original_system_ref"
-    "shape": [3,3]
-    "units": "m"
-    "superNames": [
-    "section_system"
-]       
-
-]
+    }, {
+      "description": "Original cell from which the supercell for the DFT calculations was constructed",
+      "dtypeStr": "f",
+      "name": "x_phonopy_original_system_ref",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "Symmetry threshold for the space group identification of the crystal for which the vibrational properties are to be calculated",
+      "dtypeStr": "f",
+      "name": "x_phonopy_symprec",
+      "shape": [],
+      "superNames": [
+        "x_phonopy_input"
+      ],
+      "units": "m"
+    }]
 }
