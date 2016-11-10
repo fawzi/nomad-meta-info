@@ -1603,10 +1603,10 @@
       "dtypeStr": "f",
       "name": "helmholz_free_energy",
       "shape": [
-        "number_of_thermal_property_values"
+        "number_of_thermodynamical_property_values"
       ],
       "superNames": [
-        "section_thermal_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "J"
     }, {
@@ -2078,10 +2078,10 @@
       "description": "Number of thermal properties values.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "number_of_thermal_property_values",
+      "name": "number_of_thermodynamical_property_values",
       "shape": [],
       "superNames": [
-        "section_thermal_properties"
+        "section_thermodynamical_properties"
       ]
     }, {
       "description": "The number of evaluations of this user defined quantity in this sequence (i.e., trajectory, a frame is one section_single_configuration_calculation), most likely equal to number_of_frames_in_sequence.",
@@ -2564,9 +2564,9 @@
         "section_run"
       ]
     }, {
-      "description": "Thermal properties",
+      "description": "Thermodynamical properties",
       "kindStr": "type_section",
-      "name": "section_thermal_properties",
+      "name": "section_thermodynamical_properties",
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -2986,30 +2986,30 @@
     }, {
       "description": "Method used to calculate the thermodynamic quantities. Valid values are harmonic",
       "dtypeStr": "C",
-      "name": "thermal_properties_calculation_method",
+      "name": "thermodynamical_properties_calculation_method",
       "superNames": [
-        "section_thermal_properties"
+        "section_thermodynamical_properties"
       ]
     }, {
       "description": "Heat capacity per cell unit at constant volume",
       "dtypeStr": "f",
-      "name": "thermal_property_heat_capacity_C_v",
+      "name": "thermodynamical_property_heat_capacity_C_v",
       "shape": [
-        "number_of_thermal_property_values"
+        "number_of_thermodynamical_property_values"
       ],
       "superNames": [
-        "section_thermal_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "J*K**(-1)"
     }, {
       "description": "Temperatures at which properties such as the Helmholz free energy are calculated",
       "dtypeStr": "f",
-      "name": "thermal_property_temperature",
+      "name": "thermodynamical_property_temperature",
       "shape": [
-        "number_of_thermal_property_values"
+        "number_of_thermodynamical_property_values"
       ],
       "superNames": [
-        "section_thermal_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "K"
     }, {
@@ -3250,10 +3250,10 @@
       "dtypeStr": "f",
       "name": "vibrational_free_energy_at_constant_volume",
       "shape": [
-        "number_of_thermal_property_values"
+        "number_of_thermodynamical_property_values"
       ],
       "superNames": [
-        "section_thermal_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "J"
     }, {
