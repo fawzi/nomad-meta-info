@@ -4,12 +4,7 @@
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }],
-  "metaInfos": [ 
-    {
-      "description": "Information about properties that concern phonopy calculations.",
-      "name": "x_phonopy_input",
-      "superNames": []
-    }, {
+  "metaInfos": [ {
       "description": "Amplitude of the atom diplacement for the phonopy supercell",
       "dtypeStr": "f",
       "name": "x_phonopy_displacement",
@@ -19,17 +14,20 @@
       ],
       "units": "m"
     }, {
+      "description": "Information about properties that concern phonopy calculations.",
+      "kindStr": "type_abstract_document_content",
+      "name": "x_phonopy_input",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Original cell from which the supercell for the DFT calculations was constructed",
-      "dtypeStr": "f",
+      "dtypeStr": "r",
       "name": "x_phonopy_original_system_ref",
-      "shape": [
-        3,
-        3
-      ],
+      "shape": [],
       "superNames": [
         "section_system"
-      ],
-      "units": "m"
+      ]
     }, {
       "description": "Symmetry threshold for the space group identification of the crystal for which the vibrational properties are to be calculated",
       "dtypeStr": "f",
@@ -39,38 +37,5 @@
         "x_phonopy_input"
       ],
       "units": "m"
-    }, {
-      "description": "Thermal properties calculated with phonopy",
-      "name": "x_phonopy_thermal_properties",
-      "superNames": []
-    } 
-      {
-      "description": "Vibrational free energy calculated from phonon frequencies per unit cell",
-      "dtypeStr": "f",
-      "name": "x_phonopy_free_energy",
-      "shape": ["num_of_temperature_values"],
-      "superNames": [
-        "x_phonopy_thermal_properties"
-    ],
-      "units": "J"
-    }, {
-      "description": "Heat Capacity calculated from vibrational free energy",
-      "dtypeStr": "f",
-      "name": "x_phonopy_heat_capacity",
-      "shape": ["num_of_temperature_values"],
-      "superNames": [
-        "x_phonopy_thermal_properties"
-    ],
-      "units": "J*K**(-1)"
-    }, {
-      "description": "Temperatures at which properties such as the free energy are calculated",
-      "dtypeStr": "int",
-      "name": "x_phonopy_temperature",
-      "shape": ["num_of_temperature_values"],
-      "superNames": [
-        "x_phonopy_thermal_properties"
-    ],
-      "units": "K"
-    }
-    ]
+    }]
 }

@@ -1599,9 +1599,20 @@
       ],
       "units": "N"
     }, {
+      "description": "Helmholz free energy per unit cell at constant volume.",
+      "dtypeStr": "f",
+      "name": "helmholz_free_energy",
+      "shape": [
+        "number_of_thermal_property_values"
+      ],
+      "superNames": [
+        "section_thermal_properties"
+      ],
+      "units": "J"
+    }, {
       "description": "The matrix with the second derivative with respect to atom displacements",
       "dtypeStr": "f",
-      "name": "hessian",
+      "name": "hessian_matrix",
       "shape": [
         "number_of_atoms",
         "number_of_atoms",
@@ -2062,6 +2073,15 @@
       "shape": [],
       "superNames": [
         "section_frame_sequence"
+      ]
+    }, {
+      "description": "Number of thermal properties values.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_thermal_property_values",
+      "shape": [],
+      "superNames": [
+        "section_thermal_properties"
       ]
     }, {
       "description": "The number of evaluations of this user defined quantity in this sequence (i.e., trajectory, a frame is one section_single_configuration_calculation), most likely equal to number_of_frames_in_sequence.",
@@ -2544,6 +2564,13 @@
         "section_run"
       ]
     }, {
+      "description": "Thermal properties",
+      "kindStr": "type_section",
+      "name": "section_thermal_properties",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Section containing one of the exchange-correlation (XC) functionals that are combined to form the XC_functional used in the present section_method.",
       "kindStr": "type_section",
       "name": "section_XC_functionals",
@@ -2957,6 +2984,35 @@
         "section_system"
       ]
     }, {
+      "description": "Method used to calculate the thermodynamic quantities. Valid values are harmonic",
+      "dtypeStr": "C",
+      "name": "thermal_properties_calculation_method",
+      "superNames": [
+        "section_thermal_properties"
+      ]
+    }, {
+      "description": "Heat capacity per cell unit at constant volume",
+      "dtypeStr": "f",
+      "name": "thermal_property_heat_capacity_C_v",
+      "shape": [
+        "number_of_thermal_property_values"
+      ],
+      "superNames": [
+        "section_thermal_properties"
+      ],
+      "units": "J*K**(-1)"
+    }, {
+      "description": "Temperatures at which properties such as the Helmholz free energy are calculated",
+      "dtypeStr": "f",
+      "name": "thermal_property_temperature",
+      "shape": [
+        "number_of_thermal_property_values"
+      ],
+      "superNames": [
+        "section_thermal_properties"
+      ],
+      "units": "K"
+    }, {
       "description": "Wall time needed for a calculation, using calculation_method_current.",
       "dtypeStr": "f",
       "name": "time_calculation",
@@ -3189,6 +3245,17 @@
       "superNames": [
         "settings_van_der_Waals"
       ]
+    }, {
+      "description": "Vibrational free energy per unit cell at constant volume. It does not contain the ",
+      "dtypeStr": "f",
+      "name": "vibrational_free_energy_at_constant_volume",
+      "shape": [
+        "number_of_thermal_property_values"
+      ],
+      "superNames": [
+        "section_thermal_properties"
+      ],
+      "units": "J"
     }, {
       "derived": true,
       "description": "String describing the exchange-correlation (XC) functional used for evaluating the energy value stored in energy_XC_functional, and related quantities (e.g., forces). It is a unique short name obtained combining the data stored in section_XC_functionals as described in the [XC\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
