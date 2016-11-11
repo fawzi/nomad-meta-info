@@ -2319,6 +2319,14 @@
         "section_sampling_method"
       ]
     }, {
+      "description": "Order upto which the potential energy surface was expanded to in a taylor expansion",
+      "dtypeStr": "i",
+      "name": "sampling_method_expansion_order",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]
+    }, {
       "description": "The matrix that tranforms the unitcell into the suprecell in which the actual calculation is performed",
       "dtypeStr": "i",
       "name": "SC_matrix",
@@ -2568,7 +2576,7 @@
       "kindStr": "type_section",
       "name": "section_thermodynamical_properties",
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_frame_sequence"
       ]
     }, {
       "description": "Section containing one of the exchange-correlation (XC) functionals that are combined to form the XC_functional used in the present section_method.",
