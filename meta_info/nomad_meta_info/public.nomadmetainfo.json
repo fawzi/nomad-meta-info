@@ -3,13 +3,13 @@
   "description": "Public meta info, not specific to any code",
   "metaInfos": [
     {
-      "description": "Information that *in theory* should have no influence on the results.",
+      "description": "Informations that *in theory* should have no influence on the results of the calculations such as the timings of the calculations.",
       "kindStr": "type_abstract_document_content",
       "name": "accessory_info",
       "superNames": []
     },
     {
-      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations); see atom_forces_raw for the unfiltered counterpart. Furthermore, forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
+      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total, including forces' unitary-transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary-transformations (see atom_forces_free_raw for the unfiltered counterpart). Furthermore, forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces",
       "repeats": true,
@@ -23,7 +23,7 @@
       "units": "N"
     },
     {
-      "description": "Forces acting on the atoms, calculated as minus gradient of energy_free, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, which are accounted for in the derivatives, yielding a truly conserved energy quantity. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations); see atom_forces_free_raw for the unfiltered counterpart. Furthermore, forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_raw for the unfiltered counterpart).",
+      "description": "Forces acting on the atoms, calculated as minus gradient of energy_free, including forces' unitary-transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, which are accounted for in the derivatives, yielding a truly conserved energy quantity. In addition, these forces are obtained by filtering out the unitary-transformations (see atom_forces_free_raw for the unfiltered counterpart). Furthermore, forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_free",
       "repeats": true,
@@ -37,7 +37,7 @@
       "units": "N"
     },
     {
-      "description": "Forces acting on the atoms, calculated as minus gradient of energy_free, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, which are accounted for in the derivatives, yielding a truly conserved energy quantity. These forces may contain unitary transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) that are normally filtered separately (in atom_forces_free); forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are also considered separately (in atom_forces_free).",
+      "description": "Forces acting on the atoms, calculated as minus gradient of energy_free, without forces' unitary-transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) filtering and without constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, which are accounted for in the derivatives, yielding a truly conserved energy quantity. These forces may contain unitary-transformations that are normally filtered separately (see atom_forces_free for the filtered counterpart); forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are also considered separately (see atom_forces_free for the filtered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_free_raw",
       "repeats": true,
@@ -51,7 +51,7 @@
       "units": "N"
     },
     {
-      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. These forces may contain unitary transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) that are normally filtered separately (in atom_forces); forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are also considered separately (in atom_forces).",
+      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total, without forces' unitary-transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) filtering and without constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. These forces may contain unitary-transformations that are normally filtered separately (see atom_forces for the filtered counterpart); forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are also considered separately (see atom_forces for the filtered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_raw",
       "repeats": true,
@@ -65,7 +65,7 @@
       "units": "N"
     },
     {
-      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, including forces' unitary-transformation (rigid body) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations); see atom_forces_free_T0_raw for the unfiltered counterpart. Furthermore, forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_T0_raw for the unfiltered counterpart).",
+      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, including forces' unitary-transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) filtering and including constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary-transformations (see atom_forces_free_T0_raw for the unfiltered counterpart). Furthermore, forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are here included (see atom_forces_free_T0_raw for the unfiltered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_T0",
       "repeats": true,
@@ -79,7 +79,7 @@
       "units": "N"
     },
     {
-      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, without forces' unitary-transformation (rigid body) filtering and without constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. These forces may contain unitary transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) that are normally filtered separately (in atom_forces_T0); forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are also considered separately (in atom_forces_T0).",
+      "description": "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, without forces' unitary-transformations (translations of the center of mass and, when the system is non-periodic, rigid rotations) filtering and without constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. These forces may contain unitary-transformations that are normally filtered separately (see atom_forces_T0 for the filtered counterpart); forces due to constraints such as fixed atoms, distances, angles, dihedrals, and so on, are also considered separately (see atom_forces_T0 for the filtered counterpart).",
       "dtypeStr": "f",
       "name": "atom_forces_T0_raw",
       "repeats": true,
@@ -93,7 +93,7 @@
       "units": "N"
     },
     {
-      "description": "Some forces on the atoms (i.e. minus derivatives of some energy with respect to the atom position).",
+      "description": "The types of forces acting on the atoms (i.e. minus derivatives of the specific type of energy with respect to the atom position).",
       "dtypeStr": "f",
       "kindStr": "type_abstract_document_content",
       "name": "atom_forces_type",
@@ -127,7 +127,7 @@
       "units": "m"
     },
     {
-      "description": "Array containing the set of discrete energy values for the atom-projected density of (electronic-energy) states (DOS).",
+      "description": "Array containing the set of discrete energy values for the atom-projected density (electronic-energy) of states (DOS).",
       "dtypeStr": "f",
       "name": "atom_projected_dos_energies",
       "shape": [
@@ -139,7 +139,7 @@
       "units": "J"
     },
     {
-      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
+      "description": "Tuples of $l$ and $m$ values for which atom_projected_dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by atom_projected_dos_m_kind.",
       "dtypeStr": "i",
       "name": "atom_projected_dos_lm",
       "shape": [
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean. The allowed values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean. The allowed values are listed in the [m_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atom_projected_dos_m_kind",
       "shape": [],
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_labels, see atom_labels for what it is meant by *atom label*.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density (electronic-energy) of states, divided into contributions from each $l,m$ channel. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms and their meanings are in atom_labels.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_lm",
       "shape": [
@@ -174,7 +174,7 @@
       ]
     },
     {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density of (electronic-energy) states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms is in atom_labels, see atom_labels for what it is meant by *atom label*.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in atom_projected_dos_energies) of the atom-projected density (electronic-energy) of states (DOS), summed up over all $l$ channels. Here, there are as many atom-projected DOS as the number_of_atoms, the list of labels of the atoms and their meanings are in atom_labels.",
       "dtypeStr": "f",
       "name": "atom_projected_dos_values_total",
       "shape": [
@@ -201,7 +201,7 @@
       "units": "m/s"
     },
     {
-      "description": "String describing the method used to obtain the electrostatic multipoles (including the electric charge, dipole, etc.) for each atom. Such multipoles require a charge-density partitioning scheme, specified by the value of this metadata. Allowed values are listed in the [atomic\\_multipole\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind).",
+      "description": "String describing the method used to obtain the electrostatic multipoles (including the electric charge, dipole, etc.) for each atom. Such multipoles require a charge-density partitioning scheme, specified by the value of this metadata. Allowed values are listed in the [atomic_multipole_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/atomic-multipole-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_kind",
       "shape": [],
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "description": "String describing what the integer numbers $m$ in atomic_multipole_lm mean. Allowed values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers $m$ in atomic_multipole_lm mean. Allowed values are listed in the [m_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "atomic_multipole_m_kind",
       "shape": [],
@@ -298,7 +298,7 @@
       ]
     },
     {
-      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies",
+      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies.",
       "dtypeStr": "f",
       "name": "band_occupations",
       "shape": [
@@ -312,7 +312,7 @@
     },
     {
       "derived": true,
-      "description": "Occupation of the $k$-points along the electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies",
+      "description": "Occupation of the $k$-points along the normalized electronic band. The size of the dimensions of this third-order tensor are the same as for the tensor in band_energies.",
       "dtypeStr": "f",
       "name": "band_occupations_normalized",
       "shape": [
@@ -406,7 +406,7 @@
       ]
     },
     {
-      "description": "Code-specific, but explicative, base name of the basis set, not unique. Details are explained in the [basis\\_set\\_atom\\_centered\\_short\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
+      "description": "Code-specific, but explicative, base name of the basis set, not unique. Details are explained in the [basis_set_atom_centered_short_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-short-name), this name should not contain the atom kind (to simplify the use of a single name for multiple elements).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_short_name",
       "shape": [],
@@ -415,7 +415,7 @@
       ]
     },
     {
-      "description": "Code-specific, explicative and unique name of the basis set. This string starts with basis_set_atom_centered_short_name. If the basis set defined in this section_basis_set_atom_centered is not identical to the default definition (stored in a database) of the basis set with the same name stored in a database, then the string is extended by 10 identificative characters as explained in the [basis\\_set\\_atom\\_centered\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name). The reason for this procedure is that often atom-centered basis sets are obtained by fine tuning basis sets provided by the code developers or other sources. Each basis sets, which has normally a standard name, often reported in publications, has also several parameters that can be tuned. This metadata tries to keep track of the original basis set and its modifications. This string here defined should not contain the *atom kind* for which this basis set is intended for, in order to simplify the use of a single name for multiple *atom kinds* (see atom_labels for the actual meaning of *atom kind*).",
+      "description": "Code-specific, explicative and unique name of the basis set. This string starts with basis_set_atom_centered_short_name. If the basis set defined in this section_basis_set_atom_centered is not identical to the default definition (stored in a database) of the basis set with the same name stored in a database, then the string is extended by 10 identificative characters as explained in the [basis_set_atom_centered_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-atom-centered-unique-name). The reason for this procedure is that often atom-centered basis sets are obtained by fine tuning basis sets provided by the code developers or other sources. Each basis sets, which has normally a standard name, often reported in publications, has also several parameters that can be tuned. This metadata tries to keep track of the original basis set and its modifications. This string here defined should not contain the *atom kind* for which this basis set is intended for, in order to simplify the use of a single name for multiple *atom kinds* (see atom_labels for the actual meaning of *atom kind*).",
       "dtypeStr": "C",
       "name": "basis_set_atom_centered_unique_name",
       "shape": [],
@@ -433,7 +433,7 @@
       ]
     },
     {
-      "description": "A string defining the type of the cell-dependent basis set (i.e., non atom centered, e.g., planewaves). Allowed values are listed in the [basis\\_set\\_cell\\_dependent\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-dependent-kind).",
+      "description": "A string defining the type of the cell-dependent basis set (i.e., non atom centered, e.g., planewaves). Allowed values are listed in the [basis_set_cell_dependent_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-dependent-kind).",
       "dtypeStr": "C",
       "name": "basis_set_cell_dependent_kind",
       "repeat": false,
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "description": "A label identifying the cell-dependent basis set (i.e., non atom centered, like planewaves). Allowed values are listed in the [basis\\_set\\_cell\\_dependent\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-dependent-name).",
+      "description": "A label identifying the cell-dependent basis set (i.e., non atom centered, like planewaves). Allowed values are listed in the [basis_set_cell_dependent_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-cell-dependent-name).",
       "dtypeStr": "C",
       "name": "basis_set_cell_dependent_name",
       "repeat": false,
@@ -461,7 +461,7 @@
       ]
     },
     {
-      "description": "String describing the use of the basis set, i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis\\_set\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
+      "description": "String describing the use of the basis set, i.e, if it used for expanding a wavefunction or an electron density. Allowed values are listed in the [basis_set_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-kind).",
       "dtypeStr": "C",
       "name": "basis_set_kind",
       "shape": [],
@@ -470,7 +470,7 @@
       ]
     },
     {
-      "description": "String identifying the basis set in an unique way. The rules for building this string are specified in the [basis\\_set\\_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
+      "description": "String identifying the basis set in an unique way. The rules for building this string are specified in the [basis_set_name wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/basis-set-name).",
       "dtypeStr": "C",
       "name": "basis_set_name",
       "shape": [],
@@ -490,7 +490,7 @@
     },
     {
       "derived": true,
-      "description": "String that uniquely represents the method used to calculate energy_total, If the present calculation_method_current is a perturbative method Y that uses method X as starting point, this string is automatically created as X@Y, where X is taken from calculation_method_current and Y from method_to_method_ref. In order to activate this, method_to_method_kind must have the value starting\\_point (see the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind)).",
+      "description": "String that uniquely represents the method used to calculate energy_total, If the present calculation_method_current is a perturbative method Y that uses method X as starting point, this string is automatically created as X@Y, where X is taken from calculation_method_current and Y from method_to_method_ref. In order to activate this, method_to_method_kind must have the value starting_point (see the [method_to_method_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind)).",
       "dtypeStr": "C",
       "name": "calculation_method",
       "repeats": false,
@@ -501,7 +501,7 @@
     },
     {
       "derived": true,
-      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method, the latter being referenced to by section_method_to_method_refs. For self-consistent field (SCF) ab initio calculation, for example, this is composed by concatenating XC_method_current and basis_set, see [calculation\\_method\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
+      "description": "String that represents the method used to calculate the energy_current. If the method is perturbative, this string does not describe the starting point method, the latter being referenced to by section_method_to_method_refs. For self-consistent field (SCF) ab initio calculation, for example, this is composed by concatenating XC_method_current and basis_set, see [calculation_method_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-method-current) for the details.",
       "dtypeStr": "C",
       "name": "calculation_method_current",
       "repeats": false,
@@ -531,7 +531,7 @@
       ]
     },
     {
-      "description": "String defining the kind of relationship that the referenced section_single_configuration_calculation has with the present section_single_configuration_calculation. Valid values are described in the [calculation\\_to\\_calculation\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitioned in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The referenced calculation is identified via calculation_to_calculation_ref (typically used for a calculation in the same section_run) or calculation_to_calculation_external_url.",
+      "description": "String defining the kind of relationship that the referenced section_single_configuration_calculation has with the present section_single_configuration_calculation. Valid values are described in the [calculation_to_calculation_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/calculation-to-calculation-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitioned in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The referenced calculation is identified via calculation_to_calculation_ref (typically used for a calculation in the same section_run) or calculation_to_calculation_external_url.",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_kind",
       "repeats": false,
@@ -563,7 +563,7 @@
       ]
     },
     {
-      "description": "Array labelling Which of the lattice vectors use periodic boundary conditions. Note for the parser developers: This value is not expected to be given for each section_single_configuration_calculation. It is assumed to be valid from the section_single_configuration_calculation where it is defined for all subsequent section_single_configuration_calculation in section_run, until redefined.",
+      "description": "Array labelling which of the lattice vectors use periodic boundary conditions. Note for the parser developers: This value is not expected to be given for each section_single_configuration_calculation. It is assumed to be valid from the section_single_configuration_calculation where it is defined for all subsequent section_single_configuration_calculation in section_run, until redefined.",
       "dtypeStr": "b",
       "name": "configuration_periodic_dimensions",
       "repeats": true,
@@ -583,7 +583,7 @@
       "superNames": []
     },
     {
-      "description": "Array containing the set of discrete energy values for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
+      "description": "Array containing the set of discrete energy values for the density (electronic-energy) of states. This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
       "dtypeStr": "f",
       "name": "dos_energies",
       "shape": [
@@ -596,7 +596,7 @@
     },
     {
       "derived": true,
-      "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the density of (electronic-energy) states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
+      "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the density (electronic-energy) of states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial DOS's.",
       "dtypeStr": "f",
       "name": "dos_energies_normalized",
       "shape": [
@@ -629,7 +629,7 @@
       ]
     },
     {
-      "description": "Tuples of $l$ and $m$ values for which dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by dos_m_kind.",
+      "description": "Tuples of $l$ and $m$ values for which dos_values_lm are given. For the quantum number $l$ the conventional meaning of azimuthal quantum number is always adopted. For the integer number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted (see the [m_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind). The actual adopted convention is specified by dos_m_kind.",
       "dtypeStr": "i",
       "name": "dos_lm",
       "shape": [
@@ -641,7 +641,7 @@
       ]
     },
     {
-      "description": "String describing what the integer numbers of $m$ in atom_projected_dos_lm mean. The allowed values are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
+      "description": "String describing what the integer numbers of $m$ in dos_lm mean. The allowed values are listed in the [m_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind).",
       "dtypeStr": "C",
       "name": "dos_m_kind",
       "shape": [],
@@ -650,7 +650,7 @@
       ]
     },
     {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of Density of (electronic-energy) states (DOS).",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of density (electronic-energy) of states (DOS).",
       "dtypeStr": "f",
       "name": "dos_values",
       "shape": [
@@ -662,7 +662,7 @@
       ]
     },
     {
-      "description": "Array containing the density of (electronic-energy) states (DOS) values projected on the various spherical harmonics (integrated on all atoms), see atom_projected_dos_values_lm for atom values.",
+      "description": "Array containing the density (electronic-energy) of states (DOS) values projected on the various spherical harmonics (integrated on all atoms), see atom_projected_dos_values_lm for atom values.",
       "dtypeStr": "f",
       "name": "dos_values_lm",
       "shape": [
@@ -677,7 +677,7 @@
       "units": "J"
     },
     {
-      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind).",
+      "description": "A short string describing the kind of eigenvalues, as defined in the [eigenvalues_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-kind).",
       "dtypeStr": "C",
       "name": "eigenvalues_kind",
       "shape": [],
@@ -781,7 +781,7 @@
       ]
     },
     {
-      "description": "Correlation (C) energy, using XC_functional.",
+      "description": "Correlation (C) energy calculated with the method described in XC_functional.",
       "dtypeStr": "f",
       "name": "energy_C",
       "repeats": false,
@@ -805,7 +805,7 @@
       "units": "J"
     },
     {
-      "description": "Type of the code-independent total energy (obtained by subtracting a reference energy calculated with the same code), created to be comparable among different codes and numerical settings. Details can be found on the [energy\\_code\\_independent wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-code-independent).",
+      "description": "Type of the code-independent total energy (obtained by subtracting a reference energy calculated with the same code), created to be comparable among different codes and numerical settings. Details can be found on the [energy_code_independent wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-code-independent).",
       "dtypeStr": "C",
       "name": "energy_code_independent_kind",
       "shape": [],
@@ -814,7 +814,7 @@
       ]
     },
     {
-      "description": "Value of the code-independent total energy (obtained by subtracting a reference energy calculated with the same code), created to be comparable among different codes and numerical settings. Details can be found on the [energy\\_code\\_independent wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-code-independent).",
+      "description": "Value of the code-independent total energy (obtained by subtracting a reference energy calculated with the same code), created to be comparable among different codes and numerical settings. Details can be found on the [energy_code_independent wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-code-independent).",
       "dtypeStr": "f",
       "name": "energy_code_independent_value",
       "shape": [],
@@ -825,7 +825,7 @@
       "units": "J"
     },
     {
-      "description": "A value of an energy component, expected to be an extensive property. ",
+      "description": "A value of an energy component, expected to be an extensive property.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_component",
       "shape": [],
@@ -834,7 +834,7 @@
       ]
     },
     {
-      "description": "A value of an energy term per atom, concurring in defining the total energy per atom.",
+      "description": "A value of an energy component per atom, concurring in defining the total energy per atom.",
       "kindStr": "type_abstract_document_content",
       "name": "energy_component_per_atom",
       "shape": [],
@@ -891,7 +891,7 @@
       "units": "J"
     },
     {
-      "description": "Value of the energy calculated with calculation_method_current. energy_current is equal to energy_total for non-perturbative methods. For perturbative methods, energy_current is equal to the correction: energy_total minus energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting\\_point (see the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind)). See also [energy\\_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current).",
+      "description": "Value of the energy calculated with calculation_method_current. energy_current is equal to energy_total for non-perturbative methods. For perturbative methods, energy_current is equal to the correction: energy_total minus energy_total of the calculation_to_calculation_ref with calculation_to_calculation_kind = starting_point (see the [method_to_method_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind)). See also [energy_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/energy-current).",
       "dtypeStr": "f",
       "name": "energy_current",
       "repeats": false,
@@ -916,7 +916,7 @@
     },
     {
       "derived": true,
-      "description": "Total electrostatic energy (nuclei + electrons) during the self-consistent field (SCF) itrations.",
+      "description": "Total electrostatic energy (nuclei + electrons) during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_electrostatic_scf_iteration",
       "repeats": false,
@@ -977,7 +977,7 @@
       "units": "J"
     },
     {
-      "description": "Error in the Hartree (electrostatic) potential. Defined consistently with XC_method.",
+      "description": "Error in the Hartree (electrostatic) potential energy. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "energy_hartree_error",
       "repeats": false,
@@ -1014,7 +1014,7 @@
       "units": "J"
     },
     {
-      "description": "Scaled exact-exchange energy. It the depends on the mixing parameter of the functional. For instance, for hybrid functionals, the exchange energy is given as a linear combination of exact-energy and exchange energy of an approximate DFT functional; the exact echange energy multiplied by the mixing coefficient of the hybrid functional would be stored in this metadata. Defined consistently with XC_method.",
+      "description": "Scaled exact-exchange energy. It depends on the mixing parameter of the functional. For instance, for hybrid functionals, the exchange energy is given as a linear combination of exact-energy and exchange energy of an approximate DFT functional; the exact echange energy multiplied by the mixing coefficient of the hybrid functional would be stored in this metadata. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "energy_hartree_fock_X_scaled",
       "repeats": false,
@@ -1026,7 +1026,7 @@
       "units": "J"
     },
     {
-      "description": "Value of the energy of the method calculation_method_current. Depending on calculation_method_kind it might be a total energy or only a correction.",
+      "description": "Value of the energy calculated with the method calculation_method_current. Depending on calculation_method_kind it might be a total energy or only a correction.",
       "dtypeStr": "f",
       "name": "energy_method_current",
       "repeats": false,
@@ -1088,7 +1088,7 @@
       "units": "J"
     },
     {
-      "description": "Value of the total energy per atom, calculated using XC_method, extrapolated to $T=0$, based on a free-electron gas argument.",
+      "description": "Value of the total energy per atom, calculated with the method described in XC_method, extrapolated to $T=0$, based on a free-electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_T0_per_atom",
       "repeats": false,
@@ -1100,7 +1100,7 @@
       "units": "J"
     },
     {
-      "description": "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method.",
+      "description": "Value of the total energy (nuclei + electrons), calculated with the method described in XC_method.",
       "dtypeStr": "f",
       "name": "energy_total",
       "repeats": false,
@@ -1130,7 +1130,7 @@
       ]
     },
     {
-      "description": "Total electronic energy calculated with XC_method during the self-consistent field (SCF) iterations.",
+      "description": "Total electronic energy calculated with the method described in XC_method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_total_scf_iteration",
       "repeats": false,
@@ -1142,7 +1142,7 @@
       "units": "J"
     },
     {
-      "description": "Value of the total energy (or equivalently free energy), nuclei + electrons, calculated with the method described in XC_method and extrapolated to $T=0$, based on a free-electron gas argument.",
+      "description": "Value of the total energy (or equivalently free energy), calculated with the method described in XC_method and extrapolated to $T=0$, based on a free-electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_total_T0",
       "repeats": false,
@@ -1155,7 +1155,7 @@
     },
     {
       "derived": true,
-      "description": "Value of the total energy, calculated using XC_method per atom extrapolated to $T=0$, based on a free-electron gas argument.",
+      "description": "Value of the total energy, calculated with the method described in XC_method per atom extrapolated to $T=0$, based on a free-electron gas argument.",
       "dtypeStr": "f",
       "name": "energy_total_T0_per_atom",
       "repeats": false,
@@ -1167,7 +1167,7 @@
       "units": "J"
     },
     {
-      "description": "Total energy using XC_method per atom extrapolated to $T=0$, based on a free-electron gas argument, during the self-consistent field (SCF) iterations.",
+      "description": "Value of the total energy, calculated with the method described in XC_method per atom extrapolated to $T=0$, based on a free-electron gas argument, during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_total_T0_per_atom_scf_iteration",
       "repeats": false,
@@ -1179,7 +1179,7 @@
       "units": "J"
     },
     {
-      "description": "Value of the  total energy (or equivalently free energy), calculated with XC_method extrapolated to $T=0$, based on a free-electron gas argument, during the self-consistent field (SCF) iterations.",
+      "description": "Value of the total energy (or equivalently free energy), calculated with the method described in XC_method and extrapolated to $T=0$, based on a free-electron gas argument, during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "energy_total_T0_scf_iteration",
       "repeats": false,
@@ -1278,7 +1278,7 @@
       ]
     },
     {
-      "description": "Value of van der Waals energy as calculated with the method defined in energy_van_der_Waals_kind. This metadata is used when more than one van der Waals method is applied in the same *single configuration calculation* (see section_single_configuration_calculation). The value of the van der Waals energy consistent with energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics, is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
+      "description": "Value of van der Waals energy, calculated with the method defined in energy_van_der_Waals_kind. This metadata is used when more than one van der Waals method is applied in the same *single configuration calculation* (see section_single_configuration_calculation). The value of the van der Waals energy consistent with energy_current and used, e.g., for evaluating the forces for a relaxation or dynamics, is given in energy_van_der_Waals and defined in settings_van_der_Waals.",
       "dtypeStr": "f",
       "name": "energy_van_der_Waals_value",
       "repeats": false,
@@ -1290,7 +1290,7 @@
       "units": "J"
     },
     {
-      "description": "Exchange (X) energy using XC_functional.",
+      "description": "Exchange (X) energy calculated with the method described in XC_method.",
       "dtypeStr": "f",
       "name": "energy_X",
       "repeats": false,
@@ -1301,7 +1301,7 @@
       "units": "J"
     },
     {
-      "description": "Final exchange-correlation (XC) energy calculated with XC_method.",
+      "description": "Final exchange-correlation (XC) energy calculated with the method described in XC_method.",
       "dtypeStr": "f",
       "name": "energy_XC",
       "repeats": false,
@@ -1312,7 +1312,7 @@
       "units": "J"
     },
     {
-      "description": "Exchange-correlation (XC) energy calculated with XC_functional.",
+      "description": "Exchange-correlation (XC) energy calculated with the functional stored in XC_functional.",
       "dtypeStr": "f",
       "name": "energy_XC_functional",
       "repeats": false,
@@ -1323,7 +1323,7 @@
       "units": "J"
     },
     {
-      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of XC_functional (integral of v_xc*electron_density), i.e., the component of XC that is in the sum of the eigenvalues. Typically DFT only. Value associated with the configuration, should be the most converged value.",
+      "description": "Exchange Correlation (XC) potential energy: the integral of the first order derivative of the functional stored in XC_functional (integral of v_xc*electron_density), i.e., the component of XC that is in the sum of the eigenvalues. Typically DFT only. Value associated with the configuration, should be the most converged value.",
       "dtypeStr": "f",
       "name": "energy_XC_potential",
       "repeats": false,
@@ -1335,7 +1335,7 @@
       "units": "J"
     },
     {
-      "description": "Exchange Correlation (XC) potential energy: the integral of the first order functional derivative of the XC_functional, i.e., the component of XC that is in the sum of the eigenvalues. Typically DFT only. Values obtained during the self-consistent field (SCF) cycles (i.e., not the converged value, the latter being stored in energy_XC_potential).",
+      "description": "Exchange Correlation (XC) potential energy: the integral of the first order derivative of the functional stored in XC_functional (integral of v_xc*electron_density), i.e., the component of XC that is in the sum of the eigenvalues. Typically DFT only. Values obtained during the self-consistent field (SCF) cycles (i.e., not the converged value, the latter being stored in energy_XC_potential).",
       "dtypeStr": "f",
       "name": "energy_XC_potential_scf_iteration",
       "repeats": false,
@@ -1347,7 +1347,7 @@
       "units": "J"
     },
     {
-      "description": "Exchange-correlation (XC) energy during the self-consistent field (SCF) iterations, using XC_method.",
+      "description": "Exchange-correlation (XC) energy during the self-consistent field (SCF) iterations, using the method described in XC_method.",
       "dtypeStr": "f",
       "name": "energy_XC_scf_iteration",
       "repeats": false,
@@ -1359,7 +1359,7 @@
       "units": "J"
     },
     {
-      "description": "Kind of sampled ensemble in this section_frame_sequence; valid values are defined in the [ensemble\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
+      "description": "Kind of sampled ensemble stored in section_frame_sequence; valid values are defined in [ensemble_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
       "dtypeStr": "C",
       "name": "ensemble_type",
       "shape": [],
@@ -1398,7 +1398,7 @@
       "units": "J"
     },
     {
-      "description": "Array containing the strictly increasing indexes of the frames the frame_sequence_conserved_quantity values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "description": "Array containing the strictly increasing indices of the frames the frame_sequence_conserved_quantity values refers to. If not given it defaults to the trivial mapping 0,1,...",
       "dtypeStr": "i",
       "name": "frame_sequence_conserved_quantity_frames",
       "shape": [
@@ -1434,7 +1434,7 @@
       ]
     },
     {
-      "description": "In case the energy, forces, and other quantities for the frames (a frame is one section_single_configuration_calculation) in this section_frame_sequence are obtained by calling a different code than the code that drives the sequence (e.g., a wrapper that drives a molecular dynamics, Monte Carlo, geometry optimization and calls an electroinc-structure code for energy and forces for each configuration), this metadata hold the reference to where the section_single_configuration_calculation for each frame are located. The format for this reference is described in the [frame\\_sequence\\_external\\_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url).",
+      "description": "In case the energy, forces, and other quantities for the frames (a frame is one section_single_configuration_calculation) in this section_frame_sequence are obtained by calling a different code than the code that drives the sequence (e.g., a wrapper that drives a molecular dynamics, Monte Carlo, geometry optimization and calls an electroinc-structure code for energy and forces for each configuration), this metadata hold the reference to where the section_single_configuration_calculation for each frame are located. The format for this reference is described in the [frame_sequence_external_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url).",
       "dtypeStr": "C",
       "name": "frame_sequence_external_url",
       "shape": [],
@@ -1455,7 +1455,7 @@
       "units": "J"
     },
     {
-      "description": "Array containing the strictly increasing indexes of the frames the frame_sequence_kinetic_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "description": "Array containing the strictly increasing indices of the frames the frame_sequence_kinetic_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
       "dtypeStr": "i",
       "name": "frame_sequence_kinetic_energy_frames",
       "shape": [
@@ -1479,7 +1479,7 @@
       "units": "J"
     },
     {
-      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in a section_single_configuration_calculation and this metadata establishes the link for each frame.",
+      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in section_single_configuration_calculation and this metadata establishes the link for each frame.",
       "dtypeStr": "r",
       "name": "frame_sequence_local_frames_ref",
       "referencedSections": [
@@ -1505,7 +1505,7 @@
       "units": "J"
     },
     {
-      "description": "Array containing the strictly increasing indexes of the frames the frame_sequence_potential_energy value refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "description": "Array containing the strictly increasing indices of the frames the frame_sequence_potential_energy value refers to. If not given it defaults to the trivial mapping 0,1,...",
       "dtypeStr": "i",
       "name": "frame_sequence_potential_energy_frames",
       "shape": [
@@ -1517,7 +1517,7 @@
     },
     {
       "derived": true,
-      "description": "Average potential energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). ",
+      "description": "Average potential energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_potential_energy_stats",
       "shape": [
@@ -1541,7 +1541,7 @@
       "units": "Pa"
     },
     {
-      "description": "Array containing the strictly increasing indexes of the frames the frame_sequence_pressure value refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "description": "Array containing the strictly increasing indices of the frames the frame_sequence_pressure value refers to. If not given it defaults to the trivial mapping 0,1,...",
       "dtypeStr": "i",
       "name": "frame_sequence_pressure_frames",
       "shape": [
@@ -1577,7 +1577,7 @@
       "units": "K"
     },
     {
-      "description": "Array containing the strictly increasing indexes of the frames the frame_sequence_temperature value refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "description": "Array containing the strictly increasing indices of the frames the frame_sequence_temperature value refers to. If not given it defaults to the trivial mapping 0,1,...",
       "dtypeStr": "i",
       "name": "frame_sequence_temperature_frames",
       "shape": [
@@ -1637,7 +1637,7 @@
       ]
     },
     {
-      "description": "Array containing the strictly increasing indexes of the frames the frame_sequence_user_quantity refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "description": "Array containing the strictly increasing indices of the frames the frame_sequence_user_quantity refers to. If not given it defaults to the trivial mapping 0,1,...",
       "dtypeStr": "i",
       "name": "frame_sequence_user_quantity_frames",
       "shape": [
@@ -1648,7 +1648,7 @@
       ]
     },
     {
-      "description": "Descriptive name of a user-defined quantity, sampled along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (frame_sequence_kinetic_energy and frame_sequence_potential_energy), the instantaneous temperature (frame_sequence_temperature) and the pressure (frame_sequence_pressure). This metadata should be used for other quantities that are monitored along a sequence of frames.",
+      "description": "Descriptive name of a user-defined quantity, sampled along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (frame_sequence_kinetic_energy and frame_sequence_potential_energy), the instantaneous temperature (frame_sequence_temperature) and pressure (frame_sequence_pressure). This metadata should be used for other quantities that are monitored along a sequence of frames.",
       "dtypeStr": "C",
       "name": "frame_sequence_user_quantity_name",
       "shape": [],
@@ -1670,7 +1670,7 @@
       ]
     },
     {
-      "description": "contraction coefficients $c_{i j}$ defining the contracted basis functions with respect to *normalized* primitive gaussians. They define the gaussian basis functions as described in section_gaussian_basis_group",
+      "description": "contraction coefficients $c_{i j}$ defining the contracted basis functions with respect to *normalized* primitive gaussians. They define the gaussian basis functions as described in section_gaussian_basis_group.",
       "dtypeStr": "f",
       "name": "gaussian_basis_group_contractions",
       "shape": [
@@ -1682,7 +1682,7 @@
       ]
     },
     {
-      "description": "Exponents $\\alpha_j$ of a the gaussians defining this basis set $exp(-\\alpha_j r^2)$. One should be careful about the units of the coefficients.",
+      "description": "Exponents $\\alpha_j$ of the gaussians defining this basis set $exp(-\\alpha_j r^2)$. One should be careful about the units of the coefficients.",
       "dtypeStr": "f",
       "name": "gaussian_basis_group_exponents",
       "shape": [
@@ -1694,7 +1694,7 @@
       "units": "1/m^2"
     },
     {
-      "description": "Azimuthal quantum number ($l$) values (of the angular part given by the spherical harmonic $Y_{l m}$ of the various contracted basisfunctions",
+      "description": "Azimuthal quantum number ($l$) values (of the angular part given by the spherical harmonic $Y_{l m}$ of the various contracted basisfunctions).",
       "dtypeStr": "f",
       "name": "gaussian_basis_group_ls",
       "shape": [
@@ -1705,7 +1705,7 @@
       ]
     },
     {
-      "description": "Specifies whether a geometry optimization is converged.",
+      "description": "Arrays specify whether a geometry optimization is converged.",
       "dtypeStr": "b",
       "name": "geometry_optimization_converged",
       "shape": [],
@@ -1777,7 +1777,7 @@
       ]
     },
     {
-      "description": "Assignement of the cell-dependent (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in the section_basis_set_cell_dependent that is referred to by this metadata.",
+      "description": "Assignement of the cell-dependent (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in section_basis_set_cell_dependent that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_cell_dependent",
       "referencedSections": [
@@ -1945,7 +1945,7 @@
       ]
     },
     {
-      "description": "String defining the kind of relationship that the referenced section_method has with the present section_method. Valid values are described in the [method\\_to\\_method\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitioned in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
+      "description": "String defining the kind of relationship that the referenced section_method has with the present section_method. Valid values are described in the [method_to_method_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/method-to-method-kind). Often calculations are connected, for instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitioned in regions with different but connected hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT). Hence, the need of keeping track of these connected calculations. The referenced section_method is identified via method_to_method_ref (typically used for a section_method in the same section_run) or method_to_method_external_url.",
       "dtypeStr": "C",
       "name": "method_to_method_kind",
       "shape": [],
