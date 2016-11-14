@@ -1753,6 +1753,30 @@
       "units": "N"
     },
     {
+      "description": "Helmholz free energy per unit cell at constant volume.",
+      "dtypeStr": "f",
+      "name": "helmholz_free_energy",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+      ],
+      "superNames": [
+        "section_thermodynamical_properties"
+      ],
+      "units": "J"
+    }, {
+      "description": "The matrix with the second derivative with respect to atom displacements",
+      "dtypeStr": "f",
+      "name": "hessian_matrix",
+      "shape": [
+        "number_of_atoms",
+        "number_of_atoms",
+        3,
+        3
+      ],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "derived": true,
       "description": "If the normalized path is along the default path defined in Setyawan, W. & Curtarolo, S. High-throughput electronic band structure calculations: Challenges and tools. Comput. Mater. Sci. 49, 299",
       "dtypeStr": "b",
@@ -1777,7 +1801,7 @@
       ]
     },
     {
-      "description": "Assignement of the cell-dependent (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in section_basis_set_cell_dependent that is referred to by this metadata.",
+      "description": "Assignment of the cell-dependent (i.e., non atom centered, e.g., planewaves) parts of the basis set, which is defined (type, parameters) in section_basis_set_cell_dependent that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_cell_dependent",
       "referencedSections": [
@@ -2252,8 +2276,16 @@
       "superNames": [
         "section_frame_sequence"
       ]
-    },
-    {
+    }, {
+      "description": "Number of thermal properties values.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_thermodynamical_property_values",
+      "shape": [],
+      "superNames": [
+        "section_thermodynamical_properties"
+      ]
+    }, {
       "description": "Gives the number of user defined quantity evaluations along a sequence of frame_sequence_user_quantity frames. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -2512,8 +2544,26 @@
       "superNames": [
         "section_sampling_method"
       ]
-    },
-    {
+    }, {
+      "description": "Order up to which the potential energy surface was expanded to in a Taylor expansion",
+      "dtypeStr": "i",
+      "name": "sampling_method_expansion_order",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ]
+    }, {
+      "description": "The matrix that transforms the unit-cell into the super-cell in which the actual calculation is performed",
+      "dtypeStr": "i",
+      "name": "SC_matrix",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Contains information on the self-consistent field (SCF) procedure, i.e. the number of SCF iterations (number_of_scf_iterations) or a section_scf_iteration section with detailed information on the SCF procedure of specified quantities.",
       "kindStr": "type_abstract_document_content",
       "name": "scf_info",
@@ -2642,7 +2692,7 @@
       ]
     },
     {
-      "description": "Section collecting some user-defined quantities evaluated along a sequence of frame.",
+      "description": "Section containing a sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), evaluated with a sampling method (e.g, molecular dynamics, Monte Carlo, geometry optimization); this might be a subset of the whole trajectory. Information on the method used for the sampling are in a section_sampling_method and information of each frame of the sequence are in a  section_single_configuration_calculation.",
       "kindStr": "type_section",
       "name": "section_frame_sequence_user_quantity",
       "superNames": [
@@ -2777,8 +2827,14 @@
       "superNames": [
         "section_run"
       ]
-    },
-    {
+    }, {
+      "description": "Thermodynamical properties",
+      "kindStr": "type_section",
+      "name": "section_thermodynamical_properties",
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
       "description": "Section containing one of the exchange-correlation (XC) functionals for the present section_method that are combined to form the XC_functional.",
       "kindStr": "type_section",
       "name": "section_XC_functionals",
@@ -3241,6 +3297,38 @@
       ]
     },
     {
+      "description": "Method used to calculate the thermodynamic quantities. Valid values are harmonic",
+      "dtypeStr": "C",
+      "name": "thermodynamical_properties_calculation_method",
+      "superNames": [
+        "section_thermodynamical_properties"
+      ]
+    },
+    {
+      "description": "Heat capacity per cell unit at constant volume",
+      "dtypeStr": "f",
+      "name": "thermodynamical_property_heat_capacity_C_v",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+      ],
+      "superNames": [
+        "section_thermodynamical_properties"
+      ],
+      "units": "J*K**(-1)"
+    },
+    {
+      "description": "Temperatures at which properties such as the Helmholtz free energy are calculated",
+      "dtypeStr": "f",
+      "name": "thermodynamical_property_temperature",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+      ],
+      "superNames": [
+        "section_thermodynamical_properties"
+      ],
+      "units": "K"
+    },
+    {
       "description": "Stores the wall-clock time needed for a calculation using calculation_method_current. Basically, it tracks the real time that has been elapsed from start to end.",
       "dtypeStr": "f",
       "name": "time_calculation",
@@ -3494,6 +3582,18 @@
       "superNames": [
         "settings_van_der_Waals"
       ]
+    },
+    {
+      "description": "Vibrational free energy per unit cell at constant volume. It does not contain the ",
+      "dtypeStr": "f",
+      "name": "vibrational_free_energy_at_constant_volume",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+      ],
+      "superNames": [
+        "section_thermodynamical_properties"
+      ],
+      "units": "J"
     },
     {
       "derived": true,

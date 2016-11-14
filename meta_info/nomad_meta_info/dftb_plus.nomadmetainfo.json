@@ -83,6 +83,12 @@
     "shape": []
    },{
     "description": "-",
+    "name": "x_dftbp_force_max_mov",
+    "superNames": ["section_single_configuration_calculation"],
+    "dtypeStr": "f",
+    "shape": []
+   },{
+    "description": "-",
     "name": "energy_total",
     "superNames": ["section_single_configuration_calculation", "energy_total_potential"],
     "dtypeStr": "f",
