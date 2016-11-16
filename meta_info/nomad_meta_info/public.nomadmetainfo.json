@@ -1753,7 +1753,7 @@
       "units": "N"
     },
     {
-      "description": "Helmholz free energy per unit cell at constant volume.",
+      "description": "Stores the Helmholtz free energy per unit cell at constant volume of a thermodynamic calculation.",
       "dtypeStr": "f",
       "name": "helmholz_free_energy",
       "shape": [
@@ -2280,7 +2280,7 @@
       ]
     },
     {
-      "description": "Number of thermal properties values.",
+      "description": "Gives the number of thermal properties values available in section_thermodynamical_properties.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_thermodynamical_property_values",
@@ -2541,7 +2541,7 @@
       ]
     },
     {
-      "description": "Type of method used to do the sampling.\n\nAllowed values are:\n\n| Sampling method                | Description                      |\n| ------------------------------ | -------------------------------- |\n| `\"geometry_optimization\"`      | Geometry optimization            |\n| `\"molecular_dynamics\"`         | Molecular dynamics               |\n| `\"montecarlo\"`                 | (Metropolis) Monte Carlo         |\n| `\"steered_molecular_dynamics\"` | Steered molecular dynamics (with time dependent external forces) |\n| `\"meta_dynamics\"`              | Biased molecular dynamics with history-dependent Hamiltonian |\n| `\"wang_landau_montecarlo\"`     | Monte Carlo according to the Wang-Landau  formulation. |\n| `\"blue_moon\"`                  | Blue Moon sampling               |\n| `\"langevin_dynamics\"`          | Langevin dynamics                |",
+      "description": "Type of method used to do the sampling.\n\nAllowed values are:\n\n| Sampling method                | Description                      |\n| ------------------------------ | -------------------------------- |\n| `\"geometry_optimization\"`      | Geometry optimization            |\n| `\"molecular_dynamics\"`         | Molecular dynamics               |\n| `\"montecarlo\"`                 | (Metropolis) Monte Carlo         |\n| `\"steered_molecular_dynamics\"` | Steered molecular dynamics (with time dependent external forces) |\n| `\"meta_dynamics\"`              | Biased molecular dynamics with history-dependent Hamiltonian |\n| `\"wang_landau_montecarlo\"`     | Monte Carlo according to the Wang-Landau  formulation. |\n| `\"blue_moon\"`                  | Blue Moon sampling               |\n| `\"langevin_dynamics\"`          | Langevin dynamics                |\n| `\"taylor_expansion\"`           | Taylor expansion of the potential energy surface |",
       "dtypeStr": "C",
       "name": "sampling_method",
       "shape": [],
@@ -2550,7 +2550,7 @@
       ]
     },
     {
-      "description": "Order upto which the potential energy surface was expanded to in a taylor expansion",
+      "description": "Order up to which the potential energy surface was expanded to in a Taylor expansion (see sampling_method).",
       "dtypeStr": "i",
       "name": "sampling_method_expansion_order",
       "shape": [],
@@ -2559,7 +2559,7 @@
       ]
     },
     {
-      "description": "The matrix that tranforms the unitcell into the suprecell in which the actual calculation is performed",
+      "description": "Specifies the matrix that transforms the unit-cell into the super-cell in which the actual calculation is performed.",
       "dtypeStr": "i",
       "name": "SC_matrix",
       "shape": [
@@ -2836,7 +2836,7 @@
       ]
     },
     {
-      "description": "Thermodynamical properties",
+      "description": "Section that defines thermodynamical properties about the system in a section_frame_sequence.",
       "kindStr": "type_section",
       "name": "section_thermodynamical_properties",
       "superNames": [
@@ -3306,7 +3306,7 @@
       ]
     },
     {
-      "description": "Method used to calculate the thermodynamic quantities. Valid values are harmonic",
+      "description": "Method used to calculate the thermodynamic quantities.\n\nValid values:\n\n  * harmonic",
       "dtypeStr": "C",
       "name": "thermodynamical_properties_calculation_method",
       "superNames": [
@@ -3314,7 +3314,7 @@
       ]
     },
     {
-      "description": "Heat capacity per cell unit at constant volume",
+      "description": "Stores the heat capacity per cell unit at constant volume.",
       "dtypeStr": "f",
       "name": "thermodynamical_property_heat_capacity_C_v",
       "shape": [
@@ -3326,7 +3326,7 @@
       "units": "J*K**(-1)"
     },
     {
-      "description": "Temperatures at which properties such as the Helmholz free energy are calculated",
+      "description": "Specifies the temperatures at which properties such as the Helmholtz free energy are calculated.",
       "dtypeStr": "f",
       "name": "thermodynamical_property_temperature",
       "shape": [
@@ -3593,7 +3593,7 @@
       ]
     },
     {
-      "description": "Vibrational free energy per unit cell at constant volume. It does not contain the ",
+      "description": "Holds the vibrational free energy per unit cell at constant volume.",
       "dtypeStr": "f",
       "name": "vibrational_free_energy_at_constant_volume",
       "shape": [
