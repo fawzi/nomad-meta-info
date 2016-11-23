@@ -2229,7 +2229,7 @@
       ]
     },
     {
-      "description": "Gives the number of performed self-consistent field (SCF) iterations at DFT level.",
+      "description": "Gives the number of performed self-consistent field (SCF) iterations at a specfied level of theory.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
       "name": "number_of_scf_iterations",
@@ -2319,7 +2319,7 @@
       "superNames": []
     },
     {
-      "description": "This field is used for debugging messages of the parsing program  associated with a run, see section_run.",
+      "description": "This field is used for debugging messages of the parsing program associated with a run, see section_run.",
       "dtypeStr": "C",
       "name": "parsing_message_debug_evaluation",
       "repeats": true,
@@ -2352,7 +2352,7 @@
       ]
     },
     {
-      "description": "This field is used for error messages of the parsing program  associated with a run, see section_run.",
+      "description": "This field is used for error messages of the parsing program associated with a run, see section_run.",
       "dtypeStr": "C",
       "name": "parsing_message_error_run",
       "repeats": true,
@@ -2385,7 +2385,7 @@
       ]
     },
     {
-      "description": "This field is used for info messages of the parsing program  associated with a run, see section_run.",
+      "description": "This field is used for info messages of the parsing program associated with a run, see section_run.",
       "dtypeStr": "C",
       "name": "parsing_message_info_run",
       "repeats": true,
@@ -2418,7 +2418,7 @@
       ]
     },
     {
-      "description": "This field is used for warning messages of the parsing program  associated with a run, see section_run.",
+      "description": "This field is used for warning messages of the parsing program associated with a run, see section_run.",
       "dtypeStr": "C",
       "name": "parsing_message_warning_evaluation",
       "repeats": true,
@@ -2429,7 +2429,7 @@
       ]
     },
     {
-      "description": "This field is used for warning messages of the parsing program  associated with a run, see section_run.",
+      "description": "This field is used for warning messages of the parsing program associated with a run, see section_run.",
       "dtypeStr": "C",
       "name": "parsing_message_warning_run",
       "repeats": true,
@@ -2521,7 +2521,7 @@
       ]
     },
     {
-      "description": "Indicates whether this run terminated properly (true) or it was killed or exit with an error code unequal zero (false).",
+      "description": "Indicates whether this run terminated properly (true), or if it was killed or exited with an error code unequal to zero (false).",
       "dtypeStr": "b",
       "name": "run_clean_end",
       "shape": [],
@@ -2541,7 +2541,7 @@
       ]
     },
     {
-      "description": "Type of method used to do the sampling.\n\nAllowed values are:\n\n| Sampling method                | Description                      |\n| ------------------------------ | -------------------------------- |\n| `\"geometry_optimization\"`      | Geometry optimization            |\n| `\"molecular_dynamics\"`         | Molecular dynamics               |\n| `\"montecarlo\"`                 | (Metropolis) Monte Carlo         |\n| `\"steered_molecular_dynamics\"` | Steered molecular dynamics (with time dependent external forces) |\n| `\"meta_dynamics\"`              | Biased molecular dynamics with history-dependent Hamiltonian |\n| `\"wang_landau_montecarlo\"`     | Monte Carlo according to the Wang-Landau  formulation. |\n| `\"blue_moon\"`                  | Blue Moon sampling               |\n| `\"langevin_dynamics\"`          | Langevin dynamics                |\n| `\"taylor_expansion\"`           | Taylor expansion of the potential energy surface |",
+      "description": "Type of method used to do the sampling.\n\nAllowed values are:\n\n| Sampling method                | Description                      |\n| ------------------------------ | -------------------------------- |\n| `\"geometry_optimization\"`      | Geometry optimization            |\n| `\"molecular_dynamics\"`         | Molecular dynamics               |\n| `\"montecarlo\"`                 | (Metropolis) Monte Carlo         |\n| `\"steered_molecular_dynamics\"` | Steered molecular dynamics (with time dependent external forces) |\n| `\"meta_dynamics\"`              | Biased molecular dynamics with history-dependent Hamiltonian |\n| `\"wang_landau_montecarlo\"`     | Monte Carlo according to the Wang-Landau formulation. |\n| `\"blue_moon\"`                  | Blue Moon sampling               |\n| `\"langevin_dynamics\"`          | Langevin dynamics                |\n| `\"taylor_expansion\"`           | Taylor expansion of the potential energy surface |",
       "dtypeStr": "C",
       "name": "sampling_method",
       "shape": [],
@@ -2550,7 +2550,7 @@
       ]
     },
     {
-      "description": "Order up to which the potential energy surface was expanded to in a Taylor expansion (see sampling_method).",
+      "description": "Order up to which the potential energy surface was expanded in a Taylor series (see sampling_method).",
       "dtypeStr": "i",
       "name": "sampling_method_expansion_order",
       "shape": [],
@@ -3154,7 +3154,7 @@
       "units": "J"
     },
     {
-      "description": "Consists of tuples of $l$ and $m$ values for all given values in the species_projected_dos_values_lm species field.\n\nThe quantum number $l$ represents azimuthal quantum number, whereas for the quantum number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted. The actual adopted convention is specified by atom_projected_dos_m_kind.",
+      "description": "Consists of tuples of $l$ and $m$ values for all given values in the species_projected_dos_values_lm species field.\n\nThe quantum number $l$ represents the azimuthal quantum number, whereas for the quantum number $m$, besides the conventional use as magnetic quantum number ($l+1$ integer values from $-l$ to $l$), a set of different conventions is accepted. The adopted convention is specified by atom_projected_dos_m_kind.",
       "dtypeStr": "i",
       "name": "species_projected_dos_lm",
       "shape": [
@@ -3272,7 +3272,7 @@
       ]
     },
     {
-      "description": "Contains the final value of the default stress tensor (stress_tensor) and or the value of the stress tensor (stress_tensor_value) of the kind defined in stress_tensor_kind.",
+      "description": "Contains the final value of the default stress tensor (stress_tensor) and/or the value of the stress tensor (stress_tensor_value) of the kind defined in stress_tensor_kind.",
       "kindStr": "type_abstract_document_content",
       "name": "stress_tensor_type",
       "shape": [
@@ -3350,7 +3350,7 @@
       "units": "s"
     },
     {
-      "description": "Stores information on date and timings of the calculation. They are useful for, e.g., debugging or visualization purposes.",
+      "description": "Stores information on the date and timings of the calculation. They are useful for, e.g., debugging or visualization purposes.",
       "kindStr": "type_abstract_document_content",
       "name": "time_info",
       "superNames": [
@@ -3626,7 +3626,7 @@
       ]
     },
     {
-      "description": "Contains an associative list of non-default values of the parameters for the functional declared in XC_functional_name of the section_XC_functionals section.\n\nFor example, if in this calculation with a hybrid XC functional like HSE06 user-given value of the mixing parameter between exact and GGA exchange is used, this non-standard value should be reported in this metadata.\n\nThe labels and units of these values are defined in the paragraph dedicated to the functional declared in XC_functional_name of the [XC_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).\n\nIf this metadata is not given, the default parameter values for the XC_functional_name are assumed.",
+      "description": "Contains an associative list of non-default values of the parameters for the functional declared in XC_functional_name of the section_XC_functionals section.\n\nFor example, if a calculations using a hybrid XC functional (e.g., HSE06) specifies a user-given value of the mixing parameter between exact and GGA exchange, then this non-default value is stored in this metadata.\n\nThe labels and units of these values are defined in the paragraph dedicated to the specified functional declared in XC_functional_name of the [XC_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).\n\nIf this metadata is not given, the default parameter values for the XC_functional_name are assumed.",
       "dtypeStr": "D",
       "name": "XC_functional_parameters",
       "repeats": false,
@@ -3636,7 +3636,7 @@
       ]
     },
     {
-      "description": "Provides the value of the weight for the exchange, correlation, or exchange-correlation functional declared in XC_functional_name (see section_XC_functionals).\n\nThis weight is used in the linear combination of the different XC functional names (XC_functional_name) in different section_XC_functionals sections to form the XC_functional used for evaluating energy_XC_functional and related quantities.\n\nIf not given it defaults to 1.",
+      "description": "Provides the value of the weight for the exchange, correlation, or exchange-correlation functional declared in XC_functional_name (see section_XC_functionals).\n\nThis weight is used in the linear combination of the different XC functional names (XC_functional_name) in different section_XC_functionals sections to form the XC_functional used for evaluating energy_XC_functional and related quantities.\n\nIf not specified then the default is set to 1.",
       "dtypeStr": "f",
       "name": "XC_functional_weight",
       "repeats": false,
@@ -3647,7 +3647,7 @@
     },
     {
       "derived": true,
-      "description": "Describes the exchange correlation (XC) method used for evaluating the XC energy (energy_XC). Differently from XC_functional, also perturbative treatments are accounted for, where the string contains the reference to both the perturbative (e.g., MP2) and the starting point (e.g, Hartree-Fock) XC method defined in the section section_method.\n\nThe value consists of XC_method_current concatenated with the `@` character and the XC method (XC_method) defined in section_method that is referred to by method_to_method_ref where method_to_method_kind = \"starting_point_method\".",
+      "description": "Describes the exchange correlation (XC) method used for evaluating the XC energy (energy_XC). Differently from XC_functional, perturbative treatments are also accounted for, where the string contains the reference to both the perturbative (e.g., MP2) and the starting point (e.g, Hartree-Fock) XC method defined in the section section_method.\n\nThe value consists of XC_method_current concatenated with the `@` character and the XC method (XC_method) defined in section_method that is referred to by method_to_method_ref where method_to_method_kind = \"starting_point_method\".",
       "dtypeStr": "C",
       "name": "XC_method",
       "repeats": false,
