@@ -6,29 +6,29 @@
     }, {
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
-  "metaInfos": [{
+  "metaInfos": [
+    {
       "description": "Collection of atomic properties",
       "kindStr": "type_section",
-      "name": "section_collection",
-      "superNames": ["type_section"]
-    }, {
-      "description": "Collection of atomic properties",
-      "kindStr": "type_section",
-      "name": "section_atomic_property",
-      "superNames": ["section_collection"]
+      "name": "section_atomic_property_collection",
+      "superNames": []
     }, 
     {
-      "description": "Collection of atomic properties for given for a given XC method",
-      "dtypeStr": "C",
+      "description": "Section atomic properties",
+      "kindStr": "type_section",
+      "name": "section_atomic_property",
+      "superNames": ["section_atomic_property_collection"]
+    }, 
+    {
+      "description": "Section of atomic properties for given for a given XC method",
+      "kindStr": "type_section",
       "name": "section_atomic_property_method",
-      "repeats": false,
-      "shape": [],
-      "superNames": ["section_atomic_property"]
+      "superNames": ["section_atomic_property_collection"]
     },
     {
       "description": "Theory level for atomic calculation",
       "dtypeStr": "C",
-      "name": "atomic_theory_level",
+      "name": "atomic_xc_method",
       "repeats": false,
       "shape": [],
       "superNames": ["section_atomic_property_method"]
@@ -162,7 +162,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Radius at which $s$ radial function is maximum for free atom.",
+      "description": "Radius at which s radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rs_max",
       "shape": [],
@@ -170,7 +170,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Radius at which $p$ radial function is maximum for free atom.",
+      "description": "Radius at which p radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rp_max",
       "shape": [],
@@ -178,7 +178,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Radius at which $d$ radial function is maximum for free atom.",
+      "description": "Radius at which d radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rd_max",
       "shape": [],
@@ -186,7 +186,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of $<s>$ radial function for free atom.",
+      "description": "Expectation value of <s> radial function for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rs_expectation",
       "shape": [],
@@ -194,7 +194,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of $<p>$ radial function for free atom.",
+      "description": "Expectation value of <p> radial function for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rp_expectation",
       "shape": [],
@@ -202,7 +202,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of $<d>$ radial function for free atom.",
+      "description": "Expectation value of <d> radial function for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rd_expectation",
       "shape": [],
@@ -242,7 +242,7 @@
       "superNames": ["section_atomic_property_method"]
     },
     {
-      "description": "The term symbol ($^{2S+1}L_{J}$) is an abbreviated description of the (total) angular momentum quantum numbers in a multi-electron atom (even a single electron can also be described by a term symbol). Each energy level of an atom with a given electron configuration is described by not only the electron configuration but also its own term symbol, as the energy level also depends on the total angular momentum including spin. The usual atomic term symbols assume LS coupling (also known as Russell-Saunders coupling or Spin-Orbit coupling). The ground state term symbol is predicted by Hund's rules.",
+      "description": "The term symbol (^{2S+1}L_{J}) is an abbreviated description of the (total) angular momentum quantum numbers in a multi-electron atom (even a single electron can also be described by a term symbol). Each energy level of an atom with a given electron configuration is described by not only the electron configuration but also its own term symbol, as the energy level also depends on the total angular momentum including spin. The usual atomic term symbols assume LS coupling (also known as Russell-Saunders coupling or Spin-Orbit coupling). The ground state term symbol is predicted by Hund's rules.",
       "dtypeStr": "C",
       "name": "atomic_term_symbol",
       "shape": [],
