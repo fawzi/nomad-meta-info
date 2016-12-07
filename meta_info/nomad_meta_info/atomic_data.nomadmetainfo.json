@@ -20,10 +20,19 @@
       "superNames": ["section_atomic_property_collection"]
     }, 
     {
-      "description": "Section of atomic properties for given for a given XC method",
+      "description": "Section of atomic properties for given for a given $XC$ method",
       "kindStr": "type_section",
       "name": "section_atomic_property_method",
       "superNames": ["section_atomic_property_collection"]
+    },
+    {
+      "description": "Reference to the method that is used to calculate associated atomic property.",
+      "dtypeStr": "r",
+      "name": "atomic_property_to_method_ref",
+      "referencedSections": ["section_atomic_property_method"],
+      "shape": [],
+      "superNames": ["section_atomic_property_collection"
+      ]
     },
     {
       "description": "Theory level for atomic calculation",
@@ -41,7 +50,7 @@
       "units": "",
       "superNames": ["section_atomic_property"]
     },
-    {"description": "Polarizability is the ability to form instantaneous multipoles. It is a property of matter. Polarizabilities determine the dynamical response of a bound system to external fields, and provide insight into a materials internal structure. Electric polarizability is the relative tendency of a charge distribution, like the electron cloud of an atom or molecule, and consequently of any material body, to have its charges displaced by any external electric field, which in the uniform case is applied typically by a charged parallel-plate capacitor. The polarizability in isotropic media is defined as the ratio of the induced dipole moment of an atom to the electric field that produces this dipole moment. We are often interested only in the spherical average (or isotropic component) of the polarizability tensor. The  Isotropic polarizability is defined as average of principal components of the polarizability tensor.",
+    {"description": "Polarizability is the ability to form instantaneous multipoles. It is a property of matter. Polarizabilities determine the dynamical response of a bound system to external fields, and provide insight into a materials internal structure. Electric polarizability is the relative tendency of a charge distribution, like the electron cloud of an atom or molecule, and consequently of any material body, to have its charges displaced by any external electric field, which in the uniform case is applied typically by a charged parallel-plate capacitor. The polarizability in isotropic media is defined as the ratio of the induced dipole moment of an atom to the electric field that produces this dipole moment. We are often interested only in the spherical average (or isotropic component) of the polarizability tensor. The isotropic polarizability is defined as average of principal components of the polarizability tensor.",
       "dtypeStr": "f",
       "name": "atomic_isotropic_polarizability",
       "shape": [],
@@ -49,7 +58,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "The long-range van der Waals energy between two non overlapping fragments A and B of the physical system under study can be expressed as a multipolar expansion and C_{n}^{AB} are the multipolar vdW coefficients. A widespread approach to include long-range vdW interactions in atomistic calculation is to truncate multipolar expansion to the dipole-dipole order and keep only the leading C_{6}^{AB} /R^{6} term. The vdW C_{6} coefficient can be obtained using Casimir-Polder integral over frequency dependent polarizability as function of imaginary frequency argument.",
+      "description": "The long-range van der Waals energy between two non overlapping fragments $A$ and $B$ of the physical system under study can be expressed as a multipolar expansion and $C_{n}^{AB}$ are the multipolar vdW coefficients. A widespread approach to include long-range vdW interactions in atomistic calculation is to truncate multipolar expansion to the dipole-dipole order and keep only the leading $C_{6}^{AB} /R^{6}$ term. The vdW $C_{6}$ coefficient can be obtained using Casimir-Polder integral over frequency dependent polarizability as function of imaginary frequency argument.",
       "dtypeStr": "f",
       "name": "atomic_isotropic_vdw_coefficient",
       "shape": [],
@@ -65,7 +74,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Charge of the free atom for corresponding atomic property",
+      "description": "Charge of the free atom for corresponding atomic property.",
       "dtypeStr": "f",
       "name": "atomic_charge",
       "shape": [],
@@ -73,7 +82,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Atomic number Z for atomic species",
+      "description": "Atomic number $Z$ for atomic species",
       "dtypeStr": "i",
       "name": "atomic_number",
       "shape": [],
@@ -81,7 +90,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Atomic spin multiplicity. The multiplicity of an energy level is defined as 2S+1, where S is the total spin angular momentum. States with multiplicity 1, 2, 3, 4, 5 are respectively called singlets, doublets, triplets, quartets and quintets.",
+      "description": "Atomic spin multiplicity. The multiplicity of an energy level is defined as $2S+1$, where S is the total spin angular momentum. States with multiplicity 1, 2, 3, 4, 5 are respectively called singlets, doublets, triplets, quartets and quintets.",
       "dtypeStr": "i",
       "name": "atomic_spin_multiplicity",
       "shape": [],
@@ -186,7 +195,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of <s> radial function for free atom.",
+      "description": "Expectation value of $<s>$ radial function for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rs_expectation",
       "shape": [],
@@ -194,7 +203,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of <p> radial function for free atom.",
+      "description": "Expectation value of $<p>$ radial function for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rp_expectation",
       "shape": [],
@@ -202,7 +211,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of <d> radial function for free atom.",
+      "description": "Expectation value of $<d>$ radial function for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rd_expectation",
       "shape": [],
@@ -242,7 +251,7 @@
       "superNames": ["section_atomic_property_method"]
     },
     {
-      "description": "The term symbol (^{2S+1}L_{J}) is an abbreviated description of the (total) angular momentum quantum numbers in a multi-electron atom (even a single electron can also be described by a term symbol). Each energy level of an atom with a given electron configuration is described by not only the electron configuration but also its own term symbol, as the energy level also depends on the total angular momentum including spin. The usual atomic term symbols assume LS coupling (also known as Russell-Saunders coupling or Spin-Orbit coupling). The ground state term symbol is predicted by Hund's rules.",
+      "description": "The term symbol ($^{2S+1}L_{J}$) is an abbreviated description of the (total) angular momentum quantum numbers in a multi-electron atom (even a single electron can also be described by a term symbol). Each energy level of an atom with a given electron configuration is described by not only the electron configuration but also its own term symbol, as the energy level also depends on the total angular momentum including spin. The usual atomic term symbols assume LS coupling (also known as Russell-Saunders coupling or Spin-Orbit coupling). The ground state term symbol is predicted by Hund's rules.",
       "dtypeStr": "C",
       "name": "atomic_term_symbol",
       "shape": [],
