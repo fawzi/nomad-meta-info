@@ -141,6 +141,13 @@
         "section_system"
       ]
     }, {
+      "description": "XC functional",
+      "kindStr": "type_section",
+      "name": "x_orca_section_functionals",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "x_orca_atom_species_mroc",
@@ -548,7 +555,7 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_orca_dft_method",
+      "name": "x_orca_XC_functional_type",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -865,7 +872,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -873,8 +880,7 @@
       "name": "x_orca_last_energy_change",
       "repeats": true,
       "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
+      "superNames": ["section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -883,7 +889,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -892,7 +898,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -901,7 +907,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -910,7 +916,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_single_configuration_calculation"
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -1563,7 +1569,7 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_orca_scf_total_energy",
+      "name": "energy_total_scf_iteration",
       "repeats": true,
       "shape": [],
       "superNames": [
