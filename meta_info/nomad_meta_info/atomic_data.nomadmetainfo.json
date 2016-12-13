@@ -8,34 +8,35 @@
     }],
   "metaInfos": [
     {
-      "description": "Collection of atomic properties",
+      "description": "Collection of atomic properties.",
       "kindStr": "type_section",
       "name": "section_atomic_property_collection",
       "superNames": []
     }, 
     {
-      "description": "Section atomic properties",
+      "description": "Section atomic properties.",
       "kindStr": "type_section",
       "name": "section_atomic_property",
       "superNames": ["section_atomic_property_collection"]
     }, 
     {
-      "description": "Section of atomic properties for given for a given $XC$ method",
+      "description": "Section of atomic properties for given for a given $XC$ method.",
       "kindStr": "type_section",
       "name": "section_atomic_property_method",
       "superNames": ["section_atomic_property_collection"]
     },
     {
       "description": "Reference to the method that is used to calculate associated atomic property.",
-      "dtypeStr": "r",
+      "dtypeStr": "C",
+      "repeats": false,
       "name": "atomic_property_to_method_ref",
       "referencedSections": ["section_atomic_property_method"],
       "shape": [],
-      "superNames": ["section_atomic_property_collection"
+      "superNames": ["section_atomic_property"
       ]
     },
     {
-      "description": "Theory level for atomic calculation",
+      "description": "Theory level for atomic calculation.",
       "dtypeStr": "C",
       "name": "atomic_xc_method",
       "repeats": false,
@@ -66,7 +67,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "The van der Waals radius, of an atom or molecule is the radius of an imaginary sphere representing the distance of closest approach for another atom(s). The vdW radius corresponds to half of the distance between two atoms where the Pauli repulsion balances the London dispersion attraction",
+      "description": "The van der Waals radius, of an atom or molecule is the radius of an imaginary sphere representing the distance of closest approach for another atom(s). The vdW radius corresponds to half of the distance between two atoms where the Pauli repulsion balances the London dispersion attraction.",
       "dtypeStr": "f",
       "name": "atomic_vdw_radius",
       "shape": [],
@@ -82,7 +83,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Atomic number $Z$ for atomic species",
+      "description": "Atomic number $Z$ for atomic species.",
       "dtypeStr": "i",
       "name": "atomic_number",
       "shape": [],
@@ -147,7 +148,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of the radius of the highest occupied atomic orbital for free atom.",
+      "description": "Expectation value of the radius $<r>$ of the highest occupied atomic orbital for free atom.",
       "dtypeStr": "f",
       "name": "atomic_r_homo",
       "shape": [],
@@ -155,7 +156,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of the radius of the highest occupied atomic orbital for anionic atom.",
+      "description": "Expectation value of the radius $<r>$ of the highest occupied atomic orbital for anionic atom.",
       "dtypeStr": "f",
       "name": "atomic_r_homo_anion",
       "shape": [],
@@ -163,7 +164,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Expectation value of the radius of the highest occupied atomic orbital for cationic atom.",
+      "description": "Expectation value of the radius $<r>$ of the highest occupied atomic orbital for cationic atom.",
       "dtypeStr": "f",
       "name": "atomic_r_homo_cation",
       "shape": [],
@@ -171,7 +172,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Radius at which s radial function is maximum for free atom.",
+      "description": "Radius at which $s_{max}$ radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rs_max",
       "shape": [],
@@ -179,7 +180,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Radius at which p radial function is maximum for free atom.",
+      "description": "Radius at which $p_{max}$ radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rp_max",
       "shape": [],
@@ -187,7 +188,7 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Radius at which d radial function is maximum for free atom.",
+      "description": "Radius at which $d_{max}$ radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rd_max",
       "shape": [],
