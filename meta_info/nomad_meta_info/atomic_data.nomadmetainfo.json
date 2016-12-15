@@ -1,9 +1,7 @@
 {
   "type": "nomad_meta_info_1_0",
   "description": "meta info describing atomic properties most names are expected to start with atomic_",
-  "dependencies": [ {
-      "relativePath": "common.nomadmetainfo.json"
-    }, {
+  "dependencies": [{
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [
