@@ -244,7 +244,7 @@
     },
     {
       "derived": true,
-      "description": "$k$-dependent energies of the electronic band segment (electronic band structure). This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
+      "description": "$k$-dependent or $q$-dependent  energies of the electronic or vibrational band segment (electronic/vibrational band structure). This is a third-order tensor, with one dimension used for the spin channels (1 in case of a vibrational band structure), one for the $k$ or $q$ points for each segment, and one for the eigenvalue sequence.",
       "dtypeStr": "f",
       "name": "band_energies",
       "shape": [
@@ -273,7 +273,7 @@
       "units": "J"
     },
     {
-      "description": "Fractional coordinates of the $k$ points (in the basis of the reciprocal-lattice vectors) for which the electronic energy are given.",
+      "description": "Fractional coordinates of the $k$ or $q$ points (in the basis of the reciprocal-lattice vectors) for which the electronic energy are given.",
       "dtypeStr": "f",
       "name": "band_k_points",
       "shape": [
@@ -325,7 +325,7 @@
       ]
     },
     {
-      "description": "Start and end labels of the points in the segment (one-dimensional pathways) sampled in the $k$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
+      "description": "Start and end labels of the points in the segment (one-dimensional pathways) sampled in the $k$-space or $q$-space, using the conventional symbols, e.g., Gamma, K, L. The coordinates (fractional, in the reciprocal space) of the start and end points for each segment are given in band_segm_start_end",
       "dtypeStr": "C",
       "name": "band_segm_labels",
       "shape": [
@@ -511,7 +511,7 @@
       ]
     },
     {
-      "description": "Kind of method in calculation_method_current.\n\nAccepted values are:\n\n- absolute\n- perturbative.",
+      "description": "Kind of method in calculation_method_current.\n\nAccepted values are:\n\n- absolute\n- perturbative\n- phononic.",
       "dtypeStr": "C",
       "name": "calculation_method_kind",
       "repeats": false,
@@ -583,7 +583,7 @@
       "superNames": []
     },
     {
-      "description": "Array containing the set of discrete energy values for the density (electronic-energy) of states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial density of states.",
+      "description": "Array containing the set of discrete energy values for the density (electronic-energy or vibrational energy) of states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial density of states.",
       "dtypeStr": "f",
       "name": "dos_energies",
       "shape": [
@@ -650,7 +650,7 @@
       ]
     },
     {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of density (electronic-energy) of states.",
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of density (electronic-energy or vibrational-energy) of states.",
       "dtypeStr": "f",
       "name": "dos_values",
       "shape": [
@@ -2657,7 +2657,7 @@
       ]
     },
     {
-      "description": "Section collecting information of a (electronic-energy) density of states (DOS) evaluation.",
+      "description": "Section collecting information of a (electronic-energy or vibrational-energy) density of states (DOS) evaluation.",
       "kindStr": "type_section",
       "name": "section_dos",
       "repeats": true,
@@ -2715,7 +2715,7 @@
       ]
     },
     {
-      "description": "This section stores information on a $k$-band (electronic band structure) evaluation along one-dimensional pathways in the $k$ (reciprocal) space given in section_k_band_segment. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, can be found in the section_eigenvalues section.",
+      "description": "This section stores information on a $k$-band (electronic or vibrational band structure) evaluation along one-dimensional pathways in the $k$ or $q$ (reciprocal) space given in section_k_band_segment. Eigenvalues calculated at the actual $k$-mesh used for energy_total evaluations, can be found in the section_eigenvalues section.",
       "kindStr": "type_section",
       "name": "section_k_band",
       "repeats": true,
@@ -2734,7 +2734,7 @@
       ]
     },
     {
-      "description": "Section collecting the information on a $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ (reciprocal) space.\n\nEigenvalues calculated at the actual $k$-mesh used for energy_total evaluations are defined in section_eigenvalues and the band structures are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
+      "description": "Section collecting the information on a $k$-band or $q$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ or $q$ (reciprocal) space.\n\nEigenvalues calculated at the actual $k$-mesh used for energy_total evaluations are defined in section_eigenvalues and the band structures are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ or $q$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ or $q$ point. The values of the $k$ or $q$ points in each segment are stored in band_k_points. The energies and occupation for each eigenstate, at each $k$ or $q$ point, segment, and spin channel are stored in band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels.",
       "kindStr": "type_section",
       "name": "section_k_band_segment",
       "repeats": true,
