@@ -373,6 +373,16 @@
       ]
     },
     {
+      "description": "String to specify the kind of band structure (either electronic or vibrational).",
+      "dtypeStr": "C",
+      "name": "band_structure_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_k_band"
+      ]
+    },
+    {
       "description": "Unique string identifying the basis set used for the final wavefunctions calculated with XC_method. It might identify a class of basis sets, often matches one of the strings given in any of basis_set_name.",
       "dtypeStr": "C",
       "name": "basis_set",
@@ -511,7 +521,7 @@
       ]
     },
     {
-      "description": "Kind of method in calculation_method_current.\n\nAccepted values are:\n\n- absolute\n- perturbative\n- phononic.",
+      "description": "Kind of method in calculation_method_current.\n\nAccepted values are:\n\n- absolute\n- perturbative.",
       "dtypeStr": "C",
       "name": "calculation_method_kind",
       "repeats": false,
@@ -624,6 +634,16 @@
         "number_of_spin_channels",
         "number_of_dos_values"
       ],
+      "superNames": [
+        "section_dos"
+      ]
+    },
+    {
+      "description": "String to specify the kind of density of states (either electronic or vibrational).",
+      "dtypeStr": "C",
+      "name": "dos_kind",
+      "repeats": false,
+      "shape": [],
       "superNames": [
         "section_dos"
       ]
