@@ -36,6 +36,14 @@
       ]
     },
     {
+      "description": "Comprehensive details about a collection.",
+      "dtypeStr": "C",
+      "name": "atomic_collection_description",
+      "repeats": false,
+      "shape": [],
+      "superNames": ["section_atomic_property_collection"]
+    },
+    {
       "description": "Theory level for atomic calculation.",
       "dtypeStr": "C",
       "name": "atomic_xc_method",
