@@ -27,13 +27,12 @@
     },
     {
       "description": "Reference to the method that is used to calculate associated atomic property.",
-      "dtypeStr": "i",
+      "dtypeStr": "r",
       "repeats": false,
       "name": "atomic_property_to_method_ref",
       "referencedSections": ["section_atomic_property_method"],
       "shape": [],
-      "superNames": ["section_atomic_property"
-      ]
+      "superNames": ["section_atomic_property"]
     },
     {
       "description": "Comprehensive details about a collection.",
