@@ -771,6 +771,13 @@
         "section_system"
       ]
     }, {
+      "description": "section for exciting spin treatment",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_spin",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "index for exciting functional",
       "kindStr": "type_section",
       "name": "x_exciting_section_xc",
@@ -809,7 +816,7 @@
       "dtypeStr": "C",
       "name": "x_exciting_spin_treatment",
       "superNames": [
-        "section_system"
+        "x_exciting_section_spin"
       ]
     }, {
       "description": "Temporary storing converged atom forces cartesian",
@@ -873,7 +880,8 @@
       "dtypeStr": "f",
       "name": "x_exciting_values_fermi_surface",
       "shape": [
-        "x_exciting_number_of_bands_fermi_surface"
+        "x_exciting_number_of_bands_fermi_surface",
+        "x_exciting_number_of_mesh_points_fermi_surface"
       ],
       "superNames": [
         "x_exciting_section_fermi_surface"
