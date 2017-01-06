@@ -281,6 +281,20 @@
         "section_system"
       ]
     }, {
+      "description": "Spin treatment",
+      "dtypeStr": "C",
+      "name": "x_elk_spin_treatment",
+      "superNames": [
+        "x_elk_section_spin"
+      ]
+    },{
+      "description": "section for exciting spin treatment",
+      "kindStr": "type_section",
+      "name": "x_elk_section_spin",
+      "superNames": [
+        "section_system"
+      ]
+    },  {
       "description": "Total number of local-orbitals",
       "dtypeStr": "i",
       "name": "x_elk_lo",
