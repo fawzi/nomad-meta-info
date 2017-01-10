@@ -93,6 +93,7 @@
       "description": "Atomic number $Z$ for atomic species.",
       "dtypeStr": "i",
       "name": "atomic_number",
+      "shortname": "Z",
       "shape": [],
       "units": "",
       "superNames": ["section_atomic_property"]
@@ -139,17 +140,19 @@
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Difference between Highest occupied and Lowest unoccupied single-particle state energy for free atom.",
+      "description": "Difference between highest occupied and lowest unoccupied single-particle state energy for free atom.",
       "dtypeStr": "f",
       "name": "atomic_homo_lumo_diff",
+      "shortname": "deltaE_HL",
       "shape": [],
       "units": "J",
       "superNames": ["section_atomic_property"]
     },
     {
-      "description": "Binding energy between two atoms.",
+      "description": "Binding energy of the dimer.",
       "dtypeStr": "f",
-      "name": "atomic_electronic_binding_energy",
+      "name": "atomic_electronic_binding_energy_dimer",
+      "shortname": "E_b",
       "shape": [],
       "units": "J",
       "superNames": ["section_atomic_property"]
@@ -182,6 +185,7 @@
       "description": "Radius at which $s_{max}$ radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rs_max",
+      "shortname": "r_s",
       "shape": [],
       "units": "m",
       "superNames": ["section_atomic_property"]
@@ -190,6 +194,7 @@
       "description": "Radius at which $p_{max}$ radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rp_max",
+      "shortname": "r_p",
       "shape": [],
       "units": "m",
       "superNames": ["section_atomic_property"]
@@ -198,6 +203,7 @@
       "description": "Radius at which $d_{max}$ radial function is maximum for free atom.",
       "dtypeStr": "f",
       "name": "atomic_rd_max",
+      "shortname": "r_d",
       "shape": [],
       "units": "m",
       "superNames": ["section_atomic_property"]
@@ -230,6 +236,7 @@
       "description": "Half of the distance between equilibrium homonuclear-dimer.",
       "dtypeStr": "f",
       "name": "atomic_r_by_2_dimer",
+      "shortname": "d",
       "shape": [],
       "units": "m",
       "superNames": ["section_atomic_property"]
@@ -238,6 +245,7 @@
       "description": "Ionization potential for free atom. The ionization potential is qualitatively defined as the amount of energy required to remove the most loosely bound electron or the valence electron, of an isolated gaseous atom to form a cation.",
       "dtypeStr": "f",
       "name": "atomic_ionization_potential",
+      "shortname": "IP",
       "shape": [],
       "units": "J",
       "superNames": ["section_atomic_property"]
@@ -246,6 +254,7 @@
       "description": "Electron affinity for free atom. The electron affinity of an atom is the amount of energy released or spent when an electron is added to a neutral atom in the gaseous state to form a negative ion.",
       "dtypeStr": "f",
       "name": "atomic_electron_affinity",
+      "shortname": "EA",
       "shape": [],
       "units": "J",
       "superNames": ["section_atomic_property"]
@@ -272,6 +281,33 @@
       "name": "atomic_mulliken_electronegativity",
       "shape": [],
       "units": "J",
+      "superNames": ["section_atomic_property"]
+    },
+    {
+      "description": "Energy of the highest occupied molecular orbital.",
+      "dtypeStr": "f",
+      "name": "atomic_highest_occupied_molecular_orbital_energy",
+      "shortname": "E_HOMO",
+      "shape": [],
+      "units": "J",
+      "superNames": ["section_atomic_property"]
+    },
+   {
+      "description": "Energy of the lowest unoccupied molecular orbital.",
+      "dtypeStr": "f",
+      "name": "atomic_lowest_unoccupied_molecular_orbital_energy",
+      "shortname": "E_LUMO",
+      "shape": [],
+      "units": "J",
+      "superNames": ["section_atomic_property"]
+    },
+   {
+      "description": "Number of electrons located in the outermost shell (valence shell) of the atom.",
+      "dtypeStr": "i",
+      "name": "atomic_number_valence_electrons",
+      "shortname": "Z_val",
+      "shape": [],
+      "units": "",
       "superNames": ["section_atomic_property"]
     }
 ]
