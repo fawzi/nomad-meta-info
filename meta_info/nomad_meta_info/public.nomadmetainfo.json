@@ -2823,6 +2823,14 @@
       ]
     },
     {
+      "description": "Section that describes the relationship between different section_system sections.\n\nFor instance, if a phonon calculation using a finite difference approach is performed the force evaluation is typically done in a larger supercell but the properties such as the phonon band structure are still calculated for the primitive cell.\n\nThe kind of relationship between the system defined in this section and the referenced one is described by system_to_system_kind. The referenced section_system is identified via system_to_system_ref.",
+      "kindStr": "type_section",
+      "name": "section_system_to_system_refs",
+      "superNames": [
+        "section_system"
+      ]
+    },
+    {
       "description": "Every section_single_configuration_calculation section contains the values computed during a *single configuration calculation*, i.e. a calculation performed on a given configuration of the system (as defined in section_system) and a given computational method (e.g., exchange-correlation method, basis sets, as defined in section_method).\n\nThe link between the current section_single_configuration_calculation and the related section_system and section_method sections is established by the values stored in single_configuration_calculation_to_system_ref and single_configuration_to_calculation_method_ref, respectively.\n\nThe reason why information on the system configuration and computational method is stored separately is that several *single configuration calculations* can be performed on the same system configuration, viz. several system configurations can be evaluated with the same computational method. This storage strategy avoids redundancies.",
       "kindStr": "type_section",
       "name": "section_single_configuration_calculation",
@@ -3316,6 +3324,29 @@
       "units": "Pa"
     },
     {
+      "description": "String defining the relationship between the referenced section_system and the present section_system. Often systems are connected for example if a phonon calculation using finite differences is performed the force ealuation is done in a larger supercell but properties such as the phonon band structure are still calculated for the primitive cell. Hence, the need of keeping track of these connected systems. The referenced system is identified via system_to_system_ref.",
+      "dtypeStr": "C",
+      "name": "system_to_system_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system_to_system_refs"
+      ]
+    },
+    {
+      "description": "Reference to another system. The kind of relationship between the present and the referenced section_system is specified by system_to_system_kind.",
+      "dtypeStr": "r",
+      "name": "system_to_system_ref",
+      "referencedSections": [
+        "section_system"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system_to_system_refs"
+      ]
+    },
+    {
       "description": "Specifies the name of the system. This information is provided by the user in some codes and is stored here for debugging or visualization purposes.",
       "dtypeStr": "C",
       "name": "system_name",
@@ -3613,7 +3644,7 @@
       ]
     },
     {
-      "description": "Holds the vibrational free energy per unit cell at constant volume.",
+      "description": "Holds the vibrational free energy per atom at constant volume.",
       "dtypeStr": "f",
       "name": "vibrational_free_energy_at_constant_volume",
       "shape": [
