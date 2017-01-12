@@ -70,21 +70,11 @@
       "units": ""
     },
     {
-      "description": "Energy of the highest occupied molecular orbital.",
-      "dtypeStr": "f",
-      "name": "atomic_highest_occupied_molecular_orbital_energy",
-      "shape": [],
-      "shortname": "E_HOMO",
-      "superNames": [
-        "section_atomic_property"
-      ],
-      "units": "J"
-    },
-    {
-      "description": "In electronic structure theory, calculations may be performed for a spectrum with many excited energy levels. Molecular orbitals (MOs) are made of fractions of atomic orbitals. All atoms in the molecule provide their atomic orbitals for construction of MOs, but not all atomic orbitals must participate in all MOs. For example, the Hartree--Fock method for atoms or molecules assumes that the wave function is a single configuration state function with well-defined quantum numbers and that the energy level is not necessarily the ground state. The highest occupied molecular orbital state for a system is called as HOMO.",
+      "description": "In electronic structure theory, calculations may be performed for a spectrum with many excited energy levels. Molecular orbitals (MOs) are made of fractions of atomic orbitals. All atoms in the molecule provide their atomic orbitals for construction of MOs, but not all atomic orbitals must participate in all MOs. For example, the Hartree-Fock method for atoms or molecules assumes that the wave function is a single configuration state function with well-defined quantum numbers and that the energy level is not necessarily the ground state. The highest occupied molecular orbital state for a system is called as HOMO.",
       "dtypeStr": "f",
       "name": "atomic_homo",
       "shape": [],
+      "shortname": "E_HOMO",
       "superNames": [
         "section_atomic_property"
       ],
@@ -133,20 +123,10 @@
       "units": "J.m**6"
     },
     {
-      "description": "Energy of the lowest unoccupied molecular orbital.",
-      "dtypeStr": "f",
-      "name": "atomic_lowest_unoccupied_molecular_orbital_energy",
-      "shape": [],
-      "shortname": "E_LUMO",
-      "superNames": [
-        "section_atomic_property"
-      ],
-      "units": "J"
-    },
-    {
-      "description": "In electronic structure theory, calculations may be performed for a spectrum with many excited energy levels. Molecular orbitals (MOs) are made of fractions of atomic orbitals.  All atoms in the molecule provide their atomic orbitals for construction of MOs, but not all atomic orbitals must participate in all  MOs.  For example, the Hartree--Fock method for atoms or molecules assumes that the wave function is a single configuration state function with well-defined quantum numbers and that the energy level is not necessarily the ground state. The lowest unoccupied molecular orbital state for a system is called as LUMO.",
+      "description": "In electronic structure theory, calculations may be performed for a spectrum with many excited energy levels. Molecular orbitals (MOs) are made of fractions of atomic orbitals.  All atoms in the molecule provide their atomic orbitals for construction of MOs, but not all atomic orbitals must participate in all  MOs.  For example, the Hartree-Fock method for atoms or molecules assumes that the wave function is a single configuration state function with well-defined quantum numbers and that the energy level is not necessarily the ground state. The lowest unoccupied molecular orbital state for a system is called as LUMO.",
       "dtypeStr": "f",
       "name": "atomic_lumo",
+      "shortname": "E_LUMO",
       "shape": [],
       "superNames": [
         "section_atomic_property"
