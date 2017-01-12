@@ -2878,7 +2878,114 @@
       "superNames": [
         "settings_XC_functional"
       ]
-    },
+    }, {
+      "description": "Every section_springer_material contains results of classification of materials with the same formula according to Springer Materials - it contains section_springer_classsification, section_springer_compound, section_springer_id, section_springer_references",
+      "kindStr": "type_section",
+      "name": "section_springer_material",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Section_springer_classsification contains a classification tag of a material according to Springer Materials",
+      "kindStr": "type_section",
+      "name": "section_springer_classification",
+      "superNames": [
+        "section_springer_material"
+      ]
+    }, {
+      "description": "Contains the classification name of the current material according to Springer Materials",
+      "dtypeStr": "C",
+      "name": "springer_classification",
+      "shape": [],
+      "superNames": [
+        "section_springer_classification"
+      ]
+    }, {
+      "description": "Number of publications/references using this classification for the current material in the Springer Materials database",
+      "dtypeStr": "i",
+      "name": "springer_number_of_classification_reference_per_material",
+      "shape": [],
+      "superNames": [
+        "section_springer_classification"
+      ]
+    }, {
+      "description": "Description of a compound class (according to Springer Materials) of the current material. This is a property of the chemical formula of the compound",
+      "kindStr": "type_section",
+      "name": "section_springer_compound_class",
+      "superNames": [
+        "section_springer_material"
+      ]
+    }, {
+      "description": "Name of a class of the current compound, as defined in by Springer Materials. This is a property of the chemical formula of the compound",
+      "dtypeStr": "C",
+      "name": "springer_compound_class",
+      "shape": [],
+      "superNames": [
+        "section_springer_compound_class"
+      ]
+    }, {
+      "description": "Number of publications/references using this compound class for the current compound in the Springer Materials database",
+      "dtypeStr": "i",
+      "name": "springer_number_of_compound_class_reference_per_material",
+      "shape": [],
+      "superNames": [
+        "section_springer_compound_class"
+      ]
+    }, {
+      "description": "Identifiers used by Springer Materials",
+      "kindStr": "type_section",
+      "name": "section_springer_id",
+      "superNames": [
+        "section_springer_material"
+      ]
+    }, {
+      "description": "Id of the classified material according to Springer Materials",
+      "dtypeStr": "C",
+      "name": "springer_id",
+      "shape": [],
+      "superNames": [
+        "section_springer_id"
+      ]
+    }, {
+      "description": "Url to the source page in Springer Materials describing the current entry",
+      "kindStr": "C",
+      "name": "springer_url",
+      "shape": [],
+      "superNames": [
+        "section_springer_id"
+      ]
+    }, {
+      "description": "Contains the information about references related to current material according to Springer Materials",
+      "kindStr": "type_section",
+      "name": "section_springer_references",
+      "superNames": [
+        "section_springer_material"
+      ]
+    }, {
+      "description": "Contains the information about references related to current material according to Springer Materials",
+      "kindStr": "C",
+      "name": "springer_reference",
+      "shape": [],
+      "superNames": [
+        "section_springer_references"
+      ]
+    }, {
+      "description": "The formula of current material according to Springer Materials",
+      "kindStr": "C",
+      "name": "springer_formula",
+      "shape": [],
+      "superNames": [
+        "section_springer_material"
+      ]
+    }, {
+      "description": "Information about the space group of current material according to Springer Materials",
+      "kindStr": "C",
+      "name": "springer_space_group",
+      "shape": [],
+      "superNames": [
+        "section_springer_material"
+      ]
+    }, {
     {
       "description": "Contains the name for the self-interaction correction (SIC) treatment used to calculate the final energy and related quantities. If skipped or empty, no special correction is applied.\n\nThe following SIC methods are available:\n\n| SIC method                | Description                       |\n| ------------------------- | --------------------------------  |\n| `\"\"`                      | No correction                     |\n| `\"SIC_AD\"`                | The average density correction    |\n| `\"SIC_SOSEX\"`             | Second order screened exchange    |\n| `\"SIC_EXPLICIT_ORBITALS\"` | (scaled) Perdew-Zunger correction explicitly on a set of orbitals |\n| `\"SIC_MAURI_SPZ\"`         | (scaled) Perdew-Zunger expression on the spin density / doublet unpaired orbital |\n| `\"SIC_MAURI_US\"`          | A (scaled) correction proposed by Mauri and co-workers on the spin density / doublet unpaired orbital |",
       "dtypeStr": "C",
