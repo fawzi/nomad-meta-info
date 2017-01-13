@@ -534,7 +534,7 @@
       "description": "URL used to reference an externally stored calculation. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_calculation_kind.",
       "dtypeStr": "C",
       "name": "calculation_to_calculation_external_url",
-      "repeats": false,
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_calculation_to_calculation_refs"
@@ -557,7 +557,7 @@
       "referencedSections": [
         "section_single_configuration_calculation"
       ],
-      "repeats": false,
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_calculation_to_calculation_refs"
