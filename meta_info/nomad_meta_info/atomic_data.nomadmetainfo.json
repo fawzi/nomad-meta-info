@@ -60,6 +60,17 @@
       "units": "J"
     },
     {
+      "description": "Total energy per atom.",
+      "dtypeStr": "f",
+      "name": "atomic_total_energy",
+      "shape": [],
+      "shortname": "E_Tot",
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "J"
+    },
+    {
       "description": "The element symbol in the periodic table.",
       "dtypeStr": "C",
       "name": "atomic_element_symbol",
