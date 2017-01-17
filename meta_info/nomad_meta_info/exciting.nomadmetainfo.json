@@ -20,15 +20,66 @@
       ],
       "units": "N"
     }, {
-      "description": "kpoints for bandstructure",
-      "dtypeStr": "f",
-      "name": "x_exciting_band_k",
-      "repeats": true,
+      "description": "number of vertices along the kpoint path used for the bandstructure plot",
+      "dtypeStr": "i",
+      "name": "x_exciting_band_number_of_vertices",
       "shape": [],
       "superNames": [
         "x_exciting_section_bandstructure"
+      ]
+    }, {
+      "description": "number of points along the kpoint path used for the bandstructure plot",
+      "dtypeStr": "i",
+      "name": "x_exciting_band_number_of_kpoints",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ]
+    }, {
+      "description": "labels of the vertices along the kpoint path used for the bandstructure plot",
+      "dtypeStr": "C",
+      "name": "x_exciting_band_vertex_labels",
+      "shape": ["x_exciting_band_number_of_vertices"],
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ]
+    }, {
+      "description": "coordinates of the vertices along the kpoint path used for the bandstructure plot",
+      "dtypeStr": "f",
+      "name": "x_exciting_band_vertex_coordinates",
+      "shape": ["x_exciting_band_number_of_vertices",3],
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ]
+    },{
+      "description": "number of eigenvalues per k-point",
+      "dtypeStr": "i",
+      "name": "x_exciting_band_number_of_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ]
+    },  {
+      "description": "Fractional coordinates of the k points (in the basis of the reciprocal-lattice vectors) for which the electronic energy are given.",
+      "dtypeStr": "f",
+      "name": "x_exciting_band_k_points",
+      "shape": ["x_exciting_band_number_of_kpoints"],
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ]
+    }, {
+      "description": "$k$-dependent energies of the electronic band structure.",
+      "dtypeStr": "f",
+      "name": "x_exciting_band_energies",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_band_number_of_kpoints",
+        "x_exciting_band_number_of_eigenvalues"
       ],
-      "units": "m^-1"
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ],
+      "units": "J"
     }, {
       "description": "Bandstructure energy values",
       "dtypeStr": "f",
