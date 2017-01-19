@@ -626,5 +626,53 @@
         "energy_value",
         "section_dft_plus_u_orbital"
       ]
+    }, {
+      "description": "Excited states properties.",
+      "kindStr": "type_section",
+      "name": "section_excited_states",
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Number of excited states.",
+      "name": "number_of_excited_states",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
+      ]
+    }, {
+      "description": "Excitation energies.",
+      "name": "excitation_energies",
+      "dtypeStr": "f",
+      "shape": [
+        "number_of_excited_states"
+      ],
+      "superNames": [
+        "energy_value",
+        "section_excited_states"
+      ]
+    }, {
+      "description": "Excited states oscillator strengths.",
+      "name": "oscillator_strengths",
+      "dtypeStr": "f",
+      "shape": [
+        "number_of_excited_states"
+      ],
+      "superNames": [
+        "section_excited_states"
+      ]
+    }, {
+      "description": "Transition dipole moments.",
+      "name": "transition_dipole_moments",
+      "dtypeStr": "f",
+      "shape": [
+        "number_of_excited_states",
+        3
+      ],
+      "superNames": [
+        "section_excited_states"
+      ]
     }]
 }
