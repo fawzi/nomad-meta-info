@@ -51,7 +51,16 @@
       "superNames": [
         "x_exciting_section_bandstructure"
       ]
-    },{
+    }, {
+      "description": "String to specify the kind of band structure (either electronic or vibrational).",
+      "dtypeStr": "C",
+      "name": "x_exciting_band_structure_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_bandstructure"
+      ]
+    }, {
       "description": "number of eigenvalues per k-point",
       "dtypeStr": "i",
       "name": "x_exciting_band_number_of_eigenvalues",
