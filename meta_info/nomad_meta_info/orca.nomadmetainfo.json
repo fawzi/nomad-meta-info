@@ -644,6 +644,15 @@
       ]
     }, {
       "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_excitation_energy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
+      ]
+    }, {
+      "description": "-",
       "dtypeStr": "C",
       "name": "x_orca_f12_correction_on_off",
       "repeats": true,
@@ -1366,7 +1375,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_dos"
+        "section_eigenvalues"
       ]
     }, {
       "description": "-",
@@ -1375,7 +1384,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_dos"
+        "section_eigenvalues"
       ]
     }, {
       "description": "-",
@@ -1384,7 +1393,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_dos"
+        "section_eigenvalues"
       ]
     }, {
       "description": "-",
@@ -1412,6 +1421,15 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_oscillator_strength",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
       ]
     }, {
       "description": "-",
@@ -1727,6 +1745,33 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_transition_dipole_moment_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_transition_dipole_moment_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_orca_transition_dipole_moment_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
       ]
     }, {
       "description": "-",
