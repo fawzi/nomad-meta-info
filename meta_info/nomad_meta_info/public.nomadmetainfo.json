@@ -1668,6 +1668,19 @@
         "section_k_band_normalized"
       ]
     }, {
+      "description": "Holds the lattice vectors (in Cartesian coordinates) of the simulation cell. The last (fastest) index runs over the $x,y,z$ Cartesian coordinates, and the first index runs over the 3 lattice vectors.",
+      "dtypeStr": "f",
+      "name": "lattice_vectors",
+      "repeats": false,
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "configuration_core"
+      ],
+      "units": "m"
+    }, {
       "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, for this section_single_configuration_calculation. The actual definition of the atom-centered basis set is in the section_basis_set_atom_centered that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
@@ -2839,19 +2852,6 @@
       "superNames": [
         "section_method"
       ]
-    }, {
-      "description": "Holds the lattice vectors (in Cartesian coordinates) of the simulation cell. The last (fastest) index runs over the $x,y,z$ Cartesian coordinates, and the first index runs over the 3 lattice vectors.",
-      "dtypeStr": "f",
-      "name": "lattice_vectors",
-      "repeats": false,
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "configuration_core"
-      ],
-      "units": "m"
     }, {
       "description": "Determines whether a *single configuration calculation* in section_single_configuration_calculation is converged.",
       "dtypeStr": "b",
