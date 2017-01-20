@@ -748,6 +748,15 @@
         "settings_XC"
       ]
     }, {
+      "description": "Is the system embedded into a host geometry?.",
+      "dtypeStr": "b",
+      "name": "embedded_system",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Correlation (C) energy calculated with the method described in XC_functional.",
       "dtypeStr": "f",
       "name": "energy_C",
