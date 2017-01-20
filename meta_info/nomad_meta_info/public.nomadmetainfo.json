@@ -2842,7 +2842,7 @@
     }, {
       "description": "Holds the lattice vectors (in Cartesian coordinates) of the simulation cell. The last (fastest) index runs over the $x,y,z$ Cartesian coordinates, and the first index runs over the 3 lattice vectors.",
       "dtypeStr": "f",
-      "name": "simulation_cell",
+      "name": "lattice_vectors",
       "repeats": false,
       "shape": [
         3,
