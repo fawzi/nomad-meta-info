@@ -3411,6 +3411,15 @@
       ],
       "units": "Pa"
     }, {
+      "description": "Is the space group symmorphic? Set to True if all translations are zero.",
+      "dtypeStr": "b",
+      "name": "symmorphic",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Specifies the name of the system. This information is provided by the user in some codes and is stored here for debugging or visualization purposes.",
       "dtypeStr": "C",
       "name": "system_name",
