@@ -17,6 +17,30 @@
       "units": "J"
     },
     {
+      "description": "Holds the temperature dependent volume calculated using the quasi harmonic approximation",
+      "dtypeStr": "f",
+      "name": "x_qhp_quasi_harmonic_volume",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+    ],
+      "superNames": [
+        "section_thermodycamical_properties"
+      ],
+      "units": "m**3"
+    },
+    {
+      "description": "Holds the quasi harmonic thermal expansion",
+      "dtypeStr": "f",
+      "name": "x_qhp_quasi_harmonic_thermal_expansion",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+    ],
+      "superNames": [
+        "section_thermodycamical_properties"
+      ],
+      "units": "K**-1"
+    },
+    {
       "description": "Holds the bulk modulus that is calculated from the helmolz free energy calculated from the quasi harmonic approximation",
       "dtypeStr": "f",
       "name": "x_qhp_quasi_harmonic_bulk_modulus",
