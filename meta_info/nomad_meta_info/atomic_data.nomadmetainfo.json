@@ -28,9 +28,19 @@
       "units": "C"
     },
     {
-      "description": "Comprehensive details about a collection.",
+      "description": "Comprehensive details about an atomic data collection.",
       "dtypeStr": "C",
       "name": "atomic_collection_description",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_atomic_data_collection"
+      ]
+    },
+    {
+      "description": "The name of the atomic data collection.",
+      "dtypeStr": "C",
+      "name": "atomic_collection_name",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -354,13 +364,13 @@
       "units": "m"
     },
     {
-      "description": "Data collection of atomic properties.",
+      "description": "Section that holds all atomic properties (section_atomic_property) and methods (section_atomic_property_method) of an atomic data collection.",
       "kindStr": "type_section",
       "name": "section_atomic_data_collection",
       "superNames": []
     },
     {
-      "description": "Section of atomic properties.",
+      "description": "Section that contains all atomic properties of an atomic data collection.",
       "kindStr": "type_section",
       "name": "section_atomic_property",
       "superNames": [
@@ -368,7 +378,7 @@
       ]
     },
     {
-      "description": "Section of atomic properties for given for a given method.",
+      "description": "Section of atomic properties for a given method.",
       "kindStr": "type_section",
       "name": "section_atomic_property_method",
       "superNames": [
