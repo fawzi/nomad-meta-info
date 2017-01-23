@@ -502,6 +502,24 @@
         "section_calculation_to_calculation_refs"
       ]
     }, {
+      "description": "String defining the relationship between the referenced section_single_configuration_calculation and a folder containing calculations.",
+      "dtypeStr": "C",
+      "name": "calculation_to_folder_kind",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system_to_system_refs"
+      ]
+    }, {
+      "description": "URL used to reference a folder containing external calculations. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_folder_kind.",
+      "dtypeStr": "C",
+      "name": "calculation_to_folder_external_url",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_calculation_to_calculation_refs"
+      ]
+    }, {
       "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given, then calculation_to_calculation_ref is a local copy of the URL given in calculation_to_calculation_external_url. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_calculation_kind.",
       "dtypeStr": "r",
       "name": "calculation_to_calculation_ref",
@@ -2602,6 +2620,13 @@
       "name": "section_springer_material",
       "superNames": [
         "section_system"
+      ]
+    }, {
+      "description": "Section that describes the relationship between section_single_configuration_calculationa and the folder containing the original calulations",
+      "kindStr": "type_section",
+      "name": "section_calculation_to_folder_refs",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Contains the information about references related to current material according to Springer Materials",
