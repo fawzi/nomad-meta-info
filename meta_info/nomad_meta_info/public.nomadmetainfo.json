@@ -508,7 +508,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_system_to_system_refs"
+        "section_calculation_to_folder_refs"
       ]
     }, {
       "description": "URL used to reference a folder containing external calculations. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_folder_kind.",
@@ -517,7 +517,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "section_calculation_to_calculation_refs"
+        "section_calculation_to_folder_refs"
       ]
     }, {
       "description": "Reference to another calculation. If both this and calculation_to_calculation_external_url are given, then calculation_to_calculation_ref is a local copy of the URL given in calculation_to_calculation_external_url. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_calculation_kind.",
