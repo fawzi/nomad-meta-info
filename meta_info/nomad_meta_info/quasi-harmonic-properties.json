@@ -1,0 +1,32 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "quasi harmonic meta info, not specific to any code",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "Holds the quasi harmonic free energy per atom",
+      "dtypeStr": "f",
+      "name": "x_qhp_quasi_harmonic_free_energy",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+    ],
+      "superNames": [
+        "section_thermodycamical_properties"
+      ],
+      "units": "J"
+    },
+    {
+      "description": "Holds the bulk modulus that is calculated from the helmolz free energy calculated from the quasi harmonic approximation",
+      "dtypeStr": "f",
+      "name": "x_qhp_quasi_harmonic_bulk_modulus",
+      "shape": [
+        "number_of_thermodynamical_property_values"
+    ],
+      "superNames": [
+        "section_thermodycamical_properties"
+      ],
+      "units": "J*m**-3"
+    }
+]
+}
