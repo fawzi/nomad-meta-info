@@ -102,6 +102,29 @@
       "units": "J"
     },
     {
+      "description": "Energy of the valence s orbital for a free atom.",
+      "dtypeStr": "f",
+      "name": "atomic_valence_s_orbital",
+      "shape": [],
+      "shortname": "E_s",
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "J"
+    },
+    {
+      "description": "Energy of the valence p orbital for a free atom.",
+      "dtypeStr": "f",
+      "name": "atomic_valence_p_orbital",
+      "shape": [],
+      "shortname": "E_p",
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "J"
+    },
+
+    {
       "description": "Difference between highest occupied and lowest unoccupied single-particle state energy for free atom.",
       "dtypeStr": "f",
       "name": "atomic_homo_lumo_diff",
