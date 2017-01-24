@@ -84,7 +84,8 @@
       "shape": [],
       "superNames": [
         "x_orca_final_geometry"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "-",
       "dtypeStr": "f",
@@ -94,7 +95,7 @@
       "superNames": [
         "x_orca_atom_positions"
       ],
-      "units": "angstrom"
+      "units": "m"
     }, {
       "description": "-",
       "dtypeStr": "f",
@@ -103,7 +104,8 @@
       "shape": [],
       "superNames": [
         "x_orca_final_geometry"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "-",
       "dtypeStr": "f",
@@ -113,7 +115,7 @@
       "superNames": [
         "x_orca_atom_positions"
       ],
-      "units": "angstrom"
+      "units": "m"
     }, {
       "description": "-",
       "dtypeStr": "f",
@@ -122,7 +124,8 @@
       "shape": [],
       "superNames": [
         "x_orca_final_geometry"
-      ]
+      ],
+      "units": "m"
     }, {
       "description": "-",
       "dtypeStr": "f",
@@ -132,20 +135,13 @@
       "superNames": [
         "x_orca_atom_positions"
       ],
-      "units": "angstrom"
+      "units": "m"
     }, {
       "description": "positions of an atom",
       "kindStr": "type_section",
       "name": "x_orca_atom_positions",
       "superNames": [
         "section_system"
-      ]
-    }, {
-      "description": "XC functional",
-      "kindStr": "type_section",
-      "name": "x_orca_section_functionals",
-      "superNames": [
-        "section_method"
       ]
     }, {
       "description": "-",
@@ -554,15 +550,6 @@
       ]
     }, {
       "description": "-",
-      "dtypeStr": "C",
-      "name": "x_orca_XC_functional_type",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "-",
       "dtypeStr": "f",
       "name": "x_orca_diagonalization",
       "repeats": true,
@@ -889,7 +876,8 @@
       "name": "x_orca_last_energy_change",
       "repeats": true,
       "shape": [],
-      "superNames": ["section_scf_iteration"
+      "superNames": [
+        "section_scf_iteration"
       ]
     }, {
       "description": "-",
@@ -1585,13 +1573,11 @@
         "section_method"
       ]
     }, {
-      "description": "-",
-      "dtypeStr": "f",
-      "name": "energy_total_scf_iteration",
-      "repeats": true,
-      "shape": [],
+      "description": "XC functional",
+      "kindStr": "type_section",
+      "name": "x_orca_section_functionals",
       "superNames": [
-        "section_scf_iteration"
+        "section_method"
       ]
     }, {
       "description": "-",
@@ -1853,6 +1839,15 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "C",
+      "name": "x_orca_XC_functional_type",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "-",
