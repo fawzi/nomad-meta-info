@@ -2267,7 +2267,7 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "The type of basis set used by the program to represent wave functions.\n\nValid values are:\n\n  * Numeric AOs\n  * Gaussians\n  * (L)APW+lo\n  * Plane waves\n  * Real-space grid\n  * Local-orbital minimum-basis",
+      "description": "The type of basis set used by the program to represent wave functions.\n\nValid values are:\n\n  * Numeric AOs\n  * Gaussians\n  * (L)APW+lo\n  * FLAPW (full-potential linearized augmented planewave)\n  * Plane waves\n  * Real-space grid\n  * Local-orbital minimum-basis",
       "dtypeStr": "C",
       "name": "program_basis_set_type",
       "shape": [],
