@@ -77,7 +77,7 @@
       "superNames": [
         "section_system"
       ],
-      "units": "a.u."
+      "units": "m"
     }, {
       "description": "y component of vector of unit cell",
       "dtypeStr": "f",
@@ -87,7 +87,7 @@
       "superNames": [
         "section_system"
       ],
-      "units": "a.u"
+      "units": "m"
     }, {
       "description": "z component of vector of unit cell",
       "dtypeStr": "f",
@@ -97,7 +97,7 @@
       "superNames": [
         "section_system"
       ],
-      "units": "a.u."
+      "units": "m"
     }, {
       "description": "x component of reciprocal lattice vector",
       "dtypeStr": "f",
@@ -107,7 +107,7 @@
       "superNames": [
         "section_system"
       ],
-      "units": "a.u."
+      "units": "m"
     }, {
       "description": "y component of reciprocal lattice vector",
       "dtypeStr": "f",
@@ -117,7 +117,7 @@
       "superNames": [
         "section_system"
       ],
-      "units": "a.u."
+      "units": "m"
     }, {
       "description": "z component of reciprocal lattice vector",
       "dtypeStr": "f",
@@ -127,7 +127,7 @@
       "superNames": [
         "section_system"
       ],
-      "units": "a.u."
+      "units": "m"
     },{
       "description": "TOTAL FORCE FOR ATOM TYPE, X",
       "dtypeStr": "f",
@@ -242,7 +242,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     }, {
       "description": "number_equiv_atoms_in_this_atom_type",
@@ -308,7 +308,7 @@
       "repeats" : true,
       "shape": [],
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     },  {
       "description": "x_fleur_number_of_core_levels",
@@ -317,7 +317,7 @@
       "shape": [],
       "repeats" : true,
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     }, {
       "description": "l-expansion cutoff",
@@ -326,7 +326,7 @@
       "shape": [],
       "repeats" : true,
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     }, {
       "description": " muffin-tin gridpoints",
@@ -335,7 +335,7 @@
       "repeats" : true,
       "shape": [],
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     },  {
       "description": " muffin-tin radius",
@@ -344,7 +344,7 @@
       "shape": [],
       "repeats" : true,
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     },  {
       "description": "logarythmic increment",
@@ -353,7 +353,7 @@
       "shape": [],
       "repeats" : true,
       "superNames": [
-        "x_fleur_section_equiv_atoms"
+        "section_system"
       ]
     }, {
       "description": "Kmax is the plane wave cut-off",
@@ -380,14 +380,14 @@
         "section_method"
       ]
     }, {
-      "description": "specifies the width of the broadening, smearing for calculation of fermi-energy & weights. The Fermi smearing can be parametrized by this energy in Hartree",
+      "description": "specifies the width of the broadening, smearing for calculation of fermi-energy & weights. The Fermi smearing can be parametrized by this energy",
       "dtypeStr": "f",
       "name": "x_fleur_smearing_width",
       "shape": [],
       "superNames": [
         "section_method"
       ],
-      "units": "Hartree"
+      "units": "J"
     }, {
       "description": "The number of electrons to be represented within the valence electron framework",
       "dtypeStr": "f",
@@ -454,7 +454,7 @@
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "Hartree"
+      "units": "J"
     },  {
       "description": "free energy",
       "dtypeStr": "f",
@@ -463,7 +463,7 @@
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "Hartree"
+      "units": "J"
     },   {
       "description": "(tkb*entropy) TS",
       "dtypeStr": "f",
@@ -472,7 +472,7 @@
       "superNames": [
         "section_scf_iteration"
       ],
-      "units": "Hartree"
+      "units": "J"
     }, {
       "description": "exchange-correlation potential, in out",
       "dtypeStr": "C",
