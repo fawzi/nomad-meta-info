@@ -44,13 +44,10 @@
       "description": "The chemical formula of the material for which the quasi-harmonic properties were calculated",
       "dtypeStr": "C",
       "name": "x_qhp_formula",
-      "shape": [
-        "number_of_thermodynamical_property_values"
-    ],
+      "shape": [],
       "superNames": [
         "section_system"
       ],
-      "units": "K**-1"
     },
     {
       "description": "Holds the bulk modulus that is calculated from the helmolz free energy calculated from the quasi harmonic approximation",
