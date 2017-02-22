@@ -502,15 +502,6 @@
       ]
     },
     {
-      "description": "Cutoff for defining the direct-space grid used to represent charge densities. Conventionally 4*basis_set_planewave_cutoff, but much larger values may be required in case of Vanderbilt/Ultrasoft pseudopotentials and PAW",
-      "name": "x_qe_density_basis_set_planewave_cutoff",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "section_basis_set_cell_dependent"
-      ]
-    },
-    {
       "description": "Cutoff for defining the direct-space grid used to compute Fock exchange in EXX",
       "name": "x_qe_fock_operator_cutoff",
       "dtypeStr": "f",
