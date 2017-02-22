@@ -124,6 +124,14 @@
       ],
       "units": "N"
     }, {
+      "description": "number of electrons for system",
+      "dtypeStr": "f",
+      "name": "x_gamess_number_of_electrons",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "atomic number for atoms",
       "dtypeStr": "f",
       "name": "x_gamess_atomic_number",
