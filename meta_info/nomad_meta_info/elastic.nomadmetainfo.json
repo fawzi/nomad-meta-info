@@ -1,0 +1,59 @@
+{
+  "type": "nomad_meta_info_1_0",
+  "description": "meta info used by the elastic parser, all names are expected to start with x_elastic",
+  "dependencies": [ {
+      "relativePath": "common.nomadmetainfo.json"
+    }, {
+      "relativePath": "meta_types.nomadmetainfo.json"
+    }],
+  "metaInfos": [ {
+      "description": "Order of the elastic constant",
+      "dtypeStr": "i",
+      "name": "x_elastic_elastic_constant_order",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+    }, {
+      "description": "Method of calculation",
+      "dtypeStr": "C",
+      "name": "x_elastic_calculation_method",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+    }, {
+      "description": "Code used for the calculation of the elastic constants",
+      "dtypeStr": "C",
+      "name": "x_elastic_code",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+    }, {
+      "description": "Space-group number of the system",
+      "dtypeStr": "i",
+      "name": "x_elastic_space_group_number",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+    }, {
+      "description": "Volume of the equilibrium unit cell",
+      "dtypeStr": "f",
+      "name": "x_elastic_unit_cell_volume",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+    }, {
+      "description": "Maximum lagrangian strain used to calculate the elastic constants",
+      "dtypeStr": "f",
+      "name": "x_elastic_max_lagrangian_strain",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+    }, {
+      "description": "Number of disordered structures used to calculate the elastic constants",
+      "dtypeStr": "i",
+      "name": "x_elastic_number_of_disordered_structures",
+      "shape": [],
+      "superNames": [
+        "section_run" ]
+   }]
+}
