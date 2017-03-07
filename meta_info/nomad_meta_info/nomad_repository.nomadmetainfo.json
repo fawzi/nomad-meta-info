@@ -67,6 +67,16 @@
       "dtypeStr": "C",
       "superNames": [ "section_repository_dataset" ],
       "description": "Description of NOMAD repository dataset"
+    }, {
+      "name": "repository_pid",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_info" ],
+      "description": "Permanent identifier of a file/calculation in NOMAD repository"
+    }, {
+      "name": "repository_uri",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_info" ],
+      "description": "URI referring to the parsed file in the original upload to repository (equivalent of mainFileUri before repackaging)"
     }
   ]
 }
