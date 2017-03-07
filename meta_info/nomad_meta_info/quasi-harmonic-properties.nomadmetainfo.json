@@ -12,7 +12,7 @@
         "number_of_thermodynamical_property_values"
     ],
       "superNames": [
-        "section_thermodycamical_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "J"
     },
@@ -24,7 +24,7 @@
         "number_of_thermodynamical_property_values"
     ],
       "superNames": [
-        "section_thermodycamical_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "m**3"
     },
@@ -36,9 +36,18 @@
         "number_of_thermodynamical_property_values"
     ],
       "superNames": [
-        "section_thermodycamical_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "K**-1"
+    },
+    {
+      "description": "The chemical formula of the material for which the quasi-harmonic properties were calculated",
+      "dtypeStr": "C",
+      "name": "x_qhp_formula",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
     },
     {
       "description": "Holds the bulk modulus that is calculated from the helmolz free energy calculated from the quasi harmonic approximation",
@@ -48,7 +57,7 @@
         "number_of_thermodynamical_property_values"
     ],
       "superNames": [
-        "section_thermodycamical_properties"
+        "section_thermodynamical_properties"
       ],
       "units": "J*m**-3"
     }

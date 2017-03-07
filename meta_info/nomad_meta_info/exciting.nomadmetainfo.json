@@ -421,8 +421,7 @@
       "shape": [],
       "superNames": [
         "x_exciting_section_atoms_group"
-      ],
-      "units": "m"
+      ]
     }, {
       "description": "y component of atomic position",
       "dtypeStr": "f",
@@ -431,8 +430,7 @@
       "shape": [],
       "superNames": [
         "x_exciting_section_atoms_group"
-      ],
-      "units": "m"
+      ]
     }, {
       "description": "z component of atomic position",
       "dtypeStr": "f",
@@ -441,8 +439,7 @@
       "shape": [],
       "superNames": [
         "x_exciting_section_atoms_group"
-      ],
-      "units": "m"
+      ]
     }, {
       "description": "x component of lattice vector",
       "dtypeStr": "f",
@@ -777,7 +774,14 @@
       "superNames": [
         "section_system"
       ]
-    }, {
+    },{
+      "description": "whether the atomic positions are given in cartesian or vector coordinates",
+      "dtypeStr": "C",
+      "name": "x_exciting_atom_position_format",
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    },  {
       "description": "Maximum number of plane-waves",
       "dtypeStr": "i",
       "name": "x_exciting_pw",

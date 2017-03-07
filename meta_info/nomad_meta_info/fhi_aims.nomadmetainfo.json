@@ -130,6 +130,20 @@
         "section_k_band"
       ]
     }, {
+      "description": "angular grids method (specifed or auto)",
+      "dtypeStr": "C",
+      "name": "x_fhi_aims_controlIn_angular_grids_method",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "cutoff for the dependent basis",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_basis_dep_cutoff",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "x_fhi_aims_controlIn_basis_func_l",
@@ -173,6 +187,41 @@
       "shape": [],
       "superNames": [
         "x_fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "first parameter of cut\\_pot",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_cut_pot1",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "second parameter of cut\\_pot",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_cut_pot2",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "third parameter of cut\\_pot",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_cut_pot3",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "first parameter of division",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_division1",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "second parameter of division",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_division2",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
       ]
     }, {
       "description": "-",
@@ -243,6 +292,20 @@
         "x_fhi_aims_controlIn_method"
       ]
     }, {
+      "description": "angular leven for the hartreee part",
+      "dtypeStr": "i",
+      "name": "x_fhi_aims_controlIn_l_hartree",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "mass of the nucleus in atomic mass units",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_mass",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "f",
       "name": "x_fhi_aims_controlIn_MD_time_step",
@@ -258,6 +321,13 @@
       "name": "x_fhi_aims_controlIn_method",
       "superNames": [
         "section_method"
+      ]
+    }, {
+      "description": "charge of the nucleus",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_nucleus",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
       ]
     }, {
       "description": "-",
@@ -287,6 +357,13 @@
         "x_fhi_aims_controlIn_method"
       ]
     }, {
+      "description": "outer grid",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_outer_grid",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "x_fhi_aims_controlIn_override_relativity",
@@ -295,6 +372,27 @@
       "superNames": [
         "settings_relativity",
         "x_fhi_aims_controlIn_method"
+      ]
+    }, {
+      "description": "first parameter of radial\\_base",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_radial_base1",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "second parameter of radial\\_base",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlIn_radial_base2",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
+    }, {
+      "description": "radial multiplier",
+      "dtypeStr": "i",
+      "name": "x_fhi_aims_controlIn_radial_multiplier",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
       ]
     }, {
       "description": "-",
