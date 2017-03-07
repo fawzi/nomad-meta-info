@@ -674,5 +674,75 @@
       "superNames": [
         "section_excited_states"
       ]
+    }, {
+      "name": "section_repository_info",
+      "kindStr": "type_section",
+      "superNames": [ "section_run" ],
+      "description": "Section containing information about the original upload to NOMAD repository"
+    }, {
+      "name": "section_uploader",
+      "kindStr": "type_section",
+      "superNames": [ "section_repository_info" ],
+      "description": "Information about the person who uploaded the data to NOMAD repository"
+    }, {
+      "name": "uploader_first_name",
+      "dtypeStr": "C",
+      "superNames": [ "section_uploader" ],
+      "description": "First name of the uploader to NOMAD repository (includes middle names)"
+    }, {
+      "name": "uploader_last_name",
+      "dtypeStr": "C",
+      "superNames": [ "section_uploader" ],
+      "description": "Last name of the uploader to NOMAD repository"
+    }, {
+      "name": "section_coauthor_info",
+      "kindStr": "type_section",
+      "superNames": [ "section_repository_info" ],
+      "description": "Information about the coauthors of data uploaded to NOMAD repository"
+    }, {
+      "name": "coauthor_first_name",
+      "dtypeStr": "C",
+      "superNames": [ "section_coauthor_info" ],
+      "description": "First name of a coauthor of NOMAD repository data (includes middle names)"
+    }, {
+      "name": "coauthor_last_name",
+      "dtypeStr": "C",
+      "superNames": [ "section_coauthor_info" ],
+      "description": "Last name of a coauthor to NOMAD repository data"
+    }, {
+      "name": "upload_comment",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_info" ],
+      "description": "Comment on data uploaded to NOMAD repository"
+    }, {
+      "name": "upload_date",
+      "dtypeStr": "f",
+      "superNames": [ "section_repository_info" ],
+      "description": "Date/time when the data was uploaded to NOMAD repository (offset from *Unix epoch* (00:00:00 UTC on 1 January 1970) in seconds)"
+    }, {
+      "name": "section_repository_dataset",
+      "kindStr": "kind_section",
+      "superNames": [ "section_repository_info" ],
+      "description": "NOMAD repository dataset tagging info"
+    }, {
+      "name": "dataset_name",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_dataset" ],
+      "description": "Name of NOMAD repository dataset"
+    }, {
+      "name": "dataset_description",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_dataset" ],
+      "description": "Description of NOMAD repository dataset"
+    }, {
+      "name": "repository_pid",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_info" ],
+      "description": "Permanent identifier of a file/calculation in NOMAD repository"
+    }, {
+      "name": "repository_uri",
+      "dtypeStr": "C",
+      "superNames": [ "section_repository_info" ],
+      "description": "URI referring to the parsed file in the original upload to repository (equivalent of mainFileUri before repackaging)"
     }]
 }
