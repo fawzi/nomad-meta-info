@@ -680,6 +680,11 @@
       "superNames": [ "section_run" ],
       "description": "Section containing information about the original upload to NOMAD repository"
     }, {
+      "name": "upload_id",
+      "dtypeStr": "i",
+      "superNames": [ "section_repository_info" ],
+      "description": "Unique ID of the upload 'block' (upload could have been split into many archives)"
+    }, {
       "name": "section_uploader",
       "kindStr": "type_section",
       "superNames": [ "section_repository_info" ],
