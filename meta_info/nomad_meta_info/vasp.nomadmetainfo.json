@@ -23,6 +23,19 @@
         "program_info"
       ]
     }, {
+      "description": "reference to the atom kinds of each atom",
+      "dtypeStr": "r",
+      "name": "x_vasp_atom_kind_refs",
+      "referencedSections": [
+        "section_method_atom_kind"
+      ],
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "algorithm: Normal (Davidson) | Fast | Very_Fast (RMM-DIIS) | Conjugate | All | Damped | Subrot | Eigenval | None | Nothing | Exact | Diag. Value stored in incar.",
       "dtypeStr": "C",
       "name": "x_vasp_incar_ALGO",
