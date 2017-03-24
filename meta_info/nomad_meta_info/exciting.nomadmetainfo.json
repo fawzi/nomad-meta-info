@@ -414,6 +414,15 @@
         "x_exciting_section_atoms_group"
       ]
     }, {
+      "description": "number to identify the atoms of a species on which a magnetic field is applied",
+      "dtypeStr": "C",
+      "name": "x_exciting_MT_external_magnetic_field_atom_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    },  {
       "description": "x component of atomic position",
       "dtypeStr": "f",
       "name": "x_exciting_geometry_atom_positions_x",
@@ -441,6 +450,33 @@
         "x_exciting_section_atoms_group"
       ]
     }, {
+      "description": "x component of the magnetic field",
+      "dtypeStr": "f",
+      "name": "x_exciting_MT_external_magnetic_field_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    }, {
+      "description": "y component of the magnetic field",
+      "dtypeStr": "f",
+      "name": "x_exciting_MT_external_magnetic_field_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    }, {
+      "description": "z component of the magnetic field",
+      "dtypeStr": "f",
+      "name": "x_exciting_MT_external_magnetic_field_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    },  {
       "description": "x component of lattice vector",
       "dtypeStr": "f",
       "name": "x_exciting_geometry_lattice_vector_x",
@@ -781,6 +817,13 @@
       "superNames": [
         "x_exciting_section_atoms_group"
       ]
+    }, {
+      "description": "whether the magnetic field is given in cartesian or vector coordinates",
+      "dtypeStr": "C",
+      "name": "x_exciting_magnetic_field_format",
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
     },  {
       "description": "Maximum number of plane-waves",
       "dtypeStr": "i",
@@ -1002,5 +1045,172 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
+    }, {
+      "description": "Coordinates of the $k$ points (in the basis of the reciprocal lattice vectors) used for the evaluation of the eigenvalues tabulated in eigenvalues_values.",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_qp_eigenvalues_kpoints",
+      "shape": [
+        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+        3
+      ],
+      "superNames": [
+        "x_exciting_section_GW_qp_eigenvalues"
+      ]
+    }, {
+      "description": "Occupation of the eigenstates. The corresponding eigenvalues (energy) are given in eigenvalues_values. The coordinates in the reciprocal space are defined in eigenvalues_kpoints.",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_qp_eigenvalues_occupation",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+        "x_exciting_GW_qp_number_of_eigenvalues"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_qp_eigenvalues"
+      ]
+    }, {
+      "description": "Values of the (electronic-energy) eigenvalues. The coordinates of the corresponding eigenstates in the reciprocal space are defined in eigenvalues_kpoints and their occupations are given in eigenvalues_occupation.",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_qp_eigenvalues_values",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+        "x_exciting_GW_qp_number_of_eigenvalues"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_qp_eigenvalues"
+      ],
+      "units": "J"
+    }, {
+      "description": "Linearization prefactor",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_qp_linearization_prefactor",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+        "x_exciting_GW_qp_number_of_eigenvalues"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_qp_eigenvalues"
+      ]
+    }, {
+      "description": "diagonal matrix elements of the exchange self-energy",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_self_energy_x",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+        "x_exciting_GW_qp_number_of_eigenvalues"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_self_energy"
+      ],
+      "units": "J"
+    }, {
+      "description": "diagonal matrix elements of the correlation self-energy",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_self_energy_c",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+        "x_exciting_GW_qp_number_of_eigenvalues"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_self_energy"
+      ],
+      "units": "J"
+    }, {
+      "description": "Gives the number of $k$ points, see eigenvalues_kpoints. $k$ points are calculated within a run and are irreducible if a symmetry is used.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_qp_eigenvalues"
+      ]
+    }, {
+      "description": "Gives the number of eigenvalues, see eigenvalues_values.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_exciting_GW_qp_number_of_eigenvalues",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_qp_eigenvalues"
+      ]
+    }, {
+      "description": "section containing all the GW metadata",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "section containing the self energy",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_self_energy",
+      "superNames": [
+        "x_exciting_section_GW"
+      ]
+    },  {
+      "description": "section containing all the GW metadata",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_method",
+      "superNames": [
+        "x_exciting_section_GW"
+      ]
+    }, {
+      "description": "section containing the GW eigenvalues",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_qp_eigenvalues",
+      "superNames": [
+        "x_exciting_section_GW"
+      ]
+    }, {
+      "description": "Array containing the set of discrete energy values for the GW total density of states (DOS).",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_dos_energies",
+      "shape": [
+        "x_exciting_GW_number_of_dos_values"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_dos"
+      ],
+      "units": "J"
+    }, {
+      "description": "Values (number of states for a given energy, the set of discrete energy values is given in x_exciting_GW_dos_energies) of density of states.",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_dos_values",
+      "shape": [
+        "number_of_spin_channels",
+        "x_exciting_GW_number_of_dos_values"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_dos"
+      ]
+    }, {
+      "description": "Gives the number of energy values for the density of states (DOS), see x_exciting_GW_dos_energies.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_exciting_GW_number_of_dos_values",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_dos"
+      ]
+    }, {
+      "description": "Section collecting information of the GW total density of states (DOS) evaluation.",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_dos",
+      "repeats": true,
+      "superNames": [
+        "x_exciting_section_GW"
+      ]
+    }, {
+      "description": "GW methodology",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_type",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_method"
+      ]
     }]
 }
