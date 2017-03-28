@@ -1205,6 +1205,36 @@
         "x_exciting_section_GW"
       ]
     }, {
+      "description": "Section collecting the information on a $k$-band.",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_k_band",
+      "repeats": true,
+      "superNames": [
+        "x_exciting_section_GW"
+      ]
+    }, {
+      "derived": true,
+      "description": "$k$-dependent energies of the electronic band segment. This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
+      "dtypeStr": "f",
+      "name": "x_exciting_GW_band_energies",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_k_points_per_segment",
+        "number_of_band_segment_eigenvalues"
+      ],
+      "superNames": [
+        "x_exciting_section_GW_k_band_segment"
+      ],
+      "units": "J"
+    }, {
+      "description": "Section collecting the information on a $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ space.\n\nThe band structures are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies for each eigenstate, at each $k$ point, segment, and spin channel are stored in x_exciting_GW_band_energies. The labels for the segment are specified in band_segm_labels.",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_k_band_segment",
+      "repeats": true,
+      "superNames": [
+        "x_exciting_section_GW_k_band"
+      ]
+    }, {
       "description": "GW methodology",
       "dtypeStr": "C",
       "name": "x_exciting_GW_type",
