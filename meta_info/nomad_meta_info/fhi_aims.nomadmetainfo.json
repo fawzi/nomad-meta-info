@@ -818,6 +818,24 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
+      "name": "x_fhi_aims_controlInOut_species_cut_pot_scale",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
+      "name": "x_fhi_aims_controlInOut_species_cut_pot_width",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_fhi_aims_section_controlInOut_atom_species"
+      ]
+    }, {
+      "description": "-",
+      "dtypeStr": "f",
       "name": "x_fhi_aims_controlInOut_species_cut_pot",
       "repeats": true,
       "shape": [],
@@ -1394,7 +1412,7 @@
       "name": "x_fhi_aims_section_controlInOut_atom_species",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "section_atom_type"
       ]
     }, {
       "description": "-",
