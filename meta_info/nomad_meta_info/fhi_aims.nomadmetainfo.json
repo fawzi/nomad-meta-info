@@ -147,37 +147,37 @@
       "description": "-",
       "dtypeStr": "C",
       "name": "x_fhi_aims_controlIn_basis_func_l",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlIn_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
       "name": "x_fhi_aims_controlIn_basis_func_n",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlIn_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
       "name": "x_fhi_aims_controlIn_basis_func_radius",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlIn_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
       "name": "x_fhi_aims_controlIn_basis_func_type",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlIn_basis_func"
       ]
     }, {
       "description": "-",
@@ -210,16 +210,18 @@
         "x_fhi_aims_section_controlIn_basis_set"
       ]
     }, {
-      "description": "first parameter of division",
+      "description": "first parameter of division (position)",
       "dtypeStr": "f",
       "name": "x_fhi_aims_controlIn_division1",
+      "repeats": true,
       "superNames": [
         "x_fhi_aims_section_controlIn_basis_set"
       ]
     }, {
-      "description": "second parameter of division",
-      "dtypeStr": "f",
+      "description": "second parameter of division (n points)",
+      "dtypeStr": "i",
       "name": "x_fhi_aims_controlIn_division2",
+      "repeats": true,
       "superNames": [
         "x_fhi_aims_section_controlIn_basis_set"
       ]
@@ -1399,6 +1401,13 @@
         "section_scf_iteration"
       ],
       "units": "J"
+    }, {
+      "description": "definition of a single basis function in the basis set",
+      "kindStr": "type_section",
+      "name": "x_fhi_aims_section_controlIn_basis_func",
+      "superNames": [
+        "x_fhi_aims_section_controlIn_basis_set"
+      ]
     }, {
       "description": "-",
       "kindStr": "type_section",
