@@ -57,6 +57,24 @@
       "name": "section_stats",
       "superNames": []
     }, {
+      "description": "length of meta info",
+      "dtypeStr": "i64",
+      "name": "stats_meta_length",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_stats"
+      ]
+    }, {
+      "description": "meta infos contained in this calculation",
+      "dtypeStr": "C",
+      "name": "stats_meta_present",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_stats"
+      ]
+    }, {
       "description": "atom number of an atom present in the calculations, 0 is an undefined atom X",
       "dtypeStr": "i",
       "name": "stats_per_atom_atom_number",

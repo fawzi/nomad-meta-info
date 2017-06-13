@@ -23,7 +23,7 @@
         "archive_context"
       ]
     }, {
-      "description": "Atomic number Z of the a.",
+      "description": "Atomic number Z of the atom.",
       "dtypeStr": "i",
       "name": "atom_atom_number",
       "shape": [
@@ -205,6 +205,16 @@
       ],
       "superNames": [
         "section_atom_projected_dos"
+      ]
+    }, {
+      "derived": true,
+      "description": "Species of the atom (normally the atomic number Z, 0 or negative for unidentifed species or particles that are not atoms.",
+      "dtypeStr": "i",
+      "name": "atom_species",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "Velocities of the nuclei, defined as the change in Cartesian coordinates of the nuclei with respect to time.",
@@ -2903,8 +2913,7 @@
       "description": "Every section_springer_material contains results of classification of materials with the same formula according to Springer Materials - it contains section_springer_classsification, section_springer_compound, section_springer_id, section_springer_references",
       "kindStr": "type_section",
       "name": "section_springer_material",
-      "superNames": [
-      ]
+      "superNames": []
     }, {
       "description": "Contains the information about references related to current material according to Springer Materials",
       "kindStr": "type_section",
@@ -3817,10 +3826,37 @@
         "section_system"
       ]
     }, {
+      "derived": true,
+      "description": "Composition, i.e. cumulative chemical formula with atoms ordered by decreasing atomic number Z.",
+      "dtypeStr": "C",
+      "name": "system_composition",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Flag set is the configuration is consistent",
+      "dtypeStr": "b",
+      "name": "system_configuration_consistent",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Specifies the name of the system. This information is provided by the user in some codes and is stored here for debugging or visualization purposes.",
       "dtypeStr": "C",
       "name": "system_name",
       "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Composition, i.e. cumulative chemical with atoms ordered by decreasing atomic number Z reweighted so that the sum is close to 100, and values are rounded up, and are stable (i.e. it is a fixed point).",
+      "dtypeStr": "C",
+      "name": "system_reweighted_composition",
       "shape": [],
       "superNames": [
         "section_system"
