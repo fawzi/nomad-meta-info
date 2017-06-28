@@ -10,7 +10,6 @@
       "description": "stats by atom number",
       "kindStr": "type_section",
       "name": "section_stats_per_atom",
-      "shape": [],
       "superNames": [
         "section_stats"
       ]
@@ -48,6 +47,13 @@
       "description": "statistics per parser",
       "kindStr": "type_section",
       "name": "section_stats_per_parser",
+      "superNames": [
+        "section_stats"
+      ]
+    }, {
+      "description": "unique values for selected meta infos",
+      "kindStr": "type_section",
+      "name": "section_stats_values",
       "superNames": [
         "section_stats"
       ]
@@ -177,6 +183,23 @@
       "shape": [],
       "superNames": [
         "section_stats_per_parser"
+      ]
+    }, {
+      "description": "meta info whose values are cached here",
+      "dtypeStr": "C",
+      "name": "stats_values_meta_name",
+      "shape": [],
+      "superNames": [
+        "section_stats_values"
+      ]
+    }, {
+      "description": "unique string values for the meta info cached here",
+      "dtypeStr": "C",
+      "name": "stats_values_string_values",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_stats_values"
       ]
     }]
 }
