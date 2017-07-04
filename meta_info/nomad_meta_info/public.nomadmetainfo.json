@@ -2954,7 +2954,9 @@
       "kindStr": "type_section",
       "name": "section_volumetric_data",
       "shape": [],
-      "superNames": []
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "Section containing one of the exchange-correlation (XC) functionals for the present section_method that are combined to form the XC_functional.",
       "kindStr": "type_section",
