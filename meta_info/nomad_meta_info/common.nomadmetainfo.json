@@ -76,6 +76,48 @@
         "section_atom_type"
       ]
     }, {
+      "description": "First name of a author of NOMAD repository data (includes middle names)",
+      "dtypeStr": "C",
+      "name": "author_first_name",
+      "superNames": [
+        "section_author_info"
+      ]
+    }, {
+      "description": "Last name of a author to NOMAD repository data",
+      "dtypeStr": "C",
+      "name": "author_last_name",
+      "superNames": [
+        "section_author_info"
+      ]
+    }, {
+      "description": "Name (fista and last name) of an author of NOMAD repository data",
+      "dtypeStr": "C",
+      "name": "author_name",
+      "superNames": [
+        "section_author_info"
+      ]
+    }, {
+      "description": "Identifier of the author used in the repository",
+      "dtypeStr": "i",
+      "name": "author_repository_id",
+      "superNames": [
+        "section_author_info"
+      ]
+    }, {
+      "description": "The type of citation (internal or external)",
+      "dtypeStr": "C",
+      "name": "citation_type",
+      "superNames": [
+        "section_citation"
+      ]
+    }, {
+      "description": "String defining the citation",
+      "dtypeStr": "C",
+      "name": "citation_value",
+      "superNames": [
+        "section_citation"
+      ]
+    }, {
       "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last number_of_topology_atoms.",
       "dtypeStr": "i",
       "name": "constraint_atoms",
@@ -103,6 +145,72 @@
         "section_constraint"
       ]
     }, {
+      "description": "Name of NOMAD repository dataset",
+      "dtypeStr": "C",
+      "name": "dataset_name",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
+      "description": "Type of DFT+U functional (such as DFT/DFT+U double-counting compensation). Valid names are described in the [dft\\_plus\\_u\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/dft-plus-u-functional).",
+      "dtypeStr": "C",
+      "name": "dft_plus_u_functional",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: atom index (references index of atom_labels/atom_positions)",
+      "dtypeStr": "i",
+      "name": "dft_plus_u_orbital_atom",
+      "shape": [],
+      "superNames": [
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: value J (exchange interaction)",
+      "dtypeStr": "f",
+      "name": "dft_plus_u_orbital_J",
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: orbital label (normally (n,l)), notation: '3d', '4f', ...",
+      "dtypeStr": "C",
+      "name": "dft_plus_u_orbital_label",
+      "shape": [],
+      "superNames": [
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: value U_{effective} (U-J), if implementation uses it",
+      "dtypeStr": "f",
+      "name": "dft_plus_u_orbital_U_effective",
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U-orbital setting: value U (on-site Coulomb interaction)",
+      "dtypeStr": "f",
+      "name": "dft_plus_u_orbital_U",
+      "shape": [],
+      "superNames": [
+        "energy_value",
+        "section_dft_plus_u_orbital"
+      ]
+    }, {
+      "description": "DFT+U: Type of orbitals used for projection in order to calculate occupation numbers. Valid names are described in the [dft\\_plus\\_u\\_projection\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/dft-plus-u-projection-type).",
+      "dtypeStr": "C",
+      "name": "dft_plus_u_projection_type",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
       "dtypeStr": "f",
       "name": "energy_C_mGGA",
@@ -110,6 +218,84 @@
       "shape": [],
       "superNames": [
         "energy_type_C"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fermi energy (separates occupied from unoccupied single-particle states in metals) during the self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "energy_reference_fermi_iteration",
+      "repeats": false,
+      "shape": [
+        "number_of_spin_channels"
+      ],
+      "superNames": [
+        "energy_type_reference",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Fermi energy (separates occupied from unoccupied single-particle states in metals)",
+      "dtypeStr": "f",
+      "name": "energy_reference_fermi",
+      "repeats": false,
+      "shape": [
+        "number_of_spin_channels"
+      ],
+      "superNames": [
+        "energy_type_reference",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Highest occupied single-particle state energy (in insulators or HOMO energy in finite systems) during the self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "energy_reference_highest_occupied_iteration",
+      "repeats": false,
+      "shape": [
+        "number_of_spin_channels"
+      ],
+      "superNames": [
+        "energy_type_reference",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Highest occupied single-particle state energy (in insulators or HOMO energy in finite systems)",
+      "dtypeStr": "f",
+      "name": "energy_reference_highest_occupied",
+      "repeats": false,
+      "shape": [
+        "number_of_spin_channels"
+      ],
+      "superNames": [
+        "energy_type_reference",
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Lowest unoccupied single-particle state energy (in insulators or LUMO energy in finite systems) during the self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "energy_reference_lowest_unoccupied_iteration",
+      "repeats": false,
+      "shape": [
+        "number_of_spin_channels"
+      ],
+      "superNames": [
+        "energy_type_reference",
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Lowest unoccupied single-particle state energy (in insulators or LUMO energy in finite systems)",
+      "dtypeStr": "f",
+      "name": "energy_reference_lowest_unoccupied",
+      "repeats": false,
+      "shape": [
+        "number_of_spin_channels"
+      ],
+      "superNames": [
+        "energy_type_reference",
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -124,72 +310,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Fermi energy (separates occupied from unoccupied single-particle states in metals)",
-      "dtypeStr": "f",
-      "name": "energy_reference_fermi",
-      "repeats": false,
-      "shape": ["number_of_spin_channels"],
-      "superNames": [
-        "energy_type_reference",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "Highest occupied single-particle state energy (in insulators or HOMO energy in finite systems)",
-      "dtypeStr": "f",
-      "name": "energy_reference_highest_occupied",
-      "repeats": false,
-      "shape": ["number_of_spin_channels"],
-      "superNames": [
-        "energy_type_reference",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "Lowest unoccupied single-particle state energy (in insulators or LUMO energy in finite systems)",
-      "dtypeStr": "f",
-      "name": "energy_reference_lowest_unoccupied",
-      "repeats": false,
-      "shape": ["number_of_spin_channels"],
-      "superNames": [
-        "energy_type_reference",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "Fermi energy (separates occupied from unoccupied single-particle states in metals) during the self-consistent field (SCF) iterations.",
-      "dtypeStr": "f",
-      "name": "energy_reference_fermi_iteration",
-      "repeats": false,
-      "shape": ["number_of_spin_channels"],
-      "superNames": [
-        "energy_type_reference",
-        "section_scf_iteration"
-      ],
-      "units": "J"
-    }, {
-      "description": "Highest occupied single-particle state energy (in insulators or HOMO energy in finite systems) during the self-consistent field (SCF) iterations.",
-      "dtypeStr": "f",
-      "name": "energy_reference_highest_occupied_iteration",
-      "repeats": false,
-      "shape": ["number_of_spin_channels"],
-      "superNames": [
-        "energy_type_reference",
-        "section_scf_iteration"
-      ],
-      "units": "J"
-    }, {
-      "description": "Lowest unoccupied single-particle state energy (in insulators or LUMO energy in finite systems) during the self-consistent field (SCF) iterations.",
-      "dtypeStr": "f",
-      "name": "energy_reference_lowest_unoccupied_iteration",
-      "repeats": false,
-      "shape": ["number_of_spin_channels"],
-      "superNames": [
-        "energy_type_reference",
-        "section_scf_iteration"
-      ],
-      "units": "J"
-    }, {
       "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
       "dtypeStr": "f",
       "name": "energy_X_mGGA",
@@ -199,6 +319,17 @@
         "energy_type_X"
       ],
       "units": "J"
+    }, {
+      "description": "Excitation energies.",
+      "dtypeStr": "f",
+      "name": "excitation_energies",
+      "shape": [
+        "number_of_excited_states"
+      ],
+      "superNames": [
+        "energy_value",
+        "section_excited_states"
+      ]
     }, {
       "description": "List of the indexes involved in this interaction. The fist atom has index 1, the last atom index number_of_topology_atoms.",
       "dtypeStr": "i",
@@ -414,9 +545,20 @@
       "dtypeStr": "f",
       "name": "number_of_electrons",
       "repeats": false,
-      "shape": ["number_of_spin_channels"],
+      "shape": [
+        "number_of_spin_channels"
+      ],
       "superNames": [
         "configuration_core"
+      ]
+    }, {
+      "description": "Number of excited states.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_excited_states",
+      "shape": [],
+      "superNames": [
+        "section_excited_states"
       ]
     }, {
       "description": "Number of interactions of this type.",
@@ -464,11 +606,164 @@
         "section_topology"
       ]
     }, {
+      "description": "Excited states oscillator strengths.",
+      "dtypeStr": "f",
+      "name": "oscillator_strengths",
+      "shape": [
+        "number_of_excited_states"
+      ],
+      "superNames": [
+        "section_excited_states"
+      ]
+    }, {
+      "description": "Base path of the raw data in the upload, these directories are *not* created in the archive",
+      "dtypeStr": "C",
+      "name": "raw_data_base_path",
+      "superNames": [
+        "section_raw_data"
+      ]
+    }, {
+      "description": "paths stored in the archive, all subfiles are stored along with these",
+      "dtypeStr": "C",
+      "name": "raw_data_content_roots",
+      "repeats": true,
+      "superNames": [
+        "section_raw_data"
+      ]
+    }, {
+      "description": "When the raw data archive was created",
+      "dtypeStr": "C",
+      "name": "raw_data_creation_date",
+      "repeats": true,
+      "superNames": [
+        "section_raw_data"
+      ]
+    }, {
+      "description": "Unique identifier of the raw data archive",
+      "dtypeStr": "C",
+      "name": "raw_data_gid",
+      "superNames": [
+        "section_raw_data"
+      ]
+    }, {
+      "description": "kind of access this data has currently",
+      "dtypeStr": "C",
+      "name": "repository_access_now",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Atomic elements used in this calculation",
+      "dtypeStr": "C",
+      "name": "repository_atomic_elements",
+      "repeats": true,
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "String identifying the type of basis set used in this calculation",
+      "dtypeStr": "C",
+      "name": "repository_basis_set_type",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "checksum of the calculation",
+      "dtypeStr": "C",
+      "name": "repository_checksum",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Chemical formula (composition) calculation",
+      "dtypeStr": "C",
+      "name": "repository_chemical_formula",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "String identifying the crystal system of this calculation",
+      "dtypeStr": "C",
+      "name": "repository_crystal_system",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Date this calculation did become, or will become open access",
+      "dtypeStr": "C",
+      "name": "repository_open_date",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "String identifying the parser used to parse the information for the repository",
+      "dtypeStr": "C",
+      "name": "repository_parser_id",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Permanent identifier of a file/calculation in NOMAD repository",
+      "dtypeStr": "C",
+      "name": "repository_pid",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "String identifying the program used to generate this calculation",
+      "dtypeStr": "C",
+      "name": "repository_program_name",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "space group of the geometry of this calculation",
+      "dtypeStr": "i",
+      "name": "repository_spacegroup_nr",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "String identifying the type of system of this calculation",
+      "dtypeStr": "C",
+      "name": "repository_system_type",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "URI referring to the parsed file in the original upload to repository (equivalent of mainFileUri before repackaging)",
+      "dtypeStr": "C",
+      "name": "repository_uri",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "String identifying the xc treatment used in this calculation",
+      "dtypeStr": "C",
+      "name": "repository_xc_treatment",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
       "description": "Section describing a type of atom in the system.",
       "kindStr": "type_section",
       "name": "section_atom_type",
       "superNames": [
         "section_topology"
+      ]
+    }, {
+      "description": "Information about the authors of data uploaded to NOMAD repository",
+      "kindStr": "type_section",
+      "name": "section_author_info",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Section describing a citation",
+      "kindStr": "type_section",
+      "name": "section_citation",
+      "superNames": [
+        "section_repository_info"
       ]
     }, {
       "description": "Section describing a constraint between arbitrary atoms.",
@@ -477,6 +772,20 @@
       "superNames": [
         "section_topology",
         "settings_constraint"
+      ]
+    }, {
+      "description": "Section for DFT+U-settings of a single orbital",
+      "kindStr": "type_section",
+      "name": "section_dft_plus_u_orbital",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Excited states properties.",
+      "kindStr": "type_section",
+      "name": "section_excited_states",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Section containing the description of a bonded interaction between arbitrary atoms.",
@@ -517,11 +826,46 @@
         "section_topology"
       ]
     }, {
+      "description": "Information on a raw data archive that contain open access data of this upload",
+      "kindStr": "type_section",
+      "name": "section_raw_data",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "NOMAD repository dataset tagging info",
+      "kindStr": "kind_section",
+      "name": "section_repository_dataset",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Section containing information about the original upload to NOMAD repository",
+      "kindStr": "type_section",
+      "name": "section_repository_info",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Information about the person with whom this calculation is shared with",
+      "kindStr": "type_section",
+      "name": "section_shared_with",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
       "description": "Section containing the definition of topology (connectivity among atoms in force fileds), force field, and constraints of a system.",
       "kindStr": "type_section",
       "name": "section_topology",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Information about the person who uploaded the data to NOMAD repository",
+      "kindStr": "type_section",
+      "name": "section_uploader",
+      "superNames": [
+        "section_repository_info"
       ]
     }, {
       "description": "Parameters of an atom within a molecule.",
@@ -540,6 +884,27 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_interaction",
       "superNames": []
+    }, {
+      "description": "First name of someone this calculation is shared with",
+      "dtypeStr": "C",
+      "name": "shared_with_first_name",
+      "superNames": [
+        "section_shared_with"
+      ]
+    }, {
+      "description": "Last name of the uploader to NOMAD repository",
+      "dtypeStr": "C",
+      "name": "shared_with_last_name",
+      "superNames": [
+        "section_shared_with"
+      ]
+    }, {
+      "description": "username of a person this calculation is shared with",
+      "dtypeStr": "C",
+      "name": "shared_with_username",
+      "superNames": [
+        "section_shared_with"
+      ]
     }, {
       "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
       "dtypeStr": "C",
@@ -561,112 +926,9 @@
         "section_system"
       ]
     }, {
-      "description": "DFT+U: Type of orbitals used for projection in order to calculate occupation numbers. Valid names are described in the [dft\\_plus\\_u\\_projection\\_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/dft-plus-u-projection-type).",
-      "name": "dft_plus_u_projection_type",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Type of DFT+U functional (such as DFT/DFT+U double-counting compensation). Valid names are described in the [dft\\_plus\\_u\\_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/dft-plus-u-functional).",
-      "name": "dft_plus_u_functional",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Section for DFT+U-settings of a single orbital",
-      "name": "section_dft_plus_u_orbital",
-      "kindStr": "type_section",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "DFT+U-orbital setting: atom index (references index of atom_labels/atom_positions)",
-      "name": "dft_plus_u_orbital_atom",
-      "dtypeStr": "i",
-      "shape": [],
-      "superNames": [
-        "section_dft_plus_u_orbital"
-      ]
-    }, {
-      "description": "DFT+U-orbital setting: orbital label (normally (n,l)), notation: '3d', '4f', ...",
-      "name": "dft_plus_u_orbital_label",
-      "dtypeStr": "C",
-      "shape": [],
-      "superNames": [
-        "section_dft_plus_u_orbital"
-      ]
-    }, {
-      "description": "DFT+U-orbital setting: value U (on-site Coulomb interaction)",
-      "name": "dft_plus_u_orbital_U",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "energy_value",
-        "section_dft_plus_u_orbital"
-      ]
-    }, {
-      "description": "DFT+U-orbital setting: value J (exchange interaction)",
-      "name": "dft_plus_u_orbital_J",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "energy_value",
-        "section_dft_plus_u_orbital"
-      ]
-    }, {
-      "description": "DFT+U-orbital setting: value U_{effective} (U-J), if implementation uses it",
-      "name": "dft_plus_u_orbital_U_effective",
-      "dtypeStr": "f",
-      "shape": [],
-      "superNames": [
-        "energy_value",
-        "section_dft_plus_u_orbital"
-      ]
-    }, {
-      "description": "Excited states properties.",
-      "kindStr": "type_section",
-      "name": "section_excited_states",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "Number of excited states.",
-      "name": "number_of_excited_states",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "shape": [],
-      "superNames": [
-        "section_excited_states"
-      ]
-    }, {
-      "description": "Excitation energies.",
-      "name": "excitation_energies",
-      "dtypeStr": "f",
-      "shape": [
-        "number_of_excited_states"
-      ],
-      "superNames": [
-        "energy_value",
-        "section_excited_states"
-      ]
-    }, {
-      "description": "Excited states oscillator strengths.",
-      "name": "oscillator_strengths",
-      "dtypeStr": "f",
-      "shape": [
-        "number_of_excited_states"
-      ],
-      "superNames": [
-        "section_excited_states"
-      ]
-    }, {
       "description": "Transition dipole moments.",
-      "name": "transition_dipole_moments",
       "dtypeStr": "f",
+      "name": "transition_dipole_moments",
       "shape": [
         "number_of_excited_states",
         3
@@ -675,74 +937,60 @@
         "section_excited_states"
       ]
     }, {
-      "name": "section_repository_info",
-      "kindStr": "type_section",
-      "superNames": [ "section_run" ],
-      "description": "Section containing information about the original upload to NOMAD repository"
-    }, {
-      "name": "upload_id",
-      "dtypeStr": "i",
-      "superNames": [ "section_repository_info" ],
-      "description": "Unique ID of the upload 'block' (upload could have been split into many archives)"
-    }, {
-      "name": "section_uploader",
-      "kindStr": "type_section",
-      "superNames": [ "section_repository_info" ],
-      "description": "Information about the person who uploaded the data to NOMAD repository"
-    }, {
-      "name": "uploader_first_name",
+      "description": "Comment on data uploaded to NOMAD repository",
       "dtypeStr": "C",
-      "superNames": [ "section_uploader" ],
-      "description": "First name of the uploader to NOMAD repository (includes middle names)"
-    }, {
-      "name": "uploader_last_name",
-      "dtypeStr": "C",
-      "superNames": [ "section_uploader" ],
-      "description": "Last name of the uploader to NOMAD repository"
-    }, {
-      "name": "section_coauthor_info",
-      "kindStr": "type_section",
-      "superNames": [ "section_repository_info" ],
-      "description": "Information about the coauthors of data uploaded to NOMAD repository"
-    }, {
-      "name": "coauthor_first_name",
-      "dtypeStr": "C",
-      "superNames": [ "section_coauthor_info" ],
-      "description": "First name of a coauthor of NOMAD repository data (includes middle names)"
-    }, {
-      "name": "coauthor_last_name",
-      "dtypeStr": "C",
-      "superNames": [ "section_coauthor_info" ],
-      "description": "Last name of a coauthor to NOMAD repository data"
-    }, {
       "name": "upload_comment",
-      "dtypeStr": "C",
-      "superNames": [ "section_repository_info" ],
-      "description": "Comment on data uploaded to NOMAD repository"
+      "superNames": [
+        "section_repository_info"
+      ]
     }, {
-      "name": "upload_date",
+      "description": "Date/time when the data was uploaded to NOMAD repository (offset from *Unix epoch* (00:00:00 UTC on 1 January 1970) in seconds)",
       "dtypeStr": "f",
-      "superNames": [ "section_repository_info" ],
-      "description": "Date/time when the data was uploaded to NOMAD repository (offset from *Unix epoch* (00:00:00 UTC on 1 January 1970) in seconds)"
+      "name": "upload_date",
+      "superNames": [
+        "section_repository_info"
+      ]
     }, {
-      "name": "section_repository_dataset",
-      "kindStr": "kind_section",
-      "superNames": [ "section_repository_info" ],
-      "description": "NOMAD repository dataset tagging info"
+      "description": "Unique ID of the upload 'block' (upload could have been split into many archives)",
+      "dtypeStr": "i",
+      "name": "upload_id",
+      "superNames": [
+        "section_repository_info"
+      ]
     }, {
-      "name": "dataset_name",
+      "description": "Comment on datarepository identifier for an upload",
       "dtypeStr": "C",
-      "superNames": [ "section_repository_dataset" ],
-      "description": "Name of NOMAD repository dataset"
+      "name": "upload_repository_id",
+      "superNames": [
+        "section_repository_info"
+      ]
     }, {
-      "name": "repository_pid",
+      "description": "First name of the uploader to NOMAD repository (includes middle names)",
       "dtypeStr": "C",
-      "superNames": [ "section_repository_info" ],
-      "description": "Permanent identifier of a file/calculation in NOMAD repository"
+      "name": "uploader_first_name",
+      "superNames": [
+        "section_uploader"
+      ]
     }, {
-      "name": "repository_uri",
+      "description": "Last name of the uploader to NOMAD repository",
       "dtypeStr": "C",
-      "superNames": [ "section_repository_info" ],
-      "description": "URI referring to the parsed file in the original upload to repository (equivalent of mainFileUri before repackaging)"
+      "name": "uploader_last_name",
+      "superNames": [
+        "section_uploader"
+      ]
+    }, {
+      "description": "First name of the uploader to NOMAD repository (includes middle names)",
+      "dtypeStr": "i",
+      "name": "uploader_repo_id",
+      "superNames": [
+        "section_uploader"
+      ]
+    }, {
+      "description": "username of the uploader",
+      "dtypeStr": "C",
+      "name": "uploader_username",
+      "superNames": [
+        "section_uploader"
+      ]
     }]
 }
