@@ -2950,6 +2950,12 @@
         "section_frame_sequence"
       ]
     }, {
+      "description": "Section defining a set of volumetric data on a uniform real-space\ngrid.\n\nTo store an array (e.g. a density or a potential), define:\n * three grid point displacement vectors (\"displacements\")\n * number of grid points along each axis (\"nx\", \"ny\" and \"nz\")\n * the origin of the coordinate system, i.e. coordinates of the first grid\n   point (\"origin\")\n * how many spatial functions are represented, e.g., two for a\n   normal spin-polarized density (\"multiplicity\")\n * the values for each grid point (\"values\")\n * the unit that applies to each value (\"units\")\n * the kind of array represented by the volumetric data (\"kind\").\n\nAllowed kinds are (please add new kinds as necessary): \"density\",\n\"potential_hartree\" and \"potential_effective\".  Densities and\npotentials that are spin-polarized should have multiplicity two.\nRules for more complex spins are to be decided when necessary.",
+      "kindStr": "type_section",
+      "name": "section_volumetric_data",
+      "shape": [],
+      "superNames": []
+    }, {
       "description": "Section containing one of the exchange-correlation (XC) functionals for the present section_method that are combined to form the XC_functional.",
       "kindStr": "type_section",
       "name": "section_XC_functionals",
@@ -4164,6 +4170,86 @@
         "section_thermodynamical_properties"
       ],
       "units": "J"
+    }, {
+      "description": "displacement vectors between grid points along each axis; same indexing rules as lattice_vectors.  In many cases, displacements and number of points are related to lattice_vectors through: [displacement] * [number of points + N] = [lattice_vector],where N is 1 for periodic directions and 0 for non-periodic ones",
+      "dtypeStr": "f",
+      "name": "volumetric_data_displacements",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "The kind of function, e.g. density, potential_hartree, potential_effective",
+      "dtypeStr": "C",
+      "name": "volumetric_data_kind",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "number of functions stored",
+      "dtypeStr": "i",
+      "name": "volumetric_data_multiplicity",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "number of points along x axis",
+      "dtypeStr": "i",
+      "name": "volumetric_data_nx",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "number of points along y axis",
+      "dtypeStr": "i",
+      "name": "volumetric_data_ny",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "number of points along z axis",
+      "dtypeStr": "i",
+      "name": "volumetric_data_nz",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "location of the first grid point; same coordinate system as atom_positions when applicable.",
+      "dtypeStr": "f",
+      "name": "volumetric_data_origin",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "This is the unit of the values stored in volumetric_data_values",
+      "dtypeStr": "C",
+      "name": "volumetric_data_units",
+      "shape": [],
+      "superNames": [
+        "section_volumetric_data"
+      ]
+    }, {
+      "description": "Array of shape (multiplicity, nx, ny, nz) containing the values",
+      "dtypeStr": "f",
+      "name": "volumetric_data_values",
+      "shape": [
+        "volumetric_data_multiplicity",
+        "volumetric_data_nx",
+        "volumetric_data_ny",
+        "volumetric_data_nz"
+      ],
+      "superNames": [
+        "section_volumetric_data"
+      ]
     }, {
       "derived": true,
       "description": "This value describes a DFT exchange-correlation (XC) functional used for evaluating the energy value stored in energy_XC_functional and related quantities (e.g., forces).\n\nIt is a unique short name obtained by combining the data stored in section_XC_functionals, more specifically by combining different XC_functional_name as described in the [XC_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).",
