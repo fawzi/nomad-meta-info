@@ -4195,6 +4195,7 @@
     }, {
       "description": "number of functions stored",
       "dtypeStr": "i",
+      "kindStr": "type_dimension",
       "name": "volumetric_data_multiplicity",
       "shape": [],
       "superNames": [
@@ -4203,6 +4204,7 @@
     }, {
       "description": "number of points along x axis",
       "dtypeStr": "i",
+      "kindStr": "type_dimension",
       "name": "volumetric_data_nx",
       "shape": [],
       "superNames": [
@@ -4211,6 +4213,7 @@
     }, {
       "description": "number of points along y axis",
       "dtypeStr": "i",
+      "kindStr": "type_dimension",
       "name": "volumetric_data_ny",
       "shape": [],
       "superNames": [
@@ -4219,6 +4222,7 @@
     }, {
       "description": "number of points along z axis",
       "dtypeStr": "i",
+      "kindStr": "type_dimension",
       "name": "volumetric_data_nz",
       "shape": [],
       "superNames": [
@@ -4228,14 +4232,6 @@
       "description": "location of the first grid point; same coordinate system as atom_positions when applicable.",
       "dtypeStr": "f",
       "name": "volumetric_data_origin",
-      "shape": [],
-      "superNames": [
-        "section_volumetric_data"
-      ]
-    }, {
-      "description": "This is the unit of the values stored in volumetric_data_values",
-      "dtypeStr": "C",
-      "name": "volumetric_data_units",
       "shape": [],
       "superNames": [
         "section_volumetric_data"
