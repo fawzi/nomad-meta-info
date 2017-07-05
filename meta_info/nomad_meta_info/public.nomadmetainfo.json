@@ -4185,7 +4185,7 @@
       ],
       "units": "m"
     }, {
-      "description": "The kind of function, e.g. density, potential_hartree, potential_effective",
+      "description": "The kind of function, e.g. density, potential_hartree, potential_effective.  The unit of measurement for \"volumetric_data_values\" depends on the kind: Densities are 1/m^3 and potentials are J/m^3.  See [full specification on the wiki](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/volumetric-data).",
       "dtypeStr": "C",
       "name": "volumetric_data_kind",
       "shape": [],
@@ -4237,7 +4237,7 @@
         "section_volumetric_data"
       ]
     }, {
-      "description": "Array of shape (multiplicity, nx, ny, nz) containing the values",
+      "description": "Array of shape (multiplicity, nx, ny, nz) containing the values.  The units of these values depend on which kind of data the values represent; see \"volumetric_data_kind\".",
       "dtypeStr": "f",
       "name": "volumetric_data_values",
       "shape": [
