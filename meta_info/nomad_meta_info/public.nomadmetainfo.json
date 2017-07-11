@@ -3774,6 +3774,15 @@
         "section_springer_id"
       ]
     }, {
+        "description": "Classification according to known prototypes on the basis of the space_group and normalized_wyckoff; adds labels to the calculations
+ - prototype_label (with labels in the same format as in the read_prototypes function: <space_group_number>-<prototype_name>-<Pearson's symbol>).",
+        "kindStr": "C",
+        "name": "prototype_label",
+        "shape": [],
+        "superNames": [
+            "section_system"
+      ]
+    }, {
       "description": "Specifies the method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method, which is stored in stress_tensor.\n\nThis field allows for multiple definitions and evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics and geometry optimization.",
       "dtypeStr": "C",
       "name": "stress_tensor_kind",
