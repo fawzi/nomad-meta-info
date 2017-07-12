@@ -145,9 +145,30 @@
         "section_constraint"
       ]
     }, {
+      "description": "Checksum idendifying the dataset in the repository",
+      "dtypeStr": "C",
+      "name": "dataset_checksum",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
       "description": "Name of NOMAD repository dataset",
       "dtypeStr": "C",
       "name": "dataset_name",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
+      "description": "Unique identifier of the parent NOMAD repository dataset",
+      "dtypeStr": "C",
+      "name": "dataset_parent_pid",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
+      "description": "Unique identifier of a NOMAD repository dataset",
+      "dtypeStr": "C",
+      "name": "dataset_pid",
       "superNames": [
         "section_repository_dataset"
       ]
@@ -689,6 +710,13 @@
         "section_repository_info"
       ]
     }, {
+      "description": "Db identifier for a file/calculation in NOMAD repository",
+      "dtypeStr": "i64",
+      "name": "repository_id",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
       "description": "Date this calculation did become, or will become open access",
       "dtypeStr": "C",
       "name": "repository_open_date",
@@ -958,9 +986,9 @@
         "section_repository_info"
       ]
     }, {
-      "description": "Comment on datarepository identifier for an upload",
+      "description": "identifier for an upload",
       "dtypeStr": "C",
-      "name": "upload_repository_id",
+      "name": "upload_repository_pid",
       "superNames": [
         "section_repository_info"
       ]
