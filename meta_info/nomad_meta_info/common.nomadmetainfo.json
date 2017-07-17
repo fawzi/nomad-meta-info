@@ -773,6 +773,33 @@
         "section_repository_info"
       ]
     }, {
+      "description": "The top level context containing the reponse to an api query, when using jsonAPI they are tipically in the meta part",
+      "dtypeStr": "C",
+      "name": "response_context",
+      "repeats": true,
+      "superNames": []
+    }, {
+      "description": "How many times this message was repeated",
+      "dtypeStr": "i",
+      "name": "response_message_count",
+      "superNames": [
+        "section_response_message"
+      ]
+    }, {
+      "description": "level of the message: 0 fatal, 1 error, 2 warning, 3 debug",
+      "dtypeStr": "i",
+      "name": "response_message_level",
+      "superNames": [
+        "section_response_message"
+      ]
+    }, {
+      "description": "Message outputted by the program formatting the data in the current format",
+      "dtypeStr": "C",
+      "name": "response_message",
+      "superNames": [
+        "section_response_message"
+      ]
+    }, {
       "description": "Section describing a type of atom in the system.",
       "kindStr": "type_section",
       "name": "section_atom_type",
@@ -875,6 +902,13 @@
         "section_run"
       ]
     }, {
+      "description": "Messages outputted by the program formatting the data in the current response",
+      "kindStr": "type_section",
+      "name": "section_response_message",
+      "superNames": [
+        "response_context"
+      ]
+    }, {
       "description": "Information about the person with whom this calculation is shared with",
       "kindStr": "type_section",
       "name": "section_shared_with",
@@ -932,6 +966,14 @@
       "name": "shared_with_username",
       "superNames": [
         "section_shared_with"
+      ]
+    }, {
+      "description": "A meta info whose corresponding data has been shortened",
+      "dtypeStr": "C",
+      "name": "shortened_meta_info",
+      "repeats": true,
+      "superNames": [
+        "response_context"
       ]
     }, {
       "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
