@@ -774,9 +774,8 @@
       ]
     }, {
       "description": "The top level context containing the reponse to an api query, when using jsonAPI they are tipically in the meta part",
-      "dtypeStr": "C",
+      "kindStr": "type_section",
       "name": "response_context",
-      "repeats": true,
       "superNames": []
     }, {
       "description": "How many times this message was repeated",
