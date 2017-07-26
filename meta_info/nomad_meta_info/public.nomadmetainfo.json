@@ -712,6 +712,28 @@
       ],
       "units": "J"
     }, {
+      "description": "Values (number of states for a given energy divided by the numer of atoms, the set of discrete energy values is given in dos_energies) of density (electronic-energy or vibrational-energy) of states.",
+      "dtypeStr": "f",
+      "name": "dos_values_per_atoms",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
+      "description": "Values (number of states for a given energy divided by volume, the set of discrete energy values is given in dos_energies) of density (electronic-energy or vibrational-energy) of states.",
+      "dtypeStr": "f",
+      "name": "dos_values_per_unit_volume",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_dos_values"
+      ],
+      "superNames": [
+        "section_dos"
+      ]
+    }, {
       "description": "Values (number of states for a given energy, the set of discrete energy values is given in dos_energies) of density (electronic-energy or vibrational-energy) of states. This refers to the simulation cell, i.e. integrating over all energies will give the number of electrons in the simulation cell.",
       "dtypeStr": "f",
       "name": "dos_values",
