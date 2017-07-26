@@ -2546,6 +2546,14 @@
         "program_info"
       ]
     }, {
+      "description": "Classification according to known prototypes on the basis of the space_group and normalized_wyckoff; adds labels to the calculations- prototype_label (with labels in the same format as in the read_prototypes function: <space_group_number>-<prototype_name>-<Pearson's symbol>).",
+      "kindStr": "C",
+      "name": "prototype_label",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "The transformation matrix in reduced coordinates and real space for each symmetry operation. For periodic crystals, these can be expressed purely in integers, but for arbitrary point groups, this is not possible.",
       "dtypeStr": "f",
       "name": "reduced_symmetry_matrices",
@@ -3774,14 +3782,6 @@
         "section_springer_id"
       ]
     }, {
-        "description": "Classification according to known prototypes on the basis of the space_group and normalized_wyckoff; adds labels to the calculations- prototype_label (with labels in the same format as in the read_prototypes function: <space_group_number>-<prototype_name>-<Pearson's symbol>).",
-        "kindStr": "C",
-        "name": "prototype_label",
-        "shape": [],
-        "superNames": [
-            "section_system"
-      ]
-    }, {
       "description": "Specifies the method used to compute the stress tensor stored in stress_tensor_value. This is an *alternative* to the stress tensor defined in stress_tensor_method, which is stored in stress_tensor.\n\nThis field allows for multiple definitions and evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics and geometry optimization.",
       "dtypeStr": "C",
       "name": "stress_tensor_kind",
@@ -4240,7 +4240,9 @@
       "description": "location of the first grid point; same coordinate system as atom_positions when applicable.",
       "dtypeStr": "f",
       "name": "volumetric_data_origin",
-      "shape": [3],
+      "shape": [
+        3
+      ],
       "superNames": [
         "section_volumetric_data"
       ]
