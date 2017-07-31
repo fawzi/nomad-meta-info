@@ -43,6 +43,7 @@
       "description": "x coordinate for the atoms of the initial geometry",
       "dtypeStr": "f",
       "name": "x_gamess_atom_x_coord_initial",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
@@ -52,6 +53,7 @@
       "description": "x coordinate for the atoms",
       "dtypeStr": "f",
       "name": "x_gamess_atom_x_coord",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_gamess_section_geometry"
@@ -71,6 +73,7 @@
       "description": "y coordinate for the atoms of the initial geometry",
       "dtypeStr": "f",
       "name": "x_gamess_atom_y_coord_initial",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
@@ -80,6 +83,7 @@
       "description": "y coordinate for the atoms",
       "dtypeStr": "f",
       "name": "x_gamess_atom_y_coord",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_gamess_section_geometry"
@@ -99,6 +103,7 @@
       "description": "z coordinate for the atoms of the initial geometry",
       "dtypeStr": "f",
       "name": "x_gamess_atom_z_coord_initial",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_system"
@@ -108,6 +113,7 @@
       "description": "z coordinate for the atoms",
       "dtypeStr": "f",
       "name": "x_gamess_atom_z_coord",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "x_gamess_section_geometry"
@@ -145,7 +151,7 @@
       "name": "x_gamess_basis_set_diffsp",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Incluse a set of S diffuse functions on light atoms or not",
@@ -153,7 +159,7 @@
       "name": "x_gamess_basis_set_diffs",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Gaussian basis set main name",
@@ -161,7 +167,7 @@
       "name": "x_gamess_basis_set_gbasis",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Number of main Gaussians",
@@ -169,7 +175,7 @@
       "name": "x_gamess_basis_set_igauss",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Number of polarization d function sets on heavy atoms",
@@ -177,7 +183,7 @@
       "name": "x_gamess_basis_set_ndfunc",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Number of polarization f function sets on heavy atoms",
@@ -185,7 +191,7 @@
       "name": "x_gamess_basis_set_nffunc",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Number of polarization p function sets on light atoms",
@@ -193,7 +199,7 @@
       "name": "x_gamess_basis_set_npfunc",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "Exponents of polarization functions",
@@ -201,7 +207,7 @@
       "name": "x_gamess_basis_set_polar",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
       "description": "values of eigenenergies for occupied beta MOs",
@@ -499,6 +505,25 @@
       "superNames": [
         "section_method"
       ]
+    }, {
+      "description": "Final value of the total electronic energy calculated with the method described in XC_method.",
+      "dtypeStr": "f",
+      "name": "x_gamess_energy_scf",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    }, {
+      "description": "Value of the total electronic energy calculated with the method described in XC_method during each self-consistent field (SCF) iteration.",
+      "dtypeStr": "f",
+      "name": "x_gamess_energy_total_scf_iteration",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
     }, {
       "description": "String identifying in an unique way the SCF method used in the calculation.",
       "dtypeStr": "C",
