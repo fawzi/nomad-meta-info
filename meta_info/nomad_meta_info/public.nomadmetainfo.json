@@ -33,6 +33,24 @@
         "section_system"
       ]
     }, {
+      "description": "Identifier used in the source of this calculation. This is an uri like string, with a prefix identifying the source. For example `aflow:<aflow_uid>, `oqmd:<>`, `materials-project:<>`...",
+      "dtypeStr": "C",
+      "name": "source_id",
+      "shape": [
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Link to a webpage describing the object, material,... within the project that calculated this  of this calculation. For example a link to aflow lib calculation, oqmd or material project material",
+      "dtypeStr": "C",
+      "name": "source_link",
+      "shape": [
+      ],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "concentration of the atom species in a variable composition, by default it should be considered an array of ones. Summing these should give the number_of_sites",
       "dtypeStr": "f",
       "name": "atom_concentrations",
