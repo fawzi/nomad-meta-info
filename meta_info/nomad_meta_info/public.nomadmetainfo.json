@@ -2498,28 +2498,28 @@
       ]
     }, {
       "description": "number of contexts evaluated with this processor in the current current calculation.",
-      "dtypeStr": "i",
+      "dtypeStr": "i64",
       "name": "processor_number_of_evaluated_contexts",
       "superNames": [
         "section_processor_info"
       ]
     }, {
       "description": "number of contexts in the current current calculation that had failure for this processor.",
-      "dtypeStr": "i",
+      "dtypeStr": "i64",
       "name": "processor_number_of_failed_contexts",
       "superNames": [
         "section_processor_info"
       ]
     }, {
       "description": "number of contexts skipped by this processor in the current current calculation.",
-      "dtypeStr": "i",
+      "dtypeStr": "i64",
       "name": "processor_number_of_skipped_contexts",
       "superNames": [
         "section_processor_info"
       ]
     }, {
       "description": "number of contexts in the current calculation that where successfully handled by this processor.",
-      "dtypeStr": "i",
+      "dtypeStr": "i64",
       "name": "processor_number_of_successful_contexts",
       "superNames": [
         "section_processor_info"
