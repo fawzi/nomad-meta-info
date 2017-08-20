@@ -674,6 +674,14 @@
         "section_repository_info"
       ]
     }, {
+      "description": "Gid of a raw data archives that contains this calculation",
+      "dtypeStr": "C",
+      "name": "repository_archive_gid",
+      "repeats": true,
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
       "description": "Atomic elements used in this calculation",
       "dtypeStr": "C",
       "name": "repository_atomic_elements",
@@ -727,6 +735,14 @@
       "description": "Db identifier for a file/calculation in NOMAD repository",
       "dtypeStr": "i64",
       "name": "repository_id",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "A nomad uri to normalized calculation corresponding to this calculation",
+      "dtypeStr": "C",
+      "name": "repository_nomad_uri",
+      "repeats": true,
       "superNames": [
         "section_repository_info"
       ]
@@ -911,8 +927,7 @@
       "description": "Section containing information about the original upload to NOMAD repository",
       "kindStr": "type_section",
       "name": "section_repository_info",
-      "superNames": [
-      ]
+      "superNames": []
     }, {
       "description": "Messages outputted by the program formatting the data in the current response",
       "kindStr": "type_section",
