@@ -688,6 +688,13 @@
       "superNames": [
         "section_repository_info"
       ]
+     }, {
+      "description": "calc_id, an internal identifier in the database of a file/calculation in NOMAD repository",
+      "dtypeStr": "i64",
+      "name": "repository_calc_id",
+      "superNames": [
+        "section_repository_info"
+      ]
     }, {
       "description": "checksum of the calculation",
       "dtypeStr": "C",
@@ -706,6 +713,13 @@
       "description": "String identifying the crystal system of this calculation",
       "dtypeStr": "C",
       "name": "repository_crystal_system",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Checksum of the fields used in the NOMAD repository search result table: repository_chemical_formula, repository_spacegroup_nr, repository_basis_set_type, repository_xc_treatment, repository_code_version, repository_access_now, citation_repo_id, repository_comment, author_repository_id. Checksum is Base64 (url safe) encoding of the first 168 bit of SHA-512 prefixed with 'g'",
+      "dtypeStr": "C",
+      "name": "repository_grouping_checksum",
       "superNames": [
         "section_repository_info"
       ]
