@@ -70,17 +70,6 @@
       "units": "J"
     },
     {
-      "description": "Total energy per atom.",
-      "dtypeStr": "f",
-      "name": "atomic_total_energy",
-      "shape": [],
-      "shortname": "E_Tot",
-      "superNames": [
-        "section_atomic_property"
-      ],
-      "units": "J"
-    },
-    {
       "description": "The element symbol in the periodic table.",
       "dtypeStr": "C",
       "name": "atomic_element_symbol",
@@ -101,29 +90,6 @@
       ],
       "units": "J"
     },
-    {
-      "description": "Energy of the valence s orbital for a free atom.",
-      "dtypeStr": "f",
-      "name": "atomic_valence_s_orbital",
-      "shape": [],
-      "shortname": "E_s",
-      "superNames": [
-        "section_atomic_property"
-      ],
-      "units": "J"
-    },
-    {
-      "description": "Energy of the valence p orbital for a free atom.",
-      "dtypeStr": "f",
-      "name": "atomic_valence_p_orbital",
-      "shape": [],
-      "shortname": "E_p",
-      "superNames": [
-        "section_atomic_property"
-      ],
-      "units": "J"
-    },
-
     {
       "description": "Difference between highest occupied and lowest unoccupied single-particle state energy for free atom.",
       "dtypeStr": "f",
@@ -170,12 +136,22 @@
       "description": "In electronic structure theory, calculations may be performed for a spectrum with many excited energy levels. Molecular orbitals (MOs) are made of fractions of atomic orbitals.  All atoms in the molecule provide their atomic orbitals for construction of MOs, but not all atomic orbitals must participate in all  MOs.  For example, the Hartree-Fock method for atoms or molecules assumes that the wave function is a single configuration state function with well-defined quantum numbers and that the energy level is not necessarily the ground state. The lowest unoccupied molecular orbital state for a system is called as LUMO.",
       "dtypeStr": "f",
       "name": "atomic_lumo",
-      "shortname": "E_LUMO",
       "shape": [],
+      "shortname": "E_LUMO",
       "superNames": [
         "section_atomic_property"
       ],
       "units": "J"
+    },
+    {
+      "description": "The melting temperature is the temperature at which a substance changes from solid to liquid state.",
+      "dtypeStr": "f",
+      "name": "atomic_melting_temperature",
+      "shape": [],
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "K"
     },
     {
       "description": "The method used for atomic calculations.",
@@ -220,6 +196,16 @@
       "units": ""
     },
     {
+      "description": "The Pauling electronegativity is defined as the difference between the measured X-Y bond energy with the theoretical X-Y bond energy (computed as the average of the X-X bond energy and the Y-Y bond energy).",
+      "dtypeStr": "f",
+      "name": "atomic_pauling_electronegativity",
+      "shape": [],
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": ""
+    },
+    {
       "description": "Source of atomic property Experiment/ Theory.",
       "dtypeStr": "C",
       "name": "atomic_property_source",
@@ -254,6 +240,16 @@
       "units": "m"
     },
     {
+      "description": "The covalent radius is a measure of the size of an atom that forms part of one covalent bond.",
+      "dtypeStr": "f",
+      "name": "atomic_r_covalent",
+      "shape": [],
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "m"
+    },
+    {
       "description": "Expectation value of the radius $<r>$ of the highest occupied atomic orbital for free atom.",
       "dtypeStr": "f",
       "name": "atomic_r_homo",
@@ -277,6 +273,16 @@
       "description": "Expectation value of the radius $<r>$ of the highest occupied atomic orbital for cationic atom.",
       "dtypeStr": "f",
       "name": "atomic_r_homo_cation",
+      "shape": [],
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "m"
+    },
+    {
+      "description": "The atomic radius of a chemical element is a measure of the size of its atoms, usually the mean or typical distance from the center of the nucleus to the boundary of the surrounding cloud of electrons. Since the boundary is not a well-defined physical entity, there are various non-equivalent definitions of atomic radius. Three widely used definitions of atomic radius are: Van der Waals radius, ionic radius, and covalent radius.",
+      "dtypeStr": "f",
+      "name": "atomic_radius",
       "shape": [],
       "superNames": [
         "section_atomic_property"
@@ -375,6 +381,39 @@
         "section_atomic_property_method"
       ],
       "units": ""
+    },
+    {
+      "description": "Total energy per atom.",
+      "dtypeStr": "f",
+      "name": "atomic_total_energy",
+      "shape": [],
+      "shortname": "E_Tot",
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "J"
+    },
+    {
+      "description": "Energy of the valence p orbital for a free atom.",
+      "dtypeStr": "f",
+      "name": "atomic_valence_p_orbital",
+      "shape": [],
+      "shortname": "E_p",
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "J"
+    },
+    {
+      "description": "Energy of the valence s orbital for a free atom.",
+      "dtypeStr": "f",
+      "name": "atomic_valence_s_orbital",
+      "shape": [],
+      "shortname": "E_s",
+      "superNames": [
+        "section_atomic_property"
+      ],
+      "units": "J"
     },
     {
       "description": "The van der Waals radius, of an atom or molecule is the radius of an imaginary sphere representing the distance of closest approach for another atom(s). The vdW radius corresponds to half of the distance between two atoms where the Pauli repulsion balances the London dispersion attraction.",
