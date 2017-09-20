@@ -3269,7 +3269,7 @@
     }, {
       "derived": true,
       "description": "The Hall number for this system.",
-      "dtypeStr": "C",
+      "dtypeStr": "i",
       "name": "space_group_3D_hall_number",
       "shape": [],
       "superNames": [
@@ -3341,7 +3341,7 @@
     }, {
       "derived": true,
       "description": "Standardized atom positions in reduced units.",
-      "dtypeStr": "i",
+      "dtypeStr": "f",
       "name": "space_group_3D_std_positions",
       "shape": [
         "number_of_atoms",
@@ -3364,7 +3364,7 @@
     }, {
       "derived": true,
       "description": "Wyckoff letters for atoms in the standardized cell.",
-      "dtypeStr": "i",
+      "dtypeStr": "C",
       "name": "space_group_3D_std_wyckoff_letters",
       "shape": [
         "std_number_of_atoms"
@@ -3388,7 +3388,7 @@
     }, {
       "derived": true,
       "description": "Atom positions in the primitive cell in reduced units.",
-      "dtypeStr": "i",
+      "dtypeStr": "f",
       "name": "space_group_3D_primitive_positions",
       "shape": [
         "primitive_number_of_atoms",
@@ -3411,7 +3411,7 @@
     }, {
       "derived": true,
       "description": "Wyckoff letters for atoms in the primitive cell.",
-      "dtypeStr": "i",
+      "dtypeStr": "C",
       "name": "space_group_3D_primitive_wyckoff_letters",
       "shape": [
         "primitive_number_of_atoms"
@@ -3422,7 +3422,7 @@
     }, {
       "derived": true,
       "description": "Wyckoff letters for atoms in the original cell.",
-      "dtypeStr": "i",
+      "dtypeStr": "C",
       "name": "space_group_3D_original_wyckoff_letters",
       "shape": [
         "number_of_atoms"
