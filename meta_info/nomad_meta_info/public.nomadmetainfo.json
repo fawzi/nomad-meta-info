@@ -2917,18 +2917,6 @@
         "section_run"
       ]
     }, {
-      "derived": true,
-      "description": "Section containing the translational and rotational parts of a symmetry operation.",
-      "kindStr": "type_section",
-      "name": "section_space_group_3D_operation",
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
       "description": "Section collecting the information on a species-projected density of states (DOS) evaluation.",
       "kindStr": "type_section",
       "name": "section_species_projected_dos",
@@ -3304,26 +3292,49 @@
       ]
     }, {
       "derived": true,
-      "description": "Rotations that together with space_group_3D_translation define the space group operations in reduced units.",
+      "description": "Vector $\\mathbf{p}$ from the origin of the standardized system to the origin of the original system. Together with the matrix $\\mathbf{P}$, found in space_group_3D_transformation_matrix, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
       "dtypeStr": "f",
-      "name": "space_group_3D_rotation",
+      "name": "space_group_3D_origin_shift",
+      "shape": [3],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Matrix $\\mathbf{P}$ that is used to transform the standardized coordinates to the original coordinates. Together with the vector $\\mathbf{p}$, found in space_group_3D_origin_shift, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_transformation_matrix",
       "shape": [
+          3,
+          3
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Rotations that together with space_group_3D_translations define the space group operations in reduced units.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_rotations",
+      "shape": [
+        "space_group_3D_number_of_symmetry_operations",
         3,
         3
       ],
       "superNames": [
-        "section_space_group_3D_operation"
+        "section_system"
       ]
     }, {
       "derived": true,
-      "description": "Translations that together with space_group_3D_rotation define the space group operations in reduced units.",
+      "description": "Translations that together with space_group_3D_rotations define the space group operations in reduced units.",
       "dtypeStr": "f",
-      "name": "space_group_3D_translation",
+      "name": "space_group_3D_translations",
       "shape": [
+        "space_group_3D_number_of_symmetry_operations",
         3
       ],
       "superNames": [
-        "section_space_group_3D_operation"
+        "section_system"
       ]
     }, {
       "derived": true,
@@ -3366,6 +3377,17 @@
       "description": "Wyckoff letters for atoms in the standardized cell.",
       "dtypeStr": "C",
       "name": "space_group_3D_std_wyckoff_letters",
+      "shape": [
+        "std_number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the standardized cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "space_group_3D_std_equivalent_atoms",
       "shape": [
         "std_number_of_atoms"
       ],
@@ -3421,9 +3443,31 @@
       ]
     }, {
       "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the primitive cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "space_group_3D_primitive_equivalent_atoms",
+      "shape": [
+        "primitive_number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
       "description": "Wyckoff letters for atoms in the original cell.",
       "dtypeStr": "C",
       "name": "space_group_3D_original_wyckoff_letters",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the original cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "space_group_3D_original_equivalent_atoms",
       "shape": [
         "number_of_atoms"
       ],
