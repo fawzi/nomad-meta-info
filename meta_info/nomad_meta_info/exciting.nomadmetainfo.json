@@ -1129,7 +1129,7 @@
         "x_exciting_section_GW_qp_eigenvalues"
       ]
     }, {
-      "description": "Treatment of the integrable singular terms in the calculation of the self energy.",
+      "description": "Treatment of the integrable singular terms in the calculation of the self energy. Values: 'mpb' - Auxiliary function method by S. Massidda, M. Posternak, and A. Baldereschi, PRB 48, 5058 (1993); 'crg' - Auxiliary function method by P. Carrier, S. Rohra, and A. Goerling, PRB 75, 205126 (2007).",
       "dtypeStr": "C",
       "name": "x_exciting_GW_self_energy_singularity_treatment",
       "shape": [],
@@ -1137,17 +1137,33 @@
         "x_exciting_section_GW_settings"
       ]
     },  {
-      "description": "Models for the correlation self-energy analytical continuation.",
+      "description": "Models for the correlation self-energy analytical continuation: 'pade' -  Pade's approximant (by H. J. Vidberg and J. W. Serence, J. Low Temp. Phys. 29, 179 (1977)); 'mpf' -  Multi-Pole Fitting (by H. N Rojas, R. W. Godby and R. J. Needs, Phys. Rev. Lett. 74, 1827 (1995)); 'cd' - contour deformation; 'ra' - real axis",
       "dtypeStr": "C",
       "name": "x_exciting_GW_self_energy_c_analytical_continuation",
       "shape": [],
       "superNames": [
         "x_exciting_section_GW_settings"
       ]
-    },  {
-      "description": "Model used to calculate the dinamically-screened Coulomb potential",
+    }, {
+      "description": "Frequency integration grid type for the correlational self energy: 'eqdis' - equidistant frequencies from 0 to freqmax; 'gaulag' - Gauss-Laguerre quadrature from 0 to infinity; 'gauleg' - Gauss-Legendre quadrature from 0 to freqmax; 'gaule2' (default) - double Gauss-Legendre quadrature from 0 to freqmax and from freqmax to infinity.",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_frequency_grid_type",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    },   {
+      "description": "Model used to calculate the dinamically-screened Coulomb potential: 'rpa' - Full-frequency random-phase approximation; 'ppm' - Godby-Needs plasmon-pole model Godby and Needs, Phys. Rev. Lett. 62, 1169 (1989); 'ppm_hl' - Hybertsen and Louie, Phys. Rev. B 34, 5390 (1986); 'ppm_lh' - von der Linden and P. Horsh, Phys. Rev. B 37, 8351 (1988); 'ppm_fe' - Farid and Engel, Phys. Rev. B 47,15931 (1993); 'cdm' - Contour deformation method, Phys. Rev. B 67, 155208 (2003).)",
       "dtypeStr": "C",
       "name": "x_exciting_GW_screened_Coulomb",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    }, {
+      "description": "Option for treating the core states in the GW calculation: all - All electron calculation; val - Valence electron only calculation; vab - Core electrons are excluded from the mixed product basis; xal - All electron treatment of the exchange self-energy only",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_core_treatment",
       "shape": [],
       "superNames": [
         "x_exciting_section_GW_settings"
@@ -1161,7 +1177,15 @@
       "superNames": [
         "x_exciting_section_GW_settings"
       ]
-    },{
+    }, {
+      "description": "Number of empty states to be used to calculate the correlation self energy.",
+      "dtypeStr": "i",
+      "name": "x_exciting_GW_self_energy_c_empty_states",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    }, {
       "description": "Gives the number of eigenvalues, see eigenvalues_values.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1180,49 +1204,49 @@
         "x_exciting_section_GW_settings"
       ]
     }, {
-      "description": "section_GW_dielectric_tensor",
+      "description": "Section containing the data of the dielectric tensor",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_dielectric_tensor",
       "superNames": [
         "x_exciting_section_GW_settings"
       ]
     }, {
-      "description": "section containing all the GW metadata",
+      "description": "Section containing all the GW metadata",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "section containing the self energy",
+      "description": "Section containing the self energy",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_self_energy",
       "superNames": [
         "x_exciting_section_GW_output"
       ]
     }, {
-      "description": "section containing the output",
+      "description": "Section grouping all GW outputs",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_output",
       "superNames": [
         "x_exciting_section_GW"
       ]
     },  {
-      "description": "section containing the self energy",
+      "description": "Section containing the input parameters used in the GW calculation.",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_settings",
       "superNames": [
         "x_exciting_section_GW"
       ]
     },  {
-      "description": "section containing all the GW metadata",
+      "description": "Section containing the description of the GW calculation, like the GW methodology and the starting point",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_method",
       "superNames": [
         "x_exciting_section_GW"
       ]
     }, {
-      "description": "section containing the GW eigenvalues",
+      "description": "Section containing the GW eigenvalues",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_qp_eigenvalues",
       "superNames": [
@@ -1306,7 +1330,7 @@
         "x_exciting_section_GW_method"
       ]
     }, {
-      "description": "GW methodology",
+      "description": "GW methodology: G0W0; ev-scGW: (eigenvalues self-consistent GW) – Phys.Rev.B 34, 5390 (1986); qp-scGW: (quasi-particle self-consistent GW) – Phys. Rev. Lett. 96, 226402 (2006)  scGW0: (self-consistent G with fixed W0) – Phys.Rev.B 54, 8411 (1996); scG0W: (self-consistent W with fixed G0); scGW: (self-consistent GW) – Phys. Rev. B 88, 075105 (2013)",
       "dtypeStr": "C",
       "name": "x_exciting_GW_type",
       "shape": [],
