@@ -1129,6 +1129,39 @@
         "x_exciting_section_GW_qp_eigenvalues"
       ]
     }, {
+      "description": "Treatment of the integrable singular terms in the calculation of the self energy.",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_self_energy_singularity_treatment",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    },  {
+      "description": "Models for the correlation self-energy analytical continuation.",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_self_energy_c_analytical_continuation",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    },  {
+      "description": "Model used to calculate the dinamically-screened Coulomb potential",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_screened_Coulomb",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    },  {
+      "description": "Number of poles used in the analytical continuation.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_exciting_GW_self_energy_c_number_of_poles",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    },{
       "description": "Gives the number of eigenvalues, see eigenvalues_values.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -1136,6 +1169,22 @@
       "shape": [],
       "superNames": [
         "x_exciting_section_GW_qp_eigenvalues"
+      ]
+    }, {
+      "description": "Number of empty states used to compute the polarizability P",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_exciting_GW_polarizability_empty_states",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_settings"
+      ]
+    }, {
+      "description": "section_GW_dielectric_tensor",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_dielectric_tensor",
+      "superNames": [
+        "x_exciting_section_GW_settings"
       ]
     }, {
       "description": "section containing all the GW metadata",
@@ -1148,6 +1197,20 @@
       "description": "section containing the self energy",
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_self_energy",
+      "superNames": [
+        "x_exciting_section_GW_output"
+      ]
+    }, {
+      "description": "section containing the output",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_output",
+      "superNames": [
+        "x_exciting_section_GW"
+      ]
+    },  {
+      "description": "section containing the self energy",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_GW_settings",
       "superNames": [
         "x_exciting_section_GW"
       ]
@@ -1163,7 +1226,7 @@
       "kindStr": "type_section",
       "name": "x_exciting_section_GW_qp_eigenvalues",
       "superNames": [
-        "x_exciting_section_GW"
+        "x_exciting_section_GW_output"
       ]
     }, {
       "description": "Array containing the set of discrete energy values for the GW total density of states (DOS).",
@@ -1202,7 +1265,7 @@
       "name": "x_exciting_section_GW_dos",
       "repeats": true,
       "superNames": [
-        "x_exciting_section_GW"
+        "x_exciting_section_GW_output"
       ]
     }, {
       "description": "Section collecting the information on a $k$-band.",
@@ -1210,7 +1273,7 @@
       "name": "x_exciting_section_GW_k_band",
       "repeats": true,
       "superNames": [
-        "x_exciting_section_GW"
+        "x_exciting_section_GW_output"
       ]
     }, {
       "derived": true,
@@ -1233,6 +1296,14 @@
       "repeats": true,
       "superNames": [
         "x_exciting_section_GW_k_band"
+      ]
+    }, {
+      "description": "GW methodology: exciting test variable",
+      "dtypeStr": "C",
+      "name": "x_exciting_GW_type_test",
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_GW_method"
       ]
     }, {
       "description": "GW methodology",
