@@ -3319,6 +3319,24 @@
       ]
     }, {
       "derived": true,
+      "description": "Name of the crystal system. Can be one of the following: triclinic, monoclinic, orthorhombic, tetragonal, trigonal, hexagonal or cubic.",
+      "dtypeStr": "C",
+      "name": "space_group_3D_crystal_system",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Identifier for the Bravais lattice in Pearson notation. The first lowercase letter identifies the crystal family and can be one of the following: a (triclinic), b (monoclinic), o (orthorhombic), t (tetragonal), h (hexagonal) or c (cubic). The second uppercase letter identifies the centring and can be one of the following: P (primitive), S (face centred), I (body centred), R (rhombohedral centring) or F (all faces centred).",
+      "dtypeStr": "C",
+      "name": "space_group_3D_bravais_lattice",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
       "description": "Vector $\\mathbf{p}$ from the origin of the standardized system to the origin of the original system. Together with the matrix $\\mathbf{P}$, found in space_group_3D_transformation_matrix, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
       "dtypeStr": "f",
       "name": "space_group_3D_origin_shift",
