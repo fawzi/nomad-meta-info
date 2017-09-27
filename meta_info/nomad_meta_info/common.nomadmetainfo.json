@@ -609,6 +609,15 @@
         "section_molecule_interaction"
       ]
     }, {
+      "description": "number of soap coefficients",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_soap_coefficients",
+      "shape": [],
+      "superNames": [
+        "section_soap_coefficients"
+      ]
+    }, {
       "description": "Number of atoms in the system described by this topology.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -696,7 +705,7 @@
       "superNames": [
         "section_repository_info"
       ]
-     }, {
+    }, {
       "description": "calc_id, an internal identifier in the database of a file/calculation in NOMAD repository",
       "dtypeStr": "i64",
       "name": "repository_calc_id",
@@ -943,6 +952,20 @@
         "section_repository_info"
       ]
     }, {
+      "description": "Stores the soap coefficients for the pair of atoms given in soap_coefficients_atom_pair.",
+      "kindStr": "type_section",
+      "name": "section_soap_coefficients",
+      "superNames": [
+        "section_soap"
+      ]
+    }, {
+      "description": "Stores a soap descriptor for this configuration.",
+      "kindStr": "type_section",
+      "name": "section_soap",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
       "description": "Section containing the definition of topology (connectivity among atoms in force fileds), force field, and constraints of a system.",
       "kindStr": "type_section",
       "name": "section_topology",
@@ -1001,6 +1024,206 @@
       "repeats": true,
       "superNames": [
         "response_context"
+      ]
+    }, {
+      "description": "angular basis L",
+      "dtypeStr": "i",
+      "name": "soap_angular_basis_L",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "angular basis type",
+      "dtypeStr": "C",
+      "name": "soap_angular_basis_type",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ],
+      "values": {
+        "spherical-harmonic": "Uses spherical harmonics for the angular basis"
+      }
+    }, {
+      "description": "Pair of atoms described in the current section",
+      "dtypeStr": "C",
+      "name": "soap_coefficients_atom_pair",
+      "shape": [],
+      "superNames": [
+        "section_soap_coefficients"
+      ]
+    }, {
+      "description": "Compressed coefficient of the soap descriptor for the atom pair soap_coefficients_atom_pair",
+      "dtypeStr": "f",
+      "name": "soap_coefficients",
+      "shape": [
+        "number_of_soap_coefficients"
+      ],
+      "superNames": [
+        "section_soap_coefficients"
+      ]
+    }, {
+      "description": "kernel adaptor",
+      "dtypeStr": "C",
+      "name": "soap_kernel_adaptor",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ],
+      "values": {
+        "specific-unique-dmap": "..."
+      }
+    }, {
+      "derived": true,
+      "description": "Unique checksum of all the soap parameters (all those with abstract type soap_parameter) with prefix psoap",
+      "dtypeStr": "C",
+      "name": "soap_parameters_gid",
+      "shape": [],
+      "superNames": [
+        "section_soap"
+      ]
+    }, {
+      "description": "A soap parameter",
+      "kindStr": "type_abstract_document_content",
+      "name": "soap_parameter",
+      "superNames": [
+        "section_soap"
+      ]
+    }, {
+      "description": "radial basis integration steps",
+      "dtypeStr": "i",
+      "name": "soap_radial_basis_integration_steps",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial basis mode",
+      "dtypeStr": "C",
+      "name": "soap_radial_basis_mode",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial basis N",
+      "dtypeStr": "i",
+      "name": "soap_radial_basis_n",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial basis sigma",
+      "dtypeStr": "f",
+      "name": "soap_radial_basis_sigma",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial basis type",
+      "dtypeStr": "C",
+      "name": "soap_radial_basis_type",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial cutoff center weight",
+      "dtypeStr": "f",
+      "name": "soap_radial_cutoff_center_weight",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial cutoff width",
+      "dtypeStr": "i",
+      "name": "soap_radial_cutoff_rc_width",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial cutoff",
+      "dtypeStr": "f",
+      "name": "soap_radial_cutoff_rc",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "radial cutoff type",
+      "dtypeStr": "C",
+      "name": "soap_radial_cutoff_type",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "2l1 norm spectrum",
+      "dtypeStr": "b",
+      "name": "soap_spectrum_2l1_norm",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "global spectrum",
+      "dtypeStr": "b",
+      "name": "soap_spectrum_global",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "gradients in specturm",
+      "dtypeStr": "b",
+      "name": "soap_spectrum_gradients",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
+      ]
+    }, {
+      "description": "Type list",
+      "dtypeStr": "C",
+      "name": "soap_type_list",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_soap",
+        "soap_parameter"
       ]
     }, {
       "description": "A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
