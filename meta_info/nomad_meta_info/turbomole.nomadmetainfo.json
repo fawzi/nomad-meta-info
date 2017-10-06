@@ -451,22 +451,13 @@
       ],
       "units": "J"
     }, {
-      "description": "Number of eigenstate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_eigenstate_number",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
-      ]
-    }, {
       "description": "Correlation energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
       "name": "x_turbomole_eigenvalue_correlation_perturbativeGW",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ],
       "units": "J"
     }, {
@@ -485,7 +476,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ],
       "units": "J"
     }, {
@@ -495,7 +486,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ],
       "units": "J"
     }, {
@@ -505,7 +496,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ],
       "units": "J"
     }, {
@@ -515,7 +506,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ],
       "units": "J"
     }, {
@@ -534,17 +525,9 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ],
       "units": "J"
-    }, {
-      "description": "section for one list of eigenvalues at specific kpoint and spin",
-      "kindStr": "type_section",
-      "name": "x_turbomole_eigenvalues_list",
-      "repeats": true,
-      "superNames": [
-        "x_turbomole_section_eigenvalues_spin"
-      ]
     }, {
       "description": "Single eigenvalue",
       "dtypeStr": "f",
@@ -707,7 +690,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ]
     }, {
       "description": "Charge per atom",
@@ -926,28 +909,12 @@
       ],
       "units": "J"
     }, {
-      "description": "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation",
+      "description": "section for the eigenvalues of a GW calculation (at present only pertubative G0W0)",
       "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_group_perturbativeGW",
-      "repeats": false,
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "section for full list of eigenvalues for different spin and kpoints",
-      "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_group",
-      "repeats": false,
-      "superNames": [
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "section for one list of eigenvalues from a perturbative GW calculation",
-      "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_list_perturbativeGW",
+      "name": "x_turbomole_section_eigenvalues_GW",
       "repeats": true,
       "superNames": [
-        "x_turbomole_section_eigenvalues_spin"
+        "section_eigenvalues"
       ]
     }, {
       "description": "section for one list of eigenvalues",
@@ -955,23 +922,7 @@
       "name": "x_turbomole_section_eigenvalues_list",
       "repeats": true,
       "superNames": [
-        "x_turbomole_section_eigenvalues_spin"
-      ]
-    }, {
-      "description": "section for one spin orientation from a perturbative GW calculation",
-      "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_spin_perturbativeGW",
-      "repeats": true,
-      "superNames": [
-        "x_turbomole_section_eigenvalues_group_perturbativeGW"
-      ]
-    }, {
-      "description": "section for one spin orientation",
-      "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_spin",
-      "repeats": true,
-      "superNames": [
-        "x_turbomole_section_eigenvalues_group"
+        "section_eigenvalues"
       ]
     }, {
       "description": "section for one list of XC functionals",
@@ -985,14 +936,6 @@
       "name": "x_turbomole_XC_functional_type",
       "repeats": true,
       "superNames": ["x_turbomole_section_functionals"]
-    }, {
-      "description": "section for one list of eigenvalues",
-      "kindStr": "type_section",
-      "name": "x_turbomole_section_occupation_list",
-      "repeats": true,
-      "superNames": [
-        "x_turbomole_section_eigenvalues_spin"
-      ]
     }, {
       "description": "Total charge",
       "dtypeStr": "f",
@@ -1059,7 +1002,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list_perturbativeGW"
+        "x_turbomole_section_eigenvalues_GW"
       ]
     }]
 }
