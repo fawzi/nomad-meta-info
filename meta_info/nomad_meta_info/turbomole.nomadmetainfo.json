@@ -702,45 +702,6 @@
         "section_system"
       ]
     }, {
-      "description": "labels of atom",
-      "dtypeStr": "C",
-      "name": "x_turbomole_geometry_atom_labels",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "x component of atomic position",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_atom_positions_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "y component of atomic position",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_atom_positions_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "z component of atomic position",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_atom_positions_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
       "description": "Determines whether a geoemtry optimization is converged.",
       "dtypeStr": "C",
       "name": "x_turbomole_geometry_optimization_converged",
