@@ -965,5 +965,34 @@
       "superNames": [
         "x_turbomole_section_eigenvalues_GW"
       ]
+    }, {
+      "description": "The employed GW approximation.",
+      "dtypeStr": "C",
+      "name": "x_turbomole_gw_approximation",
+      "shape": [],
+      "superNames": [
+        "section_method",
+        "settings_GW"
+      ]
+    }, {
+      "description": "If true, the pure RPA response function is calculated. Otherwise, the TDDFT response function is calculated and used to screen the coulomb interaction.",
+      "dtypeStr": "b",
+      "name": "x_turbomole_gw_use_rpa_response",
+      "shape": [],
+      "superNames": [
+        "section_method",
+        "settings_GW"
+      ]
+    }, {
+      "description": "[TO BE VERIFIED]Infinitesimal complex energy shift. Negative value switches to calculating at that value but extrapolating to 0 in linear approximation.",
+      "dtypeStr": "f",
+      "name": "x_turbomole_gw_eta_factor",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method",
+        "settings_GW"
+      ],
+      "units": "J"
     }]
 }
