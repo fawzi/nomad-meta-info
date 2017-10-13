@@ -276,39 +276,6 @@
         "section_method"
       ]
     }, {
-      "description": "labels of atom",
-      "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_atom_labels",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_basis_cont_number",
-      "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_basis_cont_number",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_basis_prim_number",
-      "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_basis_prim_number",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_basis_type",
-      "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_basis_type",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
       "description": "type of the used correlation functional",
       "dtypeStr": "C",
       "name": "x_turbomole_controlInOut_functional_type_correlation",
@@ -397,38 +364,6 @@
       "shape": [],
       "superNames": [
         "x_turbomole_section_functionals"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_tot_cartesian_func",
-      "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_tot_cartesian_func",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_tot_contracted_shells",
-      "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_tot_contracted_shells",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_tot_primitive_shells",
-      "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_tot_primitive_shells",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
-      ]
-    }, {
-      "description": "x_turbomole_controlInOut_tot_scf_basis_func",
-      "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_tot_scf_basis_func",
-      "shape": [],
-      "superNames": [
-        "section_basis_set"
       ]
     }, {
       "description": "D1 diagnostic of CCSD",
