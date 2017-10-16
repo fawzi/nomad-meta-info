@@ -592,6 +592,168 @@
       ]
     },
     {
+      "description": "Name of XC functional (density exchange component) in Quantum Espresso context",
+      "name": "x_qe_xc_iexch_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Name of XC functional (density correlation component) in Quantum Espresso context",
+      "name": "x_qe_xc_icorr_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Name of XC functional (gradient exchange component) in Quantum Espresso context",
+      "name": "x_qe_xc_igcx_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Name of XC functional (gradient correlation component) in Quantum Espresso context",
+      "name": "x_qe_xc_igcc_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Name of XC functional (meta-gga component) in Quantum Espresso context",
+      "name": "x_qe_xc_imeta_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Name of XC functional (Van-der-Waals non-local component) in Quantum Espresso context",
+      "name": "x_qe_xc_inlc_name",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about XC functional (density exchange component) ",
+      "name": "x_qe_xc_iexch_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about XC functional (density correlation component) ",
+      "name": "x_qe_xc_icorr_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about XC functional (gradient exchange component) ",
+      "name": "x_qe_xc_igcx_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about XC functional (gradient correlation component) ",
+      "name": "x_qe_xc_igcc_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about XC functional (meta-gga component) ",
+      "name": "x_qe_xc_imeta_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso comment about XC functional (Van-der-Waals non-local component) ",
+      "name": "x_qe_xc_inlc_comment",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso internal code-specific index of XC functional (density exchange component) ",
+      "name": "x_qe_xc_iexch",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso internal code-specific index of XC functional (density correlation component) ",
+      "name": "x_qe_xc_icorr",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso internal code-specific index of XC functional (gradient exchange component) ",
+      "name": "x_qe_xc_igcx",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso internal code-specific index of XC functional (gradient correlation component) ",
+      "name": "x_qe_xc_igcc",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso internal code-specific index of XC functional (meta-gga component) ",
+      "name": "x_qe_xc_imeta",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
+      "description": "Quantum Espresso internal code-specific index of XC functional (Van-der-Waals non-local component) ",
+      "name": "x_qe_xc_inlc",
+      "dtypeStr": "i",
+      "shape": [],
+      "superNames": [
+        "section_XC_functionals"
+      ]
+    },
+    {
       "description": "Quantum Espresso comment about meaning of XC functional component",
       "name": "x_qe_xc_comment",
       "dtypeStr": "C",
