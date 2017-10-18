@@ -1046,52 +1046,16 @@
       ],
       "units": "J"
     }, {
-      "description": "Coordinates of the $k$ points (in the basis of the reciprocal lattice vectors) used for the evaluation of the eigenvalues tabulated in eigenvalues_values.",
-      "dtypeStr": "f",
-      "name": "x_exciting_GW_qp_eigenvalues_kpoints",
-      "shape": [
-        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-        3
-      ],
-      "superNames": [
-        "x_exciting_section_GW_qp_eigenvalues"
-      ]
-    }, {
-      "description": "Occupation of the eigenstates. The corresponding eigenvalues (energy) are given in eigenvalues_values. The coordinates in the reciprocal space are defined in eigenvalues_kpoints.",
-      "dtypeStr": "f",
-      "name": "x_exciting_GW_qp_eigenvalues_occupation",
-      "shape": [
-        "number_of_spin_channels",
-        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-        "x_exciting_GW_qp_number_of_eigenvalues"
-      ],
-      "superNames": [
-        "x_exciting_section_GW_qp_eigenvalues"
-      ]
-    }, {
-      "description": "Values of the (electronic-energy) eigenvalues. The coordinates of the corresponding eigenstates in the reciprocal space are defined in eigenvalues_kpoints and their occupations are given in eigenvalues_occupation.",
-      "dtypeStr": "f",
-      "name": "x_exciting_GW_qp_eigenvalues_values",
-      "shape": [
-        "number_of_spin_channels",
-        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-        "x_exciting_GW_qp_number_of_eigenvalues"
-      ],
-      "superNames": [
-        "x_exciting_section_GW_qp_eigenvalues"
-      ],
-      "units": "J"
-    }, {
       "description": "Linearization prefactor",
       "dtypeStr": "f",
       "name": "x_exciting_GW_qp_linearization_prefactor",
       "shape": [
         "number_of_spin_channels",
-        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-        "x_exciting_GW_qp_number_of_eigenvalues"
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
       ],
       "superNames": [
-        "x_exciting_section_GW_qp_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "diagonal matrix elements of the exchange self-energy",
@@ -1099,11 +1063,11 @@
       "name": "x_exciting_GW_self_energy_x",
       "shape": [
         "number_of_spin_channels",
-        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-        "x_exciting_GW_qp_number_of_eigenvalues"
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
       ],
       "superNames": [
-        "x_exciting_section_GW_self_energy"
+        "section_single_configuration_calculation"
       ],
       "units": "J"
     }, {
@@ -1112,29 +1076,20 @@
       "name": "x_exciting_GW_self_energy_c",
       "shape": [
         "number_of_spin_channels",
-        "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-        "x_exciting_GW_qp_number_of_eigenvalues"
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
       ],
       "superNames": [
-        "x_exciting_section_GW_self_energy"
+        "section_single_configuration_calculation"
       ],
       "units": "J"
-    }, {
-      "description": "Gives the number of $k$ points, see eigenvalues_kpoints. $k$ points are calculated within a run and are irreducible if a symmetry is used.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_exciting_GW_qp_number_of_eigenvalues_kpoints",
-      "shape": [],
-      "superNames": [
-        "x_exciting_section_GW_qp_eigenvalues"
-      ]
     }, {
       "description": "Treatment of the integrable singular terms in the calculation of the self energy. Values: 'mpb' - Auxiliary function method by S. Massidda, M. Posternak, and A. Baldereschi, PRB 48, 5058 (1993); 'crg' - Auxiliary function method by P. Carrier, S. Rohra, and A. Goerling, PRB 75, 205126 (2007).",
       "dtypeStr": "C",
       "name": "x_exciting_GW_self_energy_singularity_treatment",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     },  {
       "description": "Models for the correlation self-energy analytical continuation: 'pade' -  Pade's approximant (by H. J. Vidberg and J. W. Serence, J. Low Temp. Phys. 29, 179 (1977)); 'mpf' -  Multi-Pole Fitting (by H. N Rojas, R. W. Godby and R. J. Needs, Phys. Rev. Lett. 74, 1827 (1995)); 'cd' - contour deformation; 'ra' - real axis",
@@ -1142,7 +1097,7 @@
       "name": "x_exciting_GW_self_energy_c_analytical_continuation",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     }, {
       "description": "Frequency integration grid type for the correlational self energy: 'eqdis' - equidistant frequencies from 0 to freqmax; 'gaulag' - Gauss-Laguerre quadrature from 0 to infinity; 'gauleg' - Gauss-Legendre quadrature from 0 to freqmax; 'gaule2' (default) - double Gauss-Legendre quadrature from 0 to freqmax and from freqmax to infinity.",
@@ -1150,7 +1105,7 @@
       "name": "x_exciting_GW_frequency_grid_type",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     },   {
       "description": "Model used to calculate the dinamically-screened Coulomb potential: 'rpa' - Full-frequency random-phase approximation; 'ppm' - Godby-Needs plasmon-pole model Godby and Needs, Phys. Rev. Lett. 62, 1169 (1989); 'ppm_hl' - Hybertsen and Louie, Phys. Rev. B 34, 5390 (1986); 'ppm_lh' - von der Linden and P. Horsh, Phys. Rev. B 37, 8351 (1988); 'ppm_fe' - Farid and Engel, Phys. Rev. B 47,15931 (1993); 'cdm' - Contour deformation method, Phys. Rev. B 67, 155208 (2003).)",
@@ -1158,7 +1113,7 @@
       "name": "x_exciting_GW_screened_Coulomb",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     }, {
       "description": "Option for treating the core states in the GW calculation: all - All electron calculation; val - Valence electron only calculation; vab - Core electrons are excluded from the mixed product basis; xal - All electron treatment of the exchange self-energy only",
@@ -1166,7 +1121,7 @@
       "name": "x_exciting_GW_core_treatment",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     },  {
       "description": "Number of poles used in the analytical continuation.",
@@ -1175,7 +1130,7 @@
       "name": "x_exciting_GW_self_energy_c_number_of_poles",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     }, {
       "description": "Number of empty states to be used to calculate the correlation self energy.",
@@ -1183,16 +1138,16 @@
       "name": "x_exciting_GW_self_energy_c_empty_states",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
+        "section_method"
       ]
     }, {
       "description": "Gives the number of eigenvalues, see eigenvalues_values.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "x_exciting_GW_qp_number_of_eigenvalues",
+      "name": "number_of_eigenvalues",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_qp_eigenvalues"
+        "section_eigenvalues"
       ]
     }, {
       "description": "Number of empty states used to compute the polarizability P",
@@ -1201,125 +1156,7 @@
       "name": "x_exciting_GW_polarizability_empty_states",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_settings"
-      ]
-    }, {
-      "description": "Section containing the data of the dielectric tensor",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_dielectric_tensor",
-      "superNames": [
-        "x_exciting_section_GW_settings"
-      ]
-    }, {
-      "description": "Section containing all the GW metadata",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW",
-      "superNames": [
         "section_method"
-      ]
-    }, {
-      "description": "Section containing the self energy",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_self_energy",
-      "superNames": [
-        "x_exciting_section_GW_output"
-      ]
-    }, {
-      "description": "Section grouping all GW outputs",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_output",
-      "superNames": [
-        "x_exciting_section_GW"
-      ]
-    },  {
-      "description": "Section containing the input parameters used in the GW calculation.",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_settings",
-      "superNames": [
-        "x_exciting_section_GW"
-      ]
-    },  {
-      "description": "Section containing the description of the GW calculation, like the GW methodology and the starting point",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_method",
-      "superNames": [
-        "x_exciting_section_GW"
-      ]
-    }, {
-      "description": "Section containing the GW eigenvalues",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_qp_eigenvalues",
-      "superNames": [
-        "x_exciting_section_GW_output"
-      ]
-    }, {
-      "description": "Array containing the set of discrete energy values for the GW total density of states (DOS).",
-      "dtypeStr": "f",
-      "name": "x_exciting_GW_dos_energies",
-      "shape": [
-        "x_exciting_GW_number_of_dos_values"
-      ],
-      "superNames": [
-        "x_exciting_section_GW_dos"
-      ],
-      "units": "J"
-    }, {
-      "description": "Values (number of states for a given energy, the set of discrete energy values is given in x_exciting_GW_dos_energies) of density of states.",
-      "dtypeStr": "f",
-      "name": "x_exciting_GW_dos_values",
-      "shape": [
-        "number_of_spin_channels",
-        "x_exciting_GW_number_of_dos_values"
-      ],
-      "superNames": [
-        "x_exciting_section_GW_dos"
-      ]
-    }, {
-      "description": "Gives the number of energy values for the density of states (DOS), see x_exciting_GW_dos_energies.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_exciting_GW_number_of_dos_values",
-      "shape": [],
-      "superNames": [
-        "x_exciting_section_GW_dos"
-      ]
-    }, {
-      "description": "Section collecting information of the GW total density of states (DOS) evaluation.",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_dos",
-      "repeats": true,
-      "superNames": [
-        "x_exciting_section_GW_output"
-      ]
-    }, {
-      "description": "Section collecting the information on a $k$-band.",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_k_band",
-      "repeats": true,
-      "superNames": [
-        "x_exciting_section_GW_output"
-      ]
-    }, {
-      "derived": true,
-      "description": "$k$-dependent energies of the electronic band segment. This is a third-order tensor, with one dimension used for the spin channels, one for the $k$ points for each segment, and one for the eigenvalue sequence.",
-      "dtypeStr": "f",
-      "name": "x_exciting_GW_band_energies",
-      "shape": [
-        "number_of_spin_channels",
-        "number_of_k_points_per_segment",
-        "number_of_band_segment_eigenvalues"
-      ],
-      "superNames": [
-        "x_exciting_section_GW_k_band_segment"
-      ],
-      "units": "J"
-    }, {
-      "description": "Section collecting the information on a $k$-band segment. This section stores band structures along a one-dimensional pathway in the $k$ space.\n\nThe band structures are represented as third-order tensors: one dimension for the spin channels, one for the sequence of $k$ points for the segment (given in number_of_k_points_per_segment), and one for the sequence of eigenvalues at a given $k$ point. The values of the $k$ points in each segment are stored in band_k_points. The energies for each eigenstate, at each $k$ point, segment, and spin channel are stored in x_exciting_GW_band_energies. The labels for the segment are specified in band_segm_labels.",
-      "kindStr": "type_section",
-      "name": "x_exciting_section_GW_k_band_segment",
-      "repeats": true,
-      "superNames": [
-        "x_exciting_section_GW_k_band"
       ]
     }, {
       "description": "GW methodology: exciting test variable",
@@ -1327,7 +1164,7 @@
       "name": "x_exciting_GW_type_test",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_method"
+        "section_method"
       ]
     }, {
       "description": "GW methodology: G0W0; ev-scGW: (eigenvalues self-consistent GW) – Phys.Rev.B 34, 5390 (1986); qp-scGW: (quasi-particle self-consistent GW) – Phys. Rev. Lett. 96, 226402 (2006)  scGW0: (self-consistent G with fixed W0) – Phys.Rev.B 54, 8411 (1996); scG0W: (self-consistent W with fixed G0); scGW: (self-consistent GW) – Phys. Rev. B 88, 075105 (2013)",
@@ -1335,7 +1172,7 @@
       "name": "x_exciting_GW_type",
       "shape": [],
       "superNames": [
-        "x_exciting_section_GW_method"
+        "section_method"
       ]
     }]
 }
