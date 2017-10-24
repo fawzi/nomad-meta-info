@@ -751,7 +751,11 @@
       "shape": [],
       "superNames": [
         "section_eigenvalues"
-      ]
+      ],
+      "values": {
+        "normal": "all eigenvalues of the Kohn Sham / Fock operator",
+        "partial": "partial eigenvalue spectrum, usually around the HOMO-LOMO. In this case, number_of_eigenvalues only refers to the number of stored eigenvalues, not the full spectrum."
+      }
     }, {
       "description": "Multiplicity of the $k$ point (i.e., how many distinct points per cell this expands to after applying all symmetries). This defaults to 1. If expansion is preformed then each point will have weight eigenvalues_kpoints_weights/eigenvalues_kpoints_multiplicity.",
       "dtypeStr": "f",
