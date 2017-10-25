@@ -278,20 +278,18 @@
     }, {
       "description": "type of the used correlation functional",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_functional_type_correlation",
-      "repeats": true,
+      "name": "x_turbomole_functional_type_correlation",
       "shape": [],
       "superNames": [
-        "x_turbomole_section_functionals"
+        "section_method"
       ]
     }, {
       "description": "type of the used exchange functional",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_functional_type_exchange",
-      "repeats": true,
+      "name": "x_turbomole_functional_type_exchange",
       "shape": [],
       "superNames": [
-        "x_turbomole_section_functionals"
+        "section_method"
       ]
     }, {
       "description": "The integration cells",
@@ -774,10 +772,10 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Final poetential energy",
+      "description": "Final potential energy",
       "dtypeStr": "f",
       "name": "x_turbomole_potential_energy_final",
-      "repeats": true,
+      "repeats": false,
       "shape": [],
       "superNames": [
         "energy_component",
@@ -863,14 +861,11 @@
     }, {
       "description": "Final value from the virial theorem",
       "dtypeStr": "f",
-      "name": "x_turbomole_virial_theorem_final",
-      "repeats": true,
+      "name": "x_turbomole_virial_theorem",
       "shape": [],
       "superNames": [
-        "energy_component",
         "section_single_configuration_calculation"
-      ],
-      "units": "J"
+      ]
     }, {
       "description": "-",
       "dtypeStr": "f",
@@ -884,13 +879,10 @@
       "description": "Final Wave Function Norm",
       "dtypeStr": "f",
       "name": "x_turbomole_wave_func_norm",
-      "repeats": true,
       "shape": [],
       "superNames": [
-        "energy_component",
         "section_single_configuration_calculation"
-      ],
-      "units": "J"
+      ]
     }, {
       "description": "TODO:",
       "dtypeStr": "f",
