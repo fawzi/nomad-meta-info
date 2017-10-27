@@ -528,10 +528,9 @@
       ],
       "units": "J"
     }, {
-      "description": "Damping of the 2e-CONTRIBUTIONS TO FOCK MATRIX",
+      "description": "Damping of the two-electron contributions to Fock matrix in the present SCF iteration",
       "dtypeStr": "f",
-      "name": "x_turbomole_energy_scf_damping",
-      "repeats": true,
+      "name": "x_turbomole_damping_scf_iteration",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -546,28 +545,6 @@
         "energy_component",
         "section_scf_iteration"
       ]
-    }, {
-      "description": "Total Energy for a given scf iteration",
-      "dtypeStr": "f",
-      "name": "x_turbomole_energy_total_scf_iteration",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
-      ],
-      "units": "J"
-    }, {
-      "description": "Final Total Energy",
-      "dtypeStr": "f",
-      "name": "x_turbomole_energy_total",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_run",
-        "section_scf_iteration"
-      ],
-      "units": "J"
     }, {
       "description": "1e-ENERGY",
       "dtypeStr": "f",
@@ -629,26 +606,6 @@
       "superNames": [
         "section_eigenvalues"
       ]
-    }, {
-      "description": "Number of iteration",
-      "dtypeStr": "i",
-      "name": "x_turbomole_iteration_number",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "Final kinetic Energy",
-      "dtypeStr": "f",
-      "name": "x_turbomole_kinetic_energy_final",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
     }, {
       "description": "Maximum multipole moment used",
       "dtypeStr": "i",
@@ -787,17 +744,6 @@
       "superNames": [
         "section_run"
       ]
-    }, {
-      "description": "Final (converged or not) Total Energy",
-      "dtypeStr": "f",
-      "name": "x_turbomole_total_energy_final",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
-      ],
-      "units": "J"
     }, {
       "description": "Type of UHF molecular orbital",
       "dtypeStr": "C",
