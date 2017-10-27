@@ -1,6 +1,6 @@
 {
   "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the TURBOMOLE parser, all names are expected to start with turbomole_",
+  "description": "meta info used by the TURBOMOLE parser, all names are expected to start with x_turbomole_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
     }, {
@@ -365,7 +365,7 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "-",
+      "description": "change of the eigenvalues in the current SCF iteration",
       "dtypeStr": "f",
       "name": "x_turbomole_delta_eigenvalues",
       "shape": [],
@@ -517,10 +517,9 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "1e-ENERGY",
+    "description": "Total energy contribution from one-electron integrals",
       "dtypeStr": "f",
-      "name": "x_turbomole_energy_one_scf_iteration",
-      "repeats": true,
+      "name": "x_turbomole_energy_1electron_scf_iteration",
       "shape": [],
       "superNames": [
         "energy_component",
@@ -546,10 +545,9 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "1e-ENERGY",
+      "description": "Total energy contribution from two-electron integrals",
       "dtypeStr": "f",
-      "name": "x_turbomole_energy_two_scf_iteration",
-      "repeats": true,
+      "name": "x_turbomole_energy_2electron_scf_iteration",
       "shape": [],
       "superNames": [
         "energy_component",
@@ -615,21 +613,27 @@
         "section_run"
       ]
     }, {
-      "description": "Maximal resid. norm for Fia-block",
+      "description": "Norm of the DIIS error in an SCF-iteration",
       "dtypeStr": "f",
-      "name": "x_turbomole_max_res_norm_fia_block",
+      "name": "x_turbomole_norm_diis_scf_iteration",
       "shape": [],
       "superNames": [
-        "energy_component",
         "section_scf_iteration"
       ]
     }, {
-      "description": "Maximal resid. fock norm",
+      "description": "Maximal resid. norm for Fia-block in an SCF-iteration",
       "dtypeStr": "f",
-      "name": "x_turbomole_max_res_norm_fock_norm",
+      "name": "x_turbomole_norm_fia_scf_iteration",
       "shape": [],
       "superNames": [
-        "energy_component",
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Maximal resid. fock norm in an SCF-iteration",
+      "dtypeStr": "f",
+      "name": "x_turbomole_norm_fock_scf_iteration",
+      "shape": [],
+      "superNames": [
         "section_scf_iteration"
       ]
     }, {
@@ -668,21 +672,19 @@
         "section_run"
       ]
     }, {
-      "description": "-",
+      "description": "orbital with the largest residual norm for the Fia block in this iteration",
       "dtypeStr": "C",
-      "name": "x_turbomole_orbital_name_fia_block",
+      "name": "x_turbomole_norm_fia_orbital_scf_iteration",
       "shape": [],
       "superNames": [
-        "energy_component",
         "section_scf_iteration"
       ]
     }, {
-      "description": "-",
+      "description": "orbital with the largest residual Fock norm in this iteration",
       "dtypeStr": "C",
-      "name": "x_turbomole_orbital_name_fock_norm",
+      "name": "x_turbomole_norm_fock_orbital_scf_iteration",
       "shape": [],
       "superNames": [
-        "energy_component",
         "section_scf_iteration"
       ]
     }, {
