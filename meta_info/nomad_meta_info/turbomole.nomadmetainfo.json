@@ -7,15 +7,6 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "Occupation of single eigenfunction",
-      "dtypeStr": "f",
-      "name": "x_eigenvalues_occupation",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_turbomole_section_eigenvalues_list"
-      ]
-    }, {
       "description": "-",
       "dtypeStr": "f",
       "name": "x_turbomole_atom_forces_raw_x",
@@ -394,15 +385,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Single eigenvalue",
-      "dtypeStr": "C",
-      "name": "x_turbomole_eigenvalue_eigenvalue_str",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_turbomole_section_eigenvalues_list"
-      ]
-    }, {
       "description": "Exact exchange energy at given eigenstate from perturbative GW",
       "dtypeStr": "f",
       "name": "x_turbomole_eigenvalue_ExactExchange_perturbativeGW",
@@ -443,15 +425,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Occupation of single eigenfunction",
-      "dtypeStr": "C",
-      "name": "x_turbomole_eigenvalue_occupation_str",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_turbomole_section_eigenvalues_list"
-      ]
-    }, {
       "description": "Quasiparticle energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
       "name": "x_turbomole_eigenvalue_quasiParticle_energy",
@@ -459,16 +432,6 @@
       "shape": [],
       "superNames": [
         "x_turbomole_section_eigenvalues_GW"
-      ],
-      "units": "J"
-    }, {
-      "description": "Single eigenvalue",
-      "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalues_values",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_turbomole_section_eigenvalues_list"
       ],
       "units": "J"
     }, {
@@ -655,22 +618,16 @@
       ],
       "units": "J"
     }, {
-      "description": "Irreducible representation of the eigenstate",
+      "description": "Irreducible representation the eigenstates belong to",
       "dtypeStr": "C",
-      "name": "x_turbomole_irreducible_representation_state_str",
-      "repeats": true,
-      "shape": [],
+      "name": "x_turbomole_irreducible_representation",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
+      ],
       "superNames": [
-        "x_turbomole_section_eigenvalues_list"
-      ]
-    }, {
-      "description": "Irreducible representation of the eigenstate",
-      "dtypeStr": "C",
-      "name": "x_turbomole_irreducible_representation_state",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_turbomole_section_eigenvalues_list"
+        "section_eigenvalues"
       ]
     }, {
       "description": "Number of iteration",
@@ -806,14 +763,6 @@
       "description": "section for the eigenvalues of a GW calculation (at present only pertubative G0W0)",
       "kindStr": "type_section",
       "name": "x_turbomole_section_eigenvalues_GW",
-      "repeats": true,
-      "superNames": [
-        "section_eigenvalues"
-      ]
-    }, {
-      "description": "section for one list of eigenvalues",
-      "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_list",
       "repeats": true,
       "superNames": [
         "section_eigenvalues"
