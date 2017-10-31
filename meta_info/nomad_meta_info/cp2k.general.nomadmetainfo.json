@@ -110,6 +110,30 @@
       ],
       "units": "J"
     }, {
+      "description": "Contains restart information for this calculation.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_restart_information",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Name of the restart file.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_restart_file_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_restart_information"
+      ]
+    }, {
+      "description": "Name of a restarted quantity.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_restarted_quantity_name",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_restart_information"
+      ]
+    }, {
       "description": "The name of the geminal file.",
       "dtypeStr": "C",
       "name": "x_cp2k_geminal_filename",
@@ -843,6 +867,14 @@
       "name": "x_cp2k_md_cpu_time_average",
       "shape": [],
       "unit": "s",
+      "superNames": [
+        "x_cp2k_section_md_step"
+      ]
+    }, {
+      "description": "Step number.",
+      "dtypeStr": "i",
+      "name": "x_cp2k_md_step_number",
+      "shape": [],
       "superNames": [
         "x_cp2k_section_md_step"
       ]
