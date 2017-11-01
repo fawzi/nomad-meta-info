@@ -781,6 +781,18 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Irreducible representation the eigenstates belong to.",
+      "dtypeStr": "C",
+      "name": "x_turbomole_eigenvalues_irreducible_representation",
+      "shape": [
+        "number_of_spin_channels",
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
+      ],
+      "superNames": [
+        "section_eigenvalues"
+      ]
+    }, {
       "description": "TODO:",
       "dtypeStr": "f",
       "name": "x_turbomole_Z_factor",
