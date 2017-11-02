@@ -70,14 +70,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Charge Neutrality tolerance",
-      "dtypeStr": "f",
-      "name": "x_turbomole_charge_neutrality_tol",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "The label of the atoms in the system",
       "dtypeStr": "C",
       "name": "x_turbomole_controlIn_atom_label",
@@ -435,76 +427,14 @@
       ],
       "units": "J"
     }, {
-      "description": " Coordinates of all systems centered about cell 0: Charge",
+      "description": "Charges of the point charges in the unit cell used by the PCEEM embedding model",
       "dtypeStr": "f",
-      "name": "x_turbomole_embed_geometry_atom_charge",
-      "shape": [],
+      "name": "x_turbomole_pceem_charges",
+      "shape": [
+        "number_of_atoms"
+      ],
       "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " Coordinates of all systems centered about cell 0: Atomic label",
-      "dtypeStr": "C",
-      "name": "x_turbomole_embed_geometry_atom_label",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " Coordinates of all systems centered about cell 0: x-coordinate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_embed_geometry_atom_positions_x",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " Coordinates of all systems centered about cell 0: y-coordinate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_embed_geometry_atom_positions_y",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " Coordinates of all systems centered about cell 0: z-coordinate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_embed_geometry_atom_positions_z",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " QM cluster transformed to the center of cell 0 (au): label",
-      "dtypeStr": "C",
-      "name": "x_turbomole_embed_qm_cluster_geometry_atom_label",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " QM cluster transformed to the center of cell 0 (au): x-coordinate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_embed_qm_cluster_geometry_atom_positions_x",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " QM cluster transformed to the center of cell 0 (au): y-coordinate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_embed_qm_cluster_geometry_atom_positions_y",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
-      "description": " QM cluster transformed to the center of cell 0 (au): z-coordinate",
-      "dtypeStr": "f",
-      "name": "x_turbomole_embed_qm_cluster_geometry_atom_positions_z",
-      "shape": [],
-      "superNames": [
-        "section_run"
+        "section_system"
       ]
     }, {
       "description": "Norm of the total energy at each iteration",
@@ -605,12 +535,12 @@
         "section_eigenvalues"
       ]
     }, {
-      "description": "Maximum multipole moment used",
+      "description": "Maximum multipole moment used in the PCEEM embedding",
       "dtypeStr": "i",
-      "name": "x_turbomole_max_multipole_moment",
+      "name": "x_turbomole_pceem_max_multipole",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_system"
       ]
     }, {
       "description": "Norm of the DIIS error in an SCF-iteration",
@@ -637,12 +567,12 @@
         "section_scf_iteration"
       ]
     }, {
-      "description": "Minimum separation between cells",
+      "description": "Minimum separation between cells in PCEEM embedding for periodic fast multipole treatment",
       "dtypeStr": "f",
-      "name": "x_turbomole_min_separation_cells",
+      "name": "x_turbomole_pceem_min_separation_cells",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_system"
       ]
     }, {
       "description": "MP2 total energies",
@@ -656,12 +586,12 @@
       ],
       "units": "J"
     }, {
-      "description": "Multipole precision parameter",
+      "description": "Multipole precision parameter for PCEEM embedding",
       "dtypeStr": "f",
-      "name": "x_turbomole_multipole_precision_parameter",
+      "name": "x_turbomole_pceem_multipole_precision",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_system"
       ]
     }, {
       "description": "compute node",
@@ -738,14 +668,6 @@
       "name": "x_turbomole_XC_functional_type",
       "repeats": true,
       "superNames": ["x_turbomole_section_functionals"]
-    }, {
-      "description": "Total charge",
-      "dtypeStr": "f",
-      "name": "x_turbomole_total_charge",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
     }, {
       "description": "Type of UHF molecular orbital",
       "dtypeStr": "C",
