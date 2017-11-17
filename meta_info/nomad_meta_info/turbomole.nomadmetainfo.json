@@ -601,6 +601,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "version of the DFT-D3 van-der-Waals correction that is used",
+      "dtypeStr": "C",
+      "name": "x_turbomole_dft_d3_version",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Irreducible representation the eigenstates belong to.",
       "dtypeStr": "C",
       "name": "x_turbomole_eigenvalues_irreducible_representation",
