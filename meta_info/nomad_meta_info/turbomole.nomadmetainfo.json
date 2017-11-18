@@ -654,6 +654,14 @@
       ],
       "units": "m"
     }, {
+      "description": "By default Turbomole only keeps the output of the final iteration once the geometry has been converged, thus the entire optimization trajectory cannot be rebuild in most cases. Instead, this value contains the optimization cycle index to indicate how many iterations have preceded this one.",
+      "dtypeStr": "i",
+      "name": "x_turbomole_geometry_optimization_cycle_index",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Irreducible representation the eigenstates belong to.",
       "dtypeStr": "C",
       "name": "x_turbomole_eigenvalues_irreducible_representation",
