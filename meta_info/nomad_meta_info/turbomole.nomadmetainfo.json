@@ -7,6 +7,14 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
+      "description": "The name of the Turbomole module used for this single configuration calculation.",
+      "dtypeStr": "C",
+      "name": "x_turbomole_module",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "CC2 total energies",
       "dtypeStr": "f",
       "name": "x_turbomole_CC2_total_energy_final",
