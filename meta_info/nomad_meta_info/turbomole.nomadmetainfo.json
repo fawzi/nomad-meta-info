@@ -609,6 +609,51 @@
         "section_method"
       ]
     }, {
+      "description": "geometry optimization convergence criterion - Root Mean Square of displacements",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_geometry_change_rms",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "geometry optimization convergence criterion - Root Mean Square of forces",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_threshold_force_rms",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "N"
+    }, {
+      "description": "geometry optimization trust region - maximum radius",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_trustregion_max",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "geometry optimization trust region - minimum radius",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_trustregion_min",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "geometry optimization trust region - initial radius",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_trustregion_initial",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
       "description": "Irreducible representation the eigenstates belong to.",
       "dtypeStr": "C",
       "name": "x_turbomole_eigenvalues_irreducible_representation",
