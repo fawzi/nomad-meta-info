@@ -3268,6 +3268,15 @@
       ]
     }, {
       "derived": true,
+      "description": "Identifier for the Bravais lattice in Pearson notation. The first lowercase letter identifies the crystal family and can be one of the following: a (triclinic), b (monoclinic), o (orthorhombic), t (tetragonal), h (hexagonal) or c (cubic). The second uppercase letter identifies the centring and can be one of the following: P (primitive), S (face centred), I (body centred), R (rhombohedral centring) or F (all faces centred).",
+      "dtypeStr": "C",
+      "name": "space_group_3D_bravais_lattice",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
       "description": "String that specifies the centering, origin and basis vector settings of the 3D space group that defines the symmetry group of the simulated physical system (see section_system). Values are as defined by spglib.",
       "dtypeStr": "C",
       "name": "space_group_3D_choice",
@@ -3277,9 +3286,9 @@
       ]
     }, {
       "derived": true,
-      "description": "The Hall symbol for this system.",
+      "description": "Name of the crystal system. Can be one of the following: triclinic, monoclinic, orthorhombic, tetragonal, trigonal, hexagonal or cubic.",
       "dtypeStr": "C",
-      "name": "space_group_3D_hall_symbol",
+      "name": "space_group_3D_crystal_system",
       "shape": [],
       "superNames": [
         "section_system"
@@ -3289,6 +3298,15 @@
       "description": "The Hall number for this system.",
       "dtypeStr": "i",
       "name": "space_group_3D_hall_number",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "The Hall symbol for this system.",
+      "dtypeStr": "C",
+      "name": "space_group_3D_hall_symbol",
       "shape": [],
       "superNames": [
         "section_system"
@@ -3313,6 +3331,39 @@
       ]
     }, {
       "derived": true,
+      "description": "Vector $\\mathbf{p}$ from the origin of the standardized system to the origin of the original system. Together with the matrix $\\mathbf{P}$, found in space_group_3D_transformation_matrix, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_origin_shift",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the original cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "space_group_3D_original_equivalent_atoms",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Wyckoff letters for atoms in the original cell.",
+      "dtypeStr": "C",
+      "name": "space_group_3D_original_wyckoff_letters",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
       "description": "Symbol of the crystallographic point group in the Hermann-Mauguin notation.",
       "dtypeStr": "C",
       "name": "space_group_3D_point_group",
@@ -3322,122 +3373,22 @@
       ]
     }, {
       "derived": true,
-      "description": "Name of the crystal system. Can be one of the following: triclinic, monoclinic, orthorhombic, tetragonal, trigonal, hexagonal or cubic.",
-      "dtypeStr": "C",
-      "name": "space_group_3D_crystal_system",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Identifier for the Bravais lattice in Pearson notation. The first lowercase letter identifies the crystal family and can be one of the following: a (triclinic), b (monoclinic), o (orthorhombic), t (tetragonal), h (hexagonal) or c (cubic). The second uppercase letter identifies the centring and can be one of the following: P (primitive), S (face centred), I (body centred), R (rhombohedral centring) or F (all faces centred).",
-      "dtypeStr": "C",
-      "name": "space_group_3D_bravais_lattice",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Vector $\\mathbf{p}$ from the origin of the standardized system to the origin of the original system. Together with the matrix $\\mathbf{P}$, found in space_group_3D_transformation_matrix, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_origin_shift",
-      "shape": [3],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Matrix $\\mathbf{P}$ that is used to transform the standardized coordinates to the original coordinates. Together with the vector $\\mathbf{p}$, found in space_group_3D_origin_shift, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_transformation_matrix",
-      "shape": [
-          3,
-          3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Rotations that together with space_group_3D_translations define the space group operations in reduced units.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_rotations",
-      "shape": [
-        "space_group_3D_number_of_symmetry_operations",
-        3,
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Translations that together with space_group_3D_rotations define the space group operations in reduced units.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_translations",
-      "shape": [
-        "space_group_3D_number_of_symmetry_operations",
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Standardized lattice vectors of the conventional cell chosen as described in https://atztogo.github.io/spglib/definition.html#def-standardized-unit-cell. The vectors are the rows of this matrix.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_std_lattice",
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "derived": true,
-      "description": "Standardized atom positions in reduced units.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_std_positions",
-      "shape": [
-        "number_of_atoms",
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Atomic numbers of the atoms in the standardized cell.",
+      "description": "Atomic numbers in the primitive cell.",
       "dtypeStr": "i",
-      "name": "space_group_3D_std_atomic_numbers",
+      "name": "space_group_3D_primitive_atomic_numbers",
       "shape": [
-        "number_of_atoms"
+        "primitive_number_of_atoms"
       ],
       "superNames": [
         "section_system"
       ]
     }, {
       "derived": true,
-      "description": "Wyckoff letters for atoms in the standardized cell.",
-      "dtypeStr": "C",
-      "name": "space_group_3D_std_wyckoff_letters",
-      "shape": [
-        "std_number_of_atoms"
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the standardized cell. This is used to find symmetrically equivalent atoms.",
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the primitive cell. This is used to find symmetrically equivalent atoms.",
       "dtypeStr": "i",
-      "name": "space_group_3D_std_equivalent_atoms",
+      "name": "space_group_3D_primitive_equivalent_atoms",
       "shape": [
-        "std_number_of_atoms"
+        "primitive_number_of_atoms"
       ],
       "superNames": [
         "section_system"
@@ -3469,17 +3420,6 @@
       ]
     }, {
       "derived": true,
-      "description": "Atomic numbers in the primitive cell.",
-      "dtypeStr": "i",
-      "name": "space_group_3D_primitive_atomic_numbers",
-      "shape": [
-        "primitive_number_of_atoms"
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
       "description": "Wyckoff letters for atoms in the primitive cell.",
       "dtypeStr": "C",
       "name": "space_group_3D_primitive_wyckoff_letters",
@@ -3491,33 +3431,95 @@
       ]
     }, {
       "derived": true,
-      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the primitive cell. This is used to find symmetrically equivalent atoms.",
-      "dtypeStr": "i",
-      "name": "space_group_3D_primitive_equivalent_atoms",
+      "description": "Rotations that together with space_group_3D_translations define the space group operations in reduced units.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_rotations",
       "shape": [
-        "primitive_number_of_atoms"
+        "space_group_3D_number_of_symmetry_operations",
+        3,
+        3
       ],
       "superNames": [
         "section_system"
       ]
     }, {
       "derived": true,
-      "description": "Wyckoff letters for atoms in the original cell.",
+      "description": "Atomic numbers of the atoms in the standardized cell.",
+      "dtypeStr": "i",
+      "name": "space_group_3D_std_atomic_numbers",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the standardized cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "space_group_3D_std_equivalent_atoms",
+      "shape": [
+        "std_number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Standardized lattice vectors of the conventional cell chosen as described in https://atztogo.github.io/spglib/definition.html#def-standardized-unit-cell. The vectors are the rows of this matrix.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_std_lattice",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "derived": true,
+      "description": "Standardized atom positions in reduced units.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_std_positions",
+      "shape": [
+        "number_of_atoms",
+        3
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Wyckoff letters for atoms in the standardized cell.",
       "dtypeStr": "C",
-      "name": "space_group_3D_original_wyckoff_letters",
+      "name": "space_group_3D_std_wyckoff_letters",
       "shape": [
-        "number_of_atoms"
+        "std_number_of_atoms"
       ],
       "superNames": [
         "section_system"
       ]
     }, {
       "derived": true,
-      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the original cell. This is used to find symmetrically equivalent atoms.",
-      "dtypeStr": "i",
-      "name": "space_group_3D_original_equivalent_atoms",
+      "description": "Matrix $\\mathbf{P}$ that is used to transform the standardized coordinates to the original coordinates. Together with the vector $\\mathbf{p}$, found in space_group_3D_origin_shift, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_transformation_matrix",
       "shape": [
-        "number_of_atoms"
+        3,
+        3
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Translations that together with space_group_3D_rotations define the space group operations in reduced units.",
+      "dtypeStr": "f",
+      "name": "space_group_3D_translations",
+      "shape": [
+        "space_group_3D_number_of_symmetry_operations",
+        3
       ],
       "superNames": [
         "section_system"
