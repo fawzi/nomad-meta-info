@@ -1380,6 +1380,15 @@
       ],
       "units": "J"
     }, {
+      "description": "Value for the converged zero-point vibrations energy calculated using the method described in zero_point_method , and used in energy_current .",
+      "dtypeStr": "f",
+      "name": "energy_zero_point",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "unit": "J"
+    }, {
       "description": "Kind of sampled ensemble stored in section_frame_sequence; valid values are defined in [ensemble_type wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/ensemble-type).",
       "dtypeStr": "C",
       "name": "ensemble_type",
@@ -4493,6 +4502,14 @@
       "shape": [],
       "superNames": [
         "settings_XC"
+      ]
+    }, {
+      "description": "Describes the zero-point vibrations method. If skipped or an empty string is used, it means no zero-point vibrations correction is applied.",
+      "dtypeStr": "C",
+      "name": "zero_point_method",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }]
 }
