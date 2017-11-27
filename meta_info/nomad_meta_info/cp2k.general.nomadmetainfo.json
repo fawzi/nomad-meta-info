@@ -1143,6 +1143,139 @@
         "x_cp2k_section_quickstep_settings"
       ]
     }, {
+      "description": "Van der Waals settings.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_vdw_settings",
+      "superNames": [
+        "settings_van_der_Waals",
+        "section_method"
+      ]
+    }, {
+      "description": "Type of the van der Waals method.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_vdw_type",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_settings"
+      ]
+    }, {
+      "description": "Name of the van der Waals method.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_vdw_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_settings"
+      ]
+    }, {
+      "description": "Name of the BJ damping method.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_vdw_bj_damping_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_settings"
+      ]
+    }, {
+      "description": "Cutoff radius of the van der Waals method.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_vdw_cutoff_radius",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_settings"
+      ]
+    }, {
+      "description": "D2 settings.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_vdw_d2_settings",
+      "superNames": [
+        "x_cp2k_section_vdw_settings"
+      ]
+    }, {
+      "description": "Scaling factor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_scaling_factor",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_d2_settings"
+      ]
+    }, {
+      "description": "Exponential damping prefactor for the van der Waals method.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_vdw_damping_factor",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_d2_settings"
+      ]
+    }, {
+      "description": "Contains element-specific Van der Waals settings.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_vdw_element_settings",
+      "superNames": [
+        "x_cp2k_section_vdw_d2_settings"
+      ]
+    }, {
+      "description": "Name of the element.",
+      "dtypeStr": "C",
+      "name": "x_cp2k_vdw_parameter_element_name",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_element_settings"
+      ]
+    }, {
+      "description": "C6 parameter.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_parameter_c6",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_element_settings"
+      ]
+    }, {
+      "description": "Radius parameter.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_parameter_radius",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_element_settings"
+      ]
+    }, {
+      "description": "D3 settings.",
+      "kindStr": "type_section",
+      "name": "x_cp2k_section_vdw_d3_settings",
+      "superNames": [
+        "x_cp2k_section_vdw_settings"
+      ]
+    }, {
+      "description": "S6 scaling factor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_s6_scaling_factor",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_d3_settings"
+      ]
+    }, {
+      "description": "SR6 scaling factor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_sr6_scaling_factor",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_d3_settings"
+      ]
+    }, {
+      "description": "S8 scaling factor.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_s8_scaling_factor",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_d3_settings"
+      ]
+    }, {
+      "description": "Cutoff for CN calculation.",
+      "dtypeStr": "f",
+      "name": "x_cp2k_vdw_cn_cutoff",
+      "shape": [],
+      "superNames": [
+        "x_cp2k_section_vdw_d3_settings"
+      ]
+    }, {
       "description": "Information one atomic kind.",
       "kindStr": "type_section",
       "name": "x_cp2k_section_atomic_kind",
