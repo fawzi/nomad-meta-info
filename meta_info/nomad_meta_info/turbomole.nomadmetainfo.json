@@ -7,14 +7,6 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "The name of the Turbomole module used for this single configuration calculation.",
-      "dtypeStr": "C",
-      "name": "x_turbomole_module",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
       "description": "CC2 total energies",
       "dtypeStr": "f",
       "name": "x_turbomole_CC2_total_energy_final",
@@ -237,22 +229,6 @@
         "section_method"
       ]
     }, {
-      "description": "type of the used correlation functional",
-      "dtypeStr": "C",
-      "name": "x_turbomole_functional_type_correlation",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "type of the used exchange functional",
-      "dtypeStr": "C",
-      "name": "x_turbomole_functional_type_exchange",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
       "description": "The integration cells",
       "dtypeStr": "i",
       "name": "x_turbomole_controlInOut_grid_integration_cells",
@@ -335,6 +311,14 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Damping of the two-electron contributions to Fock matrix in the present SCF iteration",
+      "dtypeStr": "f",
+      "name": "x_turbomole_damping_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "change of the eigenvalues in the current SCF iteration",
       "dtypeStr": "f",
       "name": "x_turbomole_delta_eigenvalues",
@@ -344,6 +328,14 @@
         "section_scf_iteration"
       ],
       "units": "J"
+    }, {
+      "description": "version of the DFT-D3 van-der-Waals correction that is used",
+      "dtypeStr": "C",
+      "name": "x_turbomole_dft_d3_version",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
     }, {
       "description": "Correlation energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
@@ -405,17 +397,19 @@
       ],
       "units": "J"
     }, {
-      "description": "Charges of the point charges in the unit cell used by the PCEEM embedding model",
-      "dtypeStr": "f",
-      "name": "x_turbomole_pceem_charges",
+      "description": "Irreducible representation the eigenstates belong to.",
+      "dtypeStr": "C",
+      "name": "x_turbomole_eigenvalues_irreducible_representation",
       "shape": [
-        "number_of_atoms"
+        "number_of_spin_channels",
+        "number_of_eigenvalues_kpoints",
+        "number_of_eigenvalues"
       ],
       "superNames": [
-        "section_system"
+        "section_eigenvalues"
       ]
     }, {
-    "description": "Total energy contribution from one-electron integrals",
+      "description": "Total energy contribution from one-electron integrals",
       "dtypeStr": "f",
       "name": "x_turbomole_energy_1electron_scf_iteration",
       "shape": [],
@@ -424,14 +418,6 @@
         "section_scf_iteration"
       ],
       "units": "J"
-    }, {
-      "description": "Damping of the two-electron contributions to Fock matrix in the present SCF iteration",
-      "dtypeStr": "f",
-      "name": "x_turbomole_damping_scf_iteration",
-      "shape": [],
-      "superNames": [
-        "section_scf_iteration"
-      ]
     }, {
       "description": "Total energy contribution from two-electron integrals",
       "dtypeStr": "f",
@@ -452,6 +438,22 @@
         "x_turbomole_section_eigenvalues_GW"
       ]
     }, {
+      "description": "type of the used correlation functional",
+      "dtypeStr": "C",
+      "name": "x_turbomole_functional_type_correlation",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "type of the used exchange functional",
+      "dtypeStr": "C",
+      "name": "x_turbomole_functional_type_exchange",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "Determines whether a geoemtry optimization is converged.",
       "dtypeStr": "C",
       "name": "x_turbomole_geometry_optimization_converged",
@@ -461,44 +463,94 @@
         "section_run"
       ]
     }, {
-      "description": "Maximum multipole moment used in the PCEEM embedding",
+      "description": "By default Turbomole only keeps the output of the final iteration once the geometry has been converged, thus the entire optimization trajectory cannot be rebuild in most cases. Instead, this value contains the optimization cycle index to indicate how many iterations have preceded this one.",
       "dtypeStr": "i",
-      "name": "x_turbomole_pceem_max_multipole",
+      "name": "x_turbomole_geometry_optimization_cycle_index",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_method"
       ]
     }, {
-      "description": "Norm of the DIIS error in an SCF-iteration",
+      "description": "geometry optimization convergence criterion - Root Mean Square of displacements",
       "dtypeStr": "f",
-      "name": "x_turbomole_norm_diis_scf_iteration",
+      "name": "x_turbomole_geometry_optimization_geometry_change_rms",
       "shape": [],
       "superNames": [
-        "section_scf_iteration"
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "geometry optimization convergence criterion - Root Mean Square of forces",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_threshold_force_rms",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "N"
+    }, {
+      "description": "geometry optimization trust region - initial radius",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_trustregion_initial",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "geometry optimization trust region - maximum radius",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_trustregion_max",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "geometry optimization trust region - minimum radius",
+      "dtypeStr": "f",
+      "name": "x_turbomole_geometry_optimization_trustregion_min",
+      "shape": [],
+      "superNames": [
+        "section_sampling_method"
+      ],
+      "units": "m"
+    }, {
+      "description": "The employed GW approximation.",
+      "dtypeStr": "C",
+      "name": "x_turbomole_gw_approximation",
+      "shape": [],
+      "superNames": [
+        "section_method",
+        "settings_GW"
       ]
     }, {
-      "description": "Maximal resid. norm for Fia-block in an SCF-iteration",
+      "description": "[TO BE VERIFIED]Infinitesimal complex energy shift. Negative value switches to calculating at that value but extrapolating to 0 in linear approximation.",
       "dtypeStr": "f",
-      "name": "x_turbomole_norm_fia_scf_iteration",
+      "name": "x_turbomole_gw_eta_factor",
+      "repeats": false,
       "shape": [],
       "superNames": [
-        "section_scf_iteration"
+        "section_method",
+        "settings_GW"
+      ],
+      "units": "J"
+    }, {
+      "description": "If true, the pure RPA response function is calculated. Otherwise, the TDDFT response function is calculated and used to screen the coulomb interaction.",
+      "dtypeStr": "b",
+      "name": "x_turbomole_gw_use_rpa_response",
+      "shape": [],
+      "superNames": [
+        "section_method",
+        "settings_GW"
       ]
     }, {
-      "description": "Maximal resid. fock norm in an SCF-iteration",
-      "dtypeStr": "f",
-      "name": "x_turbomole_norm_fock_scf_iteration",
+      "description": "The name of the Turbomole module used for this single configuration calculation.",
+      "dtypeStr": "C",
+      "name": "x_turbomole_module",
       "shape": [],
       "superNames": [
-        "section_scf_iteration"
-      ]
-    }, {
-      "description": "Minimum separation between cells in PCEEM embedding for periodic fast multipole treatment",
-      "dtypeStr": "f",
-      "name": "x_turbomole_pceem_min_separation_cells",
-      "shape": [],
-      "superNames": [
-        "section_system"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "MP2 total energies",
@@ -512,14 +564,6 @@
       ],
       "units": "J"
     }, {
-      "description": "Multipole precision parameter for PCEEM embedding",
-      "dtypeStr": "f",
-      "name": "x_turbomole_pceem_multipole_precision",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
       "description": "compute node",
       "dtypeStr": "C",
       "name": "x_turbomole_nodename",
@@ -528,9 +572,25 @@
         "section_run"
       ]
     }, {
+      "description": "Norm of the DIIS error in an SCF-iteration",
+      "dtypeStr": "f",
+      "name": "x_turbomole_norm_diis_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
       "description": "orbital with the largest residual norm for the Fia block in this iteration",
       "dtypeStr": "C",
       "name": "x_turbomole_norm_fia_orbital_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Maximal resid. norm for Fia-block in an SCF-iteration",
+      "dtypeStr": "f",
+      "name": "x_turbomole_norm_fia_scf_iteration",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -542,6 +602,48 @@
       "shape": [],
       "superNames": [
         "section_scf_iteration"
+      ]
+    }, {
+      "description": "Maximal resid. fock norm in an SCF-iteration",
+      "dtypeStr": "f",
+      "name": "x_turbomole_norm_fock_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ]
+    }, {
+      "description": "Charges of the point charges in the unit cell used by the PCEEM embedding model",
+      "dtypeStr": "f",
+      "name": "x_turbomole_pceem_charges",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Maximum multipole moment used in the PCEEM embedding",
+      "dtypeStr": "i",
+      "name": "x_turbomole_pceem_max_multipole",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Minimum separation between cells in PCEEM embedding for periodic fast multipole treatment",
+      "dtypeStr": "f",
+      "name": "x_turbomole_pceem_min_separation_cells",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Multipole precision parameter for PCEEM embedding",
+      "dtypeStr": "f",
+      "name": "x_turbomole_pceem_multipole_precision",
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "Final potential energy",
@@ -567,13 +669,9 @@
       "kindStr": "type_section",
       "name": "x_turbomole_section_functionals",
       "repeats": true,
-      "superNames": ["section_method"]
-    }, {
-      "description": "XC functional type",
-      "dtypeStr": "C",
-      "name": "x_turbomole_XC_functional_type",
-      "repeats": true,
-      "superNames": ["x_turbomole_section_functionals"]
+      "superNames": [
+        "section_method"
+      ]
     }, {
       "description": "Type of UHF molecular orbital",
       "dtypeStr": "C",
@@ -609,77 +707,12 @@
         "section_single_configuration_calculation"
       ]
     }, {
-      "description": "version of the DFT-D3 van-der-Waals correction that is used",
+      "description": "XC functional type",
       "dtypeStr": "C",
-      "name": "x_turbomole_dft_d3_version",
-      "shape": [],
+      "name": "x_turbomole_XC_functional_type",
+      "repeats": true,
       "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "geometry optimization convergence criterion - Root Mean Square of displacements",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_optimization_geometry_change_rms",
-      "shape": [],
-      "superNames": [
-        "section_sampling_method"
-      ],
-      "units": "m"
-    }, {
-      "description": "geometry optimization convergence criterion - Root Mean Square of forces",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_optimization_threshold_force_rms",
-      "shape": [],
-      "superNames": [
-        "section_sampling_method"
-      ],
-      "units": "N"
-    }, {
-      "description": "geometry optimization trust region - maximum radius",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_optimization_trustregion_max",
-      "shape": [],
-      "superNames": [
-        "section_sampling_method"
-      ],
-      "units": "m"
-    }, {
-      "description": "geometry optimization trust region - minimum radius",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_optimization_trustregion_min",
-      "shape": [],
-      "superNames": [
-        "section_sampling_method"
-      ],
-      "units": "m"
-    }, {
-      "description": "geometry optimization trust region - initial radius",
-      "dtypeStr": "f",
-      "name": "x_turbomole_geometry_optimization_trustregion_initial",
-      "shape": [],
-      "superNames": [
-        "section_sampling_method"
-      ],
-      "units": "m"
-    }, {
-      "description": "By default Turbomole only keeps the output of the final iteration once the geometry has been converged, thus the entire optimization trajectory cannot be rebuild in most cases. Instead, this value contains the optimization cycle index to indicate how many iterations have preceded this one.",
-      "dtypeStr": "i",
-      "name": "x_turbomole_geometry_optimization_cycle_index",
-      "shape": [],
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "Irreducible representation the eigenstates belong to.",
-      "dtypeStr": "C",
-      "name": "x_turbomole_eigenvalues_irreducible_representation",
-      "shape": [
-        "number_of_spin_channels",
-        "number_of_eigenvalues_kpoints",
-        "number_of_eigenvalues"
-      ],
-      "superNames": [
-        "section_eigenvalues"
+        "x_turbomole_section_functionals"
       ]
     }, {
       "description": "TODO:",
@@ -690,34 +723,5 @@
       "superNames": [
         "x_turbomole_section_eigenvalues_GW"
       ]
-    }, {
-      "description": "The employed GW approximation.",
-      "dtypeStr": "C",
-      "name": "x_turbomole_gw_approximation",
-      "shape": [],
-      "superNames": [
-        "section_method",
-        "settings_GW"
-      ]
-    }, {
-      "description": "If true, the pure RPA response function is calculated. Otherwise, the TDDFT response function is calculated and used to screen the coulomb interaction.",
-      "dtypeStr": "b",
-      "name": "x_turbomole_gw_use_rpa_response",
-      "shape": [],
-      "superNames": [
-        "section_method",
-        "settings_GW"
-      ]
-    }, {
-      "description": "[TO BE VERIFIED]Infinitesimal complex energy shift. Negative value switches to calculating at that value but extrapolating to 0 in linear approximation.",
-      "dtypeStr": "f",
-      "name": "x_turbomole_gw_eta_factor",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_method",
-        "settings_GW"
-      ],
-      "units": "J"
     }]
 }
