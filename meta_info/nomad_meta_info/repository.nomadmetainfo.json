@@ -28,7 +28,7 @@
     }, {
       "description": "Identifier of the author used in the repository",
       "dtypeStr": "i",
-      "name": "author_repository_id",
+      "name": "author_repo_id",
       "superNames": [
         "section_author_info"
       ]
@@ -253,7 +253,7 @@
     }, {
       "description": "Information about the person who uploaded the data to NOMAD repository",
       "kindStr": "type_section",
-      "name": "section_uploader",
+      "name": "section_uploader_info",
       "superNames": [
         "section_repository_info"
       ]
@@ -281,7 +281,7 @@
     }, {
       "description": "Comment on data uploaded to NOMAD repository",
       "dtypeStr": "C",
-      "name": "upload_comment",
+      "name": "repository_comment",
       "superNames": [
         "section_repository_info"
       ]
@@ -311,28 +311,28 @@
       "dtypeStr": "C",
       "name": "uploader_first_name",
       "superNames": [
-        "section_uploader"
+        "section_uploader_info"
       ]
     }, {
       "description": "Last name of the uploader to NOMAD repository",
       "dtypeStr": "C",
       "name": "uploader_last_name",
       "superNames": [
-        "section_uploader"
+        "section_uploader_info"
       ]
     }, {
       "description": "First name of the uploader to NOMAD repository (includes middle names)",
       "dtypeStr": "i",
       "name": "uploader_repo_id",
       "superNames": [
-        "section_uploader"
+        "section_uploader_info"
       ]
     }, {
       "description": "username of the uploader",
       "dtypeStr": "C",
       "name": "uploader_username",
       "superNames": [
-        "section_uploader"
+        "section_uploader_info"
       ]
     }]
 }
