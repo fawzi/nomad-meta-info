@@ -576,36 +576,6 @@
         "section_excited_states"
       ]
     }, {
-      "description": "Base path of the raw data in the upload, these directories are *not* created in the archive",
-      "dtypeStr": "C",
-      "name": "raw_data_base_path",
-      "superNames": [
-        "section_raw_data"
-      ]
-    }, {
-      "description": "paths stored in the archive, all subfiles are stored along with these",
-      "dtypeStr": "C",
-      "name": "raw_data_content_roots",
-      "repeats": true,
-      "superNames": [
-        "section_raw_data"
-      ]
-    }, {
-      "description": "When the raw data archive was created",
-      "dtypeStr": "C",
-      "name": "raw_data_creation_date",
-      "repeats": true,
-      "superNames": [
-        "section_raw_data"
-      ]
-    }, {
-      "description": "Unique identifier of the raw data archive",
-      "dtypeStr": "C",
-      "name": "raw_data_gid",
-      "superNames": [
-        "section_raw_data"
-      ]
-    }, {
       "description": "The top level context containing the reponse to an api query, when using jsonAPI they are tipically in the meta part",
       "kindStr": "type_section",
       "name": "response_context",
