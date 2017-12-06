@@ -33,6 +33,13 @@
         "section_author_info"
       ]
     }, {
+      "description": "internal ID of the citation (primary key in Postgres DB)",
+      "dtypeStr": "C",
+      "name": "citation_repo_id",
+      "superNames": [
+        "section_citation"
+      ]
+    }, {
       "description": "The type of citation (internal or external)",
       "dtypeStr": "C",
       "name": "citation_type",
@@ -47,6 +54,13 @@
         "section_citation"
       ]
     }, {
+      "description": "internal ID of the data set (primary key in Postgres DB calculations table)",
+      "dtypeStr": "i",
+      "name": "dataset_calc_id",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
       "description": "Checksum idendifying the dataset in the repository",
       "dtypeStr": "C",
       "name": "dataset_checksum",
@@ -57,6 +71,13 @@
       "description": "Name of NOMAD repository dataset",
       "dtypeStr": "C",
       "name": "dataset_name",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
+      "description": "internal ID of the (optional) parent data set (primary key in Postgres DB calculations table)",
+      "dtypeStr": "i",
+      "name": "dataset_parent_calc_id",
       "superNames": [
         "section_repository_dataset"
       ]
@@ -86,6 +107,13 @@
       "dtypeStr": "C",
       "name": "repository_archive_gid",
       "repeats": true,
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Number of different elements contained in the system",
+      "dtypeStr": "i",
+      "name": "repository_atomic_elements_count",
       "superNames": [
         "section_repository_info"
       ]
@@ -126,9 +154,31 @@
         "section_repository_info"
       ]
     }, {
+      "description": "version of the code that was used to generate the calculation",
+      "dtypeStr": "C",
+      "name": "repository_code_version",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "Comment on data uploaded to NOMAD repository",
+      "dtypeStr": "C",
+      "name": "repository_comment",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
       "description": "String identifying the crystal system of this calculation",
       "dtypeStr": "C",
       "name": "repository_crystal_system",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "paths to the files associated with this calculation on the file system",
+      "dtypeStr": "C",
+      "name": "repository_filepaths",
+      "repeats": true,
       "superNames": [
         "section_repository_info"
       ]
@@ -143,6 +193,13 @@
       "description": "Db identifier for a file/calculation in NOMAD repository",
       "dtypeStr": "i64",
       "name": "repository_id",
+      "superNames": [
+        "section_repository_info"
+      ]
+    }, {
+      "description": "path to the primary file of this calculation on the file system",
+      "dtypeStr": "C",
+      "name": "repository_location",
       "superNames": [
         "section_repository_info"
       ]
@@ -272,18 +329,25 @@
         "section_shared_with"
       ]
     }, {
+      "description": "full name of the user the calculation has been shared with",
+      "dtypeStr": "i",
+      "name": "shared_with_name",
+      "superNames": [
+        "section_shared_with"
+      ]
+    }, {
+      "description": "repository-internal ID of the user the calculation has been shared with",
+      "dtypeStr": "i",
+      "name": "shared_with_repo_id",
+      "superNames": [
+        "section_shared_with"
+      ]
+    }, {
       "description": "username of a person this calculation is shared with",
       "dtypeStr": "C",
       "name": "shared_with_username",
       "superNames": [
         "section_shared_with"
-      ]
-    }, {
-      "description": "Comment on data uploaded to NOMAD repository",
-      "dtypeStr": "C",
-      "name": "repository_comment",
-      "superNames": [
-        "section_repository_info"
       ]
     }, {
       "description": "Date/time when the data was uploaded to NOMAD repository (offset from *Unix epoch* (00:00:00 UTC on 1 January 1970) in seconds)",
@@ -317,6 +381,13 @@
       "description": "Last name of the uploader to NOMAD repository",
       "dtypeStr": "C",
       "name": "uploader_last_name",
+      "superNames": [
+        "section_uploader_info"
+      ]
+    }, {
+      "description": "full name of the user who uploaded the calculation",
+      "dtypeStr": "i",
+      "name": "uploader_name",
       "superNames": [
         "section_uploader_info"
       ]
