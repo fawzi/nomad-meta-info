@@ -1384,8 +1384,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_compressibility0",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1393,8 +1395,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_compressibility1",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1402,8 +1406,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_compressibility2",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1411,8 +1417,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_refp0",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1420,8 +1428,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_refp1",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1429,8 +1439,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_refp2",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1807,8 +1819,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_deform0",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1816,8 +1830,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_deform1",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -1825,8 +1841,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_deform2",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -2032,8 +2050,10 @@
   }, {
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_acc",
-    "dtypeStr": "C",
-    "shape": [], 
+    "dtypeStr": "f",
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
@@ -2042,7 +2062,9 @@
     "description": "Gromacs running environment and control parameters.",
     "name": "x_gromacs_inout_control_nfreeze",
     "dtypeStr": "C",
-    "shape": [], 
+    "shape": [
+      3
+    ],
     "superNames": [
       "section_run",
       "x_gromacs_section_control_parameters"
