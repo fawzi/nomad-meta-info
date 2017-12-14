@@ -2978,7 +2978,7 @@
       "kindStr": "type_section",
       "name": "section_springer_references",
       "superNames": [
-        "section_springer_id"
+        "section_springer_material"
       ]
     }, {
       "description": "Section collecting alternative values to stress_tensor that have been calculated.\n\nThis section allows the storage of multiple definitions and evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics or geometry optimization (if needed).",
@@ -3914,7 +3914,7 @@
       }
     }, {
       "description": "The formula of current material according to Springer Materials",
-      "kindStr": "C",
+      "dtypeStr": "C",
       "name": "springer_formula",
       "shape": [],
       "superNames": [
@@ -3946,23 +3946,23 @@
       ]
     }, {
       "description": "Contains the information about references related to current material according to Springer Materials",
-      "kindStr": "C",
+      "dtypeStr": "C",
       "name": "springer_reference",
       "shape": [],
       "superNames": [
         "section_springer_references"
       ]
     }, {
-      "description": "Information about the space group of current material according to Springer Materials",
-      "kindStr": "C",
-      "name": "springer_space_group",
+      "description": "Information about the space group number of current material according to Springer Materials",
+      "dtypeStr": "i",
+      "name": "springer_space_group_number",
       "shape": [],
       "superNames": [
         "section_springer_material"
       ]
     }, {
       "description": "Url to the source page in Springer Materials describing the current entry",
-      "kindStr": "C",
+      "dtypeStr": "C",
       "name": "springer_url",
       "shape": [],
       "superNames": [
