@@ -225,7 +225,15 @@
       "superNames": [
         "section_single_configuration_calculation" ],
       "units": "G-Pa"
-    }, {
+    },  {
+      "description": "Elastic constant (stiffness) matrix in GPa",
+      "dtypeStr": "f",
+      "name": "x_elastic_3rd_order_constants_matrix",
+      "shape": [6,6,6],
+      "superNames": [
+        "section_single_configuration_calculation" ],
+      "units": "G-Pa"
+    },{
       "description": "Elastic compliance matrix in 1/GPa",
       "dtypeStr": "f",
       "name": "x_elastic_2nd_order_constants_compliance_matrix",
