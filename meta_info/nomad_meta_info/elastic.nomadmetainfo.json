@@ -218,7 +218,7 @@
       "superNames": [
         "section_single_configuration_calculation" ]
     }, {
-      "description": "Elastic constant (stiffness) matrix in GPa",
+      "description": "2nd order elastic constant (stiffness) matrix in GPa",
       "dtypeStr": "f",
       "name": "x_elastic_2nd_order_constants_matrix",
       "shape": [6,6],
@@ -226,7 +226,7 @@
         "section_single_configuration_calculation" ],
       "units": "G-Pa"
     },  {
-      "description": "Elastic constant (stiffness) matrix in GPa",
+      "description": "3rd order elastic constant (stiffness) matrix in GPa",
       "dtypeStr": "f",
       "name": "x_elastic_3rd_order_constants_matrix",
       "shape": [6,6,6],
