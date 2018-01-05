@@ -498,7 +498,8 @@
       "name": "basis_set",
       "shape": [],
       "superNames": [
-        "section_method"
+        "settings_potential_energy_surface",
+        "settings_numerical_parameter"
       ]
     }, {
       "contains": [
@@ -544,6 +545,14 @@
       "shape": [],
       "superNames": [
         "section_method"
+      ]
+    }, {
+      "description": "repository pid of this calculation",
+      "dtypeStr": "C",
+      "name": "calculation_pid",
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
       ]
     }, {
       "description": "URL used to reference an externally stored calculation. The kind of relationship between the present and the referenced section_single_configuration_calculation is specified by calculation_to_calculation_kind.",
@@ -1833,6 +1842,14 @@
         "section_system"
       ]
     }, {
+      "description": "nomad uri identifying the main file corresponding to this calculation",
+      "dtypeStr": "C",
+      "name": "main_file_uri",
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
+      ]
+    }, {
       "description": "An array of the dimension of number_of_atoms where each atom (identified by the index in the array) is assigned to an atom-centered basis set, for this section_single_configuration_calculation. The actual definition of the atom-centered basis set is in the section_basis_set_atom_centered that is referred to by this metadata.",
       "dtypeStr": "r",
       "name": "mapping_section_basis_set_atom_centered",
@@ -2356,6 +2373,22 @@
         "accessory_info"
       ]
     }, {
+      "description": "id of the parser used to extract this information",
+      "dtypeStr": "C",
+      "name": "parser_id",
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
+      ]
+    }, {
+      "description": "name of the parser used to extract this information",
+      "dtypeStr": "C",
+      "name": "parser_name",
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
+      ]
+    }, {
       "description": "This field is used for debugging messages of the parsing program associated with a run, see section_run.",
       "dtypeStr": "C",
       "name": "parsing_message_debug_evaluation",
@@ -2772,6 +2805,11 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Information on this calculation (main file)",
+      "kindStr": "type_section",
+      "name": "section_calculation_info",
+      "superNames": []
+    }, {
       "description": "Section that describes the relationship between different section_single_configuration_calculation sections.\n\nFor instance, one calculation is a perturbation performed using a self-consistent field (SCF) calculation as starting point, or a simulated system is partitioned in regions with different but connected Hamiltonians (e.g., QM/MM, or a region treated via Kohn-Sham DFT embedded into a region treated via orbital-free DFT).\n\nThe kind of relationship between the calculation defined in this section and the referenced one is described by calculation_to_calculation_kind. The referenced section_single_configuration_calculation is identified via calculation_to_calculation_ref (typically used for a section_single_configuration_calculation in the same section_run) or calculation_to_calculation_external_url.",
       "kindStr": "type_section",
       "name": "section_calculation_to_calculation_refs",
@@ -3050,7 +3088,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_geometry_optimization",
       "superNames": [
-        "section_sampling_method"
+        "settings_sampling"
       ]
     }, {
       "description": "Contains parameters for the GW-method in the post Hartree-Fock step, that expands the self-energy in terms of the single particle Green's function $G$ and the screened Coulomb interaction $W$.",
@@ -3071,7 +3109,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_k_points",
       "superNames": [
-        "section_method"
+        "settings_potential_energy_surface"
       ]
     }, {
       "description": "Contains parameters for the multi-configurational self-consistent-field (MCSCF) method.",
@@ -3085,14 +3123,14 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_metadynamics",
       "superNames": [
-        "section_sampling_method"
+        "settings_sampling"
       ]
     }, {
       "description": "Contains parameters that control the molecular dynamics sampling.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_molecular_dynamics",
       "superNames": [
-        "section_sampling_method"
+        "settings_sampling"
       ]
     }, {
       "description": "Contains parameters for Møller–Plesset perturbation theory.",
@@ -3106,7 +3144,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_Monte_Carlo",
       "superNames": [
-        "section_sampling_method"
+        "settings_sampling"
       ]
     }, {
       "description": "Contains parameters for the multi-reference single and double configuration interaction method.",
@@ -3116,11 +3154,28 @@
         "settings_post_hartree_fock"
       ]
     }, {
+      "description": "A parameter that can influence the convergence, but not the physics (unlike settings_physical_parameter)",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_numerical_parameter",
+      "superNames": []
+    }, {
+      "description": "A parameter that defines the physical model used. Use settings_numerical_parameter for parameters that that influence only the convergence/accuracy.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_physical_parameter",
+      "superNames": []
+    }, {
       "description": "Contains parameters for the post Hartree-Fock method.",
       "kindStr": "type_abstract_document_content",
       "name": "settings_post_hartree_fock",
       "superNames": [
         "settings_XC"
+      ]
+    }, {
+      "description": "Contains parameters that control the potential energy surface.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_potential_energy_surface",
+      "superNames": [
+        "section_method"
       ]
     }, {
       "description": "Contains parameters and information connected with the relativistic treatment used in the calculation.",
@@ -3135,6 +3190,13 @@
       "name": "settings_run",
       "superNames": [
         "section_run"
+      ]
+    }, {
+      "description": "Contains parameters controlling the sampling.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_sampling",
+      "superNames": [
+        "section_sampling_method"
       ]
     }, {
       "description": "Contains parameters connected with the convergence of the self-consistent field (SCF) iterations.",
@@ -3190,7 +3252,7 @@
       "kindStr": "type_abstract_document_content",
       "name": "settings_XC",
       "superNames": [
-        "section_method"
+        "settings_potential_energy_surface"
       ]
     }, {
       "description": "DEPRECATED, use lattice_vectors instead. Holds the lattice vectors (in Cartesian coordinates) of the simulation cell. The last (fastest) index runs over the $x,y,z$ Cartesian coordinates, and the first index runs over the 3 lattice vectors.",
@@ -3257,7 +3319,7 @@
       "name": "source_id",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_calculation_info"
       ]
     }, {
       "description": "Link to a webpage describing the object, material,... within the project that calculated this  of this calculation. For example a link to aflow lib calculation, oqmd or material project material",
@@ -3265,7 +3327,7 @@
       "name": "source_link",
       "shape": [],
       "superNames": [
-        "section_run"
+        "section_calculation_info"
       ]
     }, {
       "description": "Contain the references to the location of the raw the data (e.g., URI).",
@@ -4454,7 +4516,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC_functional"
+        "settings_XC_functional",
+        "settings_physical_parameter"
       ]
     }, {
       "description": "Provides the name of one of the exchange and/or correlation (XC) functionals combined in XC_functional.\n\nThe valid unique names that can be used are listed in the [XC_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).\n\n*NOTE*: This value should refer to a correlation, an exchange or an exchange-correlation functional only.",
@@ -4463,7 +4526,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_XC_functionals",
+        "settings_physical_parameter"
       ]
     }, {
       "description": "Contains an associative list of non-default values of the parameters for the functional declared in XC_functional_name of the section_XC_functionals section.\n\nFor example, if a calculations using a hybrid XC functional (e.g., HSE06) specifies a user-given value of the mixing parameter between exact and GGA exchange, then this non-default value is stored in this metadata.\n\nThe labels and units of these values are defined in the paragraph dedicated to the specified functional declared in XC_functional_name of the [XC_functional wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional).\n\nIf this metadata is not given, the default parameter values for the XC_functional_name are assumed.",
@@ -4472,7 +4536,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_XC_functionals",
+        "settings_physical_parameter"
       ]
     }, {
       "description": "Provides the value of the weight for the exchange, correlation, or exchange-correlation functional declared in XC_functional_name (see section_XC_functionals).\n\nThis weight is used in the linear combination of the different XC functional names (XC_functional_name) in different section_XC_functionals sections to form the XC_functional used for evaluating energy_XC_functional and related quantities.\n\nIf not specified then the default is set to 1.",
@@ -4481,7 +4546,8 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_XC_functionals",
+        "settings_physical_parameter"
       ]
     }, {
       "derived": true,
