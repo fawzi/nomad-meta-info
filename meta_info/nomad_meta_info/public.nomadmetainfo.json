@@ -2373,6 +2373,20 @@
         "accessory_info"
       ]
     }, {
+      "description": "Status returned by the first parser that thranslated the main_file_uri",
+      "dtypeStr": "C",
+      "name": "parse_status",
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
+      ],
+      "values": {
+        "ParseFailure": "The parser failed to parse this main file",
+        "ParseSkipped": "The parser skipped this main file",
+        "ParseSuccess": "Parsing was successfull (does not mean that the file is valid or meaningful, simply that the parser could process it)",
+        "ParseWithWarnings": "The Parser had serious warnings"
+      }
+    }, {
       "description": "id of the parser used to extract this information",
       "dtypeStr": "C",
       "name": "parser_id",
