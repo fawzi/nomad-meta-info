@@ -3440,19 +3440,6 @@
       ]
     }, {
       "derived": true,
-      "description": "Rotations that together with space_group_3D_translations define the space group operations in reduced units.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_rotations",
-      "shape": [
-        "space_group_3D_number_of_symmetry_operations",
-        3,
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
       "description": "Atomic numbers of the atoms in the standardized cell.",
       "dtypeStr": "i",
       "name": "space_group_3D_std_atomic_numbers",
@@ -3516,18 +3503,6 @@
       "name": "space_group_3D_transformation_matrix",
       "shape": [
         3,
-        3
-      ],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Translations that together with space_group_3D_rotations define the space group operations in reduced units.",
-      "dtypeStr": "f",
-      "name": "space_group_3D_translations",
-      "shape": [
-        "space_group_3D_number_of_symmetry_operations",
         3
       ],
       "superNames": [
