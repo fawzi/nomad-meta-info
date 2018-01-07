@@ -123,7 +123,8 @@
       "name": "x_vasp_incar_ENCUT",
       "shape": [],
       "superNames": [
-        "x_vasp_incar_param"
+        "x_vasp_incar_param",
+        "settings_numerical_parameter"
       ]
     }, {
       "description": "Maximum cutoff (normally specified only in POTCAR). Value stored in incar.",

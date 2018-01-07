@@ -14,11 +14,11 @@
       "superNames": [
         "section_method" ]
     }, {
-      "description": "contains the values computed during a calculation performed on a given configuration of the system",
+      "description": "section collecting the data of the strain diagrams",
       "kindStr": "type_section",
-      "name": "x_elastic_section_single_configuration_calculation",
+      "name": "x_elastic_section_strain_diagrams",
       "superNames": [
-        "section_run"
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "number of deformed structures equally spaced in strain, which are generated between the maximum negative strain and the maximum positive one",
@@ -26,212 +26,78 @@
       "name": "x_elastic_number_of_deformations",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "section_method" ]
     }, {
-      "description": "Values of the strain for which the energy is calculated",
+      "description": "Values of the energy/d2E/cross (depending on the value of x_elastic_strain_diagram_type)",
       "dtypeStr": "f",
-      "name": "x_elastic_energy_strain_eta_values",
+      "name": "x_elastic_strain_diagram_values",
       "shape": [
         "x_elastic_number_of_deformations",
-        "x_elastic_number_of_distorted_structures"
+        "x_elastic_strain_diagram_number_of_eta"
       ],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "energy values as a function of the strain",
+      "description": "eta values used the strain diagrams",
       "dtypeStr": "f",
-      "name": "x_elastic_energy_strain_energy_values",
+      "name": "x_elastic_strain_diagram_eta_values",
       "shape": [
         "x_elastic_number_of_deformations",
-        "x_elastic_number_of_distorted_structures"
+        "x_elastic_strain_diagram_number_of_eta"
       ],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "Second order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_d2E_d2E_values_2nd",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_d2E_number_of_eta_polinomial_2nd"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Fourth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_d2E_d2E_values_4th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_d2E_number_of_eta_polinomial_4th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Sixth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_d2E_d2E_values_6th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_d2E_number_of_eta_polinomial_6th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Strain values of the second order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_d2E_eta_values_2nd",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_d2E_number_of_eta_polinomial_2nd"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Strain values of the fourth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_d2E_eta_values_4th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_d2E_number_of_eta_polinomial_4th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Strain values of the sixth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_d2E_eta_values_6th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_d2E_number_of_eta_polinomial_6th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Cross-validation error for the second order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_cross_cross_values_2nd",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_cross_number_of_eta_polinomial_2nd"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Cross-validation error for the fourth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_cross_cross_values_4th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_cross_number_of_eta_polinomial_4th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Cross-validation error for the sixth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_cross_cross_values_6th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_cross_number_of_eta_polinomial_6th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Strain values for the cross-validation error of the second order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_cross_eta_values_2nd",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_cross_number_of_eta_polinomial_2nd"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Strain values for the cross-validation error of the fourth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_cross_eta_values_4th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_cross_number_of_eta_polinomial_4th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Strain values for the cross-validation error of the sixth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "f",
-      "name": "x_elastic_cross_eta_values_6th",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_cross_number_of_eta_polinomial_6th"
-      ],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-
-    }, {
-      "description": "Number of strain values used for the sixth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
+      "description": "Number of strain values used in the strain diagram",
       "dtypeStr": "i",
-      "name": "x_elastic_d2E_number_of_eta_polinomial_6th",
+      "name": "x_elastic_strain_diagram_number_of_eta",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "Number of strain values used for the fourth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "i",
-      "name": "x_elastic_d2E_number_of_eta_polinomial_4th",
+      "description": "Kind of strain diagram. Possible values are: energy; cross (cross-validation error); d2E (second derivative of the energy wrt the strain)",
+      "dtypeStr": "C",
+      "name": "x_elastic_strain_diagram_type",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "Number of strain values used for the second order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
+      "description": "Order of the polinomial fit",
       "dtypeStr": "i",
-      "name": "x_elastic_d2E_number_of_eta_polinomial_2nd",
+      "name": "x_elastic_strain_diagram_polinomial_fit_order",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Number of strain values used for the cross validation of the sixth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "i",
-      "name": "x_elastic_cross_number_of_eta_polinomial_6th",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Number of strain values used for the cross validation of the fourth order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "i",
-      "name": "x_elastic_cross_number_of_eta_polinomial_4th",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
-    }, {
-      "description": "Number of strain values used for the cross validation of the second order polinomial fit of the derivative of the energy with respect to the lagrangian stress",
-      "dtypeStr": "i",
-      "name": "x_elastic_cross_number_of_eta_polinomial_2nd",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "x_elastic_section_strain_diagrams" ]
     }, {
       "description": "Symmetry of the second-order elastic constant matrix in Voigt notation",
       "dtypeStr": "C",
       "name": "x_elastic_2nd_order_constants_notation_matrix",
       "shape": [6,6],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "section_single_configuration_calculation" ]
     }, {
-      "description": "Elastic constant (stiffness) matrix in GPa",
+      "description": "2nd order elastic constant (stiffness) matrix in GPa",
       "dtypeStr": "f",
       "name": "x_elastic_2nd_order_constants_matrix",
       "shape": [6,6],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
-    }, {
+    },  {
+      "description": "3rd order elastic constant (stiffness) matrix in GPa",
+      "dtypeStr": "f",
+      "name": "x_elastic_3rd_order_constants_matrix",
+      "shape": [6,6,6],
+      "superNames": [
+        "section_single_configuration_calculation" ],
+      "units": "G-Pa"
+    },{
       "description": "Elastic compliance matrix in 1/GPa",
       "dtypeStr": "f",
       "name": "x_elastic_2nd_order_constants_compliance_matrix",
       "shape": [6,6],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa_1"
     }, {
       "description": "Voigt bulk modulus",
@@ -239,7 +105,7 @@
       "name": "x_elastic_Voigt_bulk_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Voigt shear modulus",
@@ -247,7 +113,7 @@
       "name": "x_elastic_Voigt_shear_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Reuss bulk modulus",
@@ -255,7 +121,7 @@
       "name": "x_elastic_Reuss_bulk_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Reuss shear modulus",
@@ -263,7 +129,7 @@
       "name": "x_elastic_Reuss_shear_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Hill bulk modulus",
@@ -271,7 +137,7 @@
       "name": "x_elastic_Hill_bulk_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Hill shear modulus",
@@ -279,7 +145,7 @@
       "name": "x_elastic_Hill_shear_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Voigt Young modulus",
@@ -287,7 +153,7 @@
       "name": "x_elastic_Voigt_Young_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Voigt Poisson ratio",
@@ -295,14 +161,14 @@
       "name": "x_elastic_Voigt_Poisson_ratio",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "section_single_configuration_calculation" ]
     }, {
       "description": "Reuss Young modulus",
       "dtypeStr": "f",
       "name": "x_elastic_Reuss_Young_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Reuss Poisson ratio",
@@ -310,14 +176,14 @@
       "name": "x_elastic_Reuss_Poisson_ratio",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "section_single_configuration_calculation" ]
     }, {
       "description": "Hill Young modulus",
       "dtypeStr": "f",
       "name": "x_elastic_Hill_Young_modulus",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "Hill Poisson ratio",
@@ -325,14 +191,14 @@
       "name": "x_elastic_Hill_Poisson_ratio",
       "shape": [],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "section_single_configuration_calculation" ]
     }, {
       "description": "Eigemvalues of the stiffness matrix",
       "dtypeStr": "f",
       "name": "x_elastic_eigenvalues",
       "shape": [6],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ],
+        "section_single_configuration_calculation" ],
       "units": "G-Pa"
     }, {
       "description": "deformation types",
@@ -341,7 +207,7 @@
       "shape": [
         "x_elastic_number_of_deformations",6],
       "superNames": [
-        "x_elastic_section_single_configuration_calculation" ]
+        "section_method" ]
     }, {
       "description": "Method of calculation",
       "dtypeStr": "C",
