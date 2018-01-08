@@ -21,6 +21,13 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "section collecting the fitting parameters used to calculate the elastic constants",
+      "kindStr": "type_section",
+      "name": "x_elastic_section_fitting_parameters",
+      "superNames": [
+        "section_method"
+      ]
+    }, {
       "description": "number of deformed structures equally spaced in strain, which are generated between the maximum negative strain and the maximum positive one",
       "dtypeStr": "i",
       "name": "x_elastic_number_of_deformations",
@@ -28,7 +35,7 @@
       "superNames": [
         "section_method" ]
     }, {
-      "description": "Values of the energy/d2E/cross (depending on the value of x_elastic_strain_diagram_type)",
+      "description": "Values of the energy/d2E/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
       "dtypeStr": "f",
       "name": "x_elastic_strain_diagram_values",
       "shape": [
@@ -37,6 +44,20 @@
       ],
       "superNames": [
         "x_elastic_section_strain_diagrams" ]
+    }, {
+      "description": "eta values used to calculate the elastic constants",
+      "dtypeStr": "f",
+      "name": "x_elastic_fitting_parameters_eta",
+      "shape": ["x_elastic_number_of_deformations"],
+      "superNames": [
+        "x_elastic_section_fitting_parameters" ]
+    }, {
+      "description": "polinomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
+      "dtypeStr": "i",
+      "name": "x_elastic_fitting_parameters_polinomial_order",
+      "shape": ["x_elastic_number_of_deformations"],
+      "superNames": [
+        "x_elastic_section_fitting_parameters" ]
     }, {
       "description": "eta values used the strain diagrams",
       "dtypeStr": "f",
@@ -55,7 +76,7 @@
       "superNames": [
         "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "Kind of strain diagram. Possible values are: energy; cross (cross-validation error); d2E (second derivative of the energy wrt the strain)",
+      "description": "Kind of strain diagram. Possible values are: energy; cross-validation (cross-validation error); d2E (second derivative of the energy wrt the strain)",
       "dtypeStr": "C",
       "name": "x_elastic_strain_diagram_type",
       "shape": [],
