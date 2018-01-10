@@ -2656,12 +2656,39 @@
         "program_info"
       ]
     }, {
-      "description": "Classification according to known prototypes on the basis of the space_group and normalized_wyckoff; adds labels to the calculations- prototype_label (with labels in the same format as in the read_prototypes function: <space_group_number>-<prototype_name>-<Pearson's symbol>).",
+      "description": "AFLOW id of the prototype (see http://aflowlib.org/CrystalDatabase/prototype_index.html) identified on the basis of the space_group and normalized_wyckoff.",
+      "dtypeStr": "C",
+      "name": "prototype_aflow_id",
+      "shape": [],
+      "superNames": [
+        "section_prototype"
+      ]
+    }, {
+      "description": "Url to the AFLOW definition of the prototype (see http://aflowlib.org/CrystalDatabase/prototype_index.html) identified on the basis of the space_group and normalized_wyckoff.",
+      "dtypeStr": "C",
+      "name": "prototype_aflow_url",
+      "shape": [],
+      "superNames": [
+        "section_prototype"
+      ]
+    }, {
+      "description": "Method used to identify the prototype",
+      "dtypeStr": "C",
+      "name": "prototype_assignement_method",
+      "shape": [],
+      "superNames": [
+        "section_prototype"
+      ],
+      "values": {
+        "normalized-wyckoff": "normalized wyckoff positions and spacegroups calculated with the default symmetry method were used to identify the prototype"
+      }
+    }, {
+      "description": "Label of the prototype identified on the basis of the space_group and normalized_wyckoff. The label is in the same format as in the read_prototypes function: <space_group_number>-<prototype_name>-<Pearson's symbol>).",
       "dtypeStr": "C",
       "name": "prototype_label",
       "shape": [],
       "superNames": [
-        "section_system"
+        "section_prototype"
       ]
     }, {
       "description": "The transformation matrix in reduced coordinates and real space for each symmetry operation. For periodic crystals, these can be expressed purely in integers, but for arbitrary point groups, this is not possible.",
@@ -2962,6 +2989,13 @@
       "kindStr": "type_section",
       "name": "section_processor_log",
       "superNames": []
+    }, {
+      "description": "Information on the prototype corresponding to the current section.",
+      "kindStr": "type_section",
+      "name": "section_prototype",
+      "superNames": [
+        "section_system"
+      ]
     }, {
       "description": "Every section_run represents a single call of a program. What exactly is contained in a run depends on the run type (see for example section_method and section_single_configuration_calculation) and the program (see [program_info ](program_info)).",
       "kindStr": "type_section",
