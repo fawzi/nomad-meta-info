@@ -35,7 +35,7 @@
       "superNames": [
         "section_method" ]
     }, {
-      "description": "Values of the energy/d2E/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
+      "description": "Values of the energy(units:J)/d2E(units:Gpa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
       "dtypeStr": "f",
       "name": "x_elastic_strain_diagram_values",
       "shape": [
@@ -223,7 +223,7 @@
       "units": "G-Pa"
     }, {
       "description": "deformation types",
-      "dtypeStr": "f",
+      "dtypeStr": "C",
       "name": "x_elastic_deformation_types",
       "shape": [
         "x_elastic_number_of_deformations",6],
@@ -249,14 +249,14 @@
       "name": "x_elastic_space_group_number",
       "shape": [],
       "superNames": [
-        "section_method" ]
+        "section_system" ]
     }, {
       "description": "Volume of the equilibrium unit cell",
       "dtypeStr": "f",
       "name": "x_elastic_unit_cell_volume",
       "shape": [],
       "superNames": [
-        "section_method" ]
+        "section_system" ]
     }, {
       "description": "Maximum lagrangian strain used to calculate the elastic constants",
       "dtypeStr": "f",
