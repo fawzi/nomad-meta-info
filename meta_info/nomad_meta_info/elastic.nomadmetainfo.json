@@ -35,7 +35,7 @@
       "superNames": [
         "section_method" ]
     }, {
-      "description": "Values of the energy(units:J)/d2E(units:Gpa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
+      "description": "Values of the energy(units:J)/d2E(units:Pa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
       "dtypeStr": "f",
       "name": "x_elastic_strain_diagram_values",
       "shape": [
@@ -103,7 +103,7 @@
       "shape": [6,6],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     },  {
       "description": "3rd order elastic constant (stiffness) matrix in GPa",
       "dtypeStr": "f",
@@ -111,7 +111,7 @@
       "shape": [6,6,6],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     },{
       "description": "Elastic compliance matrix in 1/GPa",
       "dtypeStr": "f",
@@ -119,7 +119,7 @@
       "shape": [6,6],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa_1"
+      "units": "Pa_1"
     }, {
       "description": "Voigt bulk modulus",
       "dtypeStr": "f",
@@ -127,7 +127,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Voigt shear modulus",
       "dtypeStr": "f",
@@ -135,7 +135,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Reuss bulk modulus",
       "dtypeStr": "f",
@@ -143,7 +143,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Reuss shear modulus",
       "dtypeStr": "f",
@@ -151,7 +151,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Hill bulk modulus",
       "dtypeStr": "f",
@@ -159,7 +159,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Hill shear modulus",
       "dtypeStr": "f",
@@ -167,7 +167,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Voigt Young modulus",
       "dtypeStr": "f",
@@ -175,7 +175,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Voigt Poisson ratio",
       "dtypeStr": "f",
@@ -190,7 +190,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Reuss Poisson ratio",
       "dtypeStr": "f",
@@ -205,7 +205,7 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "Hill Poisson ratio",
       "dtypeStr": "f",
@@ -220,7 +220,7 @@
       "shape": [6],
       "superNames": [
         "section_single_configuration_calculation" ],
-      "units": "G-Pa"
+      "units": "Pa"
     }, {
       "description": "deformation types",
       "dtypeStr": "C",
