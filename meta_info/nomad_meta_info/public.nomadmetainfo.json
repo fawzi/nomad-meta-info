@@ -658,6 +658,24 @@
         "section_calculation_to_folder_refs"
       ]
     }, {
+      "description": "Upload date of the calculation, given as total number of milliseconds is the elapsed since the unix epoch (1 January 1970)",
+      "dtypeStr": "i64",
+      "name": "calculation_upload_date",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
+      ]
+    }, {
+      "description": "Name of the uploader of this calculation, given as lastamen, firstname",
+      "dtypeStr": "C",
+      "name": "calculation_uploader_name",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_calculation_info"
+      ]
+    }, {
       "derived": true,
       "description": "String that specifies the centering, origin and basis vector settings of the 3D space group that defines the symmetry group of the simulated physical system (see section_system). Values are as defined by spglib.",
       "dtypeStr": "C",
