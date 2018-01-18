@@ -140,6 +140,30 @@
         "configuration_core"
       ]
     }, {
+      "derived": true,
+      "description": "Atom positions in the primitive cell in reduced units.",
+      "dtypeStr": "f",
+      "name": "atom_positions_primitive",
+      "shape": [
+        "number_of_atoms_primitive",
+        3
+      ],
+      "superNames": [
+        "section_primitive_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Standardized atom positions in reduced units.",
+      "dtypeStr": "f",
+      "name": "atom_positions_std",
+      "shape": [
+        "number_of_atoms_std",
+        3
+      ],
+      "superNames": [
+        "section_std_system"
+      ]
+    }, {
       "description": "Positions of all the atoms, in Cartesian coordinates. This metadata defines a configuration and is therefore required. For alloys where concentrations of species are given for each site in the unit cell, it stores the position of the sites.",
       "dtypeStr": "f",
       "name": "atom_positions",
@@ -266,6 +290,28 @@
       ],
       "superNames": [
         "section_atomic_multipoles"
+      ]
+    }, {
+      "derived": true,
+      "description": "Atomic numbers in the primitive cell.",
+      "dtypeStr": "i",
+      "name": "atomic_numbers_primitive",
+      "shape": [
+        "number_of_atoms_primitive"
+      ],
+      "superNames": [
+        "section_primitive_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Atomic numbers of the atoms in the standardized cell.",
+      "dtypeStr": "i",
+      "name": "atomic_numbers_std",
+      "shape": [
+        "number_of_atoms_std"
+      ],
+      "superNames": [
+        "section_std_system"
       ]
     }, {
       "derived": true,
@@ -502,6 +548,15 @@
         "settings_numerical_parameter"
       ]
     }, {
+      "derived": true,
+      "description": "Identifier for the Bravais lattice in Pearson notation. The first lowercase letter identifies the crystal family and can be one of the following: a (triclinic), b (monoclinic), o (orthorhombic), t (tetragonal), h (hexagonal) or c (cubic). The second uppercase letter identifies the centring and can be one of the following: P (primitive), S (face centred), I (body centred), R (rhombohedral centring) or F (all faces centred).",
+      "dtypeStr": "C",
+      "name": "bravais_lattice",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "contains": [
         "section_run",
         "section_stats"
@@ -603,6 +658,15 @@
         "section_calculation_to_folder_refs"
       ]
     }, {
+      "derived": true,
+      "description": "String that specifies the centering, origin and basis vector settings of the 3D space group that defines the symmetry group of the simulated physical system (see section_system). Values are as defined by spglib.",
+      "dtypeStr": "C",
+      "name": "choice",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Properties defining the current configuration.",
       "kindStr": "type_abstract_document_content",
       "name": "configuration_core",
@@ -636,6 +700,15 @@
       "repeats": false,
       "shape": [],
       "superNames": []
+    }, {
+      "derived": true,
+      "description": "Name of the crystal system. Can be one of the following: triclinic, monoclinic, orthorhombic, tetragonal, trigonal, hexagonal or cubic.",
+      "dtypeStr": "C",
+      "name": "crystal_system",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
+      ]
     }, {
       "derived": true,
       "description": "Array containing the set of discrete energy values with respect to the top of the valence band for the density (electronic-energy) of states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial density of states.",
@@ -1406,6 +1479,39 @@
         "section_sampling_method"
       ]
     }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the original cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "equivalent_atoms_original",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_original_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the primitive cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "equivalent_atoms_primitive",
+      "shape": [
+        "number_of_atoms_primitive"
+      ],
+      "superNames": [
+        "section_primitive_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the standardized cell. This is used to find symmetrically equivalent atoms.",
+      "dtypeStr": "i",
+      "name": "equivalent_atoms_std",
+      "shape": [
+        "number_of_atoms_std"
+      ],
+      "superNames": [
+        "section_std_system"
+      ]
+    }, {
       "description": "An estimate of a partial quantity contributing to the error for a given quantity.",
       "kindStr": "type_abstract_document_content",
       "name": "error_estimate_contribution",
@@ -1762,6 +1868,24 @@
       ],
       "units": "N"
     }, {
+      "derived": true,
+      "description": "The Hall number for this system.",
+      "dtypeStr": "i",
+      "name": "hall_number",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
+      "derived": true,
+      "description": "The Hall symbol for this system.",
+      "dtypeStr": "C",
+      "name": "hall_symbol",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Stores the Helmholtz free energy per unit cell at constant volume of a thermodynamic calculation.",
       "dtypeStr": "f",
       "name": "helmholz_free_energy",
@@ -1784,6 +1908,15 @@
       ],
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "derived": true,
+      "description": "Specifies the International Union of Crystallography (IUC) short symbol of the 3D space group of this system",
+      "dtypeStr": "C",
+      "name": "international_short_symbol",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
       ]
     }, {
       "derived": true,
@@ -1815,6 +1948,32 @@
       "superNames": [
         "settings_k_points"
       ]
+    }, {
+      "derived": true,
+      "description": "Primitive lattice vectors. The vectors are the rows of this matrix.",
+      "dtypeStr": "f",
+      "name": "lattice_vectors_primitive",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_primitive_system"
+      ],
+      "units": "m"
+    }, {
+      "derived": true,
+      "description": "Standardized lattice vectors of the conventional cell. The vectors are the rows of this matrix.",
+      "dtypeStr": "f",
+      "name": "lattice_vectors_std",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_std_system"
+      ],
+      "units": "m"
     }, {
       "description": "Holds the lattice vectors (in Cartesian coordinates) of the simulation cell. The last (fastest) index runs over the $x,y,z$ Cartesian coordinates, and the first index runs over the 3 lattice vectors.",
       "dtypeStr": "f",
@@ -2063,6 +2222,24 @@
       "shape": [],
       "superNames": [
         "section_atom_projected_dos"
+      ]
+    }, {
+      "description": "Number of atoms in primitive system.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_atoms_primitive",
+      "shape": [],
+      "superNames": [
+        "section_primitive_system"
+      ]
+    }, {
+      "description": "Number of atoms in standardized system.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_atoms_std",
+      "shape": [],
+      "superNames": [
+        "section_std_system"
       ]
     }, {
       "description": "Stores the total number of atoms used in the calculation. For alloys where concentrations of species are given for each site in the unit cell, it stores the number of sites.",
@@ -2355,6 +2532,17 @@
         "section_frame_sequence_user_quantity"
       ]
     }, {
+      "derived": true,
+      "description": "Vector $\\mathbf{p}$ from the origin of the standardized system to the origin of the original system. Together with the matrix $\\mathbf{P}$, found in space_group_3D_transformation_matrix, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
+      "dtypeStr": "f",
+      "name": "origin_shift",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Contains information on the parallelization of the program, i.e. which parallel programming language was used and its version, how many cores had been working on the calculation and the flags and parameters needed to run the parallelization of the code.",
       "kindStr": "type_abstract_document_content",
       "name": "parallelization_info",
@@ -2510,6 +2698,15 @@
       "shape": [],
       "superNames": [
         "parsing_message_info"
+      ]
+    }, {
+      "derived": true,
+      "description": "Symbol of the crystallographic point group in the Hermann-Mauguin notation.",
+      "dtypeStr": "C",
+      "name": "point_group",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
       ]
     }, {
       "description": "Contains a reference to the previous sequence. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section. If not given, a start from an initial configuration is assumed.",
@@ -2938,6 +3135,20 @@
         "section_run"
       ]
     }, {
+      "description": "Section containing symmetry information that is specific to the original system.",
+      "kindStr": "type_section",
+      "name": "section_original_system",
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
+      "description": "Section containing symmetry information that is specific to the primitive system. The primitive system is derived from the standardized system with a transformation that is specific to the centring. The transformation matrices can be found e.g. from here: https://atztogo.github.io/spglib/definition.html#transformation-to-the-primitive-cell",
+      "kindStr": "type_section",
+      "name": "section_primitive_system",
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Section with information about a processor that generated or added information to the current calculation.",
       "kindStr": "type_section",
       "name": "section_processor_info",
@@ -3033,11 +3244,25 @@
         "section_springer_material"
       ]
     }, {
+      "description": "Section containing symmetry information that is specific to the standardized system. The standardized system is defined as given by spglib and the details can be found from https://arxiv.org/abs/1506.01455",
+      "kindStr": "type_section",
+      "name": "section_std_system",
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Section collecting alternative values to stress_tensor that have been calculated.\n\nThis section allows the storage of multiple definitions and evaluated values of the stress tensor, while only one definition is used for, e.g., molecular dynamics or geometry optimization (if needed).",
       "kindStr": "type_section",
       "name": "section_stress_tensor",
       "superNames": [
         "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Section containing information about the symmetry properties of the system.",
+      "kindStr": "type_section",
+      "name": "section_symmetry",
+      "superNames": [
+        "section_system"
       ]
     }, {
       "description": "Section that describes the relationship between different section_system sections.\n\nFor instance, if a phonon calculation using a finite difference approach is performed the force evaluation is typically done in a larger supercell but the properties such as the phonon band structure are still calculated for the primitive cell.\n\nThe kind of relationship between the system defined in this section and the referenced one is described by system_to_system_kind. The referenced section_system is identified via system_to_system_ref.",
@@ -3352,290 +3577,11 @@
         "section_run"
       ]
     }, {
-      "description": "Section containing information about the symmetry properties of the system.",
-      "kindStr": "type_section",
-      "name": "section_symmetry",
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "Section containing symmetry information that is specific to the primitive system. The primitive system is derived from the standardized system with a transformation that is specific to the centring. The transformation matrices can be found e.g. from here: https://atztogo.github.io/spglib/definition.html#transformation-to-the-primitive-cell",
-      "kindStr": "type_section",
-      "name": "section_primitive_system",
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "description": "Section containing symmetry information that is specific to the standardized system. The standardized system is defined as given by spglib and the details can be found from https://arxiv.org/abs/1506.01455",
-      "kindStr": "type_section",
-      "name": "section_std_system",
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "description": "Section containing symmetry information that is specific to the original system.",
-      "kindStr": "type_section",
-      "name": "section_original_system",
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "Identifies the source of the symmetry information contained within this section. If equal to 'spg_normalized' the information comes from a normalization step.",
-      "dtypeStr": "C",
-      "name": "symmetry_method",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "Identifier for the Bravais lattice in Pearson notation. The first lowercase letter identifies the crystal family and can be one of the following: a (triclinic), b (monoclinic), o (orthorhombic), t (tetragonal), h (hexagonal) or c (cubic). The second uppercase letter identifies the centring and can be one of the following: P (primitive), S (face centred), I (body centred), R (rhombohedral centring) or F (all faces centred).",
-      "dtypeStr": "C",
-      "name": "bravais_lattice",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "String that specifies the centering, origin and basis vector settings of the 3D space group that defines the symmetry group of the simulated physical system (see section_system). Values are as defined by spglib.",
-      "dtypeStr": "C",
-      "name": "choice",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "Name of the crystal system. Can be one of the following: triclinic, monoclinic, orthorhombic, tetragonal, trigonal, hexagonal or cubic.",
-      "dtypeStr": "C",
-      "name": "crystal_system",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "The Hall number for this system.",
-      "dtypeStr": "i",
-      "name": "hall_number",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "The Hall symbol for this system.",
-      "dtypeStr": "C",
-      "name": "hall_symbol",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "Specifies the International Union of Crystallography (IUC) short symbol of the 3D space group of this system",
-      "dtypeStr": "C",
-      "name": "international_short_symbol",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
       "derived": true,
       "description": "Specifies the International Union of Crystallography (IUC) number of the 3D space group of this system.",
       "dtypeStr": "i",
       "name": "space_group_number",
       "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "Vector $\\mathbf{p}$ from the origin of the standardized system to the origin of the original system. Together with the matrix $\\mathbf{P}$, found in space_group_3D_transformation_matrix, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
-      "dtypeStr": "f",
-      "name": "origin_shift",
-      "shape": [
-        3
-      ],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "derived": true,
-      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the original cell. This is used to find symmetrically equivalent atoms.",
-      "dtypeStr": "i",
-      "name": "equivalent_atoms_original",
-      "shape": [
-        "number_of_atoms"
-      ],
-      "superNames": [
-        "section_original_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Wyckoff letters for atoms in the original cell.",
-      "dtypeStr": "C",
-      "name": "wyckoff_letters_original",
-      "shape": [
-        "number_of_atoms"
-      ],
-      "superNames": [
-        "section_original_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Symbol of the crystallographic point group in the Hermann-Mauguin notation.",
-      "dtypeStr": "C",
-      "name": "point_group",
-      "shape": [],
-      "superNames": [
-        "section_symmetry"
-      ]
-    }, {
-      "description": "Number of atoms in primitive system.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms_primitive",
-      "shape": [],
-      "superNames": [
-        "section_primitive_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Atomic numbers in the primitive cell.",
-      "dtypeStr": "i",
-      "name": "atomic_numbers_primitive",
-      "shape": [
-        "number_of_atoms_primitive"
-      ],
-      "superNames": [
-        "section_primitive_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the primitive cell. This is used to find symmetrically equivalent atoms.",
-      "dtypeStr": "i",
-      "name": "equivalent_atoms_primitive",
-      "shape": [
-        "number_of_atoms_primitive"
-      ],
-      "superNames": [
-        "section_primitive_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Primitive lattice vectors. The vectors are the rows of this matrix.",
-      "dtypeStr": "f",
-      "name": "lattice_vectors_primitive",
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "section_primitive_system"
-      ],
-      "units": "m"
-    }, {
-      "derived": true,
-      "description": "Atom positions in the primitive cell in reduced units.",
-      "dtypeStr": "f",
-      "name": "atom_positions_primitive",
-      "shape": [
-        "number_of_atoms_primitive",
-        3
-      ],
-      "superNames": [
-        "section_primitive_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Wyckoff letters for atoms in the primitive cell.",
-      "dtypeStr": "C",
-      "name": "wyckoff_letters_primitive",
-      "shape": [
-        "number_of_atoms_primitive"
-      ],
-      "superNames": [
-        "section_primitive_system"
-      ]
-    }, {
-      "description": "Number of atoms in standardized system.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms_std",
-      "shape": [],
-      "superNames": [
-        "section_std_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Atomic numbers of the atoms in the standardized cell.",
-      "dtypeStr": "i",
-      "name": "atomic_numbers_std",
-      "shape": [
-        "number_of_atoms_std"
-      ],
-      "superNames": [
-        "section_std_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Gives a mapping table of atoms to symmetrically independent atoms in the standardized cell. This is used to find symmetrically equivalent atoms.",
-      "dtypeStr": "i",
-      "name": "equivalent_atoms_std",
-      "shape": [
-        "number_of_atoms_std"
-      ],
-      "superNames": [
-        "section_std_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Standardized lattice vectors of the conventional cell. The vectors are the rows of this matrix.",
-      "dtypeStr": "f",
-      "name": "lattice_vectors_std",
-      "shape": [
-        3,
-        3
-      ],
-      "superNames": [
-        "section_std_system"
-      ],
-      "units": "m"
-    }, {
-      "derived": true,
-      "description": "Standardized atom positions in reduced units.",
-      "dtypeStr": "f",
-      "name": "atom_positions_std",
-      "shape": [
-        "number_of_atoms_std",
-        3
-      ],
-      "superNames": [
-        "section_std_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Wyckoff letters for atoms in the standardized cell.",
-      "dtypeStr": "C",
-      "name": "wyckoff_letters_std",
-      "shape": [
-        "number_of_atoms_std"
-      ],
-      "superNames": [
-        "section_std_system"
-      ]
-    }, {
-      "derived": true,
-      "description": "Matrix $\\mathbf{P}$ that is used to transform the standardized coordinates to the original coordinates. Together with the vector $\\mathbf{p}$, found in space_group_3D_origin_shift, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
-      "dtypeStr": "f",
-      "name": "transformation_matrix",
-      "shape": [
-        3,
-        3
-      ],
       "superNames": [
         "section_symmetry"
       ]
@@ -4126,6 +4072,15 @@
       ],
       "units": "Pa"
     }, {
+      "derived": true,
+      "description": "Identifies the source of the symmetry information contained within this section. If equal to 'spg_normalized' the information comes from a normalization step.",
+      "dtypeStr": "C",
+      "name": "symmetry_method",
+      "shape": [],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Is the space group symmorphic? Set to True if all translations are zero.",
       "dtypeStr": "b",
       "name": "symmorphic",
@@ -4455,6 +4410,18 @@
       ],
       "units": "C"
     }, {
+      "derived": true,
+      "description": "Matrix $\\mathbf{P}$ that is used to transform the standardized coordinates to the original coordinates. Together with the vector $\\mathbf{p}$, found in space_group_3D_origin_shift, the transformation between the standardized coordinates $\\mathbf{x}_s$ and original coordinates $\\mathbf{x}$ is then given by $\\mathbf{x}_s = \\mathbf{P} \\mathbf{x} + \\mathbf{p}$.",
+      "dtypeStr": "f",
+      "name": "transformation_matrix",
+      "shape": [
+        3,
+        3
+      ],
+      "superNames": [
+        "section_symmetry"
+      ]
+    }, {
       "description": "Describes the Van der Waals method. If skipped or an empty string is used, it means no Van der Waals correction is applied.\n\nAllowed values are:\n\n| Van der Waals method  | Description                               |\n| --------------------- | ----------------------------------------- |\n| `\"\"`                  | No Van der Waals correction               |\n| `\"TS\"`                | A. Tkatchenko and M. Scheffler, [Phys. Rev. Lett. **102**, 073005 (2009)](http://dx.doi.org/10.1103/PhysRevLett.102.073005) |\n| `\"OBS\"`               | F. Ortmann, F. Bechstedt, and W. G. Schmidt, [Phys. Rev. B **73**, 205101 (2006)](http://dx.doi.org/10.1103/PhysRevB.73.205101) |\n| `\"G06\"`               | S. Grimme, [J. Comput. Chem. **27**, 1787 (2006)](http://dx.doi.org/10.1002/jcc.20495) |\n| `\"JCHS\"`              | P. Jurečka, J. Černý, P. Hobza, and D. R. Salahub, [Journal of Computational Chemistry **28**, 555 (2007)](http://dx.doi.org/10.1002/jcc.20570) |\n| `\"MDB\"`               | Many-body dispersion. A. Tkatchenko, R. A. Di Stasio Jr, R. Car, and M. Scheffler, [Physical Review Letters **108**, 236402 (2012)](http://dx.doi.org/10.1103/PhysRevLett.108.236402) and A. Ambrosetti, A. M. Reilly, R. A. Di Stasio Jr, and A. Tkatchenko, [The Journal of Chemical Physics **140**, 18A508 (2014)](http://dx.doi.org/10.1063/1.4865104) |\n| `\"XC\"`                | The method to calculate the Van der Waals energy uses a non-local functional which is described in section_XC_functionals. |",
       "dtypeStr": "C",
       "name": "van_der_Waals_method",
@@ -4551,6 +4518,39 @@
       ],
       "superNames": [
         "section_volumetric_data"
+      ]
+    }, {
+      "derived": true,
+      "description": "Wyckoff letters for atoms in the original cell.",
+      "dtypeStr": "C",
+      "name": "wyckoff_letters_original",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_original_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Wyckoff letters for atoms in the primitive cell.",
+      "dtypeStr": "C",
+      "name": "wyckoff_letters_primitive",
+      "shape": [
+        "number_of_atoms_primitive"
+      ],
+      "superNames": [
+        "section_primitive_system"
+      ]
+    }, {
+      "derived": true,
+      "description": "Wyckoff letters for atoms in the standardized cell.",
+      "dtypeStr": "C",
+      "name": "wyckoff_letters_std",
+      "shape": [
+        "number_of_atoms_std"
+      ],
+      "superNames": [
+        "section_std_system"
       ]
     }, {
       "derived": true,
