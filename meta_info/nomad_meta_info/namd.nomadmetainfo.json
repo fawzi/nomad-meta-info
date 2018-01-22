@@ -1416,9 +1416,29 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_parameters",
+    "name": "x_namd_inout_control_parameter_file",
     "dtypeStr": "C",
     "shape": [], 
+    "superNames": [
+      "section_run",
+      "x_namd_section_control_parameters"
+    ]   
+  }, {
+    "description": "NAMD running environment and control parameters.",
+    "name": "x_namd_inout_control_number_of_parameters",
+    "dtypeStr": "i",
+    "shape": [], 
+    "superNames": [
+      "section_run",
+      "x_namd_section_control_parameters"
+    ]   
+  }, {
+    "description": "NAMD running environment and control parameters.",
+    "name": "x_namd_inout_control_parameters",
+    "dtypeStr": "C",
+    "shape": [
+        "x_namd_inout_control_number_of_parameters"
+    ], 
     "superNames": [
       "section_run",
       "x_namd_section_control_parameters"
