@@ -335,6 +335,30 @@
         "section_run"
       ]
     }, {
+      "description": "Program Build OS/ARCH",
+      "name": "x_namd_build_osarch",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Program Build date",
+      "name": "x_namd_program_build_date",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Program citations",
+      "name": "x_namd_program_citation",
+      "dtypeStr": "C",
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "Number of tasks in parallel program (MPI).",
       "name": "x_namd_number_of_tasks",
       "dtypeStr": "f",
@@ -343,7 +367,7 @@
         "section_run"
       ]
     }, {
-      "description": "NAMD program module (gmx) version.",
+      "description": "NAMD program module version.",
       "name": "x_namd_program_module_version",
       "dtypeStr": "C",
       "shape": [],
@@ -394,7 +418,7 @@
     ]
   }, {
     "description": "NAMD input topology file.",
-    "name": "x_namd_inout_file_topoltpr",
+    "name": "x_namd_inout_file_structure",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -402,8 +426,8 @@
       "x_namd_section_input_output_files"
     ]
   }, {
-    "description": "NAMD input trajectory file.",
-    "name": "x_namd_inout_file_trajtrr",
+    "description": "NAMD output trajectory file.",
+    "name": "x_namd_inout_file_traj_coord",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -411,8 +435,8 @@
       "x_namd_section_input_output_files"
     ]
   }, {
-    "description": "NAMD input compressed trajectory file.",
-    "name": "x_namd_inout_file_trajcompxtc",
+    "description": "NAMD output file for velocities in the trajectory.",
+    "name": "x_namd_inout_file_traj_vel",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -420,8 +444,8 @@
       "x_namd_section_input_output_files"
     ]
   }, {
-    "description": "NAMD input coordinates and state file.",
-    "name": "x_namd_inout_file_statecpt",
+    "description": "NAMD output file for forces in the trajectory.",
+    "name": "x_namd_inout_file_traj_force",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -429,8 +453,8 @@
       "x_namd_section_input_output_files"
     ]
   }, {
-    "description": "NAMD output configuration file.",
-    "name": "x_namd_inout_file_confoutgro",
+    "description": "NAMD output coordinates file.",
+    "name": "x_namd_inout_file_output_coord",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -438,8 +462,71 @@
       "x_namd_section_input_output_files"
     ]
   }, {
-    "description": "NAMD output energies file.",
-    "name": "x_namd_inout_file_eneredr",
+    "description": "NAMD output velocities file.",
+    "name": "x_namd_inout_file_output_vel",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD output forces file.",
+    "name": "x_namd_inout_file_output_force",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD input coordinates file.",
+    "name": "x_namd_inout_file_input_coord",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD input velocities file.",
+    "name": "x_namd_inout_file_input_vel",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD restart coordinates file.",
+    "name": "x_namd_inout_file_restart_coord",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD restart velocities file.",
+    "name": "x_namd_inout_file_restart_vel",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD FFTW data file.",
+    "name": "x_namd_inout_file_fftw_datafile",
+    "dtypeStr": "C",
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_namd_section_input_output_files"
+    ]
+  }, {
+    "description": "NAMD MD output log file.",
+    "name": "x_namd_inout_file_mdlog",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -465,7 +552,7 @@
     ]
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_namd_version",
+    "name": "x_namd_inout_control_timestep",
     "dtypeStr": "C",
     "shape": [],
     "superNames": [
@@ -474,7 +561,7 @@
     ]
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_precision",
+    "name": "x_namd_inout_control_number_of_steps",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -483,7 +570,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_memory_model",
+    "name": "x_namd_inout_control_steps_per_cycle",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -492,7 +579,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_mpi_library",
+    "name": "x_namd_inout_control_periodic_cell_basis_1",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -501,7 +588,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_openmp_support",
+    "name": "x_namd_inout_control_periodic_cell_basis_2",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -510,7 +597,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gpu_support",
+    "name": "x_namd_inout_control_periodic_cell_basis_3",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -519,7 +606,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_opencl_support",
+    "name": "x_namd_inout_control_periodic_cell_center",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -528,7 +615,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_invsqrt_routine",
+    "name": "x_namd_inout_control_load_balancer",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -537,7 +624,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_simd_instructions",
+    "name": "x_namd_inout_control_load_balancing_strategy",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -546,7 +633,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_fft_library",
+    "name": "x_namd_inout_control_ldb_period",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -555,7 +642,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rdtscp_usage",
+    "name": "x_namd_inout_control_first_ldb_timestep",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -564,7 +651,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_cxx11_compilation",
+    "name": "x_namd_inout_control_last_ldb_timestep",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -573,7 +660,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_tng_support",
+    "name": "x_namd_inout_control_ldb_background_scaling",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -582,7 +669,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_tracing_support",
+    "name": "x_namd_inout_control_hom_background_scaling",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -591,7 +678,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_built_on",
+    "name": "x_namd_inout_control_pme_background_scaling",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -600,7 +687,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_built_by",
+    "name": "x_namd_inout_control_min_atoms_per_patch",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -609,7 +696,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_build_osarch",
+    "name": "x_namd_inout_control_initial_temperature",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -618,7 +705,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_build_cpu_vendor",
+    "name": "x_namd_inout_control_center_of_mass_moving_initially",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -627,7 +714,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_build_cpu_brand",
+    "name": "x_namd_inout_control_dielectric",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -636,7 +723,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_build_cpu_family",
+    "name": "x_namd_inout_control_excluded_species_or_groups",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -645,7 +732,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_build_cpu_features",
+    "name": "x_namd_inout_control_1_4_electrostatics_scale",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -654,7 +741,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_c_compiler",
+    "name": "x_namd_inout_control_traj_dcd_filename",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -663,7 +750,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_c_compiler_flags",
+    "name": "x_namd_inout_control_traj_dcd_frequency",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -672,7 +759,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_cxx_compiler",
+    "name": "x_namd_inout_control_traj_dcd_first_step",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -681,7 +768,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_cxx_compiler_flags",
+    "name": "x_namd_inout_control_velocity_dcd_filename",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -690,7 +777,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_boost_version",
+    "name": "x_namd_inout_control_velocity_dcd_frequency",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -699,7 +786,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_integrator",
+    "name": "x_namd_inout_control_velocity_dcd_first_step",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -708,7 +795,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_tinit",
+    "name": "x_namd_inout_control_force_dcd_filename",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -717,7 +804,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_dt",
+    "name": "x_namd_inout_control_force_dcd_frequency",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -726,7 +813,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nsteps",
+    "name": "x_namd_inout_control_force_dcd_first_step",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -735,7 +822,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_initstep",
+    "name": "x_namd_inout_control_output_filename",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -744,7 +831,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_simulationpart",
+    "name": "x_namd_inout_control_binary_output",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -753,7 +840,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_commmode",
+    "name": "x_namd_inout_control_restart_filename",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -762,7 +849,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstcomm",
+    "name": "x_namd_inout_control_restart_frequency",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -771,7 +858,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_bdfric",
+    "name": "x_namd_inout_control_binary_restart",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -780,7 +867,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ldseed",
+    "name": "x_namd_inout_control_switching",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -789,7 +876,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_emtol",
+    "name": "x_namd_inout_control_switching_on",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -798,7 +885,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_emstep",
+    "name": "x_namd_inout_control_switching_off",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -807,7 +894,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_niter",
+    "name": "x_namd_inout_control_pairlist_distance",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -816,7 +903,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_fcstep",
+    "name": "x_namd_inout_control_pairlist_shrink_rate",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -825,7 +912,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstcgsteep",
+    "name": "x_namd_inout_control_pairlist_grow_rate",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -834,7 +921,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nbfgscorr",
+    "name": "x_namd_inout_control_pairlist_trigger",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -843,7 +930,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rtpi",
+    "name": "x_namd_inout_control_pairlists_per_cycle",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -852,7 +939,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstxout",
+    "name": "x_namd_inout_control_pairlists",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -861,7 +948,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstvout",
+    "name": "x_namd_inout_control_margin",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -870,7 +957,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstfout",
+    "name": "x_namd_inout_control_hydrogen_group_cutoff",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -879,7 +966,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstlog",
+    "name": "x_namd_inout_control_patch_dimension",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -888,7 +975,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstcalcenergy",
+    "name": "x_namd_inout_control_energy_output_steps",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -897,7 +984,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstenergy",
+    "name": "x_namd_inout_control_crossterm_energy",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -906,7 +993,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstxoutcompressed",
+    "name": "x_namd_inout_control_timing_output_steps",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -915,7 +1002,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_compressedxprecision",
+    "name": "x_namd_inout_control_velocity_rescale_freq",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -924,7 +1011,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_cutoffscheme",
+    "name": "x_namd_inout_control_velocity_rescale_temp",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -933,7 +1020,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstlist",
+    "name": "x_namd_inout_control_velocity_reassignment_freq",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -942,7 +1029,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstype",
+    "name": "x_namd_inout_control_velocity_reassignment_temp",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -951,7 +1038,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_pbc",
+    "name": "x_namd_inout_control_velocity_reassignment_incr",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -960,7 +1047,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_periodicmolecules",
+    "name": "x_namd_inout_control_velocity_reassignment_hold",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -969,7 +1056,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_verletbuffertolerance",
+    "name": "x_namd_inout_control_lowe_andersen_dynamics",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -978,7 +1065,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rlist",
+    "name": "x_namd_inout_control_lowe_andersen_temperature",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -987,7 +1074,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rlistlong",
+    "name": "x_namd_inout_control_lowe_andersen_rate",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -996,7 +1083,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstcalclr",
+    "name": "x_namd_inout_control_lowe_andersen_cutoff",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1005,7 +1092,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_coulombtype",
+    "name": "x_namd_inout_control_langevin_dynamics",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1014,7 +1101,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_coulombmodifier",
+    "name": "x_namd_inout_control_langevin_temperature",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1023,7 +1110,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rcoulombswitch",
+    "name": "x_namd_inout_control_langevin_integrator",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1032,7 +1119,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rcoulomb",
+    "name": "x_namd_inout_control_langevin_damping_file",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1041,7 +1128,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_epsilonr",
+    "name": "x_namd_inout_control_langevin_damping_column",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1050,7 +1137,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_epsilonrf",
+    "name": "x_namd_inout_control_langevin_damping_coefficient_unit",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1059,7 +1146,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_vdwtype",
+    "name": "x_namd_inout_control_langevin_dynamics_not_applied_to",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1068,7 +1155,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_vdwmodifier",
+    "name": "x_namd_inout_control_temperature_coupling",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1077,7 +1164,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rvdwswitch",
+    "name": "x_namd_inout_control_coupling_temperature",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1086,7 +1173,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rvdw",
+    "name": "x_namd_inout_control_berendsen_pressure_coupling",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1095,7 +1182,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_dispcorr",
+    "name": "x_namd_inout_control_berendsen_compressibility_estimate",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1104,7 +1191,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_tableextension",
+    "name": "x_namd_inout_control_berendsen_relaxation_time",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1113,7 +1200,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_fourierspacing",
+    "name": "x_namd_inout_control_berendsen_coupling_frequency",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1122,7 +1209,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_fouriernx",
+    "name": "x_namd_inout_control_langevin_piston_pressure_control",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1131,7 +1218,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_fourierny",
+    "name": "x_namd_inout_control_target_pressure",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1140,7 +1227,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_fouriernz",
+    "name": "x_namd_inout_control_langevin_oscillation_period",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1149,7 +1236,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_pmeorder",
+    "name": "x_namd_inout_control_langevin_decay_time",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1158,7 +1245,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ewaldrtol",
+    "name": "x_namd_inout_control_langevin_piston_temperature",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1167,7 +1254,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ewaldrtollj",
+    "name": "x_namd_inout_control_pressure_control",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1176,7 +1263,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ljpmecombrule",
+    "name": "x_namd_inout_control_initial_strain_rate",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1185,7 +1272,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ewaldgeometry",
+    "name": "x_namd_inout_control_cell_fluctuation",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1194,7 +1281,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_epsilonsurface",
+    "name": "x_namd_inout_control_particle_mesh_ewald",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1203,7 +1290,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_implicitsolvent",
+    "name": "x_namd_inout_control_pme_tolerance",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1212,7 +1299,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbalgorithm",
+    "name": "x_namd_inout_control_pme_ewald_coefficient",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1221,7 +1308,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstgbradii",
+    "name": "x_namd_inout_control_pme_interpolation_order",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1230,7 +1317,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rgbradii",
+    "name": "x_namd_inout_control_pme_grid_dimensions",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1239,7 +1326,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbepsilonsolvent",
+    "name": "x_namd_inout_control_pme_maximum_grid_spacing",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1248,7 +1335,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbsaltconc",
+    "name": "x_namd_inout_control_fftw_data_file",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1257,7 +1344,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbobcalpha",
+    "name": "x_namd_inout_control_full_electrostatic_evaluation_frequency",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1266,7 +1353,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbobcbeta",
+    "name": "x_namd_inout_control_minimization",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1275,7 +1362,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbobcgamma",
+    "name": "x_namd_inout_control_velocity_quenching",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1284,7 +1371,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_gbdielectricoffset",
+    "name": "x_namd_inout_control_verlet_integrator",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1293,7 +1380,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_saalgorithm",
+    "name": "x_namd_inout_control_random_number_seed",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1302,7 +1389,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_sasurfacetension",
+    "name": "x_namd_inout_control_use_hydrogen_bonds",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1311,7 +1398,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_tcoupl",
+    "name": "x_namd_inout_control_coordinate_pdb",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1320,7 +1407,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nsttcouple",
+    "name": "x_namd_inout_control_structure_file",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -1329,749 +1416,7 @@
     ]   
   }, {
     "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nhchainlength",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_printnosehooverchainvariables",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_pcoupl",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_pcoupltype",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstpcouple",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_taup",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_compressibility0",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_compressibility1",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_compressibility2",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_refp0",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_refp1",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_refp2",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_refcoordscaling",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_posrescom0",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_posrescom1",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_posrescom2",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_posrescomb0",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_posrescomb1",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_posrescomb2",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_qmmm",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_qmconstraints",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_qmmmscheme",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_mmchargescalefactor",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ngqm",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_constraintalgorithm",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_continuation",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_shakesor",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_shaketol",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_lincsorder",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_lincsiter",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_lincswarnangle",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nwall",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_walltype",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_wallrlinpot",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_wallatomtype0",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_wallatomtype1",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_walldensity0",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_walldensity1",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_wallewaldzfac",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_pull",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_rotation",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_interactivemd",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_disre",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_disreweighting",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_disremixed",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_drfc",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_drtau",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstdisreout",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_orirefc",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_oriretau",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nstorireout",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_freeenergy",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_cosacceleration",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_deform0",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_deform1",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_deform2",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_simulatedtempering",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ex",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ext",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ey",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_eyt",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ez",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_ezt",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_swapcoords",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_adress",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userint1",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userint2",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userint3",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userint4",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userreal1",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userreal2",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userreal3",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_userreal4",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nrdf",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_reft",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_taut",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_annealing",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_annealingnpoints",
-    "dtypeStr": "C",
-    "shape": [], 
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_acc",
-    "dtypeStr": "f",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_nfreeze",
-    "dtypeStr": "C",
-    "shape": [
-      3
-    ],
-    "superNames": [
-      "section_run",
-      "x_namd_section_control_parameters"
-    ]   
-  }, {
-    "description": "NAMD running environment and control parameters.",
-    "name": "x_namd_inout_control_energygrpflags0",
+    "name": "x_namd_inout_control_parameters",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -2326,15 +1671,6 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Gives the number of ubond_energies in this sequence of frames, see x_namd_frame_sequence_ubond_energy.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_namd_number_of_ubond_energies_in_sequence",
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
       "description": "Gives the number of bond_energies in this sequence of frames, see x_namd_frame_sequence_bond_energy.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -2344,37 +1680,10 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Gives the number of coulomb_sr_energies in this sequence of frames, see x_namd_frame_sequence_coulomb_sr_energy.",
+      "description": "Gives the number of angle_energies in this sequence of frames, see x_namd_frame_sequence_angle_energy.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "x_namd_number_of_coulomb_sr_energies_in_sequence",
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Gives the number of coulomb_14_energies in this sequence of frames, see x_namd_frame_sequence_coulomb_14_energy.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_namd_number_of_coulomb_14_energies_in_sequence",
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Gives the number of lj_sr_energies in this sequence of frames, see x_namd_frame_sequence_lj_sr_energy.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_namd_number_of_lj_sr_energies_in_sequence",
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Gives the number of lj_14_energies in this sequence of frames, see x_namd_frame_sequence_lj_14_energy.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_namd_number_of_lj_14_energies_in_sequence",
+      "name": "x_namd_number_of_angle_energies_in_sequence",
       "shape": [],
       "superNames": [
         "section_frame_sequence"
@@ -2407,10 +1716,55 @@
         "section_frame_sequence"
       ]
     }, {
-      "description": "Gives the number of constrain_rmsd_energies in this sequence of frames, see x_namd_frame_sequence_constrain_rmsd_energy.",
+      "description": "Gives the number of vdw_energies in this sequence of frames, see x_namd_frame_sequence_vdw_energy.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "x_namd_number_of_constrain_rmsd_in_sequence",
+      "name": "x_namd_number_of_vdw_energies_in_sequence",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Gives the number of boundary_energies in this sequence of frames, see x_namd_frame_sequence_boundary_energy.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_namd_number_of_boundary_energies_in_sequence",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Gives the number of electrostatic_energies in this sequence of frames, see x_namd_frame_sequence_electrostatic_energy.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_namd_number_of_electrostatic_energies_in_sequence",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Gives the number of total2_energies in this sequence of frames, see x_namd_frame_sequence_total2_energy.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_namd_number_of_total2_energies_in_sequence",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Gives the number of total3_energies in this sequence of frames, see x_namd_frame_sequence_total3_energy.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_namd_number_of_total3_energies_in_sequence",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Gives the number of misc_energies in this sequence of frames, see x_namd_frame_sequence_misc_energy.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_namd_number_of_misc_energies_in_sequence",
       "shape": [],
       "superNames": [
         "section_frame_sequence"
@@ -2431,126 +1785,6 @@
       "name": "x_namd_frame_sequence_density",
       "shape": [
         "x_namd_number_of_densities_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_ubond_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
-      "dtypeStr": "i",
-      "name": "x_namd_frame_sequence_ubond_energy_frames",
-      "shape": [
-        "x_namd_number_of_ubond_energies_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the values of the ubond_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_ubond_energy_frames.",
-      "dtypeStr": "f",
-      "name": "x_namd_frame_sequence_ubond_energy",
-      "shape": [
-        "x_namd_number_of_ubond_energies_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_coulomb_sr_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
-      "dtypeStr": "i",
-      "name": "x_namd_frame_sequence_coulomb_sr_energy_frames",
-      "shape": [
-        "x_namd_number_of_coulomb_sr_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the values of the coulomb_sr_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_coulomb_sr_energy_frames.",
-      "dtypeStr": "f",
-      "name": "x_namd_frame_sequence_coulomb_sr_energy",
-      "shape": [
-        "x_namd_number_of_coulomb_sr_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_coulomb_14_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
-      "dtypeStr": "i",
-      "name": "x_namd_frame_sequence_coulomb_14_energy_frames",
-      "shape": [
-        "x_namd_number_of_coulomb_14_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the values of the coulomb_14_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_coulomb_14_energy_frames.",
-      "dtypeStr": "f",
-      "name": "x_namd_frame_sequence_coulomb_14_energy",
-      "shape": [
-        "x_namd_number_of_coulomb_14_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_lj_sr_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
-      "dtypeStr": "i",
-      "name": "x_namd_frame_sequence_lj_sr_energy_frames",
-      "shape": [
-        "x_namd_number_of_lj_sr_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the values of the lj_sr_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_lj_sr_energy_frames.",
-      "dtypeStr": "f",
-      "name": "x_namd_frame_sequence_lj_sr_energy",
-      "shape": [
-        "x_namd_number_of_lj_sr_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_lj_14_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
-      "dtypeStr": "i",
-      "name": "x_namd_frame_sequence_lj_14_energy_frames",
-      "shape": [
-        "x_namd_number_of_lj_14_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the values of the lj_14_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_lj_14_energy_frames.",
-      "dtypeStr": "f",
-      "name": "x_namd_frame_sequence_lj_14_energy",
-      "shape": [
-        "x_namd_number_of_lj_14_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_constrain_rmsd_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
-      "dtypeStr": "i",
-      "name": "x_namd_frame_sequence_constrain_rmsd_frames",
-      "shape": [
-        "x_namd_number_of_constrain_rmsd_energy_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    }, {
-      "description": "Array containing the values of the constrain_rmsd_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_constrain_rmsd_energy_frames.",
-      "dtypeStr": "f",
-      "name": "x_namd_frame_sequence_constrain_rmsd",
-      "shape": [
-        "x_namd_number_of_constrain_rmsd_in_sequence"
       ],
       "superNames": [
         "section_frame_sequence"
@@ -2631,6 +1865,146 @@
       "name": "x_namd_frame_sequence_bond_energy",
       "shape": [
         "x_namd_number_of_bond_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_boundary values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_boundary_frames",
+      "shape": [
+        "x_namd_number_of_boundary_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the boundary along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_boundary_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_boundary",
+      "shape": [
+        "x_namd_number_of_boundary_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_angle_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_angle_energy_frames",
+      "shape": [
+        "x_namd_number_of_angle_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the angle_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_angle_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_angle_energy",
+      "shape": [
+        "x_namd_number_of_angle_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_vdw_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_vdw_energy_frames",
+      "shape": [
+        "x_namd_number_of_vdw_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the vdw_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_vdw_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_vdw_energy",
+      "shape": [
+        "x_namd_number_of_vdw_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_electrostatic_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_electrostatic_energy_frames",
+      "shape": [
+        "x_namd_number_of_electrostatic_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the electrostatic_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_electrostatic_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_electrostatic_energy",
+      "shape": [
+        "x_namd_number_of_electrostatic_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_total2_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_total2_energy_frames",
+      "shape": [
+        "x_namd_number_of_total2_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the total2_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_total2_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_total2_energy",
+      "shape": [
+        "x_namd_number_of_total2_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_total3_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_total3_energy_frames",
+      "shape": [
+        "x_namd_number_of_total3_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the total3_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_total3_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_total3_energy",
+      "shape": [
+        "x_namd_number_of_total3_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_namd_frame_sequence_misc_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_namd_frame_sequence_misc_energy_frames",
+      "shape": [
+        "x_namd_number_of_misc_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the misc_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_misc_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_namd_frame_sequence_misc_energy",
+      "shape": [
+        "x_namd_number_of_misc_energies_in_sequence"
       ],
       "superNames": [
         "section_frame_sequence"
