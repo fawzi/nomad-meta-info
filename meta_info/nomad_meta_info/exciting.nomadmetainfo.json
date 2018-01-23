@@ -768,6 +768,16 @@
         "section_system"
       ]
     }, {
+      "description": "Specifies the threshold for the x_exciting_energy_total_scf_iteration change between two subsequent self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_energy_change",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ],
+      "units": "J"
+    }, {
       "description": "The number of atoms in the unit cell",
       "dtypeStr": "i",
       "name": "x_exciting_number_of_atoms",
