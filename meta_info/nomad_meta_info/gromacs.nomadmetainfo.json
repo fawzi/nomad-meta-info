@@ -2079,6 +2079,24 @@
       "x_gromacs_section_control_parameters"
     ]   
   }, {
+    "description": "Gromacs running environment and control parameters.",
+    "name": "x_gromacs_inout_control_energygrpflags1",
+    "dtypeStr": "C",
+    "shape": [], 
+    "superNames": [
+      "section_run",
+      "x_gromacs_section_control_parameters"
+    ]   
+  }, {
+    "description": "Gromacs running environment and control parameters.",
+    "name": "x_gromacs_inout_control_energygrpflags2",
+    "dtypeStr": "C",
+    "shape": [], 
+    "superNames": [
+      "section_run",
+      "x_gromacs_section_control_parameters"
+    ]   
+  }, {
     "name": "x_gromacs_section_atom_to_atom_type_ref",
     "kindStr": "type_section",
     "description": "Section to store atom label to atom type definition list",
