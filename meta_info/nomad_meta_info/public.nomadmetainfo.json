@@ -4167,6 +4167,25 @@
         "section_system_to_system_refs"
       ]
     }, {
+      "derived": true,
+      "description": "Type of the system ",
+      "dtypeStr": "C",
+      "name": "system_type",
+      "shape": [],
+      "repeats": false,
+      "superNames": [
+        "section_system"
+      ],
+      "values": {
+        "Atom": "A single atom",
+        "Molecule / Cluster": "A system with no periodic dimensions",
+        "1D": "systems with one periodic dimension",
+        "Polymer": "systems with one periodic dimension and a minimum thickness along the other axes",
+        "2D": "systems with two periodic dimensions",
+        "Surface": "systems with two periodic dimensions and a minimum thickness along the third axis",
+        "Bulk": "systems with three periodic dimensions"
+      }
+    }, {
       "description": "Method used to calculate the thermodynamic quantities.\n\nValid values:\n\n  * harmonic",
       "dtypeStr": "C",
       "name": "thermodynamical_properties_calculation_method",
