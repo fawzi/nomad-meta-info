@@ -12,13 +12,136 @@
       "name": "x_exciting_atom_forces",
       "repeats": true,
       "shape": [
-        "number_of_atoms",
+        "x_exciting_number_of_atoms",
         3
       ],
       "superNames": [
         "section_single_configuration_calculation"
       ],
       "units": "N"
+    },{
+      "description": "IBS correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_IBS_forces",
+      "shape": ["x_exciting_number_of_atoms",3],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    }, {
+      "description": "core correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_core_forces",
+      "shape": ["x_exciting_number_of_atoms",3],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    },{
+      "description": "HF correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_HF_forces",
+      "shape": ["x_exciting_number_of_atoms",3],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    },{
+      "description": "x-component of the IBS correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_IBS_forces_x",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "y-component of the IBS correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_IBS_forces_y",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "z-component of the IBS correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_IBS_forces_z",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "x-component of the core correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_core_forces_x",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "y-component of the core correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_core_forces_y",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "z-component of the core correction to the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_core_forces_z",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "x-component of the HF Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_HF_forces_x",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "y-component of the HF Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_HF_forces_y",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "z-component of the HF Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_HF_forces_z",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "x-component of the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_forces_x",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "y-component of the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_forces_y",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "z-component of the Force acting on the atoms.",
+      "dtypeStr": "f",
+      "name": "x_exciting_atom_forces_z",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "number of vertices along the kpoint path used for the bandstructure plot",
       "dtypeStr": "i",
@@ -118,10 +241,11 @@
     }, {
       "description": "Core charge",
       "dtypeStr": "f",
-      "name": "x_exciting_core_charge",
+      "name": "x_exciting_core_charge_initial",
       "superNames": [
         "section_system"
-      ]
+      ],
+      "units": "C"
     }, {
       "description": "Core-electron kinetic energy",
       "dtypeStr": "f",
@@ -142,7 +266,25 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
-    }, {
+    },{
+      "description": "Core charge",
+      "dtypeStr": "f",
+      "name": "x_exciting_core_charge_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "C"
+    },{
+      "description": "Valence charge",
+      "dtypeStr": "f",
+      "name": "x_exciting_valence_charge_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "C"
+    },  {
       "description": "Core leakage",
       "dtypeStr": "f",
       "name": "x_exciting_core_leakage_scf_iteration",
@@ -263,6 +405,15 @@
       "description": "exciting effective potential convergence",
       "dtypeStr": "f",
       "name": "x_exciting_effective_potential_convergence_scf_iteration",
+      "shape": [],
+      "superNames": [
+        "section_scf_iteration"
+      ],
+      "units": "J"
+    },{
+      "description": "exciting force convergence",
+      "dtypeStr": "f",
+      "name": "x_exciting_force_convergence_scf_iteration",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -778,6 +929,62 @@
       ],
       "units": "J"
     }, {
+      "description": "Specifies the threshold for the x_exciting_effective_potential_convergence between two subsequent self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_potential_change_list",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Specifies the threshold for the x_exciting_effective_potential_convergence between two subsequent self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_potential_change",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ],
+      "units": "J"
+    }, {
+      "description": "Specifies the threshold for the x_exciting_effective_potential_convergence between two subsequent self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_charge_change_list",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ]
+    }, {
+      "description": "Specifies the threshold for the x_exciting_effective_potential_convergence between two subsequent self-consistent field (SCF) iterations.",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_charge_change",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ]
+    }, {
+      "description": "Convergence tolerance for forces (not including IBS contribution) during the SCF run.",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_force_change_list",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ]
+    }, {
+      "description": "Convergence tolerance for forces (not including IBS contribution) during the SCF run",
+      "dtypeStr": "f",
+      "name": "x_exciting_scf_threshold_force_change",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_scf"
+      ]
+    },  {
       "description": "The number of atoms in the unit cell",
       "dtypeStr": "i",
       "name": "x_exciting_number_of_atoms",
@@ -943,6 +1150,7 @@
       "description": "Temporary storing converged atom forces cartesian",
       "dtypeStr": "C",
       "name": "x_exciting_store_total_forces",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation",
@@ -985,10 +1193,11 @@
     }, {
       "description": "Valence charge",
       "dtypeStr": "f",
-      "name": "x_exciting_valence_charge",
+      "name": "x_exciting_valence_charge_initial",
       "superNames": [
         "section_system"
-      ]
+      ],
+      "units": "C"
     }, {
       "description": "Total number of valence states",
       "dtypeStr": "i",
