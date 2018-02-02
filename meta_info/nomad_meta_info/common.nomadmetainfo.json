@@ -290,6 +290,33 @@
         "section_method"
       ]
     }, {
+      "description": "GW Fermi energy",
+      "dtypeStr": "f",
+      "name": "gw_fermi_energy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "GW fundamental band gap",
+      "dtypeStr": "f",
+      "name": "gw_fundamental_gap",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "GW optical band gap",
+      "dtypeStr": "f",
+      "name": "gw_optical_gap",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
       "description": "Maximum G for the pw basis for the Coulomb potential.",
       "dtypeStr": "f",
       "name": "gw_bare_coulomb_gmax",
@@ -362,6 +389,34 @@
       "shape": [
         3
       ],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Number referring to the frequency used in the calculation of the self energy.",
+      "dtypeStr": "i",
+      "name": "gw_frequency_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Values of the frequency used in the calculation of the self energy.",
+      "dtypeStr": "f",
+      "name": "gw_frequency_values",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "J"
+    }, {
+      "description": "Weights of the frequency used in the calculation of the self energy.",
+      "dtypeStr": "f",
+      "name": "gw_frequency_weights",
+      "repeats": true,
+      "shape": [],
       "superNames": [
         "section_method"
       ]
