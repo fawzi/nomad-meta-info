@@ -241,6 +241,13 @@
     }, {
       "description": "Core charge",
       "dtypeStr": "f",
+      "name": "x_exciting_core_charge",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "Core charge",
+      "dtypeStr": "f",
       "name": "x_exciting_core_charge_initial",
       "superNames": [
         "section_system"
@@ -284,7 +291,7 @@
         "section_scf_iteration"
       ],
       "units": "C"
-    },  {
+    }, {
       "description": "Core leakage",
       "dtypeStr": "f",
       "name": "x_exciting_core_leakage_scf_iteration",
@@ -1190,6 +1197,13 @@
         "section_system"
       ],
       "units": "m^3"
+    }, {
+      "description": "Valence charge",
+      "dtypeStr": "f",
+      "name": "x_exciting_valence_charge",
+      "superNames": [
+        "section_system"
+      ]
     }, {
       "description": "Valence charge",
       "dtypeStr": "f",
