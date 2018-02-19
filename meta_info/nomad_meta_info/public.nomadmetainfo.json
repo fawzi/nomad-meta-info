@@ -566,6 +566,15 @@
       "name": "calculation_context",
       "superNames": []
     }, {
+      "description": "Contains the nomad uri of a raw the data file connected to the current run. There should be an value for the main_file_uri and all ancillary files.",
+      "dtypeStr": "C",
+      "name": "calculation_file_uri",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "unique identifier of a calculation.",
       "dtypeStr": "C",
       "name": "calculation_gid",
@@ -3587,15 +3596,6 @@
       "shape": [],
       "superNames": [
         "section_calculation_info"
-      ]
-    }, {
-      "description": "Contain the references to the location of the raw the data files (uris) used to extract the information about this run. This is the main_file_uri and all ancillary files.",
-      "dtypeStr": "C",
-      "name": "source_references",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "section_run"
       ]
     }, {
       "derived": true,
