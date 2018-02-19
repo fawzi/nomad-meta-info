@@ -3589,9 +3589,10 @@
         "section_calculation_info"
       ]
     }, {
-      "description": "Contain the references to the location of the raw the data (e.g., URI).",
+      "description": "Contain the references to the location of the raw the data files (uris) used to extract the information about this run. This is the main_file_uri and all ancillary files.",
       "dtypeStr": "C",
       "name": "source_references",
+      "repeats": true,
       "shape": [],
       "superNames": [
         "section_run"
