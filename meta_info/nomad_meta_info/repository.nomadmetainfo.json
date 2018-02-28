@@ -61,6 +61,20 @@
         "section_repository_dataset"
       ]
     }, {
+      "description": "the NOMAD DOI assigned to the dataset",
+      "dtypeStr": "C",
+      "name": "dataset_dois",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
+      "description": "the internal Id assigned to a NOMAD DOI",
+      "dtypeStr": "i",
+      "name": "dataset_doi_ids",
+      "superNames": [
+        "section_repository_dataset"
+      ]
+    }, {
       "description": "Checksum idendifying the dataset in the repository",
       "dtypeStr": "C",
       "name": "dataset_checksum",
