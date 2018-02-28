@@ -54,18 +54,25 @@
         "section_repository_dataset"
       ]
     }, {
-      "description": "the NOMAD DOI assigned to the dataset",
-      "dtypeStr": "C",
-      "name": "dataset_dois",
+      "description": "the NOMAD DOIs assigned to the dataset",
+      "kindStr": "type_section",
+      "name": "section_dataset_doi",
       "superNames": [
         "section_repository_dataset"
       ]
     }, {
-      "description": "the internal Id assigned to a NOMAD DOI",
+      "description": "the internal ID assigned to a NOMAD DOI (primary key in Postgres DB)",
       "dtypeStr": "i",
-      "name": "dataset_doi_ids",
+      "name": "dataset_doi_id",
       "superNames": [
-        "section_repository_dataset"
+        "section_dataset_doi"
+      ]
+    }, {
+      "description": "the name of the DOI",
+      "dtypeStr": "i",
+      "name": "dataset_doi_name",
+      "superNames": [
+        "section_dataset_doi"
       ]
     }, {
       "description": "Checksum idendifying the dataset in the repository",
