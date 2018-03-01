@@ -566,6 +566,15 @@
       "name": "calculation_context",
       "superNames": []
     }, {
+      "description": "Contains the nomad uri of a raw the data file connected to the current run. There should be an value for the main_file_uri and all ancillary files.",
+      "dtypeStr": "C",
+      "name": "calculation_file_uri",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    }, {
       "description": "unique identifier of a calculation.",
       "dtypeStr": "C",
       "name": "calculation_gid",
@@ -3589,14 +3598,6 @@
         "section_calculation_info"
       ]
     }, {
-      "description": "Contain the references to the location of the raw the data (e.g., URI).",
-      "dtypeStr": "C",
-      "name": "source_references",
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "derived": true,
       "description": "Specifies the International Union of Crystallography (IUC) number of the 3D space group of this system.",
       "dtypeStr": "i",
@@ -4171,19 +4172,19 @@
       "description": "Type of the system ",
       "dtypeStr": "C",
       "name": "system_type",
-      "shape": [],
       "repeats": false,
+      "shape": [],
       "superNames": [
         "section_system"
       ],
       "values": {
-        "Atom": "A single atom",
-        "Molecule / Cluster": "A system with no periodic dimensions",
         "1D": "systems with one periodic dimension",
-        "Polymer": "systems with one periodic dimension and a minimum thickness along the other axes",
         "2D": "systems with two periodic dimensions",
-        "Surface": "systems with two periodic dimensions and a minimum thickness along the third axis",
-        "Bulk": "systems with three periodic dimensions"
+        "Atom": "A single atom",
+        "Bulk": "systems with three periodic dimensions",
+        "Molecule / Cluster": "A system with no periodic dimensions",
+        "Polymer": "systems with one periodic dimension and a minimum thickness along the other axes",
+        "Surface": "systems with two periodic dimensions and a minimum thickness along the third axis"
       }
     }, {
       "description": "Method used to calculate the thermodynamic quantities.\n\nValid values:\n\n  * harmonic",

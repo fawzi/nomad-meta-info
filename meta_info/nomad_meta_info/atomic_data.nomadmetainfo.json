@@ -446,6 +446,110 @@
       "superNames": [
         "section_atomic_data_collection"
       ]
+    },
+    {
+      "name"       : "atomic_ea_by_energy_difference",
+        "description": "Electron affinity for free atom. This EA is defined as the energy difference between the neutral atom and -1 charged atom.",
+        "dtypeStr"   : "f",
+        "units"      : "",
+        "shape"      : [],
+        "shortname"  : "EA_delta",
+        "superNames" : [
+            "section_atomic_property"
+        ],
+        "units": "J"
+    },
+    {
+        "name"       : "atomic_ip_by_energy_difference",
+        "description": "Ionization potential for free atom. This IP is defined as the energy difference between the neutral atom and the +1 charged atom.",
+        "dtypeStr"   : "f",
+        "units"      : "",
+        "shape"      : [],
+        "shortname"  : "IP_delta",
+        "superNames" : [
+            "section_atomic_property"
+        ],
+        "units": "J"
+    },
+    {
+        "name"       : "atomic_ea_by_half_charged_homo",
+        "description": "Electron affinity for free atom. This EA is defined as the HOMO energy of +0.5 charged atom.",
+        "dtypeStr"   : "f",
+        "units"      : "",
+        "shape"      : [],
+        "shortname"  : "EA_half",
+        "superNames" : [
+            "section_atomic_property"
+        ],
+        "units": "J"
+    },
+    {
+        "name"       : "atomic_ip_by_half_charged_homo",
+        "description": "Ionization potential for free atom. This IP is defined as the HOMO energy of -0.5 charged atom.",
+        "dtypeStr"   : "f",
+        "units"      : "",
+        "shape"      : [],
+        "shortname"  : "IP_half",
+        "superNames" : [
+            "section_atomic_property"
+        ],
+        "units": "J"
+    },
+    {
+        "description": "Radius at which $f_{max}$ radial function is maximum for free atom.",
+        "dtypeStr": "f",
+        "name": "atomic_rf_max",
+        "shape": [],
+        "shortname": "r_f",
+        "superNames": [
+          "section_atomic_property"
+        ],
+        "units": "m"
+    },
+    {
+        "description": "The index number of s orbital. This index is used to indicate the index number of s orbital which is used in other properties",
+        "dtypeStr": "i",
+        "name": "atomic_rs_max_orbital_index",
+        "shape": [],
+        "shortname": "index_s",
+        "superNames": [
+          "section_atomic_property"
+        ],
+        "units": ""
+    },
+    {
+        "description": "The index number of p orbital. This index is used to indicate the index number of p orbital which is used in other properties",
+        "dtypeStr": "i",
+        "name": "atomic_rp_max_orbital_index",
+        "shape": [],
+        "shortname": "index_p",
+        "superNames": [
+          "section_atomic_property"
+        ],
+        "units": ""
+    },
+    {
+        "description": "The index number of d orbital. This index is used to indicate the index number of d orbital which is used in other properties",
+        "dtypeStr": "i",
+        "name": "atomic_rd_max_orbital_index",
+        "shape": [],
+        "shortname": "index_d",
+        "superNames": [
+          "section_atomic_property"
+        ],
+        "units": ""
+    },
+    {
+        "description": "The index number of f orbital. This index is used to indicate the index number of f orbital which is used in other properties",
+        "dtypeStr": "i",
+        "name": "atomic_rf_max_orbital_index",
+        "shape": [],
+        "shortname": "index_f",
+        "superNames": [
+          "section_atomic_property"
+        ],
+        "units": ""
     }
+
   ]
 }
