@@ -7,39 +7,6 @@
       "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
-      "description": "CC2 total energies",
-      "dtypeStr": "f",
-      "name": "x_turbomole_CC2_total_energy_final",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "CCSD total energies",
-      "dtypeStr": "f",
-      "name": "x_turbomole_CCSD_total_energy_final",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
-      "description": "CCSD(T) total energies",
-      "dtypeStr": "f",
-      "name": "x_turbomole_CCSDparT_total_energy_final",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    }, {
       "description": "The label of the atoms in the system",
       "dtypeStr": "C",
       "name": "x_turbomole_controlIn_atom_label",
@@ -301,16 +268,6 @@
         "x_turbomole_section_functionals"
       ]
     }, {
-      "description": "D1 diagnostic of CCSD",
-      "dtypeStr": "f",
-      "name": "x_turbomole_D1_diagnostic",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ]
-    }, {
       "description": "Damping of the two-electron contributions to Fock matrix in the present SCF iteration",
       "dtypeStr": "f",
       "name": "x_turbomole_damping_scf_iteration",
@@ -454,15 +411,6 @@
         "section_method"
       ]
     }, {
-      "description": "Determines whether a geoemtry optimization is converged.",
-      "dtypeStr": "C",
-      "name": "x_turbomole_geometry_optimization_converged",
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_run"
-      ]
-    }, {
       "description": "By default Turbomole only keeps the output of the final iteration once the geometry has been converged, thus the entire optimization trajectory cannot be rebuild in most cases. Instead, this value contains the optimization cycle index to indicate how many iterations have preceded this one.",
       "dtypeStr": "i",
       "name": "x_turbomole_geometry_optimization_cycle_index",
@@ -552,17 +500,6 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
-    }, {
-      "description": "MP2 total energies",
-      "dtypeStr": "f",
-      "name": "x_turbomole_MP2_total_energy_final",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
     }, {
       "description": "compute node",
       "dtypeStr": "C",
@@ -748,15 +685,6 @@
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "-",
-      "dtypeStr": "f",
-      "name": "x_turbomole_virtual_orbital_shift",
-      "shape": [],
-      "superNames": [
-        "energy_component",
-        "section_scf_iteration"
       ]
     }, {
       "description": "Final Wave Function Norm",
