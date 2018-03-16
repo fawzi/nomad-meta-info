@@ -682,6 +682,26 @@
         "section_method"
       ]
     }, {
+      "description": "IR activicity for vibration modes",
+      "dtypeStr": "b",
+      "name": "x_turbomole_vibrations_infrared_activity",
+      "shape": [
+        "x_turbomole_vibrations_num_modes"
+      ],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Raman activicity for vibration modes",
+      "dtypeStr": "b",
+      "name": "x_turbomole_vibrations_raman_activity",
+      "shape": [
+        "x_turbomole_vibrations_num_modes"
+      ],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "IR Intensity for each vibrational normal mode",
       "dtypeStr": "f",
       "name": "x_turbomole_vibrations_intensities",
