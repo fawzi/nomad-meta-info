@@ -114,7 +114,7 @@
       "dtypeStr": "C",
       "name": "repository_access_now",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "Gid of a raw data archives that contains this calculation",
@@ -125,26 +125,19 @@
         "section_repository_info"
       ]
     }, {
-      "description": "Number of different elements contained in the system",
-      "dtypeStr": "i",
-      "name": "repository_atomic_elements_count",
-      "superNames": [
-        "section_repository_info"
-      ]
-    }, {
       "description": "Atomic elements used in this calculation",
       "dtypeStr": "C",
       "name": "repository_atomic_elements",
       "repeats": true,
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "String identifying the type of basis set used in this calculation",
       "dtypeStr": "C",
       "name": "repository_basis_set_type",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "calc_id, an internal identifier in the database of a file/calculation in NOMAD repository",
@@ -158,35 +151,35 @@
       "dtypeStr": "C",
       "name": "repository_checksum",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "Chemical formula (composition) calculation",
       "dtypeStr": "C",
       "name": "repository_chemical_formula",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "version of the code that was used to generate the calculation",
       "dtypeStr": "C",
       "name": "repository_code_version",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "Comment on data uploaded to NOMAD repository",
       "dtypeStr": "C",
       "name": "repository_comment",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "String identifying the crystal system of this calculation",
       "dtypeStr": "C",
       "name": "repository_crystal_system",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "paths to the files associated with this calculation on the file system",
@@ -230,14 +223,14 @@
       "dtypeStr": "C",
       "name": "repository_open_date",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "String identifying the parser used to parse the information for the repository",
       "dtypeStr": "C",
       "name": "repository_parser_id",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "Permanent identifier of a file/calculation in NOMAD repository",
@@ -251,21 +244,21 @@
       "dtypeStr": "C",
       "name": "repository_program_name",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "space group of the geometry of this calculation",
       "dtypeStr": "i",
       "name": "repository_spacegroup_nr",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "String identifying the type of system of this calculation",
       "dtypeStr": "C",
       "name": "repository_system_type",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "URI referring to the parsed file in the original upload to repository (equivalent of mainFileUri before repackaging)",
@@ -279,21 +272,21 @@
       "dtypeStr": "C",
       "name": "repository_xc_treatment",
       "superNames": [
-        "section_repository_info"
+        "section_repository_parserdata"
       ]
     }, {
       "description": "Information about the authors of data uploaded to NOMAD repository",
       "kindStr": "type_section",
       "name": "section_author_info",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "Section describing a citation",
       "kindStr": "type_section",
       "name": "section_citation",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "Information on a raw data archive that contain open access data of this upload",
@@ -337,7 +330,7 @@
       "kindStr": "type_section",
       "name": "section_repository_dataset",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "Section containing information about the original upload to NOMAD repository",
@@ -349,7 +342,7 @@
       "kindStr": "type_section",
       "name": "section_shared_with",
       "superNames": [
-        "section_repository_info"
+        "section_repository_userdata"
       ]
     }, {
       "description": "Information about the person who uploaded the data to NOMAD repository",
@@ -358,6 +351,20 @@
       "superNames": [
         "section_repository_info"
       ]
+  }, {
+    "description": "data about the calculation which can be modified by the owner",
+    "kindStr": "type_section",
+    "name": "section_repository_userdata",
+    "superNames": [
+      "section_repository_info"
+    ]
+  }, {
+    "description": "data about the calculation which can be modified by parsers",
+    "kindStr": "type_section",
+    "name": "section_repository_parserdata",
+    "superNames": [
+      "section_repository_info"
+    ]
     }, {
       "description": "First name of someone this calculation is shared with",
       "dtypeStr": "C",
