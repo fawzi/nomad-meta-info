@@ -2301,6 +2301,15 @@
         "section_frame_sequence"
       ]
     }, {
+      "description": "Gives the number of covalent_energies in this sequence of frames, see x_gromos_frame_sequence_covalent_energy.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "x_gromos_number_of_covalent_energies_in_sequence",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
       "description": "Gives the number of misc_energies in this sequence of frames, see x_gromos_frame_sequence_misc_energy.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
@@ -2555,6 +2564,26 @@
       "name": "x_gromos_frame_sequence_misc_energy_frames",
       "shape": [
         "x_gromos_number_of_misc_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the strictly increasing indices of the frames the x_gromos_frame_sequence_covalent_energy values refers to. If not given it defaults to the trivial mapping 0,1,...",
+      "dtypeStr": "i",
+      "name": "x_gromos_frame_sequence_covalent_energy_frames",
+      "shape": [
+        "x_gromos_number_of_covalent_energies_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    }, {
+      "description": "Array containing the values of the covalent_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_covalent_energy_frames.",
+      "dtypeStr": "f",
+      "name": "x_gromos_frame_sequence_covalent_energy_frames",
+      "shape": [
+        "x_gromos_number_of_covalent_energies_in_sequence"
       ],
       "superNames": [
         "section_frame_sequence"
