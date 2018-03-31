@@ -2581,7 +2581,7 @@
     }, {
       "description": "Array containing the values of the covalent_energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_covalent_energy_frames.",
       "dtypeStr": "f",
-      "name": "x_gromos_frame_sequence_covalent_energy_frames",
+      "name": "x_gromos_frame_sequence_covalent_energy",
       "shape": [
         "x_gromos_number_of_covalent_energies_in_sequence"
       ],
