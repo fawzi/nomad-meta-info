@@ -631,6 +631,15 @@
     ]   
   }, {
     "description": "gromos running environment and control parameters.",
+    "name":"x_gromos_inout_control_topology_parameters",
+    "dtypeStr": "C", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_gromos_section_control_parameters"
+    ]    
+  }, { 
+    "description": "gromos running environment and control parameters.",
     "name":"x_gromos_inout_control_topology_type",
     "dtypeStr": "C", 
     "shape": [],
