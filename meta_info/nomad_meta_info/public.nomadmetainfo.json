@@ -611,6 +611,91 @@
         "section_method"
       ]
     }, {
+      "description": "The number of restricted uris in restricted_uri list.",
+      "dtypeStr": "i",
+      "name": "number_of_restricted_uri",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The list of nomad uri(s) identifying the restricted info/file corresponding to this calculation",
+      "dtypeStr": "C",
+      "name": "restricted_uri",
+      "repeats": true,
+      "shape": [
+        "number_of_restricted_uri"
+      ],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The reason of restriction for the uri or file. The reason can be 'propriety license', 'open-source redistribution restricted license', 'other license', or 'author restricted'.",
+      "dtypeStr": "C",
+      "name": "restricted_uri_reason",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The issue authority is the restriction owner for the uri or file. This can be license owner such as 'VASP' or 'AMBER', 'NOMAD', or the author of the uri. For example the repository user name of the author.",
+      "dtypeStr": "C",
+      "name": "restricted_uri_issue_authority",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The deadline date of the restriction for the uri or file. The end date can be in date format string for those restrictions set by authors or NOMAD otherwise it is set to 'unlimited' for the restriction related to license.",
+      "dtypeStr": "C",
+      "name": "restricted_uri_end_date",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The type of restriction for the uri or file. The type can be 'any access' or 'license permitted'.",
+      "dtypeStr": "C",
+      "name": "restricted_uri_restriction",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The info of the license that is the reason of restriction.",
+      "dtypeStr": "C",
+      "name": "restricted_uri_license",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The number of restricted files in restricted_uri_files list.",
+      "dtypeStr": "i",
+      "name": "number_of_restricted_uri_files",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
+      "description": "The list of files that are subject to restriction. The files are given with their relative paths to the main_file of parsing.",
+      "dtypeStr": "C",
+      "name": "restricted_uri_files",
+      "repeats": true,
+      "shape": [
+        "number_of_restricted_uri_files"
+      ],
+      "superNames": [
+        "section_restricted_uri"
+      ]
+    }, {
       "description": "repository pid of this calculation",
       "dtypeStr": "C",
       "name": "calculation_pid",
@@ -3035,6 +3120,11 @@
       "superNames": [
         "section_single_configuration_calculation"
       ]
+    }, {
+      "description": "Restricted URIs on this calculation (Coverage: any info or files that are related with this calculation can be subject to restriction)",
+      "kindStr": "type_section",
+      "name": "section_restricted_uri",
+      "superNames": []
     }, {
       "description": "Information on this calculation (main file)",
       "kindStr": "type_section",
