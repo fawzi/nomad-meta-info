@@ -1153,7 +1153,7 @@
     ]   
   }, {
     "description": "tinker running environment and control parameters.",
-    "name": "x_tinker_inout_control_number_of_parameters",
+    "name": "x_tinker_inout_control_number_of_parameter_files",
     "dtypeStr": "i",
     "shape": [], 
     "superNames": [
@@ -1162,10 +1162,10 @@
     ]   
   }, {
     "description": "tinker running environment and control parameters.",
-    "name": "x_tinker_inout_control_parameters",
+    "name": "x_tinker_inout_control_parameter_files",
     "dtypeStr": "C",
     "shape": [
-        "x_tinker_inout_control_number_of_parameters"
+        "x_tinker_inout_control_number_of_parameter_files"
     ], 
     "superNames": [
       "section_run",
