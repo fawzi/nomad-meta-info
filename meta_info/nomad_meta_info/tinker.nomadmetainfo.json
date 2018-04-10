@@ -586,7 +586,7 @@
     ]   
   }, {
     "description": "tinker running environment and control parameters.",
-    "name": "x_tinker_inout_control_steps_per_cycle",
+    "name": "x_tinker_inout_control_polar_eps",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -622,7 +622,7 @@
     ]   
   }, {
     "description": "tinker running environment and control parameters.",
-    "name": "x_tinker_inout_control_verlet_integrator",
+    "name": "x_tinker_inout_control_integrator",
     "dtypeStr": "C",
     "shape": [], 
     "superNames": [
@@ -631,7 +631,7 @@
     ]   
   }, {
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_topology_type",
+    "name":"x_tinker_inout_control_parameters",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -640,7 +640,16 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_resname",
+    "name":"x_tinker_inout_control_verbose",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_a_axis",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -649,7 +658,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_number_of_atom_types",
+    "name":"x_tinker_inout_control_b_axis",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -658,7 +667,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_number_of_atoms_solute",
+    "name":"x_tinker_inout_control_c_axis",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -667,7 +676,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_lennard_jones_exceptions",
+    "name":"x_tinker_inout_control_alpha",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -676,7 +685,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_bond_angle_interaction_in_force_field",
+    "name":"x_tinker_inout_control_beta",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -685,7 +694,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_improper_dihedral_interaction_in_force_field",
+    "name":"x_tinker_inout_control_gamma",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -694,7 +703,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_dihedral_interaction_in_force_field",
+    "name":"x_tinker_inout_control_tau_pressure",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -703,7 +712,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_nonbonded_definitions_in_force_field",
+    "name":"x_tinker_inout_control_tau_temperature",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -712,7 +721,25 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_periodic_boundary_conditions",
+    "name":"x_tinker_inout_control_debug",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_group",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_group_inter",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -721,7 +748,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_virial",
+    "name":"x_tinker_inout_control_vib_roots",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -730,7 +757,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_cutoff_type",
+    "name":"x_tinker_inout_control_spacegroup",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -739,7 +766,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_shortrange_cutoff",
+    "name":"x_tinker_inout_control_digits",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -748,7 +775,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_longrange_cutoff",
+    "name":"x_tinker_inout_control_printout",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -757,7 +784,25 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_pairlist_update_step_frequency",
+    "name":"x_tinker_inout_control_enforce_chirality",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_neighbor_list",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_vdw_cutoff",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -766,7 +811,43 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_reactionfield_cutoff",
+    "name":"x_tinker_inout_control_vdw_correction",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_ewald",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_ewald_cutoff",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_archive",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_barostat",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -775,7 +856,25 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_force_field_epsilon",
+    "name":"x_tinker_inout_control_aniso_pressure",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_lights",
+    "dtypeStr": "b", 
+    "shape": [],
+    "superNames": [
+      "section_run",
+      "x_tinker_section_control_parameters"
+    ]    
+  }, { 
+    "description": "tinker running environment and control parameters.",
+    "name":"x_tinker_inout_control_randomseed",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -784,8 +883,8 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_reactionfield_epsilon",
-    "dtypeStr": "C", 
+    "name":"x_tinker_inout_control_saddlepoint",
+    "dtypeStr": "b", 
     "shape": [],
     "superNames": [
       "section_run",
@@ -793,16 +892,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_force_field_kappa",
-    "dtypeStr": "C", 
-    "shape": [],
-    "superNames": [
-      "section_run",
-      "x_tinker_section_control_parameters"
-    ]    
-  }, { 
-    "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_force_field_perturbation",
+    "name":"x_tinker_inout_control_vdwtype",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -847,7 +937,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_termination_status",
+    "name":"x_tinker_inout_control_radiusrule",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -856,7 +946,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_termination_reason",
+    "name":"x_tinker_inout_control_radiustype",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -865,7 +955,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_function_value",
+    "name":"x_tinker_inout_control_radiussize",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -874,7 +964,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_rms_gradient",
+    "name":"x_tinker_inout_control_epsilonrule",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -883,7 +973,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_rms_coordinate_gradient",
+    "name":"x_tinker_inout_control_rattle",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -892,7 +982,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_rms_lattice_gradient",
+    "name":"x_tinker_inout_control_lambda",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -901,7 +991,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_lattice_gradient_norm",
+    "name":"x_tinker_inout_control_mutate",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -910,7 +1000,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_coordinate_gradient_norm",
+    "name":"x_tinker_inout_control_basin",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -919,7 +1009,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_final_gradient_norm",
+    "name":"x_tinker_inout_control_pme_grid",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
@@ -928,7 +1018,7 @@
     ]    
   }, { 
     "description": "tinker running environment and control parameters.",
-    "name":"x_tinker_inout_control_optimization_algorithm",
+    "name":"x_tinker_inout_control_pme_order",
     "dtypeStr": "C", 
     "shape": [],
     "superNames": [
