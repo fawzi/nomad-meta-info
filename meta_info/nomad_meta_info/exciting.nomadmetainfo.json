@@ -28,6 +28,22 @@
         "section_single_configuration_calculation"
       ],
       "units": "N"
+    },{
+      "description": "Geometry optimization method",
+      "dtypeStr": "C",
+      "name": "x_exciting_geometry_optimization_method",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Geometry optimization step",
+      "dtypeStr": "i",
+      "name": "x_exciting_geometry_optimization_step",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }, {
       "description": "core correction to the Force acting on the atoms.",
       "dtypeStr": "f",
@@ -571,7 +587,25 @@
       "superNames": [
         "x_exciting_section_atoms_group"
       ]
-    }, {
+    },{
+      "description": "number to identify the atoms of a species in the geometry optimization",
+      "dtypeStr": "C",
+      "name": "x_exciting_atom_number",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    },  {
+      "description": "labels of atoms in geometry optimization",
+      "dtypeStr": "C",
+      "name": "x_exciting_atom_label",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_exciting_section_atoms_group"
+      ]
+    },  {
       "description": "number to identify the atoms of a species on which a magnetic field is applied",
       "dtypeStr": "C",
       "name": "x_exciting_MT_external_magnetic_field_atom_number",
@@ -760,6 +794,31 @@
         "section_scf_iteration"
       ],
       "units": "J"
+    },{
+      "description": "section for geometry optimization",
+      "kindStr": "type_section",
+      "name": "x_exciting_section_geometry_optimization",
+      "superNames": [
+        "section_run"
+      ]
+    }, {
+      "description": "Maximum force magnitude in geometry optimization",
+      "dtypeStr": "f",
+      "name": "x_exciting_maximum_force_magnitude",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    }, {
+      "description": "Value of threshold for the force modulus as convergence criterion of the geometry_optimization_method used in exciting",
+      "dtypeStr": "f",
+      "name": "x_exciting_geometry_optimization_threshold_force",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
     }, {
       "description": "Hartree energy final",
       "dtypeStr": "f",
