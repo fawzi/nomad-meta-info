@@ -615,6 +615,36 @@
         "x_exciting_section_atoms_group"
       ]
     },  {
+      "description": "x component of the force acting on the atom",
+      "dtypeStr": "f",
+      "name": "x_exciting_geometry_atom_forces_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    }, {
+      "description": "y component of the force acting on the atom",
+      "dtypeStr": "f",
+      "name": "x_exciting_geometry_atom_forces_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    },{
+      "description": "z component of the force acting on the atom",
+      "dtypeStr": "f",
+      "name": "x_exciting_geometry_atom_forces_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "N"
+    },{
       "description": "x component of atomic position",
       "dtypeStr": "f",
       "name": "x_exciting_geometry_atom_positions_x",
@@ -783,6 +813,13 @@
       "name": "x_exciting_hamiltonian_size",
       "superNames": [
         "section_system"
+      ]
+    }, {
+      "description": "time for scf in geometry optimization",
+      "dtypeStr": "f",
+      "name": "x_exciting_geometry_dummy",
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     }, {
       "description": "Hartree energy",
