@@ -945,60 +945,6 @@
       ]
     },
     {
-      "description": "(deprecated) A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
-      "dtypeStr": "C",
-      "name": "topology_force_field_name",
-      "shape": [],
-      "superNames": [
-        "section_topology"
-      ]
-    },
-    {
-      "description": "(deprecated) Reference to the topology used for this system; if not given, the trivial topology should be assumed.",
-      "dtypeStr": "r",
-      "name": "topology_ref",
-      "referencedSections": [
-        "section_topology"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    },
-    {
-      "description": "(deprecated) Section describing a type of molecule in the system.",
-      "kindStr": "type_section",
-      "name": "section_molecule_type",
-      "superNames": [
-        "section_topology"
-      ]
-    },
-    {
-      "description": "(deprecated) Number of molecules in the system, as described by this topology.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_topology_molecules",
-      "shape": [],
-      "superNames": [
-        "section_topology"
-      ]
-    },
-    {
-      "description": "(deprecated) Reference to the atom type of each atom in the molecule.",
-      "dtypeStr": "r",
-      "name": "atom_in_molecule_to_atom_type_ref",
-      "referencedSections": [
-        "section_atom_type"
-      ],
-      "shape": [
-        "number_of_atoms_in_molecule"
-      ],
-      "superNames": [
-        "settings_atom_in_molecule"
-      ]
-    },
-    {
       "description": "(deprecated) Section describing a type of atom in the system.",
       "kindStr": "type_section",
       "name": "section_atom_type",
@@ -1007,17 +953,16 @@
       ]
     },
     {
-      "description": "Charge of the atom type.",
-      "dtypeStr": "f",
-      "name": "atom_type_charge",
+      "description": "(deprecated) Name (label) of the atom type.",
+      "dtypeStr": "C",
+      "name": "atom_type_name",
       "shape": [],
       "superNames": [
         "section_atom_type"
-      ],
-      "units": "C"
+      ]
     },
     {
-      "description": "Mass of the atom type.",
+      "description": "(deprecated) Mass of the atom type.",
       "dtypeStr": "f",
       "name": "atom_type_mass",
       "shape": [],
@@ -1027,13 +972,14 @@
       "units": "kg"
     },
     {
-      "description": "Name (label) of the atom type.",
-      "dtypeStr": "C",
-      "name": "atom_type_name",
+      "description": "(deprecated) Charge of the atom type.",
+      "dtypeStr": "f",
+      "name": "atom_type_charge",
       "shape": [],
       "superNames": [
         "section_atom_type"
-      ]
+      ],
+      "units": "C"
     },
     {
       "description": "(deprecated) Table mapping atom to molecules: the first column is the index of the molecule and the second column the index of the atom, signifying that the atom in the second column belongs to the molecule in the first column in the same row.",
@@ -1042,20 +988,6 @@
       "shape": [
         "number_of_topology_atoms",
         2
-      ],
-      "superNames": [
-        "section_topology"
-      ]
-    },
-    {
-      "description": "(deprecated) Mapping from molecules to molecule types.",
-      "dtypeStr": "r",
-      "name": "molecule_to_molecule_type_map",
-      "referencedSections": [
-        "section_molecule_type"
-      ],
-      "shape": [
-        "number_of_topology_molecules"
       ],
       "superNames": [
         "section_topology"
@@ -1085,15 +1017,85 @@
       "units": "C"
     },
     {
-      "description": "(deprecated) List of the indexes involved in this constraint. The fist atom has index 1, the last index is number_of_atoms_in_molecule.",
-      "dtypeStr": "i",
-      "name": "molecule_constraint_atoms",
+      "description": "(deprecated) Reference to the atom type of each atom in the molecule.",
+      "dtypeStr": "r",
+      "name": "atom_in_molecule_to_atom_type_ref",
+      "referencedSections": [
+        "section_atom_type"
+      ],
       "shape": [
-        "number_of_molecule_constraints",
-        "number_of_atoms_per_molecule_constraint"
+        "number_of_atoms_in_molecule"
       ],
       "superNames": [
-        "section_molecule_constraint"
+        "settings_atom_in_molecule"
+      ]
+    },
+    {
+      "description": "(deprecated) Parameters of an atom within a molecule.",
+      "kindStr": "type_abstract_document_content",
+      "name": "settings_atom_in_molecule",
+      "superNames": [
+        "section_molecule_type"
+      ]
+    },
+    {
+      "description": "(deprecated) Section describing a type of molecule in the system.",
+      "kindStr": "type_section",
+      "name": "section_molecule_type",
+      "superNames": [
+        "section_topology"
+      ]
+    },
+    {
+      "description": "(deprecated) Name of the molecule.",
+      "dtypeStr": "C",
+      "name": "molecule_type_name",
+      "shape": [],
+      "superNames": [
+        "section_molecule_type"
+      ]
+    },
+    {
+      "description": "(deprecated) Mapping from molecules to molecule types.",
+      "dtypeStr": "r",
+      "name": "molecule_to_molecule_type_map",
+      "referencedSections": [
+        "section_molecule_type"
+      ],
+      "shape": [
+        "number_of_topology_molecules"
+      ],
+      "superNames": [
+        "section_topology"
+      ]
+    },
+    {
+      "description": "(deprecated) Number of molecules in the system, as described by this topology.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_topology_molecules",
+      "shape": [],
+      "superNames": [
+        "section_topology"
+      ]
+    },
+    {
+      "description": "(deprecated) Number of atoms in this molecule.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_atoms_in_molecule",
+      "shape": [],
+      "superNames": [
+        "section_molecule_type"
+      ]
+    },
+    {
+      "description": "(deprecated) Section describing a constraint between atoms within a molecule.",
+      "kindStr": "type_section",
+      "name": "section_molecule_constraint",
+      "superNames": [
+        "section_molecule_type",
+        "settings_constraint"
       ]
     },
     {
@@ -1115,15 +1117,44 @@
       ]
     },
     {
-      "description": "(deprecated) List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_.",
+      "description": "(deprecated) List of the indexes involved in this constraint. The fist atom has index 1, the last index is number_of_atoms_in_molecule.",
       "dtypeStr": "i",
-      "name": "molecule_interaction_atoms",
+      "name": "molecule_constraint_atoms",
       "shape": [
-        "number_of_molecule_interactions",
-        "number_of_atoms_per_molecule_interaction"
+        "number_of_molecule_constraints",
+        "number_of_atoms_per_molecule_constraint"
       ],
       "superNames": [
-        "section_molecule_interaction"
+        "section_molecule_constraint"
+      ]
+    },
+    {
+      "description": "(deprecated) Number of constraints of this type.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_molecule_constraints",
+      "shape": [],
+      "superNames": [
+        "section_molecule_constraint"
+      ]
+    },
+    {
+      "description": "(deprecated) Number of atoms, in this molecule, involved in this constraint.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_atoms_per_molecule_constraint",
+      "shape": [],
+      "superNames": [
+        "section_molecule_constraint"
+      ]
+    },
+    {
+      "description": "(deprecated) Section describing a bonded interaction between atoms within a molecule.",
+      "kindStr": "type_section",
+      "name": "section_molecule_interaction",
+      "superNames": [
+        "section_molecule_type",
+        "settings_interaction"
       ]
     },
     {
@@ -1145,52 +1176,15 @@
       ]
     },
     {
-      "description": "(deprecated) Name of the molecule.",
-      "dtypeStr": "C",
-      "name": "molecule_type_name",
-      "shape": [],
-      "superNames": [
-        "section_molecule_type"
-      ]
-    },
-    {
-      "description": "(deprecated) Number of atoms in this molecule.",
+      "description": "(deprecated) List of the indexes involved in this bonded interaction within a molecule. The first atom has index 1, the last index is number_of_atoms_in_.",
       "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms_in_molecule",
-      "shape": [],
-      "superNames": [
-        "section_molecule_type"
-      ]
-    },
-    {
-      "description": "(deprecated) Number of atoms, in this molecule, involved in this constraint.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms_per_molecule_constraint",
-      "shape": [],
-      "superNames": [
-        "section_molecule_constraint"
-      ]
-    },
-    {
-      "description": "(deprecated) Number of atoms, in this molecule, involved in this interaction.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms_per_molecule_interaction",
-      "shape": [],
+      "name": "molecule_interaction_atoms",
+      "shape": [
+        "number_of_molecule_interactions",
+        "number_of_atoms_per_molecule_interaction"
+      ],
       "superNames": [
         "section_molecule_interaction"
-      ]
-    },
-    {
-      "description": "(deprecated) Number of constraints of this type.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_molecule_constraints",
-      "shape": [],
-      "superNames": [
-        "section_molecule_constraint"
       ]
     },
     {
@@ -1204,39 +1198,35 @@
       ]
     },
     {
-      "description": "(deprecated) Section describing a constraint between atoms within a molecule.",
-      "kindStr": "type_section",
-      "name": "section_molecule_constraint",
-      "superNames": [
-        "section_molecule_type",
-        "settings_constraint"
-      ]
-    },
-    {
-      "description": "(deprecated) Section describing a bonded interaction between atoms within a molecule.",
-      "kindStr": "type_section",
-      "name": "section_molecule_interaction",
-      "superNames": [
-        "section_molecule_type",
-        "settings_interaction"
-      ]
-    },
-    {
-      "description": "(deprecated) Parameters of an atom within a molecule.",
-      "kindStr": "type_abstract_document_content",
-      "name": "settings_atom_in_molecule",
-      "superNames": [
-        "section_molecule_type"
-      ]
-    },
-    {
-      "description": "Number of atoms in the system described by this topology.",
+      "description": "(deprecated) Number of atoms, in this molecule, involved in this interaction.",
       "dtypeStr": "i",
       "kindStr": "type_dimension",
-      "name": "number_of_topology_atoms",
+      "name": "number_of_atoms_per_molecule_interaction",
+      "shape": [],
+      "superNames": [
+        "section_molecule_interaction"
+      ]
+    },
+    {
+      "description": "(deprecated) A unique string idenfiying the force field defined in this section. Strategies to define it are discussed in the [topology\\_force\\_field\\_name](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/topology-force-field-name).",
+      "dtypeStr": "C",
+      "name": "topology_force_field_name",
       "shape": [],
       "superNames": [
         "section_topology"
+      ]
+    },
+    {
+      "description": "Reference to the topology used for this system; if not given, the trivial topology should be assumed.",
+      "dtypeStr": "r",
+      "name": "topology_ref",
+      "referencedSections": [
+        "section_topology"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_system"
       ]
     },
     {
@@ -1270,6 +1260,16 @@
       "name": "section_topology",
       "superNames": [
         "section_run"
+      ]
+    },
+    {
+      "description": "Number of atoms in the system described by this topology.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_topology_atoms",
+      "shape": [],
+      "superNames": [
+        "section_topology"
       ]
     },
     {
@@ -1368,86 +1368,6 @@
       ]
     },
     {
-      "description": "Section describing a constraint between arbitrary atoms.",
-      "kindStr": "type_section",
-      "name": "section_constraints",
-      "superNames": [
-        "section_run"
-      ]
-    },
-    {
-      "description": "Section describing a constraint between arbitrary atoms.",
-      "kindStr": "type_section",
-      "name": "section_constraint",
-      "superNames": [
-        "section_constraints",
-        "settings_constraint"
-      ]
-    },
-    {
-      "description": "Short and unique name for this constraint type. Valid names are described in the [constraint\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/constraint-kind).",
-      "dtypeStr": "C",
-      "name": "constraint_kind",
-      "shape": [],
-      "superNames": [
-        "section_constraint"
-      ]
-    },
-    {
-      "description": "Explicit constraint parameters for this kind of constraint (depending on the constraint type, some might be given implicitly through other means).",
-      "dtypeStr": "D",
-      "name": "constraint_parameters",
-      "shape": [],
-      "superNames": [
-        "section_constraint"
-      ]
-    },
-    {
-      "description": "Reference to the topological group of atoms which is used to define contraint on it.",
-      "dtypeStr": "r",
-      "name": "constraint_to_topology_group_ref",
-      "referencedSections": [
-        "section_group"
-      ],
-      "repeats": false,
-      "shape": [],
-      "superNames": [
-        "section_constraint"
-      ]
-    },
-    {
-      "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last number_of_topology_atoms.",
-      "dtypeStr": "i",
-      "name": "constraint_atoms",
-      "shape": [
-        "number_of_constraints",
-        "number_of_atoms_per_constraint"
-      ],
-      "superNames": [
-        "section_constraint"
-      ]
-    },
-    {
-      "description": "Number of constraints of this type.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_constraints",
-      "shape": [],
-      "superNames": [
-        "section_constraint"
-      ]
-    },
-    {
-      "description": "Number of atoms involved in this constraint.",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "number_of_atoms_per_constraint",
-      "shape": [],
-      "superNames": [
-        "section_constraint"
-      ]
-    },
-    {
       "derived": true,
       "description": "Species of the atom (normally the atomic number Z, 0 or negative for unidentifed species or particles that are not atoms.",
       "dtypeStr": "i",
@@ -1528,6 +1448,86 @@
       "shape": [],
       "superNames": [
         "section_interaction"
+      ]
+    },
+    {
+      "description": "Section describing a constraint between arbitrary atoms.",
+      "kindStr": "type_section",
+      "name": "section_constraints",
+      "superNames": [
+        "section_run"
+      ]
+    },
+    {
+      "description": "Section describing a constraint between arbitrary atoms.",
+      "kindStr": "type_section",
+      "name": "section_constraint",
+      "superNames": [
+        "section_constraints",
+        "settings_constraint"
+      ]
+    },
+    {
+      "description": "Short and unique name for this constraint type. Valid names are described in the [constraint\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/constraint-kind).",
+      "dtypeStr": "C",
+      "name": "constraint_kind",
+      "shape": [],
+      "superNames": [
+        "section_constraint"
+      ]
+    },
+    {
+      "description": "Explicit constraint parameters for this kind of constraint (depending on the constraint type, some might be given implicitly through other means).",
+      "dtypeStr": "D",
+      "name": "constraint_parameters",
+      "shape": [],
+      "superNames": [
+        "section_constraint"
+      ]
+    },
+    {
+      "description": "Reference to the topological group of atoms which is used to define contraint on it.",
+      "dtypeStr": "r",
+      "name": "constraint_to_topology_group_ref",
+      "referencedSections": [
+        "section_group"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_constraint"
+      ]
+    },
+    {
+      "description": "List of the indexes involved in this constraint. The fist atom has index 1, the last number_of_topology_atoms.",
+      "dtypeStr": "i",
+      "name": "constraint_atoms",
+      "shape": [
+        "number_of_constraints",
+        "number_of_atoms_per_constraint"
+      ],
+      "superNames": [
+        "section_constraint"
+      ]
+    },
+    {
+      "description": "Number of constraints of this type.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_constraints",
+      "shape": [],
+      "superNames": [
+        "section_constraint"
+      ]
+    },
+    {
+      "description": "Number of atoms involved in this constraint.",
+      "dtypeStr": "i",
+      "kindStr": "type_dimension",
+      "name": "number_of_atoms_per_constraint",
+      "shape": [],
+      "superNames": [
+        "section_constraint"
       ]
     }
   ]
