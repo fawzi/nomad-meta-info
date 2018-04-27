@@ -4806,18 +4806,6 @@
       ]
     },
     {
-      "description": "(deprecated) Reference to the method used for the calculation in section_single_configuration_calculation.",
-      "dtypeStr": "r",
-      "name": "single_configuration_to_calculation_method_ref",
-      "referencedSections": [
-        "section_method"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    },
-    {
       "description": "(deprecated) Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in section_single_configuration_calculation and this metadata establishes the link for each frame.",
       "dtypeStr": "r",
       "name": "frame_sequence_local_frames_ref",
@@ -4829,6 +4817,30 @@
       ],
       "superNames": [
         "section_frame_sequence"
+      ]
+    },
+    {
+      "description": "(deprecated) Reference from the present section_frame_sequence to the section_sampling_method, that defines the parameters used in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+      "dtypeStr": "r",
+      "name": "frame_sequence_to_sampling_ref",
+      "referencedSections": [
+        "section_sampling_method"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    },
+    {
+      "description": "(deprecated) Reference to the method used for the calculation in section_single_configuration_calculation.",
+      "dtypeStr": "r",
+      "name": "single_configuration_to_calculation_method_ref",
+      "referencedSections": [
+        "section_method"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
       ]
     },
     {
@@ -4903,18 +4915,6 @@
       ]
     },
     {
-      "description": "(deprecated) Reference from the present section_frame_sequence to the section_sampling_method, that defines the parameters used in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
-      "dtypeStr": "r",
-      "name": "frame_sequence_to_sampling_ref",
-      "referencedSections": [
-        "section_sampling_method"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    },
-    {
       "description": "(deprecated) Section collecting some user-defined quantities evaluated along a sequence of frame.",
       "kindStr": "type_section",
       "name": "section_frame_sequence_user_quantity",
@@ -4944,7 +4944,6 @@
       ]
     },
     {
-      "derived": true,
       "description": "(deprecated) Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
       "dtypeStr": "f",
       "name": "frame_sequence_user_quantity_stats",
@@ -4986,144 +4985,6 @@
       "superNames": [
         "section_frame_sequence_user_quantity"
       ]
-    },
-    {
-      "description": "Type of continuation that has been performed from the previous sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), upon restart.",
-      "dtypeStr": "C",
-      "name": "frame_sequence_continuation_kind",
-      "referencedSections": [
-        "section_frame_sequence"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ],
-      "values": {
-        "all": "Restart everything, including, e.g., thermostats, etc.",
-        "pos": "Position of atom and cell only",
-        "pos_vel": "Restart atom positions, cells and velocities"
-      }
-    },
-    {
-      "description": "If the energy, forces, and other quantities for the frames (a frame is one section_single_configuration_calculation) in  section_frame_sequence are obtained by calling a different code than the code that drives the sequence (e.g., a wrapper that drives a molecular dynamics, Monte Carlo, geometry optimization and calls an electronic-structure code for energy and forces for each configuration), this metadata holds the reference to where the section_single_configuration_calculation for each frame are located. The format for this reference is described in the [frame_sequence_external_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url).",
-      "dtypeStr": "C",
-      "name": "frame_sequence_external_url",
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    },
-    {
-      "description": "Time along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Time start is arbitrary, but when a sequence is a continuation of another time should be continued too.",
-      "dtypeStr": "f",
-      "name": "frame_sequence_time",
-      "shape": [
-        "number_of_frames_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ],
-      "units": "s"
-    },
-    {
-      "description": "Contains a reference to the previous sequence. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section. If not given, a start from an initial configuration is assumed.",
-      "dtypeStr": "r",
-      "name": "previous_sequence_ref",
-      "referencedSections": [
-        "section_frame_sequence"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    },
-    {
-      "description": "Reference to the method used for the calculation in section_single_configuration_calculation.",
-      "dtypeStr": "r",
-      "name": "single_configuration_calculation_to_method_ref",
-      "referencedSections": [
-        "section_method"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    },
-    {
-      "description": "Reference from the present section_frame_sequence to the section_sampling_method, that defines the parameters used in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
-      "dtypeStr": "r",
-      "name": "frame_sequence_to_sampling_method_ref",
-      "referencedSections": [
-        "section_sampling_method"
-      ],
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    },
-    {
-      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in section_single_configuration_calculation and this metadata establishes the link for each frame.",
-      "dtypeStr": "r",
-      "name": "frame_sequence_to_frames_ref",
-      "referencedSections": [
-        "section_single_configuration_calculation"
-      ],
-      "shape": [
-        "number_of_frames_in_sequence"
-      ],
-      "superNames": [
-        "section_frame_sequence"
-      ]
-    },
-    {
-      "description": "The values of the kinetic energy along this frame. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_kinetic_energy_frames.",
-      "dtypeStr": "f",
-      "name": "kinetic_energy",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    },
-    {
-      "description": "The value of the potential energy along this frame. This is equal to energy_total of the corresponding section_single_configuration_calculation and repeated here in a summary array for easier access. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_potential_energy_frames.",
-      "dtypeStr": "f",
-      "name": "potential_energy",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ],
-      "units": "J"
-    },
-    {
-      "description": "The values of the pressure (one third of the trace of the stress tensor) along this frame. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_pressure_frames.",
-      "dtypeStr": "f",
-      "name": "instant_pressure",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ],
-      "units": "Pa"
-    },
-    {
-      "description": "The values of the instantaneous temperature (a quantity, proportional to frame_sequence_kinetic_energy, whose ensemble average equals the thermodynamic temperature) along this frame. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_temperature_frames.",
-      "dtypeStr": "f",
-      "name": "instant_temperature",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation"
-      ],
-      "units": "K"
-    },
-    {
-      "description": "The values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_conserved_quantity_frames.",
-      "dtypeStr": "f",
-      "name": "conserved_quantity",
-      "shape": [],
-      "superNames": [
-        "section_frame_sequence"
-      ],
-      "units": "J"
     },
     {
       "derived": true,
@@ -5304,6 +5165,144 @@
       "superNames": [
         "section_frame_sequence"
       ]
+    },
+    {
+      "description": "Time along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Time start is arbitrary, but when a sequence is a continuation of another time should be continued too.",
+      "dtypeStr": "f",
+      "name": "frame_sequence_time",
+      "shape": [
+        "number_of_frames_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ],
+      "units": "s"
+    },
+    {
+      "description": "Contains a reference to the previous sequence. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section. If not given, a start from an initial configuration is assumed.",
+      "dtypeStr": "r",
+      "name": "previous_sequence_ref",
+      "referencedSections": [
+        "section_frame_sequence"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    },
+    {
+      "description": "If the energy, forces, and other quantities for the frames (a frame is one section_single_configuration_calculation) in  section_frame_sequence are obtained by calling a different code than the code that drives the sequence (e.g., a wrapper that drives a molecular dynamics, Monte Carlo, geometry optimization and calls an electronic-structure code for energy and forces for each configuration), this metadata holds the reference to where the section_single_configuration_calculation for each frame are located. The format for this reference is described in the [frame_sequence_external_url wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/frame-sequence-external-url).",
+      "dtypeStr": "C",
+      "name": "frame_sequence_external_url",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    },
+    {
+      "description": "Type of continuation that has been performed from the previous sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), upon restart.",
+      "dtypeStr": "C",
+      "name": "frame_sequence_continuation_kind",
+      "referencedSections": [
+        "section_frame_sequence"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ],
+      "values": {
+        "all": "Restart everything, including, e.g., thermostats, etc.",
+        "pos": "Position of atom and cell only",
+        "pos_vel": "Restart atom positions, cells and velocities"
+      }
+    },
+    {
+      "description": "Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in section_single_configuration_calculation and this metadata establishes the link for each frame.",
+      "dtypeStr": "r",
+      "name": "frame_sequence_to_frames_ref",
+      "referencedSections": [
+        "section_single_configuration_calculation"
+      ],
+      "shape": [
+        "number_of_frames_in_sequence"
+      ],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    },
+    {
+      "description": "Reference from the present section_frame_sequence to the section_sampling_method, that defines the parameters used in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+      "dtypeStr": "r",
+      "name": "frame_sequence_to_sampling_method_ref",
+      "referencedSections": [
+        "section_sampling_method"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ]
+    },
+    {
+      "description": "Reference to the method used for the calculation in section_single_configuration_calculation.",
+      "dtypeStr": "r",
+      "name": "single_configuration_calculation_to_method_ref",
+      "referencedSections": [
+        "section_method"
+      ],
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    },
+    {
+      "description": "The values of the kinetic energy along this frame. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_kinetic_energy_frames.",
+      "dtypeStr": "f",
+      "name": "kinetic_energy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    },
+    {
+      "description": "The value of the potential energy along this frame. This is equal to energy_total of the corresponding section_single_configuration_calculation and repeated here in a summary array for easier access. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_potential_energy_frames.",
+      "dtypeStr": "f",
+      "name": "potential_energy",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    },
+    {
+      "description": "The values of the pressure (one third of the trace of the stress tensor) along this frame. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_pressure_frames.",
+      "dtypeStr": "f",
+      "name": "instant_pressure",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "Pa"
+    },
+    {
+      "description": "The values of the instantaneous temperature (a quantity, proportional to frame_sequence_kinetic_energy, whose ensemble average equals the thermodynamic temperature) along this frame. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_temperature_frames.",
+      "dtypeStr": "f",
+      "name": "instant_temperature",
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "K"
+    },
+    {
+      "description": "The values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_conserved_quantity_frames.",
+      "dtypeStr": "f",
+      "name": "conserved_quantity",
+      "shape": [],
+      "superNames": [
+        "section_frame_sequence"
+      ],
+      "units": "J"
     },
     {
       "description": "Section collecting some user-defined quantities evaluated along a sequence of frame.",
