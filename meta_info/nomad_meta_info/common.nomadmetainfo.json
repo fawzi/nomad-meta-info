@@ -1529,6 +1529,19 @@
       "superNames": [
         "section_constraint"
       ]
+    },
+    {
+      "description": "Reference to the constraints used for this system.",
+      "dtypeStr": "r",
+      "name": "single_configuration_calculation_to_constraints_ref",
+      "referencedSections": [
+        "section_constraints"
+      ],
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
     }
   ]
 }
