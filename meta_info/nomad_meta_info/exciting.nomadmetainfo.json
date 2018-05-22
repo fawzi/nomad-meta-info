@@ -569,7 +569,25 @@
         "section_single_configuration_calculation"
       ],
       "units": "J"
-    }, {
+    },{
+      "description": "dummy metadata for debuging purposes",
+      "dtypeStr": "i",
+      "name": "x_exciting_dummy",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },{
+      "description": "dummy metadata for debuging purposes",
+      "dtypeStr": "C",
+      "name": "x_exciting_dummy2",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_run"
+      ]
+    },  {
       "description": "labels of atom",
       "dtypeStr": "C",
       "name": "x_exciting_geometry_atom_labels",
@@ -615,6 +633,34 @@
         "x_exciting_section_atoms_group"
       ]
     },  {
+      "description": "Labels of the atoms in the clathrates.",
+      "dtypeStr": "C",
+      "name": "x_exciting_clathrates_atom_labels",
+      "shape": [
+        "number_of_atoms"
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "Ordered list of the atoms coordinates in the clathrates.",
+      "dtypeStr": "f",
+      "name": "x_exciting_clathrates_atom_coordinates",
+      "shape": [
+        "number_of_atoms",3
+      ],
+      "superNames": [
+        "section_system"
+      ]
+    },  {
+      "description": "It indicates whether the system is a clathrate.",
+      "dtypeStr": "b",
+      "name": "x_exciting_clathrates",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    },   {
       "description": "x component of the force acting on the atom",
       "dtypeStr": "f",
       "name": "x_exciting_geometry_atom_forces_x",
@@ -645,6 +691,14 @@
       ],
       "units": "N"
     },{
+      "description": "If the volume optimization is performed.",
+      "dtypeStr": "b",
+      "name": "x_exciting_volume_optimization",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    },  {
       "description": "x component of atomic position",
       "dtypeStr": "f",
       "name": "x_exciting_geometry_atom_positions_x",
