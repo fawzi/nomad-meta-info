@@ -1,5 +1,5 @@
 {
-  "type": "nomad_meta_info 2.0",
+  "type": "meta_dictionary 2.0.0",
   "metadict_description": ["dictionary describing the meta info itself"],
   "metadict_version": "2.0.0",
   "metadict_require": [],
@@ -19,6 +19,25 @@
         "meta_parent_section": "meta_dictionary",
         "meta_description": [
           "A string describing the group of Meta Info contained in the dictionary."
+        ]
+      },
+      {
+        "meta_name": "metadict_name",
+        "meta_type": "type-value",
+        "meta_data_type": "string",
+        "meta_parent_section": "meta_dictionary",
+        "meta_value_validate": "[a-zA-Z0-9_]+",
+        "meta_description": [
+          "The name of the dictionary."
+        ]
+      },
+      {
+        "meta_name": "meta_value_validate",
+        "meta_type": "type-value",
+        "meta_data_type": "string",
+        "meta_parent_section": "meta_info_entry",
+        "meta_description": [
+          "Either a regexp or ')uri' or ')uri-reference'."
         ]
       },
       {
@@ -391,13 +410,24 @@
           "That value should uniquely and globally identifies every section value, even if one does not know the type of the current section. In NOMAD we always used the a gid for this purpose."
         ]
       }, {
-        "meta_name": "meta_contains",
+        "meta_name": "meta_inject_if_section_regexp",
         "meta_type": "type-value",
         "meta_data_type": "string",
         "meta_repeats": true,
         "meta_parent_section": "meta_info_entry",
         "meta_description": [
-          "If meta_type = type-section and meta_context_identifier is defined (the section is a context) then this can be used to list top level sections contained in this context. This allows the reuse of the same top level sections in several contexts."
+          "A regular expression (or meta name) that the sections this is injected in need to satisfy. Can be defined only in top level sections.\n",
+          "Together with meta_inject_if_abstract_type it can be used to define the sections in which all the values and sections contained in this section are added (injected).\n",
+          "If empty this is injected in *no* section."
+        ]
+      }, {
+        "meta_name": "meta_inject_if_abstract_type",
+        "meta_type": "type-value",
+        "meta_data_type": "string",
+        "meta_repeats": true,
+        "meta_parent_section": "meta_info_entry",
+        "meta_description": [
+          "Either the name of an abstract type that is required by all sections this is injected in, or '!' and the name of an abstract type that should not be parent of any of the sections that this section should be injected in. This further refines the selection done by meta_inject_if_section_regexp"
         ]
       }, {
         "meta_name": "metadict_dependency_gid",
