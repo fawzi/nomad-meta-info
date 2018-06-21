@@ -35,6 +35,163 @@
       "superNames": [
         "section_method" ]
     }, {
+      "description": "wien2k unit cell parameters - a",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_unit_cell_param_a",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "wien2k unit cell parameters - b",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_unit_cell_param_b",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "wien2k unit cell parameters - c",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_unit_cell_param_c",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ],
+      "units": "m"
+    }, {
+      "description": "wien2k unit cell parameters - alfa",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_angle_between_unit_axis_alfa",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "wien2k unit cell parameters - beta",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_angle_between_unit_axis_beta",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "wien2k unit cell parameters - gamma",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_angle_between_unit_axis_gamma",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "section containing a class of wien2k equivalent atoms",
+      "kindStr": "type_section",
+      "name": "x_elastic_wien2k_section_equiv_atoms",
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "wien2k: name of atom, labelling non-equvalent atoms",
+      "dtypeStr": "C",
+      "name": "x_elastic_wien2k_atom_name",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "wien2k: position of atom x in internal units",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_atom_pos_x",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ],
+      "units": "m"
+    }, {
+      "description": "wien2k: position of atom y in internal units",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_atom_pos_y",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ],
+      "units": "m"
+    }, {
+      "description": "wien2k: position of atom z  in internal units",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_atom_pos_z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ],
+      "units": "m"
+    }, {
+      "description": "wien2k: user given name for this system given in the struct file",
+      "dtypeStr": "C",
+      "name": "x_elastic_wien2k_system_nameIn",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "wien2k: number of inequivalent atoms in the unit cell",
+      "dtypeStr": "i",
+      "name": "x_elastic_wien2k_nonequiv_atoms",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "wien2k: relativistic or nonrelativistic calculation mode",
+      "dtypeStr": "C",
+      "name": "x_elastic_wien2k_calc_mode",
+      "shape": [],
+      "superNames": [
+        "section_system"
+      ]
+    }, {
+      "description": "wien2k: number of radial mesh points",
+      "dtypeStr": "i",
+      "name": "x_elastic_wien2k_NPT",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "wien2k: first radial mesh point",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_R0",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "wien2k: atomic sphere radius (muffin-tin radius)",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_RMT",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ]
+    }, {
+      "description": "wien2k: atomic number Z",
+      "dtypeStr": "f",
+      "name": "x_elastic_wien2k_atomic_number_Z",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "x_elastic_wien2k_section_equiv_atoms"
+      ]
+    }, {
       "description": "Values of the energy(units:J)/d2E(units:Pa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
       "dtypeStr": "f",
       "name": "x_elastic_strain_diagram_values",
