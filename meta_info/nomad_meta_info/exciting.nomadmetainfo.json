@@ -1211,8 +1211,7 @@
       "name": "x_exciting_rgkmax",
       "superNames": [
         "section_system"
-      ],
-      "units": "m"
+      ]
     }, {
       "description": "a group of atoms of the same type",
       "kindStr": "type_section",
@@ -1408,6 +1407,298 @@
       "superNames": [
         "x_exciting_section_xc"
       ]
+    }, {
+      "description": "String identifying the used electronic structure method. Allowed values are BSE and TDDFT. Temporary metadata to be canceled when BSE and TDDFT will be added to public metadata electronic_structure_method",
+      "dtypeStr": "C",
+      "name": "x_exciting_electronic_structure_method",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "settings_XC"
+      ]
+    }, {
+      "description": "Number of empty states used in the calculation of the response function.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_number_of_empty_states",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Number of empty states used in the calculation of the screening.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_screening_number_of_empty_states",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Angular momentum cut-off for the APW functions.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_lmaxapw",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Type of screening used in the calculations. POssible values are full, diag, noinvdiag, longrange.",
+      "dtypeStr": "C",
+      "name": "x_exciting_xs_screening_type",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Lorentzian broadening applied to the spectra.",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_broadening",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Exchange-correlation functional of the ground-state calculation. See XC_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional",
+      "dtypeStr": "C",
+      "name": "x_exciting_xs_starting_point",
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "q-point mesh for the excited states calculation.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_ngridq",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "k-point mesh for the excited states calculation.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_ngridk",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "k-point mesh for the calculation of the screening.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_screening_ngridk",
+      "shape": [
+        3
+      ],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Smallest muffin-tin radius times gkmax.",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_rgkmax",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Smallest muffin-tin radius times gkmax.",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_screening_rgkmax",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "k-point set offset",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_vkloff",
+      "repeats": false,
+      "shape": [3],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "k-point set offset for the screening",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_screening_vkloff",
+      "repeats": false,
+      "shape": [3],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Type of excited states calculation, BSE or TDDFT",
+      "dtypeStr": "C",
+      "name": "x_exciting_xs_xstype",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "If the anti-resonant part of the Hamiltonian is used for the BSE spectrum",
+      "dtypeStr": "B",
+      "name": "x_exciting_xs_bse_antiresonant",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "which parts of the BSE Hamiltonian is considered. Possible values are IP, RPA, singlet, triplet.",
+      "dtypeStr": "C",
+      "name": "x_exciting_xs_bse_type",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Angular momentum cutoff of the spherical harmonics expansion of the dielectric matrix.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_angular_momentum_cutoff",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Smallest muffin-tin radius times gkmax.",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_rgkmax",
+      "repeats": true,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "if the body of the screened Coulomb interaction is averaged (q=0).",
+      "dtypeStr": "B",
+      "name": "x_exciting_xs_bse_sciavbd",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "if the body of the screened Coulomb interaction is averaged (q!=0).",
+      "dtypeStr": "B",
+      "name": "x_exciting_xs_bse_sciavqbd",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "if the head of the screened Coulomb interaction is averaged (q=0).",
+      "dtypeStr": "B",
+      "name": "x_exciting_xs_bse_sciavqhd",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "if the wings of the screened Coulomb interaction is averaged (q=0).",
+      "dtypeStr": "B",
+      "name": "x_exciting_xs_bse_sciavqwg",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "how the screened Coulomb interaction matrix is averaged",
+      "dtypeStr": "C",
+      "name": "x_exciting_xs_bse_sciavtype",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "X-ray absorption spectrum",
+      "dtypeStr": "B",
+      "name": "x_exciting_xs_bse_xas",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Atom number for which the XAS is calculated.",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_xasatom",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Species number for which the XAS is calculated..",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_xasspecies",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Defines the initial states of the XAS calculation.",
+      "dtypeStr": "C",
+      "name": "x_exciting_xs_bse_xasedge",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Range of bands included for the BSE calculation. The first pair of numbers corresponds to the band index for local orbitals and valence states (counted from the lowest eigenenergy), the second pair corresponds to the band index of the conduction states (counted from the Fermi level).",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_number_of_bands",
+      "repeats": false,
+      "shape": [4],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Range of bands included for the BSE calculation. The pair corresponds to the band index of the conduction states (counted from the Fermi level).",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_xas_number_of_bands",
+      "repeats": false,
+      "shape": [2],
+      "superNames": [
+        "section_method"
+      ]
+    }, {
+      "description": "Scissor operator",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_scissor",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "J"
+    }, {
+      "description": "G vector cutoff for the plane-waves matrix elements.",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_gqmax",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_method"
+      ],
+      "units": "m_1"
     }, {
       "description": "XC potential",
       "dtypeStr": "f",
