@@ -1572,6 +1572,34 @@
         "section_method"
       ]
     }, {
+      "description": "Exciton energies",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_exciton_energies",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Number of independent components in the dielectric tensor",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_number_of_components",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Total number of excitons",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_number_of_excitons",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Smallest muffin-tin radius times gkmax.",
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_rgkmax",
