@@ -192,7 +192,7 @@
         "x_elastic_wien2k_section_equiv_atoms"
       ]
     }, {
-      "description": "Values of the energy(units:J)/d2E(units:Pa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
+      "description": "Values of the energy(units:J)/d2e(units:Pa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
       "dtypeStr": "f",
       "name": "x_elastic_strain_diagram_values",
       "shape": [
@@ -209,9 +209,9 @@
       "superNames": [
         "x_elastic_section_fitting_parameters" ]
     }, {
-      "description": "polinomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
+      "description": "polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
       "dtypeStr": "i",
-      "name": "x_elastic_fitting_parameters_polinomial_order",
+      "name": "x_elastic_fitting_parameters_polynomial_order",
       "shape": ["x_elastic_number_of_deformations"],
       "superNames": [
         "x_elastic_section_fitting_parameters" ]
@@ -233,7 +233,7 @@
       "superNames": [
         "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "Kind of strain diagram. Possible values are: energy; Lagrangian-stress; Physical-stress; cross-validation (cross-validation error); d2E (second derivative of the energy with respect to the strain); dtn (first derivative of the stress with respect to the strain)",
+      "description": "Kind of strain diagram. Possible values are: energy; Lagrangian-stress; Physical-stress; cross-validation (cross-validation error); d2e (second derivative of the energy with respect to the strain); dtn (first derivative of the stress with respect to the strain)",
       "dtypeStr": "C",
       "name": "x_elastic_strain_diagram_type",
       "shape": [],
@@ -247,9 +247,9 @@
       "superNames": [
         "x_elastic_section_strain_diagrams" ]
     }, {
-      "description": "Order of the polinomial fit",
+      "description": "Order of the polynomial fit",
       "dtypeStr": "i",
-      "name": "x_elastic_strain_diagram_polinomial_fit_order",
+      "name": "x_elastic_strain_diagram_polynomial_fit_order",
       "shape": [],
       "superNames": [
         "x_elastic_section_strain_diagrams" ]
