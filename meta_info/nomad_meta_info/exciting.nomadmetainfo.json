@@ -1582,6 +1582,118 @@
       ],
       "units": "J"
     }, {
+      "description": "Energies of the dielectric function epsilon",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_epsilon_energies",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Real part of the dielectric function epsilon",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_epsilon_re",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Imaginary part of the dielectric function epsilon",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_epsilon_im",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Energies of the conductivity function sigma",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_sigma_energies",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Real part of the conductivity function sigma",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_sigma_re",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Energies of the loss function",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_loss_energies",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
+      "description": "Loss function",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_loss",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Imaginary part of the conductivity function sigma",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_sigma_im",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Exciton oscillator strength",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_exciton_oscillator_strength",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Real part of the transition amplitude",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_exciton_amplitude_re",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Imaginary part of the transition amplitude",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_exciton_amplitude_im",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
+      "description": "Exciton binding energies",
+      "dtypeStr": "f",
+      "name": "x_exciting_xs_bse_exciton_binding_energies",
+      "repeats": false,
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ],
+      "units": "J"
+    }, {
       "description": "Number of independent components in the dielectric tensor",
       "dtypeStr": "i",
       "name": "x_exciting_xs_bse_number_of_components",
