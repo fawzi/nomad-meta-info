@@ -1546,7 +1546,7 @@
       ]
     }, {
       "description": "If the anti-resonant part of the Hamiltonian is used for the BSE spectrum",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_antiresonant",
       "repeats": false,
       "shape": [],
@@ -1586,7 +1586,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_epsilon_energies",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ],
@@ -1596,7 +1596,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_epsilon_re",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1605,7 +1605,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_epsilon_im",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1614,7 +1614,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_sigma_energies",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ],
@@ -1624,7 +1624,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_sigma_re",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1633,7 +1633,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_loss_energies",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ],
@@ -1643,7 +1643,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_loss",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1652,7 +1652,7 @@
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_sigma_im",
       "repeats": false,
-      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_excitons"],
+      "shape": ["x_exciting_xs_bse_number_of_components","x_exciting_xs_bse_number_of_energy_points"],
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -1712,6 +1712,15 @@
         "section_single_configuration_calculation"
       ]
     }, {
+      "description": "Energy mesh for the dielectric function, conductivity and loss function",
+      "dtypeStr": "i",
+      "name": "x_exciting_xs_bse_number_of_energy_points",
+      "repeats": false,
+      "shape": [],
+      "superNames": [
+        "section_single_configuration_calculation"
+      ]
+    }, {
       "description": "Smallest muffin-tin radius times gkmax.",
       "dtypeStr": "f",
       "name": "x_exciting_xs_bse_rgkmax",
@@ -1722,7 +1731,7 @@
       ]
     }, {
       "description": "if the body of the screened Coulomb interaction is averaged (q=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavbd",
       "repeats": false,
       "shape": [],
@@ -1731,7 +1740,7 @@
       ]
     }, {
       "description": "if the body of the screened Coulomb interaction is averaged (q!=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavqbd",
       "repeats": false,
       "shape": [],
@@ -1740,7 +1749,7 @@
       ]
     }, {
       "description": "if the head of the screened Coulomb interaction is averaged (q=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavqhd",
       "repeats": false,
       "shape": [],
@@ -1749,7 +1758,7 @@
       ]
     }, {
       "description": "if the wings of the screened Coulomb interaction is averaged (q=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavqwg",
       "repeats": false,
       "shape": [],
@@ -1767,7 +1776,7 @@
       ]
     }, {
       "description": "X-ray absorption spectrum",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_xas",
       "repeats": false,
       "shape": [],
