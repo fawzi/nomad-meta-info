@@ -3218,7 +3218,7 @@
       ]
     },
     {
-      "description": "Section_springer_classsification contains a classification tag of a material according to Springer Materials",
+      "description": "section_springer_classification contains a classification tag of a material according to Springer Materials",
       "kindStr": "type_section",
       "name": "section_springer_classification",
       "superNames": [
@@ -4843,6 +4843,7 @@
     {
       "description": "(deprecated) Array containing the values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_conserved_quantity_frames.",
       "dtypeStr": "f",
+      "meta_deprecated": true,
       "name": "frame_sequence_conserved_quantity",
       "shape": [
         "number_of_conserved_quantity_evaluations_in_sequence"
