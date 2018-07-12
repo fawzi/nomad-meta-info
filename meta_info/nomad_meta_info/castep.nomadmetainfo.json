@@ -261,7 +261,7 @@
       "name": "x_castep_frame_time",
       "shape": [],
       "superNames": [
-       "x_castep_section_SCF_iteration_frame"
+       "x_castep_section_scf_iteration_frame"
       ]
     }, {
       "description": "CASTEP_store_t_md_frame",
@@ -492,7 +492,7 @@
     }, {
        "description": "Phonon DFPT solver method",
       "dtypeStr": "C",
-      "name": "x_castep_DFPT_solver_method",
+      "name": "x_castep_dfpt_solver_method",
       "shape": [],
       "superNames": [
         "x_castep_section_phonons"
@@ -1362,18 +1362,18 @@
     }, {
       "description": "energy_frame_iterations",
       "dtypeStr": "C",
-      "name": "x_castep_SCF_frame_energy",
+      "name": "x_castep_scf_frame_energy",
       "shape": [],
       "superNames": [
-        "x_castep_section_SCF_iteration_frame"
+        "x_castep_section_scf_iteration_frame"
       ]        
      }, {
       "description": "energy_frame_iterations_gain",
       "dtypeStr": "C",
-      "name": "x_castep_SCF_frame_energy_gain",
+      "name": "x_castep_scf_frame_energy_gain",
       "shape": [],
       "superNames": [
-        "x_castep_section_SCF_iteration_frame"
+        "x_castep_section_scf_iteration_frame"
       ]        
     }, {
       "description": "energy_frame_wall_end_time",
@@ -1381,7 +1381,7 @@
       "name": "x_castep_frame_time_scf_iteration_wall_end",
       "shape": [],
       "superNames": [
-        "x_castep_section_SCF_iteration_frame"
+        "x_castep_section_scf_iteration_frame"
       ]        
     }, {
       "description": "energy_free",
@@ -1389,15 +1389,15 @@
       "name": "x_castep_frame_energy_free",
       "shape": [],
       "superNames": [
-        "x_castep_section_SCF_iteration_frame"
+        "x_castep_section_scf_iteration_frame"
       ]      
     }, {
       "description": "energy_free_corrected_for_finite_basis",
       "dtypeStr": "f",
-      "name": "x_castep_frame_energy_total_T0",
+      "name": "x_castep_frame_energy_total_t0",
       "shape": [],
       "superNames": [
-        "x_castep_section_SCF_iteration_frame"
+        "x_castep_section_scf_iteration_frame"
       ]          
     }, {
       "description": "density_mixing_scheme",
@@ -1530,7 +1530,7 @@
     }, {
       "description": "SCF_ts_energy T0 free",
       "dtypeStr": "f",
-      "name": "x_castep_scf_ts_T0",
+      "name": "x_castep_scf_ts_t0",
       "shape": [],
       "superNames": [
         "x_castep_section_ts_scf"
@@ -1599,7 +1599,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
     }, {
       "description": "dE/atom",
@@ -1608,7 +1608,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
     }, {
       "description": "dfmax/atom",
@@ -1617,7 +1617,7 @@
       "shape": [],
       "repeats": true,
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
     }, {
       "description": "structure energy correction",
@@ -1625,15 +1625,15 @@
       "name": "x_castep_structure_energy_corr",
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
     }, {
       "description": "PBC image interaction corr.",
       "dtypeStr": "f",
-      "name": "x_castep_PBC_image_inter_corr",
+      "name": "x_castep_pbc_image_inter_corr",
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
     }, {
       "description": "total energy correction",
@@ -1641,7 +1641,7 @@
       "name": "x_castep_total_energy_correction",
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
     }, {
       "description": "correction F max ev/A",
@@ -1649,7 +1649,7 @@
       "name": "x_castep_total_fmax_correction",
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]  
     }, {
       "description": "shell",
@@ -1658,7 +1658,7 @@
       "shape": [],
       "repeats": true,
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ]   
    
     }, {
@@ -1667,15 +1667,15 @@
       "name": "x_castep_total_dispersion_corrected_free_energy",
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ] 
     }, {
       "description": "dispersion corrected zero point",
       "dtypeStr": "f",
-      "name": "x_castep_disp_corrected_energy_total_T0",
+      "name": "x_castep_disp_corrected_energy_total_t0",
       "shape": [],
       "superNames": [
-        "x_castep_section_DFT_SEDC"
+        "x_castep_section_dft_sedc"
       ] 
     }, {
       "description": "-",
@@ -1820,7 +1820,6 @@
       ]
     }, {
       "description": "-",
-      "dtypeStr": "C",
       "kindStr": "type_section",
       "name": "x_castep_section_k_points_1",
       "shape": [],
@@ -1852,7 +1851,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_castep_section_SCF_iteration_frame",
+      "name": "x_castep_section_scf_iteration_frame",
       "superNames": [
         "section_run"
       ]
@@ -1966,14 +1965,14 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_castep_section_DFT_SEDC",
+      "name": "x_castep_section_dft_sedc",
       "superNames": [
         "section_single_configuration_calculation"
       ]  
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_castep_section_van_der_Waals_parameters",
+      "name": "x_castep_section_van_der_waals_parameters",
       "superNames": [
         "section_run"
       ]
@@ -2218,7 +2217,7 @@
       "name": "x_castep_disp_method_name",
       "shape": [],
       "superNames": [
-        "x_castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_waals_parameters"
       ]
     }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
@@ -2233,42 +2232,42 @@
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
-      "name": "x_castep_Parameter_d",
+      "name": "x_castep_parameter_d",
       "shape": [],
       "superNames": [
-        "x_castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method OBS",
       "dtypeStr": "f",
-      "name": "x_castep_Parameter_LAMBDA",
+      "name": "x_castep_parameter_lambda",
       "shape": [],
       "superNames": [
-        "x_castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method OBS",
       "dtypeStr": "f",
-      "name": "x_castep_Parameter_n",
+      "name": "x_castep_parameter_n",
       "shape": [],
       "superNames": [
-        "x_castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
-      "name": "x_castep_Parameter_s6",
+      "name": "x_castep_parameter_s6",
       "shape": [],
       "superNames": [
-        "x_castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method TS",
       "dtypeStr": "f",
-      "name": "x_castep_Parameter_sR",
+      "name": "x_castep_parameter_sr",
       "shape": [],
       "superNames": [
-        "x_castep_section_van_der_Waals_parameters"
+        "x_castep_section_van_der_waals_parameters"
       ]
     }]
 }

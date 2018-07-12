@@ -182,8 +182,7 @@
       "dtypeStr": "r",
       "name": "x_charmm_atom_to_atom_type_ref",
       "referencedSections": [
-        "section_atom_type",
-        "x_charmm_section_atom_to_atom_type_ref"
+        "section_atom_type"
       ],
       "shape": ["number_of_atoms_per_type"],
       "superNames": [
@@ -634,7 +633,6 @@
     "description": "Parameters of mdin belonging to x_charmm_section_control_parameters.",
     "kindStr": "type_abstract_document_content",
     "name": "x_charmm_mdin_input_output_files",
-    "repeats": true,
     "superNames": [
       "x_charmm_section_input_output_files"
     ]
@@ -1895,7 +1893,6 @@
     "description": "Parameters of mdin belonging to x_charmm_section_control_parameters.",
     "kindStr": "type_abstract_document_content",
     "name": "x_charmm_mdin_control_parameters",
-    "repeats": true,
     "superNames": [
       "x_charmm_section_control_parameters"
     ]
@@ -2652,7 +2649,6 @@
       "description": "Parameters of mdout belonging to section_single_configuration_calculation.",
       "kindStr": "type_abstract_document_content",
       "name": "x_charmm_mdout_single_configuration_calculation",
-      "repeats": true,
       "superNames": [
         "x_charmm_section_single_configuration_calculation"
       ]
