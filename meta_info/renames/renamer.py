@@ -7,6 +7,7 @@ import logging
 from io import open
 from io import StringIO
 
+
 def loadRenamesFile(renamesPath):
     """Loads the content of a rename file"""
     renamesRe = re.compile(
@@ -24,6 +25,7 @@ def loadRenamesFile(renamesPath):
                 logging.warn("Unexpected line %r in %s", line, renamesPath)
     return renames
 
+
 def renamesSearchRe(renames):
     """creates a regular expression that matches the words that should be renamed"""
     res = StringIO()
@@ -39,11 +41,13 @@ def renamesSearchRe(renames):
     renameReStr = res.getvalue()
     return re.compile(renameReStr)
 
+
 def replaceInFile(filePath, replacements):
     """performs the replacements in the given file"""
     renameRe = renamesSearchRe(replacements)
     outF = tempfile.NamedTemporaryFile(
-        mode="w", suffix='', prefix='tmp', dir=os.path.dirname(filePath), delete=False, encoding='utf-8')
+        mode="w", suffix='', prefix='tmp', dir=os.path.dirname(filePath),
+        delete=False, encoding='utf-8')
     didReplace = {}
     lineNr = 0
     with outF:
@@ -74,9 +78,9 @@ def replaceInFile(filePath, replacements):
         os.rename(filePath, bkPath)
         os.rename(outF.name, filePath)
         print("%r: {" % filePath)
-        for k,v in didReplace.items():
-            print(k,'->',replacements[k],":",v)
-        print("}\nBackup in ",bkPath)
+        for k, v in didReplace.items():
+            print(k, '->', replacements[k], ":", v)
+        print("}\nBackup in ", bkPath)
 
 if __name__ == "__main__":
     import sys
