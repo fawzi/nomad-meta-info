@@ -35,7 +35,7 @@ def renamesSearchRe(renames):
         else:
             first = False
         res.write(k)
-    res.write(r")\b")
+    res.write(r")(__|\b)")
     renameReStr = res.getvalue()
     return re.compile(renameReStr)
 
@@ -59,6 +59,8 @@ def replaceInFile(filePath, replacements):
                     didReplace[old] = didReplace.get(old, []) + [lineNr]
                     outF.write(line[ii:m.start()])
                     outF.write(replacements[old])
+                    if m.group(2):
+                        outF.write(m.group(2))
                     ii = m.end()
                 outF.write(line[ii:])
     if didReplace:
