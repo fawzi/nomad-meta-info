@@ -1,0 +1,23 @@
+{
+  "meta_name":"smearing_kind",
+  "meta_type":"type-value",
+  "meta_description":[
+    "Specifies the kind of smearing on the electron occupation used to calculate the ",
+    "free energy (see energy_free)\n",
+    "\n",
+    "Valid values are:\n",
+    "\n",
+    "| Smearing kind             | Description                       |\n",
+    "| ------------------------- | --------------------------------- |\n",
+    "| `\"empty\"`                 | No smearing is applied            |\n",
+    "| `\"gaussian\"`              | Gaussian smearing                 |\n",
+    "| `\"fermi\"`                 | Fermi smearing                    |\n",
+    "| `\"marzari-vanderbilt\"`    | Marzari-Vanderbilt smearing       |\n",
+    "| `\"methfessel-paxton\"`     | Methfessel-Paxton smearing        |\n",
+    "| `\"tetrahedra\"`            | Interpolation of state energies and occupations ",
+    "(ignores smearing_width) |"],
+  "meta_parent_section":"section_method",
+  "meta_abstract_types":[
+    "settings_smearing"],
+  "meta_data_type":"string"
+}

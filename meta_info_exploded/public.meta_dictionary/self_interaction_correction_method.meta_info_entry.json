@@ -1,0 +1,27 @@
+{
+  "meta_name":"self_interaction_correction_method",
+  "meta_type":"type-value",
+  "meta_description":[
+    "Contains the name for the self-interaction correction (SIC) treatment used to ",
+    "calculate the final energy and related quantities. If skipped or empty, no ",
+    "special correction is applied.\n",
+    "\n",
+    "The following SIC methods are available:\n",
+    "\n",
+    "| SIC method                | Description                       |\n",
+    "| ------------------------- | --------------------------------  |\n",
+    "| `\"\"`                      | No correction                     |\n",
+    "| `\"SIC_AD\"`                | The average density correction    |\n",
+    "| `\"SIC_SOSEX\"`             | Second order screened exchange    |\n",
+    "| `\"SIC_EXPLICIT_ORBITALS\"` | (scaled) Perdew-Zunger correction explicitly on a ",
+    "set of orbitals |\n",
+    "| `\"SIC_MAURI_SPZ\"`         | (scaled) Perdew-Zunger expression on the spin ",
+    "density / doublet unpaired orbital |\n",
+    "| `\"SIC_MAURI_US\"`          | A (scaled) correction proposed by Mauri and ",
+    "co-workers on the spin density / doublet unpaired orbital ",
+    "|"],
+  "meta_parent_section":"section_method",
+  "meta_abstract_types":[
+    "settings_self_interaction_correction"],
+  "meta_data_type":"string"
+}
