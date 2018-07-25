@@ -3,8 +3,6 @@
   "description": "meta info used by the gamess parser, all names are expected to start with x_gamess",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "values of eigenenergies for alpha MOs",
@@ -506,7 +504,7 @@
         "section_method"
       ]
     }, {
-      "description": "Final value of the total electronic energy calculated with the method described in XC_method.",
+      "description": "Final value of the total electronic energy calculated with the method described in xc_method.",
       "dtypeStr": "f",
       "name": "x_gamess_energy_scf",
       "shape": [],
@@ -515,7 +513,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Value of the total electronic energy calculated with the method described in XC_method during each self-consistent field (SCF) iteration.",
+      "description": "Value of the total electronic energy calculated with the method described in xc_method during each self-consistent field (SCF) iteration.",
       "dtypeStr": "f",
       "name": "x_gamess_energy_total_scf_iteration",
       "repeats": true,
@@ -633,7 +631,7 @@
         "x_gamess_section_excited_states"
       ]
     }, {
-      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value. This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
+      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value. This value is not necessarly the value obtained at the end of the calculation. See spin_s2 for the converged value of the spin moment.",
       "dtypeStr": "i",
       "name": "x_gamess_spin_target_multiplicity",
       "shape": [],

@@ -3,8 +3,6 @@
   "description": "meta info used by the exciting parser, all names are expected to start with exciting",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "Forces acting on the atoms.",
@@ -22,7 +20,7 @@
     },{
       "description": "IBS correction to the Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_IBS_forces",
+      "name": "x_exciting_atom_ibs_forces",
       "shape": ["x_exciting_number_of_atoms",3],
       "superNames": [
         "section_single_configuration_calculation"
@@ -56,7 +54,7 @@
     },{
       "description": "HF correction to the Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_HF_forces",
+      "name": "x_exciting_atom_hf_forces",
       "shape": ["x_exciting_number_of_atoms",3],
       "superNames": [
         "section_single_configuration_calculation"
@@ -65,7 +63,7 @@
     },{
       "description": "x-component of the IBS correction to the Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_IBS_forces_x",
+      "name": "x_exciting_atom_ibs_forces_x",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -73,7 +71,7 @@
     }, {
       "description": "y-component of the IBS correction to the Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_IBS_forces_y",
+      "name": "x_exciting_atom_ibs_forces_y",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -81,7 +79,7 @@
     }, {
       "description": "z-component of the IBS correction to the Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_IBS_forces_z",
+      "name": "x_exciting_atom_ibs_forces_z",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -113,7 +111,7 @@
     }, {
       "description": "x-component of the HF Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_HF_forces_x",
+      "name": "x_exciting_atom_hf_forces_x",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -121,7 +119,7 @@
     }, {
       "description": "y-component of the HF Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_HF_forces_y",
+      "name": "x_exciting_atom_hf_forces_y",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -129,7 +127,7 @@
     }, {
       "description": "z-component of the HF Force acting on the atoms.",
       "dtypeStr": "f",
-      "name": "x_exciting_atom_HF_forces_z",
+      "name": "x_exciting_atom_hf_forces_z",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -626,7 +624,7 @@
     },  {
       "description": "number to identify the atoms of a species on which a magnetic field is applied",
       "dtypeStr": "C",
-      "name": "x_exciting_MT_external_magnetic_field_atom_number",
+      "name": "x_exciting_mt_external_magnetic_field_atom_number",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -728,7 +726,7 @@
     }, {
       "description": "x component of the magnetic field",
       "dtypeStr": "f",
-      "name": "x_exciting_MT_external_magnetic_field_x",
+      "name": "x_exciting_mt_external_magnetic_field_x",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -737,7 +735,7 @@
     }, {
       "description": "y component of the magnetic field",
       "dtypeStr": "f",
-      "name": "x_exciting_MT_external_magnetic_field_y",
+      "name": "x_exciting_mt_external_magnetic_field_y",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -746,7 +744,7 @@
     }, {
       "description": "z component of the magnetic field",
       "dtypeStr": "f",
-      "name": "x_exciting_MT_external_magnetic_field_z",
+      "name": "x_exciting_mt_external_magnetic_field_z",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -923,7 +921,7 @@
     }, {
       "description": "exciting IBS force convergence",
       "dtypeStr": "f",
-      "name": "x_exciting_IBS_force_convergence_scf_iteration",
+      "name": "x_exciting_ibs_force_convergence_scf_iteration",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -1323,7 +1321,7 @@
     }, {
       "description": "Total charge in muffin-tins",
       "dtypeStr": "f",
-      "name": "x_exciting_total_MT_charge_scf_iteration",
+      "name": "x_exciting_total_mt_charge_scf_iteration",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -1332,7 +1330,7 @@
     }, {
       "description": "Total charge in muffin-tins",
       "dtypeStr": "f",
-      "name": "x_exciting_total_MT_charge",
+      "name": "x_exciting_total_mt_charge",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -1414,7 +1412,7 @@
       "repeats": false,
       "shape": [],
       "superNames": [
-        "settings_XC"
+        "settings_xc"
       ]
     }, {
       "description": "Number of empty states used in the calculation of the response function.",
@@ -1462,7 +1460,7 @@
         "section_method"
       ]
     }, {
-      "description": "Exchange-correlation functional of the ground-state calculation. See XC_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional",
+      "description": "Exchange-correlation functional of the ground-state calculation. See xc_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional",
       "dtypeStr": "C",
       "name": "x_exciting_xs_starting_point",
       "shape": [],
@@ -1546,7 +1544,7 @@
       ]
     }, {
       "description": "If the anti-resonant part of the Hamiltonian is used for the BSE spectrum",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_antiresonant",
       "repeats": false,
       "shape": [],
@@ -1582,7 +1580,7 @@
       ]
     }, {
       "description": "if the body of the screened Coulomb interaction is averaged (q=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavbd",
       "repeats": false,
       "shape": [],
@@ -1591,7 +1589,7 @@
       ]
     }, {
       "description": "if the body of the screened Coulomb interaction is averaged (q!=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavqbd",
       "repeats": false,
       "shape": [],
@@ -1600,7 +1598,7 @@
       ]
     }, {
       "description": "if the head of the screened Coulomb interaction is averaged (q=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavqhd",
       "repeats": false,
       "shape": [],
@@ -1609,7 +1607,7 @@
       ]
     }, {
       "description": "if the wings of the screened Coulomb interaction is averaged (q=0).",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_sciavqwg",
       "repeats": false,
       "shape": [],
@@ -1627,7 +1625,7 @@
       ]
     }, {
       "description": "X-ray absorption spectrum",
-      "dtypeStr": "B",
+      "dtypeStr": "b",
       "name": "x_exciting_xs_bse_xas",
       "repeats": false,
       "shape": [],
@@ -1702,7 +1700,7 @@
     }, {
       "description": "XC potential",
       "dtypeStr": "f",
-      "name": "x_exciting_XC_potential_scf_iteration",
+      "name": "x_exciting_xc_potential_scf_iteration",
       "shape": [],
       "superNames": [
         "energy_component",
@@ -1712,7 +1710,7 @@
     }, {
       "description": "XC potential final",
       "dtypeStr": "f",
-      "name": "x_exciting_XC_potential",
+      "name": "x_exciting_xc_potential",
       "shape": [],
       "superNames": [
         "energy_component",

@@ -3,8 +3,6 @@
   "description": "meta info used by the CP2K parser, all names are expected to start with x_cp2k_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "Forces acting on the atoms in this Quickstep calculation.",

@@ -3,8 +3,6 @@
   "description": "meta info used by the Quantum Espresso parser, all names are expected to start with qe_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [
     {
@@ -264,7 +262,7 @@
     },
     {
       "description": "Temporary: DFT-D species C6 coefficient",
-      "name": "x_qe_t_species_dispersion_correction_C6",
+      "name": "x_qe_t_species_dispersion_correction_c6",
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_method"]
@@ -285,7 +283,7 @@
     },
     {
       "description": "DFT-D species C6 coefficient",
-      "name": "x_qe_dispersion_correction_C6",
+      "name": "x_qe_dispersion_correction_c6",
       "dtypeStr": "f",
       "shape": [],
       "superNames": ["section_method_atom_kind"]
@@ -337,7 +335,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_sticks_sum_PW",
+      "name": "x_qe_sticks_sum_pw",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -346,7 +344,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_sticks_sum_G_dense",
+      "name": "x_qe_sticks_sum_g_dense",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -355,7 +353,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_sticks_sum_G_smooth",
+      "name": "x_qe_sticks_sum_g_smooth",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -364,7 +362,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_sticks_sum_G_PW",
+      "name": "x_qe_sticks_sum_g_pw",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -391,7 +389,7 @@
     },
     {
       "description": "-",
-      "name": "x_qe_sticks_tot_PW",
+      "name": "x_qe_sticks_tot_pw",
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
@@ -588,7 +586,7 @@
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_xc_functionals"
       ]
     },
     {
@@ -759,7 +757,7 @@
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_xc_functionals"
       ]
     },
     {
@@ -768,7 +766,7 @@
       "dtypeStr": "C",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_xc_functionals"
       ]
     },
     {
@@ -777,7 +775,7 @@
       "dtypeStr": "i",
       "shape": [],
       "superNames": [
-        "section_XC_functionals"
+        "section_xc_functionals"
       ]
     },
     {
@@ -1769,28 +1767,28 @@
     },
     {
       "description": "Temporary: Dense-grid info, FFT grid x",
-      "name": "x_qe_t_dense_FFT_grid_x",
+      "name": "x_qe_t_dense_fft_grid_x",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_system"]
     },
     {
       "description": "Temporary: Dense-grid info, FFT grid y",
-      "name": "x_qe_t_dense_FFT_grid_y",
+      "name": "x_qe_t_dense_fft_grid_y",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_system"]
     },
     {
       "description": "Temporary: Dense-grid info, FFT grid z",
-      "name": "x_qe_t_dense_FFT_grid_z",
+      "name": "x_qe_t_dense_fft_grid_z",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_system"]
     },
     {
       "description": "Dense-grid info, FFT grid",
-      "name": "x_qe_dense_FFT_grid",
+      "name": "x_qe_dense_fft_grid",
       "dtypeStr": "i",
       "shape": [
           3
@@ -1813,28 +1811,28 @@
     },
     {
       "description": "Temporary: Smooth-grid info, FFT grid x",
-      "name": "x_qe_t_smooth_FFT_grid_x",
+      "name": "x_qe_t_smooth_fft_grid_x",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_system"]
     },
     {
       "description": "Temporary: Smooth-grid info, FFT grid y",
-      "name": "x_qe_t_smooth_FFT_grid_y",
+      "name": "x_qe_t_smooth_fft_grid_y",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_system"]
     },
     {
       "description": "Temporary: Smooth-grid info, FFT grid z",
-      "name": "x_qe_t_smooth_FFT_grid_z",
+      "name": "x_qe_t_smooth_fft_grid_z",
       "dtypeStr": "i",
       "shape": [],
       "superNames": ["section_system"]
     },
     {
       "description": "Smooth-grid info, FFT grid",
-      "name": "x_qe_smooth_FFT_grid",
+      "name": "x_qe_smooth_fft_grid",
       "dtypeStr": "i",
       "shape": [
           3

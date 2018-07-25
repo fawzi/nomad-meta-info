@@ -3,8 +3,6 @@
   "description": "meta info used by the wien2k parser.  All names are expected to start with x_wien2k_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "position of atom x in internal units",
@@ -48,7 +46,7 @@
     },{
       "description": "number of radial mesh points",
       "dtypeStr": "i",
-      "name": "x_wien2k_NPT",
+      "name": "x_wien2k_npt",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -57,7 +55,7 @@
     },{
       "description": "atomic sphere radius (muffin-tin radius)",
       "dtypeStr": "f",
-      "name": "x_wien2k_RMT",
+      "name": "x_wien2k_rmt",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -66,7 +64,7 @@
     },{
       "description": "first radial mesh point",
       "dtypeStr": "f",
-      "name": "x_wien2k_R0",
+      "name": "x_wien2k_r0",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -75,7 +73,7 @@
     },{
       "description": "atomic number Z",
       "dtypeStr": "f",
-      "name": "x_wien2k_atomic_number_Z",
+      "name": "x_wien2k_atomic_number_z",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -110,12 +108,12 @@
       "name": "x_wien2k_indxc",
       "shape": [],
       "superNames": [
-        "x_wien2k_section_XC"
+        "x_wien2k_section_xc"
       ]
     }, {
       "description": "exchange-correlation potential, in in0",
       "kindStr": "type_section",
-      "name": "x_wien2k_section_XC",
+      "name": "x_wien2k_section_xc",
       "superNames": [
         "section_method"
       ]
@@ -283,7 +281,7 @@
     }, {
       "description": "user given name for this system given in the struct file",
       "dtypeStr": "C",
-      "name": "x_wien2k_system_nameIn",
+      "name": "x_wien2k_system_namein",
       "shape": [],
       "superNames": [
         "section_system"
@@ -450,7 +448,7 @@
     }, {
       "description": "energy gap in eV",
       "dtypeStr": "f",
-      "name": "x_wien2k_ene_gap_eV",
+      "name": "x_wien2k_ene_gap_ev",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -475,7 +473,7 @@
     }, {
       "description": "LOs",
       "dtypeStr": "i",
-      "name": "x_wien2k_LOs",
+      "name": "x_wien2k_los",
       "shape": [],
       "superNames": [
         "section_scf_iteration"

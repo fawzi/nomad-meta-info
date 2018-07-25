@@ -3,8 +3,6 @@
   "description": "meta info used by the GPAW parser, all names are expected to start with x_gpaw_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "atomic density matrices in the PAW formalism",
@@ -42,9 +40,9 @@
         "section_method"
       ]
     }, {
-      "description": "Target value (fixed) of the z projection of the spin moment operator $S^z$ for the converged calculation with the XC_method.",
+      "description": "Target value (fixed) of the z projection of the spin moment operator $S^z$ for the converged calculation with the xc_method.",
       "dtypeStr": "f",
-      "name": "x_gpaw_fixed_spin_Sz",
+      "name": "x_gpaw_fixed_spin_sz",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
@@ -144,16 +142,15 @@
       ]
     }, {
       "description": "GPAW PAW specific information",
-      "dtypeStr": "i",
       "kindStr": "type_section",
       "name": "x_gpaw_section_paw_method",
       "superNames": [
         "section_method"
       ]
     }, {
-      "description": "Value of the z projection of the spin moment operator $S^z$ for the converged calculation with the XC_method.",
+      "description": "Value of the z projection of the spin moment operator $S^z$ for the converged calculation with the xc_method.",
       "dtypeStr": "f",
-      "name": "x_gpaw_spin_Sz",
+      "name": "x_gpaw_spin_sz",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation"

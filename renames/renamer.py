@@ -8,10 +8,10 @@ from io import open
 from io import StringIO
 
 
-def loadRenamesFile(renamesPath):
+def loadRenamesFile(renamesPath, reverse=False):
     """Loads the content of a rename file"""
     renamesRe = re.compile(
-        r"\s*(?P<old>[a-zA-Z0-9_]+)\s*->\s*(?P<new>[a-zA-Z0-9_]+)\s*$")
+        r"\s*(?P<old>[-a-zA-Z0-9_.%]+)\s*->\s*(?P<new>[a-zA-Z0-9_.]+)\s*$")
     renames = {}
     with open(renamesPath, encoding='utf-8') as f:
         while True:
@@ -20,7 +20,10 @@ def loadRenamesFile(renamesPath):
                 break
             m = renamesRe.match(line)
             if m:
-                renames[m.group("old")] = m.group("new")
+                if reverse:
+                    renames[m.group("new")] = m.group("old")
+                else:
+                    renames[m.group("old")] = m.group("new")
             elif not line.isspace():
                 logging.warn("Unexpected line %r in %s", line, renamesPath)
     return renames
@@ -31,12 +34,12 @@ def renamesSearchRe(renames):
     res = StringIO()
     res.write(r"\b(")
     first = True
-    for k in renames.keys():
+    for k in reversed(sorted(renames.keys())):
         if not first:
             res.write("|")
         else:
             first = False
-        res.write(k)
+        res.write(k.replace(".","\\."))
     res.write(r")(__|\b)")
     renameReStr = res.getvalue()
     return re.compile(renameReStr)
@@ -83,11 +86,30 @@ def replaceInFile(filePath, replacements):
         print("}\nBackup in ", bkPath)
 
 if __name__ == "__main__":
-    import sys
+    import sys,argparse
     renamesPath = os.path.join(os.path.dirname(__file__), "renames.txt")
-    renames = loadRenamesFile(renamesPath)
-    for f in sys.argv[1:]:
+    parser = argparse.ArgumentParser(description='Make replacements in files')
+    parser.add_argument('--reverse', action='store_true',
+                        help='Performs replacements in the reverse direction')
+    parser.add_argument('--renames-file', nargs=1,
+                        default=[renamesPath],
+                        help='file containing the replacements to perform (from -> to)')
+    parser.add_argument('toRename', metavar='P', nargs='+',
+                        help='path to a file to rename')
+    args = parser.parse_args()
+    if not args.renames_file:
+        baseRenames = loadRenamesFile(renamesPath, args.reverse)
+    else:
+        baseRenames = loadRenamesFile(args.renames_file[0], args.reverse)
+    for f in args.toRename:
         try:
+            basename = os.path.splitext(os.path.splitext(os.path.basename(f))[0])[0]
+            specificRenames = os.path.join(os.path.dirname(renamesPath), basename + ".renames")
+            if not args.renames_file and os.path.exists(specificRenames):
+                renames = loadRenamesFile(specificRenames, arg.reverse)
+                renames.update(baseRenames)
+            else:
+                renames = baseRenames
             replaceInFile(f, renames)
         except:
             logging.exception("handling file %s", f)

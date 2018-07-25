@@ -3,8 +3,6 @@
   "description": "meta info used by the qbox parser",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "x component of atomic force",
@@ -202,41 +200,41 @@
     }, {
       "description": "x component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_MLWF_atom_positions_x",
+      "name": "x_qbox_geometry_mlwf_atom_positions_x",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_MLWF"
+        "x_qbox_section_mlwf"
       ],
       "units": "m"
     }, {
       "description": "y component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_MLWF_atom_positions_y",
+      "name": "x_qbox_geometry_mlwf_atom_positions_y",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_MLWF"
+        "x_qbox_section_mlwf"
       ],
       "units": "m"
     }, {
       "description": "z component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_MLWF_atom_positions_z",
+      "name": "x_qbox_geometry_mlwf_atom_positions_z",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_MLWF"
+        "x_qbox_section_mlwf"
       ],
       "units": "m"
     }, {
       "description": "spread of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_MLWF_atom_spread",
+      "name": "x_qbox_geometry_mlwf_atom_spread",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_MLWF"
+        "x_qbox_section_mlwf"
       ],
       "units": "m"
     }, {
@@ -300,7 +298,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_qbox_section_MLWF",
+      "name": "x_qbox_section_mlwf",
       "superNames": [
         "section_run"
       ]

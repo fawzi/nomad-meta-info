@@ -3,8 +3,6 @@
   "description": "meta info used by the elastic parser, all names are expected to start with x_elastic",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "Order of the elastic constant",
@@ -134,7 +132,7 @@
     }, {
       "description": "wien2k: user given name for this system given in the struct file",
       "dtypeStr": "C",
-      "name": "x_elastic_wien2k_system_nameIn",
+      "name": "x_elastic_wien2k_system_namein",
       "shape": [],
       "superNames": [
         "section_system"
@@ -158,7 +156,7 @@
     }, {
       "description": "wien2k: number of radial mesh points",
       "dtypeStr": "i",
-      "name": "x_elastic_wien2k_NPT",
+      "name": "x_elastic_wien2k_npt",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -167,7 +165,7 @@
     }, {
       "description": "wien2k: first radial mesh point",
       "dtypeStr": "f",
-      "name": "x_elastic_wien2k_R0",
+      "name": "x_elastic_wien2k_r0",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -176,7 +174,7 @@
     }, {
       "description": "wien2k: atomic sphere radius (muffin-tin radius)",
       "dtypeStr": "f",
-      "name": "x_elastic_wien2k_RMT",
+      "name": "x_elastic_wien2k_rmt",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -185,7 +183,7 @@
     }, {
       "description": "wien2k: atomic number Z",
       "dtypeStr": "f",
-      "name": "x_elastic_wien2k_atomic_number_Z",
+      "name": "x_elastic_wien2k_atomic_number_z",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -242,7 +240,7 @@
     }, {
       "description": "Voigt component of the deformation for the stress approach",
       "dtypeStr": "i",
-      "name": "x_elastic_strain_diagram_stress_Voigt_component",
+      "name": "x_elastic_strain_diagram_stress_voigt_component",
       "shape": [],
       "superNames": [
         "x_elastic_section_strain_diagrams" ]
@@ -287,7 +285,7 @@
     }, {
       "description": "Voigt bulk modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Voigt_bulk_modulus",
+      "name": "x_elastic_voigt_bulk_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -295,7 +293,7 @@
     }, {
       "description": "Voigt shear modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Voigt_shear_modulus",
+      "name": "x_elastic_voigt_shear_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -303,7 +301,7 @@
     }, {
       "description": "Reuss bulk modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Reuss_bulk_modulus",
+      "name": "x_elastic_reuss_bulk_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -311,7 +309,7 @@
     }, {
       "description": "Reuss shear modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Reuss_shear_modulus",
+      "name": "x_elastic_reuss_shear_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -319,7 +317,7 @@
     }, {
       "description": "Hill bulk modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Hill_bulk_modulus",
+      "name": "x_elastic_hill_bulk_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -327,7 +325,7 @@
     }, {
       "description": "Hill shear modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Hill_shear_modulus",
+      "name": "x_elastic_hill_shear_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -335,7 +333,7 @@
     }, {
       "description": "Voigt Young modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Voigt_Young_modulus",
+      "name": "x_elastic_voigt_young_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -343,14 +341,14 @@
     }, {
       "description": "Voigt Poisson ratio",
       "dtypeStr": "f",
-      "name": "x_elastic_Voigt_Poisson_ratio",
+      "name": "x_elastic_voigt_poisson_ratio",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ]
     }, {
       "description": "Reuss Young modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Reuss_Young_modulus",
+      "name": "x_elastic_reuss_young_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -358,14 +356,14 @@
     }, {
       "description": "Reuss Poisson ratio",
       "dtypeStr": "f",
-      "name": "x_elastic_Reuss_Poisson_ratio",
+      "name": "x_elastic_reuss_poisson_ratio",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ]
     }, {
       "description": "Hill Young modulus",
       "dtypeStr": "f",
-      "name": "x_elastic_Hill_Young_modulus",
+      "name": "x_elastic_hill_young_modulus",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ],
@@ -373,7 +371,7 @@
     }, {
       "description": "Hill Poisson ratio",
       "dtypeStr": "f",
-      "name": "x_elastic_Hill_Poisson_ratio",
+      "name": "x_elastic_hill_poisson_ratio",
       "shape": [],
       "superNames": [
         "section_single_configuration_calculation" ]
