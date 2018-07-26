@@ -1382,6 +1382,122 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"boolean"
   },{
+    "meta_name":"x_exciting_xs_bse_epsilon_energies",
+    "meta_type":"type-value",
+    "meta_description":"Energies of the dielectric function epsilon",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }],
+    "meta_units":"J"
+  },{
+    "meta_name":"x_exciting_xs_bse_epsilon_im",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Imaginary part of the dielectric function ",
+      "epsilon"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_epsilon_re",
+    "meta_type":"type-value",
+    "meta_description":"Real part of the dielectric function epsilon",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_exciton_amplitude_im",
+    "meta_type":"type-value",
+    "meta_description":"Imaginary part of the transition amplitude",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_excitons"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_exciton_amplitude_re",
+    "meta_type":"type-value",
+    "meta_description":"Real part of the transition amplitude",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_excitons"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_exciton_binding_energies",
+    "meta_type":"type-value",
+    "meta_description":"Exciton binding energies",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_excitons"
+    }],
+    "meta_units":"J"
+  },{
+    "meta_name":"x_exciting_xs_bse_exciton_energies",
+    "meta_type":"type-value",
+    "meta_description":"Exciton energies",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_excitons"
+    }],
+    "meta_units":"J"
+  },{
+    "meta_name":"x_exciting_xs_bse_exciton_oscillator_strength",
+    "meta_type":"type-value",
+    "meta_description":"Exciton oscillator strength",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_excitons"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_loss",
+    "meta_type":"type-value",
+    "meta_description":"Loss function",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_loss_energies",
+    "meta_type":"type-value",
+    "meta_description":"Energies of the loss function",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }],
+    "meta_units":"J"
+  },{
     "meta_name":"x_exciting_xs_bse_number_of_bands",
     "meta_type":"type-value",
     "meta_description":[
@@ -1395,6 +1511,28 @@
     "meta_dimension":[{
       "meta_dimension_fixed":4
     }]
+  },{
+    "meta_name":"x_exciting_xs_bse_number_of_components",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Number of independent components in the dielectric ",
+      "tensor"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_bse_number_of_energy_points",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Energy mesh for the dielectric function, conductivity and loss ",
+      "function"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_bse_number_of_excitons",
+    "meta_type":"type-value",
+    "meta_description":"Total number of excitons",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"int"
   },{
     "meta_name":"x_exciting_xs_bse_rgkmax",
     "meta_type":"type-value",
@@ -1442,6 +1580,42 @@
       "averaged"],
     "meta_parent_section":"section_method",
     "meta_data_type":"string"
+  },{
+    "meta_name":"x_exciting_xs_bse_sigma_energies",
+    "meta_type":"type-value",
+    "meta_description":"Energies of the conductivity function sigma",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }],
+    "meta_units":"J"
+  },{
+    "meta_name":"x_exciting_xs_bse_sigma_im",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Imaginary part of the conductivity function ",
+      "sigma"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_bse_sigma_re",
+    "meta_type":"type-value",
+    "meta_description":"Real part of the conductivity function sigma",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_bse_number_of_energy_points"
+    }]
   },{
     "meta_name":"x_exciting_xs_bse_type",
     "meta_type":"type-value",

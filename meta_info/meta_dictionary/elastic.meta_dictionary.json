@@ -115,10 +115,10 @@
       "meta_dimension_symbolic":"x_elastic_number_of_deformations"
     }]
   },{
-    "meta_name":"x_elastic_fitting_parameters_polinomial_order",
+    "meta_name":"x_elastic_fitting_parameters_polynomial_order",
     "meta_type":"type-value",
     "meta_description":[
-      "polinomial order used to fit the Energy vs. volume curve and to calculate the ",
+      "polynomial order used to fit the Energy vs. volume curve and to calculate the ",
       "elastic constants"],
     "meta_parent_section":"x_elastic_section_fitting_parameters",
     "meta_data_type":"int",
@@ -248,9 +248,9 @@
     "meta_parent_section":"x_elastic_section_strain_diagrams",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_elastic_strain_diagram_polinomial_fit_order",
+    "meta_name":"x_elastic_strain_diagram_polynomial_fit_order",
     "meta_type":"type-value",
-    "meta_description":"Order of the polinomial fit",
+    "meta_description":"Order of the polynomial fit",
     "meta_parent_section":"x_elastic_section_strain_diagrams",
     "meta_data_type":"int"
   },{
@@ -266,7 +266,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Kind of strain diagram. Possible values are: energy; Lagrangian-stress; ",
-      "Physical-stress; cross-validation (cross-validation error); d2E (second ",
+      "Physical-stress; cross-validation (cross-validation error); d2e (second ",
       "derivative of the energy with respect to the strain); dtn (first derivative of ",
       "the stress with respect to the strain)"],
     "meta_parent_section":"x_elastic_section_strain_diagrams",
@@ -275,7 +275,7 @@
     "meta_name":"x_elastic_strain_diagram_values",
     "meta_type":"type-value",
     "meta_description":[
-      "Values of the energy(units:J)/d2E(units:Pa)/cross-validation (depending on the ",
+      "Values of the energy(units:J)/d2e(units:Pa)/cross-validation (depending on the ",
       "value of x_elastic_strain_diagram_type)"],
     "meta_parent_section":"x_elastic_section_strain_diagrams",
     "meta_data_type":"float",
