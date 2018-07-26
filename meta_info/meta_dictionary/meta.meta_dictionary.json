@@ -434,7 +434,7 @@
         "simpler or automatic handling of conceptually related quantities.\n",
         "For instance all energies can have the abstract type energy_type, and all ",
         "parameters that influence the computation of the xc functional have the ",
-        "abstract type settings_XC. This way one can treat all energies in the same way, ",
+        "abstract type settings_xc. This way one can treat all energies in the same way, ",
         "or compute a checksum or compare all settings that influence the xc ",
         "calculation, even code specific ones that are not part of the public Meta Info, ",
         "as long as they correctly set their abstract ",

@@ -245,13 +245,13 @@
     "meta_name":"x_cp2k_energy_total_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
-      "Total electronic energy calculated with XC_method during the self-consistent ",
+      "Total electronic energy calculated with xc_method during the self-consistent ",
       "field (SCF) iterations."],
     "meta_parent_section":"x_cp2k_section_scf_iteration",
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"x_cp2k_energy_XC_scf_iteration",
+    "meta_name":"x_cp2k_energy_xc_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
       "Exchange-correlation (XC) energy during the self-consistent field (SCF) ",
@@ -1113,7 +1113,7 @@
     "meta_description":"D2 settings.",
     "meta_parent_section":"x_cp2k_section_vdw_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1122,7 +1122,7 @@
     "meta_description":"D3 settings.",
     "meta_parent_section":"x_cp2k_section_vdw_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1131,7 +1131,7 @@
     "meta_description":"Contains element-specific Van der Waals settings.",
     "meta_parent_section":"x_cp2k_section_vdw_d2_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1140,7 +1140,7 @@
     "meta_description":"Van der Waals settings.",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1276,7 +1276,7 @@
     "meta_description":"Name of the BJ damping method.",
     "meta_parent_section":"x_cp2k_section_vdw_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_cp2k_vdw_cn_cutoff",
@@ -1284,7 +1284,7 @@
     "meta_description":"Cutoff for CN calculation.",
     "meta_parent_section":"x_cp2k_section_vdw_d3_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_cutoff_radius",
@@ -1292,7 +1292,7 @@
     "meta_description":"Cutoff radius of the van der Waals method.",
     "meta_parent_section":"x_cp2k_section_vdw_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_cp2k_vdw_damping_factor",
@@ -1302,7 +1302,7 @@
       "method."],
     "meta_parent_section":"x_cp2k_section_vdw_d2_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_cp2k_vdw_name",
@@ -1310,7 +1310,7 @@
     "meta_description":"Name of the van der Waals method.",
     "meta_parent_section":"x_cp2k_section_vdw_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_cp2k_vdw_parameter_c6",
@@ -1318,7 +1318,7 @@
     "meta_description":"C6 parameter.",
     "meta_parent_section":"x_cp2k_section_vdw_element_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_parameter_element_name",
@@ -1326,7 +1326,7 @@
     "meta_description":"Name of the element.",
     "meta_parent_section":"x_cp2k_section_vdw_element_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_cp2k_vdw_parameter_radius",
@@ -1334,7 +1334,7 @@
     "meta_description":"Radius parameter.",
     "meta_parent_section":"x_cp2k_section_vdw_element_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_s6_scaling_factor",
@@ -1342,7 +1342,7 @@
     "meta_description":"S6 scaling factor.",
     "meta_parent_section":"x_cp2k_section_vdw_d3_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_s8_scaling_factor",
@@ -1350,7 +1350,7 @@
     "meta_description":"S8 scaling factor.",
     "meta_parent_section":"x_cp2k_section_vdw_d3_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_scaling_factor",
@@ -1358,7 +1358,7 @@
     "meta_description":"Scaling factor.",
     "meta_parent_section":"x_cp2k_section_vdw_d2_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_sr6_scaling_factor",
@@ -1366,7 +1366,7 @@
     "meta_description":"SR6 scaling factor.",
     "meta_parent_section":"x_cp2k_section_vdw_d3_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"float"
   },{
     "meta_name":"x_cp2k_vdw_type",
@@ -1374,7 +1374,7 @@
     "meta_description":"Type of the van der Waals method.",
     "meta_parent_section":"x_cp2k_section_vdw_settings",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   }]
 }

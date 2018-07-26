@@ -43,7 +43,7 @@
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fleur_atomic_number_Z",
+    "meta_name":"x_fleur_atomic_number_z",
     "meta_type":"type-value",
     "meta_description":"atomic number Z",
     "meta_parent_section":"x_fleur_section_equiv_atoms",
@@ -71,7 +71,7 @@
     "meta_name":"x_fleur_exch_pot",
     "meta_type":"type-value",
     "meta_description":"exchange-correlation potential, in out",
-    "meta_parent_section":"x_fleur_section_XC",
+    "meta_parent_section":"x_fleur_section_xc",
     "meta_data_type":"string"
   },{
     "meta_name":"x_fleur_free_energy",
@@ -83,7 +83,7 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"x_fleur_G_max",
+    "meta_name":"x_fleur_g_max",
     "meta_type":"type-value",
     "meta_description":"Gmax",
     "meta_parent_section":"section_system",
@@ -273,7 +273,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fleur_section_XC",
+    "meta_name":"x_fleur_section_xc",
     "meta_type":"type-section",
     "meta_description":"exchange-correlation potential",
     "meta_parent_section":"section_method",
@@ -318,7 +318,7 @@
     "meta_parent_section":"section_system",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fleur_system_nameIn",
+    "meta_name":"x_fleur_system_namein",
     "meta_type":"type-value",
     "meta_description":[
       "user given name for this system given in the inp ",
@@ -428,7 +428,7 @@
     "meta_description":[
       "informaion on relativistic correction for the exchange-correlation potential, ",
       "in out"],
-    "meta_parent_section":"x_fleur_section_XC",
+    "meta_parent_section":"x_fleur_section_xc",
     "meta_data_type":"string"
   }]
 }

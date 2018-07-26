@@ -265,7 +265,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Final value of the total electronic energy calculated with the method described ",
-      "in XC_method."],
+      "in xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "scf_info"],
@@ -276,7 +276,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Value of the total electronic energy calculated with the method described in ",
-      "XC_method during each self-consistent field (SCF) ",
+      "xc_method during each self-consistent field (SCF) ",
       "iteration."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -606,7 +606,7 @@
     "meta_description":[
       "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the ",
       "total spin. It is an integer value. This value is not necessarly the value ",
-      "obtained at the end of the calculation. See spin_S2 for the converged value of ",
+      "obtained at the end of the calculation. See spin_s2 for the converged value of ",
       "the spin moment."],
     "meta_parent_section":"section_system",
     "meta_data_type":"int"

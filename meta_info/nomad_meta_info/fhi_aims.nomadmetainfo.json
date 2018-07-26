@@ -76,11 +76,11 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_atom_type_vdW",
+      "name": "x_fhi_aims_atom_type_vdw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_vdW_TS"
+        "x_fhi_aims_section_vdw_ts"
       ]
     }, {
       "description": "-",
@@ -130,746 +130,746 @@
     }, {
       "description": "angular grids method (specifed or auto)",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_angular_grids_method",
+      "name": "x_fhi_aims_controlin_angular_grids_method",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "cutoff for the dependent basis",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_basis_dep_cutoff",
+      "name": "x_fhi_aims_controlin_basis_dep_cutoff",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_basis_func_l",
+      "name": "x_fhi_aims_controlin_basis_func_l",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_func"
+        "x_fhi_aims_section_controlin_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_basis_func_n",
+      "name": "x_fhi_aims_controlin_basis_func_n",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_func"
+        "x_fhi_aims_section_controlin_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_basis_func_radius",
+      "name": "x_fhi_aims_controlin_basis_func_radius",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_func"
+        "x_fhi_aims_section_controlin_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_basis_func_type",
+      "name": "x_fhi_aims_controlin_basis_func_type",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_func"
+        "x_fhi_aims_section_controlin_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_charge",
+      "name": "x_fhi_aims_controlin_charge",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "first parameter of cut\\_pot",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_cut_pot1",
+      "name": "x_fhi_aims_controlin_cut_pot1",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "second parameter of cut\\_pot",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_cut_pot2",
+      "name": "x_fhi_aims_controlin_cut_pot2",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "third parameter of cut\\_pot",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_cut_pot3",
+      "name": "x_fhi_aims_controlin_cut_pot3",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "first parameter of division (position)",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_division1",
+      "name": "x_fhi_aims_controlin_division1",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "second parameter of division (n points)",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_division2",
+      "name": "x_fhi_aims_controlin_division2",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_hse_omega",
+      "name": "x_fhi_aims_controlin_hse_omega",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method",
-        "settings_XC_functional"
+        "x_fhi_aims_controlin_method",
+        "settings_xc_functional"
       ],
       "units": "m**-1"
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_hse_unit",
+      "name": "x_fhi_aims_controlin_hse_unit",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method",
-        "settings_XC_functional"
+        "x_fhi_aims_controlin_method",
+        "settings_xc_functional"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_hybrid_xc_coeff",
+      "name": "x_fhi_aims_controlin_hybrid_xc_coeff",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_k1",
+      "name": "x_fhi_aims_controlin_k1",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_k2",
+      "name": "x_fhi_aims_controlin_k2",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_k3",
+      "name": "x_fhi_aims_controlin_k3",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_k_grid",
+      "name": "x_fhi_aims_controlin_k_grid",
       "repeats": false,
       "shape": [
         3
       ],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "angular leven for the hartreee part",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_l_hartree",
+      "name": "x_fhi_aims_controlin_l_hartree",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "mass of the nucleus in atomic mass units",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_mass",
+      "name": "x_fhi_aims_controlin_mass",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_MD_time_step",
+      "name": "x_fhi_aims_controlin_md_time_step",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_run"
+        "x_fhi_aims_controlin_run"
       ],
       "units": "s"
     }, {
       "description": "Parameters of control.in belonging to section method.",
       "kindStr": "type_abstract_document_content",
-      "name": "x_fhi_aims_controlIn_method",
+      "name": "x_fhi_aims_controlin_method",
       "superNames": [
         "section_method"
       ]
     }, {
       "description": "charge of the nucleus",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_nucleus",
+      "name": "x_fhi_aims_controlin_nucleus",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_occupation_order",
+      "name": "x_fhi_aims_controlin_occupation_order",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_occupation_type",
+      "name": "x_fhi_aims_controlin_occupation_type",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_occupation_width",
+      "name": "x_fhi_aims_controlin_occupation_width",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "outer grid",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_outer_grid",
+      "name": "x_fhi_aims_controlin_outer_grid",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_override_relativity",
+      "name": "x_fhi_aims_controlin_override_relativity",
       "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "first parameter of radial\\_base",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_radial_base1",
+      "name": "x_fhi_aims_controlin_radial_base1",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "second parameter of radial\\_base",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_radial_base2",
+      "name": "x_fhi_aims_controlin_radial_base2",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "radial multiplier",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_radial_multiplier",
+      "name": "x_fhi_aims_controlin_radial_multiplier",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_relativistic_threshold",
+      "name": "x_fhi_aims_controlin_relativistic_threshold",
       "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_relativistic",
+      "name": "x_fhi_aims_controlin_relativistic",
       "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "Parameters of control.in belonging to settings run.",
       "kindStr": "type_abstract_document_content",
-      "name": "x_fhi_aims_controlIn_run",
+      "name": "x_fhi_aims_controlin_run",
       "superNames": [
         "settings_run"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_sc_accuracy_eev",
+      "name": "x_fhi_aims_controlin_sc_accuracy_eev",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_sc_accuracy_etot",
+      "name": "x_fhi_aims_controlin_sc_accuracy_etot",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_sc_accuracy_forces",
+      "name": "x_fhi_aims_controlin_sc_accuracy_forces",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_sc_accuracy_rho",
+      "name": "x_fhi_aims_controlin_sc_accuracy_rho",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlIn_sc_accuracy_stress",
+      "name": "x_fhi_aims_controlin_sc_accuracy_stress",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlIn_sc_iter_limit",
+      "name": "x_fhi_aims_controlin_sc_iter_limit",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_species_name",
+      "name": "x_fhi_aims_controlin_species_name",
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_spin",
+      "name": "x_fhi_aims_controlin_spin",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_verbatim_writeout",
+      "name": "x_fhi_aims_controlin_verbatim_writeout",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlIn_xc",
+      "name": "x_fhi_aims_controlin_xc",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlIn_method",
-        "settings_XC_functional"
+        "x_fhi_aims_controlin_method",
+        "settings_xc_functional"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_band_segment_end1",
+      "name": "x_fhi_aims_controlinout_band_segment_end1",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_band_segment_end2",
+      "name": "x_fhi_aims_controlinout_band_segment_end2",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_band_segment_end3",
+      "name": "x_fhi_aims_controlinout_band_segment_end3",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_band_segment_start1",
+      "name": "x_fhi_aims_controlinout_band_segment_start1",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_band_segment_start2",
+      "name": "x_fhi_aims_controlinout_band_segment_start2",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_band_segment_start3",
+      "name": "x_fhi_aims_controlinout_band_segment_start3",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_basis_func_eff_charge",
+      "name": "x_fhi_aims_controlinout_basis_func_eff_charge",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_basis_func_gauss_alpha",
+      "name": "x_fhi_aims_controlinout_basis_func_gauss_alpha",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ],
       "units": "m**-2"
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_basis_func_gauss_l",
+      "name": "x_fhi_aims_controlinout_basis_func_gauss_l",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_basis_func_gauss_N",
+      "name": "x_fhi_aims_controlinout_basis_func_gauss_n",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_basis_func_gauss_weight",
+      "name": "x_fhi_aims_controlinout_basis_func_gauss_weight",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_basis_func_l",
+      "name": "x_fhi_aims_controlinout_basis_func_l",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_basis_func_n",
+      "name": "x_fhi_aims_controlinout_basis_func_n",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_basis_func_occ",
+      "name": "x_fhi_aims_controlinout_basis_func_occ",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_basis_func_primitive_gauss_alpha",
+      "name": "x_fhi_aims_controlinout_basis_func_primitive_gauss_alpha",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ],
       "units": "m**-2"
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_basis_func_radius",
+      "name": "x_fhi_aims_controlinout_basis_func_radius",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_basis_func_type",
+      "name": "x_fhi_aims_controlinout_basis_func_type",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_basis_func"
+        "x_fhi_aims_section_controlinout_basis_func"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_hse_omega",
+      "name": "x_fhi_aims_controlinout_hse_omega",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method",
-        "settings_XC_functional"
+        "x_fhi_aims_controlinout_method",
+        "settings_xc_functional"
       ],
       "units": "m**-1"
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_hse_unit",
+      "name": "x_fhi_aims_controlinout_hse_unit",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method",
-        "settings_XC_functional"
+        "x_fhi_aims_controlinout_method",
+        "settings_xc_functional"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_hybrid_xc_coeff",
+      "name": "x_fhi_aims_controlinout_hybrid_xc_coeff",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_k1",
+      "name": "x_fhi_aims_controlinout_k1",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_k2",
+      "name": "x_fhi_aims_controlinout_k2",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_k3",
+      "name": "x_fhi_aims_controlinout_k3",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_k_grid",
+      "name": "x_fhi_aims_controlinout_k_grid",
       "repeats": false,
       "shape": [
         3
       ],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_MD_time_step",
+      "name": "x_fhi_aims_controlinout_md_time_step",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_run"
+        "x_fhi_aims_controlinout_run"
       ],
       "units": "s"
     }, {
       "description": "Parameters of aims output of parsed control.in belonging to section method.",
       "kindStr": "type_abstract_document_content",
-      "name": "x_fhi_aims_controlInOut_method",
+      "name": "x_fhi_aims_controlinout_method",
       "superNames": [
         "section_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_fhi_aims_controlInOut_number_of_spin_channels",
+      "name": "x_fhi_aims_controlinout_number_of_spin_channels",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_override_relativity",
+      "name": "x_fhi_aims_controlinout_override_relativity",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method",
+        "x_fhi_aims_controlinout_method",
         "settings_relativity"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_pure_gaussian",
+      "name": "x_fhi_aims_controlinout_pure_gaussian",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_relativistic_threshold",
+      "name": "x_fhi_aims_controlinout_relativistic_threshold",
       "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_relativistic",
+      "name": "x_fhi_aims_controlinout_relativistic",
       "repeats": false,
       "shape": [],
       "superNames": [
         "settings_relativity",
-        "x_fhi_aims_controlInOut_method"
+        "x_fhi_aims_controlinout_method"
       ]
     }, {
       "description": "Parameters of aims output of parsed control.in belonging to settings run.",
       "kindStr": "type_abstract_document_content",
-      "name": "x_fhi_aims_controlInOut_run",
+      "name": "x_fhi_aims_controlinout_run",
       "superNames": [
         "settings_run"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_species_charge",
+      "name": "x_fhi_aims_controlinout_species_charge",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_species_cut_pot_scale",
+      "name": "x_fhi_aims_controlinout_species_cut_pot_scale",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_species_cut_pot_width",
+      "name": "x_fhi_aims_controlinout_species_cut_pot_width",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_species_cut_pot",
+      "name": "x_fhi_aims_controlinout_species_cut_pot",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_controlInOut_species_mass",
+      "name": "x_fhi_aims_controlinout_species_mass",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ],
       "units": "kg"
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_species_name",
+      "name": "x_fhi_aims_controlinout_species_name",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_fhi_aims_controlInOut_xc",
+      "name": "x_fhi_aims_controlinout_xc",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_controlInOut_method",
-        "settings_XC_functional"
+        "x_fhi_aims_controlinout_method",
+        "settings_xc_functional"
       ]
     }, {
       "description": "Density of states (DOS) energies",
@@ -926,21 +926,21 @@
     }, {
       "description": "Correlation energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_correlation_perturbativeGW",
+      "name": "x_fhi_aims_eigenvalue_correlation_perturbativegw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_list_perturbativegw"
       ],
       "units": "J"
     }, {
       "description": "Single eigenvalue of scaled ZORA",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_eigenvalue_ZORA",
+      "name": "x_fhi_aims_eigenvalue_eigenvalue_zora",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_ZORA"
+        "x_fhi_aims_section_eigenvalues_list_zora"
       ],
       "units": "J"
     }, {
@@ -956,21 +956,21 @@
     }, {
       "description": "Exact exchange energy at given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_ExactExchange_perturbativeGW",
+      "name": "x_fhi_aims_eigenvalue_exactexchange_perturbativegw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_list_perturbativegw"
       ],
       "units": "J"
     }, {
       "description": "Component 1 of kpoints on which the eigenvalues were evaluated of scaled ZORA",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_kpoint1_ZORA",
+      "name": "x_fhi_aims_eigenvalue_kpoint1_zora",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_spin_ZORA"
+        "x_fhi_aims_section_eigenvalues_spin_zora"
       ]
     }, {
       "description": "Component 1 of kpoints on which the eigenvalues were evaluated",
@@ -984,11 +984,11 @@
     }, {
       "description": "Component 2 of kpoints on which the eigenvalues were evaluated of scaled ZORA",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_kpoint2_ZORA",
+      "name": "x_fhi_aims_eigenvalue_kpoint2_zora",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_spin_ZORA"
+        "x_fhi_aims_section_eigenvalues_spin_zora"
       ]
     }, {
       "description": "Component 2 of kpoints on which the eigenvalues were evaluated",
@@ -1002,11 +1002,11 @@
     }, {
       "description": "Component 3 of kpoints on which the eigenvalues were evaluated of scaled ZORA",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_kpoint3_ZORA",
+      "name": "x_fhi_aims_eigenvalue_kpoint3_zora",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_spin_ZORA"
+        "x_fhi_aims_section_eigenvalues_spin_zora"
       ]
     }, {
       "description": "Component 3 of kpoints on which the eigenvalues were evaluated",
@@ -1020,40 +1020,40 @@
     }, {
       "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_ks_ExchangeCorrelation",
+      "name": "x_fhi_aims_eigenvalue_ks_exchangecorrelation",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_list_perturbativegw"
       ],
       "units": "J"
     }, {
       "description": "KS ground state energy at a given eigenstate needed in perturbative GW",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_ks_GroundState",
+      "name": "x_fhi_aims_eigenvalue_ks_groundstate",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_list_perturbativegw"
       ],
       "units": "J"
     }, {
       "description": "Occupation of single eigenfunction of perturbative GW",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_occupation_perturbativeGW",
+      "name": "x_fhi_aims_eigenvalue_occupation_perturbativegw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_list_perturbativegw"
       ]
     }, {
       "description": "Occupation of single eigenfunction of scaled ZORA",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_occupation_ZORA",
+      "name": "x_fhi_aims_eigenvalue_occupation_zora",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_ZORA"
+        "x_fhi_aims_section_eigenvalues_list_zora"
       ]
     }, {
       "description": "Occupation of single eigenfunction",
@@ -1067,21 +1067,21 @@
     }, {
       "description": "Quasiparticle energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_eigenvalue_quasiParticle_energy",
+      "name": "x_fhi_aims_eigenvalue_quasiparticle_energy",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_list_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_list_perturbativegw"
       ],
       "units": "J"
     }, {
       "description": "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_energy_C_LDA",
+      "name": "x_fhi_aims_energy_c_lda",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_type_C",
+        "energy_type_c",
         "section_single_configuration_calculation"
       ],
       "units": "J"
@@ -1110,11 +1110,11 @@
     }, {
       "description": "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target functional.",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_energy_X_LDA",
+      "name": "x_fhi_aims_energy_x_lda",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_type_X",
+        "energy_type_x",
         "section_single_configuration_calculation"
       ],
       "units": "J"
@@ -1125,7 +1125,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_vdW_TS"
+        "x_fhi_aims_section_vdw_ts"
       ]
     }, {
       "description": "labels of atom",
@@ -1242,7 +1242,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_vdW_TS"
+        "x_fhi_aims_section_vdw_ts"
       ]
     }, {
       "description": "-",
@@ -1251,7 +1251,7 @@
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_vdW_TS"
+        "x_fhi_aims_section_vdw_ts"
       ]
     }, {
       "description": "number of energy values for the density of states (DOS)",
@@ -1402,21 +1402,21 @@
     }, {
       "description": "definition of a single basis function in the basis set",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_controlIn_basis_func",
+      "name": "x_fhi_aims_section_controlin_basis_func",
       "superNames": [
-        "x_fhi_aims_section_controlIn_basis_set"
+        "x_fhi_aims_section_controlin_basis_set"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_controlIn_basis_set",
+      "name": "x_fhi_aims_section_controlin_basis_set",
       "superNames": [
-        "x_fhi_aims_controlIn_method"
+        "x_fhi_aims_controlin_method"
       ]
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_controlInOut_atom_species",
+      "name": "x_fhi_aims_section_controlinout_atom_species",
       "repeats": true,
       "superNames": [
         "section_atom_type"
@@ -1424,10 +1424,10 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_controlInOut_basis_func",
+      "name": "x_fhi_aims_section_controlinout_basis_func",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if section_run is closed. Therefore, this section belongs to section_run.",
@@ -1440,7 +1440,7 @@
     }, {
       "description": "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_group_perturbativeGW",
+      "name": "x_fhi_aims_section_eigenvalues_group_perturbativegw",
       "repeats": false,
       "superNames": [
         "section_single_configuration_calculation"
@@ -1448,10 +1448,10 @@
     }, {
       "description": "section for full list of eigenvalues for different spin and kpoints of scaled ZORA",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_group_ZORA",
+      "name": "x_fhi_aims_section_eigenvalues_group_zora",
       "repeats": false,
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_ZORA"
+        "x_fhi_aims_section_eigenvalues_zora"
       ]
     }, {
       "description": "section for full list of eigenvalues for different spin and kpoints",
@@ -1464,7 +1464,7 @@
     }, {
       "description": "section for one list of eigenvalues from a perturbative GW calculation",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+      "name": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
       "repeats": true,
       "superNames": [
         "x_fhi_aims_section_eigenvalues_spin"
@@ -1472,10 +1472,10 @@
     }, {
       "description": "section for one list of eigenvalues at specific kpoint and spin of scaled ZORA",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_list_ZORA",
+      "name": "x_fhi_aims_section_eigenvalues_list_zora",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_spin_ZORA"
+        "x_fhi_aims_section_eigenvalues_spin_zora"
       ]
     }, {
       "description": "section for one list of eigenvalues at specific kpoint and spin",
@@ -1488,18 +1488,18 @@
     }, {
       "description": "section for one spin orientation from a perturbative GW calculation",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_spin_perturbativeGW",
+      "name": "x_fhi_aims_section_eigenvalues_spin_perturbativegw",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_group_perturbativeGW"
+        "x_fhi_aims_section_eigenvalues_group_perturbativegw"
       ]
     }, {
       "description": "section for one spin orientation of scaled ZORA",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_spin_ZORA",
+      "name": "x_fhi_aims_section_eigenvalues_spin_zora",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_eigenvalues_group_ZORA"
+        "x_fhi_aims_section_eigenvalues_group_zora"
       ]
     }, {
       "description": "section for one spin orientation",
@@ -1512,7 +1512,7 @@
     }, {
       "description": "section for gathering eigenvalues of scaled ZORA",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_eigenvalues_ZORA",
+      "name": "x_fhi_aims_section_eigenvalues_zora",
       "repeats": false,
       "superNames": [
         "section_single_configuration_calculation"
@@ -1520,7 +1520,7 @@
     }, {
       "description": " Section to detect MD immediately during parsing of controlInOut",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_MD_detect",
+      "name": "x_fhi_aims_section_md_detect",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -1545,10 +1545,10 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_fhi_aims_section_vdW_TS",
+      "name": "x_fhi_aims_section_vdw_ts",
       "repeats": true,
       "superNames": [
-        "x_fhi_aims_section_controlInOut_atom_species"
+        "x_fhi_aims_section_controlinout_atom_species"
       ]
     }, {
       "description": "Determines whether a single configuration calculation is converged.",
@@ -1591,11 +1591,11 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_fhi_aims_vdW_energy_corr_TS",
+      "name": "x_fhi_aims_vdw_energy_corr_ts",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_fhi_aims_section_vdW_TS"
+        "x_fhi_aims_section_vdw_ts"
       ],
       "units": "J"
     }, {

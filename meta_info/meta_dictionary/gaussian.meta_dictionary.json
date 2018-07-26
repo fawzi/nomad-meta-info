@@ -332,7 +332,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_gaussian_after_annihilation_spin_S2",
+    "meta_name":"x_gaussian_after_annihilation_spin_s2",
     "meta_type":"type-value",
     "meta_description":[
       "Real value of spin squared resulting from the annihilation of the first spin ",
@@ -671,7 +671,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Self-consistent electronic kinetic energy as defined in ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_component",
@@ -707,7 +707,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Error in the total energy. Defined consistently with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_value",
@@ -960,19 +960,19 @@
     "meta_parent_section":"x_gaussian_section_molmech",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_gaussian_moment_of_inertia_X",
+    "meta_name":"x_gaussian_moment_of_inertia_x",
     "meta_type":"type-value",
     "meta_description":"X component of moment of inertia",
     "meta_parent_section":"x_gaussian_section_thermochem",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_gaussian_moment_of_inertia_Y",
+    "meta_name":"x_gaussian_moment_of_inertia_y",
     "meta_type":"type-value",
     "meta_description":"Y component of moment of inertia",
     "meta_parent_section":"x_gaussian_section_thermochem",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_gaussian_moment_of_inertia_Z",
+    "meta_name":"x_gaussian_moment_of_inertia_z",
     "meta_type":"type-value",
     "meta_description":"Z component of moment of inertia",
     "meta_parent_section":"x_gaussian_section_thermochem",
@@ -1393,7 +1393,7 @@
       "scf_info"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_gaussian_spin_S2",
+    "meta_name":"x_gaussian_spin_s2",
     "meta_type":"type-value",
     "meta_description":"Real value of spin squared.",
     "meta_parent_section":"section_scf_iteration",
@@ -1406,7 +1406,7 @@
     "meta_description":[
       "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the ",
       "total spin. It is an integer value. This value is not necessarly the value ",
-      "obtained at the end of the calculation. See spin_S2 for the converged value of ",
+      "obtained at the end of the calculation. See spin_s2 for the converged value of ",
       "the spin moment."],
     "meta_parent_section":"section_system",
     "meta_data_type":"int"

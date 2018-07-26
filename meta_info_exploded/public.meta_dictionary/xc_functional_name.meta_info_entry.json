@@ -1,19 +1,19 @@
 {
-  "meta_name":"XC_functional_name",
+  "meta_name":"xc_functional_name",
   "meta_type":"type-value",
   "meta_description":[
     "Provides the name of one of the exchange and/or correlation (XC) functionals ",
-    "combined in XC_functional.\n",
+    "combined in xc_functional.\n",
     "\n",
-    "The valid unique names that can be used are listed in the [XC_functional wiki ",
+    "The valid unique names that can be used are listed in the [xc_functional wiki ",
     "page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-fu",
     "nctional).\n",
     "\n",
     "*NOTE*: This value should refer to a correlation, an exchange or an ",
     "exchange-correlation functional only."],
-  "meta_parent_section":"section_XC_functionals",
+  "meta_parent_section":"section_xc_functionals",
   "meta_abstract_types":[
     "settings_physical_parameter",
-    "settings_XC_functional"],
+    "settings_xc_functional"],
   "meta_data_type":"string"
 }

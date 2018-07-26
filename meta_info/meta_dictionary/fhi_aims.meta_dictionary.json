@@ -74,10 +74,10 @@
     "meta_parent_section":"section_atom_projected_dos",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_atom_type_vdW",
+    "meta_name":"x_fhi_aims_atom_type_vdw",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_vdW_TS",
+    "meta_parent_section":"x_fhi_aims_section_vdw_ts",
     "meta_data_type":"string",
     "meta_repeats":true
   },{
@@ -111,289 +111,289 @@
     "meta_parent_section":"section_k_band",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_angular_grids_method",
+    "meta_name":"x_fhi_aims_controlin_angular_grids_method",
     "meta_type":"type-value",
     "meta_description":"angular grids method (specifed or auto)",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_basis_dep_cutoff",
+    "meta_name":"x_fhi_aims_controlin_basis_dep_cutoff",
     "meta_type":"type-value",
     "meta_description":"cutoff for the dependent basis",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_basis_func_l",
+    "meta_name":"x_fhi_aims_controlin_basis_func_l",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_func",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_basis_func_n",
+    "meta_name":"x_fhi_aims_controlin_basis_func_n",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_func",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_basis_func_radius",
+    "meta_name":"x_fhi_aims_controlin_basis_func_radius",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_func",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_basis_func_type",
+    "meta_name":"x_fhi_aims_controlin_basis_func_type",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_func",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_charge",
+    "meta_name":"x_fhi_aims_controlin_charge",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_cut_pot1",
+    "meta_name":"x_fhi_aims_controlin_cut_pot1",
     "meta_type":"type-value",
     "meta_description":"first parameter of cut\\_pot",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_cut_pot2",
+    "meta_name":"x_fhi_aims_controlin_cut_pot2",
     "meta_type":"type-value",
     "meta_description":"second parameter of cut\\_pot",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_cut_pot3",
+    "meta_name":"x_fhi_aims_controlin_cut_pot3",
     "meta_type":"type-value",
     "meta_description":"third parameter of cut\\_pot",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_division1",
+    "meta_name":"x_fhi_aims_controlin_division1",
     "meta_type":"type-value",
     "meta_description":"first parameter of division (position)",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlIn_division2",
+    "meta_name":"x_fhi_aims_controlin_division2",
     "meta_type":"type-value",
     "meta_description":"second parameter of division (n points)",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlIn_hse_omega",
+    "meta_name":"x_fhi_aims_controlin_hse_omega",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional",
-      "x_fhi_aims_controlIn_method"],
+      "settings_xc_functional",
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float",
     "meta_units":"m**-1"
   },{
-    "meta_name":"x_fhi_aims_controlIn_hse_unit",
+    "meta_name":"x_fhi_aims_controlin_hse_unit",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional",
-      "x_fhi_aims_controlIn_method"],
+      "settings_xc_functional",
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_hybrid_xc_coeff",
+    "meta_name":"x_fhi_aims_controlin_hybrid_xc_coeff",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_k1",
+    "meta_name":"x_fhi_aims_controlin_k1",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_k2",
+    "meta_name":"x_fhi_aims_controlin_k2",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_k3",
+    "meta_name":"x_fhi_aims_controlin_k3",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_k_grid",
+    "meta_name":"x_fhi_aims_controlin_k_grid",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int",
     "meta_dimension":[{
       "meta_dimension_fixed":3
     }]
   },{
-    "meta_name":"x_fhi_aims_controlIn_l_hartree",
+    "meta_name":"x_fhi_aims_controlin_l_hartree",
     "meta_type":"type-value",
     "meta_description":"angular leven for the hartreee part",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_mass",
+    "meta_name":"x_fhi_aims_controlin_mass",
     "meta_type":"type-value",
     "meta_description":"mass of the nucleus in atomic mass units",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_MD_time_step",
+    "meta_name":"x_fhi_aims_controlin_md_time_step",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_run",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_run"],
+      "x_fhi_aims_controlin_run"],
     "meta_data_type":"float",
     "meta_units":"s"
   },{
-    "meta_name":"x_fhi_aims_controlIn_method",
+    "meta_name":"x_fhi_aims_controlin_method",
     "meta_type":"type-abstract",
     "meta_description":[
       "Parameters of control.in belonging to section ",
       "method."]
   },{
-    "meta_name":"x_fhi_aims_controlIn_nucleus",
+    "meta_name":"x_fhi_aims_controlin_nucleus",
     "meta_type":"type-value",
     "meta_description":"charge of the nucleus",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_occupation_order",
+    "meta_name":"x_fhi_aims_controlin_occupation_order",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_occupation_type",
+    "meta_name":"x_fhi_aims_controlin_occupation_type",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_occupation_width",
+    "meta_name":"x_fhi_aims_controlin_occupation_width",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_outer_grid",
+    "meta_name":"x_fhi_aims_controlin_outer_grid",
     "meta_type":"type-value",
     "meta_description":"outer grid",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_override_relativity",
+    "meta_name":"x_fhi_aims_controlin_override_relativity",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_relativity",
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_radial_base1",
+    "meta_name":"x_fhi_aims_controlin_radial_base1",
     "meta_type":"type-value",
     "meta_description":"first parameter of radial\\_base",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_radial_base2",
+    "meta_name":"x_fhi_aims_controlin_radial_base2",
     "meta_type":"type-value",
     "meta_description":"second parameter of radial\\_base",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_radial_multiplier",
+    "meta_name":"x_fhi_aims_controlin_radial_multiplier",
     "meta_type":"type-value",
     "meta_description":"radial multiplier",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_relativistic",
+    "meta_name":"x_fhi_aims_controlin_relativistic",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_relativity",
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_relativistic_threshold",
+    "meta_name":"x_fhi_aims_controlin_relativistic_threshold",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_relativity",
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_run",
+    "meta_name":"x_fhi_aims_controlin_run",
     "meta_type":"type-abstract",
     "meta_description":[
       "Parameters of control.in belonging to settings ",
@@ -401,335 +401,335 @@
     "meta_abstract_types":[
       "settings_run"]
   },{
-    "meta_name":"x_fhi_aims_controlIn_sc_accuracy_eev",
+    "meta_name":"x_fhi_aims_controlin_sc_accuracy_eev",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_sc_accuracy_etot",
+    "meta_name":"x_fhi_aims_controlin_sc_accuracy_etot",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_sc_accuracy_forces",
+    "meta_name":"x_fhi_aims_controlin_sc_accuracy_forces",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_sc_accuracy_rho",
+    "meta_name":"x_fhi_aims_controlin_sc_accuracy_rho",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_sc_accuracy_stress",
+    "meta_name":"x_fhi_aims_controlin_sc_accuracy_stress",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlIn_sc_iter_limit",
+    "meta_name":"x_fhi_aims_controlin_sc_iter_limit",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlIn_species_name",
+    "meta_name":"x_fhi_aims_controlin_species_name",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_spin",
+    "meta_name":"x_fhi_aims_controlin_spin",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_verbatim_writeout",
+    "meta_name":"x_fhi_aims_controlin_verbatim_writeout",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlIn_xc",
+    "meta_name":"x_fhi_aims_controlin_xc",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional",
-      "x_fhi_aims_controlIn_method"],
+      "settings_xc_functional",
+      "x_fhi_aims_controlin_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_band_segment_end1",
+    "meta_name":"x_fhi_aims_controlinout_band_segment_end1",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_band_segment_end2",
+    "meta_name":"x_fhi_aims_controlinout_band_segment_end2",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_band_segment_end3",
+    "meta_name":"x_fhi_aims_controlinout_band_segment_end3",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_band_segment_start1",
+    "meta_name":"x_fhi_aims_controlinout_band_segment_start1",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_band_segment_start2",
+    "meta_name":"x_fhi_aims_controlinout_band_segment_start2",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_band_segment_start3",
+    "meta_name":"x_fhi_aims_controlinout_band_segment_start3",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_eff_charge",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_eff_charge",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_gauss_alpha",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_gauss_alpha",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"m**-2"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_gauss_l",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_gauss_l",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"int",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_gauss_N",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_gauss_n",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"int",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_gauss_weight",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_gauss_weight",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_l",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_l",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"string",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_n",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_n",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"int",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_occ",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_occ",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_primitive_gauss_alpha",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_primitive_gauss_alpha",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"m**-2"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_radius",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_radius",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_basis_func_type",
+    "meta_name":"x_fhi_aims_controlinout_basis_func_type",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_basis_func",
     "meta_data_type":"string",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_hse_omega",
+    "meta_name":"x_fhi_aims_controlinout_hse_omega",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional",
-      "x_fhi_aims_controlInOut_method"],
+      "settings_xc_functional",
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float",
     "meta_units":"m**-1"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_hse_unit",
+    "meta_name":"x_fhi_aims_controlinout_hse_unit",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional",
-      "x_fhi_aims_controlInOut_method"],
+      "settings_xc_functional",
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_hybrid_xc_coeff",
+    "meta_name":"x_fhi_aims_controlinout_hybrid_xc_coeff",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_k1",
+    "meta_name":"x_fhi_aims_controlinout_k1",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_k2",
+    "meta_name":"x_fhi_aims_controlinout_k2",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_k3",
+    "meta_name":"x_fhi_aims_controlinout_k3",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_k_grid",
+    "meta_name":"x_fhi_aims_controlinout_k_grid",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"int",
     "meta_dimension":[{
       "meta_dimension_fixed":3
     }]
   },{
-    "meta_name":"x_fhi_aims_controlInOut_MD_time_step",
+    "meta_name":"x_fhi_aims_controlinout_md_time_step",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_run",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_run"],
+      "x_fhi_aims_controlinout_run"],
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"s"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_method",
+    "meta_name":"x_fhi_aims_controlinout_method",
     "meta_type":"type-abstract",
     "meta_description":[
       "Parameters of aims output of parsed control.in belonging to section ",
       "method."]
   },{
-    "meta_name":"x_fhi_aims_controlInOut_number_of_spin_channels",
+    "meta_name":"x_fhi_aims_controlinout_number_of_spin_channels",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_override_relativity",
+    "meta_name":"x_fhi_aims_controlinout_override_relativity",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_relativity",
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_pure_gaussian",
+    "meta_name":"x_fhi_aims_controlinout_pure_gaussian",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"string",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_relativistic",
+    "meta_name":"x_fhi_aims_controlinout_relativistic",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_relativity",
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_relativistic_threshold",
+    "meta_name":"x_fhi_aims_controlinout_relativistic_threshold",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_relativity",
-      "x_fhi_aims_controlInOut_method"],
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_run",
+    "meta_name":"x_fhi_aims_controlinout_run",
     "meta_type":"type-abstract",
     "meta_description":[
       "Parameters of aims output of parsed control.in belonging to settings ",
@@ -737,56 +737,56 @@
     "meta_abstract_types":[
       "settings_run"]
   },{
-    "meta_name":"x_fhi_aims_controlInOut_species_charge",
+    "meta_name":"x_fhi_aims_controlinout_species_charge",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_species_cut_pot",
+    "meta_name":"x_fhi_aims_controlinout_species_cut_pot",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_species_cut_pot_scale",
+    "meta_name":"x_fhi_aims_controlinout_species_cut_pot_scale",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_species_cut_pot_width",
+    "meta_name":"x_fhi_aims_controlinout_species_cut_pot_width",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_species_mass",
+    "meta_name":"x_fhi_aims_controlinout_species_mass",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"kg"
   },{
-    "meta_name":"x_fhi_aims_controlInOut_species_name",
+    "meta_name":"x_fhi_aims_controlinout_species_name",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_data_type":"string",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_controlInOut_xc",
+    "meta_name":"x_fhi_aims_controlinout_xc",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional",
-      "x_fhi_aims_controlInOut_method"],
+      "settings_xc_functional",
+      "x_fhi_aims_controlinout_method"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_fhi_aims_cube_filename",
@@ -839,12 +839,12 @@
       "meta_dimension_symbolic":"x_fhi_aims_n_dos_values"
     }]
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_correlation_perturbativeGW",
+    "meta_name":"x_fhi_aims_eigenvalue_correlation_perturbativegw",
     "meta_type":"type-value",
     "meta_description":[
       "Correlation energy at a given eigenstate from perturbative ",
       "GW"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_abstract_types":[
       "scf_info"],
     "meta_data_type":"float",
@@ -861,20 +861,20 @@
     "meta_repeats":true,
     "meta_units":"J"
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_eigenvalue_ZORA",
+    "meta_name":"x_fhi_aims_eigenvalue_eigenvalue_zora",
     "meta_type":"type-value",
     "meta_description":"Single eigenvalue of scaled ZORA",
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_zora",
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"J"
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_ExactExchange_perturbativeGW",
+    "meta_name":"x_fhi_aims_eigenvalue_exactexchange_perturbativegw",
     "meta_type":"type-value",
     "meta_description":[
       "Exact exchange energy at given eigenstate from perturbative ",
       "GW"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_abstract_types":[
       "scf_info"],
     "meta_data_type":"float",
@@ -892,12 +892,12 @@
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_kpoint1_ZORA",
+    "meta_name":"x_fhi_aims_eigenvalue_kpoint1_zora",
     "meta_type":"type-value",
     "meta_description":[
       "Component 1 of kpoints on which the eigenvalues were evaluated of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_zora",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
@@ -912,12 +912,12 @@
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_kpoint2_ZORA",
+    "meta_name":"x_fhi_aims_eigenvalue_kpoint2_zora",
     "meta_type":"type-value",
     "meta_description":[
       "Component 2 of kpoints on which the eigenvalues were evaluated of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_zora",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
@@ -932,33 +932,33 @@
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_kpoint3_ZORA",
+    "meta_name":"x_fhi_aims_eigenvalue_kpoint3_zora",
     "meta_type":"type-value",
     "meta_description":[
       "Component 3 of kpoints on which the eigenvalues were evaluated of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_zora",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_ks_ExchangeCorrelation",
+    "meta_name":"x_fhi_aims_eigenvalue_ks_exchangecorrelation",
     "meta_type":"type-value",
     "meta_description":[
       "KS exchange correlation energy at a given eigenstate needed to calculate the ",
       "quasi-particle energy in perturbative GW"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_abstract_types":[
       "scf_info"],
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"J"
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_ks_GroundState",
+    "meta_name":"x_fhi_aims_eigenvalue_ks_groundstate",
     "meta_type":"type-value",
     "meta_description":[
       "KS ground state energy at a given eigenstate needed in perturbative ",
       "GW"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_abstract_types":[
       "scf_info"],
     "meta_data_type":"float",
@@ -974,46 +974,46 @@
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_occupation_perturbativeGW",
+    "meta_name":"x_fhi_aims_eigenvalue_occupation_perturbativegw",
     "meta_type":"type-value",
     "meta_description":[
       "Occupation of single eigenfunction of perturbative ",
       "GW"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_abstract_types":[
       "scf_info"],
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_occupation_ZORA",
+    "meta_name":"x_fhi_aims_eigenvalue_occupation_zora",
     "meta_type":"type-value",
     "meta_description":[
       "Occupation of single eigenfunction of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_zora",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_fhi_aims_eigenvalue_quasiParticle_energy",
+    "meta_name":"x_fhi_aims_eigenvalue_quasiparticle_energy",
     "meta_type":"type-value",
     "meta_description":[
       "Quasiparticle energy at a given eigenstate from perturbative ",
       "GW"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_abstract_types":[
       "scf_info"],
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"J"
   },{
-    "meta_name":"x_fhi_aims_energy_C_LDA",
+    "meta_name":"x_fhi_aims_energy_c_lda",
     "meta_type":"type-value",
     "meta_description":[
       "Component of the correlation (C) energy at the LDA level calculated with the ",
       "self consistent density of the target functional."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_C"],
+      "energy_type_c"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
@@ -1040,21 +1040,21 @@
     "meta_repeats":true,
     "meta_units":"J"
   },{
-    "meta_name":"x_fhi_aims_energy_X_LDA",
+    "meta_name":"x_fhi_aims_energy_x_lda",
     "meta_type":"type-value",
     "meta_description":[
       "Component of the exchange (X) energy at the LDA level calculated with the self ",
       "consistent density of the target functional."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_X"],
+      "energy_type_x"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
     "meta_name":"x_fhi_aims_free_atom_volume",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_vdW_TS",
+    "meta_parent_section":"x_fhi_aims_section_vdw_ts",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
@@ -1148,14 +1148,14 @@
     "meta_name":"x_fhi_aims_hirschfeld_charge",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_vdW_TS",
+    "meta_parent_section":"x_fhi_aims_section_vdw_ts",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
     "meta_name":"x_fhi_aims_hirschfeld_volume",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_vdW_TS",
+    "meta_parent_section":"x_fhi_aims_section_vdw_ts",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
@@ -1288,37 +1288,37 @@
     "meta_repeats":true,
     "meta_units":"J"
   },{
-    "meta_name":"x_fhi_aims_section_controlIn_basis_func",
+    "meta_name":"x_fhi_aims_section_controlin_basis_func",
     "meta_type":"type-section",
     "meta_description":[
       "definition of a single basis function in the basis ",
       "set"],
-    "meta_parent_section":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_parent_section":"x_fhi_aims_section_controlin_basis_set",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_controlIn_basis_set",
+    "meta_name":"x_fhi_aims_section_controlin_basis_set",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "x_fhi_aims_controlIn_method"],
+      "x_fhi_aims_controlin_method"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_name":"x_fhi_aims_section_controlinout_atom_species",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_atom_type",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_controlInOut_basis_func",
+    "meta_name":"x_fhi_aims_section_controlinout_basis_func",
     "meta_type":"type-section",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1345,7 +1345,7 @@
     "meta_repeats":false,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_group_perturbativeGW",
+    "meta_name":"x_fhi_aims_section_eigenvalues_group_perturbativegw",
     "meta_type":"type-section",
     "meta_description":[
       "section for full list of eigenvalues for different spin and kpoints from a ",
@@ -1354,12 +1354,12 @@
     "meta_repeats":false,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_group_ZORA",
+    "meta_name":"x_fhi_aims_section_eigenvalues_group_zora",
     "meta_type":"type-section",
     "meta_description":[
       "section for full list of eigenvalues for different spin and kpoints of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_zora",
     "meta_repeats":false,
     "meta_context_identifier":[]
   },{
@@ -1374,7 +1374,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_list_perturbativeGW",
+    "meta_name":"x_fhi_aims_section_eigenvalues_list_perturbativegw",
     "meta_type":"type-section",
     "meta_description":[
       "section for one list of eigenvalues from a perturbative GW ",
@@ -1385,12 +1385,12 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_list_ZORA",
+    "meta_name":"x_fhi_aims_section_eigenvalues_list_zora",
     "meta_type":"type-section",
     "meta_description":[
       "section for one list of eigenvalues at specific kpoint and spin of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_spin_zora",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1403,25 +1403,25 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_spin_perturbativeGW",
+    "meta_name":"x_fhi_aims_section_eigenvalues_spin_perturbativegw",
     "meta_type":"type-section",
     "meta_description":[
       "section for one spin orientation from a perturbative GW ",
       "calculation"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_group_perturbativeGW",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_group_perturbativegw",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_spin_ZORA",
+    "meta_name":"x_fhi_aims_section_eigenvalues_spin_zora",
     "meta_type":"type-section",
     "meta_description":[
       "section for one spin orientation of scaled ",
       "ZORA"],
-    "meta_parent_section":"x_fhi_aims_section_eigenvalues_group_ZORA",
+    "meta_parent_section":"x_fhi_aims_section_eigenvalues_group_zora",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_eigenvalues_ZORA",
+    "meta_name":"x_fhi_aims_section_eigenvalues_zora",
     "meta_type":"type-section",
     "meta_description":[
       "section for gathering eigenvalues of scaled ",
@@ -1430,7 +1430,7 @@
     "meta_repeats":false,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_MD_detect",
+    "meta_name":"x_fhi_aims_section_md_detect",
     "meta_type":"type-section",
     "meta_description":[
       " Section to detect MD immediately during parsing of ",
@@ -1453,10 +1453,10 @@
     "meta_repeats":false,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_fhi_aims_section_vdW_TS",
+    "meta_name":"x_fhi_aims_section_vdw_ts",
     "meta_type":"type-section",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_controlInOut_atom_species",
+    "meta_parent_section":"x_fhi_aims_section_controlinout_atom_species",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -1493,10 +1493,10 @@
     "meta_parent_section":"section_species_projected_dos",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_fhi_aims_vdW_energy_corr_TS",
+    "meta_name":"x_fhi_aims_vdw_energy_corr_ts",
     "meta_type":"type-value",
     "meta_description":"-",
-    "meta_parent_section":"x_fhi_aims_section_vdW_TS",
+    "meta_parent_section":"x_fhi_aims_section_vdw_ts",
     "meta_data_type":"float",
     "meta_repeats":true,
     "meta_units":"J"

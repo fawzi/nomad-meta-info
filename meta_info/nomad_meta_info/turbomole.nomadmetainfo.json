@@ -7,7 +7,7 @@
   "metaInfos": [ {
       "description": "The label of the atoms in the system",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_atom_label",
+      "name": "x_turbomole_controlin_atom_label",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -16,7 +16,7 @@
     }, {
       "description": "The number of atoms in the system",
       "dtypeStr": "f",
-      "name": "x_turbomole_controlIn_atom_number",
+      "name": "x_turbomole_controlin_atom_number",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -25,7 +25,7 @@
     }, {
       "description": "Status mean here ON or OFF",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_basis_status",
+      "name": "x_turbomole_controlin_basis_status",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -34,7 +34,7 @@
     }, {
       "description": "Status mean here ON or OFF",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_cartesian_status",
+      "name": "x_turbomole_controlin_cartesian_status",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -43,7 +43,7 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_turbomole_controlIn_damping_parameter_min",
+      "name": "x_turbomole_controlin_damping_parameter_min",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -52,7 +52,7 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_turbomole_controlIn_damping_parameter_start",
+      "name": "x_turbomole_controlin_damping_parameter_start",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -61,7 +61,7 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_turbomole_controlIn_damping_parameter_step",
+      "name": "x_turbomole_controlin_damping_parameter_step",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -70,7 +70,7 @@
     }, {
       "description": "Status mean here ON or OFF",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_dipole_status",
+      "name": "x_turbomole_controlin_dipole_status",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -79,7 +79,7 @@
     }, {
       "description": "Status mean here ON or OFF",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_global_status",
+      "name": "x_turbomole_controlin_global_status",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -88,7 +88,7 @@
     }, {
       "description": "Status mean here ON or OFF",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_hessian_status",
+      "name": "x_turbomole_controlin_hessian_status",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -97,7 +97,7 @@
     }, {
       "description": "Status mean here ON or OFF",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_interconversion_status",
+      "name": "x_turbomole_controlin_interconversion_status",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -106,7 +106,7 @@
     }, {
       "description": "-",
       "dtypeStr": "f",
-      "name": "x_turbomole_controlIn_number_of_integral_stored",
+      "name": "x_turbomole_controlin_number_of_integral_stored",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -115,7 +115,7 @@
     }, {
       "description": "The kind of operating system",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_operating_system",
+      "name": "x_turbomole_controlin_operating_system",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -124,7 +124,7 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_pople_kind",
+      "name": "x_turbomole_controlin_pople_kind",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -133,7 +133,7 @@
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlIn_scf_conv",
+      "name": "x_turbomole_controlin_scf_conv",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -142,7 +142,7 @@
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlIn_scf_iter_limit",
+      "name": "x_turbomole_controlin_scf_iter_limit",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -151,7 +151,7 @@
     }, {
       "description": "-",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_scfintunit_file",
+      "name": "x_turbomole_controlin_scfintunit_file",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -160,7 +160,7 @@
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlIn_scfintunit_size",
+      "name": "x_turbomole_controlin_scfintunit_size",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -169,7 +169,7 @@
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlIn_scfintunit_unit",
+      "name": "x_turbomole_controlin_scfintunit_unit",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -178,7 +178,7 @@
     }, {
       "description": "The given symmetry of the system",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlIn_symmetry",
+      "name": "x_turbomole_controlin_symmetry",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -187,7 +187,7 @@
     }, {
       "description": "-",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlIn_time_for_integral_calc",
+      "name": "x_turbomole_controlin_time_for_integral_calc",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -196,7 +196,7 @@
     }, {
       "description": "The integration cells",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_grid_integration_cells",
+      "name": "x_turbomole_controlinout_grid_integration_cells",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -205,7 +205,7 @@
     }, {
       "description": "type of the used grid integration",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_grid_integration",
+      "name": "x_turbomole_controlinout_grid_integration",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -214,7 +214,7 @@
     }, {
       "description": "Type of the partition function used",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_grid_partition_func",
+      "name": "x_turbomole_controlinout_grid_partition_func",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -223,7 +223,7 @@
     }, {
       "description": "Sharpness of the partition function",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_grid_partition_sharpness",
+      "name": "x_turbomole_controlinout_grid_partition_sharpness",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -232,7 +232,7 @@
     }, {
       "description": "Grid points number",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_grid_points_number",
+      "name": "x_turbomole_controlinout_grid_points_number",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -241,7 +241,7 @@
     }, {
       "description": "The size of the radial grid",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_grid_radial_grid_size",
+      "name": "x_turbomole_controlinout_grid_radial_grid_size",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -250,7 +250,7 @@
     }, {
       "description": "The radial integration type",
       "dtypeStr": "C",
-      "name": "x_turbomole_controlInOut_grid_radial_integration",
+      "name": "x_turbomole_controlinout_grid_radial_integration",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -259,7 +259,7 @@
     }, {
       "description": "The size of the used grid",
       "dtypeStr": "i",
-      "name": "x_turbomole_controlInOut_grid_size",
+      "name": "x_turbomole_controlinout_grid_size",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -294,61 +294,61 @@
     }, {
       "description": "Correlation energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalue_correlation_perturbativeGW",
+      "name": "x_turbomole_eigenvalue_correlation_perturbativegw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ],
       "units": "J"
     }, {
       "description": "Exact exchange energy at given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalue_ExactExchange_perturbativeGW",
+      "name": "x_turbomole_eigenvalue_exactexchange_perturbativegw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ],
       "units": "J"
     }, {
       "description": "Self-energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalue_ExchangeCorrelation_perturbativeGW",
+      "name": "x_turbomole_eigenvalue_exchangecorrelation_perturbativegw",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ],
       "units": "J"
     }, {
       "description": "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative GW",
       "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalue_ks_ExchangeCorrelation",
+      "name": "x_turbomole_eigenvalue_ks_exchangecorrelation",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ],
       "units": "J"
     }, {
       "description": "KS ground state energy at a given eigenstate needed in perturbative GW",
       "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalue_ks_GroundState",
+      "name": "x_turbomole_eigenvalue_ks_groundstate",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ],
       "units": "J"
     }, {
       "description": "Quasiparticle energy at a given eigenstate from perturbative GW",
       "dtypeStr": "f",
-      "name": "x_turbomole_eigenvalue_quasiParticle_energy",
+      "name": "x_turbomole_eigenvalue_quasiparticle_energy",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ],
       "units": "J"
     }, {
@@ -386,11 +386,11 @@
     }, {
       "description": "TODO:",
       "dtypeStr": "f",
-      "name": "x_turbomole_ExchangeCorrelation_perturbativeGW_derivation",
+      "name": "x_turbomole_exchangecorrelation_perturbativegw_derivation",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ]
     }, {
       "description": "type of the used correlation functional",
@@ -468,7 +468,7 @@
       "shape": [],
       "superNames": [
         "section_method",
-        "settings_GW"
+        "settings_gw"
       ]
     }, {
       "description": "[TO BE VERIFIED]Infinitesimal complex energy shift. Negative value switches to calculating at that value but extrapolating to 0 in linear approximation.",
@@ -478,7 +478,7 @@
       "shape": [],
       "superNames": [
         "section_method",
-        "settings_GW"
+        "settings_gw"
       ],
       "units": "J"
     }, {
@@ -488,7 +488,7 @@
       "shape": [],
       "superNames": [
         "section_method",
-        "settings_GW"
+        "settings_gw"
       ]
     }, {
       "description": "The name of the Turbomole module used for this single configuration calculation.",
@@ -594,7 +594,7 @@
     }, {
       "description": "section for the eigenvalues of a GW calculation (at present only pertubative G0W0)",
       "kindStr": "type_section",
-      "name": "x_turbomole_section_eigenvalues_GW",
+      "name": "x_turbomole_section_eigenvalues_gw",
       "repeats": true,
       "superNames": [
         "section_eigenvalues"
@@ -695,7 +695,7 @@
     }, {
       "description": "XC functional type",
       "dtypeStr": "C",
-      "name": "x_turbomole_XC_functional_type",
+      "name": "x_turbomole_xc_functional_type",
       "repeats": true,
       "superNames": [
         "x_turbomole_section_functionals"
@@ -703,11 +703,11 @@
     }, {
       "description": "TODO:",
       "dtypeStr": "f",
-      "name": "x_turbomole_Z_factor",
+      "name": "x_turbomole_z_factor",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_turbomole_section_eigenvalues_GW"
+        "x_turbomole_section_eigenvalues_gw"
       ]
     }]
 }

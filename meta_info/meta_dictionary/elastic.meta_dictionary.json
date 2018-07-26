@@ -126,27 +126,27 @@
       "meta_dimension_symbolic":"x_elastic_number_of_deformations"
     }]
   },{
-    "meta_name":"x_elastic_Hill_bulk_modulus",
+    "meta_name":"x_elastic_hill_bulk_modulus",
     "meta_type":"type-value",
     "meta_description":"Hill bulk modulus",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"Pa"
   },{
-    "meta_name":"x_elastic_Hill_Poisson_ratio",
+    "meta_name":"x_elastic_hill_poisson_ratio",
     "meta_type":"type-value",
     "meta_description":"Hill Poisson ratio",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_elastic_Hill_shear_modulus",
+    "meta_name":"x_elastic_hill_shear_modulus",
     "meta_type":"type-value",
     "meta_description":"Hill shear modulus",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"Pa"
   },{
-    "meta_name":"x_elastic_Hill_Young_modulus",
+    "meta_name":"x_elastic_hill_young_modulus",
     "meta_type":"type-value",
     "meta_description":"Hill Young modulus",
     "meta_parent_section":"section_single_configuration_calculation",
@@ -178,27 +178,27 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_elastic_Reuss_bulk_modulus",
+    "meta_name":"x_elastic_reuss_bulk_modulus",
     "meta_type":"type-value",
     "meta_description":"Reuss bulk modulus",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"Pa"
   },{
-    "meta_name":"x_elastic_Reuss_Poisson_ratio",
+    "meta_name":"x_elastic_reuss_poisson_ratio",
     "meta_type":"type-value",
     "meta_description":"Reuss Poisson ratio",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_elastic_Reuss_shear_modulus",
+    "meta_name":"x_elastic_reuss_shear_modulus",
     "meta_type":"type-value",
     "meta_description":"Reuss shear modulus",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"Pa"
   },{
-    "meta_name":"x_elastic_Reuss_Young_modulus",
+    "meta_name":"x_elastic_reuss_young_modulus",
     "meta_type":"type-value",
     "meta_description":"Reuss Young modulus",
     "meta_parent_section":"section_single_configuration_calculation",
@@ -254,7 +254,7 @@
     "meta_parent_section":"x_elastic_section_strain_diagrams",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_elastic_strain_diagram_stress_Voigt_component",
+    "meta_name":"x_elastic_strain_diagram_stress_voigt_component",
     "meta_type":"type-value",
     "meta_description":[
       "Voigt component of the deformation for the stress ",
@@ -291,27 +291,27 @@
     "meta_parent_section":"section_system",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_elastic_Voigt_bulk_modulus",
+    "meta_name":"x_elastic_voigt_bulk_modulus",
     "meta_type":"type-value",
     "meta_description":"Voigt bulk modulus",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"Pa"
   },{
-    "meta_name":"x_elastic_Voigt_Poisson_ratio",
+    "meta_name":"x_elastic_voigt_poisson_ratio",
     "meta_type":"type-value",
     "meta_description":"Voigt Poisson ratio",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_elastic_Voigt_shear_modulus",
+    "meta_name":"x_elastic_voigt_shear_modulus",
     "meta_type":"type-value",
     "meta_description":"Voigt shear modulus",
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"Pa"
   },{
-    "meta_name":"x_elastic_Voigt_Young_modulus",
+    "meta_name":"x_elastic_voigt_young_modulus",
     "meta_type":"type-value",
     "meta_description":"Voigt Young modulus",
     "meta_parent_section":"section_single_configuration_calculation",
@@ -369,7 +369,7 @@
     "meta_repeats":true,
     "meta_units":"m"
   },{
-    "meta_name":"x_elastic_wien2k_atomic_number_Z",
+    "meta_name":"x_elastic_wien2k_atomic_number_z",
     "meta_type":"type-value",
     "meta_description":"wien2k: atomic number Z",
     "meta_parent_section":"x_elastic_wien2k_section_equiv_atoms",
@@ -392,21 +392,21 @@
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_elastic_wien2k_NPT",
+    "meta_name":"x_elastic_wien2k_npt",
     "meta_type":"type-value",
     "meta_description":"wien2k: number of radial mesh points",
     "meta_parent_section":"x_elastic_wien2k_section_equiv_atoms",
     "meta_data_type":"int",
     "meta_repeats":true
   },{
-    "meta_name":"x_elastic_wien2k_R0",
+    "meta_name":"x_elastic_wien2k_r0",
     "meta_type":"type-value",
     "meta_description":"wien2k: first radial mesh point",
     "meta_parent_section":"x_elastic_wien2k_section_equiv_atoms",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_elastic_wien2k_RMT",
+    "meta_name":"x_elastic_wien2k_rmt",
     "meta_type":"type-value",
     "meta_description":[
       "wien2k: atomic sphere radius (muffin-tin ",
@@ -424,7 +424,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_elastic_wien2k_system_nameIn",
+    "meta_name":"x_elastic_wien2k_system_namein",
     "meta_type":"type-value",
     "meta_description":[
       "wien2k: user given name for this system given in the struct ",

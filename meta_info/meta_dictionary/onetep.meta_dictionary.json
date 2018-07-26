@@ -328,7 +328,7 @@
     "meta_parent_section":"x_onetep_section_density_mixing_parameters",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_onetep_DFPT_solver_method",
+    "meta_name":"x_onetep_dfpt_solver_method",
     "meta_type":"type-value",
     "meta_description":"Phonon DFPT solver method",
     "meta_parent_section":"x_onetep_section_phonons",
@@ -337,13 +337,13 @@
     "meta_name":"x_onetep_disp_method_name",
     "meta_type":"type-value",
     "meta_description":"Name type",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"string"
   },{
     "meta_name":"x_onetep_disp_method_name_store",
     "meta_type":"type-value",
     "meta_description":"Name type",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"string"
   },{
     "meta_name":"x_onetep_dispersion_correction",
@@ -358,7 +358,7 @@
     "meta_parent_section":"x_onetep_section_energy_components",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_edft_0K",
+    "meta_name":"x_onetep_edft_0k",
     "meta_type":"type-value",
     "meta_description":"step",
     "meta_parent_section":"x_onetep_section_edft_iterations",
@@ -602,7 +602,7 @@
       "meta_dimension_fixed":-1
     }]
   },{
-    "meta_name":"x_onetep_energy_XC_store",
+    "meta_name":"x_onetep_energy_xc_store",
     "meta_type":"type-value",
     "meta_description":"exchange energy store",
     "meta_parent_section":"x_onetep_section_energy_components",
@@ -661,7 +661,7 @@
     "meta_name":"x_onetep_frame_energy_free",
     "meta_type":"type-value",
     "meta_description":"energy_free",
-    "meta_parent_section":"x_onetep_section_SCF_iteration_frame",
+    "meta_parent_section":"x_onetep_section_scf_iteration_frame",
     "meta_data_type":"float"
   },{
     "meta_name":"x_onetep_frame_energy_tolerance",
@@ -670,10 +670,10 @@
     "meta_parent_section":"section_sampling_method",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_frame_energy_total_T0",
+    "meta_name":"x_onetep_frame_energy_total_t0",
     "meta_type":"type-value",
     "meta_description":"energy_free_corrected_for_finite_basis",
-    "meta_parent_section":"x_onetep_section_SCF_iteration_frame",
+    "meta_parent_section":"x_onetep_section_scf_iteration_frame",
     "meta_data_type":"float"
   },{
     "meta_name":"x_onetep_frame_pressure",
@@ -685,7 +685,7 @@
     "meta_name":"x_onetep_frame_time",
     "meta_type":"type-value",
     "meta_description":"onetep_store_t_md_frame",
-    "meta_parent_section":"x_onetep_section_SCF_iteration_frame",
+    "meta_parent_section":"x_onetep_section_scf_iteration_frame",
     "meta_data_type":"float"
   },{
     "meta_name":"x_onetep_frame_time_0",
@@ -697,7 +697,7 @@
     "meta_name":"x_onetep_frame_time_scf_iteration_wall_end",
     "meta_type":"type-value",
     "meta_description":"energy_frame_wall_end_time",
-    "meta_parent_section":"x_onetep_section_SCF_iteration_frame",
+    "meta_parent_section":"x_onetep_section_scf_iteration_frame",
     "meta_data_type":"string"
   },{
     "meta_name":"x_onetep_frequency",
@@ -1340,34 +1340,34 @@
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_onetep_Parameter_d",
+    "meta_name":"x_onetep_parameter_d",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method G06",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_Parameter_LAMBDA",
+    "meta_name":"x_onetep_parameter_lambda",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method OBS",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_Parameter_n",
+    "meta_name":"x_onetep_parameter_n",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method OBS",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_Parameter_s6",
+    "meta_name":"x_onetep_parameter_s6",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method G06",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_Parameter_sR",
+    "meta_name":"x_onetep_parameter_sr",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method TS",
-    "meta_parent_section":"x_onetep_section_van_der_Waals_parameters",
+    "meta_parent_section":"x_onetep_section_van_der_waals_parameters",
     "meta_data_type":"float"
   },{
     "meta_name":"x_onetep_pbc_cutoff",
@@ -1514,16 +1514,16 @@
     "meta_parent_section":"x_onetep_section_kernel_optimisation",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_onetep_SCF_frame_energy",
+    "meta_name":"x_onetep_scf_frame_energy",
     "meta_type":"type-value",
     "meta_description":"energy_frame_iterations",
-    "meta_parent_section":"x_onetep_section_SCF_iteration_frame",
+    "meta_parent_section":"x_onetep_section_scf_iteration_frame",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_onetep_SCF_frame_energy_gain",
+    "meta_name":"x_onetep_scf_frame_energy_gain",
     "meta_type":"type-value",
     "meta_description":"energy_frame_iterations_gain",
-    "meta_parent_section":"x_onetep_section_SCF_iteration_frame",
+    "meta_parent_section":"x_onetep_section_scf_iteration_frame",
     "meta_data_type":"string"
   },{
     "meta_name":"x_onetep_scf_rms_gradient",
@@ -1787,7 +1787,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_onetep_section_SCF_iteration_frame",
+    "meta_name":"x_onetep_section_scf_iteration_frame",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_run",
@@ -1906,7 +1906,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_onetep_section_van_der_Waals_parameters",
+    "meta_name":"x_onetep_section_van_der_waals_parameters",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_run",

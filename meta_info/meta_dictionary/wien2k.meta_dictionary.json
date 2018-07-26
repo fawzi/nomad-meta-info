@@ -66,7 +66,7 @@
     "meta_repeats":true,
     "meta_units":"m"
   },{
-    "meta_name":"x_wien2k_atomic_number_Z",
+    "meta_name":"x_wien2k_atomic_number_z",
     "meta_type":"type-value",
     "meta_description":"atomic number Z",
     "meta_parent_section":"x_wien2k_section_equiv_atoms",
@@ -164,7 +164,7 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"x_wien2k_ene_gap_eV",
+    "meta_name":"x_wien2k_ene_gap_ev",
     "meta_type":"type-value",
     "meta_description":"energy gap in eV",
     "meta_parent_section":"section_scf_iteration",
@@ -360,7 +360,7 @@
     "meta_name":"x_wien2k_indxc",
     "meta_type":"type-value",
     "meta_description":"exchange-correlation potential, in in0",
-    "meta_parent_section":"x_wien2k_section_XC",
+    "meta_parent_section":"x_wien2k_section_xc",
     "meta_data_type":"string"
   },{
     "meta_name":"x_wien2k_iprint",
@@ -401,7 +401,7 @@
       "scf_info"],
     "meta_data_type":"float"
   },{
-    "meta_name":"x_wien2k_LOs",
+    "meta_name":"x_wien2k_los",
     "meta_type":"type-value",
     "meta_description":"LOs",
     "meta_parent_section":"section_scf_iteration",
@@ -466,7 +466,7 @@
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_wien2k_NPT",
+    "meta_name":"x_wien2k_npt",
     "meta_type":"type-value",
     "meta_description":"number of radial mesh points",
     "meta_parent_section":"x_wien2k_section_equiv_atoms",
@@ -511,7 +511,7 @@
       "scf_info"],
     "meta_data_type":"int"
   },{
-    "meta_name":"x_wien2k_R0",
+    "meta_name":"x_wien2k_r0",
     "meta_type":"type-value",
     "meta_description":"first radial mesh point",
     "meta_parent_section":"x_wien2k_section_equiv_atoms",
@@ -541,7 +541,7 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_wien2k_RMT",
+    "meta_name":"x_wien2k_rmt",
     "meta_type":"type-value",
     "meta_description":"atomic sphere radius (muffin-tin radius)",
     "meta_parent_section":"x_wien2k_section_equiv_atoms",
@@ -557,7 +557,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_wien2k_section_XC",
+    "meta_name":"x_wien2k_section_xc",
     "meta_type":"type-section",
     "meta_description":"exchange-correlation potential, in in0",
     "meta_parent_section":"section_method",
@@ -605,7 +605,7 @@
       "scf_info"],
     "meta_data_type":"string"
   },{
-    "meta_name":"x_wien2k_system_nameIn",
+    "meta_name":"x_wien2k_system_namein",
     "meta_type":"type-value",
     "meta_description":[
       "user given name for this system given in the struct ",

@@ -144,10 +144,10 @@
     "meta_repeats":true,
     "meta_units":"N"
   },{
-    "meta_name":"atom_forces_T0",
+    "meta_name":"atom_forces_t0",
     "meta_type":"type-value",
     "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, ",
+      "Forces acting on the atoms, calculated as minus gradient of energy_total_t0, ",
       "**including** constraints, if present. The derivatives with respect to ",
       "displacements of the nuclei are evaluated in Cartesian coordinates. In ",
       "addition, these forces are obtained by filtering out the unitary ",
@@ -168,17 +168,17 @@
     "meta_repeats":true,
     "meta_units":"N"
   },{
-    "meta_name":"atom_forces_T0_raw",
+    "meta_name":"atom_forces_t0_raw",
     "meta_type":"type-value",
     "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, ",
+      "Forces acting on the atoms, calculated as minus gradient of energy_total_t0, ",
       "**without** constraints. The derivatives with respect to displacements of the ",
       "nuclei are evaluated in Cartesian coordinates. These forces may contain unitary ",
       "transformations (center-of-mass translations and rigid rotations for ",
-      "non-periodic systems) that are normally filtered separately (see atom_forces_T0 ",
+      "non-periodic systems) that are normally filtered separately (see atom_forces_t0 ",
       "for the filtered counterpart). Forces due to constraints such as fixed atoms, ",
       "distances, angles, dihedrals, etc. are also considered separately (see ",
-      "atom_forces_T0 for the filtered counterpart)."],
+      "atom_forces_t0 for the filtered counterpart)."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "atom_forces_type"],
@@ -616,7 +616,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Unique string identifying the basis set used for the final wavefunctions ",
-      "calculated with XC_method. It might identify a class of basis sets, often ",
+      "calculated with xc_method. It might identify a class of basis sets, often ",
       "matches one of the strings given in any of ",
       "basis_set_name."],
     "meta_parent_section":"section_method",
@@ -835,7 +835,7 @@
       "method is perturbative, this string does not describe the starting point ",
       "method, the latter being referenced to by section_method_to_method_refs. For ",
       "self-consistent field (SCF) ab initio calculations, for example, this is ",
-      "composed by concatenating XC_method_current and basis_set. See ",
+      "composed by concatenating xc_method_current and basis_set. See ",
       "[calculation_method_current wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nom",
       "ad-meta-info/wikis/metainfo/calculation-method-current) for the ",
       "details."],
@@ -1259,7 +1259,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Self-consistent electronic kinetic energy as defined in ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component"],
@@ -1269,7 +1269,7 @@
     "meta_name":"electronic_kinetic_energy_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
-      "Electronic kinetic energy as defined in XC_method during the self-consistent ",
+      "Electronic kinetic energy as defined in xc_method during the self-consistent ",
       "field (SCF) iterations."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -1289,7 +1289,7 @@
       "electronic-structure-method)."],
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC"],
+      "settings_xc"],
     "meta_data_type":"string"
   },{
     "meta_name":"embedded_system",
@@ -1300,14 +1300,14 @@
       "configuration_core"],
     "meta_data_type":"boolean"
   },{
-    "meta_name":"energy_C",
+    "meta_name":"energy_c",
     "meta_type":"type-value",
     "meta_description":[
       "Correlation (C) energy calculated with the method described in ",
-      "XC_functional."],
+      "xc_functional."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_C"],
+      "energy_type_c"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
@@ -1371,7 +1371,7 @@
       "Entropy correction to the potential energy to compensate for the change in ",
       "occupation so that forces at finite T do not need to keep the change of ",
       "occupation in account. Defined consistently with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component"],
@@ -1385,7 +1385,7 @@
       "occupation so that forces at finite T do not need to keep the change of ",
       "occupation in account. The array lists the values of the entropy correction for ",
       "each self-consistent field (SCF) iteration. Defined consistently with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_component",
@@ -1399,7 +1399,7 @@
       "Correction to the density-density electrostatic energy in the sum of ",
       "eigenvalues (that uses the mixed density on one side), and the fully consistent ",
       "density-density electrostatic energy. Defined consistently with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component"],
@@ -1412,7 +1412,7 @@
       "Correction to the density-density electrostatic energy in the sum of ",
       "eigenvalues (that uses the mixed density on one side), and the fully consistent ",
       "density-density electrostatic energy during the self-consistent field (SCF) ",
-      "iterations. Defined consistently with XC_method."],
+      "iterations. Defined consistently with xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_component",
@@ -1466,7 +1466,7 @@
     "meta_description":[
       "Free energy (nuclei + electrons) (whose minimum gives the smeared occupation ",
       "density calculated with smearing_kind) calculated with the method described in ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_total_potential"],
@@ -1478,7 +1478,7 @@
     "meta_description":[
       "Free energy per atom (whose minimum gives the smeared occupation density ",
       "calculated with smearing_kind) calculated with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component_per_atom",
@@ -1490,7 +1490,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Free energy per atom (whose minimum gives the smeared occupation density ",
-      "calculated with smearing_kind) calculated with XC_method during the ",
+      "calculated with smearing_kind) calculated with xc_method during the ",
       "self-consistent field (SCF) iterations."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -1503,7 +1503,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Free energy (whose minimum gives the smeared occupation density calculated with ",
-      "smearing_kind) calculated with the method described in XC_method during the ",
+      "smearing_kind) calculated with the method described in xc_method during the ",
       "self-consistent field (SCF) iterations."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -1516,7 +1516,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Error in the Hartree (electrostatic) potential energy. Defined consistently ",
-      "with XC_method."],
+      "with xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_value",
@@ -1529,7 +1529,7 @@
     "meta_description":[
       "Error in the Hartree (electrostatic) potential energy during each ",
       "self-consistent field (SCF) iteration. Defined consistently with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_value",
@@ -1538,18 +1538,18 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_hartree_fock_X",
+    "meta_name":"energy_hartree_fock_x",
     "meta_type":"type-value",
     "meta_description":[
       "Converged exact-exchange (Hartree-Fock) energy. Defined consistently with ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_X"],
+      "energy_type_x"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_hartree_fock_X_scaled",
+    "meta_name":"energy_hartree_fock_x_scaled",
     "meta_type":"type-value",
     "meta_description":[
       "Scaled exact-exchange energy that depends on the mixing parameter of the ",
@@ -1557,7 +1557,7 @@
       "a linear combination of exact-energy and exchange energy of an approximate DFT ",
       "functional; the exact exchange energy multiplied by the mixing coefficient of ",
       "the hybrid functional would be stored in this metadata. Defined consistently ",
-      "with XC_method."],
+      "with xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component"],
@@ -1580,7 +1580,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Sum of the eigenvalues of the Hamiltonian matrix defined by ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component"],
@@ -1592,7 +1592,7 @@
     "meta_description":[
       "Value of the energy per atom, where the energy is defined as the sum of the ",
       "eigenvalues of the Hamiltonian matrix given by ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
       "energy_component_per_atom",
@@ -1604,7 +1604,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Value of the energy per atom, where the energy is defined as the sum of the ",
-      "eigenvalues of the Hamiltonian matrix given by XC_method, during each ",
+      "eigenvalues of the Hamiltonian matrix given by xc_method, during each ",
       "self-consistent field (SCF) iteration."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -1617,7 +1617,7 @@
     "meta_name":"energy_sum_eigenvalues_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
-      "Sum of the eigenvalues of the Hamiltonian matrix defined by XC_method, during ",
+      "Sum of the eigenvalues of the Hamiltonian matrix defined by xc_method, during ",
       "each self-consistent field (SCF) iteration."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -1626,11 +1626,11 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_T0_per_atom",
+    "meta_name":"energy_t0_per_atom",
     "meta_type":"type-value",
     "meta_description":[
       "Value of the total energy per atom, calculated with the method described in ",
-      "XC_method and extrapolated to $T=0$, based on a free-electron gas ",
+      "xc_method and extrapolated to $T=0$, based on a free-electron gas ",
       "argument."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
@@ -1641,7 +1641,7 @@
     "meta_name":"energy_total",
     "meta_type":"type-value",
     "meta_description":[
-      "Value of the total energy, calculated with the method described in XC_method ",
+      "Value of the total energy, calculated with the method described in xc_method ",
       "and extrapolated to $T=0$, based on a free-electron gas ",
       "argument."],
     "meta_parent_section":"section_single_configuration_calculation",
@@ -1676,7 +1676,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Value of the total electronic energy calculated with the method described in ",
-      "XC_method during each self-consistent field (SCF) ",
+      "xc_method during each self-consistent field (SCF) ",
       "iteration."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
@@ -1685,11 +1685,11 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_total_T0",
+    "meta_name":"energy_total_t0",
     "meta_type":"type-value",
     "meta_description":[
       "Value of the total energy (or equivalently free energy), calculated with the ",
-      "method described in XC_method and extrapolated to $T=0$, based on a ",
+      "method described in xc_method and extrapolated to $T=0$, based on a ",
       "free-electron gas argument."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
@@ -1697,10 +1697,10 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_total_T0_per_atom",
+    "meta_name":"energy_total_t0_per_atom",
     "meta_type":"type-value",
     "meta_description":[
-      "Value of the total energy, calculated with the method described in XC_method ",
+      "Value of the total energy, calculated with the method described in xc_method ",
       "per atom extrapolated to $T=0$, based on a free-electron gas ",
       "argument."],
     "meta_parent_section":"section_single_configuration_calculation",
@@ -1710,10 +1710,10 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_total_T0_per_atom_scf_iteration",
+    "meta_name":"energy_total_t0_per_atom_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
-      "Value of the total energy, calculated with the method described in XC_method ",
+      "Value of the total energy, calculated with the method described in xc_method ",
       "per atom extrapolated to $T=0$, based on a free-electron gas argument, during ",
       "each self-consistent field (SCF) iteration."],
     "meta_parent_section":"section_scf_iteration",
@@ -1723,11 +1723,11 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_total_T0_scf_iteration",
+    "meta_name":"energy_total_t0_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
       "Value of the total energy (or equivalently free energy), calculated with the ",
-      "method described in XC_method and extrapolated to $T=0$, based on a ",
+      "method described in xc_method and extrapolated to $T=0$, based on a ",
       "free-electron gas argument, during each self-consistent field (SCF) ",
       "iteration."],
     "meta_parent_section":"section_scf_iteration",
@@ -1737,7 +1737,7 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_type_C",
+    "meta_name":"energy_type_c",
     "meta_type":"type-abstract",
     "meta_description":[
       "This metadata stores the correlation (C) ",
@@ -1753,7 +1753,7 @@
     "meta_abstract_types":[
       "energy_value"]
   },{
-    "meta_name":"energy_type_van_der_Waals",
+    "meta_name":"energy_type_van_der_waals",
     "meta_type":"type-abstract",
     "meta_description":[
       "This metadata stores the converged van der Waals ",
@@ -1761,13 +1761,13 @@
     "meta_abstract_types":[
       "energy_component"]
   },{
-    "meta_name":"energy_type_X",
+    "meta_name":"energy_type_x",
     "meta_type":"type-abstract",
     "meta_description":"This metadata stores the exchange (X) energy.",
     "meta_abstract_types":[
       "energy_component"]
   },{
-    "meta_name":"energy_type_XC",
+    "meta_name":"energy_type_xc",
     "meta_type":"type-abstract",
     "meta_description":[
       "This metadata stores the exchange-correlation (XC) ",
@@ -1779,86 +1779,86 @@
     "meta_type":"type-abstract",
     "meta_description":"This metadata stores an energy value."
   },{
-    "meta_name":"energy_van_der_Waals",
+    "meta_name":"energy_van_der_waals",
     "meta_type":"type-value",
     "meta_description":[
       "Value for the converged van der Waals energy calculated using the method ",
-      "described in van_der_Waals_method, and used in energy_current. This is the van ",
+      "described in van_der_waals_method, and used in energy_current. This is the van ",
       "der Waals method consistent with, e.g., forces used for relaxation or dynamics. ",
-      "Alternative methods are listed in section_energy_van_der_Waals."],
+      "Alternative methods are listed in section_energy_van_der_waals."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_van_der_Waals"],
+      "energy_type_van_der_waals"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_van_der_Waals_kind",
+    "meta_name":"energy_van_der_waals_kind",
     "meta_type":"type-value",
     "meta_description":[
       "Method used to compute van der Waals energy stored in ",
-      "energy_van_der_Waals_value. This metadata is used when more than one van der ",
+      "energy_van_der_waals_value. This metadata is used when more than one van der ",
       "Waals method is applied in the same *single configuration calculation* (see ",
       "section_single_configuration_calculation). The method used for van der Waals  ",
       "(the one consistent with energy_current and, e.g., for evaluating the forces ",
       "for a relaxation or dynamics) is defined in ",
-      "settings_van_der_Waals."],
-    "meta_parent_section":"section_energy_van_der_Waals",
+      "settings_van_der_waals."],
+    "meta_parent_section":"section_energy_van_der_waals",
     "meta_data_type":"string"
   },{
-    "meta_name":"energy_van_der_Waals_value",
+    "meta_name":"energy_van_der_waals_value",
     "meta_type":"type-value",
     "meta_description":[
       "Value of van der Waals energy, calculated with the method defined in ",
-      "energy_van_der_Waals_kind. This metadata is used when more than one van der ",
+      "energy_van_der_waals_kind. This metadata is used when more than one van der ",
       "Waals method is applied in the same *single configuration calculation* (see ",
       "section_single_configuration_calculation). The value of the van der Waals ",
       "energy consistent with energy_current and used, e.g., for evaluating the forces ",
-      "for a relaxation or dynamics, is given in energy_van_der_Waals and defined in ",
-      "settings_van_der_Waals."],
-    "meta_parent_section":"section_energy_van_der_Waals",
+      "for a relaxation or dynamics, is given in energy_van_der_waals and defined in ",
+      "settings_van_der_waals."],
+    "meta_parent_section":"section_energy_van_der_waals",
     "meta_abstract_types":[
-      "energy_type_van_der_Waals"],
+      "energy_type_van_der_waals"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_X",
+    "meta_name":"energy_x",
     "meta_type":"type-value",
     "meta_description":[
       "Value fo the exchange (X) energy calculated with the method described in ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_X"],
+      "energy_type_x"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_XC",
+    "meta_name":"energy_xc",
     "meta_type":"type-value",
     "meta_description":[
       "Value of the exchange-correlation (XC) energy calculated with the method ",
-      "described in XC_method."],
+      "described in xc_method."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_XC"],
+      "energy_type_xc"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_XC_functional",
+    "meta_name":"energy_xc_functional",
     "meta_type":"type-value",
     "meta_description":[
       "Value of the exchange-correlation (XC) energy calculated with the functional ",
-      "stored in XC_functional."],
+      "stored in xc_functional."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_XC"],
+      "energy_type_xc"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_XC_potential",
+    "meta_name":"energy_xc_potential",
     "meta_type":"type-value",
     "meta_description":[
       "Value of the exchange-correlation (XC) potential energy: the integral of the ",
-      "first order derivative of the functional stored in XC_functional (integral of ",
+      "first order derivative of the functional stored in xc_functional (integral of ",
       "v_xc*electron_density), i.e., the component of XC that is in the sum of the ",
       "eigenvalues. Value associated with the configuration, should be the most ",
       "converged value."],
@@ -1868,15 +1868,15 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_XC_potential_scf_iteration",
+    "meta_name":"energy_xc_potential_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
       "Value for exchange-correlation (XC) potential energy: the integral of the first ",
-      "order derivative of the functional stored in XC_functional (integral of ",
+      "order derivative of the functional stored in xc_functional (integral of ",
       "v_xc*electron_density), i.e., the component of XC that is in the sum of the ",
       "eigenvalues. Values are given for each self-consistent field (SCF) iteration ",
       "(i.e., not the converged value, the latter being stored in ",
-      "energy_XC_potential)."],
+      "energy_xc_potential)."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_component",
@@ -1884,12 +1884,12 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_XC_scf_iteration",
+    "meta_name":"energy_xc_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
       "Value for exchange-correlation (XC) energy obtained during each self-consistent ",
       "field (SCF) iteration, using the method described in ",
-      "XC_method."],
+      "xc_method."],
     "meta_parent_section":"section_scf_iteration",
     "meta_abstract_types":[
       "energy_component",
@@ -3798,7 +3798,7 @@
     "meta_parent_section":"section_sampling_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"SC_matrix",
+    "meta_name":"sc_matrix",
     "meta_type":"type-value",
     "meta_description":[
       "Specifies the matrix that transforms the unit-cell into the super-cell in which ",
@@ -4008,16 +4008,16 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"section_energy_van_der_Waals",
+    "meta_name":"section_energy_van_der_waals",
     "meta_type":"type-section",
     "meta_description":[
-      "Section containing the Van der Waals energy value (energy_van_der_Waals_value) ",
+      "Section containing the Van der Waals energy value (energy_van_der_waals_value) ",
       "of type van_der_Waals_kind. This is used when more than one Van der Waals ",
       "methods are applied in the same *single configuration calculation*, see ",
       "section_single_configuration_calculation. The main Van der Waals method (the ",
       "one concurring to energy_current, and used, e.g., for evaluating the forces for ",
-      "a relaxation or dynamics) is given in energy_van_der_Waals and is defined in ",
-      "settings_van_der_Waals."],
+      "a relaxation or dynamics) is given in energy_van_der_waals and is defined in ",
+      "settings_van_der_waals."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_repeats":true,
     "meta_context_identifier":[]
@@ -4477,15 +4477,15 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"section_XC_functionals",
+    "meta_name":"section_xc_functionals",
     "meta_type":"type-section",
     "meta_description":[
       "Section containing one of the exchange-correlation (XC) functionals for the ",
       "present section_method that are combined to form the ",
-      "XC_functional."],
+      "xc_functional."],
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC_functional"],
+      "settings_xc_functional"],
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -4539,7 +4539,7 @@
     "meta_abstract_types":[
       "settings_sampling"]
   },{
-    "meta_name":"settings_GW",
+    "meta_name":"settings_gw",
     "meta_type":"type-abstract",
     "meta_description":[
       "Contains parameters for the GW-method in the post Hartree-Fock step, that ",
@@ -4564,7 +4564,7 @@
     "meta_abstract_types":[
       "settings_potential_energy_surface"]
   },{
-    "meta_name":"settings_MCSCF",
+    "meta_name":"settings_mcscf",
     "meta_type":"type-abstract",
     "meta_description":[
       "Contains parameters for the multi-configurational self-consistent-field (MCSCF) ",
@@ -4596,7 +4596,7 @@
     "meta_abstract_types":[
       "settings_post_hartree_fock"]
   },{
-    "meta_name":"settings_Monte_Carlo",
+    "meta_name":"settings_monte_carlo",
     "meta_type":"type-abstract",
     "meta_description":[
       "Contains parameters that control the Monte-Carlo ",
@@ -4631,7 +4631,7 @@
       "Contains parameters for the post Hartree-Fock ",
       "method."],
     "meta_abstract_types":[
-      "settings_XC"]
+      "settings_xc"]
   },{
     "meta_name":"settings_potential_energy_surface",
     "meta_type":"type-abstract",
@@ -4645,7 +4645,7 @@
       "Contains parameters and information connected with the relativistic treatment ",
       "used in the calculation."],
     "meta_abstract_types":[
-      "settings_XC"]
+      "settings_xc"]
   },{
     "meta_name":"settings_run",
     "meta_type":"type-abstract",
@@ -4669,7 +4669,7 @@
       "Contains parameters and information connected with the self-interaction ",
       "correction (SIC) method being used in self_interaction_correction_method."],
     "meta_abstract_types":[
-      "settings_XC"]
+      "settings_xc"]
   },{
     "meta_name":"settings_smearing",
     "meta_type":"type-abstract",
@@ -4691,16 +4691,16 @@
     "meta_abstract_types":[
       "settings_molecular_dynamics"]
   },{
-    "meta_name":"settings_van_der_Waals",
+    "meta_name":"settings_van_der_waals",
     "meta_type":"type-abstract",
     "meta_description":[
       "Contain parameters and information connected with the Van der Waals treatment ",
       "used in the calculation to compute the Van der Waals energy ",
-      "(energy_van_der_Waals)."],
+      "(energy_van_der_waals)."],
     "meta_abstract_types":[
-      "settings_XC"]
+      "settings_xc"]
   },{
-    "meta_name":"settings_XC",
+    "meta_name":"settings_xc",
     "meta_type":"type-abstract",
     "meta_description":[
       "Contains parameters connected with the definition of the exchange-correlation ",
@@ -4710,14 +4710,14 @@
     "meta_abstract_types":[
       "settings_potential_energy_surface"]
   },{
-    "meta_name":"settings_XC_functional",
+    "meta_name":"settings_xc_functional",
     "meta_type":"type-abstract",
     "meta_description":[
       "Contain parameters connected with the definition of the exchange-correlation ",
-      "(XC) functional (see section_XC_functionals and ",
-      "XC_functional)."],
+      "(XC) functional (see section_xc_functionals and ",
+      "xc_functional)."],
     "meta_abstract_types":[
-      "settings_XC"]
+      "settings_xc"]
   },{
     "meta_name":"simulation_cell",
     "meta_type":"type-value",
@@ -4960,20 +4960,20 @@
       "meta_dimension_symbolic":"number_of_species_projected_dos_values"
     }]
   },{
-    "meta_name":"spin_S2",
+    "meta_name":"spin_s2",
     "meta_type":"type-value",
     "meta_description":[
       "Stores the value of the total spin moment operator $S^2$ for the converged ",
-      "wavefunctions calculated with the XC_method. It can be used to calculate the ",
+      "wavefunctions calculated with the xc_method. It can be used to calculate the ",
       "spin contamination in spin-unrestricted calculations."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float"
   },{
-    "meta_name":"spin_S2_scf_iteration",
+    "meta_name":"spin_s2_scf_iteration",
     "meta_type":"type-value",
     "meta_description":[
       "Stores the value of the total spin moment operator $S^2$ during the ",
-      "self-consistent field (SCF) iterations of the XC_method. It can be used to ",
+      "self-consistent field (SCF) iterations of the xc_method. It can be used to ",
       "calculate the spin contamination in spin-unrestricted ",
       "calculations."],
     "meta_parent_section":"section_scf_iteration",
@@ -4986,7 +4986,7 @@
     "meta_description":[
       "Stores the target (user-imposed) value of the spin multiplicity $M=2S+1$, where ",
       "$S$ is the total spin. It is an integer number. This value is not necessarily ",
-      "the value obtained at the end of the calculation. See spin_S2 for the converged ",
+      "the value obtained at the end of the calculation. See spin_s2 for the converged ",
       "value of the spin moment."],
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
@@ -6041,7 +6041,7 @@
     "meta_parent_section":"section_thermodynamical_properties",
     "meta_data_type":"string"
   },{
-    "meta_name":"thermodynamical_property_heat_capacity_C_v",
+    "meta_name":"thermodynamical_property_heat_capacity_c_v",
     "meta_type":"type-value",
     "meta_description":[
       "Stores the heat capacity per cell unit at constant ",
@@ -6405,7 +6405,7 @@
     "meta_parent_section":"section_user_quantity_definition",
     "meta_data_type":"string"
   },{
-    "meta_name":"van_der_Waals_method",
+    "meta_name":"van_der_waals_method",
     "meta_type":"type-value",
     "meta_description":[
       "Describes the Van der Waals method. If skipped or an empty string is used, it ",
@@ -6431,11 +6431,11 @@
       "M. Reilly, R. A. Di Stasio Jr, and A. Tkatchenko, [The Journal of Chemical ",
       "Physics **140**, 18A508 (2014)](http://dx.doi.org/10.1063/1.4865104) |\n",
       "| `\"XC\"`                | The method to calculate the Van der Waals energy uses ",
-      "a non-local functional which is described in section_XC_functionals. ",
+      "a non-local functional which is described in section_xc_functionals. ",
       "|"],
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_van_der_Waals"],
+      "settings_van_der_waals"],
     "meta_data_type":"string"
   },{
     "meta_name":"vibrational_free_energy_at_constant_volume",
@@ -6566,48 +6566,48 @@
       "meta_dimension_symbolic":"number_of_atoms_std"
     }]
   },{
-    "meta_name":"XC_functional",
+    "meta_name":"xc_functional",
     "meta_type":"type-value",
     "meta_description":[
       "This value describes a DFT exchange-correlation (XC) functional used for ",
-      "evaluating the energy value stored in energy_XC_functional and related ",
+      "evaluating the energy value stored in energy_xc_functional and related ",
       "quantities (e.g., forces).\n",
       "\n",
       "It is a unique short name obtained by combining the data stored in ",
-      "section_XC_functionals, more specifically by combining different ",
-      "XC_functional_name as described in the [XC_functional wiki ",
+      "section_xc_functionals, more specifically by combining different ",
+      "xc_functional_name as described in the [xc_functional wiki ",
       "page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-fu",
       "nctional)."],
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_physical_parameter",
-      "settings_XC_functional",
+      "settings_xc_functional",
       "derived_quantity"],
     "meta_data_type":"string"
   },{
-    "meta_name":"XC_functional_name",
+    "meta_name":"xc_functional_name",
     "meta_type":"type-value",
     "meta_description":[
       "Provides the name of one of the exchange and/or correlation (XC) functionals ",
-      "combined in XC_functional.\n",
+      "combined in xc_functional.\n",
       "\n",
-      "The valid unique names that can be used are listed in the [XC_functional wiki ",
+      "The valid unique names that can be used are listed in the [xc_functional wiki ",
       "page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-fu",
       "nctional).\n",
       "\n",
       "*NOTE*: This value should refer to a correlation, an exchange or an ",
       "exchange-correlation functional only."],
-    "meta_parent_section":"section_XC_functionals",
+    "meta_parent_section":"section_xc_functionals",
     "meta_abstract_types":[
       "settings_physical_parameter",
-      "settings_XC_functional"],
+      "settings_xc_functional"],
     "meta_data_type":"string"
   },{
-    "meta_name":"XC_functional_parameters",
+    "meta_name":"xc_functional_parameters",
     "meta_type":"type-value",
     "meta_description":[
       "Contains an associative list of non-default values of the parameters for the ",
-      "functional declared in XC_functional_name of the section_XC_functionals section.",
+      "functional declared in xc_functional_name of the section_xc_functionals section.",
       "\n",
       "\n",
       "For example, if a calculations using a hybrid XC functional (e.g., HSE06) ",
@@ -6615,82 +6615,82 @@
       "exchange, then this non-default value is stored in this metadata.\n",
       "\n",
       "The labels and units of these values are defined in the paragraph dedicated to ",
-      "the specified functional declared in XC_functional_name of the [XC_functional ",
+      "the specified functional declared in xc_functional_name of the [xc_functional ",
       "wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/",
       "XC-functional).\n",
       "\n",
       "If this metadata is not given, the default parameter values for the ",
-      "XC_functional_name are assumed."],
-    "meta_parent_section":"section_XC_functionals",
+      "xc_functional_name are assumed."],
+    "meta_parent_section":"section_xc_functionals",
     "meta_abstract_types":[
       "settings_physical_parameter",
-      "settings_XC_functional"],
+      "settings_xc_functional"],
     "meta_data_type":"json"
   },{
-    "meta_name":"XC_functional_weight",
+    "meta_name":"xc_functional_weight",
     "meta_type":"type-value",
     "meta_description":[
       "Provides the value of the weight for the exchange, correlation, or ",
-      "exchange-correlation functional declared in XC_functional_name (see ",
-      "section_XC_functionals).\n",
+      "exchange-correlation functional declared in xc_functional_name (see ",
+      "section_xc_functionals).\n",
       "\n",
       "This weight is used in the linear combination of the different XC functional ",
-      "names (XC_functional_name) in different section_XC_functionals sections to form ",
-      "the XC_functional used for evaluating energy_XC_functional and related ",
+      "names (xc_functional_name) in different section_xc_functionals sections to form ",
+      "the xc_functional used for evaluating energy_xc_functional and related ",
       "quantities.\n",
       "\n",
       "If not specified then the default is set to ",
       "1."],
-    "meta_parent_section":"section_XC_functionals",
+    "meta_parent_section":"section_xc_functionals",
     "meta_abstract_types":[
       "settings_physical_parameter",
-      "settings_XC_functional"],
+      "settings_xc_functional"],
     "meta_data_type":"float"
   },{
-    "meta_name":"XC_method",
+    "meta_name":"xc_method",
     "meta_type":"type-value",
     "meta_description":[
       "Describes the exchange correlation (XC) method used for evaluating the XC energy ",
-      "(energy_XC). Differently from XC_functional, perturbative treatments are also ",
+      "(energy_xc). Differently from xc_functional, perturbative treatments are also ",
       "accounted for, where the string contains the reference to both the perturbative ",
       "(e.g., MP2) and the starting point (e.g, Hartree-Fock) XC method defined in the ",
       "section section_method.\n",
       "\n",
-      "The value consists of XC_method_current concatenated with the `@` character and ",
-      "the XC method (XC_method) defined in section_method that is referred to by ",
+      "The value consists of xc_method_current concatenated with the `@` character and ",
+      "the XC method (xc_method) defined in section_method that is referred to by ",
       "method_to_method_ref where method_to_method_kind = ",
       "\"starting_point_method\"."],
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC",
+      "settings_xc",
       "derived_quantity"],
     "meta_data_type":"string"
   },{
-    "meta_name":"XC_method_current",
+    "meta_name":"xc_method_current",
     "meta_type":"type-value",
     "meta_description":[
-      "Identifies the exchange correlation (XC) method used for energy_XC and related ",
+      "Identifies the exchange correlation (XC) method used for energy_xc and related ",
       "quantities in a standardized short form as a string.\n",
       "\n",
       "It is built by joining the values in the following order using the underscore",
-      " `_` character: electronic_structure_method, XC_functional, ",
-      "self_interaction_correction_method, van_der_Waals_method and relativity_method.\n",
+      " `_` character: electronic_structure_method, xc_functional, ",
+      "self_interaction_correction_method, van_der_waals_method and relativity_method.\n",
       "\n",
       "If any of the methods listed in the string contain non-standard settings, then ",
       "the first 10 characters of the Base64 URL encoding of SHA 512 checksum of a ",
-      "normalized JSON with all non-redundant non-derived settings_XC are appended to ",
+      "normalized JSON with all non-redundant non-derived settings_xc are appended to ",
       "the the string preceded by an underscore.\n",
       "\n",
       "With empty strings, the underscore `_` character is skipped.\n",
       "\n",
       "If the method defined in the section_method section is perturbative, the ",
-      "XC_method_current contains only the perturbative method, not the starting point ",
+      "xc_method_current contains only the perturbative method, not the starting point ",
       "(e.g. the DFT XC functional used as a starting point for a RPA perturbative ",
       "calculation). In this case, the string that contains both the perturbative and ",
-      "starting point method is stored in XC_method."],
+      "starting point method is stored in xc_method."],
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
-      "settings_XC",
+      "settings_xc",
       "derived_quantity"],
     "meta_data_type":"string"
   },{
