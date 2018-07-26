@@ -1,8 +1,8 @@
 {
-  "meta_name":"atom_forces_t0",
+  "meta_name":"atom_forces_T0",
   "meta_type":"type-value",
   "meta_description":[
-    "Forces acting on the atoms, calculated as minus gradient of energy_total_t0, ",
+    "Forces acting on the atoms, calculated as minus gradient of energy_total_T0, ",
     "**including** constraints, if present. The derivatives with respect to ",
     "displacements of the nuclei are evaluated in Cartesian coordinates. In ",
     "addition, these forces are obtained by filtering out the unitary ",

@@ -46,7 +46,7 @@
     },{
       "description": "number of radial mesh points",
       "dtypeStr": "i",
-      "name": "x_wien2k_npt",
+      "name": "x_wien2k_NPT",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -55,7 +55,7 @@
     },{
       "description": "atomic sphere radius (muffin-tin radius)",
       "dtypeStr": "f",
-      "name": "x_wien2k_rmt",
+      "name": "x_wien2k_RMT",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -64,7 +64,7 @@
     },{
       "description": "first radial mesh point",
       "dtypeStr": "f",
-      "name": "x_wien2k_r0",
+      "name": "x_wien2k_R0",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -73,7 +73,7 @@
     },{
       "description": "atomic number Z",
       "dtypeStr": "f",
-      "name": "x_wien2k_atomic_number_z",
+      "name": "x_wien2k_atomic_number_Z",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -108,12 +108,12 @@
       "name": "x_wien2k_indxc",
       "shape": [],
       "superNames": [
-        "x_wien2k_section_xc"
+        "x_wien2k_section_XC"
       ]
     }, {
       "description": "exchange-correlation potential, in in0",
       "kindStr": "type_section",
-      "name": "x_wien2k_section_xc",
+      "name": "x_wien2k_section_XC",
       "superNames": [
         "section_method"
       ]
@@ -281,7 +281,7 @@
     }, {
       "description": "user given name for this system given in the struct file",
       "dtypeStr": "C",
-      "name": "x_wien2k_system_namein",
+      "name": "x_wien2k_system_nameIn",
       "shape": [],
       "superNames": [
         "section_system"
@@ -448,7 +448,7 @@
     }, {
       "description": "energy gap in eV",
       "dtypeStr": "f",
-      "name": "x_wien2k_ene_gap_ev",
+      "name": "x_wien2k_ene_gap_eV",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -473,7 +473,7 @@
     }, {
       "description": "LOs",
       "dtypeStr": "i",
-      "name": "x_wien2k_los",
+      "name": "x_wien2k_LOs",
       "shape": [],
       "superNames": [
         "section_scf_iteration"

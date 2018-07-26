@@ -249,7 +249,7 @@
     "meta_name":"x_castep_correction_energy",
     "meta_type":"type-value",
     "meta_description":"correlation energy",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
@@ -270,7 +270,7 @@
     "meta_name":"x_castep_de_atom",
     "meta_type":"type-value",
     "meta_description":"dE/atom",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
@@ -289,26 +289,26 @@
     "meta_name":"x_castep_dfmax_atom",
     "meta_type":"type-value",
     "meta_description":"dfmax/atom",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float",
     "meta_repeats":true
   },{
-    "meta_name":"x_castep_dfpt_solver_method",
+    "meta_name":"x_castep_DFPT_solver_method",
     "meta_type":"type-value",
     "meta_description":"Phonon DFPT solver method",
     "meta_parent_section":"x_castep_section_phonons",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_castep_disp_corrected_energy_total_t0",
+    "meta_name":"x_castep_disp_corrected_energy_total_T0",
     "meta_type":"type-value",
     "meta_description":"dispersion corrected zero point",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_disp_method_name",
     "meta_type":"type-value",
     "meta_description":"Name type",
-    "meta_parent_section":"x_castep_section_van_der_waals_parameters",
+    "meta_parent_section":"x_castep_section_van_der_Waals_parameters",
     "meta_data_type":"string"
   },{
     "meta_name":"x_castep_elec_methd",
@@ -350,7 +350,7 @@
     "meta_name":"x_castep_frame_energy_free",
     "meta_type":"type-value",
     "meta_description":"energy_free",
-    "meta_parent_section":"x_castep_section_scf_iteration_frame",
+    "meta_parent_section":"x_castep_section_SCF_iteration_frame",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_frame_energy_tolerance",
@@ -359,10 +359,10 @@
     "meta_parent_section":"section_sampling_method",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_frame_energy_total_t0",
+    "meta_name":"x_castep_frame_energy_total_T0",
     "meta_type":"type-value",
     "meta_description":"energy_free_corrected_for_finite_basis",
-    "meta_parent_section":"x_castep_section_scf_iteration_frame",
+    "meta_parent_section":"x_castep_section_SCF_iteration_frame",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_frame_pressure",
@@ -374,7 +374,7 @@
     "meta_name":"x_castep_frame_time",
     "meta_type":"type-value",
     "meta_description":"CASTEP_store_t_md_frame",
-    "meta_parent_section":"x_castep_section_scf_iteration_frame",
+    "meta_parent_section":"x_castep_section_SCF_iteration_frame",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_frame_time_0",
@@ -386,7 +386,7 @@
     "meta_name":"x_castep_frame_time_scf_iteration_wall_end",
     "meta_type":"type-value",
     "meta_description":"energy_frame_wall_end_time",
-    "meta_parent_section":"x_castep_section_scf_iteration_frame",
+    "meta_parent_section":"x_castep_section_SCF_iteration_frame",
     "meta_data_type":"string"
   },{
     "meta_name":"x_castep_frequency",
@@ -719,40 +719,40 @@
       "meta_dimension_symbolic":"number_of_atoms"
     }]
   },{
-    "meta_name":"x_castep_parameter_d",
+    "meta_name":"x_castep_Parameter_d",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method G06",
-    "meta_parent_section":"x_castep_section_van_der_waals_parameters",
+    "meta_parent_section":"x_castep_section_van_der_Waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_parameter_lambda",
+    "meta_name":"x_castep_Parameter_LAMBDA",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method OBS",
-    "meta_parent_section":"x_castep_section_van_der_waals_parameters",
+    "meta_parent_section":"x_castep_section_van_der_Waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_parameter_n",
+    "meta_name":"x_castep_Parameter_n",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method OBS",
-    "meta_parent_section":"x_castep_section_van_der_waals_parameters",
+    "meta_parent_section":"x_castep_section_van_der_Waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_parameter_s6",
+    "meta_name":"x_castep_Parameter_s6",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method G06",
-    "meta_parent_section":"x_castep_section_van_der_waals_parameters",
+    "meta_parent_section":"x_castep_section_van_der_Waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_parameter_sr",
+    "meta_name":"x_castep_Parameter_sR",
     "meta_type":"type-value",
     "meta_description":"Parameter for dispersion method TS",
-    "meta_parent_section":"x_castep_section_van_der_waals_parameters",
+    "meta_parent_section":"x_castep_section_van_der_Waals_parameters",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_pbc_image_inter_corr",
+    "meta_name":"x_castep_PBC_image_inter_corr",
     "meta_type":"type-value",
     "meta_description":"PBC image interaction corr.",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_phonon_cycles",
@@ -842,16 +842,16 @@
     "meta_parent_section":"x_castep_section_relativity_treatment",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_castep_scf_frame_energy",
+    "meta_name":"x_castep_SCF_frame_energy",
     "meta_type":"type-value",
     "meta_description":"energy_frame_iterations",
-    "meta_parent_section":"x_castep_section_scf_iteration_frame",
+    "meta_parent_section":"x_castep_section_SCF_iteration_frame",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_castep_scf_frame_energy_gain",
+    "meta_name":"x_castep_SCF_frame_energy_gain",
     "meta_type":"type-value",
     "meta_description":"energy_frame_iterations_gain",
-    "meta_parent_section":"x_castep_section_scf_iteration_frame",
+    "meta_parent_section":"x_castep_section_SCF_iteration_frame",
     "meta_data_type":"string"
   },{
     "meta_name":"x_castep_scf_ts_iteration_energy",
@@ -866,7 +866,7 @@
     "meta_parent_section":"x_castep_section_ts_scf_iteration",
     "meta_data_type":"float"
   },{
-    "meta_name":"x_castep_scf_ts_t0",
+    "meta_name":"x_castep_scf_ts_T0",
     "meta_type":"type-value",
     "meta_description":"SCF_ts_energy T0 free",
     "meta_parent_section":"x_castep_section_ts_scf",
@@ -953,7 +953,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_castep_section_dft_sedc",
+    "meta_name":"x_castep_section_DFT_SEDC",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_single_configuration_calculation",
@@ -1079,7 +1079,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_castep_section_scf_iteration_frame",
+    "meta_name":"x_castep_section_SCF_iteration_frame",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_run",
@@ -1198,7 +1198,7 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_castep_section_van_der_waals_parameters",
+    "meta_name":"x_castep_section_van_der_Waals_parameters",
     "meta_type":"type-section",
     "meta_description":"-",
     "meta_parent_section":"section_run",
@@ -1215,7 +1215,7 @@
     "meta_name":"x_castep_shell",
     "meta_type":"type-value",
     "meta_description":"shell",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"int",
     "meta_repeats":true
   },{
@@ -1434,7 +1434,7 @@
     "meta_name":"x_castep_structure_energy_corr",
     "meta_type":"type-value",
     "meta_description":"structure energy correction",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_tddft_approximation",
@@ -1554,7 +1554,7 @@
     "meta_name":"x_castep_total_dispersion_corrected_free_energy",
     "meta_type":"type-value",
     "meta_description":"total_dispersion_corrected_free_energy",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_total_energy_corrected_for_finite_basis",
@@ -1572,13 +1572,13 @@
     "meta_name":"x_castep_total_energy_correction",
     "meta_type":"type-value",
     "meta_description":"total energy correction",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_total_fmax_correction",
     "meta_type":"type-value",
     "meta_description":"correction F max ev/A",
-    "meta_parent_section":"x_castep_section_dft_sedc",
+    "meta_parent_section":"x_castep_section_DFT_SEDC",
     "meta_data_type":"float"
   },{
     "meta_name":"x_castep_total_orbital",

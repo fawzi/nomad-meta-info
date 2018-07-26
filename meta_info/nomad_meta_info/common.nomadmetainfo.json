@@ -28,7 +28,7 @@
     {
       "description": "DFT+U-orbital setting: value J (exchange interaction)",
       "dtypeStr": "f",
-      "name": "dft_plus_u_orbital_j",
+      "name": "dft_plus_u_orbital_J",
       "shape": [],
       "superNames": [
         "energy_value",
@@ -47,7 +47,7 @@
     {
       "description": "DFT+U-orbital setting: value U_{effective} (U-J), if implementation uses it",
       "dtypeStr": "f",
-      "name": "dft_plus_u_orbital_u_effective",
+      "name": "dft_plus_u_orbital_U_effective",
       "shape": [],
       "superNames": [
         "energy_value",
@@ -57,7 +57,7 @@
     {
       "description": "DFT+U-orbital setting: value U (on-site Coulomb interaction)",
       "dtypeStr": "f",
-      "name": "dft_plus_u_orbital_u",
+      "name": "dft_plus_u_orbital_U",
       "shape": [],
       "superNames": [
         "energy_value",
@@ -76,11 +76,11 @@
     {
       "description": "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the self-consistent density of the target XC functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
       "dtypeStr": "f",
-      "name": "energy_c_mgga",
+      "name": "energy_C_mGGA",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_type_c"
+        "energy_type_C"
       ],
       "units": "J"
     },
@@ -171,7 +171,7 @@
     {
       "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the self consistent density of the target functional, scaled accordingly to the mixing parameter.",
       "dtypeStr": "f",
-      "name": "energy_x_mgga_scaled",
+      "name": "energy_X_mGGA_scaled",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -183,11 +183,11 @@
     {
       "description": "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the self consistent density of the target functional (full unscaled value, i.e., not scaled due to exact-exchange mixing).",
       "dtypeStr": "f",
-      "name": "energy_x_mgga",
+      "name": "energy_X_mGGA",
       "repeats": false,
       "shape": [],
       "superNames": [
-        "energy_type_x"
+        "energy_type_X"
       ],
       "units": "J"
     },
@@ -411,7 +411,7 @@
     {
       "description": "Model used to calculate the dinamically-screened Coulomb potential: 'rpa' - Full-frequency random-phase approximation; 'ppm' - Godby-Needs plasmon-pole model Godby and Needs, Phys. Rev. Lett. 62, 1169 (1989); 'ppm_hl' - Hybertsen and Louie, Phys. Rev. B 34, 5390 (1986); 'ppm_lh' - von der Linden and P. Horsh, Phys. Rev. B 37, 8351 (1988); 'ppm_fe' - Farid and Engel, Phys. Rev. B 47,15931 (1993); 'cdm' - Contour deformation method, Phys. Rev. B 67, 155208 (2003).)",
       "dtypeStr": "C",
-      "name": "gw_screened_coulomb",
+      "name": "gw_screened_Coulomb",
       "shape": [],
       "superNames": [
         "section_method"
@@ -483,7 +483,7 @@
       "units": "J"
     },
     {
-      "description": "Exchange-correlation functional of the ground-state calculation. See xc_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional",
+      "description": "Exchange-correlation functional of the ground-state calculation. See XC_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/XC-functional",
       "dtypeStr": "C",
       "name": "gw_starting_point",
       "shape": [],
@@ -727,7 +727,7 @@
     {
       "description": "angular basis L",
       "dtypeStr": "i",
-      "name": "soap_angular_basis_l",
+      "name": "soap_angular_basis_L",
       "repeats": false,
       "shape": [],
       "superNames": [

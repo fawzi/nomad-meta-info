@@ -184,7 +184,7 @@
     "meta_parent_section":"section_dft_plus_u_orbital",
     "meta_data_type":"int"
   },{
-    "meta_name":"dft_plus_u_orbital_j",
+    "meta_name":"dft_plus_u_orbital_J",
     "meta_type":"type-value",
     "meta_description":[
       "DFT+U-orbital setting: value J (exchange ",
@@ -202,7 +202,7 @@
     "meta_parent_section":"section_dft_plus_u_orbital",
     "meta_data_type":"string"
   },{
-    "meta_name":"dft_plus_u_orbital_u",
+    "meta_name":"dft_plus_u_orbital_U",
     "meta_type":"type-value",
     "meta_description":[
       "DFT+U-orbital setting: value U (on-site Coulomb ",
@@ -212,7 +212,7 @@
       "energy_value"],
     "meta_data_type":"float"
   },{
-    "meta_name":"dft_plus_u_orbital_u_effective",
+    "meta_name":"dft_plus_u_orbital_U_effective",
     "meta_type":"type-value",
     "meta_description":[
       "DFT+U-orbital setting: value U_{effective} (U-J), if implementation uses ",
@@ -232,7 +232,7 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"string"
   },{
-    "meta_name":"energy_c_mgga",
+    "meta_name":"energy_C_mGGA",
     "meta_type":"type-value",
     "meta_description":[
       "Component of the correlation (C) energy at the GGA (or MetaGGA) level using the ",
@@ -240,7 +240,7 @@
       "not scaled due to exact-exchange mixing)."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_c"],
+      "energy_type_C"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
@@ -334,7 +334,7 @@
     }],
     "meta_units":"J"
   },{
-    "meta_name":"energy_x_mgga",
+    "meta_name":"energy_X_mGGA",
     "meta_type":"type-value",
     "meta_description":[
       "Component of the exchange (X) energy at the GGA (or MetaGGA) level using the ",
@@ -342,11 +342,11 @@
       "not scaled due to exact-exchange mixing)."],
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_abstract_types":[
-      "energy_type_x"],
+      "energy_type_X"],
     "meta_data_type":"float",
     "meta_units":"J"
   },{
-    "meta_name":"energy_x_mgga_scaled",
+    "meta_name":"energy_X_mGGA_scaled",
     "meta_type":"type-value",
     "meta_description":[
       "Component of the exchange (X) energy at the GGA (or MetaGGA) level, using the ",
@@ -565,7 +565,7 @@
       "meta_dimension_symbolic":"number_of_eigenvalues"
     }]
   },{
-    "meta_name":"gw_screened_coulomb",
+    "meta_name":"gw_screened_Coulomb",
     "meta_type":"type-value",
     "meta_description":[
       "Model used to calculate the dinamically-screened Coulomb potential: 'rpa' - ",
@@ -659,7 +659,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Exchange-correlation functional of the ground-state calculation. See ",
-      "xc_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wiki",
+      "XC_functional list at https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wiki",
       "s/metainfo/XC-functional"],
     "meta_parent_section":"section_method",
     "meta_data_type":"string"
@@ -1236,7 +1236,7 @@
     "meta_data_type":"reference",
     "meta_referenced_section":"section_topology"
   },{
-    "meta_name":"soap_angular_basis_l",
+    "meta_name":"soap_angular_basis_L",
     "meta_type":"type-value",
     "meta_description":"angular basis L",
     "meta_parent_section":"section_soap",

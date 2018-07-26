@@ -295,7 +295,7 @@
         "section_system"
       ]
     }, {
-      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value. This value is not necessarly the value obtained at the end of the calculation. See spin_s2 for the converged value of the spin moment.",
+      "description": "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value. This value is not necessarly the value obtained at the end of the calculation. See spin_S2 for the converged value of the spin moment.",
       "dtypeStr": "i",
       "name": "x_gaussian_spin_target_multiplicity",
       "shape": [],
@@ -305,7 +305,7 @@
     }, {
       "description": "Real value of spin squared.",
       "dtypeStr": "f",
-      "name": "x_gaussian_spin_s2",
+      "name": "x_gaussian_spin_S2",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -313,7 +313,7 @@
     }, {
       "description": "Real value of spin squared resulting from the annihilation of the first spin contaminant.",
       "dtypeStr": "f",
-      "name": "x_gaussian_after_annihilation_spin_s2",
+      "name": "x_gaussian_after_annihilation_spin_S2",
       "shape": [],
       "superNames": [
         "section_scf_iteration"
@@ -840,7 +840,7 @@
     }, {
       "description": "X component of moment of inertia",
       "dtypeStr": "f",
-      "name": "x_gaussian_moment_of_inertia_x",
+      "name": "x_gaussian_moment_of_inertia_X",
       "shape": [],
       "superNames": [
         "x_gaussian_section_thermochem"
@@ -848,7 +848,7 @@
     }, {
       "description": "Y component of moment of inertia",
       "dtypeStr": "f",
-      "name": "x_gaussian_moment_of_inertia_y",
+      "name": "x_gaussian_moment_of_inertia_Y",
       "shape": [],
       "superNames": [
         "x_gaussian_section_thermochem"
@@ -856,7 +856,7 @@
     }, {
       "description": "Z component of moment of inertia",
       "dtypeStr": "f",
-      "name": "x_gaussian_moment_of_inertia_z",
+      "name": "x_gaussian_moment_of_inertia_Z",
       "shape": [],
       "superNames": [
         "x_gaussian_section_thermochem"
@@ -1222,7 +1222,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Error in the total energy. Defined consistently with xc_method.",
+      "description": "Error in the total energy. Defined consistently with XC_method.",
       "dtypeStr": "f",
       "name": "x_gaussian_energy_error",
       "repeats": false,
@@ -1234,7 +1234,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Self-consistent electronic kinetic energy as defined in xc_method.",
+      "description": "Self-consistent electronic kinetic energy as defined in XC_method.",
       "dtypeStr": "f",
       "name": "x_gaussian_electronic_kinetic_energy",
       "repeats": false,

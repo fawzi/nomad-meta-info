@@ -200,41 +200,41 @@
     }, {
       "description": "x component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_mlwf_atom_positions_x",
+      "name": "x_qbox_geometry_MLWF_atom_positions_x",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_mlwf"
+        "x_qbox_section_MLWF"
       ],
       "units": "m"
     }, {
       "description": "y component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_mlwf_atom_positions_y",
+      "name": "x_qbox_geometry_MLWF_atom_positions_y",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_mlwf"
+        "x_qbox_section_MLWF"
       ],
       "units": "m"
     }, {
       "description": "z component of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_mlwf_atom_positions_z",
+      "name": "x_qbox_geometry_MLWF_atom_positions_z",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_mlwf"
+        "x_qbox_section_MLWF"
       ],
       "units": "m"
     }, {
       "description": "spread of atomic position in maximally localized Wannier functions(MLWF)",
       "dtypeStr": "f",
-      "name": "x_qbox_geometry_mlwf_atom_spread",
+      "name": "x_qbox_geometry_MLWF_atom_spread",
       "repeats": true,
       "shape": [],
       "superNames": [
-        "x_qbox_section_mlwf"
+        "x_qbox_section_MLWF"
       ],
       "units": "m"
     }, {
@@ -298,7 +298,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_qbox_section_mlwf",
+      "name": "x_qbox_section_MLWF",
       "superNames": [
         "section_run"
       ]

@@ -51,7 +51,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gap_params_label",
+      "name": "x_lib_atoms_GAP_params_label",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -60,7 +60,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gap_params_svn_version",
+      "name": "x_lib_atoms_GAP_params_svn_version",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -69,7 +69,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gap_data_do_core",
+      "name": "x_lib_atoms_GAP_data_do_core",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -78,7 +78,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "f",
-      "name": "x_lib_atoms_gap_data_e0",
+      "name": "x_lib_atoms_GAP_data_e0",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -96,7 +96,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpsparse_n_coordinate",
+      "name": "x_lib_atoms_gpSparse_n_coordinate",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -105,7 +105,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpcoordinates_n_permutations",
+      "name": "x_lib_atoms_gpCoordinates_n_permutations",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -114,7 +114,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gpcoordinates_sparsified",
+      "name": "x_lib_atoms_gpCoordinates_sparsified",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -123,7 +123,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "f",
-      "name": "x_lib_atoms_gpcoordinates_signal_variance",
+      "name": "x_lib_atoms_gpCoordinates_signal_variance",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -132,7 +132,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gpcoordinates_label",
+      "name": "x_lib_atoms_gpCoordinates_label",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -141,7 +141,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpcoordinates_n_sparsex",
+      "name": "x_lib_atoms_gpCoordinates_n_sparseX",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -150,7 +150,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpcoordinates_covariance_type",
+      "name": "x_lib_atoms_gpCoordinates_covariance_type",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -159,7 +159,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "f",
-      "name": "x_lib_atoms_gpcoordinates_signal_mean",
+      "name": "x_lib_atoms_gpCoordinates_signal_mean",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -168,7 +168,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gpcoordinates_sparsex_filename",
+      "name": "x_lib_atoms_gpCoordinates_sparseX_filename",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -177,7 +177,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpcoordinates_dimensions",
+      "name": "x_lib_atoms_gpCoordinates_dimensions",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -186,7 +186,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "f",
-      "name": "x_lib_atoms_gpcoordinates_theta",
+      "name": "x_lib_atoms_gpCoordinates_theta",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -195,7 +195,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "C",
-      "name": "x_lib_atoms_gpcoordinates_descriptor",
+      "name": "x_lib_atoms_gpCoordinates_descriptor",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -204,7 +204,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpcoordinates_perm_permutation",
+      "name": "x_lib_atoms_gpCoordinates_perm_permutation",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -213,7 +213,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "i",
-      "name": "x_lib_atoms_gpcoordinates_perm_i",
+      "name": "x_lib_atoms_gpCoordinates_perm_i",
       "shape": [],
       "superNames": [
         "x_lib_atoms_section_gap"
@@ -222,7 +222,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "f",
-      "name": "x_lib_atoms_gpcoordinates_alpha",
+      "name": "x_lib_atoms_gpCoordinates_alpha",
       "shape": [
         "n_sparseX",
         2
@@ -234,7 +234,7 @@
     {
       "description": "GAP classifier.",
       "dtypeStr": "f",
-      "name": "x_lib_atoms_gpcoordinates_sparsex",
+      "name": "x_lib_atoms_gpCoordinates_sparseX",
       "shape": [
         "n_sparseX",
         "dimensions"

@@ -343,7 +343,7 @@
       "name": "x_onetep_frame_time",
       "shape": [],
       "superNames": [
-       "x_onetep_section_scf_iteration_frame"
+       "x_onetep_section_SCF_iteration_frame"
       ]
     }, {
       "description": "onetep_store_t_md_frame",
@@ -606,7 +606,7 @@
     }, {
        "description": "Phonon DFPT solver method",
       "dtypeStr": "C",
-      "name": "x_onetep_dfpt_solver_method",
+      "name": "x_onetep_DFPT_solver_method",
       "shape": [],
       "superNames": [
         "x_onetep_section_phonons"
@@ -1447,18 +1447,18 @@
      }, {
       "description": "energy_frame_iterations",
       "dtypeStr": "C",
-      "name": "x_onetep_scf_frame_energy",
+      "name": "x_onetep_SCF_frame_energy",
       "shape": [],
       "superNames": [
-        "x_onetep_section_scf_iteration_frame"
+        "x_onetep_section_SCF_iteration_frame"
       ]        
      }, {
       "description": "energy_frame_iterations_gain",
       "dtypeStr": "C",
-      "name": "x_onetep_scf_frame_energy_gain",
+      "name": "x_onetep_SCF_frame_energy_gain",
       "shape": [],
       "superNames": [
-        "x_onetep_section_scf_iteration_frame"
+        "x_onetep_section_SCF_iteration_frame"
       ]        
     }, {
       "description": "energy_frame_wall_end_time",
@@ -1466,7 +1466,7 @@
       "name": "x_onetep_frame_time_scf_iteration_wall_end",
       "shape": [],
       "superNames": [
-        "x_onetep_section_scf_iteration_frame"
+        "x_onetep_section_SCF_iteration_frame"
       ]        
     }, {
       "description": "energy_free",
@@ -1474,15 +1474,15 @@
       "name": "x_onetep_frame_energy_free",
       "shape": [],
       "superNames": [
-        "x_onetep_section_scf_iteration_frame"
+        "x_onetep_section_SCF_iteration_frame"
       ]      
     }, {
       "description": "energy_free_corrected_for_finite_basis",
       "dtypeStr": "f",
-      "name": "x_onetep_frame_energy_total_t0",
+      "name": "x_onetep_frame_energy_total_T0",
       "shape": [],
       "superNames": [
-        "x_onetep_section_scf_iteration_frame"
+        "x_onetep_section_SCF_iteration_frame"
       ]          
     }, {
       "description": "density_mixing_scheme",
@@ -1742,7 +1742,7 @@
     }, {
        "description": "exchange energy store",
       "dtypeStr": "f",
-      "name": "x_onetep_energy_xc_store",
+      "name": "x_onetep_energy_XC_store",
       "shape": [],
       "superNames": [
         "x_onetep_section_energy_components"
@@ -1925,7 +1925,7 @@
     }, {
       "description": "step",
       "dtypeStr": "f",
-      "name": "x_onetep_edft_0k",
+      "name": "x_onetep_edft_0K",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -2469,7 +2469,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_onetep_section_scf_iteration_frame",
+      "name": "x_onetep_section_SCF_iteration_frame",
       "superNames": [
         "section_run"
       ]
@@ -2597,7 +2597,7 @@
     }, {
       "description": "-",
       "kindStr": "type_section",
-      "name": "x_onetep_section_van_der_waals_parameters",
+      "name": "x_onetep_section_van_der_Waals_parameters",
       "superNames": [
         "section_run"
       ]
@@ -3049,7 +3049,7 @@
       "name": "x_onetep_disp_method_name_store",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Name type",
@@ -3057,7 +3057,7 @@
       "name": "x_onetep_disp_method_name",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Total electronic energy calculated with XC_method_scf during the scf iterations is stored in a list",
@@ -3113,43 +3113,43 @@
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
-      "name": "x_onetep_parameter_d",
+      "name": "x_onetep_Parameter_d",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method OBS",
       "dtypeStr": "f",
-      "name": "x_onetep_parameter_lambda",
+      "name": "x_onetep_Parameter_LAMBDA",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method OBS",
       "dtypeStr": "f",
-      "name": "x_onetep_parameter_n",
+      "name": "x_onetep_Parameter_n",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "Parameter for dispersion method G06",
       "dtypeStr": "f",
-      "name": "x_onetep_parameter_s6",
+      "name": "x_onetep_Parameter_s6",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     
     }, {
       "description": "Parameter for dispersion method TS",
       "dtypeStr": "f",
-      "name": "x_onetep_parameter_sr",
+      "name": "x_onetep_Parameter_sR",
       "shape": [],
       "superNames": [
-        "x_onetep_section_van_der_waals_parameters"
+        "x_onetep_section_van_der_Waals_parameters"
       ]
     }, {
       "description": "TS coordinate path",

@@ -60,7 +60,7 @@
     },  {
       "description": "atomic number Z",
       "dtypeStr": "f",
-      "name": "x_fleur_atomic_number_z",
+      "name": "x_fleur_atomic_number_Z",
       "repeats": true,
       "shape": [],
       "superNames": [
@@ -269,7 +269,7 @@
     }, {
       "description": "user given name for this system given in the inp file",
       "dtypeStr": "C",
-      "name": "x_fleur_system_namein",
+      "name": "x_fleur_system_nameIn",
       "shape": [],
       "superNames": [
         "section_system"
@@ -364,7 +364,7 @@
     }, {
       "description": "Gmax",
       "dtypeStr": "f",
-      "name": "x_fleur_g_max",
+      "name": "x_fleur_G_max",
       "shape": [],
       "superNames": [
         "section_system"
@@ -477,7 +477,7 @@
       "name": "x_fleur_exch_pot",
       "shape": [],
       "superNames": [
-        "x_fleur_section_xc"
+        "x_fleur_section_XC"
       ]
     }, {
       "description": "informaion on relativistic correction for the exchange-correlation potential, in out",
@@ -485,12 +485,12 @@
       "name": "x_fleur_xc_correction",
       "shape": [],
       "superNames": [
-        "x_fleur_section_xc"
+        "x_fleur_section_XC"
       ]
     },  {
       "description": "exchange-correlation potential",
       "kindStr": "type_section",
-      "name": "x_fleur_section_xc",
+      "name": "x_fleur_section_XC",
       "superNames": [
         "section_method"
       ]

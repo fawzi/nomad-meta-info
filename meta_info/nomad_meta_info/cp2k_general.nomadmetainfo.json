@@ -78,7 +78,7 @@
       ],
       "units": "J"
     }, {
-      "description": "Total electronic energy calculated with xc_method during the self-consistent field (SCF) iterations.",
+      "description": "Total electronic energy calculated with XC_method during the self-consistent field (SCF) iterations.",
       "dtypeStr": "f",
       "name": "x_cp2k_energy_total_scf_iteration",
       "repeats": false,
@@ -100,7 +100,7 @@
     }, {
       "description": "Exchange-correlation (XC) energy during the self-consistent field (SCF) iteration.",
       "dtypeStr": "f",
-      "name": "x_cp2k_energy_xc_scf_iteration",
+      "name": "x_cp2k_energy_XC_scf_iteration",
       "repeats": false,
       "shape": [],
       "superNames": [
@@ -1145,7 +1145,7 @@
       "kindStr": "type_section",
       "name": "x_cp2k_section_vdw_settings",
       "superNames": [
-        "settings_van_der_waals",
+        "settings_van_der_Waals",
         "section_method"
       ]
     }, {

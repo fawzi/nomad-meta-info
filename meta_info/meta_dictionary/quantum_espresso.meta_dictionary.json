@@ -193,7 +193,7 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"boolean"
   },{
-    "meta_name":"x_qe_dense_fft_grid",
+    "meta_name":"x_qe_dense_FFT_grid",
     "meta_type":"type-value",
     "meta_description":"Dense-grid info, FFT grid",
     "meta_parent_section":"section_system",
@@ -228,7 +228,7 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"boolean"
   },{
-    "meta_name":"x_qe_dispersion_correction_c6",
+    "meta_name":"x_qe_dispersion_correction_C6",
     "meta_type":"type-value",
     "meta_description":"DFT-D species C6 coefficient",
     "meta_parent_section":"section_method_atom_kind",
@@ -1134,7 +1134,7 @@
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_smooth_fft_grid",
+    "meta_name":"x_qe_smooth_FFT_grid",
     "meta_type":"type-value",
     "meta_description":"Smooth-grid info, FFT grid",
     "meta_parent_section":"section_system",
@@ -1247,25 +1247,25 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_sticks_sum_g_dense",
+    "meta_name":"x_qe_sticks_sum_G_dense",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_sticks_sum_g_pw",
+    "meta_name":"x_qe_sticks_sum_G_PW",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_sticks_sum_g_smooth",
+    "meta_name":"x_qe_sticks_sum_G_smooth",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_sticks_sum_pw",
+    "meta_name":"x_qe_sticks_sum_PW",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
@@ -1283,7 +1283,7 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_sticks_tot_pw",
+    "meta_name":"x_qe_sticks_tot_PW",
     "meta_type":"type-value",
     "meta_description":"-",
     "meta_parent_section":"section_method",
@@ -1380,19 +1380,19 @@
     "meta_parent_section":"section_system",
     "meta_data_type":"string"
   },{
-    "meta_name":"x_qe_t_dense_fft_grid_x",
+    "meta_name":"x_qe_t_dense_FFT_grid_x",
     "meta_type":"type-value",
     "meta_description":"Temporary: Dense-grid info, FFT grid x",
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_t_dense_fft_grid_y",
+    "meta_name":"x_qe_t_dense_FFT_grid_y",
     "meta_type":"type-value",
     "meta_description":"Temporary: Dense-grid info, FFT grid y",
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_t_dense_fft_grid_z",
+    "meta_name":"x_qe_t_dense_FFT_grid_z",
     "meta_type":"type-value",
     "meta_description":"Temporary: Dense-grid info, FFT grid z",
     "meta_parent_section":"section_system",
@@ -1472,7 +1472,7 @@
     "meta_type":"type-value",
     "meta_description":[
       "Temporary: store fraction of exact-exchange before defining ",
-      "section_xc_functionals"],
+      "section_XC_functionals"],
     "meta_parent_section":"section_method",
     "meta_data_type":"float"
   },{
@@ -2480,25 +2480,25 @@
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
-    "meta_name":"x_qe_t_smooth_fft_grid_x",
+    "meta_name":"x_qe_t_smooth_FFT_grid_x",
     "meta_type":"type-value",
     "meta_description":"Temporary: Smooth-grid info, FFT grid x",
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_t_smooth_fft_grid_y",
+    "meta_name":"x_qe_t_smooth_FFT_grid_y",
     "meta_type":"type-value",
     "meta_description":"Temporary: Smooth-grid info, FFT grid y",
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_t_smooth_fft_grid_z",
+    "meta_name":"x_qe_t_smooth_FFT_grid_z",
     "meta_type":"type-value",
     "meta_description":"Temporary: Smooth-grid info, FFT grid z",
     "meta_parent_section":"section_system",
     "meta_data_type":"int"
   },{
-    "meta_name":"x_qe_t_species_dispersion_correction_c6",
+    "meta_name":"x_qe_t_species_dispersion_correction_C6",
     "meta_type":"type-value",
     "meta_description":"Temporary: DFT-D species C6 coefficient",
     "meta_parent_section":"section_method",
@@ -2763,9 +2763,9 @@
     "meta_description":[
       "Quantum Espresso comment about meaning of XC functional ",
       "component"],
-    "meta_parent_section":"section_xc_functionals",
+    "meta_parent_section":"section_XC_functionals",
     "meta_abstract_types":[
-      "settings_xc_functional"],
+      "settings_XC_functional"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_qe_xc_functional_num",
@@ -2903,9 +2903,9 @@
     "meta_description":[
       "Index value within Quantum Espresso where XC functional component was set ",
       "from"],
-    "meta_parent_section":"section_xc_functionals",
+    "meta_parent_section":"section_XC_functionals",
     "meta_abstract_types":[
-      "settings_xc_functional"],
+      "settings_XC_functional"],
     "meta_data_type":"int"
   },{
     "meta_name":"x_qe_xc_index_name",
@@ -2913,9 +2913,9 @@
     "meta_description":[
       "Name of Index within Quantum Espresso where XC functional component was set ",
       "from"],
-    "meta_parent_section":"section_xc_functionals",
+    "meta_parent_section":"section_XC_functionals",
     "meta_abstract_types":[
-      "settings_xc_functional"],
+      "settings_XC_functional"],
     "meta_data_type":"string"
   },{
     "meta_name":"x_qe_xc_inlc",
@@ -2947,9 +2947,9 @@
     "meta_description":[
       "Name of XC functional component in Quantum Espresso ",
       "context"],
-    "meta_parent_section":"section_xc_functionals",
+    "meta_parent_section":"section_XC_functionals",
     "meta_abstract_types":[
-      "settings_xc_functional"],
+      "settings_XC_functional"],
     "meta_data_type":"string"
   }]
 }
