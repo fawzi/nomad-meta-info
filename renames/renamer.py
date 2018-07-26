@@ -71,19 +71,23 @@ def replaceInFile(filePath, replacements):
                     ii = m.end()
                 outF.write(line[ii:])
     if didReplace:
-        bkPathBase = filePath + ".bk"
-        bkPath = bkPathBase
+        import datetime
+        t=datetime.date.today()
+        bkPathBase = "%s.%d-%2d-%2d" % (filePath, t.year, t.month, t.day)
+        bkPath = bkPathBase + ".bk"
         # non atomic (should really create if not there)
         ii = 0
         while os.path.exists(bkPath):
             ii += 1
-            bkPath = bkPathBase + str(ii)
+            bkPath = bkPathBase + str(ii) + ".bk"
         os.rename(filePath, bkPath)
         os.rename(outF.name, filePath)
         print("%r: {" % filePath)
         for k, v in didReplace.items():
             print(k, '->', replacements[k], ":", v)
         print("}\nBackup in ", bkPath)
+    else:
+        os.remove(outF.name)
 
 if __name__ == "__main__":
     import sys,argparse
