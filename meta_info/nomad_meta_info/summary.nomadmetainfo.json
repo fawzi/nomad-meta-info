@@ -1,19 +1,17 @@
 {
-  "type": "nomad_meta_info_1_0",
-  "description": "meta info describing summary information on one or more calculations",
-  "dependencies": [],
-  "metaInfos": [ {
-      "description": "Main section for the summary information",
-      "kindStr": "type_section",
-      "name": "section_summary",
-      "superNames": []
-    }, {
-      "description": "Uri of the object on which the summary information was collected (if defined)",
-      "dtypeStr": "f",
-      "name": "summary_source_uri",
-      "shape": [],
-      "superNames": [
-        "section_summary"
-      ]
-    }]
+  "type":"nomad_meta_info_1_0",
+  "name":"summary",
+  "description":"meta info describing summary information on one or more calculations",
+  "dependencies":[],
+  "metaInfos":[{
+    "name":"section_summary",
+    "kindStr":"type_section",
+    "description":"Main section for the summary information",
+    "superNames":[]
+  },{
+    "name":"summary_source_uri",
+    "description":"Uri of the object on which the summary information was collected (if defined)",
+    "superNames":["section_summary"],
+    "dtypeStr":"f"
+  }]
 }

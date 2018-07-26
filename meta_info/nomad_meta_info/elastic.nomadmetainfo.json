@@ -1,437 +1,318 @@
 {
-  "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the elastic parser, all names are expected to start with x_elastic",
-  "dependencies": [ {
-      "relativePath": "common.nomadmetainfo.json"
-    }],
-  "metaInfos": [ {
-      "description": "Order of the elastic constant",
-      "dtypeStr": "i",
-      "name": "x_elastic_elastic_constant_order",
-      "shape": [],
-      "superNames": [
-        "section_method" ]
-    }, {
-      "description": "section collecting the data of the strain diagrams",
-      "kindStr": "type_section",
-      "name": "x_elastic_section_strain_diagrams",
-      "superNames": [
-        "section_single_configuration_calculation"
-      ]
-    }, {
-      "description": "section collecting the fitting parameters used to calculate the elastic constants",
-      "kindStr": "type_section",
-      "name": "x_elastic_section_fitting_parameters",
-      "superNames": [
-        "section_method"
-      ]
-    }, {
-      "description": "number of deformed structures equally spaced in strain, which are generated between the maximum negative strain and the maximum positive one",
-      "dtypeStr": "i",
-      "name": "x_elastic_number_of_deformations",
-      "shape": [],
-      "superNames": [
-        "section_method" ]
-    }, {
-      "description": "wien2k unit cell parameters - a",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_unit_cell_param_a",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "wien2k unit cell parameters - b",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_unit_cell_param_b",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "wien2k unit cell parameters - c",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_unit_cell_param_c",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ],
-      "units": "m"
-    }, {
-      "description": "wien2k unit cell parameters - alfa",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_angle_between_unit_axis_alfa",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "wien2k unit cell parameters - beta",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_angle_between_unit_axis_beta",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "wien2k unit cell parameters - gamma",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_angle_between_unit_axis_gamma",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "section containing a class of wien2k equivalent atoms",
-      "kindStr": "type_section",
-      "name": "x_elastic_wien2k_section_equiv_atoms",
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "wien2k: name of atom, labelling non-equvalent atoms",
-      "dtypeStr": "C",
-      "name": "x_elastic_wien2k_atom_name",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ]
-    }, {
-      "description": "wien2k: position of atom x in internal units",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_atom_pos_x",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ],
-      "units": "m"
-    }, {
-      "description": "wien2k: position of atom y in internal units",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_atom_pos_y",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ],
-      "units": "m"
-    }, {
-      "description": "wien2k: position of atom z  in internal units",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_atom_pos_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ],
-      "units": "m"
-    }, {
-      "description": "wien2k: user given name for this system given in the struct file",
-      "dtypeStr": "C",
-      "name": "x_elastic_wien2k_system_namein",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "wien2k: number of inequivalent atoms in the unit cell",
-      "dtypeStr": "i",
-      "name": "x_elastic_wien2k_nonequiv_atoms",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "wien2k: relativistic or nonrelativistic calculation mode",
-      "dtypeStr": "C",
-      "name": "x_elastic_wien2k_calc_mode",
-      "shape": [],
-      "superNames": [
-        "section_system"
-      ]
-    }, {
-      "description": "wien2k: number of radial mesh points",
-      "dtypeStr": "i",
-      "name": "x_elastic_wien2k_npt",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ]
-    }, {
-      "description": "wien2k: first radial mesh point",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_r0",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ]
-    }, {
-      "description": "wien2k: atomic sphere radius (muffin-tin radius)",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_rmt",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ]
-    }, {
-      "description": "wien2k: atomic number Z",
-      "dtypeStr": "f",
-      "name": "x_elastic_wien2k_atomic_number_z",
-      "repeats": true,
-      "shape": [],
-      "superNames": [
-        "x_elastic_wien2k_section_equiv_atoms"
-      ]
-    }, {
-      "description": "Values of the energy(units:J)/d2e(units:Pa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
-      "dtypeStr": "f",
-      "name": "x_elastic_strain_diagram_values",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_strain_diagram_number_of_eta"
-      ],
-      "superNames": [
-        "x_elastic_section_strain_diagrams" ]
-    }, {
-      "description": "eta values used to calculate the elastic constants",
-      "dtypeStr": "f",
-      "name": "x_elastic_fitting_parameters_eta",
-      "shape": ["x_elastic_number_of_deformations"],
-      "superNames": [
-        "x_elastic_section_fitting_parameters" ]
-    }, {
-      "description": "polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
-      "dtypeStr": "i",
-      "name": "x_elastic_fitting_parameters_polynomial_order",
-      "shape": ["x_elastic_number_of_deformations"],
-      "superNames": [
-        "x_elastic_section_fitting_parameters" ]
-    }, {
-      "description": "eta values used the strain diagrams",
-      "dtypeStr": "f",
-      "name": "x_elastic_strain_diagram_eta_values",
-      "shape": [
-        "x_elastic_number_of_deformations",
-        "x_elastic_strain_diagram_number_of_eta"
-      ],
-      "superNames": [
-        "x_elastic_section_strain_diagrams" ]
-    }, {
-      "description": "Number of strain values used in the strain diagram",
-      "dtypeStr": "i",
-      "name": "x_elastic_strain_diagram_number_of_eta",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_strain_diagrams" ]
-    }, {
-      "description": "Kind of strain diagram. Possible values are: energy; Lagrangian-stress; Physical-stress; cross-validation (cross-validation error); d2e (second derivative of the energy with respect to the strain); dtn (first derivative of the stress with respect to the strain)",
-      "dtypeStr": "C",
-      "name": "x_elastic_strain_diagram_type",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_strain_diagrams" ]
-    }, {
-      "description": "Voigt component of the deformation for the stress approach",
-      "dtypeStr": "i",
-      "name": "x_elastic_strain_diagram_stress_voigt_component",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_strain_diagrams" ]
-    }, {
-      "description": "Order of the polynomial fit",
-      "dtypeStr": "i",
-      "name": "x_elastic_strain_diagram_polynomial_fit_order",
-      "shape": [],
-      "superNames": [
-        "x_elastic_section_strain_diagrams" ]
-    }, {
-      "description": "Symmetry of the second-order elastic constant matrix in Voigt notation",
-      "dtypeStr": "C",
-      "name": "x_elastic_2nd_order_constants_notation_matrix",
-      "shape": [6,6],
-      "superNames": [
-        "section_single_configuration_calculation" ]
-    }, {
-      "description": "2nd order elastic constant (stiffness) matrix in GPa",
-      "dtypeStr": "f",
-      "name": "x_elastic_2nd_order_constants_matrix",
-      "shape": [6,6],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    },  {
-      "description": "3rd order elastic constant (stiffness) matrix in GPa",
-      "dtypeStr": "f",
-      "name": "x_elastic_3rd_order_constants_matrix",
-      "shape": [6,6,6],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    },{
-      "description": "Elastic compliance matrix in 1/GPa",
-      "dtypeStr": "f",
-      "name": "x_elastic_2nd_order_constants_compliance_matrix",
-      "shape": [6,6],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa_1"
-    }, {
-      "description": "Voigt bulk modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_voigt_bulk_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Voigt shear modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_voigt_shear_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Reuss bulk modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_reuss_bulk_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Reuss shear modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_reuss_shear_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Hill bulk modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_hill_bulk_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Hill shear modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_hill_shear_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Voigt Young modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_voigt_young_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Voigt Poisson ratio",
-      "dtypeStr": "f",
-      "name": "x_elastic_voigt_poisson_ratio",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ]
-    }, {
-      "description": "Reuss Young modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_reuss_young_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Reuss Poisson ratio",
-      "dtypeStr": "f",
-      "name": "x_elastic_reuss_poisson_ratio",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ]
-    }, {
-      "description": "Hill Young modulus",
-      "dtypeStr": "f",
-      "name": "x_elastic_hill_young_modulus",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "Hill Poisson ratio",
-      "dtypeStr": "f",
-      "name": "x_elastic_hill_poisson_ratio",
-      "shape": [],
-      "superNames": [
-        "section_single_configuration_calculation" ]
-    }, {
-      "description": "Eigemvalues of the stiffness matrix",
-      "dtypeStr": "f",
-      "name": "x_elastic_eigenvalues",
-      "shape": [6],
-      "superNames": [
-        "section_single_configuration_calculation" ],
-      "units": "Pa"
-    }, {
-      "description": "deformation types",
-      "dtypeStr": "C",
-      "name": "x_elastic_deformation_types",
-      "shape": [
-        "x_elastic_number_of_deformations",6],
-      "superNames": [
-        "section_method" ]
-    }, {
-      "description": "Method of calculation",
-      "dtypeStr": "C",
-      "name": "x_elastic_calculation_method",
-      "shape": [],
-      "superNames": [
-        "section_method" ]
-    }, {
-      "description": "Code used for the calculation of the elastic constants",
-      "dtypeStr": "C",
-      "name": "x_elastic_code",
-      "shape": [],
-      "superNames": [
-        "section_method" ]
-    }, {
-      "description": "Space-group number of the system",
-      "dtypeStr": "i",
-      "name": "x_elastic_space_group_number",
-      "shape": [],
-      "superNames": [
-        "section_system" ]
-    }, {
-      "description": "Volume of the equilibrium unit cell",
-      "dtypeStr": "f",
-      "name": "x_elastic_unit_cell_volume",
-      "shape": [],
-      "superNames": [
-        "section_system" ]
-    }, {
-      "description": "Maximum lagrangian strain used to calculate the elastic constants",
-      "dtypeStr": "f",
-      "name": "x_elastic_max_lagrangian_strain",
-      "shape": [],
-      "superNames": [
-        "section_method" ]
-    }, {
-      "description": "Number of distorted structures used to calculate the elastic constants",
-      "dtypeStr": "i",
-      "name": "x_elastic_number_of_distorted_structures",
-      "shape": [],
-      "superNames": [
-        "section_method" ]
-   }]
+  "type":"nomad_meta_info_1_0",
+  "name":"elastic",
+  "description":"meta info used by the elastic parser, all names are expected to start with x_elastic",
+  "dependencies":[{
+    "relativePath":"common.meta_dictionary.json"
+  },{
+    "relativePath":"public.meta_dictionary.json"
+  }],
+  "metaInfos":[{
+    "name":"x_elastic_2nd_order_constants_compliance_matrix",
+    "description":"Elastic compliance matrix in 1/GPa",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa_1",
+    "dtypeStr":"f",
+    "shape":[6,6]
+  },{
+    "name":"x_elastic_2nd_order_constants_matrix",
+    "description":"2nd order elastic constant (stiffness) matrix in GPa",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f",
+    "shape":[6,6]
+  },{
+    "name":"x_elastic_2nd_order_constants_notation_matrix",
+    "description":"Symmetry of the second-order elastic constant matrix in Voigt notation",
+    "superNames":["section_single_configuration_calculation"],
+    "dtypeStr":"C",
+    "shape":[6,6]
+  },{
+    "name":"x_elastic_3rd_order_constants_matrix",
+    "description":"3rd order elastic constant (stiffness) matrix in GPa",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f",
+    "shape":[6,6,6]
+  },{
+    "name":"x_elastic_calculation_method",
+    "description":"Method of calculation",
+    "superNames":["section_method"],
+    "dtypeStr":"C"
+  },{
+    "name":"x_elastic_code",
+    "description":"Code used for the calculation of the elastic constants",
+    "superNames":["section_method"],
+    "dtypeStr":"C"
+  },{
+    "name":"x_elastic_deformation_types",
+    "description":"deformation types",
+    "superNames":["section_method"],
+    "dtypeStr":"C",
+    "shape":["x_elastic_number_of_deformations",6]
+  },{
+    "name":"x_elastic_eigenvalues",
+    "description":"Eigemvalues of the stiffness matrix",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f",
+    "shape":[6]
+  },{
+    "name":"x_elastic_elastic_constant_order",
+    "description":"Order of the elastic constant",
+    "superNames":["section_method"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_fitting_parameters_eta",
+    "description":"eta values used to calculate the elastic constants",
+    "superNames":["x_elastic_section_fitting_parameters"],
+    "dtypeStr":"f",
+    "shape":["x_elastic_number_of_deformations"]
+  },{
+    "name":"x_elastic_fitting_parameters_polynomial_order",
+    "description":"polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
+    "superNames":["x_elastic_section_fitting_parameters"],
+    "dtypeStr":"i",
+    "shape":["x_elastic_number_of_deformations"]
+  },{
+    "name":"x_elastic_hill_bulk_modulus",
+    "description":"Hill bulk modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_hill_poisson_ratio",
+    "description":"Hill Poisson ratio",
+    "superNames":["section_single_configuration_calculation"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_hill_shear_modulus",
+    "description":"Hill shear modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_hill_young_modulus",
+    "description":"Hill Young modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_max_lagrangian_strain",
+    "description":"Maximum lagrangian strain used to calculate the elastic constants",
+    "superNames":["section_method"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_number_of_deformations",
+    "description":"number of deformed structures equally spaced in strain, which are generated between the maximum negative strain and the maximum positive one",
+    "superNames":["section_method"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_number_of_distorted_structures",
+    "description":"Number of distorted structures used to calculate the elastic constants",
+    "superNames":["section_method"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_reuss_bulk_modulus",
+    "description":"Reuss bulk modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_reuss_poisson_ratio",
+    "description":"Reuss Poisson ratio",
+    "superNames":["section_single_configuration_calculation"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_reuss_shear_modulus",
+    "description":"Reuss shear modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_reuss_young_modulus",
+    "description":"Reuss Young modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_section_fitting_parameters",
+    "kindStr":"type_section",
+    "description":"section collecting the fitting parameters used to calculate the elastic constants",
+    "superNames":["section_method"]
+  },{
+    "name":"x_elastic_section_strain_diagrams",
+    "kindStr":"type_section",
+    "description":"section collecting the data of the strain diagrams",
+    "superNames":["section_single_configuration_calculation"]
+  },{
+    "name":"x_elastic_space_group_number",
+    "description":"Space-group number of the system",
+    "superNames":["section_system"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_strain_diagram_eta_values",
+    "description":"eta values used the strain diagrams",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"f",
+    "shape":["x_elastic_number_of_deformations","x_elastic_strain_diagram_number_of_eta"]
+  },{
+    "name":"x_elastic_strain_diagram_number_of_eta",
+    "description":"Number of strain values used in the strain diagram",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_strain_diagram_polynomial_fit_order",
+    "description":"Order of the polynomial fit",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_strain_diagram_stress_voigt_component",
+    "description":"Voigt component of the deformation for the stress approach",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_strain_diagram_type",
+    "description":"Kind of strain diagram. Possible values are: energy; Lagrangian-stress; Physical-stress; cross-validation (cross-validation error); d2e (second derivative of the energy with respect to the strain); dtn (first derivative of the stress with respect to the strain)",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"C"
+  },{
+    "name":"x_elastic_strain_diagram_values",
+    "description":"Values of the energy(units:J)/d2e(units:Pa)/cross-validation (depending on the value of x_elastic_strain_diagram_type)",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"f",
+    "shape":["x_elastic_number_of_deformations","x_elastic_strain_diagram_number_of_eta"]
+  },{
+    "name":"x_elastic_unit_cell_volume",
+    "description":"Volume of the equilibrium unit cell",
+    "superNames":["section_system"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_voigt_bulk_modulus",
+    "description":"Voigt bulk modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_voigt_poisson_ratio",
+    "description":"Voigt Poisson ratio",
+    "superNames":["section_single_configuration_calculation"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_voigt_shear_modulus",
+    "description":"Voigt shear modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_voigt_young_modulus",
+    "description":"Voigt Young modulus",
+    "superNames":["section_single_configuration_calculation"],
+    "units":"Pa",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_wien2k_angle_between_unit_axis_alfa",
+    "description":"wien2k unit cell parameters - alfa",
+    "superNames":["section_system"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_wien2k_angle_between_unit_axis_beta",
+    "description":"wien2k unit cell parameters - beta",
+    "superNames":["section_system"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_wien2k_angle_between_unit_axis_gamma",
+    "description":"wien2k unit cell parameters - gamma",
+    "superNames":["section_system"],
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_wien2k_atom_name",
+    "description":"wien2k: name of atom, labelling non-equvalent atoms",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "dtypeStr":"C",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_atom_pos_x",
+    "description":"wien2k: position of atom x in internal units",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "units":"m",
+    "dtypeStr":"f",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_atom_pos_y",
+    "description":"wien2k: position of atom y in internal units",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "units":"m",
+    "dtypeStr":"f",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_atom_pos_z",
+    "description":"wien2k: position of atom z  in internal units",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "units":"m",
+    "dtypeStr":"f",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_atomic_number_z",
+    "description":"wien2k: atomic number Z",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "dtypeStr":"f",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_calc_mode",
+    "description":"wien2k: relativistic or nonrelativistic calculation mode",
+    "superNames":["section_system"],
+    "dtypeStr":"C"
+  },{
+    "name":"x_elastic_wien2k_nonequiv_atoms",
+    "description":"wien2k: number of inequivalent atoms in the unit cell",
+    "superNames":["section_system"],
+    "dtypeStr":"i"
+  },{
+    "name":"x_elastic_wien2k_npt",
+    "description":"wien2k: number of radial mesh points",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "dtypeStr":"i",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_r0",
+    "description":"wien2k: first radial mesh point",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "dtypeStr":"f",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_rmt",
+    "description":"wien2k: atomic sphere radius (muffin-tin radius)",
+    "superNames":["x_elastic_wien2k_section_equiv_atoms"],
+    "dtypeStr":"f",
+    "repeats":true
+  },{
+    "name":"x_elastic_wien2k_section_equiv_atoms",
+    "kindStr":"type_section",
+    "description":"section containing a class of wien2k equivalent atoms",
+    "superNames":["section_system"]
+  },{
+    "name":"x_elastic_wien2k_system_namein",
+    "description":"wien2k: user given name for this system given in the struct file",
+    "superNames":["section_system"],
+    "dtypeStr":"C"
+  },{
+    "name":"x_elastic_wien2k_unit_cell_param_a",
+    "description":"wien2k unit cell parameters - a",
+    "superNames":["section_system"],
+    "units":"m",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_wien2k_unit_cell_param_b",
+    "description":"wien2k unit cell parameters - b",
+    "superNames":["section_system"],
+    "units":"m",
+    "dtypeStr":"f"
+  },{
+    "name":"x_elastic_wien2k_unit_cell_param_c",
+    "description":"wien2k unit cell parameters - c",
+    "superNames":["section_system"],
+    "units":"m",
+    "dtypeStr":"f"
+  }]
 }
