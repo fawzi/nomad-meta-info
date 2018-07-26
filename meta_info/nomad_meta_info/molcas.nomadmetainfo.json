@@ -3,8 +3,6 @@
   "description": "meta info used by the molcas parser.  All names are expected to start with x_molcas_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
     "description": "Molcas method name (without UHF; see x_molcas_uhf)",

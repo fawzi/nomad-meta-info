@@ -3,8 +3,6 @@
   "description": "meta info used by the tinker parser, all names are expected to start with x_tinker_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "PBC image flag index.",
@@ -183,7 +181,6 @@
       "name": "x_tinker_atom_to_atom_type_ref",
       "referencedSections": [
         "section_atom_type",
-        "x_tinker_section_atom_to_atom_type_ref"
       ],
       "shape": ["number_of_atoms_per_type"],
       "superNames": [
@@ -562,7 +559,6 @@
     "description": "Parameters of mdin belonging to x_tinker_section_control_parameters.",
     "kindStr": "type_abstract_document_content",
     "name": "x_tinker_mdin_input_output_files",
-    "repeats": true,
     "superNames": [
       "x_tinker_section_input_output_files"
     ]
@@ -1184,7 +1180,6 @@
     "description": "Parameters of mdin belonging to x_tinker_section_control_parameters.",
     "kindStr": "type_abstract_document_content",
     "name": "x_tinker_mdin_control_parameters",
-    "repeats": true,
     "superNames": [
       "x_tinker_section_control_parameters"
     ]
@@ -1825,7 +1820,6 @@
       "description": "Parameters of mdout belonging to section_single_configuration_calculation.",
       "kindStr": "type_abstract_document_content",
       "name": "x_tinker_mdout_single_configuration_calculation",
-      "repeats": true,
       "superNames": [
         "x_tinker_section_single_configuration_calculation"
       ]

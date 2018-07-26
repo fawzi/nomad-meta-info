@@ -3,8 +3,6 @@
   "description": "meta info used by the x_gaussian parser, all names are expected to start with x_gaussian",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [{
       "description": "number of atoms of the system",
@@ -367,10 +365,8 @@
       ]
     }, {
       "description": "Some forces on the atoms (i.e. minus derivatives of some energy with respect to the atom position).",
-      "dtypeStr": "f",
       "kindStr": "type_abstract_document_content",
       "name": "x_gaussian_atom_forces_type",
-      "repeats": true,
       "superNames": [
         "section_single_configuration_calculation"
       ]
@@ -378,8 +374,6 @@
       "description": "Information on the self-consistent field (SCF) procedure.",
       "kindStr": "type_abstract_document_content",
       "name": "x_gaussian_scf_info",
-      "repeats": true,
-      "shape": [],
       "superNames": [
         "section_single_configuration_calculation"
       ]

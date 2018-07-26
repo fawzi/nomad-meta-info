@@ -3,8 +3,6 @@
   "description": "meta info used by the Vasp parser, all names are expected to start with x_vasp_",
   "dependencies": [ {
       "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
     }],
   "metaInfos": [ {
       "description": "build date as string",
@@ -112,7 +110,7 @@
     }, {
       "description": "EMAX energy-range for DOSCAR file. Value stored in incar.",
       "dtypeStr": "f",
-      "name": "x_vasp_incar_EMIN,",
+      "name": "x_vasp_incar_EMIN",
       "shape": [],
       "superNames": [
         "x_vasp_incar_param"
@@ -705,7 +703,7 @@
     }, {
       "description": "EMAX energy-range for DOSCAR file. Value prinded out after evaluating the input.",
       "dtypeStr": "f",
-      "name": "x_vasp_incarOut_EMIN,",
+      "name": "x_vasp_incarOut_EMIN",
       "shape": [],
       "superNames": [
         "x_vasp_incarOut_param"
@@ -1228,17 +1226,6 @@
       "superNames": [
         "x_vasp_incar_param",
         "settings_k_points"
-      ]
-    }, {
-      "description": "k points",
-      "dtypeStr": "i",
-      "kindStr": "type_dimension",
-      "name": "x_vasp_k_points",
-      "shape": [
-        "x_vasp_number_of_k_points"
-      ],
-      "superNames": [
-        "x_vasp_incar_param"
       ]
     }, {
       "description": "number of magnetic moments, number_of_atoms for ISPIN = 2, 3*number of atoms for non-collinear magnetic systems",

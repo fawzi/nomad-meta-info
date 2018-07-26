@@ -1,0 +1,21 @@
+{
+  "meta_name":"XC_functional_weight",
+  "meta_type":"type-value",
+  "meta_description":[
+    "Provides the value of the weight for the exchange, correlation, or ",
+    "exchange-correlation functional declared in XC_functional_name (see ",
+    "section_XC_functionals).\n",
+    "\n",
+    "This weight is used in the linear combination of the different XC functional ",
+    "names (XC_functional_name) in different section_XC_functionals sections to form ",
+    "the XC_functional used for evaluating energy_XC_functional and related ",
+    "quantities.\n",
+    "\n",
+    "If not specified then the default is set to ",
+    "1."],
+  "meta_parent_section":"section_XC_functionals",
+  "meta_abstract_types":[
+    "settings_physical_parameter",
+    "settings_XC_functional"],
+  "meta_data_type":"float"
+}
