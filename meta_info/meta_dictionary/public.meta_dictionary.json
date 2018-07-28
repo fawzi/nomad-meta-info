@@ -1010,6 +1010,12 @@
       "derived_quantity"],
     "meta_data_type":"string"
   },{
+    "meta_name":"derived_quantity",
+    "meta_type":"type-abstract",
+    "meta_description":[
+      "Quantity that is not directly outputted by the parser, but is computed using ",
+      "other quantities."]
+  },{
     "meta_name":"dos_energies",
     "meta_type":"type-value",
     "meta_description":[
