@@ -1847,9 +1847,20 @@
     "dtypeStr":"D"
   },{
     "name":"sampling_method",
-    "description":"Type of method used to do the sampling.\n\nAllowed values are:\n\n| Sampling method                | Description                      |\n| ------------------------------ | -------------------------------- |\n| `\"geometry_optimization\"`      | Geometry optimization            |\n| `\"molecular_dynamics\"`         | Molecular dynamics               |\n| `\"montecarlo\"`                 | (Metropolis) Monte Carlo         |\n| `\"steered_molecular_dynamics\"` | Steered molecular dynamics (with time dependent external forces) |\n| `\"meta_dynamics\"`              | Biased molecular dynamics with history-dependent Hamiltonian |\n| `\"wang_landau_montecarlo\"`     | Monte Carlo according to the Wang-Landau formulation. |\n| `\"blue_moon\"`                  | Blue Moon sampling               |\n| `\"langevin_dynamics\"`          | Langevin dynamics                |\n| `\"taylor_expansion\"`           | Taylor expansion of the potential energy surface |",
+    "description":"Type of method used to do the sampling.",
     "superNames":["section_sampling_method"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "values":{
+      "blue_moon":"Blue Moon sampling",
+      "geometry_optimization":"Geometry optimization",
+      "langevin_dynamics":"Langevin dynamics",
+      "meta_dynamics":"Biased molecular dynamics with history-dependent Hamiltonian",
+      "molecular_dynamics":"Molecular dynamics",
+      "montecarlo":"(Metropolis) Monte Carlo         ",
+      "steered_molecular_dynamics":"Steered molecular dynamics (with time dependent external forces) ",
+      "taylor_expansion":"Taylor expansion of the potential energy surface",
+      "wang_landau_montecarlo":"Monte Carlo according to the Wang-Landau formulation."
+    }
   },{
     "name":"sampling_method_expansion_order",
     "description":"Order up to which the potential energy surface was expanded in a Taylor series (see sampling_method).",
@@ -2129,9 +2140,17 @@
     "superNames":["section_method","settings_xc_functional"]
   },{
     "name":"self_interaction_correction_method",
-    "description":"Contains the name for the self-interaction correction (SIC) treatment used to calculate the final energy and related quantities. If skipped or empty, no special correction is applied.\n\nThe following SIC methods are available:\n\n| SIC method                | Description                       |\n| ------------------------- | --------------------------------  |\n| `\"\"`                      | No correction                     |\n| `\"SIC_AD\"`                | The average density correction    |\n| `\"SIC_SOSEX\"`             | Second order screened exchange    |\n| `\"SIC_EXPLICIT_ORBITALS\"` | (scaled) Perdew-Zunger correction explicitly on a set of orbitals |\n| `\"SIC_MAURI_SPZ\"`         | (scaled) Perdew-Zunger expression on the spin density / doublet unpaired orbital |\n| `\"SIC_MAURI_US\"`          | A (scaled) correction proposed by Mauri and co-workers on the spin density / doublet unpaired orbital |",
+    "description":"Contains the name for the self-interaction correction (SIC) treatment used to calculate the final energy and related quantities. If skipped or empty, no special correction is applied.",
     "superNames":["section_method","settings_self_interaction_correction"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "values":{
+      "SIC_AD":"The average density correction",
+      "SIC_EXPLICIT_ORBITALS":"(scaled) Perdew-Zunger correction explicitly on a set of orbitals",
+      "SIC_MAURI_SPZ":"(scaled) Perdew-Zunger expression on the spin density / doublet unpaired orbital",
+      "SIC_MAURI_US":"A (scaled) correction proposed by Mauri and co-workers on the spin density / doublet unpaired orbital",
+      "SIC_SOSEX":"Second order screened exchange",
+      "none":"No correction"
+    }
   },{
     "name":"settings_barostat",
     "kindStr":"type_abstract_document_content",
@@ -2299,9 +2318,17 @@
     "referencedSections":["section_method"]
   },{
     "name":"smearing_kind",
-    "description":"Specifies the kind of smearing on the electron occupation used to calculate the free energy (see energy_free)\n\nValid values are:\n\n| Smearing kind             | Description                       |\n| ------------------------- | --------------------------------- |\n| `\"empty\"`                 | No smearing is applied            |\n| `\"gaussian\"`              | Gaussian smearing                 |\n| `\"fermi\"`                 | Fermi smearing                    |\n| `\"marzari-vanderbilt\"`    | Marzari-Vanderbilt smearing       |\n| `\"methfessel-paxton\"`     | Methfessel-Paxton smearing        |\n| `\"tetrahedra\"`            | Interpolation of state energies and occupations (ignores smearing_width) |",
+    "description":"Specifies the kind of smearing on the electron occupation used to calculate the free energy (see energy_free)",
     "superNames":["section_method","settings_smearing"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "values":{
+      "fermi":"Fermi smearing",
+      "gaussian":"Gaussian smearing",
+      "marzari-vanderbilt":"Marzari-Vanderbilt smearing",
+      "methfessel-paxton":"Methfessel-Paxton smearing",
+      "none":"No smearing is applied",
+      "tetrahedra":"Interpolation of state energies and occupations (ignores smearing_width)"
+    }
   },{
     "name":"smearing_width",
     "description":"Specifies the width of the smearing in energy for the electron occupation used to calculate the free energy (see energy_free).\n\n*NOTE:* Not all methods specified in smearing_kind uses this value.",
@@ -2965,9 +2992,18 @@
     "dtypeStr":"C"
   },{
     "name":"van_der_waals_method",
-    "description":"Describes the Van der Waals method. If skipped or an empty string is used, it means no Van der Waals correction is applied.\n\nAllowed values are:\n\n| Van der Waals method  | Description                               |\n| --------------------- | ----------------------------------------- |\n| `\"\"`                  | No Van der Waals correction               |\n| `\"TS\"`                | A. Tkatchenko and M. Scheffler, [Phys. Rev. Lett. **102**, 073005 (2009)](http://dx.doi.org/10.1103/PhysRevLett.102.073005) |\n| `\"OBS\"`               | F. Ortmann, F. Bechstedt, and W. G. Schmidt, [Phys. Rev. B **73**, 205101 (2006)](http://dx.doi.org/10.1103/PhysRevB.73.205101) |\n| `\"G06\"`               | S. Grimme, [J. Comput. Chem. **27**, 1787 (2006)](http://dx.doi.org/10.1002/jcc.20495) |\n| `\"JCHS\"`              | P. Jurečka, J. Černý, P. Hobza, and D. R. Salahub, [Journal of Computational Chemistry **28**, 555 (2007)](http://dx.doi.org/10.1002/jcc.20570) |\n| `\"MDB\"`               | Many-body dispersion. A. Tkatchenko, R. A. Di Stasio Jr, R. Car, and M. Scheffler, [Physical Review Letters **108**, 236402 (2012)](http://dx.doi.org/10.1103/PhysRevLett.108.236402) and A. Ambrosetti, A. M. Reilly, R. A. Di Stasio Jr, and A. Tkatchenko, [The Journal of Chemical Physics **140**, 18A508 (2014)](http://dx.doi.org/10.1063/1.4865104) |\n| `\"XC\"`                | The method to calculate the Van der Waals energy uses a non-local functional which is described in section_xc_functionals. |",
+    "description":"Describes the Van der Waals method. If skipped or an empty string is used, it means no Van der Waals correction is applied.\n",
     "superNames":["section_method","settings_van_der_waals"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "values":{
+      "G06":"S. Grimme, [J. Comput. Chem. **27**, 1787 (2006)](http://dx.doi.org/10.1002/jcc.20495)",
+      "JCHS":"P. Jurečka, J. Černý, P. Hobza, and D. R. Salahub, [Journal of Computational Chemistry **28**, 555 (2007)](http://dx.doi.org/10.1002/jcc.20570)",
+      "MDB":"Many-body dispersion. A. Tkatchenko, R. A. Di Stasio Jr, R. Car, and M. Scheffler, [Physical Review Letters **108**, 236402 (2012)](http://dx.doi.org/10.1103/PhysRevLett.108.236402) and A. Ambrosetti, A. M. Reilly, R. A. Di Stasio Jr, and A. Tkatchenko, [The Journal of Chemical Physics **140**, 18A508 (2014)](http://dx.doi.org/10.1063/1.4865104)",
+      "None":"No Van der Waals correction (also if the meta info is fully absent)",
+      "OBS":"F. Ortmann, F. Bechstedt, and W. G. Schmidt, [Phys. Rev. B **73**, 205101 (2006)](http://dx.doi.org/10.1103/PhysRevB.73.205101)",
+      "TS":"A. Tkatchenko and M. Scheffler, [Phys. Rev. Lett. **102**, 073005 (2009)](http://dx.doi.org/10.1103/PhysRevLett.102.073005)",
+      "XC":"The method to calculate the Van der Waals energy uses a non-local functional which is described in section_xc_functionals."
+    }
   },{
     "name":"vibrational_free_energy_at_constant_volume",
     "description":"Holds the vibrational free energy per atom at constant volume.",
