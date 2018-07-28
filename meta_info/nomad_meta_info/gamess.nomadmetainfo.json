@@ -3,9 +3,9 @@
   "name":"gamess",
   "description":"meta info used by the gamess parser, all names are expected to start with x_gamess",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_gamess_alpha_eigenvalues_values",

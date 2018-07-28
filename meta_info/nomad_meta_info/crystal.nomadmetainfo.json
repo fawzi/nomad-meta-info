@@ -3,9 +3,9 @@
   "name":"crystal",
   "description":"meta info used by the Crystal parser, all names are expected to start with x_crystal_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_crystal_atoms_in_asymmetric_unit",

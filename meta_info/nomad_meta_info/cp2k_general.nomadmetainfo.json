@@ -3,9 +3,9 @@
   "name":"cp2k_general",
   "description":"meta info used by the CP2K parser, all names are expected to start with x_cp2k_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_cp2k_atom_forces",

@@ -430,6 +430,11 @@
     "superNames":["section_symmetry","derived_quantity"],
     "dtypeStr":"C"
   },{
+    "name":"derived_quantity",
+    "kindStr":"type_abstract_document_content",
+    "description":"Quantity that is not directly outputted by the parser, but is computed using other quantities.",
+    "superNames":[]
+  },{
     "name":"dos_energies",
     "description":"Array containing the set of discrete energy values for the density (electronic-energy or vibrational energy) of states (DOS). This is the total DOS, see atom_projected_dos_energies and species_projected_dos_energies for partial density of states.",
     "superNames":["section_dos"],

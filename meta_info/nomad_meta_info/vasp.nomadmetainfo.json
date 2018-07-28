@@ -3,9 +3,9 @@
   "name":"vasp",
   "description":"meta info used by the Vasp parser, all names are expected to start with x_vasp_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"vasp_build_date",

@@ -3,9 +3,9 @@
   "name":"elastic",
   "description":"meta info used by the elastic parser, all names are expected to start with x_elastic",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_elastic_2nd_order_constants_compliance_matrix",

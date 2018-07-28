@@ -3,9 +3,9 @@
   "name":"fplo_temporaries",
   "description":"meta info for temporaries used by the FPLO parser, all names are expected to start with x_fplo_t_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_fplo_t_atom_cpa_block",

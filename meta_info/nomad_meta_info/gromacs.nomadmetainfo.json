@@ -3,9 +3,9 @@
   "name":"gromacs",
   "description":"meta info used by the GROMACS parser, all names are expected to start with x_gromacs_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"number_of_atoms_per_type",

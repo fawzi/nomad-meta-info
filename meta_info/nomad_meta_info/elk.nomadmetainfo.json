@@ -3,9 +3,9 @@
   "name":"elk",
   "description":"meta info used by the elk parser, all names are expected to start with x_elk",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_elk_brillouin_zone_volume",

@@ -3,11 +3,11 @@
   "name":"cp2k",
   "description":"Metainfo for the values parsed from a CP2K input file.",
   "dependencies":[{
-    "relativePath":"cp2k_general.meta_dictionary.json"
+    "relativePath":"cp2k_general.nomadmetainfo.json"
   },{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_cp2k_input_atom_ae_basis_basis_default_keyword",

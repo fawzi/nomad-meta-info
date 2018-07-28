@@ -3,9 +3,9 @@
   "name":"nwchem",
   "description":"Meta info used by the NWChem parser, all names are expected to start with x_nwchem_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_nwchem_branch",

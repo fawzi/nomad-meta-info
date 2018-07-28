@@ -3,9 +3,9 @@
   "name":"amber",
   "description":"meta info used by the AMBER parser, all names are expected to start with x_amber_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_amber_atom_positions_image_index",

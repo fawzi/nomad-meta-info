@@ -3,9 +3,9 @@
   "name":"quantum_espresso",
   "description":"meta info used by the Quantum Espresso parser, all names are expected to start with qe_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_qe_alat",

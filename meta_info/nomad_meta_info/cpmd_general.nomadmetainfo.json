@@ -3,9 +3,9 @@
   "name":"cpmd_general",
   "description":"meta info used by the CPMD parser, all names are expected to start with x_cpmd_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_cpmd_atom_kind_label",

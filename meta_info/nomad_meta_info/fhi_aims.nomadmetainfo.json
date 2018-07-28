@@ -3,9 +3,9 @@
   "name":"fhi_aims",
   "description":"meta info used by the FHI aims parser, all names are expected to start with fhi_aims_",
   "dependencies":[{
-    "relativePath":"common.meta_dictionary.json"
+    "relativePath":"common.nomadmetainfo.json"
   },{
-    "relativePath":"public.meta_dictionary.json"
+    "relativePath":"public.nomadmetainfo.json"
   }],
   "metaInfos":[{
     "name":"x_fhi_aims_atom_forces_free_x",
