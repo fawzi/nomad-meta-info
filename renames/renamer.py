@@ -73,13 +73,13 @@ def replaceInFile(filePath, replacements):
     if didReplace:
         import datetime
         t=datetime.date.today()
-        bkPathBase = "%s.%d-%2d-%2d" % (filePath, t.year, t.month, t.day)
+        bkPathBase = "%s.%d-%02d-%02d" % (filePath, t.year, t.month, t.day)
         bkPath = bkPathBase + ".bk"
         # non atomic (should really create if not there)
         ii = 0
         while os.path.exists(bkPath):
             ii += 1
-            bkPath = bkPathBase + str(ii) + ".bk"
+            bkPath = "%s-%d.bk" % (bkPathBase,ii)
         os.rename(filePath, bkPath)
         os.rename(outF.name, filePath)
         print("%r: {" % filePath)
