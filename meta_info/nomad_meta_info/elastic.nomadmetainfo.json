@@ -69,6 +69,13 @@
     "dtypeStr":"f",
     "shape":["x_elastic_number_of_deformations"]
   },{
+    "name":"x_elastic_fitting_parameters_polinomial_order",
+    "description":"polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
+    "superNames":["x_elastic_section_fitting_parameters"],
+    "dtypeStr":"i",
+    "shape":["x_elastic_number_of_deformations"],
+    "meta_deprecated":true
+  },{
     "name":"x_elastic_fitting_parameters_polynomial_order",
     "description":"polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants",
     "superNames":["x_elastic_section_fitting_parameters"],
@@ -161,6 +168,12 @@
     "description":"Number of strain values used in the strain diagram",
     "superNames":["x_elastic_section_strain_diagrams"],
     "dtypeStr":"i"
+  },{
+    "name":"x_elastic_strain_diagram_polinomial_fit_order",
+    "description":"Order of the polynomial fit",
+    "superNames":["x_elastic_section_strain_diagrams"],
+    "dtypeStr":"i",
+    "meta_deprecated":true
   },{
     "name":"x_elastic_strain_diagram_polynomial_fit_order",
     "description":"Order of the polynomial fit",

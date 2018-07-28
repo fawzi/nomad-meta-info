@@ -126,6 +126,18 @@
       "meta_dimension_symbolic":"x_elastic_number_of_deformations"
     }]
   },{
+    "meta_name":"x_elastic_fitting_parameters_polinomial_order",
+    "meta_deprecated": true,
+    "meta_type":"type-value",
+    "meta_description":[
+      "polynomial order used to fit the Energy vs. volume curve and to calculate the ",
+      "elastic constants"],
+    "meta_parent_section":"x_elastic_section_fitting_parameters",
+    "meta_data_type":"int",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_elastic_number_of_deformations"
+    }]
+  },{
     "meta_name":"x_elastic_hill_bulk_modulus",
     "meta_type":"type-value",
     "meta_description":"Hill bulk modulus",
@@ -249,6 +261,13 @@
     "meta_data_type":"int"
   },{
     "meta_name":"x_elastic_strain_diagram_polynomial_fit_order",
+    "meta_type":"type-value",
+    "meta_description":"Order of the polynomial fit",
+    "meta_parent_section":"x_elastic_section_strain_diagrams",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_elastic_strain_diagram_polinomial_fit_order",
+    "meta_deprecated": true,
     "meta_type":"type-value",
     "meta_description":"Order of the polynomial fit",
     "meta_parent_section":"x_elastic_section_strain_diagrams",
