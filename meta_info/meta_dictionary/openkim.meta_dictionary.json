@@ -1,0 +1,39 @@
+{
+  "metadict_name":"openkim",
+  "metadict_description":[
+   "meta info used by the Openkim parser, all names are expected to start with ",
+    "x_openkim_"],
+  "metadict_version":"0.1",
+  "metadict_require":[{
+    "metadict_required_name":"common"
+  }],
+  "meta_info_entry":[{
+    "meta_name":"openkim_build_date",
+    "meta_type":"type-value",
+    "meta_description":"build date as string",
+    "meta_parent_section":"section_run",
+    "meta_abstract_types":[
+      "program_info"],
+    "meta_data_type":"string"
+  },{
+    "meta_name":"openkim_src_date",
+    "meta_type":"type-value",
+    "meta_description":[
+      "date of last modification of the source as ",
+      "string"],
+    "meta_parent_section":"section_run",
+    "meta_abstract_types":[
+      "program_info"],
+    "meta_data_type":"string"
+  },{
+    "meta_name":"x_openkim_atom_kind_refs",
+    "meta_type":"type-value",
+    "meta_description":"reference to the atom kinds of each atom",
+    "meta_parent_section":"section_method",
+    "meta_data_type":"reference",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"number_of_atoms"
+    }],
+    "meta_referenced_section":"section_method_atom_kind"
+  }]
+}
