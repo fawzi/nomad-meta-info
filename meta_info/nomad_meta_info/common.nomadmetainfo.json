@@ -49,7 +49,8 @@
     "dtypeStr":"i"
   },{
     "name":"atom_species",
-    "description":"Species of the atom (normally the atomic number Z, 0 or negative for unidentifed species or particles that are not atoms.",
+    "description":"Species of the atom (normally the atomic number Z, 0 or negative for unidentifed species or particles that are not atoms).",
+    "description_for_query":"List of atomic symbols or numbers present in the calculated system",
     "superNames":["section_topology","derived_quantity"],
     "dtypeStr":"i",
     "repeats":true
