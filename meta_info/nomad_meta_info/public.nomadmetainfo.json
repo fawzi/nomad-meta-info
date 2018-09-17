@@ -2780,7 +2780,7 @@
   },{
     "name":"system_reweighted_composition",
     "description":"Composition, i.e. cumulative chemical with atoms ordered by decreasing atomic number Z reweighted so that the sum is close to 100, and values are rounded up, and are stable (i.e. it is a fixed point).",
-   "description_for_query":"Chemical composition, given as element name followed by its stoichiometric number, in any order. This formula is scale invariant, with rispect to the number of atoms in the simulation cell. E.g., H2O yields systems where only one water molecule is present, as well as 64.",
+   "description_for_query":"Chemical composition, given as element name followed by its stoichiometric number, in any order. This formula is scale invariant, with respect to the number of atoms in the simulation cell. E.g., H2O yields systems where only one water molecule is present, as well as 64.",
     "superNames":["section_system","derived_quantity"],
     "dtypeStr":"C"
   },{
