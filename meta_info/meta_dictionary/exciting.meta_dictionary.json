@@ -1766,6 +1766,293 @@
     "meta_parent_section":"section_method",
     "meta_data_type":"string"
   },{
+    "meta_name":"x_exciting_xs_tddft_analytic_continuation",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Analytic continuation for the calculation of the Kohn-Sham response ",
+      "function"],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
+    "meta_name":"x_exciting_xs_tddft_analytic_continuation_number_of_intervals",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Number of energy intervals (on imaginary axis) for analytic ",
+      "continuation."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_tddft_anomalous_hall_conductivity",
+    "meta_type":"type-value",
+    "meta_description":[
+      "If the anomalous Hall conductivity term is included in the calculation of the ",
+      "dielectric tensor [see PRB 86, 125139 (2012)]."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
+    "meta_name":"x_exciting_xs_tddft_anti_resonant_dielectric",
+    "meta_type":"type-value",
+    "meta_description":[
+      "If the anti-resonant part is considered for the calculation of the dielectric ",
+      "function"],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
+    "meta_name":"x_exciting_xs_tddft_anti_resonant_xc_kernel",
+    "meta_type":"type-value",
+    "meta_description":[
+      "If the anti-resonant part is considered for the calculation of the MBPT-derived ",
+      "xc-kernel"],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
+    "meta_name":"x_exciting_xs_tddft_diagonal_xc_kernel",
+    "meta_type":"type-value",
+    "meta_description":[
+      "If true, only the diagonal part of xc-kernel is ",
+      "used."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
+    "meta_name":"x_exciting_xs_tddft_dielectric_function_local_field",
+    "meta_type":"type-value",
+    "meta_description":"Dielectric function epsilon including local-field effects ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_fixed":2
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_dielectric_function_no_local_field",
+    "meta_type":"type-value",
+    "meta_description":"Dielectric function epsilon without local-field effects ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_fixed":2
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_dielectric_tensor_no_sym",
+    "meta_type":"type-value",
+    "meta_description":"No-symmetrized static dielectric tensor ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_fixed":2
+    },{
+      "meta_dimension_fixed":3
+    },{
+      "meta_dimension_fixed":3
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_dielectric_tensor_sym",
+    "meta_type":"type-value",
+    "meta_description":"Symmetrized static dielectric tensor ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_fixed":2
+    },{
+      "meta_dimension_fixed":3
+    },{
+      "meta_dimension_fixed":3
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_drude",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Parameters defining the semiclassical Drude approximation to intraband term. ",
+      "The first value determines the plasma frequency ωp and the second the inverse ",
+      "relaxation time ωτ: χD0=1/ω ωp^2/(ω+iωτ)"],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_fixed":2
+    }],
+    "meta_units":"s_1"
+  },{
+    "meta_name":"x_exciting_xs_tddft_epsilon_energies",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Array containing the set of discrete energy values for the dielectric function ",
+      "epsilon. "],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }],
+    "meta_units":"J"
+  },{
+    "meta_name":"x_exciting_xs_tddft_finite_q_intraband_contribution",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Parameter determining whether the the intraband contribution is included in the ",
+      "calculation for the finite q."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
+    "meta_name":"x_exciting_xs_tddft_lmax_alda",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Angular momentum cutoff for the Rayleigh expansion of the exponential factor ",
+      "for ALDA-kernel"],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_tddft_loss_function_local_field",
+    "meta_type":"type-value",
+    "meta_description":"Loss function including local-field effects ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_loss_function_no_local_field",
+    "meta_type":"type-value",
+    "meta_description":"Loss function without local-field effects ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_macroscopic_dielectric_function_q_treatment",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Treatment of macroscopic dielectric function for the Q-point outside the ",
+      "Brillouin zone. A value of 0 uses the full Q and the (0,0) component of the ",
+      "microscopic dielectric matrix is used. A value of 1 means a decomposition ",
+      "Q=q+Gq and the (Qq,Qq) component of the microscopic dielectric matrix is ",
+      "used."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_tddft_number_of_epsilon_values",
+    "meta_type":"type-dimension",
+    "meta_description":[
+      "Gives the number of energy values for the dielectric function ",
+      "epsilon."],
+    "meta_parent_section":"section_single_configuration_calculation"
+  },{
+    "meta_name":"x_exciting_xs_tddft_number_of_optical_components",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Number of independent components in the dielectric function ",
+      "epsilon"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_tddft_number_of_q_points",
+    "meta_type":"type-value",
+    "meta_description":"Number of Q points",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"int"
+  },{
+    "meta_name":"x_exciting_xs_tddft_optical_component",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Value of the independent optical components in the dielectric function ",
+      "epsilon"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"string",
+    "meta_dimension":[{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_optical_components"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_sigma_local_field",
+    "meta_type":"type-value",
+    "meta_description":"Sigma including local-field effects ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_fixed":2
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_sigma_no_local_field",
+    "meta_type":"type-value",
+    "meta_description":"Sigma without local-field effects ",
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_data_type":"float",
+    "meta_dimension":[{
+      "meta_dimension_fixed":2
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_q_points"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_components"
+    },{
+      "meta_dimension_symbolic":"x_exciting_xs_tddft_number_of_epsilon_values"
+    }]
+  },{
+    "meta_name":"x_exciting_xs_tddft_split_parameter",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Split parameter for degeneracy in energy differences of MBPT derived xc ",
+      "kernels. See A. Marini, Phys. Rev. Lett., 91, (2003) ",
+      "256402."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"float",
+    "meta_units":"J"
+  },{
+    "meta_name":"x_exciting_xs_tddft_xc_kernel",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Defines which xc kernel is to be used. Possible choices are: RPA - Random-phase ",
+      "approximation kernel (fxc=0); LRCstatic - Long-range correction kernel (fxc = ",
+      "-alpha/q^2) with alpha given by alphalrcdyn see S. Botti et al., Phys. Rev. B ",
+      "69, 155112 (2004); LRCdyn - Dynamical long-range correction kernel, with alpha ",
+      "anf beta give by alphalrcdyn and betalrcdyn, respectively, see S. Botti et al., ",
+      "Phys. Rev. B 72, 125203 (2005); ALDA - Adiabatic LDA kernel, with Vxc given by ",
+      "the spin-unpolarised exchange-correlation potential corresponding to the ",
+      "Perdew-Wang parameterisation of Ceperley-Alder's Monte-Carlo data, see Phys. ",
+      "Rev. B 45, 13244 (1992) and Phys. Rev. Lett. 45, 566 (1980); MB1 - BSE derived ",
+      "xc kernel. See L. Reining et al., Phys. Rev. Lett. 88, 066404 (2002) and A. ",
+      "Marini et al., Phys. Rev. Lett. 91, 256402 (2003); BO - Bootstrap kernel, see ",
+      "S. Sharma et al., Phys. Rev. Lett. 107, 186401 (2011); BO_SCALAR - Scalar ",
+      "version of the bootstrap kernel; see S. Sharma et al., Phys. Rev. Lett. 107, ",
+      "186401 (2011); RBO - RPA bootstrap kernel; see S. Rigamonti et al., Phys. Rev. ",
+      "Lett. 114, 146402 (2015). "],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"string"
+  },{
+    "meta_name":"x_exciting_xs_tetra",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Integration method (tetrahedron) used for the k-space integration in the ",
+      "Kohn-Sham response function."],
+    "meta_parent_section":"section_method",
+    "meta_data_type":"boolean"
+  },{
     "meta_name":"x_exciting_xs_vkloff",
     "meta_type":"type-value",
     "meta_description":"k-point set offset",
