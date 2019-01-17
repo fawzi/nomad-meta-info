@@ -50,10 +50,10 @@
   },{
     "name":"atom_species",
     "description":"Species of the atom (normally the atomic number Z, 0 or negative for unidentifed species or particles that are not atoms).",
-    "description_for_query":"List of atomic symbols or numbers present in the calculated system",
     "superNames":["section_topology","derived_quantity"],
     "dtypeStr":"i",
-    "repeats":true
+    "repeats":true,
+    "meta_query_description":"List of atomic symbols or numbers present in the calculated system"
   },{
     "name":"atom_to_molecule",
     "description":"(deprecated) Table mapping atom to molecules: the first column is the index of the molecule and the second column the index of the atom, signifying that the atom in the second column belongs to the molecule in the first column in the same row.",

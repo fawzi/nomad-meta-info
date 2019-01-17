@@ -392,7 +392,7 @@
     "repeats":true
   },{
     "name":"calculation_uploader_name",
-    "description":"Name of the uploader of this calculation, given as <first_name last_name>",
+    "description":"Name of the uploader of this calculation, given as 'firstName lastName'",
     "superNames":["section_calculation_info"],
     "dtypeStr":"C",
     "repeats":true
@@ -555,9 +555,9 @@
   },{
     "name":"electronic_structure_method",
     "description":"Non-unique string identifying the used electronic structure method. It is not unique in the sense that two calculations with the same electronic_structure_method string may have not been performed with exactly the same method. The allowed strings are given in the [electronic structure method wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/electronic-structure-method).",
-    "description_for_query":"String identifying (one of) the electronic structre method used in the calculation.",	
     "superNames":["section_method","settings_xc"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "meta_query_description":"String identifying (one of) the electronic structre method used in the calculation."
   },{
     "name":"embedded_system",
     "description":"Is the system embedded into a host geometry?.",
@@ -2764,9 +2764,9 @@
   },{
     "name":"system_composition",
     "description":"Composition, i.e. cumulative chemical formula with atoms ordered by decreasing atomic number Z.",
-    "description_for_query":"Chemical composition, given as element name followed by its stoichiometric number, in any order. E.g., H2O or OH2 gives the same result. Note that the formula reflects the exact content of the simulation cell, so, two water molecules would have H2O4 as system_composition. For scale invariant formulas see system_reweighted_composition.",
     "superNames":["section_system","derived_quantity"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "meta_query_description":"Chemical composition, given as element name followed by its stoichiometric number, in any order. E.g., H2O or OH2 gives the same result. Note that the formula reflects the exact content of the simulation cell, so, two water molecules would have H2O4 as system_composition. For scale invariant formulas see system_reweighted_composition."
   },{
     "name":"system_configuration_consistent",
     "description":"Flag set is the configuration is consistent",
@@ -2780,9 +2780,9 @@
   },{
     "name":"system_reweighted_composition",
     "description":"Composition, i.e. cumulative chemical with atoms ordered by decreasing atomic number Z reweighted so that the sum is close to 100, and values are rounded up, and are stable (i.e. it is a fixed point).",
-   "description_for_query":"Chemical composition, given as element name followed by its stoichiometric number, in any order. This formula is scale invariant, with respect to the number of atoms in the simulation cell. E.g., H2O yields systems where only one water molecule is present, as well as 64.",
     "superNames":["section_system","derived_quantity"],
-    "dtypeStr":"C"
+    "dtypeStr":"C",
+    "meta_query_description":"Chemical composition, given as element name followed by its stoichiometric number, in any order. This formula is scale invariant, with respect to the number of atoms in the simulation cell. E.g., H2O yields systems where only one water molecule is present, as well as 64."
   },{
     "name":"system_to_system_kind",
     "description":"String defining the relationship between the referenced section_system and the present section_system. Often systems are connected for example if a phonon calculation using finite differences is performed the force ealuation is done in a larger supercell but properties such as the phonon band structure are still calculated for the primitive cell. Hence, the need of keeping track of these connected systems. The referenced system is identified via system_to_system_ref.",
@@ -2796,7 +2796,7 @@
     "referencedSections":["section_system"]
   },{
     "name":"system_type",
-    "description":"Type of the system. Allowed values are: 2D, Atom, Bulk, Molecule/Cluster, Polymer, Surface.",
+    "description":"Type of the system.",
     "superNames":["section_system","derived_quantity"],
     "dtypeStr":"C",
     "values":{

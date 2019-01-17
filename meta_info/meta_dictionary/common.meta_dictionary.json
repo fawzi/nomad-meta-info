@@ -76,12 +76,13 @@
     "meta_description":[
       "Species of the atom (normally the atomic number Z, 0 or negative for ",
       "unidentifed species or particles that are not ",
-      "atoms."],
+      "atoms)."],
     "meta_parent_section":"section_topology",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"int",
-    "meta_repeats":true
+    "meta_repeats":true,
+    "meta_query_description":"List of atomic symbols or numbers present in the calculated system"
   },{
     "meta_name":"atom_to_molecule",
     "meta_type":"type-value",

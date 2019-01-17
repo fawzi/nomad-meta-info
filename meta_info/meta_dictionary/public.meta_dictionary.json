@@ -938,8 +938,8 @@
     "meta_name":"calculation_uploader_name",
     "meta_type":"type-value",
     "meta_description":[
-      "Name of the uploader of this calculation, given as lastamen, ",
-      "firstname"],
+      "Name of the uploader of this calculation, given as 'firstName ",
+      "lastName'"],
     "meta_parent_section":"section_calculation_info",
     "meta_data_type":"string",
     "meta_repeats":true
@@ -1296,7 +1296,8 @@
     "meta_parent_section":"section_method",
     "meta_abstract_types":[
       "settings_xc"],
-    "meta_data_type":"string"
+    "meta_data_type":"string",
+    "meta_query_description":"String identifying (one of) the electronic structre method used in the calculation."
   },{
     "meta_name":"embedded_system",
     "meta_type":"type-value",
@@ -5983,7 +5984,8 @@
     "meta_parent_section":"section_system",
     "meta_abstract_types":[
       "derived_quantity"],
-    "meta_data_type":"string"
+    "meta_data_type":"string",
+    "meta_query_description":"Chemical composition, given as element name followed by its stoichiometric number, in any order. E.g., H2O or OH2 gives the same result. Note that the formula reflects the exact content of the simulation cell, so, two water molecules would have H2O4 as system_composition. For scale invariant formulas see system_reweighted_composition."
   },{
     "meta_name":"system_configuration_consistent",
     "meta_type":"type-value",
@@ -6011,7 +6013,8 @@
     "meta_parent_section":"section_system",
     "meta_abstract_types":[
       "derived_quantity"],
-    "meta_data_type":"string"
+    "meta_data_type":"string",
+    "meta_query_description":"Chemical composition, given as element name followed by its stoichiometric number, in any order. This formula is scale invariant, with respect to the number of atoms in the simulation cell. E.g., H2O yields systems where only one water molecule is present, as well as 64."
   },{
     "meta_name":"system_to_system_kind",
     "meta_type":"type-value",
@@ -6038,7 +6041,7 @@
   },{
     "meta_name":"system_type",
     "meta_type":"type-value",
-    "meta_description":"Type of the system ",
+    "meta_description":"Type of the system.",
     "meta_parent_section":"section_system",
     "meta_abstract_types":[
       "derived_quantity"],

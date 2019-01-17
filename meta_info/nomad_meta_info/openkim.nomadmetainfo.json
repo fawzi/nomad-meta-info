@@ -1,39 +1,28 @@
 {
-  "type": "nomad_meta_info_1_0",
-  "description": "meta info used by the OpenKIM parser, all names are expected to start with x_openkim_",
-  "dependencies": [ {
-      "relativePath": "common.nomadmetainfo.json"
-    }, {
-      "relativePath": "meta_types.nomadmetainfo.json"
-    }],
-  "metaInfos": [ {
-      "description": "build date as string",
-      "dtypeStr": "C",
-      "name": "openkim_build_date",
-      "shape": [],
-      "superNames": [
-        "program_info"
-      ]
-    }, {
-      "description": "date of last modification of the source as string",
-      "dtypeStr": "C",
-      "name": "openkim_src_date",
-      "shape": [],
-      "superNames": [
-        "program_info"
-      ]
-    }, {
-      "description": "reference to the atom kinds of each atom",
-      "dtypeStr": "r",
-      "name": "x_openkim_atom_kind_refs",
-      "referencedSections": [
-        "section_method_atom_kind"
-      ],
-      "shape": [
-        "number_of_atoms"
-      ],
-      "superNames": [
-        "section_method"
-      ]
-    }]
+  "type":"nomad_meta_info_1_0",
+  "name":"openkim",
+  "description":"meta info used by the Openkim parser, all names are expected to start with x_openkim_",
+  "dependencies":[{
+    "relativePath":"common.nomadmetainfo.json"
+  },{
+    "relativePath":"public.nomadmetainfo.json"
+  }],
+  "metaInfos":[{
+    "name":"openkim_build_date",
+    "description":"build date as string",
+    "superNames":["section_run","program_info"],
+    "dtypeStr":"C"
+  },{
+    "name":"openkim_src_date",
+    "description":"date of last modification of the source as string",
+    "superNames":["section_run","program_info"],
+    "dtypeStr":"C"
+  },{
+    "name":"x_openkim_atom_kind_refs",
+    "description":"reference to the atom kinds of each atom",
+    "superNames":["section_method"],
+    "dtypeStr":"r",
+    "shape":["number_of_atoms"],
+    "referencedSections":["section_method_atom_kind"]
+  }]
 }

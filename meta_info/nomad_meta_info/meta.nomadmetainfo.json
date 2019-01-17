@@ -142,6 +142,11 @@
     "superNames":["meta_info_entry"],
     "dtypeStr":"C"
   },{
+    "name":"meta_query_description",
+    "description":"Description of the field to be shown instead of meta_description when this field is used for querying",
+    "superNames":["meta_info_entry"],
+    "dtypeStr":"C"
+  },{
     "name":"meta_query_enum",
     "kindStr":"type_section",
     "description":"Describes possible values that can be used to query this field, but are not really stored in it.",
