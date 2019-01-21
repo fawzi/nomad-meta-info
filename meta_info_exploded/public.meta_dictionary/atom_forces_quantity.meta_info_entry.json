@@ -1,0 +1,20 @@
+{
+  "meta_name":"atom_forces_quantity",
+  "meta_type":"type-value",
+  "meta_description":[
+    "String giving the name of the energy quantity. The forces in atom_forces are minus the gradient of the quantity specified."],
+  "meta_parent_section":"section_atom_forces",
+  "meta_data_type":"string",
+  "meta_default_value": "energy_total",
+  "meta_enum":[{
+    "meta_enum_value":"energy_total",
+    "meta_enum_description":[
+      "The total potential energy energy_total."
+      ]
+  },{
+    "meta_enum_value":"energy_free",
+    "meta_enum_description":[
+      "The free energy energy_free."
+    ]
+  }]
+}

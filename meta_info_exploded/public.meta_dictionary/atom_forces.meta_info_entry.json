@@ -2,17 +2,12 @@
   "meta_name":"atom_forces",
   "meta_type":"type-value",
   "meta_description":[
-    "Forces acting on the atoms, calculated as minus gradient of energy_total, ",
-    "**including** constraints, if present. The derivatives with respect to ",
-    "displacements of nuclei are evaluated in Cartesian coordinates. In addition, ",
-    "these forces are obtained by filtering out the unitary transformations ",
-    "(center-of-mass translations and rigid rotations for non-periodic systems, see ",
-    "atom_forces_free_raw for the unfiltered counterpart). Forces due to constraints ",
-    "such as fixed atoms, distances, angles, dihedrals, etc. are included (see ",
-    "atom_forces_raw for the unfiltered counterpart)."],
-  "meta_parent_section":"section_single_configuration_calculation",
+    "Forces acting on the atoms, calculated as minus gradient of atom_forces_quantity, ",
+    "with the constraints as describe by atom_forces_constraints. The derivatives with respect to ",
+    "displacements of nuclei are evaluated in Cartesian coordinates."],
+  "meta_parent_section":"section_atom_forces",
   "meta_abstract_types":[
-    "atom_forces_type"],
+    "force_type"],
   "meta_data_type":"float",
   "meta_dimension":[{
     "meta_dimension_symbolic":"number_of_atoms"
