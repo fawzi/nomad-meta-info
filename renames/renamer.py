@@ -95,26 +95,45 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Make replacements in files')
     parser.add_argument('--reverse', action='store_true',
                         help='Performs replacements in the reverse direction')
-    parser.add_argument('--renames-file', nargs=1,
-                        default=[renamesPath],
-                        help='file containing the replacements to perform (from -> to)')
+    parser.add_argument('--verbose', action='store_true',
+                        help='More chatty about operations')
+    parser.add_argument('--no-specific', action='store_true',
+                        help='Does not add specific renames when called without renames files')
+    parser.add_argument('--renames-file', nargs=1, action='append',
+                        help='file containing the replacements to perform (from -> to), default is ' + renamesPath)
     parser.add_argument('toRename', metavar='P', nargs='+',
                         help='path to a file to rename')
     args = parser.parse_args()
+    if args.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+    baseRenameFiles = []
+    specificRenames = {}
     if not args.renames_file:
+        baseRenameFiles.append(renamesPath)
         baseRenames = loadRenamesFile(renamesPath, args.reverse)
+        if not args.no_specific:
+            import glob
+            for r in glob.glob(os.path.join(os.path.dirname(renamesPath),"*.renames")):
+                key = os.path.basename(r[:-len('.renames')])
+                specificRenames[key] = loadRenamesFile(r, args.reverse)
+        logging.info("specificRenames:%s", specificRenames.keys())
     else:
-        baseRenames = loadRenamesFile(args.renames_file[0], args.reverse)
+        baseRenames = {}
+        for r in args.renames_file:
+            baseRenameFiles.append(r[0])
+            baseRenames.update(loadRenamesFile(r[0], args.reverse))
     for f in args.toRename:
         try:
-            basename = os.path.splitext(os.path.splitext(os.path.basename(f))[0])[0]
-            specificRenames = os.path.join(os.path.dirname(renamesPath), basename + ".renames")
-            if not args.renames_file and os.path.exists(specificRenames):
-                renames = loadRenamesFile(specificRenames, arg.reverse)
-                renames.update(baseRenames)
-            else:
-                renames = baseRenames
+            specificFiles = []
+            renames = baseRenames
+            for skey, svals in specificRenames.items():
+                if skey.lower() in f.lower():
+                    specificFiles.append(os.path.join(renamesPath, skey+'.renames'))
+                    nrenames = {}
+                    nrenames.update(renames)
+                    nrenames.update(svals)
+                    renames = nrenames
+            logging.info('%r: %r', f, baseRenameFiles + specificFiles)
             replaceInFile(f, renames)
         except:
             logging.exception("handling file %s", f)
-    print("DONE")
