@@ -49,17 +49,13 @@
     "meta_name":"atom_forces",
     "meta_type":"type-value",
     "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_total, ",
-      "**including** constraints, if present. The derivatives with respect to ",
-      "displacements of nuclei are evaluated in Cartesian coordinates. In addition, ",
-      "these forces are obtained by filtering out the unitary transformations ",
-      "(center-of-mass translations and rigid rotations for non-periodic systems, see ",
-      "atom_forces_free_raw for the unfiltered counterpart). Forces due to constraints ",
-      "such as fixed atoms, distances, angles, dihedrals, etc. are included (see ",
-      "atom_forces_raw for the unfiltered counterpart)."],
-    "meta_parent_section":"section_single_configuration_calculation",
+      "Forces acting on the atoms, calculated as minus gradient of ",
+      "atom_forces_quantity, with the constraints as describe by ",
+      "atom_forces_constraints. The derivatives with respect to displacements of ",
+      "nuclei are evaluated in Cartesian coordinates."],
+    "meta_parent_section":"section_atom_forces",
     "meta_abstract_types":[
-      "atom_forces_type"],
+      "force_type"],
     "meta_data_type":"float",
     "meta_dimension":[{
       "meta_dimension_symbolic":"number_of_atoms"
@@ -69,134 +65,51 @@
     "meta_repeats":true,
     "meta_units":"N"
   },{
-    "meta_name":"atom_forces_free",
+    "meta_name":"atom_forces_constraints",
     "meta_type":"type-value",
     "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_free, ",
-      "**including** constraints, if present. The derivatives with respect to ",
-      "displacements of the nuclei are evaluated in Cartesian coordinates. The ",
-      "(electronic) energy_free contains the information on the change in (fractional) ",
-      "occupation of the electronic eigenstates, which are accounted for in the ",
-      "derivatives, yielding a truly energy-conserved quantity. In addition, these ",
-      "forces are obtained by filtering out the unitary transformations ",
-      "(center-of-mass translations and rigid rotations for non-periodic systems, see ",
-      "atom_forces_free_raw for the unfiltered counterpart). Forces due to constraints ",
-      "such as fixed atoms, distances, angles, dihedrals, etc. are included (see ",
-      "atom_forces_free_raw for the unfiltered counterpart)."],
-    "meta_parent_section":"section_single_configuration_calculation",
-    "meta_abstract_types":[
-      "atom_forces_type"],
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_atoms"
+      "Specifies the treatement of the component of the forces along constraints in ",
+      "atomic_forces."],
+    "meta_parent_section":"section_atom_forces",
+    "meta_data_type":"string",
+    "meta_enum":[{
+      "meta_enum_value":"clean",
+      "meta_enum_description":[
+        "The component of the forces along the constraints is ",
+        "removed."]
     },{
-      "meta_dimension_fixed":3
+      "meta_enum_value":"center-of-mass",
+      "meta_enum_description":[
+        "The constraint along the center of mass are removed: translations, and if non ",
+        "periodic also rotations."]
+    },{
+      "meta_enum_value":"undefined",
+      "meta_enum_description":[
+        "The components of the force along constraints can be anything, no assumption ",
+        "should be done."]
+    },{
+      "meta_enum_value":"raw",
+      "meta_enum_description":[
+        "The forces are exactly minus the gradient of atom_forces_quantity, constraints ",
+        "are not considered."]
     }],
-    "meta_repeats":true,
-    "meta_units":"N"
+    "meta_default_value":"undefined"
   },{
-    "meta_name":"atom_forces_free_raw",
+    "meta_name":"atom_forces_quantity",
     "meta_type":"type-value",
     "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_free, ",
-      "**without** constraints. The derivatives with respect to displacements of ",
-      "nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free ",
-      "contains the change in (fractional) occupation of the electronic eigenstates, ",
-      "which are accounted for in the derivatives, yielding a truly energy-conserved ",
-      "quantity. These forces may contain unitary transformations (center-of-mass ",
-      "translations and rigid rotations for non-periodic systems) that are normally ",
-      "filtered separately (see atom_forces_free for the filtered counterpart). Forces ",
-      "due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are ",
-      "also considered separately (see atom_forces_free for the filtered ",
-      "counterpart)."],
-    "meta_parent_section":"section_single_configuration_calculation",
-    "meta_abstract_types":[
-      "atom_forces_type"],
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_atoms"
+      "String giving the name of the energy quantity. The forces in atom_forces are ",
+      "minus the gradient of the quantity specified."],
+    "meta_parent_section":"section_atom_forces",
+    "meta_data_type":"string",
+    "meta_enum":[{
+      "meta_enum_value":"energy_total",
+      "meta_enum_description":"The total potential energy energy_total."
     },{
-      "meta_dimension_fixed":3
+      "meta_enum_value":"energy_free",
+      "meta_enum_description":"The free energy energy_free."
     }],
-    "meta_repeats":true,
-    "meta_units":"N"
-  },{
-    "meta_name":"atom_forces_raw",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_total, ",
-      "**without** constraints. The derivatives with respect to displacements of the ",
-      "nuclei are evaluated in Cartesian coordinates. These forces may contain unitary ",
-      "transformations (center-of-mass translations and rigid rotations for ",
-      "non-periodic systems) that are normally filtered separately (see atom_forces ",
-      "for the filtered counterpart). Forces due to constraints such as fixed atoms, ",
-      "distances, angles, dihedrals, etc. are also considered separately (see ",
-      "atom_forces for the filtered counterpart)."],
-    "meta_parent_section":"section_single_configuration_calculation",
-    "meta_abstract_types":[
-      "atom_forces_type"],
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_atoms"
-    },{
-      "meta_dimension_fixed":3
-    }],
-    "meta_repeats":true,
-    "meta_units":"N"
-  },{
-    "meta_name":"atom_forces_t0",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_total_t0, ",
-      "**including** constraints, if present. The derivatives with respect to ",
-      "displacements of the nuclei are evaluated in Cartesian coordinates. In ",
-      "addition, these forces are obtained by filtering out the unitary ",
-      "transformations (center-of-mass translations and rigid rotations for ",
-      "non-periodic systems, see atom_forces_free_T0_raw for the unfiltered ",
-      "counterpart). Forces due to constraints such as fixed atoms, distances, angles, ",
-      "dihedrals, etc. are also included (see atom_forces_free_T0_raw for the ",
-      "unfiltered counterpart)."],
-    "meta_parent_section":"section_single_configuration_calculation",
-    "meta_abstract_types":[
-      "atom_forces_type"],
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_atoms"
-    },{
-      "meta_dimension_fixed":3
-    }],
-    "meta_repeats":true,
-    "meta_units":"N"
-  },{
-    "meta_name":"atom_forces_t0_raw",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Forces acting on the atoms, calculated as minus gradient of energy_total_t0, ",
-      "**without** constraints. The derivatives with respect to displacements of the ",
-      "nuclei are evaluated in Cartesian coordinates. These forces may contain unitary ",
-      "transformations (center-of-mass translations and rigid rotations for ",
-      "non-periodic systems) that are normally filtered separately (see atom_forces_t0 ",
-      "for the filtered counterpart). Forces due to constraints such as fixed atoms, ",
-      "distances, angles, dihedrals, etc. are also considered separately (see ",
-      "atom_forces_t0 for the filtered counterpart)."],
-    "meta_parent_section":"section_single_configuration_calculation",
-    "meta_abstract_types":[
-      "atom_forces_type"],
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_atoms"
-    },{
-      "meta_dimension_fixed":3
-    }],
-    "meta_repeats":true,
-    "meta_units":"N"
-  },{
-    "meta_name":"atom_forces_type",
-    "meta_type":"type-abstract",
-    "meta_description":[
-      "The types of forces acting on the atoms (i.e., minus derivatives of the ",
-      "specific type of energy with respect to the atom ",
-      "position)."]
+    "meta_default_value":"energy_total"
   },{
     "meta_name":"atom_labels",
     "meta_type":"type-value",
@@ -992,10 +905,8 @@
     "meta_description":[
       "The values of a quantity that should be conserved,  along a sequence of frames ",
       "(i.e., a trajectory). A frame is one section_single_configuration_calculation), ",
-      "for example the total energy in the NVE ensemble. If not all frames have a ",
-      "value the indices of the frames that have a value are stored in ",
-      "frame_sequence_conserved_quantity_frames."],
-    "meta_parent_section":"section_frame_sequence",
+      "for example the total energy in the NVE ensemble."],
+    "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"float",
     "meta_units":"J"
   },{
@@ -1979,48 +1890,23 @@
       "An estimate of a partial quantity contributing to the error for a given ",
       "quantity."]
   },{
-    "meta_name":"frame_sequence_conserved_quantity",
-    "meta_type":"type-value",
-    "meta_deprecated":true,
+    "meta_name":"force_type",
+    "meta_type":"type-abstract",
     "meta_description":[
-      "(deprecated) Array containing the values of a quantity that should be ",
-      "conserved,  along a sequence of frames (i.e., a trajectory). A frame is one ",
-      "section_single_configuration_calculation), for example the total energy in the ",
-      "NVE ensemble. If not all frames have a value the indices of the frames that ",
-      "have a value are stored in frame_sequence_conserved_quantity_frames."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_conserved_quantity_evaluations_in_sequence"
-    }],
-    "meta_units":"J"
-  },{
-    "meta_name":"frame_sequence_conserved_quantity_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Array containing the strictly increasing indices of the frames the ",
-      "frame_sequence_conserved_quantity values refers to. If not given it defaults to ",
-      "the trivial mapping 0,1,..."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_abstract_types":[
-      "derived_quantity"],
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_conserved_quantity_evaluations_in_sequence"
-    }]
+      "Type used to describe quantities that are some kind of force (i.e., minus ",
+      "derivatives of an energy_type)."]
   },{
     "meta_name":"frame_sequence_conserved_quantity_stats",
     "meta_type":"type-value",
     "meta_description":[
-      "Average value of energy-like frame_sequence_conserved_quantity, and its ",
-      "standard deviation, over this sequence of frames (i.e., a trajectory, a frame ",
-      "is one section_single_configuration_calculation)."],
+      "Average value of energy-like conserved_quantity, its standard deviation, and ",
+      "number of samples over this sequence of frames."],
     "meta_parent_section":"section_frame_sequence",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"float",
     "meta_dimension":[{
-      "meta_dimension_fixed":2
+      "meta_dimension_fixed":3
     }],
     "meta_units":"J"
   },{
@@ -2063,198 +1949,60 @@
     "meta_parent_section":"section_frame_sequence",
     "meta_data_type":"string"
   },{
-    "meta_name":"frame_sequence_kinetic_energy",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Array containing the values of the kinetic energy along this ",
-      "sequence of frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation). If not all frames have a value the ",
-      "indices of the frames that have a value are stored in ",
-      "frame_sequence_kinetic_energy_frames."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_kinetic_energies_in_sequence"
-    }],
-    "meta_units":"J"
-  },{
-    "meta_name":"frame_sequence_kinetic_energy_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Array containing the strictly increasing indices referring to the frames of ",
-      "frame_sequence_kinetic_energy. If not given it defaults to the trivial mapping ",
-      "0,1,..."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_abstract_types":[
-      "derived_quantity"],
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_kinetic_energies_in_sequence"
-    }]
-  },{
     "meta_name":"frame_sequence_kinetic_energy_stats",
     "meta_type":"type-value",
     "meta_description":[
-      "Average kinetic energy and its standard deviation over this sequence of frames ",
-      "(i.e., a trajectory, a frame is one section_single_configuration_calculation)."],
+      "Average kinetic energy, its standard deviation and number of samples over this ",
+      "sequence of frames."],
     "meta_parent_section":"section_frame_sequence",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"float",
     "meta_dimension":[{
-      "meta_dimension_fixed":2
+      "meta_dimension_fixed":3
     }],
     "meta_units":"J"
-  },{
-    "meta_name":"frame_sequence_local_frames_ref",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Reference from each frame (a frame is one ",
-      "section_single_configuration_calculation) in this section_frame_sequence to the ",
-      "corresponding section_single_configuration_calculation. Each ",
-      "section_frame_sequence binds a collection of ",
-      "section_single_configuration_calculation, because they all belong to, e.g., a ",
-      "molecular dynamics trajectory, or geometry optimization. The full information ",
-      "for each frame is stored in section_single_configuration_calculation and this ",
-      "metadata establishes the link for each frame."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"reference",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_frames_in_sequence"
-    }],
-    "meta_referenced_section":"section_single_configuration_calculation"
-  },{
-    "meta_name":"frame_sequence_potential_energy",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Array containing the value of the potential energy along this ",
-      "sequence of frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation). This is equal to energy_total of the ",
-      "corresponding section_single_configuration_calculation and repeated here in a ",
-      "summary array for easier access. If not all frames have a value the indices of ",
-      "the frames that have a value are stored in ",
-      "frame_sequence_potential_energy_frames."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_potential_energies_in_sequence"
-    }],
-    "meta_units":"J"
-  },{
-    "meta_name":"frame_sequence_potential_energy_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Array containing the strictly increasing indices referring to the frames of ",
-      "frame_sequence_potential_energy. If not given it defaults to the trivial ",
-      "mapping 0,1,..."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_abstract_types":[
-      "derived_quantity"],
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_potential_energies_in_sequence"
-    }]
   },{
     "meta_name":"frame_sequence_potential_energy_stats",
     "meta_type":"type-value",
     "meta_description":[
-      "Average potential energy and its standard deviation over this sequence of ",
-      "frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation)."],
+      "Average potential energy, its standard deviation and number of samples over ",
+      "this sequence of frames."],
     "meta_parent_section":"section_frame_sequence",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"float",
     "meta_dimension":[{
-      "meta_dimension_fixed":2
+      "meta_dimension_fixed":3
     }],
     "meta_units":"J"
-  },{
-    "meta_name":"frame_sequence_pressure",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Array containing the values of the pressure (one third of the ",
-      "trace of the stress tensor) along this sequence of frames (a frame is one ",
-      "section_single_configuration_calculation). If not all frames have a value the ",
-      "indices of the frames that have a value are stored in ",
-      "frame_sequence_pressure_frames."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_pressure_evaluations_in_sequence"
-    }],
-    "meta_units":"Pa"
-  },{
-    "meta_name":"frame_sequence_pressure_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Array containing the strictly increasing indices referring to the frames of ",
-      "frame_sequence_pressure. If not given it defaults to the trivial mapping ",
-      "0,1,..."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_abstract_types":[
-      "derived_quantity"],
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_pressure_evaluations_in_sequence"
-    }]
   },{
     "meta_name":"frame_sequence_pressure_stats",
     "meta_type":"type-value",
     "meta_description":[
-      "Average pressure (one third of the trace of the stress tensor) and standard ",
-      "deviation over this sequence of frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation)."],
+      "Average pressure (one third of the trace of the stress tensor), standard ",
+      "deviation and number of samples over this sequence of frames (i.e., a ",
+      "trajectory, a frame is one section_single_configuration_calculation)."],
     "meta_parent_section":"section_frame_sequence",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"float",
     "meta_dimension":[{
-      "meta_dimension_fixed":2
+      "meta_dimension_fixed":3
     }],
     "meta_units":"Pa"
-  },{
-    "meta_name":"frame_sequence_temperature",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Array containing the values of the instantaneous temperature (a ",
-      "quantity, proportional to frame_sequence_kinetic_energy, whose ensemble average ",
-      "equals the thermodynamic temperature) along this sequence of frames (i.e., a ",
-      "trajectory, a frame is one section_single_configuration_calculation). If not ",
-      "all frames have a value the indices of the frames that have a value are stored ",
-      "in frame_sequence_temperature_frames."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_temperatures_in_sequence"
-    }],
-    "meta_units":"K"
-  },{
-    "meta_name":"frame_sequence_temperature_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Array containing the strictly increasing indices referring to the frames of ",
-      "frame_sequence_temperature. If not given it defaults to the trivial mapping ",
-      "0,1,..."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_abstract_types":[
-      "derived_quantity"],
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_temperatures_in_sequence"
-    }]
   },{
     "meta_name":"frame_sequence_temperature_stats",
     "meta_type":"type-value",
     "meta_description":[
-      "Average temperature and its standard deviation over this sequence of frames ",
-      "(i.e., a trajectory, a frame is one section_single_configuration_calculation)."],
+      "Average temperature, its standard deviation and number for samples over this ",
+      "sequence of frames ."],
     "meta_parent_section":"section_frame_sequence",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"float",
     "meta_dimension":[{
-      "meta_dimension_fixed":2
+      "meta_dimension_fixed":3
     }],
     "meta_units":"K"
   },{
@@ -2300,76 +2048,6 @@
     "meta_parent_section":"section_frame_sequence",
     "meta_data_type":"reference",
     "meta_referenced_section":"section_sampling_method"
-  },{
-    "meta_name":"frame_sequence_to_sampling_ref",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Reference from the present section_frame_sequence to the ",
-      "section_sampling_method, that defines the parameters used in this sequence of ",
-      "frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation)."],
-    "meta_parent_section":"section_frame_sequence",
-    "meta_data_type":"reference",
-    "meta_referenced_section":"section_sampling_method"
-  },{
-    "meta_name":"frame_sequence_user_quantity",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Array containing the values of the user-defined quantity defined ",
-      "in frame_sequence_user_quantity_name, evaluated along this sequence of frames ",
-      "(i.e., trajectory, a frame is one section_single_configuration_calculation). If ",
-      "not all frames have a value the indices of the frames that have a value are ",
-      "stored in frame_sequence_kinetic_energy_frames. If not all frames have a value ",
-      "the indices of the frames that have a value are stored in ",
-      "frame_sequence_kinetic_energy_frames."],
-    "meta_parent_section":"section_frame_sequence_user_quantity",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_frame_sequence_user_quantity_evaluations_in_sequence"
-    },{
-      "meta_dimension_symbolic":"number_of_frame_sequence_user_quantity_components"
-    }]
-  },{
-    "meta_name":"frame_sequence_user_quantity_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Array containing the strictly increasing indices referring to the ",
-      "frames of frame_sequence_user_quantity. If not given it defaults to the trivial ",
-      "mapping 0,1,..."],
-    "meta_parent_section":"section_frame_sequence_user_quantity",
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_frame_sequence_user_quantity_evaluations_in_sequence"
-    }]
-  },{
-    "meta_name":"frame_sequence_user_quantity_name",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Descriptive name of a user-defined quantity, sampled along this ",
-      "sequence of frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation). Dedicated metadata are created for ",
-      "the conserved energy-like quantity (frame_sequence_conserved_quantity), the ",
-      "kinetic and potential energies (frame_sequence_kinetic_energy and ",
-      "frame_sequence_potential_energy), the instantaneous temperature ",
-      "(frame_sequence_temperature) and pressure (frame_sequence_pressure). This ",
-      "metadata should be used for other quantities that are monitored along a ",
-      "sequence of frames."],
-    "meta_parent_section":"section_frame_sequence_user_quantity",
-    "meta_data_type":"string"
-  },{
-    "meta_name":"frame_sequence_user_quantity_stats",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Average of frame_sequence_user_quantity and its standard deviation ",
-      "in this sequence of frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation)."],
-    "meta_parent_section":"section_frame_sequence_user_quantity",
-    "meta_data_type":"float",
-    "meta_dimension":[{
-      "meta_dimension_fixed":2
-    },{
-      "meta_dimension_symbolic":"number_of_frame_sequence_user_quantity_components"
-    }]
   },{
     "meta_name":"gaussian_basis_group_contractions",
     "meta_type":"type-value",
@@ -2988,33 +2666,6 @@
       "used."],
     "meta_parent_section":"section_eigenvalues"
   },{
-    "meta_name":"number_of_frame_sequence_user_quantity_components",
-    "meta_type":"type-dimension",
-    "meta_description":[
-      "(deprecated) Gives the number of user-defined quantity defined by ",
-      "frame_sequence_user_quantity_name and monitored in a sequence of frames. A ",
-      "sequence is a trajectory, which can have number_of_frames_in_sequence each ",
-      "representing one section_single_configuration_calculation section.\n",
-      "\n",
-      "Dedicated metadata monitored along a sequence of frames are created for the ",
-      "conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic ",
-      "and potential energies ([frame_sequence_kinetic_energy and ",
-      "frame_sequence_potential_energy](frame_sequence_kinetic_energy and ",
-      "frame_sequence_potential_energy)), the instantaneous temperature ",
-      "(frame_sequence_temperature) and the pressure ",
-      "(frame_sequence_pressure)."],
-    "meta_parent_section":"section_frame_sequence_user_quantity"
-  },{
-    "meta_name":"number_of_frame_sequence_user_quantity_evaluations_in_sequence",
-    "meta_type":"type-dimension",
-    "meta_description":[
-      "(deprecated) Gives the number of user defined quantity evaluations along a ",
-      "sequence of frame_sequence_user_quantity frames. A sequence is a trajectory, ",
-      "which can have number_of_frames_in_sequence each representing one ",
-      "section_single_configuration_calculation ",
-      "section."],
-    "meta_parent_section":"section_frame_sequence_user_quantity"
-  },{
     "meta_name":"number_of_frames_in_sequence",
     "meta_type":"type-dimension",
     "meta_description":[
@@ -3210,19 +2861,10 @@
     "meta_name":"number_of_user_quantity_components",
     "meta_type":"type-dimension",
     "meta_description":[
-      "Gives the number of user-defined quantity defined by ",
-      "frame_sequence_user_quantity_name and monitored in a sequence of frames. A ",
-      "sequence is a trajectory, which can have number_of_frames_in_sequence each ",
-      "representing one section_single_configuration_calculation section.\n",
-      "\n",
-      "Dedicated metadata monitored along a sequence of frames are created for the ",
-      "conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic ",
-      "and potential energies ([frame_sequence_kinetic_energy and ",
-      "frame_sequence_potential_energy](frame_sequence_kinetic_energy and ",
-      "frame_sequence_potential_energy)), the instantaneous temperature ",
-      "(frame_sequence_temperature) and the pressure ",
-      "(frame_sequence_pressure)."],
-    "meta_parent_section":"section_user_quantity_definition"
+      "Gives the number of components of user-defined quantity stored in ",
+      "user_defined_quantity. It should be the value defined in ",
+      "user_quantity_components of user_quantity_definition_ref."],
+    "meta_parent_section":"section_user_quantity"
   },{
     "meta_name":"number_of_user_quantity_evaluations_in_sequence",
     "meta_type":"type-dimension",
@@ -3235,6 +2877,14 @@
     "meta_parent_section":"section_user_quantity_definition",
     "meta_abstract_types":[
       "derived_quantity"]
+  },{
+    "meta_name":"number_of_user_quantity_stats_components",
+    "meta_type":"type-dimension",
+    "meta_description":[
+      "Gives the number of components of user-defined quantity stored in ",
+      "user_defined_quantity. It should be the value defined in ",
+      "user_quantity_components of user_quantity_stats_to_user_quantity_definition_ref."],
+    "meta_parent_section":"section_user_quantity_stats"
   },{
     "meta_name":"origin_shift",
     "meta_type":"type-value",
@@ -3865,6 +3515,17 @@
     "meta_data_type":"float",
     "meta_units":"J"
   },{
+    "meta_name":"section_atom_forces",
+    "meta_type":"type-section",
+    "meta_description":[
+      "Section keeping the forces acting on the atoms, calculated as minus gradient of ",
+      "atom_forces_quantity. The forces themselves are in atom_forces, the treatement ",
+      "of forces along constraints is described in ",
+      "atom_forces_constraints"],
+    "meta_parent_section":"section_single_configuration_calculation",
+    "meta_repeats":true,
+    "meta_context_identifier":[]
+  },{
     "meta_name":"section_atom_projected_dos",
     "meta_type":"type-section",
     "meta_description":[
@@ -4058,15 +3719,6 @@
       "are found in the section_single_configuration_calculation ",
       "section."],
     "meta_parent_section":"section_run",
-    "meta_repeats":true,
-    "meta_context_identifier":[]
-  },{
-    "meta_name":"section_frame_sequence_user_quantity",
-    "meta_type":"type-section",
-    "meta_description":[
-      "(deprecated) Section collecting some user-defined quantities evaluated along a ",
-      "sequence of frame."],
-    "meta_parent_section":"section_frame_sequence",
     "meta_repeats":true,
     "meta_context_identifier":[]
   },{
@@ -4469,6 +4121,16 @@
     "meta_description":[
       "Section collecting some user-defined quantities evaluated along a sequence of ",
       "frame."],
+    "meta_parent_section":"section_run",
+    "meta_repeats":true,
+    "meta_context_identifier":[]
+  },{
+    "meta_name":"section_user_quantity_stats",
+    "meta_type":"type-section",
+    "meta_description":[
+      "Section collecting the stats of the user-defined quantity ",
+      "user_quantity_stats_to_user_quantity_definition_ref evaluated along this ",
+      "sequence of frames."],
     "meta_parent_section":"section_frame_sequence",
     "meta_repeats":true,
     "meta_context_identifier":[]
@@ -4795,15 +4457,6 @@
     "meta_parent_section":"section_single_configuration_calculation",
     "meta_data_type":"reference",
     "meta_referenced_section":"section_system"
-  },{
-    "meta_name":"single_configuration_to_calculation_method_ref",
-    "meta_type":"type-value",
-    "meta_description":[
-      "(deprecated) Reference to the method used for the calculation in ",
-      "section_single_configuration_calculation."],
-    "meta_parent_section":"section_single_configuration_calculation",
-    "meta_data_type":"reference",
-    "meta_referenced_section":"section_method"
   },{
     "meta_name":"smearing_kind",
     "meta_type":"type-value",
@@ -6387,6 +6040,17 @@
       "meta_dimension_symbolic":"number_of_user_quantity_components"
     }]
   },{
+    "meta_name":"user_quantity_components",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Gives the number of components of the user-defined quantity defined by ",
+      "user_quantity_name and stored in the monitored in a sequence of frames. A ",
+      "sequence is a trajectory, which can have number_of_frames_in_sequence each ",
+      "representing one section_single_configuration_calculation section.\n"],
+    "meta_parent_section":"section_user_quantity_definition",
+    "meta_data_type":"int",
+    "meta_default_value":1
+  },{
     "meta_name":"user_quantity_definition_ref",
     "meta_type":"type-value",
     "meta_description":[
@@ -6395,20 +6059,6 @@
     "meta_parent_section":"section_user_quantity",
     "meta_data_type":"reference",
     "meta_referenced_section":"section_user_quantity_definition"
-  },{
-    "meta_name":"user_quantity_frames",
-    "meta_type":"type-value",
-    "meta_description":[
-      "Array containing the strictly increasing indices referring to the frames of ",
-      "frame_sequence_user_quantity. If not given it defaults to the trivial mapping ",
-      "0,1,..."],
-    "meta_parent_section":"section_user_quantity_definition",
-    "meta_abstract_types":[
-      "derived_quantity"],
-    "meta_data_type":"int",
-    "meta_dimension":[{
-      "meta_dimension_symbolic":"number_of_user_quantity_evaluations_in_sequence"
-    }]
   },{
     "meta_name":"user_quantity_name",
     "meta_type":"type-value",
@@ -6427,18 +6077,26 @@
     "meta_name":"user_quantity_stats",
     "meta_type":"type-value",
     "meta_description":[
-      "Average of frame_sequence_user_quantity and its standard deviation in this ",
-      "sequence of frames (i.e., a trajectory, a frame is one ",
-      "section_single_configuration_calculation)."],
-    "meta_parent_section":"section_user_quantity_definition",
+      "Average of frame_sequence_user_quantity, its standard deviation and the number ",
+      "of samples in thesection_frame_sequence."],
+    "meta_parent_section":"section_user_quantity_stats",
     "meta_abstract_types":[
       "derived_quantity"],
     "meta_data_type":"float",
     "meta_dimension":[{
-      "meta_dimension_fixed":2
+      "meta_dimension_fixed":3
     },{
-      "meta_dimension_symbolic":"number_of_user_quantity_components"
+      "meta_dimension_symbolic":"number_of_user_quantity_stats_components"
     }]
+  },{
+    "meta_name":"user_quantity_stats_to_user_quantity_definition_ref",
+    "meta_type":"type-value",
+    "meta_description":[
+      "Reference the user_quantity_definition the user_quantity_stats refer ",
+      "to."],
+    "meta_parent_section":"section_user_quantity_stats",
+    "meta_data_type":"reference",
+    "meta_referenced_section":"section_user_quantity_definition"
   },{
     "meta_name":"user_quantity_unit",
     "meta_type":"type-value",

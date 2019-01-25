@@ -33,57 +33,34 @@
     "shape":["number_of_atoms"]
   },{
     "name":"atom_forces",
-    "description":"Forces acting on the atoms, calculated as minus gradient of energy_total, **including** constraints, if present. The derivatives with respect to displacements of nuclei are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary transformations (center-of-mass translations and rigid rotations for non-periodic systems, see atom_forces_free_raw for the unfiltered counterpart). Forces due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are included (see atom_forces_raw for the unfiltered counterpart).",
-    "superNames":["section_single_configuration_calculation","atom_forces_type"],
+    "description":"Forces acting on the atoms, calculated as minus gradient of atom_forces_quantity, with the constraints as describe by atom_forces_constraints. The derivatives with respect to displacements of nuclei are evaluated in Cartesian coordinates.",
+    "superNames":["section_atom_forces","force_type"],
     "units":"N",
     "dtypeStr":"f",
     "repeats":true,
     "shape":["number_of_atoms",3]
   },{
-    "name":"atom_forces_free",
-    "description":"Forces acting on the atoms, calculated as minus gradient of energy_free, **including** constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free contains the information on the change in (fractional) occupation of the electronic eigenstates, which are accounted for in the derivatives, yielding a truly energy-conserved quantity. In addition, these forces are obtained by filtering out the unitary transformations (center-of-mass translations and rigid rotations for non-periodic systems, see atom_forces_free_raw for the unfiltered counterpart). Forces due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are included (see atom_forces_free_raw for the unfiltered counterpart).",
-    "superNames":["section_single_configuration_calculation","atom_forces_type"],
-    "units":"N",
-    "dtypeStr":"f",
-    "repeats":true,
-    "shape":["number_of_atoms",3]
+    "name":"atom_forces_constraints",
+    "description":"Specifies the treatement of the component of the forces along constraints in atomic_forces.",
+    "superNames":["section_atom_forces"],
+    "dtypeStr":"C",
+    "values":{
+      "center-of-mass":"The constraint along the center of mass are removed: translations, and if non periodic also rotations.",
+      "clean":"The component of the forces along the constraints is removed.",
+      "raw":"The forces are exactly minus the gradient of atom_forces_quantity, constraints are not considered.",
+      "undefined":"The components of the force along constraints can be anything, no assumption should be done."
+    },
+    "meta_default_value":"undefined"
   },{
-    "name":"atom_forces_free_raw",
-    "description":"Forces acting on the atoms, calculated as minus gradient of energy_free, **without** constraints. The derivatives with respect to displacements of nuclei are evaluated in Cartesian coordinates. The (electronic) energy_free contains the change in (fractional) occupation of the electronic eigenstates, which are accounted for in the derivatives, yielding a truly energy-conserved quantity. These forces may contain unitary transformations (center-of-mass translations and rigid rotations for non-periodic systems) that are normally filtered separately (see atom_forces_free for the filtered counterpart). Forces due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are also considered separately (see atom_forces_free for the filtered counterpart).",
-    "superNames":["section_single_configuration_calculation","atom_forces_type"],
-    "units":"N",
-    "dtypeStr":"f",
-    "repeats":true,
-    "shape":["number_of_atoms",3]
-  },{
-    "name":"atom_forces_raw",
-    "description":"Forces acting on the atoms, calculated as minus gradient of energy_total, **without** constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. These forces may contain unitary transformations (center-of-mass translations and rigid rotations for non-periodic systems) that are normally filtered separately (see atom_forces for the filtered counterpart). Forces due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are also considered separately (see atom_forces for the filtered counterpart).",
-    "superNames":["section_single_configuration_calculation","atom_forces_type"],
-    "units":"N",
-    "dtypeStr":"f",
-    "repeats":true,
-    "shape":["number_of_atoms",3]
-  },{
-    "name":"atom_forces_t0",
-    "description":"Forces acting on the atoms, calculated as minus gradient of energy_total_t0, **including** constraints, if present. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. In addition, these forces are obtained by filtering out the unitary transformations (center-of-mass translations and rigid rotations for non-periodic systems, see atom_forces_free_T0_raw for the unfiltered counterpart). Forces due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are also included (see atom_forces_free_T0_raw for the unfiltered counterpart).",
-    "superNames":["section_single_configuration_calculation","atom_forces_type"],
-    "units":"N",
-    "dtypeStr":"f",
-    "repeats":true,
-    "shape":["number_of_atoms",3]
-  },{
-    "name":"atom_forces_t0_raw",
-    "description":"Forces acting on the atoms, calculated as minus gradient of energy_total_t0, **without** constraints. The derivatives with respect to displacements of the nuclei are evaluated in Cartesian coordinates. These forces may contain unitary transformations (center-of-mass translations and rigid rotations for non-periodic systems) that are normally filtered separately (see atom_forces_t0 for the filtered counterpart). Forces due to constraints such as fixed atoms, distances, angles, dihedrals, etc. are also considered separately (see atom_forces_t0 for the filtered counterpart).",
-    "superNames":["section_single_configuration_calculation","atom_forces_type"],
-    "units":"N",
-    "dtypeStr":"f",
-    "repeats":true,
-    "shape":["number_of_atoms",3]
-  },{
-    "name":"atom_forces_type",
-    "kindStr":"type_abstract_document_content",
-    "description":"The types of forces acting on the atoms (i.e., minus derivatives of the specific type of energy with respect to the atom position).",
-    "superNames":[]
+    "name":"atom_forces_quantity",
+    "description":"String giving the name of the energy quantity. The forces in atom_forces are minus the gradient of the quantity specified.",
+    "superNames":["section_atom_forces"],
+    "dtypeStr":"C",
+    "values":{
+      "energy_free":"The free energy energy_free.",
+      "energy_total":"The total potential energy energy_total."
+    },
+    "meta_default_value":"energy_total"
   },{
     "name":"atom_labels",
     "description":"Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic species, possibly followed by the atomic number. The same atomic species can be labeled with more than one atom_labels in order to distinguish, e.g., atoms of the same species assigned to different atom-centered basis sets or pseudo-potentials, or simply atoms in different locations in the structure (e.g., bulk and surface). These labels can also be used for *particles* that do not correspond to physical atoms (e.g., ghost atoms in some codes using atom-centered basis sets). This metadata defines a configuration and is therefore required.",
@@ -420,8 +397,8 @@
     "dtypeStr":"C"
   },{
     "name":"conserved_quantity",
-    "description":"The values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_conserved_quantity_frames.",
-    "superNames":["section_frame_sequence"],
+    "description":"The values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble.",
+    "superNames":["section_single_configuration_calculation"],
     "units":"J",
     "dtypeStr":"f"
   },{
@@ -891,26 +868,17 @@
     "description":"An estimate of a partial quantity contributing to the error for a given quantity.",
     "superNames":[]
   },{
-    "name":"frame_sequence_conserved_quantity",
-    "description":"(deprecated) Array containing the values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is one section_single_configuration_calculation), for example the total energy in the NVE ensemble. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_conserved_quantity_frames.",
-    "superNames":["section_frame_sequence"],
-    "units":"J",
-    "dtypeStr":"f",
-    "shape":["number_of_conserved_quantity_evaluations_in_sequence"],
-    "meta_deprecated":true
-  },{
-    "name":"frame_sequence_conserved_quantity_frames",
-    "description":"Array containing the strictly increasing indices of the frames the frame_sequence_conserved_quantity values refers to. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_frame_sequence","derived_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_conserved_quantity_evaluations_in_sequence"]
+    "name":"force_type",
+    "kindStr":"type_abstract_document_content",
+    "description":"Type used to describe quantities that are some kind of force (i.e., minus derivatives of an energy_type).",
+    "superNames":[]
   },{
     "name":"frame_sequence_conserved_quantity_stats",
-    "description":"Average value of energy-like frame_sequence_conserved_quantity, and its standard deviation, over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+    "description":"Average value of energy-like conserved_quantity, its standard deviation, and number of samples over this sequence of frames.",
     "superNames":["section_frame_sequence","derived_quantity"],
     "units":"J",
     "dtypeStr":"f",
-    "shape":[2]
+    "shape":[3]
   },{
     "name":"frame_sequence_continuation_kind",
     "description":"Type of continuation that has been performed from the previous sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation), upon restart.",
@@ -928,92 +896,33 @@
     "superNames":["section_frame_sequence"],
     "dtypeStr":"C"
   },{
-    "name":"frame_sequence_kinetic_energy",
-    "description":"(deprecated) Array containing the values of the kinetic energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_kinetic_energy_frames.",
-    "superNames":["section_frame_sequence"],
-    "units":"J",
-    "dtypeStr":"f",
-    "shape":["number_of_kinetic_energies_in_sequence"]
-  },{
-    "name":"frame_sequence_kinetic_energy_frames",
-    "description":"Array containing the strictly increasing indices referring to the frames of frame_sequence_kinetic_energy. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_frame_sequence","derived_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_kinetic_energies_in_sequence"]
-  },{
     "name":"frame_sequence_kinetic_energy_stats",
-    "description":"Average kinetic energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+    "description":"Average kinetic energy, its standard deviation and number of samples over this sequence of frames.",
     "superNames":["section_frame_sequence","derived_quantity"],
     "units":"J",
     "dtypeStr":"f",
-    "shape":[2]
-  },{
-    "name":"frame_sequence_local_frames_ref",
-    "description":"(deprecated) Reference from each frame (a frame is one section_single_configuration_calculation) in this section_frame_sequence to the corresponding section_single_configuration_calculation. Each section_frame_sequence binds a collection of section_single_configuration_calculation, because they all belong to, e.g., a molecular dynamics trajectory, or geometry optimization. The full information for each frame is stored in section_single_configuration_calculation and this metadata establishes the link for each frame.",
-    "superNames":["section_frame_sequence"],
-    "dtypeStr":"r",
-    "shape":["number_of_frames_in_sequence"],
-    "referencedSections":["section_single_configuration_calculation"]
-  },{
-    "name":"frame_sequence_potential_energy",
-    "description":"(deprecated) Array containing the value of the potential energy along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). This is equal to energy_total of the corresponding section_single_configuration_calculation and repeated here in a summary array for easier access. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_potential_energy_frames.",
-    "superNames":["section_frame_sequence"],
-    "units":"J",
-    "dtypeStr":"f",
-    "shape":["number_of_potential_energies_in_sequence"]
-  },{
-    "name":"frame_sequence_potential_energy_frames",
-    "description":"Array containing the strictly increasing indices referring to the frames of frame_sequence_potential_energy. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_frame_sequence","derived_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_potential_energies_in_sequence"]
+    "shape":[3]
   },{
     "name":"frame_sequence_potential_energy_stats",
-    "description":"Average potential energy and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+    "description":"Average potential energy, its standard deviation and number of samples over this sequence of frames.",
     "superNames":["section_frame_sequence","derived_quantity"],
     "units":"J",
     "dtypeStr":"f",
-    "shape":[2]
-  },{
-    "name":"frame_sequence_pressure",
-    "description":"(deprecated) Array containing the values of the pressure (one third of the trace of the stress tensor) along this sequence of frames (a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_pressure_frames.",
-    "superNames":["section_frame_sequence"],
-    "units":"Pa",
-    "dtypeStr":"f",
-    "shape":["number_of_pressure_evaluations_in_sequence"]
-  },{
-    "name":"frame_sequence_pressure_frames",
-    "description":"Array containing the strictly increasing indices referring to the frames of frame_sequence_pressure. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_frame_sequence","derived_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_pressure_evaluations_in_sequence"]
+    "shape":[3]
   },{
     "name":"frame_sequence_pressure_stats",
-    "description":"Average pressure (one third of the trace of the stress tensor) and standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+    "description":"Average pressure (one third of the trace of the stress tensor), standard deviation and number of samples over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
     "superNames":["section_frame_sequence","derived_quantity"],
     "units":"Pa",
     "dtypeStr":"f",
-    "shape":[2]
-  },{
-    "name":"frame_sequence_temperature",
-    "description":"(deprecated) Array containing the values of the instantaneous temperature (a quantity, proportional to frame_sequence_kinetic_energy, whose ensemble average equals the thermodynamic temperature) along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_temperature_frames.",
-    "superNames":["section_frame_sequence"],
-    "units":"K",
-    "dtypeStr":"f",
-    "shape":["number_of_temperatures_in_sequence"]
-  },{
-    "name":"frame_sequence_temperature_frames",
-    "description":"Array containing the strictly increasing indices referring to the frames of frame_sequence_temperature. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_frame_sequence","derived_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_temperatures_in_sequence"]
+    "shape":[3]
   },{
     "name":"frame_sequence_temperature_stats",
-    "description":"Average temperature and its standard deviation over this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
+    "description":"Average temperature, its standard deviation and number for samples over this sequence of frames .",
     "superNames":["section_frame_sequence","derived_quantity"],
     "units":"K",
     "dtypeStr":"f",
-    "shape":[2]
+    "shape":[3]
   },{
     "name":"frame_sequence_time",
     "description":"Time along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Time start is arbitrary, but when a sequence is a continuation of another time should be continued too.",
@@ -1034,35 +943,6 @@
     "superNames":["section_frame_sequence"],
     "dtypeStr":"r",
     "referencedSections":["section_sampling_method"]
-  },{
-    "name":"frame_sequence_to_sampling_ref",
-    "description":"(deprecated) Reference from the present section_frame_sequence to the section_sampling_method, that defines the parameters used in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
-    "superNames":["section_frame_sequence"],
-    "dtypeStr":"r",
-    "referencedSections":["section_sampling_method"]
-  },{
-    "name":"frame_sequence_user_quantity",
-    "description":"(deprecated) Array containing the values of the user-defined quantity defined in frame_sequence_user_quantity_name, evaluated along this sequence of frames (i.e., trajectory, a frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_kinetic_energy_frames. If not all frames have a value the indices of the frames that have a value are stored in frame_sequence_kinetic_energy_frames.",
-    "superNames":["section_frame_sequence_user_quantity"],
-    "dtypeStr":"f",
-    "shape":["number_of_frame_sequence_user_quantity_evaluations_in_sequence","number_of_frame_sequence_user_quantity_components"]
-  },{
-    "name":"frame_sequence_user_quantity_frames",
-    "description":"(deprecated) Array containing the strictly increasing indices referring to the frames of frame_sequence_user_quantity. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_frame_sequence_user_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_frame_sequence_user_quantity_evaluations_in_sequence"]
-  },{
-    "name":"frame_sequence_user_quantity_name",
-    "description":"(deprecated) Descriptive name of a user-defined quantity, sampled along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (frame_sequence_kinetic_energy and frame_sequence_potential_energy), the instantaneous temperature (frame_sequence_temperature) and pressure (frame_sequence_pressure). This metadata should be used for other quantities that are monitored along a sequence of frames.",
-    "superNames":["section_frame_sequence_user_quantity"],
-    "dtypeStr":"C"
-  },{
-    "name":"frame_sequence_user_quantity_stats",
-    "description":"(deprecated) Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
-    "superNames":["section_frame_sequence_user_quantity"],
-    "dtypeStr":"f",
-    "shape":[2,"number_of_frame_sequence_user_quantity_components"]
   },{
     "name":"gaussian_basis_group_contractions",
     "description":"contraction coefficients $c_{i j}$ defining the contracted basis functions with respect to *normalized* primitive Gaussian functions. They define the Gaussian basis functions as described in section_gaussian_basis_group.",
@@ -1402,18 +1282,6 @@
     "superNames":["section_eigenvalues"],
     "dtypeStr":"i"
   },{
-    "name":"number_of_frame_sequence_user_quantity_components",
-    "kindStr":"type_dimension",
-    "description":"(deprecated) Gives the number of user-defined quantity defined by frame_sequence_user_quantity_name and monitored in a sequence of frames. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.\n\nDedicated metadata monitored along a sequence of frames are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies ([frame_sequence_kinetic_energy and frame_sequence_potential_energy](frame_sequence_kinetic_energy and frame_sequence_potential_energy)), the instantaneous temperature (frame_sequence_temperature) and the pressure (frame_sequence_pressure).",
-    "superNames":["section_frame_sequence_user_quantity"],
-    "dtypeStr":"i"
-  },{
-    "name":"number_of_frame_sequence_user_quantity_evaluations_in_sequence",
-    "kindStr":"type_dimension",
-    "description":"(deprecated) Gives the number of user defined quantity evaluations along a sequence of frame_sequence_user_quantity frames. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.",
-    "superNames":["section_frame_sequence_user_quantity"],
-    "dtypeStr":"i"
-  },{
     "name":"number_of_frames_in_sequence",
     "kindStr":"type_dimension",
     "description":"Gives the number of frames in a sequence. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.",
@@ -1554,14 +1422,20 @@
   },{
     "name":"number_of_user_quantity_components",
     "kindStr":"type_dimension",
-    "description":"Gives the number of user-defined quantity defined by frame_sequence_user_quantity_name and monitored in a sequence of frames. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.\n\nDedicated metadata monitored along a sequence of frames are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies ([frame_sequence_kinetic_energy and frame_sequence_potential_energy](frame_sequence_kinetic_energy and frame_sequence_potential_energy)), the instantaneous temperature (frame_sequence_temperature) and the pressure (frame_sequence_pressure).",
-    "superNames":["section_user_quantity_definition"],
+    "description":"Gives the number of components of user-defined quantity stored in user_defined_quantity. It should be the value defined in user_quantity_components of user_quantity_definition_ref.",
+    "superNames":["section_user_quantity"],
     "dtypeStr":"i"
   },{
     "name":"number_of_user_quantity_evaluations_in_sequence",
     "kindStr":"type_dimension",
     "description":"Gives the number of user defined quantity evaluations along a sequence of frame_sequence_user_quantity frames. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.",
     "superNames":["section_user_quantity_definition","derived_quantity"],
+    "dtypeStr":"i"
+  },{
+    "name":"number_of_user_quantity_stats_components",
+    "kindStr":"type_dimension",
+    "description":"Gives the number of components of user-defined quantity stored in user_defined_quantity. It should be the value defined in user_quantity_components of user_quantity_stats_to_user_quantity_definition_ref.",
+    "superNames":["section_user_quantity_stats"],
     "dtypeStr":"i"
   },{
     "name":"origin_shift",
@@ -1895,6 +1769,11 @@
     "units":"J",
     "dtypeStr":"f"
   },{
+    "name":"section_atom_forces",
+    "kindStr":"type_section",
+    "description":"Section keeping the forces acting on the atoms, calculated as minus gradient of atom_forces_quantity. The forces themselves are in atom_forces, the treatement of forces along constraints is described in atom_forces_constraints",
+    "superNames":["section_single_configuration_calculation"]
+  },{
     "name":"section_atom_projected_dos",
     "kindStr":"type_section",
     "description":"Section collecting the information on an atom projected density of states (DOS) evaluation.",
@@ -1964,11 +1843,6 @@
     "kindStr":"type_section",
     "description":"Section containing a sequence of frames, i.e. a trajectory which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section evaluated with a sampling method (e.g, molecular dynamics, Monte Carlo, geometry optimization). The sampling method might be a subset of the whole trajectory.\n\nInformation on the method used for the sampling can be found in the section_sampling_method section and information of each frame of the sequence are found in the section_single_configuration_calculation section.",
     "superNames":["section_run"]
-  },{
-    "name":"section_frame_sequence_user_quantity",
-    "kindStr":"type_section",
-    "description":"(deprecated) Section collecting some user-defined quantities evaluated along a sequence of frame.",
-    "superNames":["section_frame_sequence"]
   },{
     "name":"section_gaussian_basis_group",
     "kindStr":"type_section",
@@ -2133,6 +2007,11 @@
     "name":"section_user_quantity_definition",
     "kindStr":"type_section",
     "description":"Section collecting some user-defined quantities evaluated along a sequence of frame.",
+    "superNames":["section_run"]
+  },{
+    "name":"section_user_quantity_stats",
+    "kindStr":"type_section",
+    "description":"Section collecting the stats of the user-defined quantity user_quantity_stats_to_user_quantity_definition_ref evaluated along this sequence of frames.",
     "superNames":["section_frame_sequence"]
   },{
     "name":"section_volumetric_data",
@@ -2316,12 +2195,6 @@
     "superNames":["section_single_configuration_calculation"],
     "dtypeStr":"r",
     "referencedSections":["section_system"]
-  },{
-    "name":"single_configuration_to_calculation_method_ref",
-    "description":"(deprecated) Reference to the method used for the calculation in section_single_configuration_calculation.",
-    "superNames":["section_single_configuration_calculation"],
-    "dtypeStr":"r",
-    "referencedSections":["section_method"]
   },{
     "name":"smearing_kind",
     "description":"Specifies the kind of smearing on the electron occupation used to calculate the free energy (see energy_free)",
@@ -2971,17 +2844,17 @@
     "dtypeStr":"f",
     "shape":["number_of_user_quantity_components"]
   },{
+    "name":"user_quantity_components",
+    "description":"Gives the number of components of the user-defined quantity defined by user_quantity_name and stored in the monitored in a sequence of frames. A sequence is a trajectory, which can have number_of_frames_in_sequence each representing one section_single_configuration_calculation section.\n",
+    "superNames":["section_user_quantity_definition"],
+    "dtypeStr":"i",
+    "meta_default_value":1
+  },{
     "name":"user_quantity_definition_ref",
     "description":"Reference to the definition of the user-defined quantity .",
     "superNames":["section_user_quantity"],
     "dtypeStr":"r",
     "referencedSections":["section_user_quantity_definition"]
-  },{
-    "name":"user_quantity_frames",
-    "description":"Array containing the strictly increasing indices referring to the frames of frame_sequence_user_quantity. If not given it defaults to the trivial mapping 0,1,...",
-    "superNames":["section_user_quantity_definition","derived_quantity"],
-    "dtypeStr":"i",
-    "shape":["number_of_user_quantity_evaluations_in_sequence"]
   },{
     "name":"user_quantity_name",
     "description":"Descriptive name of a user-defined quantity, sampled along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation). Dedicated metadata are created for the conserved energy-like quantity (frame_sequence_conserved_quantity), the kinetic and potential energies (kinetic_energy and potential_energy), the instantaneous temperature (instant_temperature) and pressure (instant_pressure). This metadata should be used for other quantities that are monitored along a sequence of frames.",
@@ -2989,10 +2862,16 @@
     "dtypeStr":"C"
   },{
     "name":"user_quantity_stats",
-    "description":"Average of frame_sequence_user_quantity and its standard deviation in this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",
-    "superNames":["section_user_quantity_definition","derived_quantity"],
+    "description":"Average of frame_sequence_user_quantity, its standard deviation and the number of samples in thesection_frame_sequence.",
+    "superNames":["section_user_quantity_stats","derived_quantity"],
     "dtypeStr":"f",
-    "shape":[2,"number_of_user_quantity_components"]
+    "shape":[3,"number_of_user_quantity_stats_components"]
+  },{
+    "name":"user_quantity_stats_to_user_quantity_definition_ref",
+    "description":"Reference the user_quantity_definition the user_quantity_stats refer to.",
+    "superNames":["section_user_quantity_stats"],
+    "dtypeStr":"r",
+    "referencedSections":["section_user_quantity_definition"]
   },{
     "name":"user_quantity_unit",
     "description":"the usnit of a user-defined quantity, sampled along this sequence of frames (i.e., a trajectory, a frame is one section_single_configuration_calculation).",

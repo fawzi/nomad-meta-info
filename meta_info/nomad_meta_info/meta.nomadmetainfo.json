@@ -69,6 +69,11 @@
       "string":"A string of unicode characters"
     }
   },{
+    "name":"meta_default_value",
+    "description":"String giving the default value that should be assumed if no value is given",
+    "superNames":["meta_info_entry"],
+    "dtypeStr":"D"
+  },{
     "name":"meta_description",
     "description":"Contains a text meant for the users of the meta info, using [mark down format](https://daringfireball.net/markdown) with the following extensions:\n  * \\$ is used to introduce mathematical notation using the latex format,\n * names containing an ``\\_'' are assumed to refer to other meta info.",
     "superNames":["meta_info_entry"],
