@@ -1,0 +1,11 @@
+{
+  "meta_name": "meta_path",
+  "meta_type": "type-value",
+  "meta_repeat": false,
+  "meta_description": [
+    "Dot separated path from the main root section (reached through meta_parent_section) up to the current section (included).\n"    "If the root section is a partial section that can be injected its full paths can be recovered using meta_injected_at of the root section.\n",
+    "This is an extra information generated for a schema derived from a dictionary." ],
+  "meta_parent_section": "meta_info_entry",
+  "meta_data_type": "string",
+  "meta_abstract_types": [ "meta_schema_extra" ]
+}

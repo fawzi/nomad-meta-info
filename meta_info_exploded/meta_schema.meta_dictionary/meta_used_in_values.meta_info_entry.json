@@ -1,0 +1,15 @@
+{
+  "meta_name": "meta_used_in_values",
+  "meta_type": "type-value",
+  "meta_repeat": true,
+  "meta_description": [
+    "meta_parent_section.meta_name of the values (meta_type=type-value) where this meta_info_entry is used.\n",
+    "The kind of use depends on the current meta_type:\n",
+    "* type-section: refer to the values directly contained in this section, those that have this section as meta_parent_section.\n",
+    "* type-abstract: the values that have this abstract type.\n",
+    "\n",
+    "This is an extra information generated for a schema derived from a dictionary."  ],
+  "meta_parent_section": "meta_schema_entry_info",
+  "meta_data_type": "string",
+  "meta_abstract_types": [ "meta_schema_info" ]
+}

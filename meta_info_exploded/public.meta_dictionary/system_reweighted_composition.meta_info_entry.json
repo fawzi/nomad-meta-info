@@ -1,13 +1,10 @@
 {
-  "meta_name":"system_reweighted_composition",
-  "meta_type":"type-value",
-  "meta_description":[
-    "Composition, i.e. cumulative chemical with atoms ordered by decreasing atomic ",
-    "number Z reweighted so that the sum is close to 100, and values are rounded up, ",
-    "and are stable (i.e. it is a fixed point)."],
-  "meta_parent_section":"section_system",
-  "meta_abstract_types":[
-    "derived_quantity"],
-  "meta_data_type":"string",
-  "meta_query_description":"Chemical composition, given as element name followed by its stoichiometric number, in any order. This formula is scale invariant, with respect to the number of atoms in the simulation cell. E.g., H2O yields systems where only one water molecule is present, as well as 64."
+  "meta_name": "system_reweighted_composition",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Composition, i.e. cumulative chemical with atoms ordered by decreasing atomic number Z reweighted so that the sum ",
+    "is close to 100, and values are rounded up, and are stable (i.e. it is a fixed point)." ],
+  "meta_abstract_types": ["derived_quantity"],
+  "meta_parent_section": "section_system",
+  "meta_data_type": "string"
 }

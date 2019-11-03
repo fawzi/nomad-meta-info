@@ -1,31 +1,8 @@
 {
-  "meta_name":"atom_forces_constraints",
-  "meta_type":"type-value",
-  "meta_description":[
-    "Specifies the treatement of the component of the forces along constraints in ",
-    "atomic_forces."],
-  "meta_parent_section":"section_atom_forces",
-  "meta_data_type":"string",
-  "meta_enum":[{
-    "meta_enum_value":"clean",
-    "meta_enum_description":[
-      "The component of the forces along the constraints is ",
-      "removed."]
-  },{
-    "meta_enum_value":"center-of-mass",
-    "meta_enum_description":[
-      "The constraint along the center of mass are removed: translations, and if non ",
-      "periodic also rotations."]
-  },{
-    "meta_enum_value":"undefined",
-    "meta_enum_description":[
-      "The components of the force along constraints can be anything, no assumption ",
-      "should be done."]
-  },{
-    "meta_enum_value":"raw",
-    "meta_enum_description":[
-      "The forces are exactly minus the gradient of atom_forces_quantity, constraints ",
-      "are not considered."]
-  }],
-  "meta_default_value":"undefined"
+  "meta_name": "atom_forces_constraints",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Specifies the treatement of the component of the forces along constraints in atomic_forces." ],
+  "meta_parent_section": "section_atom_forces",
+  "meta_data_type": "string"
 }

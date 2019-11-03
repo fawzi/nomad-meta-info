@@ -1,12 +1,9 @@
 {
-  "meta_name":"system_composition",
-  "meta_type":"type-value",
-  "meta_description":[
-    "Composition, i.e. cumulative chemical formula with atoms ordered by decreasing ",
-    "atomic number Z."],
-  "meta_parent_section":"section_system",
-  "meta_abstract_types":[
-    "derived_quantity"],
-  "meta_data_type":"string",
-  "meta_query_description":"Chemical composition, given as element name followed by its stoichiometric number, in any order. E.g., H2O or OH2 gives the same result. Note that the formula reflects the exact content of the simulation cell, so, two water molecules would have H2O4 as system_composition. For scale invariant formulas see system_reweighted_composition."
+  "meta_name": "system_composition",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Composition, i.e. cumulative chemical formula with atoms ordered by decreasing atomic number Z." ],
+  "meta_abstract_types": ["derived_quantity"],
+  "meta_parent_section": "section_system",
+  "meta_data_type": "string"
 }

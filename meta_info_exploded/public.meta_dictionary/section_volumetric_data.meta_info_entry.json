@@ -1,7 +1,7 @@
 {
-  "meta_name":"section_volumetric_data",
-  "meta_type":"type-section",
-  "meta_description":[
+  "meta_name": "section_volumetric_data",
+  "meta_type": "type-section",
+  "meta_description": [
     "Section defining a set of volumetric data on a uniform real-space\n",
     "grid.\n",
     "\n",
@@ -19,9 +19,6 @@
     "Allowed kinds are (please add new kinds as necessary): \"density\",\n",
     "\"potential_hartree\" and \"potential_effective\".  Densities and\n",
     "potentials that are spin-polarized should have multiplicity two.\n",
-    "Rules for more complex spins are to be decided when ",
-    "necessary."],
-  "meta_parent_section":"section_single_configuration_calculation",
-  "meta_repeats":true,
-  "meta_context_identifier":[]
+    "Rules for more complex spins are to be decided when necessary." ],
+  "meta_parent_section": "section_single_configuration_calculation"
 }

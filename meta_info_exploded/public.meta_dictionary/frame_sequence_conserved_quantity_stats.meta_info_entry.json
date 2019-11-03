@@ -1,15 +1,10 @@
 {
-  "meta_name":"frame_sequence_conserved_quantity_stats",
-  "meta_type":"type-value",
-  "meta_description":[
-    "Average value of energy-like conserved_quantity, its standard deviation, and ",
-    "number of samples over this sequence of frames."],
-  "meta_parent_section":"section_frame_sequence",
-  "meta_abstract_types":[
-    "derived_quantity"],
-  "meta_data_type":"float",
-  "meta_dimension":[{
-    "meta_dimension_fixed":3
-  }],
-  "meta_units":"J"
+  "meta_name": "frame_sequence_conserved_quantity_stats",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Average value of energy-like conserved_quantity, its standard deviation, and number of samples over this sequence ",
+    "of frames." ],
+  "meta_abstract_types": ["derived_quantity"],
+  "meta_parent_section": "section_frame_sequence",
+  "meta_data_type": "float"
 }

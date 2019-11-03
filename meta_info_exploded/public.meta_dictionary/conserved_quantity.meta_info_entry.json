@@ -1,11 +1,9 @@
 {
-  "meta_name":"conserved_quantity",
-  "meta_type":"type-value",
-  "meta_description":[
-    "The values of a quantity that should be conserved,  along a sequence of frames ",
-    "(i.e., a trajectory). A frame is one section_single_configuration_calculation), ",
-    "for example the total energy in the NVE ensemble."],
-  "meta_parent_section":"section_single_configuration_calculation",
-  "meta_data_type":"float",
-  "meta_units":"J"
+  "meta_name": "conserved_quantity",
+  "meta_type": "type-value",
+  "meta_description": [
+    "The values of a quantity that should be conserved,  along a sequence of frames (i.e., a trajectory). A frame is ",
+    "one section_single_configuration_calculation), for example the total energy in the NVE ensemble." ],
+  "meta_parent_section": "section_single_configuration_calculation",
+  "meta_data_type": "float"
 }

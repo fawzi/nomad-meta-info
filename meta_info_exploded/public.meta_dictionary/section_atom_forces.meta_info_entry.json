@@ -1,12 +1,8 @@
 {
-  "meta_name":"section_atom_forces",
-  "meta_type":"type-section",
-  "meta_description":[
-    "Section keeping the forces acting on the atoms, calculated as minus gradient of ",
-    "atom_forces_quantity. The forces themselves are in atom_forces, the treatement ",
-    "of forces along constraints is described in ",
-    "atom_forces_constraints"],
-  "meta_parent_section":"section_single_configuration_calculation",
-  "meta_repeats":true,
-  "meta_context_identifier":[]
+  "meta_name": "section_atom_forces",
+  "meta_type": "type-section",
+  "meta_description": [
+    "Section keeping the forces acting on the atoms, calculated as minus gradient of atom_forces_quantity. The forces ",
+    "themselves are in atom_forces, the treatement of forces along constraints is described in atom_forces_constraints" ],
+  "meta_parent_section": "section_single_configuration_calculation"
 }
