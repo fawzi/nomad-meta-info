@@ -13,7 +13,10 @@
         "build date as string" ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "openkim_src_date",
       "meta_type": "type-value",
@@ -21,13 +24,19 @@
         "date of last modification of the source as string" ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_openkim_atom_kind_refs",
       "meta_type": "type-value",
       "meta_description": [
         "reference to the atom kinds of each atom" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

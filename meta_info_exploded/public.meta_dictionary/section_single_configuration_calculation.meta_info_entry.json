@@ -13,5 +13,7 @@
     "The reason why information on the system configuration and computational method is stored separately is that ",
     "several *single configuration calculations* can be performed on the same system configuration, viz. several system ",
     "configurations can be evaluated with the same computational method. This storage strategy avoids redundancies." ],
-  "meta_parent_section": "section_run"
+  "meta_parent_section": "section_run",
+  "meta_repeats": true,
+  "meta_required": false
 }

@@ -12,7 +12,10 @@
       "meta_description": [
         "Molcas basis set atom label." ],
       "meta_parent_section": "x_molcas_section_basis",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_basis_name",
       "meta_type": "type-value",
@@ -20,74 +23,105 @@
         "Molcas basis set name.  Repeated strings of '.' are compressed to a single '.'.  Any leading or trailing '.' are ",
         "stripped." ],
       "meta_parent_section": "x_molcas_section_basis",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_frequency_intensity",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas intensity value" ],
       "meta_parent_section": "x_molcas_section_frequency",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_frequency_symmetry",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas symmetry for frequencies" ],
       "meta_parent_section": "x_molcas_section_frequency",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_frequency_value",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas frequency value" ],
       "meta_parent_section": "x_molcas_section_frequency",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_imaginary_frequency_value",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas imaginary frequency value" ],
       "meta_parent_section": "x_molcas_section_frequency",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_method_name",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas method name (without UHF; see x_molcas_uhf)" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_section_basis",
       "meta_type": "type-section",
       "meta_description": [
         "Section for Molcas basis sets" ],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_molcas_section_frequency",
       "meta_type": "type-section",
       "meta_description": [
         "Section for Molcas frequency (symmetry, frequency, intensity)" ],
-      "meta_parent_section": "section_single_configuration_calculation"
+      "meta_parent_section": "section_single_configuration_calculation",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_molcas_slapaf_grad_max",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas slapaf (geometry optimization) grad (force) max" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_slapaf_grad_norm",
       "meta_type": "type-value",
       "meta_description": [
         "Molcas slapaf (geometry optimization) grad (force) norm" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_molcas_uhf",
       "meta_type": "type-value",
       "meta_description": [
         "If the Molcas method is UHF." ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

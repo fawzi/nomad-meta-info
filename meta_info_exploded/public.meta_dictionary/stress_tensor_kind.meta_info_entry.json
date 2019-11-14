@@ -8,5 +8,8 @@
     "This field allows for multiple definitions and evaluated values of the stress tensor, while only one definition is ",
     "used for, e.g., molecular dynamics and geometry optimization." ],
   "meta_parent_section": "section_stress_tensor",
-  "meta_data_type": "string"
+  "meta_data_type": "string",
+  "meta_repeats": false,
+  "meta_required": false,
+  "meta_dimension": [  ]
 }

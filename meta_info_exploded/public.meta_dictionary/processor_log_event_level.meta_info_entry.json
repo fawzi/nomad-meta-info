@@ -5,5 +5,8 @@
     "Level of the logging, a lower number has more priority. The levels are the same as log4j: FATAL -> 100, ERROR -> ",
     "200, WARN -> 300, INFO -> 400, DEBUG -> 500, TRACE -> 600" ],
   "meta_parent_section": "section_processor_log_event",
-  "meta_data_type": "int"
+  "meta_data_type": "int",
+  "meta_repeats": false,
+  "meta_required": false,
+  "meta_dimension": [  ]
 }

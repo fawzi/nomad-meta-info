@@ -14,20 +14,29 @@
       "meta_description": [
         "ion-ion interaction energy" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_octopus_info_scf_converged_iterations",
       "meta_type": "type-value",
       "meta_description": [
         "number of scf iterations to converge calculation" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_octopus_log_svn_revision",
       "meta_type": "type-value",
       "meta_description": [
         "octopus svn revision" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

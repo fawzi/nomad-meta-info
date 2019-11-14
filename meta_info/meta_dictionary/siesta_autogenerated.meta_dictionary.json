@@ -11,10 +11,7 @@
       "meta_name": "x_siesta_input",
       "meta_type": "type-abstract",
       "meta_description": [
-        "siesta input variables" ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "siesta input variables" ]
     }, {
       "meta_name": "x_siesta_input_alloc_report_level",
       "meta_type": "type-value",
@@ -22,7 +19,10 @@
         "siesta input variable \"alloc_report_level\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_alloc_report_threshold",
       "meta_type": "type-value",
@@ -30,7 +30,10 @@
         "siesta input variable \"alloc_report_threshold\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_atom_debug_kb_generation",
       "meta_type": "type-value",
@@ -38,7 +41,10 @@
         "siesta input variable \"Atom.Debug.KB.Generation\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_atom_setup_only",
       "meta_type": "type-value",
@@ -46,7 +52,10 @@
         "siesta input variable \"Atom-Setup-Only\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_atomcoorformatout",
       "meta_type": "type-value",
@@ -54,7 +63,10 @@
         "siesta input variable \"AtomCoorFormatOut\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_atomiccoordinatesformat",
       "meta_type": "type-value",
@@ -62,7 +74,10 @@
         "siesta input variable \"AtomicCoordinatesFormat\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_atomleftvcte",
       "meta_type": "type-value",
@@ -70,7 +85,10 @@
         "siesta input variable \"AtomLeftVcte\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_atomrightvcte",
       "meta_type": "type-value",
@@ -78,7 +96,10 @@
         "siesta input variable \"AtomRightVcte\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_basispressure",
       "meta_type": "type-value",
@@ -86,7 +107,10 @@
         "siesta input variable \"BasisPressure\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_blocksize",
       "meta_type": "type-value",
@@ -94,7 +118,10 @@
         "siesta input variable \"blocksize\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_borncharge",
       "meta_type": "type-value",
@@ -102,7 +129,10 @@
         "siesta input variable \"BornCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_buildsupercell",
       "meta_type": "type-value",
@@ -110,7 +140,10 @@
         "siesta input variable \"BuildSuperCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_bulklead",
       "meta_type": "type-value",
@@ -118,7 +151,10 @@
         "siesta input variable \"BulkLead\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_bulktransport",
       "meta_type": "type-value",
@@ -126,7 +162,10 @@
         "siesta input variable \"BulkTransport\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_bulktransvcellsize",
       "meta_type": "type-value",
@@ -134,7 +173,10 @@
         "siesta input variable \"BulkTransvCellSize\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_bulktransvcellsizex",
       "meta_type": "type-value",
@@ -142,7 +184,10 @@
         "siesta input variable \"BulkTransvCellSizeX\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_bulktransvcellsizey",
       "meta_type": "type-value",
@@ -150,7 +195,10 @@
         "siesta input variable \"BulkTransvCellSizeY\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_bulktransvcellsizez",
       "meta_type": "type-value",
@@ -158,7 +206,10 @@
         "siesta input variable \"BulkTransvCellSizeZ\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_calciets",
       "meta_type": "type-value",
@@ -166,7 +217,10 @@
         "siesta input variable \"CalcIETS\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_calcmpsh",
       "meta_type": "type-value",
@@ -174,7 +228,10 @@
         "siesta input variable \"CalcMPSH\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_cb_maxkappa",
       "meta_type": "type-value",
@@ -182,7 +239,10 @@
         "siesta input variable \"CB.MaxKappa\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_cb_writecomplexbands",
       "meta_type": "type-value",
@@ -190,7 +250,10 @@
         "siesta input variable \"CB.WriteComplexBands\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_cdft",
       "meta_type": "type-value",
@@ -198,7 +261,10 @@
         "siesta input variable \"CDFT\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_cdft_maxiter",
       "meta_type": "type-value",
@@ -206,7 +272,10 @@
         "siesta input variable \"CDFT.MaxIter\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_changekgridinmd",
       "meta_type": "type-value",
@@ -214,7 +283,10 @@
         "siesta input variable \"ChangeKgridInMD\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_compat_pre_v4_dm_h",
       "meta_type": "type-value",
@@ -222,7 +294,10 @@
         "siesta input variable \"Compat-pre-v4-DM-H\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_compat_pre_v4_dynamics",
       "meta_type": "type-value",
@@ -230,7 +305,10 @@
         "siesta input variable \"compat-pre-v4-dynamics\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_coop_write",
       "meta_type": "type-value",
@@ -238,7 +316,10 @@
         "siesta input variable \"COOP.Write\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_delta",
       "meta_type": "type-value",
@@ -246,7 +327,10 @@
         "siesta input variable \"Delta\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_deltaworkfunction",
       "meta_type": "type-value",
@@ -254,7 +338,10 @@
         "siesta input variable \"DeltaWorkfunction\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_allinone",
       "meta_type": "type-value",
@@ -262,7 +349,10 @@
         "siesta input variable \"Diag.AllInOne\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_divideandconquer",
       "meta_type": "type-value",
@@ -270,7 +360,10 @@
         "siesta input variable \"Diag.DivideAndConquer\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_memory",
       "meta_type": "type-value",
@@ -278,7 +371,10 @@
         "siesta input variable \"Diag.Memory\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_noexpert",
       "meta_type": "type-value",
@@ -286,7 +382,10 @@
         "siesta input variable \"Diag.NoExpert\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_paralleloverk",
       "meta_type": "type-value",
@@ -294,7 +393,10 @@
         "siesta input variable \"Diag.ParallelOverK\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_prerotate",
       "meta_type": "type-value",
@@ -302,7 +404,10 @@
         "siesta input variable \"Diag.PreRotate\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diag_use2d",
       "meta_type": "type-value",
@@ -310,7 +415,10 @@
         "siesta input variable \"Diag.Use2D\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diagmemory",
       "meta_type": "type-value",
@@ -318,7 +426,10 @@
         "siesta input variable \"DiagMemory\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_diagscale",
       "meta_type": "type-value",
@@ -326,7 +437,10 @@
         "siesta input variable \"DiagScale\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_directphi",
       "meta_type": "type-value",
@@ -334,7 +448,10 @@
         "siesta input variable \"DirectPhi\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_divideandconquer",
       "meta_type": "type-value",
@@ -342,7 +459,10 @@
         "siesta input variable \"DivideAndConquer\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_allowextrapolation",
       "meta_type": "type-value",
@@ -350,7 +470,10 @@
         "siesta input variable \"DM.AllowExtrapolation\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_allowreuse",
       "meta_type": "type-value",
@@ -358,7 +481,10 @@
         "siesta input variable \"DM.AllowReuse\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_energytolerance",
       "meta_type": "type-value",
@@ -366,7 +492,10 @@
         "siesta input variable \"DM.EnergyTolerance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_fire_mixing",
       "meta_type": "type-value",
@@ -374,7 +503,10 @@
         "siesta input variable \"DM.FIRE.Mixing\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_formattedfiles",
       "meta_type": "type-value",
@@ -382,7 +514,10 @@
         "siesta input variable \"DM.FormattedFiles\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_formattedinput",
       "meta_type": "type-value",
@@ -390,7 +525,10 @@
         "siesta input variable \"DM.FormattedInput\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_formattedoutput",
       "meta_type": "type-value",
@@ -398,7 +536,10 @@
         "siesta input variable \"DM.FormattedOutput\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_harristolerance",
       "meta_type": "type-value",
@@ -406,7 +547,10 @@
         "siesta input variable \"DM.HarrisTolerance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_kickmixingweight",
       "meta_type": "type-value",
@@ -414,7 +558,10 @@
         "siesta input variable \"DM.KickMixingWeight\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_mixingweight",
       "meta_type": "type-value",
@@ -422,7 +569,10 @@
         "siesta input variable \"DM.MixingWeight\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_mixscf1",
       "meta_type": "type-value",
@@ -430,7 +580,10 @@
         "siesta input variable \"DM.MixSCF1\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_normalizationtolerance",
       "meta_type": "type-value",
@@ -438,7 +591,10 @@
         "siesta input variable \"DM.NormalizationTolerance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_normalizeduringscf",
       "meta_type": "type-value",
@@ -446,7 +602,10 @@
         "siesta input variable \"DM.NormalizeDuringSCF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_numberbroyden",
       "meta_type": "type-value",
@@ -454,7 +613,10 @@
         "siesta input variable \"DM.NumberBroyden\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_numberkick",
       "meta_type": "type-value",
@@ -462,7 +624,10 @@
         "siesta input variable \"DM.NumberKick\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_numberpulay",
       "meta_type": "type-value",
@@ -470,7 +635,10 @@
         "siesta input variable \"DM.NumberPulay\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_occupancytolerance",
       "meta_type": "type-value",
@@ -478,7 +646,10 @@
         "siesta input variable \"DM.OccupancyTolerance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_pulay_avoid_first_after_kick",
       "meta_type": "type-value",
@@ -486,7 +657,10 @@
         "siesta input variable \"DM.Pulay.Avoid.First.After.Kick\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_pulayonfile",
       "meta_type": "type-value",
@@ -494,7 +668,10 @@
         "siesta input variable \"DM.PulayOnFile\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_requireenergyconvergence",
       "meta_type": "type-value",
@@ -502,7 +679,10 @@
         "siesta input variable \"DM.RequireEnergyConvergence\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_requireharrisconvergence",
       "meta_type": "type-value",
@@ -510,7 +690,10 @@
         "siesta input variable \"DM.RequireHarrisConvergence\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_tolerance",
       "meta_type": "type-value",
@@ -518,7 +701,10 @@
         "siesta input variable \"DM.Tolerance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_dm_usesavedm",
       "meta_type": "type-value",
@@ -526,7 +712,10 @@
         "siesta input variable \"DM.UseSaveDM\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_electronictemperature",
       "meta_type": "type-value",
@@ -534,7 +723,10 @@
         "siesta input variable \"ElectronicTemperature\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_addrhogate",
       "meta_type": "type-value",
@@ -542,7 +734,10 @@
         "siesta input variable \"EM.AddRhoGate\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_addv",
       "meta_type": "type-value",
@@ -550,7 +745,10 @@
         "siesta input variable \"EM.addV\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_addvgisolatedlocalcharges",
       "meta_type": "type-value",
@@ -558,7 +756,10 @@
         "siesta input variable \"EM.AddVgIsolatedLocalCharges\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_coopcalculate",
       "meta_type": "type-value",
@@ -566,7 +767,10 @@
         "siesta input variable \"EM.COOPCalculate\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_coopnumberofbonds",
       "meta_type": "type-value",
@@ -574,7 +778,10 @@
         "siesta input variable \"EM.COOPNumberOfBonds\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_debugrhogate",
       "meta_type": "type-value",
@@ -582,7 +789,10 @@
         "siesta input variable \"EM.DebugRhoGate\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_netrhogatecharge",
       "meta_type": "type-value",
@@ -590,7 +800,10 @@
         "siesta input variable \"EM.NetRhoGateCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_printlimits",
       "meta_type": "type-value",
@@ -598,7 +811,10 @@
         "siesta input variable \"EM.PrintLimits\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_rhogatelxmax",
       "meta_type": "type-value",
@@ -606,7 +822,10 @@
         "siesta input variable \"EM.RhoGateLxMax\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_rhogatelxmin",
       "meta_type": "type-value",
@@ -614,7 +833,10 @@
         "siesta input variable \"EM.RhoGateLxMin\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_rhogatelymax",
       "meta_type": "type-value",
@@ -622,7 +844,10 @@
         "siesta input variable \"EM.RhoGateLyMax\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_rhogatelymin",
       "meta_type": "type-value",
@@ -630,7 +855,10 @@
         "siesta input variable \"EM.RhoGateLyMin\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_rhogatelzmax",
       "meta_type": "type-value",
@@ -638,7 +866,10 @@
         "siesta input variable \"EM.RhoGateLzMax\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_rhogatelzmin",
       "meta_type": "type-value",
@@ -646,7 +877,10 @@
         "siesta input variable \"EM.RhoGateLzMin\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_timereversal",
       "meta_type": "type-value",
@@ -654,7 +888,10 @@
         "siesta input variable \"EM.TimeReversal\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_timings",
       "meta_type": "type-value",
@@ -662,7 +899,10 @@
         "siesta input variable \"EM.Timings\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_em_trcaddvcdft",
       "meta_type": "type-value",
@@ -670,7 +910,10 @@
         "siesta input variable \"EM.TRCAddVCDFT\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_empdoskso",
       "meta_type": "type-value",
@@ -678,7 +921,10 @@
         "siesta input variable \"EMPDOSKSO\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_emtransport",
       "meta_type": "type-value",
@@ -686,7 +932,10 @@
         "siesta input variable \"EMTransport\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_endblock",
       "meta_type": "type-value",
@@ -694,7 +943,10 @@
         "siesta input variable \"%endblock\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_energlowestbound",
       "meta_type": "type-value",
@@ -702,7 +954,10 @@
         "siesta input variable \"EnergLowestBound\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_fdf_debug",
       "meta_type": "type-value",
@@ -710,7 +965,10 @@
         "siesta input variable \"fdf-debug\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_filtercutoff",
       "meta_type": "type-value",
@@ -718,7 +976,10 @@
         "siesta input variable \"FilterCutoff\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_filtertol",
       "meta_type": "type-value",
@@ -726,7 +987,10 @@
         "siesta input variable \"FilterTol\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_finaltransmrange",
       "meta_type": "type-value",
@@ -734,7 +998,10 @@
         "siesta input variable \"FinalTransmRange\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_fixauxiliarycell",
       "meta_type": "type-value",
@@ -742,7 +1009,10 @@
         "siesta input variable \"FixAuxiliaryCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_fixauxillarycell",
       "meta_type": "type-value",
@@ -750,7 +1020,10 @@
         "siesta input variable \"FixAuxillaryCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_fixspin",
       "meta_type": "type-value",
@@ -758,7 +1031,10 @@
         "siesta input variable \"FixSpin\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_forceauxcell",
       "meta_type": "type-value",
@@ -766,7 +1042,10 @@
         "siesta input variable \"ForceAuxCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_fullramp",
       "meta_type": "type-value",
@@ -774,7 +1053,10 @@
         "siesta input variable \"FullRamp\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_harris_functional",
       "meta_type": "type-value",
@@ -782,7 +1064,10 @@
         "siesta input variable \"Harris_functional\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_hartreeleadsbottom",
       "meta_type": "type-value",
@@ -790,7 +1075,10 @@
         "siesta input variable \"HartreeLeadsBottom\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_hartreeleadsleft",
       "meta_type": "type-value",
@@ -798,7 +1086,10 @@
         "siesta input variable \"HartreeLeadsLeft\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_hartreeleadsright",
       "meta_type": "type-value",
@@ -806,7 +1097,10 @@
         "siesta input variable \"HartreeLeadsRight\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_hsetuponly",
       "meta_type": "type-value",
@@ -814,7 +1108,10 @@
         "siesta input variable \"HSetupOnly\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ik_select",
       "meta_type": "type-value",
@@ -822,7 +1119,10 @@
         "siesta input variable \"Ik_Select\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_inittransmrange",
       "meta_type": "type-value",
@@ -830,7 +1130,10 @@
         "siesta input variable \"InitTransmRange\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_inittransport",
       "meta_type": "type-value",
@@ -838,7 +1141,10 @@
         "siesta input variable \"InitTransport\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_kb_new_reference_orbitals",
       "meta_type": "type-value",
@@ -846,7 +1152,10 @@
         "siesta input variable \"KB.New.Reference.Orbitals\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_kb_rmax",
       "meta_type": "type-value",
@@ -854,7 +1163,10 @@
         "siesta input variable \"KB.Rmax\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_kgrid_cutoff",
       "meta_type": "type-value",
@@ -862,7 +1174,10 @@
         "siesta input variable \"kgrid_cutoff\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_latticeconstant",
       "meta_type": "type-value",
@@ -870,7 +1185,10 @@
         "siesta input variable \"LatticeConstant\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ldau_method",
       "meta_type": "type-value",
@@ -878,7 +1196,10 @@
         "siesta input variable \"LDAU_METHOD\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ldau_units",
       "meta_type": "type-value",
@@ -886,7 +1207,10 @@
         "siesta input variable \"LDAU.units\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ldauforces",
       "meta_type": "type-value",
@@ -894,7 +1218,10 @@
         "siesta input variable \"LDAUForces\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_longoutput",
       "meta_type": "type-value",
@@ -902,7 +1229,10 @@
         "siesta input variable \"LongOutput\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_maxbonddistance",
       "meta_type": "type-value",
@@ -910,7 +1240,10 @@
         "siesta input variable \"MaxBondDistance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_maxscfiterations",
       "meta_type": "type-value",
@@ -918,7 +1251,10 @@
         "siesta input variable \"MaxSCFIterations\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_annealoption",
       "meta_type": "type-value",
@@ -926,7 +1262,10 @@
         "siesta input variable \"MD.AnnealOption\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_bulkmodulus",
       "meta_type": "type-value",
@@ -934,7 +1273,10 @@
         "siesta input variable \"MD.BulkModulus\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcacousticsumrule",
       "meta_type": "type-value",
@@ -942,7 +1284,10 @@
         "siesta input variable \"MD.FCAcousticSumRule\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcatomrestart",
       "meta_type": "type-value",
@@ -950,7 +1295,10 @@
         "siesta input variable \"MD.FCAtomRestart\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcaxisrestart",
       "meta_type": "type-value",
@@ -958,7 +1306,10 @@
         "siesta input variable \"MD.FCAxisRestart\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcdispl",
       "meta_type": "type-value",
@@ -966,7 +1317,10 @@
         "siesta input variable \"MD.FCDispl\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fceigenvectors",
       "meta_type": "type-value",
@@ -974,7 +1328,10 @@
         "siesta input variable \"MD.FCEigenVectors\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcfirst",
       "meta_type": "type-value",
@@ -982,7 +1339,10 @@
         "siesta input variable \"MD.FCfirst\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcir",
       "meta_type": "type-value",
@@ -990,7 +1350,10 @@
         "siesta input variable \"MD.FCIR\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fclast",
       "meta_type": "type-value",
@@ -998,7 +1361,10 @@
         "siesta input variable \"MD.FClast\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_fcread",
       "meta_type": "type-value",
@@ -1006,7 +1372,10 @@
         "siesta input variable \"MD.FCRead\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_finaltimestep",
       "meta_type": "type-value",
@@ -1014,7 +1383,10 @@
         "siesta input variable \"MD.FinalTimeStep\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_firequench",
       "meta_type": "type-value",
@@ -1022,7 +1394,10 @@
         "siesta input variable \"MD.FireQuench\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_initialtemperature",
       "meta_type": "type-value",
@@ -1030,7 +1405,10 @@
         "siesta input variable \"MD.InitialTemperature\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_initialtimestep",
       "meta_type": "type-value",
@@ -1038,7 +1416,10 @@
         "siesta input variable \"MD.InitialTimeStep\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_lengthtimestep",
       "meta_type": "type-value",
@@ -1046,7 +1427,10 @@
         "siesta input variable \"MD.LengthTimeStep\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_maxcgdispl",
       "meta_type": "type-value",
@@ -1054,7 +1438,10 @@
         "siesta input variable \"MD.MaxCGDispl\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_maxforcetol",
       "meta_type": "type-value",
@@ -1062,7 +1449,10 @@
         "siesta input variable \"MD.MaxForceTol\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_maxstresstol",
       "meta_type": "type-value",
@@ -1070,7 +1460,10 @@
         "siesta input variable \"MD.MaxStressTol\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_nosemass",
       "meta_type": "type-value",
@@ -1078,7 +1471,10 @@
         "siesta input variable \"MD.NoseMass\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_numcgsteps",
       "meta_type": "type-value",
@@ -1086,7 +1482,10 @@
         "siesta input variable \"MD.NumCGsteps\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_numnebsteps",
       "meta_type": "type-value",
@@ -1094,7 +1493,10 @@
         "siesta input variable \"MD.NumNEBsteps\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_parrinellorahmanmass",
       "meta_type": "type-value",
@@ -1102,7 +1504,10 @@
         "siesta input variable \"MD.ParrinelloRahmanMass\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_quench",
       "meta_type": "type-value",
@@ -1110,7 +1515,10 @@
         "siesta input variable \"MD.Quench\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_relaxcellonly",
       "meta_type": "type-value",
@@ -1118,7 +1526,10 @@
         "siesta input variable \"MD.RelaxCellOnly\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_removeintramolecularpressure",
       "meta_type": "type-value",
@@ -1126,7 +1537,10 @@
         "siesta input variable \"MD.RemoveIntraMolecularPressure\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_targetpressure",
       "meta_type": "type-value",
@@ -1134,7 +1548,10 @@
         "siesta input variable \"MD.TargetPressure\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_targettemperature",
       "meta_type": "type-value",
@@ -1142,7 +1559,10 @@
         "siesta input variable \"MD.TargetTemperature\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_taurelax",
       "meta_type": "type-value",
@@ -1150,7 +1570,10 @@
         "siesta input variable \"MD.TauRelax\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_timing",
       "meta_type": "type-value",
@@ -1158,7 +1581,10 @@
         "siesta input variable \"MD.Timing\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_trcsampling",
       "meta_type": "type-value",
@@ -1166,7 +1592,10 @@
         "siesta input variable \"MD.TRCSampling\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_trcskip",
       "meta_type": "type-value",
@@ -1174,7 +1603,10 @@
         "siesta input variable \"MD.TRCSkip\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_typeofrun",
       "meta_type": "type-value",
@@ -1182,7 +1614,10 @@
         "siesta input variable \"MD.TypeOfRun\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_usesavecg",
       "meta_type": "type-value",
@@ -1190,7 +1625,10 @@
         "siesta input variable \"MD.UseSaveCG\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_usesaveneb",
       "meta_type": "type-value",
@@ -1198,7 +1636,10 @@
         "siesta input variable \"MD.UseSaveNEB\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_usesavexv",
       "meta_type": "type-value",
@@ -1206,7 +1647,10 @@
         "siesta input variable \"MD.UseSaveXV\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_usesavezm",
       "meta_type": "type-value",
@@ -1214,7 +1658,10 @@
         "siesta input variable \"MD.UseSaveZM\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_usestructfile",
       "meta_type": "type-value",
@@ -1222,7 +1669,10 @@
         "siesta input variable \"MD.UseStructFile\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_md_variablecell",
       "meta_type": "type-value",
@@ -1230,7 +1680,10 @@
         "siesta input variable \"MD.VariableCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_meshcutoff",
       "meta_type": "type-value",
@@ -1238,7 +1691,10 @@
         "siesta input variable \"MeshCutoff\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_meshsubdivisions",
       "meta_type": "type-value",
@@ -1246,7 +1702,10 @@
         "siesta input variable \"MeshSubDivisions\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_minscfiterations",
       "meta_type": "type-value",
@@ -1254,7 +1713,10 @@
         "siesta input variable \"MinSCFIterations\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mixcharge",
       "meta_type": "type-value",
@@ -1262,7 +1724,10 @@
         "siesta input variable \"MixCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mixedparallel",
       "meta_type": "type-value",
@@ -1270,7 +1735,10 @@
         "siesta input variable \"MixedParallel\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mixhamiltonian",
       "meta_type": "type-value",
@@ -1278,7 +1746,10 @@
         "siesta input variable \"MixHamiltonian\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mm_cutoff",
       "meta_type": "type-value",
@@ -1286,7 +1757,10 @@
         "siesta input variable \"MM.Cutoff\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mm_unitsdistance",
       "meta_type": "type-value",
@@ -1294,7 +1768,10 @@
         "siesta input variable \"MM.UnitsDistance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mm_unitsenergy",
       "meta_type": "type-value",
@@ -1302,7 +1779,10 @@
         "siesta input variable \"MM.UnitsEnergy\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_monitorforcesinscf",
       "meta_type": "type-value",
@@ -1310,7 +1790,10 @@
         "siesta input variable \"MonitorForcesInSCF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mpshatomfirst",
       "meta_type": "type-value",
@@ -1318,7 +1801,10 @@
         "siesta input variable \"MPSHAtomFirst\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mpshatomlast",
       "meta_type": "type-value",
@@ -1326,7 +1812,10 @@
         "siesta input variable \"MPSHAtomLast\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mpshorbfirst",
       "meta_type": "type-value",
@@ -1334,7 +1823,10 @@
         "siesta input variable \"MPSHOrbFirst\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mpshorblast",
       "meta_type": "type-value",
@@ -1342,7 +1834,10 @@
         "siesta input variable \"MPSHOrbLast\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_mullikeninscf",
       "meta_type": "type-value",
@@ -1350,7 +1845,10 @@
         "siesta input variable \"MullikenInSCF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_naiveauxiliarycell",
       "meta_type": "type-value",
@@ -1358,7 +1856,10 @@
         "siesta input variable \"NaiveAuxiliaryCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nc_orbitalrotationend",
       "meta_type": "type-value",
@@ -1366,7 +1867,10 @@
         "siesta input variable \"NC.OrbitalRotationEnd\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nc_orbitalrotationstart",
       "meta_type": "type-value",
@@ -1374,7 +1878,10 @@
         "siesta input variable \"NC.OrbitalRotationStart\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_neb_skipedge",
       "meta_type": "type-value",
@@ -1382,7 +1889,10 @@
         "siesta input variable \"NEB.SkipEdge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_neglnonoverlapint",
       "meta_type": "type-value",
@@ -1390,7 +1900,10 @@
         "siesta input variable \"NeglNonOverlapInt\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nenergimcircle",
       "meta_type": "type-value",
@@ -1398,7 +1911,10 @@
         "siesta input variable \"NenergImCircle\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nenergimline",
       "meta_type": "type-value",
@@ -1406,7 +1922,10 @@
         "siesta input variable \"NenergImLine\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nenergreal",
       "meta_type": "type-value",
@@ -1414,7 +1933,10 @@
         "siesta input variable \"NEnergReal\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_netcharge",
       "meta_type": "type-value",
@@ -1422,7 +1944,10 @@
         "siesta input variable \"NetCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nivpoints",
       "meta_type": "type-value",
@@ -1430,7 +1955,10 @@
         "siesta input variable \"NIVPoints\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_noncollinearspin",
       "meta_type": "type-value",
@@ -1438,7 +1966,10 @@
         "siesta input variable \"NonCollinearSpin\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_npoles",
       "meta_type": "type-value",
@@ -1446,7 +1977,10 @@
         "siesta input variable \"NPoles\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_nslices",
       "meta_type": "type-value",
@@ -1454,7 +1988,10 @@
         "siesta input variable \"NSlices\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ntransmpoints",
       "meta_type": "type-value",
@@ -1462,7 +1999,10 @@
         "siesta input variable \"NTransmPoints\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_number_of_species",
       "meta_type": "type-value",
@@ -1470,7 +2010,10 @@
         "siesta input variable \"Number_of_species\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_numberlinearmix",
       "meta_type": "type-value",
@@ -1478,7 +2021,10 @@
         "siesta input variable \"NumberLinearMix\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_numberofatoms",
       "meta_type": "type-value",
@@ -1486,7 +2032,10 @@
         "siesta input variable \"NumberOfAtoms\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_numberofeigenstates",
       "meta_type": "type-value",
@@ -1494,7 +2043,10 @@
         "siesta input variable \"NumberOfEigenStates\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_numberofspecies",
       "meta_type": "type-value",
@@ -1502,7 +2054,10 @@
         "siesta input variable \"NumberOfSpecies\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_numskipwritedm",
       "meta_type": "type-value",
@@ -1510,7 +2065,10 @@
         "siesta input variable \"NumSkipWriteDM\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_occupationfunction",
       "meta_type": "type-value",
@@ -1518,7 +2076,10 @@
         "siesta input variable \"OccupationFunction\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_chemicalpotential",
       "meta_type": "type-value",
@@ -1526,7 +2087,10 @@
         "siesta input variable \"ON.ChemicalPotential\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_chemicalpotentialorder",
       "meta_type": "type-value",
@@ -1534,7 +2098,10 @@
         "siesta input variable \"ON.ChemicalPotentialOrder\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_chemicalpotentialrc",
       "meta_type": "type-value",
@@ -1542,7 +2109,10 @@
         "siesta input variable \"ON.ChemicalPotentialRc\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_chemicalpotentialtemperature",
       "meta_type": "type-value",
@@ -1550,7 +2120,10 @@
         "siesta input variable \"ON.ChemicalPotentialTemperature\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_chemicalpotentialuse",
       "meta_type": "type-value",
@@ -1558,7 +2131,10 @@
         "siesta input variable \"ON.ChemicalPotentialUse\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_eta",
       "meta_type": "type-value",
@@ -1566,7 +2142,10 @@
         "siesta input variable \"ON.eta\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_eta_alpha",
       "meta_type": "type-value",
@@ -1574,7 +2153,10 @@
         "siesta input variable \"ON.eta_alpha\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_eta_beta",
       "meta_type": "type-value",
@@ -1582,7 +2164,10 @@
         "siesta input variable \"ON.eta_beta\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_etol",
       "meta_type": "type-value",
@@ -1590,7 +2175,10 @@
         "siesta input variable \"ON.etol\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_functional",
       "meta_type": "type-value",
@@ -1598,7 +2186,10 @@
         "siesta input variable \"ON.functional\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_maxnumiter",
       "meta_type": "type-value",
@@ -1606,7 +2197,10 @@
         "siesta input variable \"ON.MaxNumIter\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_rclwf",
       "meta_type": "type-value",
@@ -1614,7 +2208,10 @@
         "siesta input variable \"On.RcLWF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_on_usesavelwf",
       "meta_type": "type-value",
@@ -1622,7 +2219,10 @@
         "siesta input variable \"ON.UseSaveLWF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_opticalcalculation",
       "meta_type": "type-value",
@@ -1630,7 +2230,10 @@
         "siesta input variable \"OpticalCalculation\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_optim_broyden",
       "meta_type": "type-value",
@@ -1638,7 +2241,10 @@
         "siesta input variable \"Optim.Broyden\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_output_structure_only",
       "meta_type": "type-value",
@@ -1646,7 +2252,10 @@
         "siesta input variable \"Output-Structure-Only\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_basissize",
       "meta_type": "type-value",
@@ -1654,7 +2263,10 @@
         "siesta input variable \"PAO.BasisSize\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_basistype",
       "meta_type": "type-value",
@@ -1662,7 +2274,10 @@
         "siesta input variable \"PAO.BasisType\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_energyshift",
       "meta_type": "type-value",
@@ -1670,7 +2285,10 @@
         "siesta input variable \"PAO.EnergyShift\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_filter",
       "meta_type": "type-value",
@@ -1678,7 +2296,10 @@
         "siesta input variable \"PAO.Filter\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_fixsplittable",
       "meta_type": "type-value",
@@ -1686,7 +2307,10 @@
         "siesta input variable \"PAO.FixSplitTable\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_keep_findp_bug",
       "meta_type": "type-value",
@@ -1694,7 +2318,10 @@
         "siesta input variable \"PAO.Keep.Findp.Bug\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_newsplitcode",
       "meta_type": "type-value",
@@ -1702,7 +2329,10 @@
         "siesta input variable \"PAO.NewSplitCode\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_oldstylepolorbs",
       "meta_type": "type-value",
@@ -1710,7 +2340,10 @@
         "siesta input variable \"PAO.OldStylePolorbs\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_softdefault",
       "meta_type": "type-value",
@@ -1718,7 +2351,10 @@
         "siesta input variable \"PAO.SoftDefault\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_softinnerradius",
       "meta_type": "type-value",
@@ -1726,7 +2362,10 @@
         "siesta input variable \"PAO.SoftInnerRadius\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_softpotential",
       "meta_type": "type-value",
@@ -1734,7 +2373,10 @@
         "siesta input variable \"PAO.SoftPotential\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_splitnorm",
       "meta_type": "type-value",
@@ -1742,7 +2384,10 @@
         "siesta input variable \"PAO.SplitNorm\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_splitnormh",
       "meta_type": "type-value",
@@ -1750,7 +2395,10 @@
         "siesta input variable \"PAO.SplitNormH\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_pao_splittailnorm",
       "meta_type": "type-value",
@@ -1758,7 +2406,10 @@
         "siesta input variable \"PAO.SplitTailNorm\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_paralleloverk",
       "meta_type": "type-value",
@@ -1766,7 +2417,10 @@
         "siesta input variable \"ParallelOverK\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_partialchargesateverygeometry",
       "meta_type": "type-value",
@@ -1774,7 +2428,10 @@
         "siesta input variable \"PartialChargesAtEveryGeometry\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_partialchargesateveryscfstep",
       "meta_type": "type-value",
@@ -1782,7 +2439,10 @@
         "siesta input variable \"PartialChargesAtEveryScfStep\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_poissonmultigrid",
       "meta_type": "type-value",
@@ -1790,7 +2450,10 @@
         "siesta input variable \"PoissonMultigrid\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_print_ldau",
       "meta_type": "type-value",
@@ -1798,7 +2461,10 @@
         "siesta input variable \"Print_ldau\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_processorgridx",
       "meta_type": "type-value",
@@ -1806,7 +2472,10 @@
         "siesta input variable \"ProcessorGridX\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_processorgridy",
       "meta_type": "type-value",
@@ -1814,7 +2483,10 @@
         "siesta input variable \"ProcessorGridY\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_processorgridz",
       "meta_type": "type-value",
@@ -1822,7 +2494,10 @@
         "siesta input variable \"ProcessorGridZ\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_processory",
       "meta_type": "type-value",
@@ -1830,7 +2505,10 @@
         "siesta input variable \"processorY\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_projectioninscf",
       "meta_type": "type-value",
@@ -1838,7 +2516,10 @@
         "siesta input variable \"ProjectionInSCF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_projectionmethod",
       "meta_type": "type-value",
@@ -1846,7 +2527,10 @@
         "siesta input variable \"ProjectionMethod\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ps_sic",
       "meta_type": "type-value",
@@ -1854,7 +2538,10 @@
         "siesta input variable \"PS.SIC\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_rcspatial",
       "meta_type": "type-value",
@@ -1862,7 +2549,10 @@
         "siesta input variable \"RcSpatial\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_readhamiltonian",
       "meta_type": "type-value",
@@ -1870,7 +2560,10 @@
         "siesta input variable \"ReadHamiltonian\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_readkpin",
       "meta_type": "type-value",
@@ -1878,7 +2571,10 @@
         "siesta input variable \"ReadKPIN\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_reinitialisedm",
       "meta_type": "type-value",
@@ -1886,7 +2582,10 @@
         "siesta input variable \"ReInitialiseDM\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_reparametrizepseudos",
       "meta_type": "type-value",
@@ -1894,7 +2593,10 @@
         "siesta input variable \"ReparametrizePseudos\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_restricted_radial_grid",
       "meta_type": "type-value",
@@ -1902,7 +2604,10 @@
         "siesta input variable \"Restricted.Radial.Grid\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_rmax_radial_grid",
       "meta_type": "type-value",
@@ -1910,7 +2615,10 @@
         "siesta input variable \"Rmax.Radial.Grid\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_rotatespin_phi",
       "meta_type": "type-value",
@@ -1918,7 +2626,10 @@
         "siesta input variable \"RotateSpin.Phi\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_rotatespin_theta",
       "meta_type": "type-value",
@@ -1926,7 +2637,10 @@
         "siesta input variable \"RotateSpin.Theta\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_savebadercharge",
       "meta_type": "type-value",
@@ -1934,7 +2648,10 @@
         "siesta input variable \"SaveBaderCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_savedeltarho",
       "meta_type": "type-value",
@@ -1942,7 +2659,10 @@
         "siesta input variable \"SaveDeltaRho\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_saveelectrostaticpotential",
       "meta_type": "type-value",
@@ -1950,7 +2670,10 @@
         "siesta input variable \"SaveElectrostaticPotential\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_savehs",
       "meta_type": "type-value",
@@ -1958,7 +2681,10 @@
         "siesta input variable \"SaveHS\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_saveinitialchargedensity",
       "meta_type": "type-value",
@@ -1966,7 +2692,10 @@
         "siesta input variable \"SaveInitialChargeDensity\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_saveioniccharge",
       "meta_type": "type-value",
@@ -1974,7 +2703,10 @@
         "siesta input variable \"SaveIonicCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_saveneutralatompotential",
       "meta_type": "type-value",
@@ -1982,7 +2714,10 @@
         "siesta input variable \"SaveNeutralAtomPotential\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_saverho",
       "meta_type": "type-value",
@@ -1990,7 +2725,10 @@
         "siesta input variable \"SaveRho\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_saverhoxc",
       "meta_type": "type-value",
@@ -1998,7 +2736,10 @@
         "siesta input variable \"SaveRhoXC\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_savetotalcharge",
       "meta_type": "type-value",
@@ -2006,7 +2747,10 @@
         "siesta input variable \"SaveTotalCharge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_savetotalpotential",
       "meta_type": "type-value",
@@ -2014,7 +2758,10 @@
         "siesta input variable \"SaveTotalPotential\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_linearmixingafterpulay",
       "meta_type": "type-value",
@@ -2022,7 +2769,10 @@
         "siesta input variable \"SCF.LinearMixingAfterPulay\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_mixafterconvergence",
       "meta_type": "type-value",
@@ -2030,7 +2780,10 @@
         "siesta input variable \"SCF.MixAfterConvergence\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_mixingweightafterpulay",
       "meta_type": "type-value",
@@ -2038,7 +2791,10 @@
         "siesta input variable \"SCF.MixingWeightAfterPulay\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_pulay_damping",
       "meta_type": "type-value",
@@ -2046,7 +2802,10 @@
         "siesta input variable \"SCF.Pulay.Damping\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_pulay_debugsvd",
       "meta_type": "type-value",
@@ -2054,7 +2813,10 @@
         "siesta input variable \"SCF.Pulay.DebugSVD\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_pulay_rcondsvd",
       "meta_type": "type-value",
@@ -2062,7 +2824,10 @@
         "siesta input variable \"SCF.Pulay.RcondSVD\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_pulay_usesvd",
       "meta_type": "type-value",
@@ -2070,7 +2835,10 @@
         "siesta input variable \"SCF.Pulay.UseSVD\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_pulaydmaxregion",
       "meta_type": "type-value",
@@ -2078,7 +2846,10 @@
         "siesta input variable \"SCF.PulayDmaxRegion\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_pulayminimumhistory",
       "meta_type": "type-value",
@@ -2086,7 +2857,10 @@
         "siesta input variable \"SCF.PulayMinimumHistory\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_read_charge_netcdf",
       "meta_type": "type-value",
@@ -2094,7 +2868,10 @@
         "siesta input variable \"SCF.Read.Charge.NetCDF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_read_deformation_charge_netcdf",
       "meta_type": "type-value",
@@ -2102,7 +2879,10 @@
         "siesta input variable \"SCF.Read.Deformation.Charge.NetCDF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_recompute_h_after_scf",
       "meta_type": "type-value",
@@ -2110,7 +2890,10 @@
         "siesta input variable \"SCF.Recompute-H-After-Scf\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scf_want_variational_eks",
       "meta_type": "type-value",
@@ -2118,7 +2901,10 @@
         "siesta input variable \"SCF.Want.Variational.EKS\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scfmustconverge",
       "meta_type": "type-value",
@@ -2126,7 +2912,10 @@
         "siesta input variable \"SCFMustConverge\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_scissor_operator",
       "meta_type": "type-value",
@@ -2134,7 +2923,10 @@
         "siesta input variable \"Scissor.Operator\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_setbulktransvcell",
       "meta_type": "type-value",
@@ -2142,7 +2934,10 @@
         "siesta input variable \"SetBulkTransvCell\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_flavour",
       "meta_type": "type-value",
@@ -2150,7 +2945,10 @@
         "siesta input variable \"SIC.Flavour\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_lambda",
       "meta_type": "type-value",
@@ -2158,7 +2956,10 @@
         "siesta input variable \"SIC.Lambda\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_norelaxation",
       "meta_type": "type-value",
@@ -2166,7 +2967,10 @@
         "siesta input variable \"SIC.NoRelaxation\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_npop",
       "meta_type": "type-value",
@@ -2174,7 +2978,10 @@
         "siesta input variable \"SIC.Npop\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_popdmconv",
       "meta_type": "type-value",
@@ -2182,7 +2989,10 @@
         "siesta input variable \"SIC.PopDMConv\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_popkgridfactor",
       "meta_type": "type-value",
@@ -2190,7 +3000,10 @@
         "siesta input variable \"SIC.PopKgridFactor\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_popsmatsparsity",
       "meta_type": "type-value",
@@ -2198,7 +3011,10 @@
         "siesta input variable \"SIC.PopSmatSparsity\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_projectionmode",
       "meta_type": "type-value",
@@ -2206,7 +3022,10 @@
         "siesta input variable \"SIC.ProjectionMode\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_projectiontype",
       "meta_type": "type-value",
@@ -2214,7 +3033,10 @@
         "siesta input variable \"SIC.ProjectionType\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sic_rot_inv",
       "meta_type": "type-value",
@@ -2222,7 +3044,10 @@
         "siesta input variable \"SIC.Rot_Inv\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_numberofbands",
       "meta_type": "type-value",
@@ -2230,7 +3055,10 @@
         "siesta input variable \"Siesta2Wannier90.NumberOfBands\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_numberofbandsdown",
       "meta_type": "type-value",
@@ -2238,7 +3066,10 @@
         "siesta input variable \"Siesta2Wannier90.NumberOfBandsDown\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_numberofbandsup",
       "meta_type": "type-value",
@@ -2246,7 +3077,10 @@
         "siesta input variable \"Siesta2Wannier90.NumberOfBandsUp\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_writeamn",
       "meta_type": "type-value",
@@ -2254,7 +3088,10 @@
         "siesta input variable \"Siesta2Wannier90.WriteAmn\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_writeeig",
       "meta_type": "type-value",
@@ -2262,7 +3099,10 @@
         "siesta input variable \"Siesta2Wannier90.WriteEig\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_writemmn",
       "meta_type": "type-value",
@@ -2270,7 +3110,10 @@
         "siesta input variable \"Siesta2Wannier90.WriteMmn\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_siesta2wannier90_writeunk",
       "meta_type": "type-value",
@@ -2278,7 +3121,10 @@
         "siesta input variable \"Siesta2Wannier90.WriteUnk\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_sigma_dsigmade",
       "meta_type": "type-value",
@@ -2286,7 +3132,10 @@
         "siesta input variable \"Sigma.DSigmaDE\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_signaturerecords",
       "meta_type": "type-value",
@@ -2294,7 +3143,10 @@
         "siesta input variable \"SignatureRecords\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_simulatedoping",
       "meta_type": "type-value",
@@ -2302,7 +3154,10 @@
         "siesta input variable \"SimulateDoping\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_singleexcitation",
       "meta_type": "type-value",
@@ -2310,7 +3165,10 @@
         "siesta input variable \"SingleExcitation\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_skiplastiter",
       "meta_type": "type-value",
@@ -2318,7 +3176,10 @@
         "siesta input variable \"SkipLastIter\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_slabdipolecorrection",
       "meta_type": "type-value",
@@ -2326,7 +3187,10 @@
         "siesta input variable \"SlabDipoleCorrection\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_solutionmethod",
       "meta_type": "type-value",
@@ -2334,7 +3198,10 @@
         "siesta input variable \"SolutionMethod\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_spinconfleads",
       "meta_type": "type-value",
@@ -2342,7 +3209,10 @@
         "siesta input variable \"SpinConfLeads\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_spinorbit",
       "meta_type": "type-value",
@@ -2350,7 +3220,10 @@
         "siesta input variable \"SpinOrbit\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_spinpolarized",
       "meta_type": "type-value",
@@ -2358,7 +3231,10 @@
         "siesta input variable \"SpinPolarized\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_stt_calculation",
       "meta_type": "type-value",
@@ -2366,7 +3242,10 @@
         "siesta input variable \"STT.Calculation\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_stt_linearresponse",
       "meta_type": "type-value",
@@ -2374,7 +3253,10 @@
         "siesta input variable \"STT.LinearResponse\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_systemlabel",
       "meta_type": "type-value",
@@ -2382,7 +3264,10 @@
         "siesta input variable \"SystemLabel\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_systemname",
       "meta_type": "type-value",
@@ -2390,7 +3275,10 @@
         "siesta input variable \"SystemName\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_timer_report_threshold",
       "meta_type": "type-value",
@@ -2398,7 +3286,10 @@
         "siesta input variable \"timer_report_threshold\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_timereversal",
       "meta_type": "type-value",
@@ -2406,7 +3297,10 @@
         "siesta input variable \"TimeReversal\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_timereversalsymmetryforkpoints",
       "meta_type": "type-value",
@@ -2414,7 +3308,10 @@
         "siesta input variable \"TimeReversalSymmetryForKpoints\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_trcoefficients",
       "meta_type": "type-value",
@@ -2422,7 +3319,10 @@
         "siesta input variable \"TrCoefficients\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_trymemoryincrease",
       "meta_type": "type-value",
@@ -2430,7 +3330,10 @@
         "siesta input variable \"TryMemoryIncrease\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_ts_mixh",
       "meta_type": "type-value",
@@ -2438,7 +3341,10 @@
         "siesta input variable \"TS.MixH\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_usedomaindecomposition",
       "meta_type": "type-value",
@@ -2446,7 +3352,10 @@
         "siesta input variable \"UseDomainDecomposition\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_usenewdiagk",
       "meta_type": "type-value",
@@ -2454,7 +3363,10 @@
         "siesta input variable \"UseNewDiagk\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_user_basis",
       "meta_type": "type-value",
@@ -2462,7 +3374,10 @@
         "siesta input variable \"user-basis\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_user_basis_netcdf",
       "meta_type": "type-value",
@@ -2470,7 +3385,10 @@
         "siesta input variable \"user-basis-netcdf\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_usesavedata",
       "meta_type": "type-value",
@@ -2478,7 +3396,10 @@
         "siesta input variable \"UseSaveData\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_usespatialdecomposition",
       "meta_type": "type-value",
@@ -2486,7 +3407,10 @@
         "siesta input variable \"UseSpatialDecomposition\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_usestructfile",
       "meta_type": "type-value",
@@ -2494,7 +3418,10 @@
         "siesta input variable \"UseStructFile\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_usetreetimer",
       "meta_type": "type-value",
@@ -2502,7 +3429,10 @@
         "siesta input variable \"UseTreeTimer\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_vfinal",
       "meta_type": "type-value",
@@ -2510,7 +3440,10 @@
         "siesta input variable \"VFinal\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_vgate",
       "meta_type": "type-value",
@@ -2518,7 +3451,10 @@
         "siesta input variable \"VGate\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_vinitial",
       "meta_type": "type-value",
@@ -2526,7 +3462,10 @@
         "siesta input variable \"VInitial\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_vna_filter",
       "meta_type": "type-value",
@@ -2534,7 +3473,10 @@
         "siesta input variable \"Vna.Filter\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_warningminimumatomicdistance",
       "meta_type": "type-value",
@@ -2542,7 +3484,10 @@
         "siesta input variable \"WarningMinimumAtomicDistance\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writebands",
       "meta_type": "type-value",
@@ -2550,7 +3495,10 @@
         "siesta input variable \"WriteBands\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writecoorcerius",
       "meta_type": "type-value",
@@ -2558,7 +3506,10 @@
         "siesta input variable \"WriteCoorCerius\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writecoorinitial",
       "meta_type": "type-value",
@@ -2566,7 +3517,10 @@
         "siesta input variable \"WriteCoorInitial\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writecoorstep",
       "meta_type": "type-value",
@@ -2574,7 +3528,10 @@
         "siesta input variable \"WriteCoorStep\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writecoorxmol",
       "meta_type": "type-value",
@@ -2582,7 +3539,10 @@
         "siesta input variable \"WriteCoorXmol\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedenchar",
       "meta_type": "type-value",
@@ -2590,7 +3550,10 @@
         "siesta input variable \"WriteDenchar\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writediagds",
       "meta_type": "type-value",
@@ -2598,7 +3561,10 @@
         "siesta input variable \"WriteDiagdS\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedm",
       "meta_type": "type-value",
@@ -2606,7 +3572,10 @@
         "siesta input variable \"WriteDM\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedm_history_netcdf",
       "meta_type": "type-value",
@@ -2614,7 +3583,10 @@
         "siesta input variable \"WriteDM.History.NetCDF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedm_netcdf",
       "meta_type": "type-value",
@@ -2622,7 +3594,10 @@
         "siesta input variable \"WriteDM.NetCDF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedmhs_history_netcdf",
       "meta_type": "type-value",
@@ -2630,7 +3605,10 @@
         "siesta input variable \"WriteDMHS.History.NetCDF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedmhs_netcdf",
       "meta_type": "type-value",
@@ -2638,7 +3616,10 @@
         "siesta input variable \"WriteDMHS.NetCDF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writedmt",
       "meta_type": "type-value",
@@ -2646,7 +3627,10 @@
         "siesta input variable \"WriteDMT\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writeedm",
       "meta_type": "type-value",
@@ -2654,7 +3638,10 @@
         "siesta input variable \"WriteEDM\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writeeigenvalues",
       "meta_type": "type-value",
@@ -2662,7 +3649,10 @@
         "siesta input variable \"WriteEigenvalues\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writeforces",
       "meta_type": "type-value",
@@ -2670,7 +3660,10 @@
         "siesta input variable \"WriteForces\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writehamiltonpop",
       "meta_type": "type-value",
@@ -2678,7 +3671,10 @@
         "siesta input variable \"WriteHamiltonPop\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writehirshfeldpop",
       "meta_type": "type-value",
@@ -2686,7 +3682,10 @@
         "siesta input variable \"WriteHirshfeldPop\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writehsderiv",
       "meta_type": "type-value",
@@ -2694,7 +3693,10 @@
         "siesta input variable \"WriteHSDeriv\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writeionplotfiles",
       "meta_type": "type-value",
@@ -2702,7 +3704,10 @@
         "siesta input variable \"WriteIonPlotFiles\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writekbands",
       "meta_type": "type-value",
@@ -2710,7 +3715,10 @@
         "siesta input variable \"WriteKbands\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writekpoints",
       "meta_type": "type-value",
@@ -2718,7 +3726,10 @@
         "siesta input variable \"WriteKpoints\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writemdhistory",
       "meta_type": "type-value",
@@ -2726,7 +3737,10 @@
         "siesta input variable \"WriteMDhistory\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writemdxmol",
       "meta_type": "type-value",
@@ -2734,7 +3748,10 @@
         "siesta input variable \"WriteMDXmol\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writemullikenpop",
       "meta_type": "type-value",
@@ -2742,7 +3759,10 @@
         "siesta input variable \"WriteMullikenPop\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writeprojections",
       "meta_type": "type-value",
@@ -2750,7 +3770,10 @@
         "siesta input variable \"WriteProjections\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writespinmulliken",
       "meta_type": "type-value",
@@ -2758,7 +3781,10 @@
         "siesta input variable \"WriteSpinMulliken\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writespinscf",
       "meta_type": "type-value",
@@ -2766,7 +3792,10 @@
         "siesta input variable \"WriteSpinSCF\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writevna",
       "meta_type": "type-value",
@@ -2774,7 +3803,10 @@
         "siesta input variable \"WriteVNA\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writevoronoipop",
       "meta_type": "type-value",
@@ -2782,7 +3814,10 @@
         "siesta input variable \"WriteVoronoiPop\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_writewavefunctions",
       "meta_type": "type-value",
@@ -2790,7 +3825,10 @@
         "siesta input variable \"WriteWaveFunctions\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_xc_authors",
       "meta_type": "type-value",
@@ -2798,7 +3836,10 @@
         "siesta input variable \"xc.authors\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_xc_functional",
       "meta_type": "type-value",
@@ -2806,7 +3847,10 @@
         "siesta input variable \"xc.functional\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_xml_abortonerrors",
       "meta_type": "type-value",
@@ -2814,7 +3858,10 @@
         "siesta input variable \"XML.AbortOnErrors\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_xml_abortonwarnings",
       "meta_type": "type-value",
@@ -2822,7 +3869,10 @@
         "siesta input variable \"XML.AbortOnWarnings\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_xml_write",
       "meta_type": "type-value",
@@ -2830,7 +3880,10 @@
         "siesta input variable \"XML.Write\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zbroadeningg",
       "meta_type": "type-value",
@@ -2838,7 +3891,10 @@
         "siesta input variable \"ZBroadeningG\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zeemantermbx",
       "meta_type": "type-value",
@@ -2846,7 +3902,10 @@
         "siesta input variable \"ZeemanTermBx\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zeemantermby",
       "meta_type": "type-value",
@@ -2854,7 +3913,10 @@
         "siesta input variable \"ZeemanTermBy\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zeemantermbz",
       "meta_type": "type-value",
@@ -2862,7 +3924,10 @@
         "siesta input variable \"ZeemanTermBz\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zleftvcte",
       "meta_type": "type-value",
@@ -2870,7 +3935,10 @@
         "siesta input variable \"ZLeftVcte\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_calcallforces",
       "meta_type": "type-value",
@@ -2878,7 +3946,10 @@
         "siesta input variable \"ZM.CalcAllForces\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_forcetolangle",
       "meta_type": "type-value",
@@ -2886,7 +3957,10 @@
         "siesta input variable \"ZM.ForceTolAngle\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_forcetollength",
       "meta_type": "type-value",
@@ -2894,7 +3968,10 @@
         "siesta input variable \"ZM.ForceTolLength\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_maxdisplangle",
       "meta_type": "type-value",
@@ -2902,7 +3979,10 @@
         "siesta input variable \"ZM.MaxDisplAngle\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_maxdispllength",
       "meta_type": "type-value",
@@ -2910,7 +3990,10 @@
         "siesta input variable \"ZM.MaxDisplLength\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_unitsangle",
       "meta_type": "type-value",
@@ -2918,7 +4001,10 @@
         "siesta input variable \"ZM.UnitsAngle\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zm_unitslength",
       "meta_type": "type-value",
@@ -2926,7 +4012,10 @@
         "siesta input variable \"ZM.UnitsLength\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zrightvcte",
       "meta_type": "type-value",
@@ -2934,7 +4023,10 @@
         "siesta input variable \"ZRightVcte\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zvgatel",
       "meta_type": "type-value",
@@ -2942,7 +4034,10 @@
         "siesta input variable \"ZVGateL\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_input_zvgater",
       "meta_type": "type-value",
@@ -2950,12 +4045,17 @@
         "siesta input variable \"ZVGateR\"" ],
       "meta_abstract_types": ["x_siesta_input"],
       "meta_parent_section": "x_siesta_section_input",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_siesta_section_input",
       "meta_type": "type-section",
       "meta_description": [
         "input section" ],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     } ]
 }

@@ -13,7 +13,10 @@
         "-" ],
       "meta_abstract_types": ["settings_atom_in_molecule"],
       "meta_parent_section": "section_molecule_type",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "energy_free",
       "meta_type": "type-value",
@@ -21,7 +24,10 @@
         "-" ],
       "meta_abstract_types": ["energy_total_potential"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "energy_total",
       "meta_type": "type-value",
@@ -29,83 +35,119 @@
         "-" ],
       "meta_abstract_types": ["energy_total_potential"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_atom_forces_x",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_atom_forces_y",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_atom_forces_z",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_atom_positions_x",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_atom_positions_y",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_atom_positions_z",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_charge",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_molecule_type",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_eigenvalues_occupation",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_eigenvalues",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_eigenvalues_values",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_eigenvalues",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_force_max",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_dftbp_force_max_mov",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

@@ -12,21 +12,30 @@
       "meta_description": [
         "Forces acting on the atoms in this Quickstep calculation." ],
       "meta_parent_section": "x_cp2k_section_quickstep_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_atomic_kinds",
       "meta_type": "type-value",
       "meta_description": [
         "The number of atomic kinds in the calculation." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_atoms",
       "meta_type": "type-value",
       "meta_description": [
         "The number of atoms in the calculation." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_filename",
       "meta_type": "type-value",
@@ -34,56 +43,80 @@
         "The name of the basis set file." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_norm_type",
       "meta_type": "type-value",
       "meta_description": [
         "Norm type." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_number_of_cartesian_basis_functions",
       "meta_type": "type-value",
       "meta_description": [
         "Number of Cartesian basis functions." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_number_of_orbital_shell_sets",
       "meta_type": "type-value",
       "meta_description": [
         "Number of orbital shell sets." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_number_of_orbital_shells",
       "meta_type": "type-value",
       "meta_description": [
         "Number of orbital shells." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_number_of_primitive_cartesian_functions",
       "meta_type": "type-value",
       "meta_description": [
         "Number of primitive Cartesian functions." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_basis_set_number_of_spherical_basis_functions",
       "meta_type": "type-value",
       "meta_description": [
         "Number of spherical basis functions." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_cartesian_basis_functions",
       "meta_type": "type-value",
       "meta_description": [
         "The number of Cartesian basis functions." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_coordinate_filename",
       "meta_type": "type-value",
@@ -91,7 +124,10 @@
         "The name of the coordinate file." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_communication_thread_load",
       "meta_type": "type-value",
@@ -99,7 +135,10 @@
         "Load of the communication thread." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_multiplication_driver",
       "meta_type": "type-value",
@@ -107,7 +146,10 @@
         "DBCSR Multiplication driver" ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_multiplication_size_stacks",
       "meta_type": "type-value",
@@ -115,7 +157,10 @@
         "DBCSR Multiplication size of stacks." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_multiplication_stack_size",
       "meta_type": "type-value",
@@ -123,7 +168,10 @@
         "DBCSR Multiplication stack size." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_multrec_recursion_limit",
       "meta_type": "type-value",
@@ -131,7 +179,10 @@
         "DBCSR Multrec recursion limit" ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_use_communication_thread",
       "meta_type": "type-value",
@@ -139,7 +190,10 @@
         "Boolean indicating if communication thread is used." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_use_mpi_combined_types",
       "meta_type": "type-value",
@@ -147,7 +201,10 @@
         "Boolean indicating if MPI combined types are used." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_use_mpi_memory_allocation",
       "meta_type": "type-value",
@@ -155,7 +212,10 @@
         "Boolean indicating if MPI memory allocation is used." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_dbcsr_use_subcommunicators",
       "meta_type": "type-value",
@@ -163,14 +223,20 @@
         "Boolean indicating if subcommunicators are used." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_dbcsr",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_electronic_kinetic_energy",
       "meta_type": "type-value",
       "meta_description": [
         "Self-consistent electronic kinetic energy calculated with Quickstep" ],
       "meta_parent_section": "x_cp2k_section_quickstep_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_end_host",
       "meta_type": "type-value",
@@ -178,7 +244,10 @@
         "The name of the host machine this calculation ended on." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_end_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_end_id",
       "meta_type": "type-value",
@@ -186,7 +255,10 @@
         "The process id at the end of this run." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_end_information",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_end_path",
       "meta_type": "type-value",
@@ -194,7 +266,10 @@
         "The path where this calculation ended." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_end_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_end_time",
       "meta_type": "type-value",
@@ -202,7 +277,10 @@
         "The ending time for this run." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_end_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_end_user",
       "meta_type": "type-value",
@@ -210,35 +288,50 @@
         "The name of the user at the end of the calculation." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_end_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_energy_change_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
         "At each self-consistent field (SCF) iteration, change of total energy with respect to the previous SCF iteration." ],
       "meta_parent_section": "x_cp2k_section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_energy_total",
       "meta_type": "type-value",
       "meta_description": [
         "Value of the total energy (nuclei + electrons) calculated with Quickstep." ],
       "meta_parent_section": "x_cp2k_section_quickstep_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_energy_total_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
         "Total electronic energy calculated with xc_method during the self-consistent field (SCF) iterations." ],
       "meta_parent_section": "x_cp2k_section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_energy_xc_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
         "Exchange-correlation (XC) energy during the self-consistent field (SCF) iteration." ],
       "meta_parent_section": "x_cp2k_section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_geminal_filename",
       "meta_type": "type-value",
@@ -246,7 +339,10 @@
         "The name of the geminal file." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_input_filename",
       "meta_type": "type-value",
@@ -254,21 +350,30 @@
         "The name of the CP2K input file that produced this calculation." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_program_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_kind_basis_set_name",
       "meta_type": "type-value",
       "meta_description": [
         "The name of the orbital basis set used for this kind." ],
       "meta_parent_section": "x_cp2k_section_kind_basis_set",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_kind_label",
       "meta_type": "type-value",
       "meta_description": [
         "The label for this atomic kind." ],
       "meta_parent_section": "x_cp2k_section_atomic_kind",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_kind_number",
       "meta_type": "type-value",
@@ -276,35 +381,50 @@
         "The atomic kind number. For each element there may be multiple kinds specified. This number differentiates them. ",
         "Not the atomic number." ],
       "meta_parent_section": "x_cp2k_section_atomic_kind",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_kind_number_of_atoms",
       "meta_type": "type-value",
       "meta_description": [
         "The number of atoms with this kind." ],
       "meta_parent_section": "x_cp2k_section_atomic_kind",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_local_part_of_gth_pseudopotential",
       "meta_type": "type-value",
       "meta_description": [
         "Maximum angular momentum of the local part of the GTH pseudopotential." ],
       "meta_parent_section": "x_cp2k_section_maximum_angular_momentum",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_barostat_temperature_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average barostat temperature in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_barostat_temperature_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous barostat temperature in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_barostat_time_constant",
       "meta_type": "type-value",
@@ -312,98 +432,140 @@
         "Barostat time constant." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_angle_a_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell vector a angle in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_angle_a_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell vector a angle in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_angle_b_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell vector b angle in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_angle_b_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell vector b angle in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_angle_c_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell vector c angle in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_angle_c_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell vector c angle in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_length_a_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell vector a length in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_length_a_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell vector a length in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_length_b_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell vector b length in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_length_b_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell vector b length in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_length_c_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell vector c length in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cell_length_c_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell vector c length in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_conserved_quantity",
       "meta_type": "type-value",
       "meta_description": [
         "Conserved quantity for this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_coordinates_filename",
       "meta_type": "type-value",
@@ -411,7 +573,10 @@
         "Name of the coordinate file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_coordinates_print_frequency",
       "meta_type": "type-value",
@@ -419,21 +584,30 @@
         "Print frequency for the coordinate file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cpu_time_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average CPU time for this step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_cpu_time_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous CPU time for this step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_dump_filename",
       "meta_type": "type-value",
@@ -441,7 +615,10 @@
         "Name of the dump file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_dump_print_frequency",
       "meta_type": "type-value",
@@ -449,7 +626,10 @@
         "Print frequency for the dump file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_energies_filename",
       "meta_type": "type-value",
@@ -457,7 +637,10 @@
         "Name of the energies file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_energies_print_frequency",
       "meta_type": "type-value",
@@ -465,21 +648,30 @@
         "Print frequency for the energies file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_energy_drift_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average kinetic energy in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_energy_drift_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous energy drift in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_ensemble_type",
       "meta_type": "type-value",
@@ -487,21 +679,30 @@
         "The ensemble type in molecular dynamics." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_kinetic_energy_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average kinetic energy in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_kinetic_energy_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous kinetic energy in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_number_of_time_steps",
       "meta_type": "type-value",
@@ -509,35 +710,50 @@
         "Number of requested time steps in molecular dynamics." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_potential_energy_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average potential energy for an MD step. Averaged over this and the previous steps." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_potential_energy_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous potential energy in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_pressure_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average pressure in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_pressure_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous pressure in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_print_frequency",
       "meta_type": "type-value",
@@ -545,7 +761,10 @@
         "The print frequency of molecular dynamics information in the CP2K output file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_simulation_cell_filename",
       "meta_type": "type-value",
@@ -553,7 +772,10 @@
         "Simulation cell filename." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_simulation_cell_print_frequency",
       "meta_type": "type-value",
@@ -561,14 +783,20 @@
         "Simulation cell print frequency." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_step_number",
       "meta_type": "type-value",
       "meta_description": [
         "Step number." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_target_pressure",
       "meta_type": "type-value",
@@ -576,7 +804,10 @@
         "Target pressure for the barostat." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_target_temperature",
       "meta_type": "type-value",
@@ -584,7 +815,10 @@
         "Thermostat target temperature." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_target_temperature_tolerance",
       "meta_type": "type-value",
@@ -592,28 +826,40 @@
         "Target temperature tolerance." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_temperature_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average temperature in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_temperature_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous temperature in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_time",
       "meta_type": "type-value",
       "meta_description": [
         "Simulation time for this step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_time_step",
       "meta_type": "type-value",
@@ -621,7 +867,10 @@
         "Time step." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_velocities_filename",
       "meta_type": "type-value",
@@ -629,7 +878,10 @@
         "Name of the velocities file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_velocities_print_frequency",
       "meta_type": "type-value",
@@ -637,21 +889,30 @@
         "Print frequency for the velocities file." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
       "meta_parent_section": "x_cp2k_section_md_settings",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_volume_average",
       "meta_type": "type-value",
       "meta_description": [
         "Average cell volume in an MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_md_volume_instantaneous",
       "meta_type": "type-value",
       "meta_description": [
         "Instantaneous cell volume in this MD step." ],
       "meta_parent_section": "x_cp2k_section_md_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_method_name",
       "meta_type": "type-value",
@@ -659,7 +920,10 @@
         "The method name for this run." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_mm_potential_filename",
       "meta_type": "type-value",
@@ -667,133 +931,190 @@
         "The name of the MM potential file." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_non_local_part_of_gth_pseudopotential",
       "meta_type": "type-value",
       "meta_description": [
         "Maximum angular momentum of the non-local part of the GTH pseudopotential." ],
       "meta_parent_section": "x_cp2k_section_maximum_angular_momentum",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_energy",
       "meta_type": "type-value",
       "meta_description": [
         "Energy for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_energy_change",
       "meta_type": "type-value",
       "meta_description": [
         "Energy change for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_energy_decrease",
       "meta_type": "type-value",
       "meta_description": [
         "Whether there has been energy decrease. YES or NO." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_gradient_convergence_limit",
       "meta_type": "type-value",
       "meta_description": [
         "Convergence criterium for the maximum force component of the current configuration." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_max_gradient",
       "meta_type": "type-value",
       "meta_description": [
         "Max gradient for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_max_gradient_convergence",
       "meta_type": "type-value",
       "meta_description": [
         "Whether there is convergence in max gradient. YES or NO." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_max_step_size",
       "meta_type": "type-value",
       "meta_description": [
         "Maximum step size for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_method",
       "meta_type": "type-value",
       "meta_description": [
         "Optimization method for this step" ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_rms_gradient",
       "meta_type": "type-value",
       "meta_description": [
         "RMS gradient for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_rms_gradient_convergence",
       "meta_type": "type-value",
       "meta_description": [
         "Whether there is convergence in rms gradient. YES or NO." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_rms_step_size",
       "meta_type": "type-value",
       "meta_description": [
         "RMS step size for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_rms_step_size_convergence",
       "meta_type": "type-value",
       "meta_description": [
         "Whether there is convergence in rms step size. YES or NO." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_step_size_convergence",
       "meta_type": "type-value",
       "meta_description": [
         "Whether there is convergence in step size. YES or NO." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_step_size_convergence_limit",
       "meta_type": "type-value",
       "meta_description": [
         "Convergence criterium for the maximum geometry change between the current and the last optimizer iteration." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_optimization_used_time",
       "meta_type": "type-value",
       "meta_description": [
         "Time used for this optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_orbital_basis_functions",
       "meta_type": "type-value",
       "meta_description": [
         "Maximum angular momentum of orbital basis functions." ],
       "meta_parent_section": "x_cp2k_section_maximum_angular_momentum",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_planewave_cutoff",
       "meta_type": "type-value",
       "meta_description": [
         "The plane-wave cutoff for the auxiliary basis." ],
       "meta_parent_section": "x_cp2k_section_quickstep_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_potential_filename",
       "meta_type": "type-value",
@@ -801,7 +1122,10 @@
         "The name of the potential file." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_preferred_diagonalization_library",
       "meta_type": "type-value",
@@ -809,7 +1133,10 @@
         "The name of the preferred diagonalization library." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_preferred_fft_library",
       "meta_type": "type-value",
@@ -817,14 +1144,20 @@
         "The name of the preferred FFT library." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_primitive_cartesian_functions",
       "meta_type": "type-value",
       "meta_description": [
         "The number of primitive Cartesian functions." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_program_compilation_datetime",
       "meta_type": "type-value",
@@ -832,35 +1165,50 @@
         "The time when this program was compiled." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_program_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_quickstep_converged",
       "meta_type": "type-value",
       "meta_description": [
         "Boolean indicating whether the quickstep SCF cycle converged or not." ],
       "meta_parent_section": "x_cp2k_section_quickstep_calculation",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_quickstep_method",
       "meta_type": "type-value",
       "meta_description": [
         "The method used for the Quickstep calculations (GPW, GAPW)." ],
       "meta_parent_section": "x_cp2k_section_quickstep_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_restart_file_name",
       "meta_type": "type-value",
       "meta_description": [
         "Name of the restart file." ],
       "meta_parent_section": "x_cp2k_section_restart_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_restarted_quantity_name",
       "meta_type": "type-value",
       "meta_description": [
         "Name of a restarted quantity." ],
       "meta_parent_section": "x_cp2k_section_restart_information",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_run_type",
       "meta_type": "type-value",
@@ -868,195 +1216,260 @@
         "The run type for this calculation." ],
       "meta_abstract_types": ["settings_run"],
       "meta_parent_section": "x_cp2k_section_global_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_section_atomic_kind",
       "meta_type": "type-section",
       "meta_description": [
         "Information one atomic kind." ],
-      "meta_parent_section": "x_cp2k_section_atomic_kinds"
+      "meta_parent_section": "x_cp2k_section_atomic_kinds",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_atomic_kinds",
       "meta_type": "type-section",
       "meta_description": [
         "Information about all the atomic kinds in this Quickstep calculation." ],
-      "meta_parent_section": "x_cp2k_section_quickstep_settings"
+      "meta_parent_section": "x_cp2k_section_quickstep_settings",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_dbcsr",
       "meta_type": "type-section",
       "meta_description": [
         "The DBCSR (Distributed Block Compressed Sparse Row) information." ],
       "meta_abstract_types": ["settings_run"],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_end_information",
       "meta_type": "type-section",
       "meta_description": [
         "Contains information about the ending conditions for this run." ],
       "meta_abstract_types": ["program_info"],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_geometry_optimization",
       "meta_type": "type-section",
       "meta_description": [
         "CP2K geometry optimization information." ],
-      "meta_parent_section": "section_frame_sequence"
+      "meta_parent_section": "section_frame_sequence",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_geometry_optimization_energy_reevaluation",
       "meta_type": "type-section",
       "meta_description": [
         "Information for the energy re-evaluation at the end of an optimization procedure." ],
-      "meta_parent_section": "x_cp2k_section_geometry_optimization"
+      "meta_parent_section": "x_cp2k_section_geometry_optimization",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_geometry_optimization_step",
       "meta_type": "type-section",
       "meta_description": [
         "Contains information about the geometry optimization process for every optimization step." ],
-      "meta_parent_section": "x_cp2k_section_geometry_optimization"
+      "meta_parent_section": "x_cp2k_section_geometry_optimization",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_global_settings",
       "meta_type": "type-section",
       "meta_description": [
         "Global settings for this calculation." ],
       "meta_abstract_types": ["settings_run"],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_kind_basis_set",
       "meta_type": "type-section",
       "meta_description": [
         "Description of the basis set used for this kind." ],
-      "meta_parent_section": "x_cp2k_section_atomic_kind"
+      "meta_parent_section": "x_cp2k_section_atomic_kind",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_maximum_angular_momentum",
       "meta_type": "type-section",
       "meta_description": [
         "Contains the maximum angular momentum values used in the calculation." ],
-      "meta_parent_section": "x_cp2k_section_quickstep_settings"
+      "meta_parent_section": "x_cp2k_section_quickstep_settings",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_md",
       "meta_type": "type-section",
       "meta_description": [
         "CP2K Molecular Dynamics information." ],
-      "meta_parent_section": "section_frame_sequence"
+      "meta_parent_section": "section_frame_sequence",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_md_settings",
       "meta_type": "type-section",
       "meta_description": [
         "Settings for CP2K Molecular Dynamics." ],
       "meta_abstract_types": ["settings_molecular_dynamics"],
-      "meta_parent_section": "section_sampling_method"
+      "meta_parent_section": "section_sampling_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_md_step",
       "meta_type": "type-section",
       "meta_description": [
         "Information from MD step." ],
-      "meta_parent_section": "x_cp2k_section_md"
+      "meta_parent_section": "x_cp2k_section_md",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_program_information",
       "meta_type": "type-section",
       "meta_description": [
         "Contains information about the software version used for this run." ],
       "meta_abstract_types": ["program_info"],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_quickstep_calculation",
       "meta_type": "type-section",
       "meta_description": [
         "Section for a CP2K QuickStep calculation." ],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_quickstep_settings",
       "meta_type": "type-section",
       "meta_description": [
         "Quickstep settings." ],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_restart_information",
       "meta_type": "type-section",
       "meta_description": [
         "Contains restart information for this calculation." ],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_scf_iteration",
       "meta_type": "type-section",
       "meta_description": [
         "Section for a CP2K QuickStep SCF iteration." ],
-      "meta_parent_section": "x_cp2k_section_quickstep_calculation"
+      "meta_parent_section": "x_cp2k_section_quickstep_calculation",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_startinformation",
       "meta_type": "type-section",
       "meta_description": [
         "Contains information about the starting conditions for this run." ],
       "meta_abstract_types": ["program_info"],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_stress_tensor",
       "meta_type": "type-section",
       "meta_description": [
         "Section for stress tensor information." ],
-      "meta_parent_section": "x_cp2k_section_quickstep_calculation"
+      "meta_parent_section": "x_cp2k_section_quickstep_calculation",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_total_numbers",
       "meta_type": "type-section",
       "meta_description": [
         "The total number of different entities in the calculation." ],
-      "meta_parent_section": "x_cp2k_section_quickstep_settings"
+      "meta_parent_section": "x_cp2k_section_quickstep_settings",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_vdw_d2_settings",
       "meta_type": "type-section",
       "meta_description": [
         "D2 settings." ],
       "meta_abstract_types": ["settings_van_der_waals"],
-      "meta_parent_section": "x_cp2k_section_vdw_settings"
+      "meta_parent_section": "x_cp2k_section_vdw_settings",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_vdw_d3_settings",
       "meta_type": "type-section",
       "meta_description": [
         "D3 settings." ],
       "meta_abstract_types": ["settings_van_der_waals"],
-      "meta_parent_section": "x_cp2k_section_vdw_settings"
+      "meta_parent_section": "x_cp2k_section_vdw_settings",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_vdw_element_settings",
       "meta_type": "type-section",
       "meta_description": [
         "Contains element-specific Van der Waals settings." ],
       "meta_abstract_types": ["settings_van_der_waals"],
-      "meta_parent_section": "x_cp2k_section_vdw_d2_settings"
+      "meta_parent_section": "x_cp2k_section_vdw_d2_settings",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_section_vdw_settings",
       "meta_type": "type-section",
       "meta_description": [
         "Van der Waals settings." ],
       "meta_abstract_types": ["settings_van_der_waals"],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_cp2k_shell_sets",
       "meta_type": "type-value",
       "meta_description": [
         "The number of shell sets in the calculation." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_shells",
       "meta_type": "type-value",
       "meta_description": [
         "The number of shells." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_spherical_basis_functions",
       "meta_type": "type-value",
       "meta_description": [
         "The number of Spherical basis functions." ],
       "meta_parent_section": "x_cp2k_section_total_numbers",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_spin_restriction",
       "meta_type": "type-value",
       "meta_description": [
         "Indicates the restriction applied for the spin (e.g. RKS)." ],
       "meta_parent_section": "x_cp2k_section_quickstep_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_start_host",
       "meta_type": "type-value",
@@ -1064,7 +1477,10 @@
         "The name of the host machine this calculation started on." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_startinformation",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_start_id",
       "meta_type": "type-value",
@@ -1072,7 +1488,10 @@
         "The process id at the start of this run." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_startinformation",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_start_path",
       "meta_type": "type-value",
@@ -1080,7 +1499,10 @@
         "The path where this calculation started." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_startinformation",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_start_time",
       "meta_type": "type-value",
@@ -1088,7 +1510,10 @@
         "The starting time for this run." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_startinformation",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_start_user",
       "meta_type": "type-value",
@@ -1096,42 +1521,60 @@
         "The name of the user at the start of the calculation." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_startinformation",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_stress_tensor",
       "meta_type": "type-value",
       "meta_description": [
         "A final value of the stress tensor in a Quickstep calculation" ],
       "meta_parent_section": "x_cp2k_section_stress_tensor",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_stress_tensor_determinant",
       "meta_type": "type-value",
       "meta_description": [
         "The determinant of the stress tensor." ],
       "meta_parent_section": "x_cp2k_section_stress_tensor",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_stress_tensor_eigenvalues",
       "meta_type": "type-value",
       "meta_description": [
         "The eigenvalues of the stress tensor." ],
       "meta_parent_section": "x_cp2k_section_stress_tensor",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_stress_tensor_eigenvectors",
       "meta_type": "type-value",
       "meta_description": [
         "The eigenvectors of the stress tensor." ],
       "meta_parent_section": "x_cp2k_section_stress_tensor",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_stress_tensor_one_third_of_trace",
       "meta_type": "type-value",
       "meta_description": [
         "1/3 of the trace of the stress tensor." ],
       "meta_parent_section": "x_cp2k_section_stress_tensor",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_svn_revision",
       "meta_type": "type-value",
@@ -1139,7 +1582,10 @@
         "The SVN revision number." ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "x_cp2k_section_program_information",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_bj_damping_name",
       "meta_type": "type-value",
@@ -1147,7 +1593,10 @@
         "Name of the BJ damping method." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_cn_cutoff",
       "meta_type": "type-value",
@@ -1155,7 +1604,10 @@
         "Cutoff for CN calculation." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_d3_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_cutoff_radius",
       "meta_type": "type-value",
@@ -1163,7 +1615,10 @@
         "Cutoff radius of the van der Waals method." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_damping_factor",
       "meta_type": "type-value",
@@ -1171,7 +1626,10 @@
         "Exponential damping prefactor for the van der Waals method." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_d2_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_name",
       "meta_type": "type-value",
@@ -1179,7 +1637,10 @@
         "Name of the van der Waals method." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_parameter_c6",
       "meta_type": "type-value",
@@ -1187,7 +1648,10 @@
         "C6 parameter." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_element_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_parameter_element_name",
       "meta_type": "type-value",
@@ -1195,7 +1659,10 @@
         "Name of the element." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_element_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_parameter_radius",
       "meta_type": "type-value",
@@ -1203,7 +1670,10 @@
         "Radius parameter." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_element_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_s6_scaling_factor",
       "meta_type": "type-value",
@@ -1211,7 +1681,10 @@
         "S6 scaling factor." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_d3_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_s8_scaling_factor",
       "meta_type": "type-value",
@@ -1219,7 +1692,10 @@
         "S8 scaling factor." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_d3_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_scaling_factor",
       "meta_type": "type-value",
@@ -1227,7 +1703,10 @@
         "Scaling factor." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_d2_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_sr6_scaling_factor",
       "meta_type": "type-value",
@@ -1235,7 +1714,10 @@
         "SR6 scaling factor." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_d3_settings",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_cp2k_vdw_type",
       "meta_type": "type-value",
@@ -1243,6 +1725,9 @@
         "Type of the van der Waals method." ],
       "meta_abstract_types": ["settings_van_der_waals"],
       "meta_parent_section": "x_cp2k_section_vdw_settings",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

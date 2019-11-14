@@ -6,5 +6,8 @@
     "an abstract type that should not be parent of any of the sections that this section should be injected in. This ",
     "further refines the selection done by meta_inject_if_section_regexp" ],
   "meta_parent_section": "meta_inject",
-  "meta_data_type": "string"
+  "meta_data_type": "string",
+  "meta_repeats": false,
+  "meta_required": false,
+  "meta_dimension": [  ]
 }

@@ -7,5 +7,7 @@
     "name (basis_set_atom_centered_unique_name), the atomic number of the atomic species the basis set is meant for (",
     "basis_set_atom_number), and a list of actual basis functions in the section_basis_functions_atom_centered section." ],
   "meta_abstract_types": ["basis_set_description"],
-  "meta_parent_section": "section_run"
+  "meta_parent_section": "section_run",
+  "meta_repeats": true,
+  "meta_required": false
 }

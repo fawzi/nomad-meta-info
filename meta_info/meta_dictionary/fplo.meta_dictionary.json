@@ -16,35 +16,50 @@
       "meta_description": [
         "CPA block of each atom" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_atom_idx",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO-internal index for each atom" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_atom_wyckoff_idx",
       "meta_type": "type-value",
       "meta_description": [
         "Wyckoff position index of each atom" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_functional",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO notation of DFT+U functional" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_orbital_element",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO: Atom/Orbital dependent DFT+U property: element" ],
       "meta_parent_section": "section_dft_plus_u_orbital",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_orbital_f0",
       "meta_type": "type-value",
@@ -52,7 +67,10 @@
         "FPLO: Atom/Orbital dependent DFT+U property: value F0" ],
       "meta_abstract_types": ["energy_value"],
       "meta_parent_section": "section_dft_plus_u_orbital",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_orbital_f2",
       "meta_type": "type-value",
@@ -60,7 +78,10 @@
         "FPLO: Atom/Orbital dependent DFT+U property: value F2" ],
       "meta_abstract_types": ["energy_value"],
       "meta_parent_section": "section_dft_plus_u_orbital",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_orbital_f4",
       "meta_type": "type-value",
@@ -68,7 +89,10 @@
         "FPLO: Atom/Orbital dependent DFT+U property: value F4" ],
       "meta_abstract_types": ["energy_value"],
       "meta_parent_section": "section_dft_plus_u_orbital",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_orbital_f6",
       "meta_type": "type-value",
@@ -76,35 +100,50 @@
         "FPLO: Atom/Orbital dependent DFT+U property: value F6" ],
       "meta_abstract_types": ["energy_value"],
       "meta_parent_section": "section_dft_plus_u_orbital",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_orbital_species",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO: Atom/Orbital dependent DFT+U property: species index" ],
       "meta_parent_section": "section_dft_plus_u_orbital",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_dft_plus_u_projection_type",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO notation of DFT+U projection" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_program_compilation_options",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO compilation options" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_program_version_sub",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO sub version" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_reciprocal_cell",
       "meta_type": "type-value",
@@ -113,27 +152,39 @@
         " and the second index runs over the 3 lattice vectors." ],
       "meta_abstract_types": ["configuration_core"],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_structure_type",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO structure type: Crystal/Molecule" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_xc_functional",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO notation of xc functional" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fplo_xc_functional_number",
       "meta_type": "type-value",
       "meta_description": [
         "FPLO number xc functional" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

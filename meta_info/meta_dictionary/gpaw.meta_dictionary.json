@@ -12,28 +12,40 @@
       "meta_description": [
         "atomic density matrices in the PAW formalism" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_density_convergence_criterion",
       "meta_type": "type-value",
       "meta_description": [
         "Density convergence criteria for break the SCF cycle" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_fix_density",
       "meta_type": "type-value",
       "meta_description": [
         "Was it a calculation with a fixed density?" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_fix_magnetic_moment",
       "meta_type": "type-value",
       "meta_description": [
         "Was the magnetic moment fixed? If yes the x_gpaw_fixed_sZ is set" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_fixed_spin_sz",
       "meta_type": "type-value",
@@ -41,49 +53,70 @@
         "Target value (fixed) of the z projection of the spin moment operator $S^z$ for the converged calculation with the ",
         "xc_method." ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_magnetic_moments",
       "meta_type": "type-value",
       "meta_description": [
         "Magnetic moments projected onto atoms. The sum gives the total magnetic moment" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_maximum_angular_momentum",
       "meta_type": "type-value",
       "meta_description": [
         "Maxium angular momentum (L) for projectors" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_mix_beta",
       "meta_type": "type-value",
       "meta_description": [
         "Damping parameter in the density mixer" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_mix_class",
       "meta_type": "type-value",
       "meta_description": [
         "The density mixer class name (Mixer, MixerSum, MixerDiff)" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_mix_old",
       "meta_type": "type-value",
       "meta_description": [
         "Number of old densities in the density mixer" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_mix_weight",
       "meta_type": "type-value",
       "meta_description": [
         "Mixing weight in density mixer" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_number_of_packed_ap_elements",
       "meta_type": "type-dimension",
@@ -102,40 +135,57 @@
       "meta_description": [
         "projections in the PAW formalism (imaginary part)" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_projections_real",
       "meta_type": "type-value",
       "meta_description": [
         "projections in the PAW formalism (real part)" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_section_paw_method",
       "meta_type": "type-section",
       "meta_description": [
         "GPAW PAW specific information" ],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_gpaw_spin_sz",
       "meta_type": "type-value",
       "meta_description": [
         "Value of the z projection of the spin moment operator $S^z$ for the converged calculation with the xc_method." ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_symmetry_time_reversal_switch",
       "meta_type": "type-value",
       "meta_description": [
         "Was time reserval symmetry used" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_gpaw_xc_functional",
       "meta_type": "type-value",
       "meta_description": [
         "The XC functional name used in gpaw as input" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

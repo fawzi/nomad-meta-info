@@ -12,27 +12,39 @@
       "meta_description": [
         "Density convergence criteria to break the SCF cycle" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_atk_mix_old",
       "meta_type": "type-value",
       "meta_description": [
         "Number of old densities in the density mixer" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_atk_mix_weight",
       "meta_type": "type-value",
       "meta_description": [
         "Mixing weight in density mixer" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_atk_monkhorstpack_sampling",
       "meta_type": "type-value",
       "meta_description": [
         "Monkhorstpack grid sampling" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

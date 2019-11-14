@@ -13,7 +13,10 @@
         "-" ],
       "meta_abstract_types": ["force_type"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_forces_free_y",
       "meta_type": "type-value",
@@ -21,7 +24,10 @@
         "-" ],
       "meta_abstract_types": ["force_type"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_forces_free_z",
       "meta_type": "type-value",
@@ -29,7 +35,10 @@
         "-" ],
       "meta_abstract_types": ["force_type"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_forces_raw_x",
       "meta_type": "type-value",
@@ -37,7 +46,10 @@
         "-" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_forces_raw_y",
       "meta_type": "type-value",
@@ -45,7 +57,10 @@
         "-" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_forces_raw_z",
       "meta_type": "type-value",
@@ -53,56 +68,80 @@
         "-" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_projected_dos_file",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_atom_projected_dos",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_atom_type_vdw",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_vdw_ts",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_band_k1",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_k_band",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_band_k2",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_k_band",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_band_k3",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_k_band",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_band_occupations_eigenvalue_string",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_k_band",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_band_segment",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_k_band",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_angular_grids_method",
       "meta_type": "type-value",
@@ -110,7 +149,10 @@
         "angular grids method (specifed or auto)" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_basis_dep_cutoff",
       "meta_type": "type-value",
@@ -118,7 +160,10 @@
         "cutoff for the dependent basis" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_basis_func_l",
       "meta_type": "type-value",
@@ -126,7 +171,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_func",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_basis_func_n",
       "meta_type": "type-value",
@@ -134,7 +182,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_func",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_basis_func_radius",
       "meta_type": "type-value",
@@ -142,7 +193,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_basis_func_type",
       "meta_type": "type-value",
@@ -150,7 +204,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_func",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_charge",
       "meta_type": "type-value",
@@ -158,7 +215,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_cut_pot1",
       "meta_type": "type-value",
@@ -166,7 +226,10 @@
         "first parameter of cut\\_pot" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_cut_pot2",
       "meta_type": "type-value",
@@ -174,7 +237,10 @@
         "second parameter of cut\\_pot" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_cut_pot3",
       "meta_type": "type-value",
@@ -182,7 +248,10 @@
         "third parameter of cut\\_pot" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_division1",
       "meta_type": "type-value",
@@ -190,7 +259,10 @@
         "first parameter of division (position)" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_division2",
       "meta_type": "type-value",
@@ -198,7 +270,10 @@
         "second parameter of division (n points)" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_hse_omega",
       "meta_type": "type-value",
@@ -206,7 +281,10 @@
         "-" ],
       "meta_abstract_types": ["settings_xc_functional", "x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_hse_unit",
       "meta_type": "type-value",
@@ -214,7 +292,10 @@
         "-" ],
       "meta_abstract_types": ["settings_xc_functional", "x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_hybrid_xc_coeff",
       "meta_type": "type-value",
@@ -222,7 +303,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_k1",
       "meta_type": "type-value",
@@ -230,7 +314,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_k2",
       "meta_type": "type-value",
@@ -238,7 +325,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_k3",
       "meta_type": "type-value",
@@ -246,7 +336,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_k_grid",
       "meta_type": "type-value",
@@ -254,7 +347,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_l_hartree",
       "meta_type": "type-value",
@@ -262,7 +358,10 @@
         "angular leven for the hartreee part" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_mass",
       "meta_type": "type-value",
@@ -270,7 +369,10 @@
         "mass of the nucleus in atomic mass units" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_md_time_step",
       "meta_type": "type-value",
@@ -278,15 +380,15 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_run"],
       "meta_parent_section": "section_run",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_method",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Parameters of control.in belonging to section method." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Parameters of control.in belonging to section method." ]
     }, {
       "meta_name": "x_fhi_aims_controlin_nucleus",
       "meta_type": "type-value",
@@ -294,7 +396,10 @@
         "charge of the nucleus" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_occupation_order",
       "meta_type": "type-value",
@@ -302,7 +407,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_occupation_type",
       "meta_type": "type-value",
@@ -310,7 +418,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_occupation_width",
       "meta_type": "type-value",
@@ -318,7 +429,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_outer_grid",
       "meta_type": "type-value",
@@ -326,7 +440,10 @@
         "outer grid" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_override_relativity",
       "meta_type": "type-value",
@@ -334,7 +451,10 @@
         "-" ],
       "meta_abstract_types": ["settings_relativity", "x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_radial_base1",
       "meta_type": "type-value",
@@ -342,7 +462,10 @@
         "first parameter of radial\\_base" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_radial_base2",
       "meta_type": "type-value",
@@ -350,7 +473,10 @@
         "second parameter of radial\\_base" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_radial_multiplier",
       "meta_type": "type-value",
@@ -358,7 +484,10 @@
         "radial multiplier" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_relativistic",
       "meta_type": "type-value",
@@ -366,7 +495,10 @@
         "-" ],
       "meta_abstract_types": ["settings_relativity", "x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_relativistic_threshold",
       "meta_type": "type-value",
@@ -374,16 +506,16 @@
         "-" ],
       "meta_abstract_types": ["settings_relativity", "x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_run",
       "meta_type": "type-abstract",
       "meta_description": [
         "Parameters of control.in belonging to settings run." ],
-      "meta_abstract_types": ["settings_run"],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+      "meta_abstract_types": ["settings_run"]
     }, {
       "meta_name": "x_fhi_aims_controlin_sc_accuracy_eev",
       "meta_type": "type-value",
@@ -391,7 +523,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_sc_accuracy_etot",
       "meta_type": "type-value",
@@ -399,7 +534,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_sc_accuracy_forces",
       "meta_type": "type-value",
@@ -407,7 +545,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_sc_accuracy_rho",
       "meta_type": "type-value",
@@ -415,7 +556,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_sc_accuracy_stress",
       "meta_type": "type-value",
@@ -423,7 +567,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_sc_iter_limit",
       "meta_type": "type-value",
@@ -431,7 +578,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_species_name",
       "meta_type": "type-value",
@@ -439,7 +589,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_spin",
       "meta_type": "type-value",
@@ -447,7 +600,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_verbatim_writeout",
       "meta_type": "type-value",
@@ -455,7 +611,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlin_xc",
       "meta_type": "type-value",
@@ -463,7 +622,10 @@
         "-" ],
       "meta_abstract_types": ["settings_xc_functional", "x_fhi_aims_controlin_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_band_segment_end1",
       "meta_type": "type-value",
@@ -471,7 +633,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_band_segment_end2",
       "meta_type": "type-value",
@@ -479,7 +644,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_band_segment_end3",
       "meta_type": "type-value",
@@ -487,7 +655,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_band_segment_start1",
       "meta_type": "type-value",
@@ -495,7 +666,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_band_segment_start2",
       "meta_type": "type-value",
@@ -503,7 +677,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_band_segment_start3",
       "meta_type": "type-value",
@@ -511,84 +688,120 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_eff_charge",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_gauss_alpha",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_gauss_l",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_gauss_n",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_gauss_weight",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_l",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_n",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_occ",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_primitive_gauss_alpha",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_radius",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_basis_func_type",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_basis_func",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_hse_omega",
       "meta_type": "type-value",
@@ -596,7 +809,10 @@
         "-" ],
       "meta_abstract_types": ["settings_xc_functional", "x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_hse_unit",
       "meta_type": "type-value",
@@ -604,7 +820,10 @@
         "-" ],
       "meta_abstract_types": ["settings_xc_functional", "x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_hybrid_xc_coeff",
       "meta_type": "type-value",
@@ -612,7 +831,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_k1",
       "meta_type": "type-value",
@@ -620,7 +842,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_k2",
       "meta_type": "type-value",
@@ -628,7 +853,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_k3",
       "meta_type": "type-value",
@@ -636,7 +864,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_k_grid",
       "meta_type": "type-value",
@@ -644,7 +875,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_md_time_step",
       "meta_type": "type-value",
@@ -652,15 +886,15 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_run"],
       "meta_parent_section": "section_run",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_method",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Parameters of aims output of parsed control.in belonging to section method." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Parameters of aims output of parsed control.in belonging to section method." ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_number_of_spin_channels",
       "meta_type": "type-value",
@@ -668,7 +902,10 @@
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_override_relativity",
       "meta_type": "type-value",
@@ -676,14 +913,20 @@
         "-" ],
       "meta_abstract_types": ["settings_relativity", "x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_pure_gaussian",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_relativistic",
       "meta_type": "type-value",
@@ -691,7 +934,10 @@
         "-" ],
       "meta_abstract_types": ["settings_relativity", "x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_relativistic_threshold",
       "meta_type": "type-value",
@@ -699,58 +945,76 @@
         "-" ],
       "meta_abstract_types": ["settings_relativity", "x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_run",
       "meta_type": "type-abstract",
       "meta_description": [
         "Parameters of aims output of parsed control.in belonging to settings run." ],
-      "meta_abstract_types": ["settings_run"],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+      "meta_abstract_types": ["settings_run"]
     }, {
       "meta_name": "x_fhi_aims_controlinout_species_charge",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_species_cut_pot",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_species_cut_pot_scale",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_species_cut_pot_width",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_species_mass",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_species_name",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_controlinout_xc",
       "meta_type": "type-value",
@@ -758,49 +1022,70 @@
         "-" ],
       "meta_abstract_types": ["settings_xc_functional", "x_fhi_aims_controlinout_method"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_cube_filename",
       "meta_type": "type-value",
       "meta_description": [
         "filename of cube file" ],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_dos_energies",
       "meta_type": "type-value",
       "meta_description": [
         "Density of states (DOS) energies" ],
       "meta_parent_section": "x_fhi_aims_section_dos",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_dos_energy",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_dos",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_dos_to_single_configuration_ref",
       "meta_type": "type-value",
       "meta_description": [
         "Reference to the single configuration calculation where the dos belongs to" ],
       "meta_parent_section": "x_fhi_aims_section_dos",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_dos_value_string",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_dos",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_dos_values",
       "meta_type": "type-value",
       "meta_description": [
         "Density of states (DOS) values" ],
       "meta_parent_section": "x_fhi_aims_section_dos",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_correlation_perturbativegw",
       "meta_type": "type-value",
@@ -808,7 +1093,10 @@
         "Correlation energy at a given eigenstate from perturbative GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_eigenvalue",
       "meta_type": "type-value",
@@ -816,14 +1104,20 @@
         "Single eigenvalue" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_eigenvalue_zora",
       "meta_type": "type-value",
       "meta_description": [
         "Single eigenvalue of scaled ZORA" ],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_zora",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_exactexchange_perturbativegw",
       "meta_type": "type-value",
@@ -831,7 +1125,10 @@
         "Exact exchange energy at given eigenstate from perturbative GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_kpoint1",
       "meta_type": "type-value",
@@ -839,14 +1136,20 @@
         "Component 1 of kpoints on which the eigenvalues were evaluated" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_kpoint1_zora",
       "meta_type": "type-value",
       "meta_description": [
         "Component 1 of kpoints on which the eigenvalues were evaluated of scaled ZORA" ],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin_zora",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_kpoint2",
       "meta_type": "type-value",
@@ -854,14 +1157,20 @@
         "Component 2 of kpoints on which the eigenvalues were evaluated" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_kpoint2_zora",
       "meta_type": "type-value",
       "meta_description": [
         "Component 2 of kpoints on which the eigenvalues were evaluated of scaled ZORA" ],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin_zora",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_kpoint3",
       "meta_type": "type-value",
@@ -869,14 +1178,20 @@
         "Component 3 of kpoints on which the eigenvalues were evaluated" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_kpoint3_zora",
       "meta_type": "type-value",
       "meta_description": [
         "Component 3 of kpoints on which the eigenvalues were evaluated of scaled ZORA" ],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin_zora",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_ks_exchangecorrelation",
       "meta_type": "type-value",
@@ -885,7 +1200,10 @@
         "GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_ks_groundstate",
       "meta_type": "type-value",
@@ -893,7 +1211,10 @@
         "KS ground state energy at a given eigenstate needed in perturbative GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_occupation",
       "meta_type": "type-value",
@@ -901,7 +1222,10 @@
         "Occupation of single eigenfunction" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_occupation_perturbativegw",
       "meta_type": "type-value",
@@ -909,14 +1233,20 @@
         "Occupation of single eigenfunction of perturbative GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_occupation_zora",
       "meta_type": "type-value",
       "meta_description": [
         "Occupation of single eigenfunction of scaled ZORA" ],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_zora",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_eigenvalue_quasiparticle_energy",
       "meta_type": "type-value",
@@ -924,7 +1254,10 @@
         "Quasiparticle energy at a given eigenstate from perturbative GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_energy_c_lda",
       "meta_type": "type-value",
@@ -933,7 +1266,10 @@
         "functional." ],
       "meta_abstract_types": ["energy_type_c"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_energy_electrostatic_free_atom_scf_iteration",
       "meta_type": "type-value",
@@ -941,7 +1277,10 @@
         "Electrostatic energy contributions from superposition of free atom densities during the scf iterations" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_energy_scgw_correlation_energy",
       "meta_type": "type-value",
@@ -949,7 +1288,10 @@
         "scGW correlation energy at each iteration" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_energy_x_lda",
       "meta_type": "type-value",
@@ -958,105 +1300,150 @@
         "functional." ],
       "meta_abstract_types": ["energy_type_x"],
       "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_free_atom_volume",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_vdw_ts",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_labels",
       "meta_type": "type-value",
       "meta_description": [
         "labels of atom" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_positions_x",
       "meta_type": "type-value",
       "meta_description": [
         "x component of atomic position" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_positions_y",
       "meta_type": "type-value",
       "meta_description": [
         "y component of atomic position" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_positions_z",
       "meta_type": "type-value",
       "meta_description": [
         "z component of atomic position" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_velocity_x",
       "meta_type": "type-value",
       "meta_description": [
         "x component of atomic velocity" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_velocity_y",
       "meta_type": "type-value",
       "meta_description": [
         "y component of atomic velocity" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_atom_velocity_z",
       "meta_type": "type-value",
       "meta_description": [
         "z component of atomic velocity" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_lattice_vector_x",
       "meta_type": "type-value",
       "meta_description": [
         "x component of lattice vector" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_lattice_vector_y",
       "meta_type": "type-value",
       "meta_description": [
         "y component of lattice vector" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_lattice_vector_z",
       "meta_type": "type-value",
       "meta_description": [
         "z component of lattice vector" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_geometry_optimization_converged",
       "meta_type": "type-value",
       "meta_description": [
         "Determines whether a geoemtry optimization is converged." ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_hirschfeld_charge",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_vdw_ts",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_hirschfeld_volume",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_vdw_ts",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_n_dos_values",
       "meta_type": "type-dimension",
@@ -1069,21 +1456,30 @@
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_parallel_task_host",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_parallel_task_assignement",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_parallel_task_nr",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_parallel_task_assignement",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_poles_fit_accuracy",
       "meta_type": "type-value",
@@ -1091,35 +1487,50 @@
         "Fit acccuracy for the Fast-Fourier Transforms necessary in the scGW formalism" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_program_compilation_date",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_program_compilation_time",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_program_execution_date",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_program_execution_time",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_scf_date_start",
       "meta_type": "type-value",
@@ -1127,7 +1538,10 @@
         "-" ],
       "meta_abstract_types": ["scf_info", "time_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_scf_time_start",
       "meta_type": "type-value",
@@ -1135,7 +1549,10 @@
         "-" ],
       "meta_abstract_types": ["scf_info", "time_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_scgw_galitskii_migdal_total_energy",
       "meta_type": "type-value",
@@ -1143,7 +1560,10 @@
         "scGW total energy at each iteration calculated using the Galitskii-Migdal formula" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_scgw_hartree_energy_sum_eigenvalues_scf_iteration",
       "meta_type": "type-value",
@@ -1151,7 +1571,10 @@
         "scGW sum of eigenvalues calculated from the trace over the Hamiltonian times the Greens function matrices" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_scgw_kinetic_energy",
       "meta_type": "type-value",
@@ -1159,7 +1582,10 @@
         "scGW kinetic energy at each iteration" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_scgw_rpa_correlation_energy",
       "meta_type": "type-value",
@@ -1167,33 +1593,44 @@
         "The RPA correlation energy calculated from the Green's functions of the scGW at each iteration" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_section_controlin_basis_func",
       "meta_type": "type-section",
       "meta_description": [
         "definition of a single basis function in the basis set" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
-      "meta_parent_section": "x_fhi_aims_section_controlin_basis_set"
+      "meta_parent_section": "x_fhi_aims_section_controlin_basis_set",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_controlin_basis_set",
       "meta_type": "type-section",
       "meta_description": [
         "-" ],
       "meta_abstract_types": ["x_fhi_aims_controlin_method"],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_controlinout_atom_species",
       "meta_type": "type-section",
       "meta_description": [
         "-" ],
-      "meta_parent_section": "section_atom_type"
+      "meta_parent_section": "section_atom_type",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_controlinout_basis_func",
       "meta_type": "type-section",
       "meta_description": [
         "-" ],
-      "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species"
+      "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_dos",
       "meta_type": "type-section",
@@ -1201,95 +1638,125 @@
         "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we ",
         "have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if ",
         "section_run is closed. Therefore, this section belongs to section_run." ],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_group",
       "meta_type": "type-section",
       "meta_description": [
         "section for full list of eigenvalues for different spin and kpoints" ],
       "meta_abstract_types": ["scf_info"],
-      "meta_parent_section": "section_scf_iteration"
+      "meta_parent_section": "section_scf_iteration",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_group_perturbativegw",
       "meta_type": "type-section",
       "meta_description": [
         "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation" ],
-      "meta_parent_section": "section_single_configuration_calculation"
+      "meta_parent_section": "section_single_configuration_calculation",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_group_zora",
       "meta_type": "type-section",
       "meta_description": [
         "section for full list of eigenvalues for different spin and kpoints of scaled ZORA" ],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_zora"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_zora",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_list",
       "meta_type": "type-section",
       "meta_description": [
         "section for one list of eigenvalues at specific kpoint and spin" ],
       "meta_abstract_types": ["scf_info"],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
       "meta_type": "type-section",
       "meta_description": [
         "section for one list of eigenvalues from a perturbative GW calculation" ],
       "meta_abstract_types": ["scf_info"],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_list_zora",
       "meta_type": "type-section",
       "meta_description": [
         "section for one list of eigenvalues at specific kpoint and spin of scaled ZORA" ],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin_zora"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_spin_zora",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_spin",
       "meta_type": "type-section",
       "meta_description": [
         "section for one spin orientation" ],
       "meta_abstract_types": ["scf_info"],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_group"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_group",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_spin_perturbativegw",
       "meta_type": "type-section",
       "meta_description": [
         "section for one spin orientation from a perturbative GW calculation" ],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_group_perturbativegw"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_group_perturbativegw",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_spin_zora",
       "meta_type": "type-section",
       "meta_description": [
         "section for one spin orientation of scaled ZORA" ],
-      "meta_parent_section": "x_fhi_aims_section_eigenvalues_group_zora"
+      "meta_parent_section": "x_fhi_aims_section_eigenvalues_group_zora",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_eigenvalues_zora",
       "meta_type": "type-section",
       "meta_description": [
         "section for gathering eigenvalues of scaled ZORA" ],
-      "meta_parent_section": "section_single_configuration_calculation"
+      "meta_parent_section": "section_single_configuration_calculation",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_md_detect",
       "meta_type": "type-section",
       "meta_description": [
         " Section to detect MD immediately during parsing of controlInOut" ],
-      "meta_parent_section": "section_method"
+      "meta_parent_section": "section_method",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_parallel_task_assignement",
       "meta_type": "type-section",
       "meta_description": [
         "-" ],
-      "meta_parent_section": "x_fhi_aims_section_parallel_tasks"
+      "meta_parent_section": "x_fhi_aims_section_parallel_tasks",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_parallel_tasks",
       "meta_type": "type-section",
       "meta_description": [
         "-" ],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_section_vdw_ts",
       "meta_type": "type-section",
       "meta_description": [
         "-" ],
-      "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species"
+      "meta_parent_section": "x_fhi_aims_section_controlinout_atom_species",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_fhi_aims_single_configuration_calculation_converged",
       "meta_type": "type-value",
@@ -1297,7 +1764,10 @@
         "Determines whether a single configuration calculation is converged." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_single_particle_energy",
       "meta_type": "type-value",
@@ -1305,27 +1775,39 @@
         "scGW single particle energy at each iteration" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_species_projected_dos_file",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_species_projected_dos",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_species_projected_dos_species_label",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "section_species_projected_dos",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_fhi_aims_vdw_energy_corr_ts",
       "meta_type": "type-value",
       "meta_description": [
         "-" ],
       "meta_parent_section": "x_fhi_aims_section_vdw_ts",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

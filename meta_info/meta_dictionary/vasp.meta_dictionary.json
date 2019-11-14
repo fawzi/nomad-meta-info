@@ -13,7 +13,10 @@
         "build date as string" ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "vasp_src_date",
       "meta_type": "type-value",
@@ -21,14 +24,20 @@
         "date of last modification of the source as string" ],
       "meta_abstract_types": ["program_info"],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_atom_kind_refs",
       "meta_type": "type-value",
       "meta_description": [
         "reference to the atom kinds of each atom" ],
       "meta_parent_section": "section_method",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_algo",
       "meta_type": "type-value",
@@ -37,7 +46,10 @@
         "Nothing | Exact | Diag. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_amix",
       "meta_type": "type-value",
@@ -45,7 +57,10 @@
         "mixing amount. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_apaco",
       "meta_type": "type-value",
@@ -53,7 +68,10 @@
         "maximum distance for pair correlation function. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_bmix",
       "meta_type": "type-value",
@@ -61,7 +79,10 @@
         "tags for mixing. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_deper",
       "meta_type": "type-value",
@@ -69,7 +90,10 @@
         "relative energy change error. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_dipol",
       "meta_type": "type-value",
@@ -77,7 +101,10 @@
         "center of cell for dipol. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ebreak",
       "meta_type": "type-value",
@@ -85,7 +112,10 @@
         "fine tuning of diagonalization accuracy (EDIFF/N-BANDS/4). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ediff",
       "meta_type": "type-value",
@@ -93,7 +123,10 @@
         "stopping-criterion for electronic upd. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ediffg",
       "meta_type": "type-value",
@@ -101,7 +134,10 @@
         "stopping-criterion for ionic upd. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_emin",
       "meta_type": "type-value",
@@ -109,7 +145,10 @@
         "EMAX energy-range for DOSCAR file. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_encut",
       "meta_type": "type-value",
@@ -117,7 +156,10 @@
         "energy cutoff in eV. Value stored in incar." ],
       "meta_abstract_types": ["settings_numerical_parameter", "x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_enmax",
       "meta_type": "type-value",
@@ -125,7 +167,10 @@
         "Maximum cutoff (normally specified only in POTCAR). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_gga",
       "meta_type": "type-value",
@@ -135,7 +180,10 @@
         "incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ialgo",
       "meta_type": "type-value",
@@ -143,7 +191,10 @@
         "algorithm: use only 8 (CG) or 48 (RMM DIIS). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ibrion",
       "meta_type": "type-value",
@@ -151,7 +202,10 @@
         "ionic relaxation: 0-MD 1-quasi-New 2-CG. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_icharg",
       "meta_type": "type-value",
@@ -159,7 +213,10 @@
         "charge: 1-file 2-atom 10-const. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_iniwav",
       "meta_type": "type-value",
@@ -167,7 +224,10 @@
         "initial electr wf. : 0-lowe 1-rand. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_isif",
       "meta_type": "type-value",
@@ -175,7 +235,10 @@
         "calculate stress and what to relax. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ismear",
       "meta_type": "type-value",
@@ -183,7 +246,10 @@
         "part. occupancies: -5 Bloechl -4-tet -1-fermi 0-gaus >0 MP. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ispin",
       "meta_type": "type-value",
@@ -191,7 +257,10 @@
         "spin polarized calculation (2-yes 1-no). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_istart",
       "meta_type": "type-value",
@@ -199,7 +268,10 @@
         "ISTART startjob: 0-new 1-cont 2-samecut. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_isym",
       "meta_type": "type-value",
@@ -207,7 +279,10 @@
         "symmetry: 0-nonsym 1-usesym. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_iwavpr",
       "meta_type": "type-value",
@@ -215,7 +290,10 @@
         "prediction of wf.: 0-non 1-charg 2-wave 3-comb. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_kblock",
       "meta_type": "type-value",
@@ -223,7 +301,10 @@
         "outer block. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lasync",
       "meta_type": "type-value",
@@ -231,7 +312,10 @@
         "overlap communcation with calculations. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lcharg",
       "meta_type": "type-value",
@@ -239,7 +323,10 @@
         "create CHGCAR. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lcorr",
       "meta_type": "type-value",
@@ -247,7 +334,10 @@
         "Harris-correction to forces. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ldau",
       "meta_type": "type-value",
@@ -255,7 +345,10 @@
         "Switches on the L(S)DA+U approach. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lelf",
       "meta_type": "type-value",
@@ -263,7 +356,10 @@
         "create ELFCAR. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lorbit",
       "meta_type": "type-value",
@@ -271,7 +367,10 @@
         "create PROOUT. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lplane",
       "meta_type": "type-value",
@@ -279,7 +378,10 @@
         "if data distribution in real space is done plane wise. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lreal",
       "meta_type": "type-value",
@@ -287,7 +389,10 @@
         "non-local projectors in real space. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lscalapack",
       "meta_type": "type-value",
@@ -295,7 +400,10 @@
         "switch off scaLAPACK. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lscalu",
       "meta_type": "type-value",
@@ -303,7 +411,10 @@
         "switch off LU decomposition. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lvhar",
       "meta_type": "type-value",
@@ -314,7 +425,10 @@
         "stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lvtot",
       "meta_type": "type-value",
@@ -322,7 +436,10 @@
         "create LOCPOT. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_lwave",
       "meta_type": "type-value",
@@ -330,7 +447,10 @@
         "create WAVECAR. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_magmom",
       "meta_type": "type-value",
@@ -338,7 +458,10 @@
         "initial magnetic moments. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nbands",
       "meta_type": "type-value",
@@ -346,7 +469,10 @@
         "Number of bands included in the calculation. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nblk",
       "meta_type": "type-value",
@@ -354,7 +480,10 @@
         "Blocking for some BLAS calls. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nblock",
       "meta_type": "type-value",
@@ -362,7 +491,10 @@
         "inner block. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nelect",
       "meta_type": "type-value",
@@ -370,7 +502,10 @@
         "total number of electrons. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nelm",
       "meta_type": "type-value",
@@ -378,7 +513,10 @@
         "max nr. of electronic steps. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nelmdl",
       "meta_type": "type-value",
@@ -386,7 +524,10 @@
         "number of non self consistent electronic steps. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nelmin",
       "meta_type": "type-value",
@@ -394,7 +535,10 @@
         "min nr. of electronic steps. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ngx",
       "meta_type": "type-value",
@@ -402,7 +546,10 @@
         "Number of points of the FFT mesh for the orbitals along the first lattice vector. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ngxf",
       "meta_type": "type-value",
@@ -410,7 +557,10 @@
         "Number of points of the FFT mesh for the charges along the first lattice vector. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ngy",
       "meta_type": "type-value",
@@ -418,7 +568,10 @@
         "Number of points of the FFT mesh for the orbitals along the second lattice vector. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ngyf",
       "meta_type": "type-value",
@@ -426,7 +579,10 @@
         "Number of points of the FFT mesh for the charges along the second lattice vector. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ngz",
       "meta_type": "type-value",
@@ -434,7 +590,10 @@
         "Number of points of the FFT mesh for the orbitals along the third lattice vector. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ngzf",
       "meta_type": "type-value",
@@ -442,7 +601,10 @@
         "Number of points of the FFT mesh for the charges along the third lattice vector. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_npaco",
       "meta_type": "type-value",
@@ -450,7 +612,10 @@
         "number of slots in pair correlation function. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_npar",
       "meta_type": "type-value",
@@ -458,7 +623,10 @@
         "parallelization over bands. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nsim",
       "meta_type": "type-value",
@@ -466,7 +634,10 @@
         "number of bands are optimized at the same time with RMM-DIIS (IALGO=48). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nsw",
       "meta_type": "type-value",
@@ -474,7 +645,10 @@
         "number of steps for ionic upd. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nupdown",
       "meta_type": "type-value",
@@ -482,7 +656,10 @@
         "fix spin moment to specified value. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_nwrite",
       "meta_type": "type-value",
@@ -490,15 +667,15 @@
         "verbosity (how much information is written by vasp). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_param",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Incar parameters. Value stored in incar." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Incar parameters. Value stored in incar." ]
     }, {
       "meta_name": "x_vasp_incar_pomass",
       "meta_type": "type-value",
@@ -506,7 +683,10 @@
         "mass of ions in am. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_potim",
       "meta_type": "type-value",
@@ -514,7 +694,10 @@
         "time-step for ion-motion (fs). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_prec",
       "meta_type": "type-value",
@@ -522,7 +705,10 @@
         "precision: medium, high or low, normal, accurate. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_ropt",
       "meta_type": "type-value",
@@ -530,7 +716,10 @@
         "determines how precise the projectors are represented in real space. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_rwigs",
       "meta_type": "type-value",
@@ -538,7 +727,10 @@
         "Wigner-Seitz radius for each atom type. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_sigma",
       "meta_type": "type-value",
@@ -546,7 +738,10 @@
         "broadening in eV -4-tet -1-fermi 0-gaus. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_smass",
       "meta_type": "type-value",
@@ -554,7 +749,10 @@
         "Nose mass-parameter (am). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_symprec",
       "meta_type": "type-value",
@@ -562,7 +760,10 @@
         "precision in symmetry routines. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_system",
       "meta_type": "type-value",
@@ -570,7 +771,10 @@
         "Name for the system (user given denomination). Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_tebeg",
       "meta_type": "type-value",
@@ -578,7 +782,10 @@
         "temperature at the start of the run. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_teend",
       "meta_type": "type-value",
@@ -586,7 +793,10 @@
         "temperature at the end of the run. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_time",
       "meta_type": "type-value",
@@ -594,7 +804,10 @@
         "trial time step size during steepest descent phase. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_voskown",
       "meta_type": "type-value",
@@ -602,7 +815,10 @@
         "use Vosko, Wilk, Nusair interpolation. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_weimin",
       "meta_type": "type-value",
@@ -611,7 +827,10 @@
         "in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incar_zval",
       "meta_type": "type-value",
@@ -619,7 +838,10 @@
         "ionic valence. Value stored in incar." ],
       "meta_abstract_types": ["x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_algo",
       "meta_type": "type-value",
@@ -628,7 +850,10 @@
         "Nothing | Exact | Diag. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_amix",
       "meta_type": "type-value",
@@ -636,7 +861,10 @@
         "mixing amount. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_apaco",
       "meta_type": "type-value",
@@ -644,7 +872,10 @@
         "maximum distance for pair correlation function. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_bmix",
       "meta_type": "type-value",
@@ -652,7 +883,10 @@
         "tags for mixing. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_deper",
       "meta_type": "type-value",
@@ -660,7 +894,10 @@
         "relative energy change error. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_dipol",
       "meta_type": "type-value",
@@ -668,7 +905,10 @@
         "center of cell for dipol. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ebreak",
       "meta_type": "type-value",
@@ -676,7 +916,10 @@
         "fine tuning of diagonalization accuracy (EDIFF/N-BANDS/4). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ediff",
       "meta_type": "type-value",
@@ -684,7 +927,10 @@
         "stopping-criterion for electronic upd. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ediffg",
       "meta_type": "type-value",
@@ -692,7 +938,10 @@
         "stopping-criterion for ionic upd. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_emin",
       "meta_type": "type-value",
@@ -700,7 +949,10 @@
         "EMAX energy-range for DOSCAR file. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_encut",
       "meta_type": "type-value",
@@ -708,7 +960,10 @@
         "energy cutoff in eV. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_enmax",
       "meta_type": "type-value",
@@ -716,7 +971,10 @@
         "Maximum cutoff (normally specified only in POTCAR). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_gga",
       "meta_type": "type-value",
@@ -726,7 +984,10 @@
         "after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ialgo",
       "meta_type": "type-value",
@@ -734,7 +995,10 @@
         "algorithm: use only 8 (CG) or 48 (RMM DIIS). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ibrion",
       "meta_type": "type-value",
@@ -742,7 +1006,10 @@
         "ionic relaxation: 0-MD 1-quasi-New 2-CG. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_icharg",
       "meta_type": "type-value",
@@ -750,7 +1017,10 @@
         "charge: 1-file 2-atom 10-const. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_iniwav",
       "meta_type": "type-value",
@@ -758,7 +1028,10 @@
         "initial electr wf. : 0-lowe 1-rand. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_isif",
       "meta_type": "type-value",
@@ -766,7 +1039,10 @@
         "calculate stress and what to relax. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ismear",
       "meta_type": "type-value",
@@ -774,7 +1050,10 @@
         "part. occupancies: -5 Bloechl -4-tet -1-fermi 0-gaus >0 MP. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ispin",
       "meta_type": "type-value",
@@ -782,7 +1061,10 @@
         "spin polarized calculation (2-yes 1-no). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_istart",
       "meta_type": "type-value",
@@ -790,7 +1072,10 @@
         "ISTART startjob: 0-new 1-cont 2-samecut. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_isym",
       "meta_type": "type-value",
@@ -798,7 +1083,10 @@
         "symmetry: 0-nonsym 1-usesym. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_iwavpr",
       "meta_type": "type-value",
@@ -806,7 +1094,10 @@
         "prediction of wf.: 0-non 1-charg 2-wave 3-comb. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_kblock",
       "meta_type": "type-value",
@@ -814,7 +1105,10 @@
         "outer block. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lasync",
       "meta_type": "type-value",
@@ -822,7 +1116,10 @@
         "overlap communcation with calculations. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lcharg",
       "meta_type": "type-value",
@@ -830,7 +1127,10 @@
         "create CHGCAR. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lcorr",
       "meta_type": "type-value",
@@ -838,7 +1138,10 @@
         "Harris-correction to forces. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ldau",
       "meta_type": "type-value",
@@ -846,7 +1149,10 @@
         "Switches on the L(S)DA+U approach. Value printed out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lelf",
       "meta_type": "type-value",
@@ -854,7 +1160,10 @@
         "create ELFCAR. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lorbit",
       "meta_type": "type-value",
@@ -862,7 +1171,10 @@
         "create PROOUT. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lplane",
       "meta_type": "type-value",
@@ -870,7 +1182,10 @@
         "if data distribution in real space is done plane wise. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lreal",
       "meta_type": "type-value",
@@ -878,7 +1193,10 @@
         "non-local projectors in real space. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lscalapack",
       "meta_type": "type-value",
@@ -886,7 +1204,10 @@
         "switch off scaLAPACK. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lscalu",
       "meta_type": "type-value",
@@ -894,7 +1215,10 @@
         "switch off LU decomposition. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lvhar",
       "meta_type": "type-value",
@@ -905,7 +1229,10 @@
         "prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lvtot",
       "meta_type": "type-value",
@@ -913,7 +1240,10 @@
         "create LOCPOT. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_lwave",
       "meta_type": "type-value",
@@ -921,7 +1251,10 @@
         "create WAVECAR. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_magmom",
       "meta_type": "type-value",
@@ -929,7 +1262,10 @@
         "initial magnetic moments. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nbands",
       "meta_type": "type-value",
@@ -937,7 +1273,10 @@
         "Number of bands included in the calculation. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nblk",
       "meta_type": "type-value",
@@ -945,7 +1284,10 @@
         "Blocking for some BLAS calls. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nblock",
       "meta_type": "type-value",
@@ -953,7 +1295,10 @@
         "inner block. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nelect",
       "meta_type": "type-value",
@@ -961,7 +1306,10 @@
         "total number of electrons. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nelm",
       "meta_type": "type-value",
@@ -969,7 +1317,10 @@
         "max nr. of electronic steps. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nelmdl",
       "meta_type": "type-value",
@@ -977,7 +1328,10 @@
         "number of non self consistent electronic steps. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nelmin",
       "meta_type": "type-value",
@@ -985,7 +1339,10 @@
         "min nr. of electronic steps. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ngx",
       "meta_type": "type-value",
@@ -994,7 +1351,10 @@
         "evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ngxf",
       "meta_type": "type-value",
@@ -1003,7 +1363,10 @@
         "evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ngy",
       "meta_type": "type-value",
@@ -1012,7 +1375,10 @@
         "evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ngyf",
       "meta_type": "type-value",
@@ -1021,7 +1387,10 @@
         "evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ngz",
       "meta_type": "type-value",
@@ -1030,7 +1399,10 @@
         "evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ngzf",
       "meta_type": "type-value",
@@ -1039,7 +1411,10 @@
         "evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_npaco",
       "meta_type": "type-value",
@@ -1047,7 +1422,10 @@
         "number of slots in pair correlation function. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_npar",
       "meta_type": "type-value",
@@ -1055,7 +1433,10 @@
         "parallelization over bands. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nsim",
       "meta_type": "type-value",
@@ -1064,7 +1445,10 @@
         "input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nsw",
       "meta_type": "type-value",
@@ -1072,7 +1456,10 @@
         "number of steps for ionic upd. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nupdown",
       "meta_type": "type-value",
@@ -1080,7 +1467,10 @@
         "fix spin moment to specified value. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_nwrite",
       "meta_type": "type-value",
@@ -1088,15 +1478,15 @@
         "verbosity (how much information is written by vasp). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_param",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Incar parameters. Value prinded out after evaluating the input." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Incar parameters. Value prinded out after evaluating the input." ]
     }, {
       "meta_name": "x_vasp_incarout_pomass",
       "meta_type": "type-value",
@@ -1104,7 +1494,10 @@
         "mass of ions in am. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_potim",
       "meta_type": "type-value",
@@ -1112,7 +1505,10 @@
         "time-step for ion-motion (fs). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_prec",
       "meta_type": "type-value",
@@ -1120,7 +1516,10 @@
         "precision: medium, high or low, normal, accurate. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_ropt",
       "meta_type": "type-value",
@@ -1128,7 +1527,10 @@
         "determines how precise the projectors are represented in real space. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "boolean"
+      "meta_data_type": "boolean",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_rwigs",
       "meta_type": "type-value",
@@ -1136,7 +1538,10 @@
         "Wigner-Seitz radius for each atom type. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_sigma",
       "meta_type": "type-value",
@@ -1144,7 +1549,10 @@
         "broadening in eV -4-tet -1-fermi 0-gaus. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_smass",
       "meta_type": "type-value",
@@ -1152,7 +1560,10 @@
         "Nose mass-parameter (am). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_symprec",
       "meta_type": "type-value",
@@ -1160,7 +1571,10 @@
         "precision in symmetry routines. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_system",
       "meta_type": "type-value",
@@ -1168,7 +1582,10 @@
         "Name for the system (user given denomination). Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_tebeg",
       "meta_type": "type-value",
@@ -1176,7 +1593,10 @@
         "temperature at the start of the run. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_teend",
       "meta_type": "type-value",
@@ -1184,7 +1604,10 @@
         "temperature at the end of the run. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_time",
       "meta_type": "type-value",
@@ -1192,7 +1615,10 @@
         "trial time step size during steepest descent phase. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_voskown",
       "meta_type": "type-value",
@@ -1200,7 +1626,10 @@
         "use Vosko, Wilk, Nusair interpolation. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_weimin",
       "meta_type": "type-value",
@@ -1209,7 +1638,10 @@
         "out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_incarout_zval",
       "meta_type": "type-value",
@@ -1217,7 +1649,10 @@
         "ionic valence. Value prinded out after evaluating the input." ],
       "meta_abstract_types": ["x_vasp_incarout_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_k_points_generation_method",
       "meta_type": "type-value",
@@ -1225,7 +1660,10 @@
         "k points generation  method" ],
       "meta_abstract_types": ["settings_k_points", "x_vasp_incar_param"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_vasp_numer_of_magmom",
       "meta_type": "type-dimension",

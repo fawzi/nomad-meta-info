@@ -1,0 +1,189 @@
+{
+  "metadict_name": "meta_schema",
+  "metadict_description": [
+    "dictionary augmeting the meta information with schema information" ],
+  "metadict_version": "2.0.0",
+  "metadict_require": [ {
+      "metadict_required_name": "meta"
+    } ],
+  "meta_info_entry": [ {
+      "meta_name": "meta_abstract",
+      "meta_type": "type-section",
+      "meta_description": [
+        "Information and extra information on the meta_info_entry with meta_type type-abstract that is stored in the ",
+        "section, and generated for the meta_schema generated for meta_schema_main_dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_schema",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_contains": ["meta_info_entry"]
+    }, {
+      "meta_name": "meta_dimension_value",
+      "meta_type": "type-section",
+      "meta_description": [
+        "Information and extra information on the meta_info_entry with meta_type type-value stored in the meta_info_entry ",
+        "in this section, and generated for the meta_ schema derived from meta_schema_main_dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_section",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_contains": ["meta_info_entry"]
+    }, {
+      "meta_name": "meta_instantiated_at",
+      "meta_type": "type-value",
+      "meta_description": [
+        "Dot separated path up to the current section (included) of the points this section has been instantiated at.\n",
+        "This is an extra information generated for a schema derived from a dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_section",
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_path",
+      "meta_type": "type-value",
+      "meta_description": [
+        "Dot separated path from the main root section (reached through meta_parent_section) up to the current section (",
+        "included).\n",
+        "If the root section is a partial section that can be injected its full paths can be recovered using ",
+        "meta_injected_at of the root section.\n",
+        "This is an extra information generated for a schema derived from a dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_info_entry",
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_schema",
+      "meta_type": "type-section",
+      "meta_description": [
+        "Describes the schema derived from the dictionary meta_schema_main_dictionary and all its dpenendencies." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": null,
+      "meta_repeats": true,
+      "meta_required": false
+    }, {
+      "meta_name": "meta_schema_included_dictionary",
+      "meta_type": "type-value",
+      "meta_description": [
+        "metadict_name of a dictionary included in the schema: meta_schema_main_dictionary and all its dependencies." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_schema",
+      "meta_data_type": "string",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_schema_info",
+      "meta_type": "type-abstract",
+      "meta_description": [
+        "Information related to a schema genetated from a meta_dictionary and its dependencies." ],
+      "meta_abstract_types": ["meta_schema_info"]
+    }, {
+      "meta_name": "meta_schema_main_dictionary",
+      "meta_type": "type-value",
+      "meta_description": [
+        "metadict_name of the dictionary for which the schema (and its extra information) was generated." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_schema",
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": true,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_section",
+      "meta_type": "type-section",
+      "meta_description": [
+        "Information and extra information on a meta_info_entry with meta_type type-section stored in the meta_info_entry ",
+        "in this section, and generated for a schema derived from a dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_schema",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_contains": ["meta_info_entry"]
+    }, {
+      "meta_name": "meta_source_dictionary",
+      "meta_type": "type-value",
+      "meta_description": [
+        "Dictionary this meta_info_entry was defined in.\n" ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_info_entry",
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_sub_section_name",
+      "meta_type": "type-value",
+      "meta_description": [
+        "meta_name of the direct subsections of this section.\n",
+        "This is an extra information generated for the meta_schema derived from meta_schema_main_dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_section",
+      "meta_data_type": "string",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_used_in_abstract_types",
+      "meta_type": "type-value",
+      "meta_description": [
+        "meta_name of the abstract types (meta_type=type-abstract) where this meta_info_entry is used.\n",
+        "I.e. the abstract types that have this abstract type.\n",
+        "\n",
+        "This is extra information generated for the meta_schema derived for meta_schema_main_dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_abstract",
+      "meta_data_type": "string",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_used_in_dimensions",
+      "meta_type": "type-value",
+      "meta_description": [
+        "meta_parent_section.meta_name of the dimensions (meta_type=type-dimension) where this meta_info_entry is used.\n",
+        "I.e. the dimensions that have this abstract type.\n",
+        "\n",
+        "This is extra information generated for the meta_schema derived for meta_schema_main_dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_abstract",
+      "meta_data_type": "string",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_used_in_sections",
+      "meta_type": "type-value",
+      "meta_description": [
+        "meta_name of the sections (meta_type=type-section) where this meta_info_entry is used.\n",
+        "I.e the sections that have this abstract type.\n",
+        "\n",
+        "This is an extra information generated for a schema derived from a dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_abstract",
+      "meta_data_type": "string",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    }, {
+      "meta_name": "meta_used_in_values",
+      "meta_type": "type-value",
+      "meta_description": [
+        "meta_parent_section.meta_name of the values (meta_type=type-value) where this meta_info_entry is used.\n",
+        "The kind of use depends on the current meta_type:\n",
+        "* type-section: refer to the values directly contained in this section, those that have this section as ",
+        "meta_parent_section.\n",
+        "* type-abstract: the values that have this abstract type.\n",
+        "\n",
+        "This is an extra information generated for a schema derived from a dictionary." ],
+      "meta_abstract_types": ["meta_schema_info"],
+      "meta_parent_section": "meta_abstract",
+      "meta_data_type": "string",
+      "meta_repeats": true,
+      "meta_required": false,
+      "meta_dimension": [  ]
+    } ]
+}

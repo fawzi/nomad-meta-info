@@ -12,35 +12,50 @@
       "meta_description": [
         "PBC image flag index." ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_atom_positions_scaled",
       "meta_type": "type-value",
       "meta_description": [
         "Position of the atoms in a scaled format [0, 1]." ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_atom_positions_wrapped",
       "meta_type": "type-value",
       "meta_description": [
         "Position of the atoms wrapped back to the periodic box." ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_atom_type_element",
       "meta_type": "type-value",
       "meta_description": [
         "Element symbol of an atom type." ],
       "meta_parent_section": "section_atom_type",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_atom_type_radius",
       "meta_type": "type-value",
       "meta_description": [
         "van der Waals radius of an atom type." ],
       "meta_parent_section": "section_atom_type",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_barostat_target_pressure",
       "meta_type": "type-value",
@@ -48,7 +63,10 @@
         "MD barostat target pressure." ],
       "meta_abstract_types": ["settings_barostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_barostat_tau",
       "meta_type": "type-value",
@@ -56,7 +74,10 @@
         "MD barostat relaxation time." ],
       "meta_abstract_types": ["settings_barostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_barostat_type",
       "meta_type": "type-value",
@@ -64,98 +85,140 @@
         "MD barostat type, valid values are defined in the barostat_type wiki page." ],
       "meta_abstract_types": ["settings_barostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_angle_count_store",
       "meta_type": "type-value",
       "meta_description": [
         "store temporarly" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_angle_list_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_angles_store",
       "meta_type": "type-value",
       "meta_description": [
         "store temporarly" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_atom_types_store",
       "meta_type": "type-value",
       "meta_description": [
         "store temporarly" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_bond_count_store",
       "meta_type": "type-value",
       "meta_description": [
         "store temporarly" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_bond_list_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_bond_types_store",
       "meta_type": "type-value",
       "meta_description": [
         "store temporarly" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_dihedral_coeff_list_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_dihedral_count_store",
       "meta_type": "type-value",
       "meta_description": [
         "store temporarly" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_dihedral_list_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_file_store",
       "meta_type": "type-value",
       "meta_description": [
         "Filename of data file" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_data_topo_list_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_dummy",
       "meta_type": "type-value",
       "meta_description": [
         "dummy" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_input_units_store",
       "meta_type": "type-value",
@@ -163,7 +226,10 @@
         "It determines the units of all quantities specified in the input script and data file, as well as quantities ",
         "output to the screen, log file, and dump files." ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_integrator_dt",
       "meta_type": "type-value",
@@ -171,7 +237,10 @@
         "MD integration time step." ],
       "meta_abstract_types": ["settings_integrator"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_integrator_type",
       "meta_type": "type-value",
@@ -179,7 +248,10 @@
         "MD integrator type, valid values are defined in the integrator_type wiki page." ],
       "meta_abstract_types": ["settings_integrator"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_interaction_atom_to_atom_type_ref",
       "meta_type": "type-value",
@@ -187,7 +259,10 @@
         "Reference to the atom type of each interaction atoms." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_interaction",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_langevin_gamma",
       "meta_type": "type-value",
@@ -195,77 +270,77 @@
         "Langevin thermostat damping factor." ],
       "meta_abstract_types": ["settings_thermostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_masses_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_topology",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_mdin_finline",
       "meta_type": "type-value",
       "meta_description": [
         "finline in mdin" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_mdin_header",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_mdin_method",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Parameters of mdin belonging to section method." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Parameters of mdin belonging to section method." ]
     }, {
       "meta_name": "x_amber_mdin_run",
       "meta_type": "type-abstract",
       "meta_description": [
         "Parameters of mdin belonging to settings run." ],
-      "meta_abstract_types": ["settings_run"],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+      "meta_abstract_types": ["settings_run"]
     }, {
       "meta_name": "x_amber_mdin_wt",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_mdout_method",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Parameters of mdin belonging to section method." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Parameters of mdin belonging to section method." ]
     }, {
       "meta_name": "x_amber_mdout_run",
       "meta_type": "type-abstract",
       "meta_description": [
         "Parameters of mdin belonging to settings run." ],
-      "meta_abstract_types": ["settings_run"],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+      "meta_abstract_types": ["settings_run"]
     }, {
       "meta_name": "x_amber_mdout_single_configuration_calculation",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Parameters of mdout belonging to section_single_configuration_calculation." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Parameters of mdout belonging to section_single_configuration_calculation." ]
     }, {
       "meta_name": "x_amber_molecule_interaction_atom_to_atom_type_ref",
       "meta_type": "type-value",
@@ -273,7 +348,10 @@
         "Reference to the atom type of each molecule interaction atoms." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_molecule_interaction",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_number_of_defined_molecule_pair_interactions",
       "meta_type": "type-value",
@@ -281,7 +359,10 @@
         "Number of defined pair interactions within a molecule (L-J pairs)." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_molecule_interaction",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_number_of_defined_pair_interactions",
       "meta_type": "type-value",
@@ -289,7 +370,10 @@
         "Number of defined pair interactions (L-J pairs)." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_interaction",
-      "meta_data_type": "int"
+      "meta_data_type": "int",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_number_of_steps_requested",
       "meta_type": "type-value",
@@ -297,7 +381,10 @@
         "Number of requested MD integration time steps." ],
       "meta_abstract_types": ["settings_integrator"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_pair_interaction_atom_type_ref",
       "meta_type": "type-value",
@@ -305,7 +392,10 @@
         "Reference to the atom type for pair interactions." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_interaction",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_pair_interaction_parameters",
       "meta_type": "type-value",
@@ -313,7 +403,10 @@
         "Pair interactions parameters." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_interaction",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_pair_molecule_interaction_parameters",
       "meta_type": "type-value",
@@ -321,7 +414,10 @@
         "Molecule pair interactions parameters." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_molecule_interaction",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_pair_molecule_interaction_to_atom_type_ref",
       "meta_type": "type-value",
@@ -329,7 +425,10 @@
         "Reference to the atom type for pair interactions within a molecule." ],
       "meta_abstract_types": ["settings_interaction"],
       "meta_parent_section": "section_molecule_interaction",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_periodicity_type",
       "meta_type": "type-value",
@@ -337,68 +436,96 @@
         "Periodic boundary condition type in the sampling (non-PBC or PBC)." ],
       "meta_abstract_types": ["settings_integrator"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_execution_date",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_execution_host",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_execution_path",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_execution_time",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_module",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_version_date",
       "meta_type": "type-value",
       "meta_description": [
         "Program version date." ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_program_working_path",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_section_input_output_files",
       "meta_type": "type-section",
       "meta_description": [
         "Temperory variable to store input and output file keywords" ],
-      "meta_parent_section": "section_run"
+      "meta_parent_section": "section_run",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_amber_section_single_configuration_calculation",
       "meta_type": "type-section",
       "meta_description": [
         "section for gathering values for MD steps" ],
-      "meta_parent_section": "section_single_configuration_calculation"
+      "meta_parent_section": "section_single_configuration_calculation",
+      "meta_repeats": true,
+      "meta_required": false
     }, {
       "meta_name": "x_amber_thermostat_level",
       "meta_type": "type-value",
@@ -406,7 +533,10 @@
         "MD thermostat level (see wiki: single, multiple, regional)." ],
       "meta_abstract_types": ["settings_thermostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_thermostat_target_temperature",
       "meta_type": "type-value",
@@ -414,7 +544,10 @@
         "MD thermostat target temperature." ],
       "meta_abstract_types": ["settings_thermostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_thermostat_tau",
       "meta_type": "type-value",
@@ -422,7 +555,10 @@
         "MD thermostat relaxation time." ],
       "meta_abstract_types": ["settings_thermostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_thermostat_type",
       "meta_type": "type-value",
@@ -430,55 +566,79 @@
         "MD thermostat type, valid values are defined in the thermostat_type wiki page." ],
       "meta_abstract_types": ["settings_thermostat"],
       "meta_parent_section": "section_sampling_method",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_traj_atoms_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_traj_box_bound_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_traj_box_bounds_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_traj_number_of_atoms_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_traj_timestep_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_traj_variables_store",
       "meta_type": "type-value",
       "meta_description": [
         "tmp" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_amber_xlo_xhi",
       "meta_type": "type-value",
       "meta_description": [
         "test" ],
       "meta_parent_section": "section_run",
-      "meta_data_type": "string"
+      "meta_data_type": "string",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

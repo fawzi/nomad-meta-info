@@ -13,22 +13,25 @@
         "Amplitude of the atom diplacement for the phonopy supercell" ],
       "meta_abstract_types": ["x_phonopy_input"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_phonopy_input",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Information about properties that concern phonopy calculations." ],
-      "meta_parent_section": null,
-      "meta_repeats": true,
-      "meta_required": false
+        "Information about properties that concern phonopy calculations." ]
     }, {
       "meta_name": "x_phonopy_original_system_ref",
       "meta_type": "type-value",
       "meta_description": [
         "Original cell from which the supercell for the DFT calculations was constructed" ],
       "meta_parent_section": "section_system",
-      "meta_data_type": "reference"
+      "meta_data_type": "reference",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     }, {
       "meta_name": "x_phonopy_symprec",
       "meta_type": "type-value",
@@ -37,6 +40,9 @@
         "be calculated" ],
       "meta_abstract_types": ["x_phonopy_input"],
       "meta_parent_section": "section_method",
-      "meta_data_type": "float"
+      "meta_data_type": "float",
+      "meta_repeats": false,
+      "meta_required": false,
+      "meta_dimension": [  ]
     } ]
 }

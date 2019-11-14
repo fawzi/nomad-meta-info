@@ -12,5 +12,7 @@
     "energies and occupation for each eigenstate, at each $k$ point, segment, and spin channel are stored in ",
     "band_energies and band_occupations, respectively. The labels for the segment are specified in band_segm_labels." ],
   "meta_abstract_types": ["derived_quantity"],
-  "meta_parent_section": "section_k_band_normalized"
+  "meta_parent_section": "section_k_band_normalized",
+  "meta_repeats": true,
+  "meta_required": false
 }
