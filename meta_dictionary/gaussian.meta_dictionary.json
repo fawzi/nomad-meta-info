@@ -47,17 +47,6 @@
       "meta_required": false,
       "meta_dimension": [  ]
     }, {
-      "meta_name": "energy_total",
-      "meta_type": "type-value",
-      "meta_description": [
-        "Value of the total energy (nuclei + electrons), calculated with the method described in calculation_method." ],
-      "meta_abstract_types": ["energy_total_potential"],
-      "meta_parent_section": "section_single_configuration_calculation",
-      "meta_data_type": "float",
-      "meta_repeats": false,
-      "meta_required": false,
-      "meta_dimension": [  ]
-    }, {
       "meta_name": "hexadecapole_moment_xxxx",
       "meta_type": "type-value",
       "meta_description": [
@@ -388,19 +377,6 @@
       "meta_repeats": false,
       "meta_required": false,
       "meta_dimension": [  ]
-    }, {
-      "meta_name": "section_eigenvalues",
-      "meta_type": "type-section",
-      "meta_description": [
-        "Section containing (electronic-energy) eigenvalues for one spin channel. If, for example, the eigenvalues of the ",
-        "Kohn-Sham operator are to be stored, a string identifying this kind of eigenvalues is put in eigenvalues_kind (see ",
-        "the [eigenvalues\\_kind wiki page](https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/eigenvalues-",
-        "kind for the allowed strings), the coordinates of the $k$-points at which the eigenvalues were evaluated is stored ",
-        "in eigenvalues_kpoints, and the energy values of the eigenstates and their occupation is stored in ",
-        "eigenvalues_values and eigenvalues_occupation , respectively." ],
-      "meta_parent_section": "section_single_configuration_calculation",
-      "meta_repeats": true,
-      "meta_required": false
     }, {
       "meta_name": "x_gaussian_after_annihilation_spin_s2",
       "meta_type": "type-value",
