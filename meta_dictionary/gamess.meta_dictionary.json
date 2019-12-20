@@ -1,7 +1,8 @@
 {
   "metadict_name": "gamess",
   "metadict_description": [
-    "meta info used by the gamess parser, all names are expected to start with x_gamess" ],
+    "meta info used by the gamess parser, all names are expected to start with ",
+    "x_gamess" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -241,7 +242,8 @@
       "meta_name": "x_gamess_cis_excitation_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Value of the excitation energies for configuration interaction singles excited states." ],
+        "Value of the excitation energies for configuration interaction singles excited ",
+        "states." ],
       "meta_parent_section": "x_gamess_section_cis",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -251,7 +253,8 @@
       "meta_name": "x_gamess_cis_oscillator_strength",
       "meta_type": "type-value",
       "meta_description": [
-        "Value of the oscillator strengths for configuration interaction singles excited states." ],
+        "Value of the oscillator strengths for configuration interaction singles excited ",
+        "states." ],
       "meta_parent_section": "x_gamess_section_cis",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -311,7 +314,8 @@
       "meta_name": "x_gamess_energy_scf",
       "meta_type": "type-value",
       "meta_description": [
-        "Final value of the total electronic energy calculated with the method described in xc_method." ],
+        "Final value of the total electronic energy calculated with the method described ",
+        "in xc_method." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -322,8 +326,8 @@
       "meta_name": "x_gamess_energy_total_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Value of the total electronic energy calculated with the method described in xc_method during each self-consistent ",
-        "field (SCF) iteration." ],
+        "Value of the total electronic energy calculated with the method described in ",
+        "xc_method during each self-consistent field (SCF) iteration." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -384,7 +388,8 @@
       "meta_name": "x_gamess_mcscf_casscf",
       "meta_type": "type-value",
       "meta_description": [
-        "This indicates whether the multiconfigurational SCF calculation is a complete active space SCF calculation or not" ],
+        "This indicates whether the multiconfigurational SCF calculation is a complete ",
+        "active space SCF calculation or not" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -414,7 +419,8 @@
       "meta_name": "x_gamess_method",
       "meta_type": "type-value",
       "meta_description": [
-        "String identifying in an unique way the WF method used for the final wavefunctions." ],
+        "String identifying in an unique way the WF method used for the final ",
+        "wavefunctions." ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -494,7 +500,8 @@
       "meta_name": "x_gamess_mrpt2_method_type",
       "meta_type": "type-value",
       "meta_description": [
-        "Determinant (MRPT2) or CSF (MC-QDPT) method for second-order perturbation theory calculation" ],
+        "Determinant (MRPT2) or CSF (MC-QDPT) method for second-order perturbation ",
+        "theory calculation" ],
       "meta_parent_section": "x_gamess_section_mrpt2",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -652,7 +659,8 @@
       "meta_name": "x_gamess_section_frequencies",
       "meta_type": "type-section",
       "meta_description": [
-        "section for the values of the frequencies, reduced masses and normal mode vectors" ],
+        "section for the values of the frequencies, reduced masses and normal mode ",
+        "vectors" ],
       "meta_parent_section": "section_single_configuration_calculation",
       "meta_repeats": true,
       "meta_required": false
@@ -692,7 +700,8 @@
       "meta_name": "x_gamess_section_mrpt2",
       "meta_type": "type-section",
       "meta_description": [
-        "Multiference multiconfigurational energies at second order of perturbation theory." ],
+        "Multiference multiconfigurational energies at second order of perturbation ",
+        "theory." ],
       "meta_parent_section": "section_single_configuration_calculation",
       "meta_repeats": true,
       "meta_required": false
@@ -716,9 +725,10 @@
       "meta_name": "x_gamess_spin_target_multiplicity",
       "meta_type": "type-value",
       "meta_description": [
-        "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value.",
-        " This value is not necessarly the value obtained at the end of the calculation. See spin_s2 for the converged ",
-        "value of the spin moment." ],
+        "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the ",
+        "total spin. It is an integer value. This value is not necessarly the value ",
+        "obtained at the end of the calculation. See spin_s2 for the converged value of ",
+        "the spin moment." ],
       "meta_parent_section": "section_system",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -778,7 +788,8 @@
       "meta_name": "x_gamess_xc",
       "meta_type": "type-value",
       "meta_description": [
-        "String identifying in an unique way the XC method used for the final wavefunctions." ],
+        "String identifying in an unique way the XC method used for the final ",
+        "wavefunctions." ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,

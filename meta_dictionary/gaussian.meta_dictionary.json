@@ -1,7 +1,8 @@
 {
   "metadict_name": "gaussian",
   "metadict_description": [
-    "meta info used by the x_gaussian parser, all names are expected to start with x_gaussian" ],
+    "meta info used by the x_gaussian parser, all names are expected to start with ",
+    "x_gaussian" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -210,8 +211,8 @@
       "meta_name": "hybrid_xc_coeff2",
       "meta_type": "type-value",
       "meta_description": [
-        "Coefficients for Slater exchange, non-local exchange, local correlation, and non-local correlation, respectively, ",
-        "in hybrid DFT functionals" ],
+        "Coefficients for Slater exchange, non-local exchange, local correlation, and ",
+        "non-local correlation, respectively, in hybrid DFT functionals" ],
       "meta_parent_section": "x_gaussian_section_hybrid_coeffs",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -381,7 +382,8 @@
       "meta_name": "x_gaussian_after_annihilation_spin_s2",
       "meta_type": "type-value",
       "meta_description": [
-        "Real value of spin squared resulting from the annihilation of the first spin contaminant." ],
+        "Real value of spin squared resulting from the annihilation of the first spin ",
+        "contaminant." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -473,17 +475,21 @@
       "meta_name": "x_gaussian_atom_forces_type",
       "meta_type": "type-abstract",
       "meta_description": [
-        "Some forces on the atoms (i.e. minus derivatives of some energy with respect to the atom position)." ]
+        "Some forces on the atoms (i.e. minus derivatives of some energy with respect to ",
+        "the atom position)." ]
     }, {
       "meta_name": "x_gaussian_atom_labels",
       "meta_type": "type-value",
       "meta_description": [
-        "Labels of the atoms. These strings identify the atom kind and conventionally start with the symbol of the atomic ",
-        "species, possibly followed by a number. The same atomic species can be labelled with more than one atom_labels in ",
-        "order to distinguish, e.g., atoms of the same species assigned to different atom-centered basis sets or ",
-        "pseudopotentials, or simply atoms in different locations in the structure (e.g., bulk and surface). These labels ",
-        "can also be used for *particles* that do not correspond to physical atoms (e.g., ghost atoms in some codes using ",
-        "atom-centered basis sets). This metadata defines a configuration and is therefore required." ],
+        "Labels of the atoms. These strings identify the atom kind and conventionally ",
+        "start with the symbol of the atomic species, possibly followed by a number. The ",
+        "same atomic species can be labelled with more than one atom_labels in order to ",
+        "distinguish, e.g., atoms of the same species assigned to different atom-",
+        "centered basis sets or pseudopotentials, or simply atoms in different locations ",
+        "in the structure (e.g., bulk and surface). These labels can also be used for *",
+        "particles* that do not correspond to physical atoms (e.g., ghost atoms in some ",
+        "codes using atom-centered basis sets). This metadata defines a configuration ",
+        "and is therefore required." ],
       "meta_abstract_types": ["x_gaussian_configuration_core"],
       "meta_parent_section": "section_run",
       "meta_data_type": "string",
@@ -494,8 +500,8 @@
       "meta_name": "x_gaussian_atom_positions",
       "meta_type": "type-value",
       "meta_description": [
-        "Positions of all the atoms, in Cartesian coordinates. This metadata defines a configuration and is therefore ",
-        "required." ],
+        "Positions of all the atoms, in Cartesian coordinates. This metadata defines a ",
+        "configuration and is therefore required." ],
       "meta_abstract_types": ["x_gaussian_configuration_core"],
       "meta_parent_section": "section_run",
       "meta_data_type": "float",
@@ -721,7 +727,8 @@
       "meta_name": "x_gaussian_delta_energy_total_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Total energy increment calculated with a given method during the self-consistent field (SCF) iterations." ],
+        "Total energy increment calculated with a given method during the self-",
+        "consistent field (SCF) iterations." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -732,7 +739,8 @@
       "meta_name": "x_gaussian_eigenvalues_occupation",
       "meta_type": "type-value",
       "meta_description": [
-        "Occupation of the eigenstates whose (energy) eigenvalues are given in eigenvalues_values." ],
+        "Occupation of the eigenstates whose (energy) eigenvalues are given in ",
+        "eigenvalues_values." ],
       "meta_parent_section": "section_eigenvalues",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -742,7 +750,8 @@
       "meta_name": "x_gaussian_eigenvalues_values",
       "meta_type": "type-value",
       "meta_description": [
-        "Values of the (electronic-energy) eigenvalues. Their occupations are given in eigenvalues_occupation." ],
+        "Values of the (electronic-energy) eigenvalues. Their occupations are given in ",
+        "eigenvalues_occupation." ],
       "meta_parent_section": "section_eigenvalues",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -783,7 +792,8 @@
       "meta_name": "x_gaussian_energy_electrostatic",
       "meta_type": "type-value",
       "meta_description": [
-        "Total electrostatic energy (nuclei + electrons), defined consistently with calculation_method." ],
+        "Total electrostatic energy (nuclei + electrons), defined consistently with ",
+        "calculation_method." ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -826,7 +836,8 @@
       "meta_name": "x_gaussian_energy_total_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Total energy calculated with a given method during the self-consistent field (SCF) iterations." ],
+        "Total energy calculated with a given method during the self-consistent field (",
+        "SCF) iterations." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -877,7 +888,8 @@
       "meta_name": "x_gaussian_excited_transition",
       "meta_type": "type-value",
       "meta_description": [
-        "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state MOs involved in transitions and their coefficients" ],
+        "CIS, TDDFT/TDHF, ZINDO or EOMCCSD excited state MOs involved in transitions and ",
+        "their coefficients" ],
       "meta_parent_section": "x_gaussian_section_excited",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -1049,7 +1061,8 @@
       "meta_name": "x_gaussian_method",
       "meta_type": "type-value",
       "meta_description": [
-        "String identifying in an unique way the electronic structure method used for the final wavefunctions." ],
+        "String identifying in an unique way the electronic structure method used for ",
+        "the final wavefunctions." ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -1059,9 +1072,10 @@
       "meta_name": "x_gaussian_molecular_multipole_lm",
       "meta_type": "type-value",
       "meta_description": [
-        "Tuples of $l$ and $m$ values for which the molecular multipoles (including the electric charge, dipole, etc.) are ",
-        "given. The meaning of the integer number $l$ is monopole/charge for $l=0$, dipole for $l=1$, quadrupole for $l=2$, ",
-        "etc. The meaning of the integer numbers $m$ is specified by molecular_multipole_m_kind." ],
+        "Tuples of $l$ and $m$ values for which the molecular multipoles (including the ",
+        "electric charge, dipole, etc.) are given. The meaning of the integer number $l$ ",
+        "is monopole/charge for $l=0$, dipole for $l=1$, quadrupole for $l=2$, etc. The ",
+        "meaning of the integer numbers $m$ is specified by molecular_multipole_m_kind." ],
       "meta_parent_section": "x_gaussian_section_molecular_multipoles",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -1071,9 +1085,9 @@
       "meta_name": "x_gaussian_molecular_multipole_m_kind",
       "meta_type": "type-value",
       "meta_description": [
-        "String describing what the integer numbers $m$ in molecular_multipole_lm mean. Allowed values (for atomic ",
-        "multipoles) are listed in the [m\\_kind wiki page](https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/",
-        "metainfo/m-kind)." ],
+        "String describing what the integer numbers $m$ in molecular_multipole_lm mean. ",
+        "Allowed values (for atomic multipoles) are listed in the [m\\_kind wiki page](",
+        "https://gitlab.rzg.mpg.de/nomad-lab/nomad-meta-info/wikis/metainfo/m-kind)." ],
       "meta_parent_section": "x_gaussian_section_molecular_multipoles",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -1083,7 +1097,8 @@
       "meta_name": "x_gaussian_molecular_multipole_values",
       "meta_type": "type-value",
       "meta_description": [
-        "Value of the multipoles (including the monopole/charge for $l$ = 0, the dipole for $l$ = 1, etc.)." ],
+        "Value of the multipoles (including the monopole/charge for $l$ = 0, the dipole ",
+        "for $l$ = 1, etc.)." ],
       "meta_parent_section": "x_gaussian_section_molecular_multipoles",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -1445,7 +1460,8 @@
       "meta_name": "x_gaussian_section_frequencies",
       "meta_type": "type-section",
       "meta_description": [
-        "section for the values of the frequencies, reduced masses and normal mode vectors" ],
+        "section for the values of the frequencies, reduced masses and normal mode ",
+        "vectors" ],
       "meta_parent_section": "section_run",
       "meta_repeats": true,
       "meta_required": false
@@ -1627,9 +1643,10 @@
       "meta_name": "x_gaussian_spin_target_multiplicity",
       "meta_type": "type-value",
       "meta_description": [
-        "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the total spin. It is an integer value.",
-        " This value is not necessarly the value obtained at the end of the calculation. See spin_s2 for the converged ",
-        "value of the spin moment." ],
+        "Target (user-imposed) value of the spin multiplicity $M=2S+1$, where $S$ is the ",
+        "total spin. It is an integer value. This value is not necessarly the value ",
+        "obtained at the end of the calculation. See spin_s2 for the converged value of ",
+        "the spin moment." ],
       "meta_parent_section": "section_system",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -1689,7 +1706,8 @@
       "meta_name": "x_gaussian_xc",
       "meta_type": "type-value",
       "meta_description": [
-        "String identifying in an unique way the XC method used for the final wavefunctions." ],
+        "String identifying in an unique way the XC method used for the final ",
+        "wavefunctions." ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,

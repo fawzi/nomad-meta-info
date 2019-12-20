@@ -260,7 +260,8 @@
       "meta_name": "x_cpmd_geo_opt_scf_cnorm",
       "meta_type": "type-value",
       "meta_description": [
-        "Average of the off-diagonal components (CNORM) during SCF step within geometry optimization step." ],
+        "Average of the off-diagonal components (CNORM) during SCF step within geometry ",
+        "optimization step." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_scf_iteration",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -270,7 +271,8 @@
       "meta_name": "x_cpmd_geo_opt_scf_detot",
       "meta_type": "type-value",
       "meta_description": [
-        "The difference in total energy to the previous SCF energy (DETOT) within geometry optimization step." ],
+        "The difference in total energy to the previous SCF energy (DETOT) within ",
+        "geometry optimization step." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_scf_iteration",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -290,7 +292,8 @@
       "meta_name": "x_cpmd_geo_opt_scf_gemax",
       "meta_type": "type-value",
       "meta_description": [
-        "Largest off-diagonal component (GEMAX) during SCF step within geometry optimization step." ],
+        "Largest off-diagonal component (GEMAX) during SCF step within geometry ",
+        "optimization step." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_scf_iteration",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -330,7 +333,8 @@
       "meta_name": "x_cpmd_geo_opt_step_detot",
       "meta_type": "type-value",
       "meta_description": [
-        "The difference in total energy to the previous geometry optimization step (DETOT)." ],
+        "The difference in total energy to the previous geometry optimization step (",
+        "DETOT)." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_step",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -350,7 +354,8 @@
       "meta_name": "x_cpmd_geo_opt_step_forces",
       "meta_type": "type-value",
       "meta_description": [
-        "The forces from a geometry optimization step. The ith row corresponds to the force for atom number i." ],
+        "The forces from a geometry optimization step. The ith row corresponds to the ",
+        "force for atom number i." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_step",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -390,7 +395,8 @@
       "meta_name": "x_cpmd_geo_opt_step_positions",
       "meta_type": "type-value",
       "meta_description": [
-        "The positions from a geometry optimization step. The ith row corresponds to the position for atom number i." ],
+        "The positions from a geometry optimization step. The ith row corresponds to the ",
+        "position for atom number i." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_step",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -420,7 +426,8 @@
       "meta_name": "x_cpmd_initialized_forces",
       "meta_type": "type-value",
       "meta_description": [
-        "The initialized forces for geometry optimization. The ith row corresponds to the force for atom number i." ],
+        "The initialized forces for geometry optimization. The ith row corresponds to ",
+        "the force for atom number i." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_initialization",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -430,7 +437,8 @@
       "meta_name": "x_cpmd_initialized_positions",
       "meta_type": "type-value",
       "meta_description": [
-        "The initialized positions for geometry optimization. The ith row corresponds to the position for atom number i." ],
+        "The initialized positions for geometry optimization. The ith row corresponds to ",
+        "the position for atom number i." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_initialization",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -530,8 +538,9 @@
       "meta_name": "x_cpmd_max_steps",
       "meta_type": "type-value",
       "meta_description": [
-        "The maximum number of steps requested. In MD, this is the number of MD steps, in single point calculations this is ",
-        "the number of scf cycles, in geometry optimization this is the number of optimization steps." ],
+        "The maximum number of steps requested. In MD, this is the number of MD steps, ",
+        "in single point calculations this is the number of scf cycles, in geometry ",
+        "optimization this is the number of optimization steps." ],
       "meta_parent_section": "x_cpmd_section_run_type_information",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -791,7 +800,8 @@
       "meta_name": "x_cpmd_section_geo_opt_scf_iteration",
       "meta_type": "type-section",
       "meta_description": [
-        "Contains information about the self-consistent field iteration within a geometry optimization step." ],
+        "Contains information about the self-consistent field iteration within a ",
+        "geometry optimization step." ],
       "meta_parent_section": "x_cpmd_section_geo_opt_step",
       "meta_repeats": true,
       "meta_required": false
@@ -847,7 +857,8 @@
       "meta_name": "x_cpmd_section_scf_iteration",
       "meta_type": "type-section",
       "meta_description": [
-        "Contains information about the self-consistent field iteration within a wavefunction optimization." ],
+        "Contains information about the self-consistent field iteration within a ",
+        "wavefunction optimization." ],
       "meta_parent_section": "x_cpmd_section_scf",
       "meta_repeats": true,
       "meta_required": false

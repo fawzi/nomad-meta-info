@@ -10,10 +10,11 @@
       "meta_name": "section_stats",
       "meta_type": "type-section",
       "meta_description": [
-        "statistics on the calculation data either of a calculation or a group of calculations. All the values here should ",
-        "be collectable by merging various section_stats, to build a common section_stats. Reference to the single entries ",
-        "should normally be avoided. Try to keep the size of this limited, the goal should be that one could cache this in ",
-        "memory." ],
+        "statistics on the calculation data either of a calculation or a group of ",
+        "calculations. All the values here should be collectable by merging various ",
+        "section_stats, to build a common section_stats. Reference to the single entries ",
+        "should normally be avoided. Try to keep the size of this limited, the goal ",
+        "should be that one could cache this in memory." ],
       "meta_parent_section": null,
       "meta_repeats": true,
       "meta_required": false
@@ -107,8 +108,8 @@
       "meta_name": "stats_per_composition_composition_formula",
       "meta_type": "type-value",
       "meta_description": [
-        "Chemical formula of the composition using chemical atom names in alphabetic order and the amount in the simulation ",
-        "cell if not 1." ],
+        "Chemical formula of the composition using chemical atom names in alphabetic ",
+        "order and the amount in the simulation cell if not 1." ],
       "meta_parent_section": "section_stats_per_composition",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -118,7 +119,8 @@
       "meta_name": "stats_per_composition_n_geometries",
       "meta_type": "type-value",
       "meta_description": [
-        "number of geometries (as defined by stats_per_geometry_geometry_id) with the current composition" ],
+        "number of geometries (as defined by stats_per_geometry_geometry_id) with the ",
+        "current composition" ],
       "meta_parent_section": "section_stats_per_composition",
       "meta_data_type": "int64",
       "meta_repeats": false,
@@ -148,8 +150,9 @@
       "meta_name": "stats_per_geometry_geometry_id",
       "meta_type": "type-value",
       "meta_description": [
-        "geometry id, a checksum calculated using cell, atom position, and labels. This finds geometries that are trivially ",
-        "equivalent, geometries that are effectively equivalent might still have different ids." ],
+        "geometry id, a checksum calculated using cell, atom position, and labels. This ",
+        "finds geometries that are trivially equivalent, geometries that are effectively ",
+        "equivalent might still have different ids." ],
       "meta_parent_section": "section_stats_per_geometry",
       "meta_data_type": "int64",
       "meta_repeats": false,
@@ -159,7 +162,8 @@
       "meta_name": "stats_per_geometry_n_single_configuration_calculations",
       "meta_type": "type-value",
       "meta_description": [
-        "number of section_single_configuration_calculation that have the current geometry" ],
+        "number of section_single_configuration_calculation that have the current ",
+        "geometry" ],
       "meta_parent_section": "section_stats_per_geometry",
       "meta_data_type": "int64",
       "meta_repeats": false,

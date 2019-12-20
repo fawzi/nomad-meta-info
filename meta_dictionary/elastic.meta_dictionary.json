@@ -1,7 +1,8 @@
 {
   "metadict_name": "elastic",
   "metadict_description": [
-    "meta info used by the elastic parser, all names are expected to start with x_elastic" ],
+    "meta info used by the elastic parser, all names are expected to start with ",
+    "x_elastic" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -110,7 +111,8 @@
       "meta_name": "x_elastic_fitting_parameters_polinomial_order",
       "meta_type": "type-value",
       "meta_description": [
-        "polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants" ],
+        "polynomial order used to fit the Energy vs. volume curve and to calculate the ",
+        "elastic constants" ],
       "meta_deprecated": true,
       "meta_parent_section": "x_elastic_section_fitting_parameters",
       "meta_data_type": "int",
@@ -121,7 +123,8 @@
       "meta_name": "x_elastic_fitting_parameters_polynomial_order",
       "meta_type": "type-value",
       "meta_description": [
-        "polynomial order used to fit the Energy vs. volume curve and to calculate the elastic constants" ],
+        "polynomial order used to fit the Energy vs. volume curve and to calculate the ",
+        "elastic constants" ],
       "meta_parent_section": "x_elastic_section_fitting_parameters",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -181,8 +184,8 @@
       "meta_name": "x_elastic_number_of_deformations",
       "meta_type": "type-value",
       "meta_description": [
-        "number of deformed structures equally spaced in strain, which are generated between the maximum negative strain ",
-        "and the maximum positive one" ],
+        "number of deformed structures equally spaced in strain, which are generated ",
+        "between the maximum negative strain and the maximum positive one" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -242,7 +245,8 @@
       "meta_name": "x_elastic_section_fitting_parameters",
       "meta_type": "type-section",
       "meta_description": [
-        "section collecting the fitting parameters used to calculate the elastic constants" ],
+        "section collecting the fitting parameters used to calculate the elastic ",
+        "constants" ],
       "meta_parent_section": "section_method",
       "meta_repeats": true,
       "meta_required": false
@@ -319,9 +323,10 @@
       "meta_name": "x_elastic_strain_diagram_type",
       "meta_type": "type-value",
       "meta_description": [
-        "Kind of strain diagram. Possible values are: energy; Lagrangian-stress; Physical-stress; cross-validation (cross-",
-        "validation error); d2e (second derivative of the energy with respect to the strain); dtn (first derivative of the ",
-        "stress with respect to the strain)" ],
+        "Kind of strain diagram. Possible values are: energy; Lagrangian-stress; ",
+        "Physical-stress; cross-validation (cross-validation error); d2e (second ",
+        "derivative of the energy with respect to the strain); dtn (first derivative of ",
+        "the stress with respect to the strain)" ],
       "meta_parent_section": "x_elastic_section_strain_diagrams",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -331,8 +336,8 @@
       "meta_name": "x_elastic_strain_diagram_values",
       "meta_type": "type-value",
       "meta_description": [
-        "Values of the energy(units:J)/d2e(units:Pa)/cross-validation (depending on the value of ",
-        "x_elastic_strain_diagram_type)" ],
+        "Values of the energy(units:J)/d2e(units:Pa)/cross-validation (depending on the ",
+        "value of x_elastic_strain_diagram_type)" ],
       "meta_parent_section": "x_elastic_section_strain_diagrams",
       "meta_data_type": "float",
       "meta_repeats": false,

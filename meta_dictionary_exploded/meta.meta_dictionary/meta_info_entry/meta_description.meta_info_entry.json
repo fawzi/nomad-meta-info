@@ -1,0 +1,21 @@
+{
+  "meta_name": "meta_description",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Contains a text meant for the users of the meta info, using [mark down format](",
+    "https://daringfireball.net/markdown) with the following extensions:\n",
+    "\n",
+    "* $$ is used to introduce mathematical notation using the latex format like ",
+    "this $\f",
+    "rac{a}{b}$, a double dollar can be used to escape a single dollar sign: $$$$ -> ",
+    "$$,\n",
+    "* ``\\_'' is always escaped (cannot be used to mean underlined), and names ",
+    "containing them are checked against meta_info_entry and linked to its ",
+    "documentation if possible." ],
+  "meta_deprecated": true,
+  "meta_parent_section": "meta_info_entry",
+  "meta_data_type": "string",
+  "meta_repeats": true,
+  "meta_required": false,
+  "meta_dimension": [  ]
+}

@@ -10,7 +10,8 @@
       "meta_name": "x_fleur_atom_coord_scale",
       "meta_type": "type-value",
       "meta_description": [
-        "scales coordinates by 1/scale. If film=T, scales only x&y coordinates, if film=F also z" ],
+        "scales coordinates by 1/scale. If film=T, scales only x&y coordinates, if film=",
+        "F also z" ],
       "meta_parent_section": "x_fleur_section_equiv_atoms",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -378,8 +379,9 @@
       "meta_name": "x_fleur_smearing_kind",
       "meta_type": "type-value",
       "meta_description": [
-        "The Brillouin zone integration mode. It can be one of hist - Use the histogram mode, this is the default; gauss - ",
-        "Use Gaussian smearing, tria - Use the tetrahedron method" ],
+        "The Brillouin zone integration mode. It can be one of hist - Use the histogram ",
+        "mode, this is the default; gauss - Use Gaussian smearing, tria - Use the ",
+        "tetrahedron method" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -399,8 +401,8 @@
       "meta_name": "x_fleur_smearing_width",
       "meta_type": "type-value",
       "meta_description": [
-        "specifies the width of the broadening, smearing for calculation of fermi-energy & weights. The Fermi smearing can ",
-        "be parametrized by this energy" ],
+        "specifies the width of the broadening, smearing for calculation of fermi-energy ",
+        "& weights. The Fermi smearing can be parametrized by this energy" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -576,7 +578,8 @@
       "meta_name": "x_fleur_xc_correction",
       "meta_type": "type-value",
       "meta_description": [
-        "informaion on relativistic correction for the exchange-correlation potential, in out" ],
+        "informaion on relativistic correction for the exchange-correlation potential, ",
+        "in out" ],
       "meta_parent_section": "x_fleur_section_xc",
       "meta_data_type": "string",
       "meta_repeats": false,

@@ -1,7 +1,8 @@
 {
   "metadict_name": "turbomole",
   "metadict_description": [
-    "meta info used by the TURBOMOLE parser, all names are expected to start with x_turbomole_" ],
+    "meta info used by the TURBOMOLE parser, all names are expected to start with ",
+    "x_turbomole_" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -300,7 +301,8 @@
       "meta_name": "x_turbomole_damping_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Damping of the two-electron contributions to Fock matrix in the present SCF iteration" ],
+        "Damping of the two-electron contributions to Fock matrix in the present SCF ",
+        "iteration" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -362,8 +364,8 @@
       "meta_name": "x_turbomole_eigenvalue_ks_exchangecorrelation",
       "meta_type": "type-value",
       "meta_description": [
-        "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative ",
-        "GW" ],
+        "KS exchange correlation energy at a given eigenstate needed to calculate the ",
+        "quasi-particle energy in perturbative GW" ],
       "meta_parent_section": "x_turbomole_section_eigenvalues_gw",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -455,9 +457,10 @@
       "meta_name": "x_turbomole_geometry_optimization_cycle_index",
       "meta_type": "type-value",
       "meta_description": [
-        "By default Turbomole only keeps the output of the final iteration once the geometry has been converged, thus the ",
-        "entire optimization trajectory cannot be rebuild in most cases. Instead, this value contains the optimization ",
-        "cycle index to indicate how many iterations have preceded this one." ],
+        "By default Turbomole only keeps the output of the final iteration once the ",
+        "geometry has been converged, thus the entire optimization trajectory cannot be ",
+        "rebuild in most cases. Instead, this value contains the optimization cycle ",
+        "index to indicate how many iterations have preceded this one." ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -528,8 +531,8 @@
       "meta_name": "x_turbomole_gw_eta_factor",
       "meta_type": "type-value",
       "meta_description": [
-        "[TO BE VERIFIED]Infinitesimal complex energy shift. Negative value switches to calculating at that value but ",
-        "extrapolating to 0 in linear approximation." ],
+        "[TO BE VERIFIED]Infinitesimal complex energy shift. Negative value switches to ",
+        "calculating at that value but extrapolating to 0 in linear approximation." ],
       "meta_abstract_types": ["settings_gw"],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
@@ -540,8 +543,8 @@
       "meta_name": "x_turbomole_gw_use_rpa_response",
       "meta_type": "type-value",
       "meta_description": [
-        "If true, the pure RPA response function is calculated. Otherwise, the TDDFT response function is calculated and ",
-        "used to screen the coulomb interaction." ],
+        "If true, the pure RPA response function is calculated. Otherwise, the TDDFT ",
+        "response function is calculated and used to screen the coulomb interaction." ],
       "meta_abstract_types": ["settings_gw"],
       "meta_parent_section": "section_method",
       "meta_data_type": "boolean",
@@ -647,7 +650,8 @@
       "meta_name": "x_turbomole_pceem_min_separation_cells",
       "meta_type": "type-value",
       "meta_description": [
-        "Minimum separation between cells in PCEEM embedding for periodic fast multipole treatment" ],
+        "Minimum separation between cells in PCEEM embedding for periodic fast multipole ",
+        "treatment" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -678,7 +682,8 @@
       "meta_name": "x_turbomole_section_eigenvalues_gw",
       "meta_type": "type-section",
       "meta_description": [
-        "section for the eigenvalues of a GW calculation (at present only pertubative G0W0)" ],
+        "section for the eigenvalues of a GW calculation (at present only pertubative ",
+        "G0W0)" ],
       "meta_parent_section": "section_eigenvalues",
       "meta_repeats": true,
       "meta_required": false

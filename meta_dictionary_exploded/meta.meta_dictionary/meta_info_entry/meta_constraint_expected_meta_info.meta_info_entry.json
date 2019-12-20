@@ -1,0 +1,23 @@
+{
+  "meta_name": "meta_constraint_expected_meta_info",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Either a meta_name or a '!' and a meta_name.If the meta_info_entry ",
+    "corresponding to it has meta_type type-value or type-section then the ",
+    "corrsponding value must be either present or absent in all values corresponding ",
+    "to the meta_parent_section selectioned.\n",
+    "Besides the meta values and sections listed explicitly also all those that are ",
+    "sub sections or sub values of meta_parent_section and have all the type-",
+    "abstract without '!' of this list in their meta abstract_types must be present. ",
+    "Of the remaining sub sections and values all those that have any of the ",
+    "abstract types with '!' shound be exclued.\n",
+    "Thus the precedence is explicitly named meta_names, then those with abstract ",
+    "types without !, and finally those with !.\n",
+    "This allows one to check for subtypes by giving an abstract type to the ",
+    "attributes belonging to that subtypes." ],
+  "meta_parent_section": "meta_info_entry",
+  "meta_data_type": "string",
+  "meta_repeats": true,
+  "meta_required": false,
+  "meta_dimension": [  ]
+}

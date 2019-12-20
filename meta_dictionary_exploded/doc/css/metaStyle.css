@@ -1,0 +1,34 @@
+
+body.frames {
+    margin: 0;            /* Reset default margin */
+}
+table.frames {
+   border: none;
+}
+@media screen and (min-width: 650) and (min-height:400) {
+iframe#frameIndex {
+    display: inline-block;       /* iframes are inline by default */
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 40vw;
+}
+iframe#frameDetail {
+    display: inline-block;       /* iframes are inline by default */
+    border: none;         /* Reset default border */
+    height: 60vh;        /* Viewport-relative units */
+    width: 60vw;
+}
+iframe#frameData {
+    display: inline-block;       /* iframes are inline by default */
+    border: none;         /* Reset default border */
+    height: 40vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+}
+			ul.index,li.index,label.index {}
+			.subIndex {}
+			.rightTitle { text-align: right; }
+			.metaKey {}
+			.metaValue {}
+			.metaValues {}
+			

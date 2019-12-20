@@ -1,0 +1,15 @@
+{
+  "meta_name": "atom_forces",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Forces acting on the atoms, calculated as minus gradient of ",
+    "atom_forces_quantity, with the constraints as describe by ",
+    "atom_forces_constraints. The derivatives with respect to displacements of ",
+    "nuclei are evaluated in Cartesian coordinates." ],
+  "meta_abstract_types": ["force_type"],
+  "meta_parent_section": "section_atom_forces",
+  "meta_data_type": "float",
+  "meta_repeats": false,
+  "meta_required": false,
+  "meta_dimension": [  ]
+}

@@ -1,0 +1,14 @@
+{
+  "meta_name": "frame_sequence_pressure_stats",
+  "meta_type": "type-value",
+  "meta_description": [
+    "Average pressure (one third of the trace of the stress tensor), standard ",
+    "deviation and number of samples over this sequence of frames (i.e., a ",
+    "trajectory, a frame is one section_single_configuration_calculation)." ],
+  "meta_abstract_types": ["derived_quantity"],
+  "meta_parent_section": "section_frame_sequence",
+  "meta_data_type": "float",
+  "meta_repeats": false,
+  "meta_required": false,
+  "meta_dimension": [  ]
+}

@@ -1,0 +1,15 @@
+{
+  "meta_name": "band_energies_normalized",
+  "meta_type": "type-value",
+  "meta_description": [
+    "$k$-dependent energies of the electronic band segment (electronic band ",
+    "structure) with respect to the top of the valence band. This is a third-order ",
+    "tensor, with one dimension used for the spin channels, one for the $k$ points ",
+    "for each segment, and one for the eigenvalue sequence." ],
+  "meta_abstract_types": ["derived_quantity"],
+  "meta_parent_section": "section_k_band_segment_normalized",
+  "meta_data_type": "float",
+  "meta_repeats": false,
+  "meta_required": false,
+  "meta_dimension": [  ]
+}

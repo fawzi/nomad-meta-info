@@ -1,0 +1,27 @@
+{
+  "meta_name": "meta_info_entry",
+  "meta_type": "type-section",
+  "meta_description": [
+    "Represents a basic entry in the meta info. It has a meta_name and ",
+    "meta_description, the other attributes depend on the value of meta_type.\n",
+    "* *type-value*: represents a simple data value of type meta_data_type (or a ",
+    "multi dimensional array of them if meta_dimension is given. The value is stored ",
+    "within the section meta_parent_section.\n",
+    "* *type-section*: represents a composite type, and context for values and other ",
+    "sections, it gives a tree structure to the data, collecting groups of values ",
+    "together. If meta_parent_section is defined it lives inside that section.\n",
+    "* *type-dimension*: represents a symbolic dimension that can be used to define ",
+    "multidimensional arrays. Inside its meta_parent_section its value should be ",
+    "constant (and arrays using it are commensurable.\n",
+    "* *type-abstract*: represent a mean to classify meta_info_entries (for example ",
+    "all values reresenting an energy can declare that their meta_abstract_types ",
+    "contains the abstract type witth meta_name type_energy\n",
+    "* *type-constraint*: represents an extra constraints on values corresponding to ",
+    "its meta_parent_section\n" ],
+  "meta_parent_section": null,
+  "meta_repeats": true,
+  "meta_required": false,
+  "meta_inject": [{
+    "meta_inject_if_section_regexp": "direct.include"
+    } ]
+}

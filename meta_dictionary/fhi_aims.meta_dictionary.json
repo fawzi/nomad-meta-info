@@ -1,7 +1,8 @@
 {
   "metadict_name": "fhi_aims",
   "metadict_description": [
-    "meta info used by the FHI aims parser, all names are expected to start with fhi_aims_" ],
+    "meta info used by the FHI aims parser, all names are expected to start with ",
+    "fhi_aims_" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -1196,8 +1197,8 @@
       "meta_name": "x_fhi_aims_eigenvalue_ks_exchangecorrelation",
       "meta_type": "type-value",
       "meta_description": [
-        "KS exchange correlation energy at a given eigenstate needed to calculate the quasi-particle energy in perturbative ",
-        "GW" ],
+        "KS exchange correlation energy at a given eigenstate needed to calculate the ",
+        "quasi-particle energy in perturbative GW" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_list_perturbativegw",
       "meta_data_type": "float",
@@ -1262,8 +1263,8 @@
       "meta_name": "x_fhi_aims_energy_c_lda",
       "meta_type": "type-value",
       "meta_description": [
-        "Component of the correlation (C) energy at the LDA level calculated with the self consistent density of the target ",
-        "functional." ],
+        "Component of the correlation (C) energy at the LDA level calculated with the ",
+        "self consistent density of the target functional." ],
       "meta_abstract_types": ["energy_type_c"],
       "meta_parent_section": "section_single_configuration_calculation",
       "meta_data_type": "float",
@@ -1274,7 +1275,8 @@
       "meta_name": "x_fhi_aims_energy_electrostatic_free_atom_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Electrostatic energy contributions from superposition of free atom densities during the scf iterations" ],
+        "Electrostatic energy contributions from superposition of free atom densities ",
+        "during the scf iterations" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -1296,8 +1298,8 @@
       "meta_name": "x_fhi_aims_energy_x_lda",
       "meta_type": "type-value",
       "meta_description": [
-        "Component of the exchange (X) energy at the LDA level calculated with the self consistent density of the target ",
-        "functional." ],
+        "Component of the exchange (X) energy at the LDA level calculated with the self ",
+        "consistent density of the target functional." ],
       "meta_abstract_types": ["energy_type_x"],
       "meta_parent_section": "section_single_configuration_calculation",
       "meta_data_type": "float",
@@ -1557,7 +1559,8 @@
       "meta_name": "x_fhi_aims_scgw_galitskii_migdal_total_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "scGW total energy at each iteration calculated using the Galitskii-Migdal formula" ],
+        "scGW total energy at each iteration calculated using the Galitskii-Migdal ",
+        "formula" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -1568,7 +1571,8 @@
       "meta_name": "x_fhi_aims_scgw_hartree_energy_sum_eigenvalues_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "scGW sum of eigenvalues calculated from the trace over the Hamiltonian times the Greens function matrices" ],
+        "scGW sum of eigenvalues calculated from the trace over the Hamiltonian times ",
+        "the Greens function matrices" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -1590,7 +1594,8 @@
       "meta_name": "x_fhi_aims_scgw_rpa_correlation_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "The RPA correlation energy calculated from the Green's functions of the scGW at each iteration" ],
+        "The RPA correlation energy calculated from the Green's functions of the scGW at ",
+        "each iteration" ],
       "meta_abstract_types": ["energy_component", "scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -1635,9 +1640,10 @@
       "meta_name": "x_fhi_aims_section_dos",
       "meta_type": "type-section",
       "meta_description": [
-        "Section collecting the information on a density of states (DOS) evaluation. We need this extra section since we ",
-        "have to ensure that the parsed dos belongs to the last relaxation/MD step. We know this for sure only if ",
-        "section_run is closed. Therefore, this section belongs to section_run." ],
+        "Section collecting the information on a density of states (DOS) evaluation. We ",
+        "need this extra section since we have to ensure that the parsed dos belongs to ",
+        "the last relaxation/MD step. We know this for sure only if section_run is ",
+        "closed. Therefore, this section belongs to section_run." ],
       "meta_parent_section": "section_run",
       "meta_repeats": true,
       "meta_required": false
@@ -1654,7 +1660,8 @@
       "meta_name": "x_fhi_aims_section_eigenvalues_group_perturbativegw",
       "meta_type": "type-section",
       "meta_description": [
-        "section for full list of eigenvalues for different spin and kpoints from a perturbative GW calculation" ],
+        "section for full list of eigenvalues for different spin and kpoints from a ",
+        "perturbative GW calculation" ],
       "meta_parent_section": "section_single_configuration_calculation",
       "meta_repeats": true,
       "meta_required": false
@@ -1662,7 +1669,8 @@
       "meta_name": "x_fhi_aims_section_eigenvalues_group_zora",
       "meta_type": "type-section",
       "meta_description": [
-        "section for full list of eigenvalues for different spin and kpoints of scaled ZORA" ],
+        "section for full list of eigenvalues for different spin and kpoints of scaled ",
+        "ZORA" ],
       "meta_parent_section": "x_fhi_aims_section_eigenvalues_zora",
       "meta_repeats": true,
       "meta_required": false

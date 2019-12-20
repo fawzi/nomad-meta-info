@@ -1,7 +1,8 @@
 {
   "metadict_name": "wien2k",
   "metadict_description": [
-    "meta info used by the wien2k parser.  All names are expected to start with x_wien2k_" ],
+    "meta info used by the wien2k parser.  All names are expected to start with ",
+    "x_wien2k_" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -177,9 +178,11 @@
       "meta_name": "x_wien2k_electronic_charge",
       "meta_type": "type-value",
       "meta_description": [
-        "nuclear and electronic charge; normalization check of electronic charge densities. If a significant amount of ",
-        "electrons is missing, one might have core states, whose charge density is not completely confined within the ",
-        "respective atomic sphere. In such a case the corresponding states should be treated as band states (using LOs)." ],
+        "nuclear and electronic charge; normalization check of electronic charge ",
+        "densities. If a significant amount of electrons is missing, one might have core ",
+        "states, whose charge density is not completely confined within the respective ",
+        "atomic sphere. In such a case the corresponding states should be treated as ",
+        "band states (using LOs)." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -234,7 +237,8 @@
       "meta_name": "x_wien2k_for_abs",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): |F|" ],
+        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate ",
+        "system): |F|" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -245,7 +249,8 @@
       "meta_name": "x_wien2k_for_x",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fx" ],
+        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate ",
+        "system): Fx" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -256,8 +261,8 @@
       "meta_name": "x_wien2k_for_x_gl",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic ",
-        "positions are specified)): Fx" ],
+        "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (",
+        "in the same way as the atomic positions are specified)): Fx" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -268,7 +273,8 @@
       "meta_name": "x_wien2k_for_y",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fy" ],
+        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate ",
+        "system): Fy" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -279,8 +285,8 @@
       "meta_name": "x_wien2k_for_y_gl",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic ",
-        "positions are specified)): Fy" ],
+        "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (",
+        "in the same way as the atomic positions are specified)): Fy" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -291,7 +297,8 @@
       "meta_name": "x_wien2k_for_z",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate system): Fz" ],
+        "force on atom xx in mRy/bohr (in the local (for each atom) cartesian coordinate ",
+        "system): Fz" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -302,8 +309,8 @@
       "meta_name": "x_wien2k_for_z_gl",
       "meta_type": "type-value",
       "meta_description": [
-        "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (in the same way as the atomic ",
-        "positions are specified)): Fz" ],
+        "force on atom xx in mRy/bohr (in the global coordinate system of the unit cell (",
+        "in the same way as the atomic positions are specified)): Fz" ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -332,7 +339,8 @@
       "meta_name": "x_wien2k_ifft_x",
       "meta_type": "type-value",
       "meta_description": [
-        "FFT-mesh parameters in x direction for the calculation of the XC-potential in the interstitial region, in in0" ],
+        "FFT-mesh parameters in x direction for the calculation of the XC-potential in ",
+        "the interstitial region, in in0" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -342,7 +350,8 @@
       "meta_name": "x_wien2k_ifft_y",
       "meta_type": "type-value",
       "meta_description": [
-        "FFT-mesh parameters in y direction for the calculation of the XC-potential in the interstitial region, in in0" ],
+        "FFT-mesh parameters in y direction for the calculation of the XC-potential in ",
+        "the interstitial region, in in0" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -352,7 +361,8 @@
       "meta_name": "x_wien2k_ifft_z",
       "meta_type": "type-value",
       "meta_description": [
-        "FFT-mesh parameters in z direction for the calculation of the XC-potential in the interstitial region, in in0" ],
+        "FFT-mesh parameters in z direction for the calculation of the XC-potential in ",
+        "the interstitial region, in in0" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -382,8 +392,9 @@
       "meta_name": "x_wien2k_in2c_espermin",
       "meta_type": "type-value",
       "meta_description": [
-        "LAPW2 tries to find the .mean. energies for each l channel, for both the valence and the semicore states. To ",
-        "define .valence. and .semicore. it starts at (EF - .esepermin.) and searches for a .gap. with a width of at least .",
+        "LAPW2 tries to find the .mean. energies for each l channel, for both the ",
+        "valence and the semicore states. To define .valence. and .semicore. it starts ",
+        "at (EF - .esepermin.) and searches for a .gap. with a width of at least .",
         "eseper0. and defines this as separation energy of valence and semicore; in in2c" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
@@ -394,7 +405,8 @@
       "meta_name": "x_wien2k_in2c_gmax",
       "meta_type": "type-value",
       "meta_description": [
-        "max. G (magnitude of largest vector) in charge density Fourier expansion; in in2c" ],
+        "max. G (magnitude of largest vector) in charge density Fourier expansion; in ",
+        "in2c" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -607,9 +619,11 @@
       "meta_name": "x_wien2k_nuclear_charge",
       "meta_type": "type-value",
       "meta_description": [
-        "nuclear and electronic charge; normalization check of electronic charge densities. If a significant amount of ",
-        "electrons is missing, one might have core states, whose charge density is not completely confined within the ",
-        "respective atomic sphere. In such a case the corresponding states should be treated as band states (using LOs)." ],
+        "nuclear and electronic charge; normalization check of electronic charge ",
+        "densities. If a significant amount of electrons is missing, one might have core ",
+        "states, whose charge density is not completely confined within the respective ",
+        "atomic sphere. In such a case the corresponding states should be treated as ",
+        "band states (using LOs)." ],
       "meta_abstract_types": ["scf_info"],
       "meta_parent_section": "section_scf_iteration",
       "meta_data_type": "float",
@@ -662,8 +676,8 @@
       "meta_name": "x_wien2k_rkmax",
       "meta_type": "type-value",
       "meta_description": [
-        "RmtKmax - determines matrix size (convergence), where Kmax is the plane wave cut-off, Rmt is the smallest of all ",
-        "atomic sphere radii" ],
+        "RmtKmax - determines matrix size (convergence), where Kmax is the plane wave ",
+        "cut-off, Rmt is the smallest of all atomic sphere radii" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -709,8 +723,8 @@
       "meta_name": "x_wien2k_smearing_width",
       "meta_type": "type-value",
       "meta_description": [
-        "specifies the width of the broadening, if efmod is set to ALL, eval specifies the upper limit of the energy window;",
-        " in in2c" ],
+        "specifies the width of the broadening, if efmod is set to ALL, eval specifies ",
+        "the upper limit of the energy window; in in2c" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
       "meta_repeats": false,

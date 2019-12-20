@@ -1,7 +1,8 @@
 {
   "metadict_name": "nwchem",
   "metadict_description": [
-    "Meta info used by the NWChem parser, all names are expected to start with x_nwchem_" ],
+    "Meta info used by the NWChem parser, all names are expected to start with ",
+    "x_nwchem_" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -374,8 +375,8 @@
       "meta_name": "x_nwchem_section_geometry",
       "meta_type": "type-section",
       "meta_description": [
-        "Contains system information for a calculation to follow. Contains all of the geometries used in different NWChem ",
-        "tasks contained by this calculations." ],
+        "Contains system information for a calculation to follow. Contains all of the ",
+        "geometries used in different NWChem tasks contained by this calculations." ],
       "meta_parent_section": "section_run",
       "meta_repeats": true,
       "meta_required": false
@@ -407,8 +408,8 @@
       "meta_name": "x_nwchem_section_xc_part",
       "meta_type": "type-section",
       "meta_description": [
-        "Describes a part of the XC functional that is used in the calculation. Can be a local or non-local part, can be ",
-        "exchange or correlation, can have a weight." ],
+        "Describes a part of the XC functional that is used in the calculation. Can be a ",
+        "local or non-local part, can be exchange or correlation, can have a weight." ],
       "meta_abstract_types": ["settings_xc_functional"],
       "meta_parent_section": "section_method",
       "meta_repeats": true,

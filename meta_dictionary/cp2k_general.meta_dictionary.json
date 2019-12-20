@@ -296,7 +296,8 @@
       "meta_name": "x_cp2k_energy_change_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "At each self-consistent field (SCF) iteration, change of total energy with respect to the previous SCF iteration." ],
+        "At each self-consistent field (SCF) iteration, change of total energy with ",
+        "respect to the previous SCF iteration." ],
       "meta_parent_section": "x_cp2k_section_scf_iteration",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -316,7 +317,8 @@
       "meta_name": "x_cp2k_energy_total_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Total electronic energy calculated with xc_method during the self-consistent field (SCF) iterations." ],
+        "Total electronic energy calculated with xc_method during the self-consistent ",
+        "field (SCF) iterations." ],
       "meta_parent_section": "x_cp2k_section_scf_iteration",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -326,7 +328,8 @@
       "meta_name": "x_cp2k_energy_xc_scf_iteration",
       "meta_type": "type-value",
       "meta_description": [
-        "Exchange-correlation (XC) energy during the self-consistent field (SCF) iteration." ],
+        "Exchange-correlation (XC) energy during the self-consistent field (SCF) ",
+        "iteration." ],
       "meta_parent_section": "x_cp2k_section_scf_iteration",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -378,8 +381,8 @@
       "meta_name": "x_cp2k_kind_number",
       "meta_type": "type-value",
       "meta_description": [
-        "The atomic kind number. For each element there may be multiple kinds specified. This number differentiates them. ",
-        "Not the atomic number." ],
+        "The atomic kind number. For each element there may be multiple kinds specified. ",
+        "This number differentiates them. Not the atomic number." ],
       "meta_parent_section": "x_cp2k_section_atomic_kind",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -718,7 +721,8 @@
       "meta_name": "x_cp2k_md_potential_energy_average",
       "meta_type": "type-value",
       "meta_description": [
-        "Average potential energy for an MD step. Averaged over this and the previous steps." ],
+        "Average potential energy for an MD step. Averaged over this and the previous ",
+        "steps." ],
       "meta_parent_section": "x_cp2k_section_md_step",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -979,7 +983,8 @@
       "meta_name": "x_cp2k_optimization_gradient_convergence_limit",
       "meta_type": "type-value",
       "meta_description": [
-        "Convergence criterium for the maximum force component of the current configuration." ],
+        "Convergence criterium for the maximum force component of the current ",
+        "configuration." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -1079,7 +1084,8 @@
       "meta_name": "x_cp2k_optimization_step_size_convergence_limit",
       "meta_type": "type-value",
       "meta_description": [
-        "Convergence criterium for the maximum geometry change between the current and the last optimizer iteration." ],
+        "Convergence criterium for the maximum geometry change between the current and ",
+        "the last optimizer iteration." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization_step",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -1266,7 +1272,8 @@
       "meta_name": "x_cp2k_section_geometry_optimization_energy_reevaluation",
       "meta_type": "type-section",
       "meta_description": [
-        "Information for the energy re-evaluation at the end of an optimization procedure." ],
+        "Information for the energy re-evaluation at the end of an optimization ",
+        "procedure." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization",
       "meta_repeats": true,
       "meta_required": false
@@ -1274,7 +1281,8 @@
       "meta_name": "x_cp2k_section_geometry_optimization_step",
       "meta_type": "type-section",
       "meta_description": [
-        "Contains information about the geometry optimization process for every optimization step." ],
+        "Contains information about the geometry optimization process for every ",
+        "optimization step." ],
       "meta_parent_section": "x_cp2k_section_geometry_optimization",
       "meta_repeats": true,
       "meta_required": false

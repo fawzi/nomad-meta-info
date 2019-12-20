@@ -1,7 +1,8 @@
 {
   "metadict_name": "tinker",
   "metadict_description": [
-    "meta info used by the tinker parser, all names are expected to start with x_tinker_" ],
+    "meta info used by the tinker parser, all names are expected to start with ",
+    "x_tinker_" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -273,9 +274,10 @@
       "meta_name": "x_tinker_frame_sequence_angle_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the angle_energy along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_angle_energy_frames." ],
+        "Array containing the values of the angle_energy along this sequence of frames (",
+        "i.e., a trajectory, a frame is one section_single_configuration_calculation). ",
+        "If not all frames have a value the indices of the frames that have a value are ",
+        "stored in frame_sequence_angle_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -285,8 +287,9 @@
       "meta_name": "x_tinker_frame_sequence_angle_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_angle_energy values ",
-        "refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_angle_energy values refers to. If not given it defaults ",
+        "to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -296,9 +299,10 @@
       "meta_name": "x_tinker_frame_sequence_bond_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the bond_energy along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_bond_energy_frames." ],
+        "Array containing the values of the bond_energy along this sequence of frames (i.",
+        "e., a trajectory, a frame is one section_single_configuration_calculation). If ",
+        "not all frames have a value the indices of the frames that have a value are ",
+        "stored in frame_sequence_bond_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -308,8 +312,9 @@
       "meta_name": "x_tinker_frame_sequence_bond_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_bond_energy values ",
-        "refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_bond_energy values refers to. If not given it defaults ",
+        "to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -319,9 +324,10 @@
       "meta_name": "x_tinker_frame_sequence_boundary",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the boundary along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_boundary_frames." ],
+        "Array containing the values of the boundary along this sequence of frames (i.e.,",
+        " a trajectory, a frame is one section_single_configuration_calculation). If not ",
+        "all frames have a value the indices of the frames that have a value are stored ",
+        "in frame_sequence_boundary_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -331,8 +337,9 @@
       "meta_name": "x_tinker_frame_sequence_boundary_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_boundary values refers ",
-        "to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_boundary values refers to. If not given it defaults to ",
+        "the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -342,9 +349,11 @@
       "meta_name": "x_tinker_frame_sequence_cross_dihedral_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the cross_dihedral_energy along this sequence of frames (i.e., a trajectory, a ",
-        "frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames ",
-        "that have a value are stored in frame_sequence_cross_dihedral_energy_frames." ],
+        "Array containing the values of the cross_dihedral_energy along this sequence of ",
+        "frames (i.e., a trajectory, a frame is one ",
+        "section_single_configuration_calculation). If not all frames have a value the ",
+        "indices of the frames that have a value are stored in ",
+        "frame_sequence_cross_dihedral_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -354,8 +363,9 @@
       "meta_name": "x_tinker_frame_sequence_cross_dihedral_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_cross_dihedral_energy ",
-        "values refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_cross_dihedral_energy values refers to. If not given it ",
+        "defaults to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -365,9 +375,10 @@
       "meta_name": "x_tinker_frame_sequence_density",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the density along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_density_frames." ],
+        "Array containing the values of the density along this sequence of frames (i.e., ",
+        "a trajectory, a frame is one section_single_configuration_calculation). If not ",
+        "all frames have a value the indices of the frames that have a value are stored ",
+        "in frame_sequence_density_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -377,8 +388,9 @@
       "meta_name": "x_tinker_frame_sequence_density_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_density values refers ",
-        "to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_density values refers to. If not given it defaults to ",
+        "the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -388,9 +400,11 @@
       "meta_name": "x_tinker_frame_sequence_electrostatic_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the electrostatic_energy along this sequence of frames (i.e., a trajectory, a frame ",
-        "is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that ",
-        "have a value are stored in frame_sequence_electrostatic_energy_frames." ],
+        "Array containing the values of the electrostatic_energy along this sequence of ",
+        "frames (i.e., a trajectory, a frame is one ",
+        "section_single_configuration_calculation). If not all frames have a value the ",
+        "indices of the frames that have a value are stored in ",
+        "frame_sequence_electrostatic_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -400,8 +414,9 @@
       "meta_name": "x_tinker_frame_sequence_electrostatic_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_electrostatic_energy ",
-        "values refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_electrostatic_energy values refers to. If not given it ",
+        "defaults to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -411,9 +426,11 @@
       "meta_name": "x_tinker_frame_sequence_improper_dihedral_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the improper_dihedral_energy along this sequence of frames (i.e., a trajectory, a ",
-        "frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames ",
-        "that have a value are stored in frame_sequence_improper_dihedral_energy_frames." ],
+        "Array containing the values of the improper_dihedral_energy along this sequence ",
+        "of frames (i.e., a trajectory, a frame is one ",
+        "section_single_configuration_calculation). If not all frames have a value the ",
+        "indices of the frames that have a value are stored in ",
+        "frame_sequence_improper_dihedral_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -424,8 +441,8 @@
       "meta_type": "type-value",
       "meta_description": [
         "Array containing the strictly increasing indices of the frames the ",
-        "x_tinker_frame_sequence_improper_dihedral_energy values refers to. If not given it defaults to the trivial mapping ",
-        "0,1,..." ],
+        "x_tinker_frame_sequence_improper_dihedral_energy values refers to. If not given ",
+        "it defaults to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -435,9 +452,10 @@
       "meta_name": "x_tinker_frame_sequence_misc_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the misc_energy along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_misc_energy_frames." ],
+        "Array containing the values of the misc_energy along this sequence of frames (i.",
+        "e., a trajectory, a frame is one section_single_configuration_calculation). If ",
+        "not all frames have a value the indices of the frames that have a value are ",
+        "stored in frame_sequence_misc_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -447,8 +465,9 @@
       "meta_name": "x_tinker_frame_sequence_misc_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_misc_energy values ",
-        "refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_misc_energy values refers to. If not given it defaults ",
+        "to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -458,9 +477,11 @@
       "meta_name": "x_tinker_frame_sequence_proper_dihedral_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the proper_dihedral_energy along this sequence of frames (i.e., a trajectory, a ",
-        "frame is one section_single_configuration_calculation). If not all frames have a value the indices of the frames ",
-        "that have a value are stored in frame_sequence_proper_dihedral_energy_frames." ],
+        "Array containing the values of the proper_dihedral_energy along this sequence ",
+        "of frames (i.e., a trajectory, a frame is one ",
+        "section_single_configuration_calculation). If not all frames have a value the ",
+        "indices of the frames that have a value are stored in ",
+        "frame_sequence_proper_dihedral_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -470,8 +491,9 @@
       "meta_name": "x_tinker_frame_sequence_proper_dihedral_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_proper_dihedral_energy ",
-        "values refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_proper_dihedral_energy values refers to. If not given ",
+        "it defaults to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -481,9 +503,10 @@
       "meta_name": "x_tinker_frame_sequence_total_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the total_energy along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_total_energy_frames." ],
+        "Array containing the values of the total_energy along this sequence of frames (",
+        "i.e., a trajectory, a frame is one section_single_configuration_calculation). ",
+        "If not all frames have a value the indices of the frames that have a value are ",
+        "stored in frame_sequence_total_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -493,8 +516,9 @@
       "meta_name": "x_tinker_frame_sequence_total_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_total_energy values ",
-        "refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_total_energy values refers to. If not given it defaults ",
+        "to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -504,9 +528,11 @@
       "meta_name": "x_tinker_frame_sequence_total_kinetic_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the total_kinetic_energy along this sequence of frames (i.e., a trajectory, a frame ",
-        "is one section_single_configuration_calculation). If not all frames have a value the indices of the frames that ",
-        "have a value are stored in frame_sequence_total_kinetic_energy_frames." ],
+        "Array containing the values of the total_kinetic_energy along this sequence of ",
+        "frames (i.e., a trajectory, a frame is one ",
+        "section_single_configuration_calculation). If not all frames have a value the ",
+        "indices of the frames that have a value are stored in ",
+        "frame_sequence_total_kinetic_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -516,8 +542,9 @@
       "meta_name": "x_tinker_frame_sequence_total_kinetic_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_total_kinetic_energy ",
-        "values refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_total_kinetic_energy values refers to. If not given it ",
+        "defaults to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -527,9 +554,10 @@
       "meta_name": "x_tinker_frame_sequence_vdw_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the vdw_energy along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_vdw_energy_frames." ],
+        "Array containing the values of the vdw_energy along this sequence of frames (i.",
+        "e., a trajectory, a frame is one section_single_configuration_calculation). If ",
+        "not all frames have a value the indices of the frames that have a value are ",
+        "stored in frame_sequence_vdw_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -539,8 +567,9 @@
       "meta_name": "x_tinker_frame_sequence_vdw_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_vdw_energy values ",
-        "refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_vdw_energy values refers to. If not given it defaults ",
+        "to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -550,9 +579,10 @@
       "meta_name": "x_tinker_frame_sequence_virial_energy",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the virial_energy along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_virial_energy_frames." ],
+        "Array containing the values of the virial_energy along this sequence of frames (",
+        "i.e., a trajectory, a frame is one section_single_configuration_calculation). ",
+        "If not all frames have a value the indices of the frames that have a value are ",
+        "stored in frame_sequence_virial_energy_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -562,8 +592,9 @@
       "meta_name": "x_tinker_frame_sequence_virial_energy_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_virial_energy values ",
-        "refers to. If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_virial_energy values refers to. If not given it ",
+        "defaults to the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -573,9 +604,10 @@
       "meta_name": "x_tinker_frame_sequence_volume",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the values of the volume along this sequence of frames (i.e., a trajectory, a frame is one ",
-        "section_single_configuration_calculation). If not all frames have a value the indices of the frames that have a ",
-        "value are stored in frame_sequence_volume_frames." ],
+        "Array containing the values of the volume along this sequence of frames (i.e., ",
+        "a trajectory, a frame is one section_single_configuration_calculation). If not ",
+        "all frames have a value the indices of the frames that have a value are stored ",
+        "in frame_sequence_volume_frames." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -585,8 +617,9 @@
       "meta_name": "x_tinker_frame_sequence_volume_frames",
       "meta_type": "type-value",
       "meta_description": [
-        "Array containing the strictly increasing indices of the frames the x_tinker_frame_sequence_volume values refers to.",
-        " If not given it defaults to the trivial mapping 0,1,..." ],
+        "Array containing the strictly increasing indices of the frames the ",
+        "x_tinker_frame_sequence_volume values refers to. If not given it defaults to ",
+        "the trivial mapping 0,1,..." ],
       "meta_parent_section": "section_frame_sequence",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -1386,8 +1419,8 @@
       "meta_name": "x_tinker_input_units_store",
       "meta_type": "type-value",
       "meta_description": [
-        "It determines the units of all quantities specified in the input script and data file, as well as quantities ",
-        "output to the screen, log file, and dump files." ],
+        "It determines the units of all quantities specified in the input script and ",
+        "data file, as well as quantities output to the screen, log file, and dump files." ],
       "meta_parent_section": "section_topology",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -1561,19 +1594,22 @@
       "meta_name": "x_tinker_number_of_angle_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of angle_energies in this sequence of frames, see x_tinker_frame_sequence_angle_energy." ],
+        "Gives the number of angle_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_angle_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_bond_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of bond_energies in this sequence of frames, see x_tinker_frame_sequence_bond_energy." ],
+        "Gives the number of bond_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_bond_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_boundary_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of boundary_energies in this sequence of frames, see x_tinker_frame_sequence_boundary_energy." ],
+        "Gives the number of boundary_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_boundary_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_cross_dihedral_energies_in_sequence",
@@ -1608,7 +1644,8 @@
       "meta_name": "x_tinker_number_of_density_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of densities in this sequence of frames, see x_tinker_frame_sequence_density." ],
+        "Gives the number of densities in this sequence of frames, see ",
+        "x_tinker_frame_sequence_density." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_electrostatic_energies_in_sequence",
@@ -1628,7 +1665,8 @@
       "meta_name": "x_tinker_number_of_misc_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of misc_energies in this sequence of frames, see x_tinker_frame_sequence_misc_energy." ],
+        "Gives the number of misc_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_misc_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_proper_dihedral_energies_in_sequence",
@@ -1662,7 +1700,8 @@
       "meta_name": "x_tinker_number_of_total_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of total_energies in this sequence of frames, see x_tinker_frame_sequence_total_energy." ],
+        "Gives the number of total_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_total_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_total_kinetic_energies_in_sequence",
@@ -1675,19 +1714,22 @@
       "meta_name": "x_tinker_number_of_vdw_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of vdw_energies in this sequence of frames, see x_tinker_frame_sequence_vdw_energy." ],
+        "Gives the number of vdw_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_vdw_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_virial_energies_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of bond_energies in this sequence of frames, see x_tinker_frame_sequence_virial_energy." ],
+        "Gives the number of bond_energies in this sequence of frames, see ",
+        "x_tinker_frame_sequence_virial_energy." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_number_of_volumes_in_sequence",
       "meta_type": "type-dimension",
       "meta_description": [
-        "Gives the number of volumes in this sequence of frames, see x_tinker_frame_sequence_volume." ],
+        "Gives the number of volumes in this sequence of frames, see ",
+        "x_tinker_frame_sequence_volume." ],
       "meta_parent_section": "section_frame_sequence"
     }, {
       "meta_name": "x_tinker_output_created_by_user",

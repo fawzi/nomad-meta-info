@@ -1,7 +1,8 @@
 {
   "metadict_name": "quantum_espresso",
   "metadict_description": [
-    "meta info used by the Quantum Espresso parser, all names are expected to start with qe_" ],
+    "meta info used by the Quantum Espresso parser, all names are expected to start ",
+    "with qe_" ],
   "metadict_version": "0.1",
   "metadict_required": [ {
       "metadict_required_name": "common"
@@ -10,7 +11,8 @@
       "meta_name": "x_qe_alat",
       "meta_type": "type-value",
       "meta_description": [
-        "Lattice Parameter 'a', constant during a run and used as unit in other quantities" ],
+        "Lattice Parameter 'a', constant during a run and used as unit in other ",
+        "quantities" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -957,7 +959,8 @@
       "meta_name": "x_qe_nsymm_ignored",
       "meta_type": "type-value",
       "meta_description": [
-        "Number of ignored symmetry operations, due to uncommensurable fractional translations" ],
+        "Number of ignored symmetry operations, due to uncommensurable fractional ",
+        "translations" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -997,8 +1000,9 @@
       "meta_name": "x_qe_number_of_species",
       "meta_type": "type-value",
       "meta_description": [
-        "Number of Atom species, a.k.a. unique Atom labels; a label may include symmetry-breaking suffices, e.g. 'Fe1' and ",
-        "'Fe2', as some quantities can only prescribed per species and not per site" ],
+        "Number of Atom species, a.k.a. unique Atom labels; a label may include symmetry-",
+        "breaking suffices, e.g. 'Fe1' and 'Fe2', as some quantities can only prescribed ",
+        "per species and not per site" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -1348,8 +1352,9 @@
       "meta_name": "x_qe_reciprocal_cell",
       "meta_type": "type-value",
       "meta_description": [
-        "Reciprocal Lattice vectors (in Cartesian coordinates). The first index runs over the $x,y,z$ Cartesian coordinates,",
-        " and the second index runs over the 3 lattice vectors." ],
+        "Reciprocal Lattice vectors (in Cartesian coordinates). The first index runs ",
+        "over the $x,y,z$ Cartesian coordinates, and the second index runs over the 3 ",
+        "lattice vectors." ],
       "meta_abstract_types": ["configuration_core"],
       "meta_parent_section": "section_system",
       "meta_data_type": "float",
@@ -1998,7 +2003,8 @@
       "meta_name": "x_qe_t_exact_exchange_fraction",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary: store fraction of exact-exchange before defining section_xc_functionals" ],
+        "Temporary: store fraction of exact-exchange before defining ",
+        "section_xc_functionals" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -2742,7 +2748,8 @@
       "meta_name": "x_qe_t_md_starting_charge_renormalized",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary storage for extrapolated starting charge, renormalized (MD, (vc-)relax)" ],
+        "Temporary storage for extrapolated starting charge, renormalized (MD, (vc-)",
+        "relax)" ],
       "meta_parent_section": "section_single_configuration_calculation",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -3145,7 +3152,8 @@
       "meta_name": "x_qe_t_pp_warning_wfcnorm",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary: renormalized WFCs in pseudopotential: pseudo-wavefunction original norm" ],
+        "Temporary: renormalized WFCs in pseudopotential: pseudo-wavefunction original ",
+        "norm" ],
       "meta_parent_section": "x_qe_t_section_pp_warning",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -3324,7 +3332,8 @@
       "meta_name": "x_qe_t_section_pp_report",
       "meta_type": "type-section",
       "meta_description": [
-        "section to collect 'pseudopotential report' information in new QE, used only for 'old', non-UPF pseudopotentials" ],
+        "section to collect 'pseudopotential report' information in new QE, used only ",
+        "for 'old', non-UPF pseudopotentials" ],
       "meta_parent_section": "section_method",
       "meta_repeats": true,
       "meta_required": false
@@ -3340,7 +3349,8 @@
       "meta_name": "x_qe_t_section_pseudopotential",
       "meta_type": "type-section",
       "meta_description": [
-        "pseudo-section for collecting pseudopotential data (atomic number lookup requires table printed later in output)" ],
+        "pseudo-section for collecting pseudopotential data (atomic number lookup ",
+        "requires table printed later in output)" ],
       "meta_parent_section": "section_method",
       "meta_repeats": true,
       "meta_required": false
@@ -3418,7 +3428,8 @@
       "meta_name": "x_qe_t_species_integration_radius_idx",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary: radius used to integrate charge/magnetization over (per species), species index" ],
+        "Temporary: radius used to integrate charge/magnetization over (per species), ",
+        "species index" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3618,7 +3629,8 @@
       "meta_name": "x_qe_t_vec_supercell_x",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary storage for supercell translation vector in fractional coordinates, x-component" ],
+        "Temporary storage for supercell translation vector in fractional coordinates, x-",
+        "component" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -3628,7 +3640,8 @@
       "meta_name": "x_qe_t_vec_supercell_y",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary storage for supercell translation vector in fractional coordinates, y-component" ],
+        "Temporary storage for supercell translation vector in fractional coordinates, y-",
+        "component" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -3638,7 +3651,8 @@
       "meta_name": "x_qe_t_vec_supercell_z",
       "meta_type": "type-value",
       "meta_description": [
-        "Temporary storage for supercell translation vector in fractional coordinates, z-component" ],
+        "Temporary storage for supercell translation vector in fractional coordinates, z-",
+        "component" ],
       "meta_parent_section": "section_system",
       "meta_data_type": "float",
       "meta_repeats": false,
@@ -3658,7 +3672,8 @@
       "meta_name": "x_qe_t_xc_functional_shortname_enforced",
       "meta_type": "type-value",
       "meta_description": [
-        "Short name of User-enforced XC functional; overrides the setting implied by the pseudopotentials" ],
+        "Short name of User-enforced XC functional; overrides the setting implied by the ",
+        "pseudopotentials" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -3759,7 +3774,8 @@
       "meta_name": "x_qe_xc_functional_user_enforced",
       "meta_type": "type-value",
       "meta_description": [
-        "True if the user enforced setting the XC functional; overrides the setting implied by the pseudopotentials" ],
+        "True if the user enforced setting the XC functional; overrides the setting ",
+        "implied by the pseudopotentials" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "boolean",
       "meta_repeats": false,
@@ -3769,7 +3785,8 @@
       "meta_name": "x_qe_xc_icorr",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso internal code-specific index of XC functional (density correlation component) " ],
+        "Quantum Espresso internal code-specific index of XC functional (density ",
+        "correlation component) " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3789,7 +3806,8 @@
       "meta_name": "x_qe_xc_icorr_name",
       "meta_type": "type-value",
       "meta_description": [
-        "Name of XC functional (density correlation component) in Quantum Espresso context" ],
+        "Name of XC functional (density correlation component) in Quantum Espresso ",
+        "context" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -3799,7 +3817,8 @@
       "meta_name": "x_qe_xc_iexch",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso internal code-specific index of XC functional (density exchange component) " ],
+        "Quantum Espresso internal code-specific index of XC functional (density ",
+        "exchange component) " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3829,7 +3848,8 @@
       "meta_name": "x_qe_xc_igcc",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso internal code-specific index of XC functional (gradient correlation component) " ],
+        "Quantum Espresso internal code-specific index of XC functional (gradient ",
+        "correlation component) " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3849,7 +3869,8 @@
       "meta_name": "x_qe_xc_igcc_name",
       "meta_type": "type-value",
       "meta_description": [
-        "Name of XC functional (gradient correlation component) in Quantum Espresso context" ],
+        "Name of XC functional (gradient correlation component) in Quantum Espresso ",
+        "context" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -3859,7 +3880,8 @@
       "meta_name": "x_qe_xc_igcx",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso internal code-specific index of XC functional (gradient exchange component) " ],
+        "Quantum Espresso internal code-specific index of XC functional (gradient ",
+        "exchange component) " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3889,7 +3911,8 @@
       "meta_name": "x_qe_xc_imeta",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso internal code-specific index of XC functional (meta-gga component) " ],
+        "Quantum Espresso internal code-specific index of XC functional (meta-gga ",
+        "component) " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3941,7 +3964,8 @@
       "meta_name": "x_qe_xc_inlc",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso internal code-specific index of XC functional (Van-der-Waals non-local component) " ],
+        "Quantum Espresso internal code-specific index of XC functional (Van-der-Waals ",
+        "non-local component) " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "int",
       "meta_repeats": false,
@@ -3951,7 +3975,8 @@
       "meta_name": "x_qe_xc_inlc_comment",
       "meta_type": "type-value",
       "meta_description": [
-        "Quantum Espresso comment about XC functional (Van-der-Waals non-local component) " ],
+        "Quantum Espresso comment about XC functional (Van-der-Waals non-local component)",
+        " " ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
@@ -3961,7 +3986,8 @@
       "meta_name": "x_qe_xc_inlc_name",
       "meta_type": "type-value",
       "meta_description": [
-        "Name of XC functional (Van-der-Waals non-local component) in Quantum Espresso context" ],
+        "Name of XC functional (Van-der-Waals non-local component) in Quantum Espresso ",
+        "context" ],
       "meta_parent_section": "section_method",
       "meta_data_type": "string",
       "meta_repeats": false,
